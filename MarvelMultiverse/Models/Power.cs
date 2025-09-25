@@ -8,7 +8,7 @@ public class Power
 
     public string Description { get; set; }
 
-    public string PowerSet { get; set; }
+    public List<string> PowerSets { get; set; }
 
     public string Prerequsites { get; set; }
 
@@ -17,6 +17,8 @@ public class Power
     public string Trigger { get; set; }
 
     public string Duration { get; set; }
+
+    public string Range { get; set; }
 
     public string Cost { get; set; }
 
@@ -29,5 +31,23 @@ public class Power
     public int MeleeNonCombatCheckModifier { get; set; }
 
     [JsonIgnore]
+    public int EgoDamageModifier { get; set; }
+
+    [JsonIgnore]
+    public int EgoNonCombatCheckModifier { get; set; }
+
+    [JsonIgnore]
     public int HealthDamageReductionModifier { get; set; }
+
+    [JsonIgnore]
+    public bool MeleeInsteadOfAgilityForDefence { get; set; }
+
+    [JsonIgnore]
+    public bool FlySpeed { get; set; }
+
+    [JsonIgnore]
+    public bool JumpSpeed { get; set; }
+
+    [JsonIgnore]
+    public bool JumpSpeedMultipliedByRank { get; set; }
 }

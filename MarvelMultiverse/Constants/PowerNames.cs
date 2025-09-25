@@ -2,15 +2,44 @@
 
 public static class PowerNames
 {
+    public const string AstralForm = "Astral Form";
+    public const string BangingHeads = "Banging Heads";
+    public const string BoltsOfBalthakk = "Bolts of Balthakk";
     public const string Brawling = "Brawling";
+    public const string Clobber = "Clobber";
     public const string CombatTrickery = "Combat Trickery";
+    public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
+    public const string CrushingGrip = "Crushing Grip";
+    public const string Discipline1 = "Discipline 1";
+    public const string Discipline2 = "Discipline 2";
+    public const string Discipline3 = "Discipline 3";
+    public const string Discipline4 = "Discipline 4";
+    public const string DispelSpell = "Dispel Spell";
+    public const string FlamesOfTheFaltine = "Flames of the Faltine";
+    public const string Flight1 = "Flight 1";
+    public const string Flight2 = "Flight 2";
+    public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string HealingFactor = "Healing Factor";
+    public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
+    public const string ImagesOfIkonn = "Images of Ikonn";
+    public const string Immovable = "Immovable";
+    public const string Jump1 = "Jump 1";
+    public const string Jump2 = "Jump 2";
+    public const string Jump3 = "Jump 3";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";
     public const string Mighty3 = "Mighty 3";
     public const string Mighty4 = "Mighty 4";
+    public const string MistsOfMunnopor = "Mists of Munnopor";
+    public const string QuickToss = "Quick Toss";
+    public const string Smash = "Smash";
+    public const string ShieldOfTheSeraphim = "Shield of the Seraphim";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";
     public const string Sturdy3 = "Sturdy 3";
     public const string Sturdy4 = "Sturdy 4";
+    public const string SummonPortal = "Summon Portal";
+    public const string UnrelentingSmash = "Unrelenting Smash";
+    public const string VaporsOfValtorr = "Vapors of Valtorr";
+    public const string WindsOfWatoomb = "Winds of Watoomb";
 }

@@ -28,23 +28,33 @@ public class Character
 
     public List<Tag> Tags { get; set; }
 
-    public List<Power> Powers { get; set; }
+    public List<PowerSet> Powers { get; set; }
 
     public Biography Biography { get; set; }
 
     public void SetDefences()
     {
-        Abilities.Melee.Defence = Abilities.Melee.Score + 10 + Traits.Sum(x => x.MeleeDefenceModifier);
-        
-        Abilities.Agility.Defence = Abilities.Agility.Score + 10 + Traits.Sum(x => x.AgilityDefenceModifier);
-        
-        Abilities.Resilience.Defence = Abilities.Resilience.Score + 10;
-        
-        Abilities.Vigilance.Defence = Abilities.Vigilance.Score + 10;
-        
-        Abilities.Ego.Defence = Abilities.Ego.Score + 10;
-        
-        Abilities.Logic.Defence = Abilities.Logic.Score + 10;
+        var meleeDefence = Abilities.Melee.Score + 10 + Traits.Sum(x => x.MeleeDefenceModifier);
+        var agilityDefence = Abilities.Agility.Score + 10 + Traits.Sum(x => x.AgilityDefenceModifier);
+        var resilienceDefence = Abilities.Resilience.Score + 10;
+        var vigilanceDefence = Abilities.Vigilance.Score + 10;
+        var egoDefence = Abilities.Ego.Score + 10;
+        var logicDefence = Abilities.Logic.Score + 10;
+
+        Abilities.Melee.Defence = meleeDefence;
+
+        if (Powers.Any(x => x.Powers.Any(p => p.MeleeInsteadOfAgilityForDefence)))
+            Abilities.Agility.Defence = meleeDefence;
+        else
+            Abilities.Agility.Defence = agilityDefence;
+
+        Abilities.Resilience.Defence = resilienceDefence;
+
+        Abilities.Vigilance.Defence = vigilanceDefence;
+
+        Abilities.Ego.Defence = egoDefence;
+
+        Abilities.Logic.Defence = logicDefence;
     }
 
     public void SetHealth()
@@ -56,7 +66,7 @@ public class Character
         Health = new DamageCapacity
         {
             Value = health,
-            DamageReduction = Powers.Sum(x => x.HealthDamageReductionModifier)
+            DamageReduction = Powers.Sum(x => x.Powers.Sum(p => p.HealthDamageReductionModifier))
         };
     }
 
@@ -103,26 +113,37 @@ public class Character
             Run = baseSpeed,
             Climb = (int)Math.Ceiling(baseSpeed / 2.0),
             Swim = (int)Math.Ceiling(baseSpeed / 2.0),
-            Jump = (int)Math.Ceiling(baseSpeed / 2.0),
-            Flight = 0
         };
+
+        if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
+        {
+            Speed.Flight = baseSpeed * Rank;
+        }
+
+        if (Powers.Any(x => x.Powers.Any(p => p.JumpSpeed)))
+        {
+            Speed.Jump = baseSpeed;
+
+            if (Powers.Any(x => x.Powers.Any(p => p.JumpSpeedMultipliedByRank)))
+                Speed.Jump = baseSpeed * Rank;
+        }
     }
 
     public void SetNonCombatCheckModifiers()
     {
-        Abilities.Melee.NonCombatCheck = Abilities.Melee.Score + Powers.Sum(x => x.MeleeNonCombatCheckModifier);
+        Abilities.Melee.NonCombatCheck = Abilities.Melee.Score + Powers.Sum(x => x.Powers.Sum(p => p.MeleeNonCombatCheckModifier));
         Abilities.Agility.NonCombatCheck = Abilities.Agility.Score;
         Abilities.Resilience.NonCombatCheck = Abilities.Resilience.Score;
         Abilities.Vigilance.NonCombatCheck = Abilities.Vigilance.Score;
-        Abilities.Ego.NonCombatCheck = Abilities.Ego.Score;
+        Abilities.Ego.NonCombatCheck = Abilities.Ego.Score + Powers.Sum(x => x.Powers.Sum(p => p.EgoNonCombatCheckModifier)); ;
         Abilities.Logic.NonCombatCheck = Abilities.Logic.Score;
     }
 
     public void SetDamageModifiers()
     {
-        Abilities.Melee.DamageModifier = Rank + Powers.Sum(x => x.MeleeDamageModifier);
+        Abilities.Melee.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.MeleeDamageModifier));
         Abilities.Agility.DamageModifier = Rank;
-        Abilities.Ego.DamageModifier = Rank;
+        Abilities.Ego.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.EgoDamageModifier)); ;
         Abilities.Logic.DamageModifier = Rank;
     }
 }

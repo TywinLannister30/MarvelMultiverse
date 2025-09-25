@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿using MarvelMultiverse.Enums;
 
 namespace MarvelMultiverse.Models;
 
@@ -18,7 +18,7 @@ public class Biography
 
     public Size Size { get; set; }
 
-    public List<string> DistinguishingFeatures { get; set; }
+    public string DistinguishingFeatures { get; set; }
 
     public string Occupation { get; set; }
 

@@ -20,4 +20,14 @@ public class CharacterController : ControllerBase
     {
         return Ok(_characterManager.GetAll());
     }
+
+    [HttpGet("{name}")]
+    public ActionResult<Character> GetSingle(string name)
+    {
+        var character = _characterManager.Get(name);
+
+        if (character == null) return NotFound("No character found.");
+
+        return Ok(character);
+    }
 }

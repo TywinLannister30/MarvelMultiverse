@@ -26,6 +26,9 @@ public class TraitSelector : ITraitSelector
 
     private static List<Trait> GetAllTraits() =>
     [
+        /*
+£ Presence
+         */
         new()
         {
             Name = TraitNames.Abrasive,
@@ -82,10 +85,58 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.FontOfInformation,
+            Effect =
+            [
+                "The character has an edge on Logic checks having to do with knowledge.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Glibness,
+            Effect =
+            [
+                "The character can strike up a conversation with anyone at any time and can often convince them to lend a hand. They have an edge on Ego checks to persuade characters they are speaking to for the first time.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.IronWill,
+            Effect =
+            [
+                "Enemies have trouble on attacks to control the character’s mind or influence their behavior. Also, the character gains an edge on checks to break free of mind control or other compulsions.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Leverage,
             Effect =
             [
                 "The character is good at fi guring out what people want and using it against them. They have an edge on Logic checks to investigate people and on Ego checks to persuade people they’ve investigated.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.OutOfShape,
+            Effect =
+            [
+                "The character is in poor physical condition. They are considered one size smaller for the purposes of lifting, carrying, swinging and throwing things.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Presence,
+            Effect =
+            [
+                "The character knows how to command attention on demand. They have an edge on Ego checks that involve getting people to pay attention to them or to voluntarily do things for them.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.PublicSpeaking,
+            Effect =
+            [
+                "The character knows how to get the attention of a crowd, whether that’s at a political rally or in front of a jury or a classroom. They have an edge on Ego checks when attempting to persuade groups.",
             ],
         },
         new()

@@ -26,6 +26,10 @@ public class TagSelector : ITagSelector
 
     private static List<Tag> GetAllTags() =>
     [
+        /*
+£ Sorcerous
+£ Supernatural
+     */
         new()
         {
             Name = TagNames.BlackMarketAccess,
@@ -68,6 +72,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Hounded,
+            Effect =
+            [
+                "The character is a member of a group of people who are persecuted for simply being themselves.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.Immunity,
             Effect =
             [
@@ -96,6 +108,22 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character constantly emits low levels of some sort of radiation. This can be picked up by a Geiger counter.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Sorcerous,
+            Effect =
+            [
+                "The character has dedicated themself to the study of traditional magic, also known as sorcery.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Supernatural,
+            Effect =
+            [
+                "The character has powers that are magical or based on something magical.",
             ],
         },
         new()
