@@ -193,11 +193,42 @@ public class PowerSelector : IPowerSelector
             Description = "The character puts an end to a foe’s magic.",
             PowerSets = [PowerSetNames.Magic],
             Prerequsites = "Sorcerous, Rank 4",
+            Action = ActionType.Standard,
             Duration = Duration.Instant,
             Cost = "15 Focus",
             Effect =
             [
                 "The character makes an Ego check against the Ego defense of a target using a magic power that requires concentration. On a success, the target’s concentration on that power is broken. On a Fantastic success, the target’s concentration is broken entirely."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.EditMemory,
+            Description = "The character alters someone’s memory.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "Memory Blip, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Permanent,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character alters the memory of a target with whom they’ve established a Telepathic Link. This can be as simple as erasing a chunk of the target’s memory or as complicated as implanting entirely new memories. The Narrator sets the target number based on how complex the new memory is and how hard it would be to integrate such memories into the character’s other memories.",
+                "The character makes a Logic check against the target’s Logic defense. On a success, the memories are altered. On a Fantastic success, the target has trouble on checks to refute such memories in the future.",
+                "Any time the target is given good reason to doubt the edited memory, they can make a Logic check to refute the new version of their memories and recover their original memories. If they succeed, they remember both the original memory and the edited one. On a Fantastic success, they know for sure who did this to them."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ESP,
+            Description = "The character can sense the presence of others.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character can reach out with their mind to sense the presence of others within 100 spaces per rank. This tells them the person’s location and general status. It can also identify if they have super-powers or not.",
+                "If a target or targets wish to remain undetected, the character must make a Logic check and compare it against each target’s Vigilance defense. If they succeed, they sense the target. On a Fantastic success, they can also identify they sense the target. On a Fantastic the source of any powers the target has.",
             ],
         },
         new()
@@ -352,6 +383,22 @@ public class PowerSelector : IPowerSelector
             ],
             JumpSpeed = true,
             JumpSpeedMultipliedByRank = true,
+        },
+        new()
+        {
+            Name = PowerNames.MemoryBlip,
+            Description = " The character erases a bit of someone’s memory.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "Telepathic Link, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Permanent,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character causes a target with whom they’ve established a Telepathic Link to forget something that’s happened in the past hour. This gap can be up to an hour in length.",
+                "The character makes a Logic check against the target’s Logic defense. On a success, the memories are forgotten. On a Fantastic success, the target has trouble on checks to recover such memories in the future.",
+                "Any time the target is given good reason to question the blank in their memory, they can make a Logic check to recover their memory. If they succeed, the original memory floods back. On a Fantastic success, they know for sure who did this to them."
+            ],
         },
         new()
         {
@@ -532,6 +579,62 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character opens a glowing portal in a space next to them that teleports anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. This can be between any two points in the Multiverse, as long as the character has seen the destination. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticManipulation,
+            Description = "The character can handle physical things with their mind.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "Varies",
+            Effect =
+            [
+                "The character can manipulate objects in their line of sight with their mind. The maximum range for this is 5 spaces times the character’s rank. If someone tries to prevent the character from taking control of an object, the character makes a Logic check against the opponent’s Agility defense.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelepathicBlast,
+            Description = "The character can mentally blast a foe’s mind.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "Telepathic Link, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a Logic attack against a target in line of sight. If the attack is a success, it infl icts regular Focus damage. On a Fantastic success, the target takes double damage instead and is stunned for one round.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelepathicLink,
+            Description = "The character can speak with another telepathically.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character can communicate telepathically with one person at a time, and they must have met or seen the other person before. The communication can be verbal, visual or even more complex, such as imparting location information. There is no limit to the distance of the communication, as long as the character and the target are in the same dimension.",
+                "If the other person does not wish to speak with the character, the target can automatically tune them out. To force a telepathic link, the character can make a Logic check against the target’s Vigilance defense. On a failure, the character cannot attempt to communicate with the target in this way for the rest of the day. On a success, the character can communicate with the target for as long as the concentration lasts. On a Fantastic success, the target cannot shut the character out for the rest of the day."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelepathicNetwork,
+            Description = "The character can speak telepathically with a group of people.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "Telepathic Link, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can communicate telepathically with a group of willing, previously linked people, each of whom they have met or seen before. The communication can be verbal, visual or even more complex, such as imparting location information. The group can number up to five people per rank. There is no limit to the distance of the communication, as long as everyone involved is in the same dimension.",
             ],
         },
         new()

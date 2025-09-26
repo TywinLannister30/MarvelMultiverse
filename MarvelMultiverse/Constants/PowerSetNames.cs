@@ -14,5 +14,5 @@ public class PowerSetNames
     public const string SpiderPowers = "Spider-Powers";
     public const string SuperStrength = "Super-Strength";
     public const string Telepathy = "Telepathy";
-
+    public const string Telekinesis = "Telekinesis";
 }

@@ -26,9 +26,6 @@ public class TraitSelector : ITraitSelector
 
     private static List<Trait> GetAllTraits() =>
     [
-        /*
-£ Presence
-         */
         new()
         {
             Name = TraitNames.Abrasive,
@@ -68,11 +65,35 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.CombatExpert,
+            Effect =
+            [
+                "The character knows how to handle themselves better than most. They have an edge on Melee attacks against enemies of Rank 1.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Connections,
             Effect =
             [
                 "The character knows someone with access to and knowledge of a particular field. The connection could be a reporter, a police officer, a politician, a mobster and so on. By making an Ego check, the character can call on their contact to provide help in the form of clues, information or resources. The Narrator determines the TN of the Ego check based on the favor requested.",
                 "This trait can be selected multiple times, using many di­fferent types. These include Celebrities, Community, Criminal, Espionage, Military, Outsiders, Police, Professional, Sources, Super Heroes and so on."
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Determination,
+            Effect =
+            [
+                "The character never gives up, even when they feel like they’re at their worst. While demoralized, they do not gain trouble on all actions, though they still cannot maintain concentration or spend further Focus.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.EideticMemory,
+            Effect =
+            [
+                "The character rarely forgets anything. If their player forgets something, they can ask the Narrator to remind them.",
             ],
         },
         new()
@@ -97,6 +118,22 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character can strike up a conversation with anyone at any time and can often convince them to lend a hand. They have an edge on Ego checks to persuade characters they are speaking to for the first time.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Interrogation,
+            Effect =
+            [
+                "The character knows how to ask the right questions in the right way. They have an edge on Ego or Logic checks made when asking questions.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Investigation,
+            Effect =
+            [
+                "The character is an expert investigator. They have an edge on Vigilance checks to spot clues and on Logic checks related to interpreting clues. If they have access to a forensics lab at the time, they gain a second edge on such checks.",
             ],
         },
         new()
@@ -147,5 +184,5 @@ public class TraitSelector : ITraitSelector
                 "The character has something weird (or even wonderful) about them. This causes people to have strong reactions to them, both good and bad. They have an edge on all Ego checks to persuade people inclined to like them and trouble on all Ego checks against people inclined to dislike them.",
             ],
         }
-    ];
+    ];         
 }

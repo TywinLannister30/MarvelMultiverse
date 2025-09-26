@@ -15,6 +15,8 @@ public static class PowerNames
     public const string Discipline3 = "Discipline 3";
     public const string Discipline4 = "Discipline 4";
     public const string DispelSpell = "Dispel Spell";
+    public const string EditMemory = "Edit Memory";
+    public const string ESP = "ESP";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
     public const string Flight1 = "Flight 1";
     public const string Flight2 = "Flight 2";
@@ -26,6 +28,7 @@ public static class PowerNames
     public const string Jump1 = "Jump 1";
     public const string Jump2 = "Jump 2";
     public const string Jump3 = "Jump 3";
+    public const string MemoryBlip = "Memory Blip";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";
     public const string Mighty3 = "Mighty 3";
@@ -39,6 +42,10 @@ public static class PowerNames
     public const string Sturdy3 = "Sturdy 3";
     public const string Sturdy4 = "Sturdy 4";
     public const string SummonPortal = "Summon Portal";
+    public const string TelekineticManipulation = "Telekinetic Manipulation";
+    public const string TelepathicBlast = "Telepathic Blast";
+    public const string TelepathicLink = "Telepathic Link";
+    public const string TelepathicNetwork = "Telepathic Network";
     public const string UnrelentingSmash = "Unrelenting Smash";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
     public const string WindsOfWatoomb = "Winds of Watoomb";
