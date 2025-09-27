@@ -26,10 +26,22 @@ public class TagSelector : ITagSelector
 
     private static List<Tag> GetAllTags() =>
     [
-        /*
-£ Sorcerous
-£ Supernatural
-     */
+        new()
+        {
+            Name = TagNames.Authority,
+            Effect =
+            [
+                "The character has a legal authority of some kind. They might be a commissioned officer, privateer, bounty hunter, doctor, firearms dealer, lawyer, pharmacist, police officer, private investigator, mayor, governor and so on. This tag can be selected multiple times if appropriate."
+            ]
+        },
+        new()
+        {
+            Name = TagNames.Backup,
+            Effect =
+            [
+                "The character is part of an organization—like a police force that they can call for immediate backup at any time."
+            ]
+        },
         new()
         {
             Name = TagNames.BlackMarketAccess,
@@ -57,6 +69,14 @@ public class TagSelector : ITagSelector
             [
                 "For gamma mutates only.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.Headquarters,
+            Effect =
+            [
+                "The character has a base, cave or lair they can use to recover from wounds, repair or store equipment, work on inventions and so on. The location can be public or secret, and it can be as humble as a toolshed or as elaborate as an underground complex or a Manhattan skyscraper.",
+            ]
         },
         new()
         {
@@ -108,6 +128,15 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character constantly emits low levels of some sort of radiation. This can be picked up by a Geiger counter.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.SignatureWeapon,
+            Effect =
+            [
+                "The character is known for owning and using a specific type of weapon, like Hawkeye’s bow or Elektra’s sai.",
+                "This tag can be taken more than once, but each time must be with a di- erent weapon."
             ],
         },
         new()

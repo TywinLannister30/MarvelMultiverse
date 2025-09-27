@@ -252,10 +252,11 @@ public class CharacterSelector(
             ],
             Tags =
             [
-                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "S.H.I.E.L.D. Helicarrier"),
                 tagSelector.GetTag(TagNames.PublicIdentity),
-                tagSelector.GetTag(TagNames.Sorcerous),
-                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pistol"),
             ],
             Powers =
             [
@@ -264,8 +265,8 @@ public class CharacterSelector(
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Discipline2),
-                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
                 new PowerSet
@@ -289,49 +290,48 @@ public class CharacterSelector(
                 },
                 new PowerSet
                 {
-                    Name = PowerSetNames.Telekinesis,
+                    Name = PowerSetNames.RangedWeapons,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.TelekineticManipulation)
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
                 new PowerSet
                 {
-                    Name = PowerSetNames.Telepathy,
+                    Name = PowerSetNames.Tactics,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.EditMemory),
-                        powerSelector.GetPower(PowerNames.ESP),
-                        powerSelector.GetPower(PowerNames.MemoryBlip),
-                        powerSelector.GetPower(PowerNames.TelepathicBlast),
-                        powerSelector.GetPower(PowerNames.TelepathicLink),
-                        powerSelector.GetPower(PowerNames.TelepathicNetwork)
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
                     ],
                 }
             ],
             Biography = new Biography
             {
-                RealName = "Agatha Harkness",
-                Heights = [new() { Feet = 5, Inches = 11 }],
-                Weights = [130],
-                Gender = Gender.Female,
-                Eyes = "Blue",
-                Hair = "Gray",
+                RealName = "Phillip “Phil” Coulson",
+                Heights = [new() { Feet = 6 }],
+                Weights = [203],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupation = "Educator",
-                Origins = ["Magic: Sorcery"],
-                Teams = [TeamNames.DaughtersOfLiberty, TeamNames.DepartmentOfTheUncanny, TeamNames.StrangeAcademy],
-                Base = "Mobile",
+                Occupation = "Law Enforcer",
+                Origins = ["Special Training"],
+                Teams = [TeamNames.PowerElite, TeamNames.SHIELD, TeamNames.SecretAvengers],
+                Base = "S.H.I.E.L.D. Helicarrier",
                 History =
                 [
-                    "Agatha Harkness has been a practicing witch all her long life, stretching back tens of thousands of years. Her modern history begins in the 17th century when, following the Salem witch trials, she formed the town of New Salem as a sanctuary for persecuted magic users.",
-                    "At some point in the 20th century, Harkness’ long life began to catch up with her. She retired from New Salem and found a second calling as a governess for a young Franklin Richards, regularly assisting the Fantastic Four on their adventures.",
-                    "More recently, she has returned to a place of prominence in the magical community, acting as a teacher and a guide for young students at Strange Academy."
+                    "From an early age, Phil Coulson was a massive super-hero fan. Over the course of decades, he has built a thorough database of all existing superhumans, including information on their strengths, abilities and weaknesses.",
+                    "As a young adult, Coulson joined the U.S. Army Rangers, where he fought alongside an equally young Nick Fury Jr. After their time in the service, both men decided to join up with S.H.I.E.L.D. Coulson’s leadership skills quickly earned him the rank of Special Ops Supreme Commander.",
+                    "In recent years, Coulson has taken a more villainous turn, dedicating himself to ridding the world of the heroes he admired for so long."
                 ],
                 Personality =
                 [
-                    "Harkness is generally a warm and inviting person, although she can be a bit overzealous. She’s harshest with the students from which she expects the most. If she has one flaw, it’s her assuredness that she knows best.",
+                    "While considered fun and personable by his allies, Coulson is nonetheless a strict and serious field commander, not to mention a formidable combatant. Having worked in intelligence for so long, he is accustomed to keeping big secrets.",
                 ]
             }
         },

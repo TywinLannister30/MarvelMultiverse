@@ -31,6 +31,12 @@ public class Power
     public int MeleeNonCombatCheckModifier { get; set; }
 
     [JsonIgnore]
+    public int AgilityDamageModifier { get; set; }
+
+    [JsonIgnore]
+    public int AgilityNonCombatCheckModifier { get; set; }
+
+    [JsonIgnore]
     public int EgoDamageModifier { get; set; }
 
     [JsonIgnore]

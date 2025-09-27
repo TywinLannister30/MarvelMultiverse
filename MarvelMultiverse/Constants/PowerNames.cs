@@ -2,8 +2,13 @@
 
 public static class PowerNames
 {
+    public const string Accuracy1 = "Accuracy 1";
+    public const string Accuracy2 = "Accuracy 2";
+    public const string Accuracy3 = "Accuracy 3";
+    public const string Accuracy4 = "Accuracy 4";
     public const string AstralForm = "Astral Form";
     public const string BangingHeads = "Banging Heads";
+    public const string BattlePlan = "Battle Plan";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
     public const string Brawling = "Brawling";
     public const string Clobber = "Clobber";
@@ -15,6 +20,7 @@ public static class PowerNames
     public const string Discipline3 = "Discipline 3";
     public const string Discipline4 = "Discipline 4";
     public const string DispelSpell = "Dispel Spell";
+    public const string DoubleTap = "Double Tap";
     public const string EditMemory = "Edit Memory";
     public const string ESP = "ESP";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
@@ -23,11 +29,13 @@ public static class PowerNames
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string HealingFactor = "Healing Factor";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
+    public const string Inspiration = "Inspiration";
     public const string ImagesOfIkonn = "Images of Ikonn";
     public const string Immovable = "Immovable";
     public const string Jump1 = "Jump 1";
     public const string Jump2 = "Jump 2";
     public const string Jump3 = "Jump 3";
+    public const string KeepMoving = "Keep Moving";
     public const string MemoryBlip = "Memory Blip";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";
@@ -35,12 +43,14 @@ public static class PowerNames
     public const string Mighty4 = "Mighty 4";
     public const string MistsOfMunnopor = "Mists of Munnopor";
     public const string QuickToss = "Quick Toss";
-    public const string Smash = "Smash";
     public const string ShieldOfTheSeraphim = "Shield of the Seraphim";
+    public const string Smash = "Smash";
+    public const string SnapShooting = "Snap Shooting";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";
     public const string Sturdy3 = "Sturdy 3";
     public const string Sturdy4 = "Sturdy 4";
+    public const string SuppressiveFire = "Suppressive Fire";
     public const string SummonPortal = "Summon Portal";
     public const string TelekineticManipulation = "Telekinetic Manipulation";
     public const string TelepathicBlast = "Telepathic Blast";
@@ -48,5 +58,6 @@ public static class PowerNames
     public const string TelepathicNetwork = "Telepathic Network";
     public const string UnrelentingSmash = "Unrelenting Smash";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
+    public const string WeaponsBlazing = "Weapons Blazing";
     public const string WindsOfWatoomb = "Winds of Watoomb";
 }

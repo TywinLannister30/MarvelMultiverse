@@ -113,6 +113,7 @@ public class Character
             Run = baseSpeed,
             Climb = (int)Math.Ceiling(baseSpeed / 2.0),
             Swim = (int)Math.Ceiling(baseSpeed / 2.0),
+            Jump = (int)Math.Ceiling(baseSpeed / 2.0),
         };
 
         if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
@@ -132,7 +133,7 @@ public class Character
     public void SetNonCombatCheckModifiers()
     {
         Abilities.Melee.NonCombatCheck = Abilities.Melee.Score + Powers.Sum(x => x.Powers.Sum(p => p.MeleeNonCombatCheckModifier));
-        Abilities.Agility.NonCombatCheck = Abilities.Agility.Score;
+        Abilities.Agility.NonCombatCheck = Abilities.Agility.Score + Powers.Sum(x => x.Powers.Sum(p => p.AgilityNonCombatCheckModifier)); ;
         Abilities.Resilience.NonCombatCheck = Abilities.Resilience.Score;
         Abilities.Vigilance.NonCombatCheck = Abilities.Vigilance.Score;
         Abilities.Ego.NonCombatCheck = Abilities.Ego.Score + Powers.Sum(x => x.Powers.Sum(p => p.EgoNonCombatCheckModifier)); ;
@@ -142,7 +143,7 @@ public class Character
     public void SetDamageModifiers()
     {
         Abilities.Melee.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.MeleeDamageModifier));
-        Abilities.Agility.DamageModifier = Rank;
+        Abilities.Agility.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.AgilityDamageModifier)); ;
         Abilities.Ego.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.EgoDamageModifier)); ;
         Abilities.Logic.DamageModifier = Rank;
     }

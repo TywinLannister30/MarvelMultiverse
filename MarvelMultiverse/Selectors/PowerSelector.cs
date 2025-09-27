@@ -19,6 +19,62 @@ public class PowerSelector : IPowerSelector
     [
         new()
         {
+            Name = PowerNames.Accuracy1,
+            Description = "The character is an ace with ranged attacks.",
+            PowerSets = ["None"],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +1 to their Agility damage multiplier, and they gain a +1 bonus to Agility checks other than attacks.",
+            ],
+            AgilityDamageModifier = 1,
+            AgilityNonCombatCheckModifier = 1
+        },
+        new()
+        {
+            Name = PowerNames.Accuracy2,
+            Description = "The character is a sharpshooter.",
+            PowerSets = ["None"],
+            Prerequsites = "Accuracy 1, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +2 to their Agility damage multiplier, and they gain a +2 bonus to Agility checks other than attacks.",
+            ],
+            AgilityDamageModifier = 2,
+            AgilityNonCombatCheckModifier = 2
+        },
+        new()
+        {
+            Name = PowerNames.Accuracy3,
+            Description = "The character could hit a fly at one hundred paces.",
+            PowerSets = ["None"],
+            Prerequsites = "Accuracy 2, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +3 to their Agility damage multiplier, and they gain a +3 bonus to Agility checks other than attacks.",
+            ],
+            AgilityDamageModifier = 3,
+            AgilityNonCombatCheckModifier = 3
+        },
+        new()
+        {
+            Name = PowerNames.Accuracy4,
+            Description = " The character can out-target almost anyone.",
+            PowerSets = ["None"],
+            Prerequsites = "Accuracy 3, Rank 4",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +4 to their Agility damage multiplier, and they gain a +4 bonus to Agility checks other than attacks.",
+            ],
+            AgilityDamageModifier = 4,
+            AgilityNonCombatCheckModifier = 4
+        },
+        new()
+        {
             Name = PowerNames.AstralForm,
             Description = "The character can enter the Astral Plane.",
             PowerSets = [PowerSetNames.Magic, PowerSetNames.Telepathy],
@@ -43,6 +99,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes one Melee check against the Melee defense scores of two enemies within reach. If the attack fails against either foe, it fails entirely. If the attack is a success against both foes, each enemy takes full damage. On a Fantastic success, each enemy is also knocked prone."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.BattlePlan,
+            Description = "The character always has a plan.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.Inspiration}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.OneRound,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character inspires one or more allies of their choice in earshot, up to the character’s Vigilance. Inspired allies gain an edge on all action checks until the start of the character’s next turn."
             ]
         },
         new()
@@ -203,6 +273,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.DoubleTap,
+            Description = "To be twice as sure.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes a ranged attack against an enemy within 2 spaces. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and is bleeding."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.EditMemory,
             Description = "The character alters someone’s memory.",
             PowerSets = [PowerSetNames.Telepathy],
@@ -331,6 +414,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Inspiration,
+            Description = "The character’s words inspire their allies.",
+            PowerSets = ["None"],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.OneRound,
+            Effect =
+            [
+                "The character inspires an ally in earshot. The ally gains an edge on all action checks until the start of the character’s next turn.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Immovable,
             Description = "Nobody pushes the character around.",
             PowerSets = [PowerSetNames.ShieldBearer, PowerSetNames.SuperStrength],
@@ -383,6 +479,20 @@ public class PowerSelector : IPowerSelector
             ],
             JumpSpeed = true,
             JumpSpeedMultipliedByRank = true,
+        },
+        new()
+        {
+            Name = PowerNames.KeepMoving,
+            Description = "The character can keep allies moving under fire.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "An ally in line of sight and earshot is demoralized or stunned.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The demoralized or stunned condition ends."
+            ]
         },
         new()
         {
@@ -516,6 +626,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SnapShooting,
+            Description = "The character shoots from the hip with deadly speed.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, an affected target takes half regular damage. On a Fantastic success, an affected target takes full damage and is bleeding."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Sturdy1,
             Description = "The character has protection from physical damage.",
             PowerSets = ["None"],
@@ -579,6 +702,19 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character opens a glowing portal in a space next to them that teleports anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. This can be between any two points in the Multiverse, as long as the character has seen the destination. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.SuppressiveFire,
+            Description = "The character forces their foes to keep their heads down.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes an Agility attack against a target’s Vigilance defense. If the attack is a success, apply Health Damage Reduction normally. Any damage taken is then applied to the target’s Focus instead. If it’s a Fantastic success, the damage is doubled, and if the target takes any Focus damage, they are stunned for one round."
             ],
         },
         new()
@@ -664,6 +800,19 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character creates an inky mist for up to 25 nspaces per rank around them that blocks all line of sight beyond 5 spaces. On later turns, the character can have the mist attacks one target at a time. Make an Ego check against the target’s Vigilance defense. On a success, the attack does regular damage. On a Fantastic success, it does double damage and blinds the target for one turn.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.WeaponsBlazing,
+            Description = "The character blazes away at two foes at once.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = PowerNames.SnapShooting,
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, the affected target takes half regular damage. On a Fantastic success, the affected target takes full damage, and the character can make a bonus attack with this power against any available target, with the same effect. "
             ],
         },
         new()
