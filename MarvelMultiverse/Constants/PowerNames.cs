@@ -22,6 +22,7 @@ public static class PowerNames
     public const string DispelSpell = "Dispel Spell";
     public const string DoubleTap = "Double Tap";
     public const string EditMemory = "Edit Memory";
+    public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
     public const string Flight1 = "Flight 1";
@@ -42,6 +43,9 @@ public static class PowerNames
     public const string Mighty3 = "Mighty 3";
     public const string Mighty4 = "Mighty 4";
     public const string MistsOfMunnopor = "Mists of Munnopor";
+    public const string MultiversalPortal = "Multiversal Portal";
+    public const string MultiversalTravel = "Multiversal Travel";
+    public const string MultiversalTravelTogether = "Multiversal Travel Together";
     public const string QuickToss = "Quick Toss";
     public const string ShieldOfTheSeraphim = "Shield of the Seraphim";
     public const string Smash = "Smash";
@@ -56,6 +60,9 @@ public static class PowerNames
     public const string TelepathicBlast = "Telepathic Blast";
     public const string TelepathicLink = "Telepathic Link";
     public const string TelepathicNetwork = "Telepathic Network";
+    public const string TimePortal = "Time Portal";
+    public const string TimeTravel = "Time Travel";
+    public const string TimeTravelTogether = "Time Travel Together";
     public const string UnrelentingSmash = "Unrelenting Smash";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
     public const string WeaponsBlazing = "Weapons Blazing";

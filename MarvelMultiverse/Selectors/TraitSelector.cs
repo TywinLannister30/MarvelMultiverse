@@ -106,6 +106,22 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.ExtraOccupation,
+            Effect =
+            [
+                "The character has a busy life and has done all sorts of things. They can choose another occupation.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Fearless,
+            Effect =
+            [
+                "The character is extremely brave. They have an edge on any action checks required to deal with fear.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.FontOfInformation,
             Effect =
             [
@@ -178,11 +194,27 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.QuickLearner,
+            Effect =
+            [
+                "If the character fails an action check, they gain an edge on the check if they try the same action again on their next turn.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.SituationalAwareness,
+            Effect =
+            [
+                "The character is trained to always keep an eye out for trouble. They have an edge on initiative checks.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Weird,
             Effect =
             [
                 "The character has something weird (or even wonderful) about them. This causes people to have strong reactions to them, both good and bad. They have an edge on all Ego checks to persuade people inclined to like them and trouble on all Ego checks against people inclined to dislike them.",
             ],
         }
-    ];         
+    ];
 }

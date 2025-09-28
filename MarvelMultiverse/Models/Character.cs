@@ -99,6 +99,7 @@ public class Character
         Initiative = new Initiative
         {
             Modifier = Abilities.Vigilance.Score,
+            HasEdge = Traits.Any(x => x.InitiativeEdge)
         };
     }
 

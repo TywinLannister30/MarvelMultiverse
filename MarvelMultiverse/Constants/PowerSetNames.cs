@@ -10,6 +10,10 @@ public class PowerSetNames
     public const string MagicSorcery = "Magic (Sorcery)";
     public const string MagicRitualMagic = "Magic (Ritual Magic)";
     public const string MartialArts = "Martial Arts";
+    public const string OmniversalTravel = "Omniversal Travel";
+    public const string OmniversalTravelDimensional = "Omniversal Travel (Dimensional)";
+    public const string OmniversalTravelMultiversal = "Omniversal Travel (Multiversal)";
+    public const string OmniversalTravelTime = "Omniversal Travel (Time)";
     public const string RangedWeapons = "Ranged Weapons";
     public const string ShieldBearer = "Shield Bearer";
     public const string SpiderPowers = "Spider-Powers";

@@ -116,6 +116,22 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Mentor,
+            Effect =
+            [
+                "The character knows an older person they can ask for advice, even when it comes to having super-powers. This tag can be selected multiple times.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Obligation,
+            Effect =
+            [
+                "The character is responsible to certain people, places or organizations who rely on them. This tag can be selected multiple times, using many different categories. These include family, school, society, sports, work and so on.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.PublicIdentity,
             Effect =
             [

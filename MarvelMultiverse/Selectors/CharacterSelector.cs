@@ -335,5 +335,103 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "America Chavez",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 7, resilience: 4, vigilance: 3, ego: 4, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Professor Douglas"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelMultiversal,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MultiversalPortal),
+                        powerSelector.GetPower(PowerNames.MultiversalTravel),
+                        powerSelector.GetPower(PowerNames.MultiversalTravelTogether),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelTime,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TimePortal),
+                        powerSelector.GetPower(PowerNames.TimeTravel),
+                        powerSelector.GetPower(PowerNames.TimeTravelTogether),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Phillip “Phil” Coulson",
+                Heights = [new() { Feet = 6 }],
+                Weights = [203],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupation = "Law Enforcer",
+                Origins = ["Special Training"],
+                Teams = [TeamNames.PowerElite, TeamNames.SHIELD, TeamNames.SecretAvengers],
+                Base = "S.H.I.E.L.D. Helicarrier",
+                History =
+                [
+                    "From an early age, Phil Coulson was a massive super-hero fan. Over the course of decades, he has built a thorough database of all existing superhumans, including information on their strengths, abilities and weaknesses.",
+                    "As a young adult, Coulson joined the U.S. Army Rangers, where he fought alongside an equally young Nick Fury Jr. After their time in the service, both men decided to join up with S.H.I.E.L.D. Coulson’s leadership skills quickly earned him the rank of Special Ops Supreme Commander.",
+                    "In recent years, Coulson has taken a more villainous turn, dedicating himself to ridding the world of the heroes he admired for so long."
+                ],
+                Personality =
+                [
+                    "While considered fun and personable by his allies, Coulson is nonetheless a strict and serious field commander, not to mention a formidable combatant. Having worked in intelligence for so long, he is accustomed to keeping big secrets.",
+                ]
+            }
+        },
     ];
 }

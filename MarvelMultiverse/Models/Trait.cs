@@ -20,6 +20,9 @@ public class Trait: ICloneable
     [JsonIgnore]
     public int RunSpeedModifier { get; set; }
 
+    [JsonIgnore]
+    public bool InitiativeEdge { get; set; }
+
     public object Clone()
     {
         return new Trait
@@ -29,7 +32,8 @@ public class Trait: ICloneable
             Specialization = this.Specialization,
             MeleeDefenceModifier = this.MeleeDefenceModifier,
             AgilityDefenceModifier = this.AgilityDefenceModifier,
-            RunSpeedModifier = this.RunSpeedModifier
+            RunSpeedModifier = this.RunSpeedModifier,
+            InitiativeEdge = this.InitiativeEdge
         };
     }
 }

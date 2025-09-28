@@ -302,6 +302,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.EnvironmentalProtection,
+            Description = "Environmental e£fects don’t bother the character.",
+            PowerSets = ["None"],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character is not harmed by intense cold or heat, the pressure of the deep seas or the intense radiation and vacuum of space.",
+                "The player can choose any or all of these protections, as best fi ts with the character concept.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ESP,
             Description = "The character can sense the presence of others.",
             PowerSets = [PowerSetNames.Telepathy],
@@ -579,6 +592,49 @@ public class PowerSelector : IPowerSelector
             [
                 "The character creates a thick fog for up to 100 spaces per rank around them that blocks all line of sight beyond 10 spaces and keeps people or creatures inside it from flying, gliding or webslinging.",
             ],
+        }, 
+        new()
+        {
+            Name = PowerNames.MultiversalPortal,
+            Description = "The character opens a portal to another universe.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.MultiversalTravelTogether}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character opens a glowing portal in a space next to them that moves anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. The other end of the portal must be in a clear space in another universe that the character has been to. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.MultiversalTravel,
+            Description = "The character moves from one universe to another.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Movement}",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character instantly moves from their current universe to another universe. For instance: from Earth-616 to Earth-65. When they move to the other universe, they can arrive in any place they’ve been to before. Otherwise, they arrive at the closest available corresponding space in the other universe.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.MultiversalTravelTogether,
+            Description = "The character sends someone to another universe.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.MultiversalTravel}, Rank 4",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes an Ego check against the Vigilance of a target they have grabbed. If the check is successful, the character can send the target to another universe. The target can be sent to any location in that universe that the character has been to before. Otherwise, the target arrives at the closest available corresponding space in the other universe.",
+            ],
         },
         new()
         {
@@ -771,6 +827,49 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character can communicate telepathically with a group of willing, previously linked people, each of whom they have met or seen before. The communication can be verbal, visual or even more complex, such as imparting location information. The group can number up to five people per rank. There is no limit to the distance of the communication, as long as everyone involved is in the same dimension.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TimePortal,
+            Description = "The character opens a portal in time.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.TimeTravelTogether}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character opens a glowing portal in a space next to them that moves anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. The other end of the portal must be in a clear space in another period of time, in roughly the same place. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TimeTravel,
+            Description = "The character moves from one time to another.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = "Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Movement}",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character instantly moves from their current time to another time—for instance, from the present to 1962. When they move to the other time, they can arrive in any place they’ve been to before. Otherwise, they arrive at the closest available corresponding space in the other time.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TimeTravelTogether,
+            Description = "The character sends someone to another time.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.TimeTravel}, Rank 4",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes an Ego check against the Vigilance defense of a target they have grabbed. If the check is successful, the character can send the target to another time. The target can be sent to any location in that time that the character has been to before. Otherwise, the target arrives at the closest available corresponding space in the other time.",
             ],
         },
         new()
