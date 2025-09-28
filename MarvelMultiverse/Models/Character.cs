@@ -3,6 +3,7 @@
 
 
 using MarvelMultiverse.Constants;
+using System.Security.Claims;
 
 namespace MarvelMultiverse.Models;
 
@@ -88,7 +89,7 @@ public class Character
 
         if (Tags != null && Tags.Any(x => x.Name == TagNames.Heroic))
         {
-            Karma = Rank;
+            karma = Rank;
         }
 
         Karma = karma;
@@ -112,10 +113,14 @@ public class Character
         Speed = new Speeds
         {
             Run = baseSpeed,
-            Climb = (int)Math.Ceiling(baseSpeed / 2.0),
-            Swim = (int)Math.Ceiling(baseSpeed / 2.0),
-            Jump = (int)Math.Ceiling(baseSpeed / 2.0),
         };
+
+        if (Powers.Any(x => x.Powers.Any(p => p.RunSpeedMultipliedByRank)))
+            Speed.Run = baseSpeed * Rank;
+
+        Speed.Climb = (int)Math.Ceiling(Speed.Run / 2.0);
+        Speed.Swim = (int)Math.Ceiling(Speed.Run / 2.0);
+        Speed.Jump = (int)Math.Ceiling(Speed.Run / 2.0);
 
         if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
         {

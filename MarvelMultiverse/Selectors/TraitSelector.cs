@@ -207,6 +207,7 @@ public class TraitSelector : ITraitSelector
             [
                 "The character is trained to always keep an eye out for trouble. They have an edge on initiative checks.",
             ],
+            InitiativeEdge = true
         },
         new()
         {

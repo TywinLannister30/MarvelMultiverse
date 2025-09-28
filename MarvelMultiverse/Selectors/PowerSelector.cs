@@ -117,6 +117,33 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.BlazingFastFists,
+            Description = "The character can attack superfast.",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = "Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character has an edge on all Melee attacks."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Blur,
+            Description = " The character moves like a blur!",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = $"{PowerNames.SpeedRun2}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.OneRound,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "Any attacks against the character have trouble."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.BoltsOfBalthakk,
             Description = "The character fires enchanted bolts of electricity from their fingers.",
             PowerSets = [PowerSetNames.Magic],
@@ -692,6 +719,32 @@ public class PowerSelector : IPowerSelector
             [
                 "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, an affected target takes half regular damage. On a Fantastic success, an affected target takes full damage and is bleeding."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.SpeedRun1,
+            Description = "The character runs as fast as a car!",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = "Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Multiply the character’s regular Run Speed by their rank to get their new Run Speed. Outside of combat, they can move three times as fast.",
+            ],
+            RunSpeedMultipliedByRank = true
+        },
+        new()
+        {
+            Name = PowerNames.SpeedRun2,
+            Description = "The character runs as fast as a jet!",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = $"{PowerNames.SpeedRun1}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Multiply the character’s regular Run Speed by their rank to get their new Run Speed. Outside of combat, the character can move up to 50 times as fast as their increased Run Speed.",
+            ],
+            RunSpeedMultipliedByRank = true
         },
         new()
         {

@@ -20,7 +20,7 @@ public class Biography
 
     public string DistinguishingFeatures { get; set; }
 
-    public string Occupation { get; set; }
+    public List<string> Occupations { get; set; }
 
     public List<string> Origins { get; set; }
 

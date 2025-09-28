@@ -115,7 +115,7 @@ public class CharacterSelector(
                 Hair = "Bald",
                 Size = Size.Big,
                 DistinguishingFeatures = "Green, scaly skin, webbed ears, two massive toes per foot",
-                Occupation = "Spy",
+                Occupations = ["Spy"],
                 Origins = ["Weird Science: Gamma Mutate"],
                 Teams = [TeamNames.Thunderbolts, TeamNames.ProjectGreenSpring],
                 Base = "Secret",
@@ -218,7 +218,7 @@ public class CharacterSelector(
                 Hair = "Gray",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupation = "Educator",
+                Occupations = ["Educator"],
                 Origins = ["Magic: Sorcery"],
                 Teams = [TeamNames.DaughtersOfLiberty, TeamNames.DepartmentOfTheUncanny, TeamNames.StrangeAcademy],
                 Base = "Mobile",
@@ -319,7 +319,7 @@ public class CharacterSelector(
                 Hair = "Brown",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupation = "Law Enforcer",
+                Occupations = ["Law Enforcer"],
                 Origins = ["Special Training"],
                 Teams = [TeamNames.PowerElite, TeamNames.SHIELD, TeamNames.SecretAvengers],
                 Base = "S.H.I.E.L.D. Helicarrier",
@@ -399,37 +399,47 @@ public class CharacterSelector(
                 },
                 new PowerSet
                 {
-                    Name = PowerSetNames.Tactics,
+                    Name = PowerSetNames.SuperSpeed,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.BattlePlan),
-                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.BlazingFastFists),
+                        powerSelector.GetPower(PowerNames.Blur),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Smash)
                     ],
                 }
             ],
             Biography = new Biography
             {
-                RealName = "Phillip “Phil” Coulson",
+                RealName = "America Chavez",
                 Heights = [new() { Feet = 6 }],
-                Weights = [203],
-                Gender = Gender.Male,
+                Weights = [165],
+                Gender = Gender.Female,
                 Eyes = "Brown",
-                Hair = "Brown",
+                Hair = "Black",
                 Size = Size.Average,
-                DistinguishingFeatures = "None",
-                Occupation = "Law Enforcer",
-                Origins = ["Special Training"],
-                Teams = [TeamNames.PowerElite, TeamNames.SHIELD, TeamNames.SecretAvengers],
-                Base = "S.H.I.E.L.D. Helicarrier",
+                DistinguishingFeatures = "Star tattoos on wrists",
+                Occupations = ["Adventurer", "Student"],
+                Origins = ["Weird Science"],
+                Teams = [TeamNames.Thunderbolts, TeamNames.Ultimates, TeamNames.YoungAvengers],
+                Base = "Mobile",
                 History =
                 [
-                    "From an early age, Phil Coulson was a massive super-hero fan. Over the course of decades, he has built a thorough database of all existing superhumans, including information on their strengths, abilities and weaknesses.",
-                    "As a young adult, Coulson joined the U.S. Army Rangers, where he fought alongside an equally young Nick Fury Jr. After their time in the service, both men decided to join up with S.H.I.E.L.D. Coulson’s leadership skills quickly earned him the rank of Special Ops Supreme Commander.",
-                    "In recent years, Coulson has taken a more villainous turn, dedicating himself to ridding the world of the heroes he admired for so long."
+                    "America Chavez was born with Edges Syndrome, a mysterious and deadly genetic illness. Out of desperation, America’s mothers allowed a reclusive mad scientist and billionaire by the name of Mr. Gales to experiment upon America.",
+                    "Gales’ experiments cured America’s illness but also gave her the power to open extradimensional portals. Seeking to use this power for himself, Gales murdered America’s mothers. Only by sheer luck did America herself manage to escape Gales’ clutches.",
+                    "Stricken with amnesia, the wandering young America was adopted by a kindly couple in Washington Heights. As years passed, America slowly regained her memories and her powers. In honor of her dead parents, America vowed to protect the powerless."
                 ],
                 Personality =
                 [
-                    "While considered fun and personable by his allies, Coulson is nonetheless a strict and serious field commander, not to mention a formidable combatant. Having worked in intelligence for so long, he is accustomed to keeping big secrets.",
+                    "Despite the traumatic events she experienced as a child, America remains a deeply empathetic and passionate crimefi ghter. As one of the most powerful young heroes in the world, she’s proven herself as an effective team leader.",
                 ]
             }
         },

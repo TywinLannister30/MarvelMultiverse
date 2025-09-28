@@ -18,6 +18,7 @@ public class PowerSetNames
     public const string ShieldBearer = "Shield Bearer";
     public const string SpiderPowers = "Spider-Powers";
     public const string SuperStrength = "Super-Strength";
+    public const string SuperSpeed = "Super-Speed";
     public const string Tactics = "Tactics";
     public const string Telepathy = "Telepathy";
     public const string Telekinesis = "Telekinesis";

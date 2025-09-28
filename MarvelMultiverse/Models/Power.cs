@@ -56,4 +56,7 @@ public class Power
 
     [JsonIgnore]
     public bool JumpSpeedMultipliedByRank { get; set; }
+
+    [JsonIgnore]
+    public bool RunSpeedMultipliedByRank { get; set; }
 }

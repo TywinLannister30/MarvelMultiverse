@@ -9,6 +9,8 @@ public static class PowerNames
     public const string AstralForm = "Astral Form";
     public const string BangingHeads = "Banging Heads";
     public const string BattlePlan = "Battle Plan";
+    public const string BlazingFastFists = "Blazing-Fast Fists";
+    public const string Blur = "Blur";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
     public const string Brawling = "Brawling";
     public const string Clobber = "Clobber";
@@ -50,6 +52,8 @@ public static class PowerNames
     public const string ShieldOfTheSeraphim = "Shield of the Seraphim";
     public const string Smash = "Smash";
     public const string SnapShooting = "Snap Shooting";
+    public const string SpeedRun1 = "Speed Run 1";
+    public const string SpeedRun2 = "Speed Run 2";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";
     public const string Sturdy3 = "Sturdy 3";
