@@ -18,6 +18,9 @@ public class Trait: ICloneable
     public int AgilityDefenceModifier { get; set; }
 
     [JsonIgnore]
+    public int FocusModifier { get; set; }
+
+    [JsonIgnore]
     public int RunSpeedModifier { get; set; }
 
     [JsonIgnore]
@@ -32,6 +35,7 @@ public class Trait: ICloneable
             Specialization = this.Specialization,
             MeleeDefenceModifier = this.MeleeDefenceModifier,
             AgilityDefenceModifier = this.AgilityDefenceModifier,
+            FocusModifier = this.FocusModifier,
             RunSpeedModifier = this.RunSpeedModifier,
             InitiativeEdge = this.InitiativeEdge
         };

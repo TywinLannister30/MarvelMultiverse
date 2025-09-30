@@ -4,6 +4,18 @@ public class PowerSetNames
 {
     public const string Basic = "Basic";
 
+    public const string ElementControl = "Element Control";
+    public const string ElementControlAir = "Element Control (Air)";
+    public const string ElementControlEarth = "Element Control (Earth)";
+    public const string ElementControlElectricity = "Element Control (Electricity)";
+    public const string ElementControlEnergy = "Element Control (Energy)";
+    public const string ElementControlFire = "Element Control (Fire)";
+    public const string ElementControlForce = "Element Control (Force)";
+    public const string ElementControlHellfire = "Element Control (Hellfire)";
+    public const string ElementControlIce = "Element Control (Ice)";
+    public const string ElementControlIron = "Element Control (Iron)";
+    public const string ElementControlSound = "Element Control (Sound)";
+    public const string ElementControlWater = "Element Control (Water)";
     public const string Magic = "Magic";
     public const string MagicChaosMagic = "Magic (Chaos Magic)";
     public const string MagicDemonicMagic = "Magic (Demonic Magic)";
@@ -15,6 +27,7 @@ public class PowerSetNames
     public const string OmniversalTravelMultiversal = "Omniversal Travel (Multiversal)";
     public const string OmniversalTravelTime = "Omniversal Travel (Time)";
     public const string RangedWeapons = "Ranged Weapons";
+    public const string Resize = "Resize";
     public const string ShieldBearer = "Shield Bearer";
     public const string SpiderPowers = "Spider-Powers";
     public const string SuperStrength = "Super-Strength";

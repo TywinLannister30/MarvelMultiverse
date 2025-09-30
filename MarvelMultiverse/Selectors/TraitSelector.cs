@@ -36,6 +36,15 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.BattleReady,
+            Effect =
+            [
+                "The character is always mentally prepared for any sort of trouble to start. Add +30 Focus."
+            ],
+            FocusModifier = 30
+        },
+        new()
+        {
             Name = TraitNames.Berserker,
             Effect =
             [
@@ -130,6 +139,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Gearhead,
+            Effect =
+            [
+                "The character knows their way around machines. They have an edge on Logic checks to figure out how any Logic checks to figure out how any machine works.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Glibness,
             Effect =
             [
@@ -142,6 +159,14 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character knows how to ask the right questions in the right way. They have an edge on Ego or Logic checks made when asking questions.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Inventor,
+            Effect =
+            [
+                " The character is good at coming up with solutions on the fly. They have an edge on Logic checks when creating or repairing things.",
             ],
         },
         new()
@@ -202,12 +227,29 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.ScientificExpertise,
+            Effect =
+            [
+                "The character has extensive scientifi c training. They have an edge on Logic checks made when dealing with scientific research. If they have access to an appropriate lab at the time, they gain a second edge on such checks.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.SituationalAwareness,
             Effect =
             [
                 "The character is trained to always keep an eye out for trouble. They have an edge on initiative checks.",
             ],
             InitiativeEdge = true
+        },
+        new()
+        {
+            Name = TraitNames.TechReliance,
+            Effect =
+            [
+                "The character relies on technology for powers. When they take damage that would render them unconscious, they can instead choose to lose all of their technology-related powers and remain conscious with 1 point of Health remaining.",
+                "Assuming the character has access to parts and tools, lost powers can be repaired aœ er a battle"
+            ],
         },
         new()
         {

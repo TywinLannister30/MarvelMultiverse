@@ -2,6 +2,7 @@
 
 public static class TeamNames
 {
+    public const string AIM = "A.I.M.";
     public const string DaughtersOfLiberty = "Daughters of Liberty";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string PowerElite = "Power Elite";

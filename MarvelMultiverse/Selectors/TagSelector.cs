@@ -108,6 +108,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.LabAccess,
+            Effect =
+            [
+                "The character either owns or has access to a laboratory filled with the technical equipment, supplies and tools they need for their work. This can be anything from a well-stocked high-school classroom to a forensics lab to an industrial site.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.Linguist,
             Effect =
             [
@@ -132,6 +140,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Poor,
+            Effect =
+            [
+                "The character has little access to money and struggles to make ends meet. This can cause them all sorts of problems.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.PublicIdentity,
             Effect =
             [
@@ -144,6 +160,14 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character constantly emits low levels of some sort of radiation. This can be picked up by a Geiger counter.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.SecretIdentity,
+            Effect =
+            [
+                "The character’s real identity is a secret to the public, and they must take precautions to maintain this status. This might help keep the people they care about safe from their enemies, but it can also cause strain in those same relationships.",
             ],
         },
         new()
@@ -161,6 +185,14 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character has dedicated themself to the study of traditional magic, also known as sorcery.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Streetwise,
+            Effect =
+            [
+                "The character knows how things are handled on the street, who’s in charge of various criminal enterprises and how to avoid issues with them.",
             ],
         },
         new()

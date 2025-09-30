@@ -5,9 +5,18 @@ namespace MarvelMultiverse.Selectors;
 
 public class PowerSelector : IPowerSelector
 {
-    public Power GetPower(string name)
+    public Power GetPower(string name, string specialization = null)
     {
-        return GetAllPowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
+        var staticPower = GetAllPowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
+
+        var power = staticPower.Clone() as Power;
+
+        if (!string.IsNullOrEmpty(specialization))
+        {
+            power.Name += $": {specialization}";
+        }
+
+        return power;
     }
 
     public List<Power> GetPowers()
@@ -17,6 +26,13 @@ public class PowerSelector : IPowerSelector
 
     private static List<Power> GetAllPowers() =>
     [
+        /*
+         * /*
+     * Resize Object
+ ◆Shrinking Dodge
+ ◆Shrink 4
+     */
+         */
         new()
         {
             Name = PowerNames.Accuracy1,
@@ -72,6 +88,21 @@ public class PowerSelector : IPowerSelector
             ],
             AgilityDamageModifier = 4,
             AgilityNonCombatCheckModifier = 4
+        },
+        new()
+        {
+            Name = PowerNames.AnimalCommunication,
+            Description = "The character can enter the Astral Plane.",
+            PowerSets = [PowerSetNames.Magic, PowerSetNames.Telepathy],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can project an avatar into the Astral Plane, leaving their physical body in a deep trance in the real world, where it is vulnerable to attack. While in the Astral Plane, they can interact with other characters in the Astral Plane, but they are intangible, invisible and generally undetectable in the real world. However, they can sense things in the real world. If the character is Rank 4 or higher, they can also take on a transparent form that can be seen in the real world.",
+                "While in the Astral Plane, the character can fly, and in combat, their Flight Speed is equal to their rank times their Run Speed. Outside of combat, they can move 10 times as fast."
+            ]
         },
         new()
         {
@@ -169,6 +200,62 @@ public class PowerSelector : IPowerSelector
                 "The character can use their Melee defense score against Agility attacks too."
             ],
             MeleeInsteadOfAgilityForDefence = true
+        },
+        new()
+        {
+            Name = PowerNames.Brilliance1,
+            Description = "The character puts their brain to work.",
+            PowerSets = ["None"],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +1 to their Logic damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.",
+            ],
+            LogicDamageModifier = 1,
+            LogicNonCombatCheckModifier = 1
+        },
+        new()
+        {
+            Name = PowerNames.Brilliance2,
+            Description = "Everything makes more sense to the character.",
+            PowerSets = ["None"],
+            Prerequsites = $"{PowerNames.Brilliance1}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +2 to their Logic damage multiplier, and they gain a +2 bonus to Logic checks other than attacks.",
+            ],
+            LogicDamageModifier = 2,
+            LogicNonCombatCheckModifier = 2
+        },
+        new()
+        {
+            Name = PowerNames.Brilliance3,
+            Description = "Little can stop the character’s mind.",
+            PowerSets = ["None"],
+            Prerequsites = $"{PowerNames.Brilliance2}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +3 to their Logic damage multiplier, and they gain a +3 bonus to Logic checks other than attacks.",
+            ],
+            LogicDamageModifier = 3,
+            LogicNonCombatCheckModifier = 3
+        },
+        new()
+        {
+            Name = PowerNames.Brilliance4,
+            Description = "The character’s intelligence is unparalleled.",
+            PowerSets = ["None"],
+            Prerequsites = $"{PowerNames.Brilliance3}, Rank 4",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character adds +4 to their Logic damage multiplier, and they gain a +4 bonus to Logic checks other than attacks.",
+            ],
+            LogicDamageModifier = 4,
+            LogicNonCombatCheckModifier = 4
         },
         new()
         {
@@ -325,6 +412,49 @@ public class PowerSelector : IPowerSelector
                 "The character alters the memory of a target with whom they’ve established a Telepathic Link. This can be as simple as erasing a chunk of the target’s memory or as complicated as implanting entirely new memories. The Narrator sets the target number based on how complex the new memory is and how hard it would be to integrate such memories into the character’s other memories.",
                 "The character makes a Logic check against the target’s Logic defense. On a success, the memories are altered. On a Fantastic success, the target has trouble on checks to refute such memories in the future.",
                 "Any time the target is given good reason to doubt the edited memory, they can make a Logic check to refute the new version of their memories and recover their original memories. If they succeed, they remember both the original memory and the edited one. On a Fantastic success, they know for sure who did this to them."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalBlast,
+            Description = "The character blasts a foe with their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBurst}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 Spaces",
+            Cost = "5 or more Focus",
+            Effect =
+            [
+                "The character makes a ranged attack with an edge at an enemy in line of sight. For this attack, add +1 to the character’s Agility damage bonus for every 2 points of Focus they spend. On a success, an affected target takes that total damage. On a Fantastic success, an affected target takes double that total damage and suffers the elemental type’s special effect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalBurst,
+            Description = "The character fires a burst of their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 Spaces",
+            Effect =
+            [
+                "The character makes a ranged attack against an enemy in line of sight. If the attack is a success, it infl icts regular damage. On a Fantastic success, the enemy takes double damage instead and the elemental type’s special effect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalPush,
+            Description = "The character can move a target with their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBurst}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes an Ego attack against the target’s Agility defense. If the attack succeeds, the character can move the target in any direction, up to 1 space times the character’s rank. On a Fantastic success, the target also takes regular damage, is knocked prone and suffers the element’s special effect.",
             ],
         },
         new()

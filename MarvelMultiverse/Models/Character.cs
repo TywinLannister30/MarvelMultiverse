@@ -77,6 +77,8 @@ public class Character
 
         if (focus < 10) focus = 10;
 
+        focus += Traits.Sum(x => x.FocusModifier);
+
         Focus = new DamageCapacity
         {
             Value = focus,
@@ -139,18 +141,18 @@ public class Character
     public void SetNonCombatCheckModifiers()
     {
         Abilities.Melee.NonCombatCheck = Abilities.Melee.Score + Powers.Sum(x => x.Powers.Sum(p => p.MeleeNonCombatCheckModifier));
-        Abilities.Agility.NonCombatCheck = Abilities.Agility.Score + Powers.Sum(x => x.Powers.Sum(p => p.AgilityNonCombatCheckModifier)); ;
+        Abilities.Agility.NonCombatCheck = Abilities.Agility.Score + Powers.Sum(x => x.Powers.Sum(p => p.AgilityNonCombatCheckModifier));
         Abilities.Resilience.NonCombatCheck = Abilities.Resilience.Score;
         Abilities.Vigilance.NonCombatCheck = Abilities.Vigilance.Score;
-        Abilities.Ego.NonCombatCheck = Abilities.Ego.Score + Powers.Sum(x => x.Powers.Sum(p => p.EgoNonCombatCheckModifier)); ;
-        Abilities.Logic.NonCombatCheck = Abilities.Logic.Score;
+        Abilities.Ego.NonCombatCheck = Abilities.Ego.Score + Powers.Sum(x => x.Powers.Sum(p => p.EgoNonCombatCheckModifier));
+        Abilities.Logic.NonCombatCheck = Abilities.Logic.Score + Powers.Sum(x => x.Powers.Sum(p => p.LogicNonCombatCheckModifier));
     }
 
     public void SetDamageModifiers()
     {
         Abilities.Melee.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.MeleeDamageModifier));
-        Abilities.Agility.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.AgilityDamageModifier)); ;
-        Abilities.Ego.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.EgoDamageModifier)); ;
-        Abilities.Logic.DamageModifier = Rank;
+        Abilities.Agility.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.AgilityDamageModifier));
+        Abilities.Ego.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.EgoDamageModifier));
+        Abilities.Logic.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.LogicDamageModifier));
     }
 }

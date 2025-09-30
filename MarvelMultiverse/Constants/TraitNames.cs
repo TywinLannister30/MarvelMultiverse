@@ -5,6 +5,7 @@ namespace MarvelMultiverse.Constants;
 public static class TraitNames
 {
     public const string Abrasive = "Abrasive";
+    public const string BattleReady = "Battle Ready";
     public const string Berserker = "Berserker";
     public const string Big = "Big";
     public const string Bloodthirsty = "Bloodthirsty";
@@ -16,8 +17,10 @@ public static class TraitNames
     public const string ExtraOccupation = "Extra Occupation";
     public const string Fearless = "Fearless";
     public const string FontOfInformation = "Font of Information";
+    public const string Gearhead = "Gearhead";
     public const string Glibness = "Glibness";
     public const string Interrogation = "Interrogation";
+    public const string Inventor = "Inventor";
     public const string Investigation = "Investigation";
     public const string IronWill = "Iron Will";
     public const string Leverage = "Leverage";
@@ -25,6 +28,8 @@ public static class TraitNames
     public const string Presence = "Presence";
     public const string PublicSpeaking = "Public Speaking";
     public const string QuickLearner = "Quick Learner";
+    public const string ScientificExpertise = "Scientific Expertise";
     public const string SituationalAwareness = "Situational Awareness";
+    public const string TechReliance = "Tech Reliance";
     public const string Weird = "Weird";
 }

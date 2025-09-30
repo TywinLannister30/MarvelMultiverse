@@ -6,6 +6,7 @@ public static class PowerNames
     public const string Accuracy2 = "Accuracy 2";
     public const string Accuracy3 = "Accuracy 3";
     public const string Accuracy4 = "Accuracy 4";
+    public const string AnimalCommunication = "Animal Communication";
     public const string AstralForm = "Astral Form";
     public const string BangingHeads = "Banging Heads";
     public const string BattlePlan = "Battle Plan";
@@ -13,6 +14,10 @@ public static class PowerNames
     public const string Blur = "Blur";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
     public const string Brawling = "Brawling";
+    public const string Brilliance1 = "Brilliance 1";
+    public const string Brilliance2 = "Brilliance 2";
+    public const string Brilliance3 = "Brilliance 3";
+    public const string Brilliance4 = "Brilliance 4";
     public const string Clobber = "Clobber";
     public const string CombatTrickery = "Combat Trickery";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
@@ -24,6 +29,9 @@ public static class PowerNames
     public const string DispelSpell = "Dispel Spell";
     public const string DoubleTap = "Double Tap";
     public const string EditMemory = "Edit Memory";
+    public const string ElementalBlast = "Elemental Blast";
+    public const string ElementalBurst = "Elemental Burst";
+    public const string ElementalPush = "Elemental Push";
     public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
@@ -49,7 +57,13 @@ public static class PowerNames
     public const string MultiversalTravel = "Multiversal Travel";
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
     public const string QuickToss = "Quick Toss";
+    public const string ResizeObject = "Resize Object";
     public const string ShieldOfTheSeraphim = "Shield of the Seraphim";
+    public const string Shrink1 = "Shrink 1";
+    public const string Shrink2 = "Shrink 2";
+    public const string Shrink3 = "Shrink 3";
+    public const string Shrink4 = "Shrink 4";
+    public const string ShrinkingDodge = "Shrinking Dodge";
     public const string Smash = "Smash";
     public const string SnapShooting = "Snap Shooting";
     public const string SpeedRun1 = "Speed Run 1";

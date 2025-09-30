@@ -2,11 +2,14 @@
 
 namespace MarvelMultiverse.Models;
 
-public class Power
+public class Power : ICloneable
 {
     public string Name { get; set; }
 
     public string Description { get; set; }
+
+    [JsonIgnore]
+    public string Specialization { get; set; }
 
     public List<string> PowerSets { get; set; }
 
@@ -43,6 +46,12 @@ public class Power
     public int EgoNonCombatCheckModifier { get; set; }
 
     [JsonIgnore]
+    public int LogicDamageModifier { get; set; }
+
+    [JsonIgnore]
+    public int LogicNonCombatCheckModifier { get; set; }
+
+    [JsonIgnore]
     public int HealthDamageReductionModifier { get; set; }
 
     [JsonIgnore]
@@ -59,4 +68,36 @@ public class Power
 
     [JsonIgnore]
     public bool RunSpeedMultipliedByRank { get; set; }
+
+    public object Clone()
+    {
+        return new Power
+        {
+            Name = this.Name,
+            Specialization = this.Specialization,
+            Description = this.Description,
+            PowerSets = [.. this.PowerSets],
+            Prerequsites = this.Prerequsites,
+            Action = this.Action,
+            Trigger = this.Trigger,
+            Duration = this.Duration,
+            Range = this.Range,
+            Cost = this.Cost,
+            Effect = [.. this.Effect],
+            MeleeDamageModifier = this.MeleeDamageModifier,
+            MeleeNonCombatCheckModifier = this.MeleeNonCombatCheckModifier,
+            AgilityDamageModifier = this.AgilityDamageModifier,
+            AgilityNonCombatCheckModifier = this.AgilityNonCombatCheckModifier,
+            EgoDamageModifier = this.EgoDamageModifier,
+            EgoNonCombatCheckModifier = this.EgoNonCombatCheckModifier,
+            LogicDamageModifier = this.LogicDamageModifier,
+            LogicNonCombatCheckModifier  = this.LogicNonCombatCheckModifier,
+            HealthDamageReductionModifier = this.HealthDamageReductionModifier,
+            MeleeInsteadOfAgilityForDefence = this.MeleeInsteadOfAgilityForDefence,
+            FlySpeed = this.FlySpeed,
+            JumpSpeed = this.JumpSpeed,
+            JumpSpeedMultipliedByRank  = this.JumpSpeedMultipliedByRank,
+            RunSpeedMultipliedByRank = this.RunSpeedMultipliedByRank
+        };
+    }
 }

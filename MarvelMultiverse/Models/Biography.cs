@@ -10,6 +10,8 @@ public class Biography
 
     public List<int> Weights { get; set; }
 
+    public bool VariableWieght { get; set; }
+
     public string Gender { get; set; }
 
     public string Eyes { get; set; }

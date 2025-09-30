@@ -6,9 +6,14 @@ public class Height
 
     public int Inches { get; set; }
 
+    public bool IsVariable { get; set; }
+
     public string GetString() 
     {
         var retVal = string.Empty;
+
+        if (IsVariable)
+            return "Varies";
 
         if (Feet > 0)
              retVal = $"{Feet}'";
