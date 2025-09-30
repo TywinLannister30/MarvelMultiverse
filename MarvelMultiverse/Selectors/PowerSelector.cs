@@ -32,7 +32,6 @@ public class PowerSelector : IPowerSelector
  ◆Shrinking Dodge
  ◆Shrink 4
      */
-         */
         new()
         {
             Name = PowerNames.Accuracy1,
