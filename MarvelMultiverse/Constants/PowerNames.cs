@@ -90,8 +90,10 @@ public static class PowerNames
     public const string Shrink3 = "Shrink 3";
     public const string Shrink4 = "Shrink 4";
     public const string ShrinkingDodge = "Shrinking Dodge";
+    public const string SlowMotionDodge = "Slow-Motion Dodge";
     public const string Smash = "Smash";
     public const string SnapShooting = "Snap Shooting";
+    public const string Sniping = "Sniping";
     public const string SpeedRun1 = "Speed Run 1";
     public const string SpeedRun2 = "Speed Run 2";
     public const string Sturdy1 = "Sturdy 1";
@@ -111,6 +113,7 @@ public static class PowerNames
     public const string Uncanny2 = "Uncanny 2";
     public const string Uncanny3 = "Uncanny 3";
     public const string Uncanny4 = "Uncanny 4";
+    public const string UnflappablePoise = "Unflappable Poise";
     public const string UnrelentingSmash = "Unrelenting Smash";
     public const string UntouchablePosition = "Untouchable Position";
     public const string VaporsOfValtorr = "Vapors of Valtorr";

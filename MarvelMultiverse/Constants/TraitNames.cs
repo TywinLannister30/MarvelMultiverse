@@ -6,6 +6,7 @@ public static class TraitNames
 {
     public const string Abrasive = "Abrasive";
     public const string BattleReady = "Battle Ready";
+    public const string Beguiling = "Beguiling";
     public const string Berserker = "Berserker";
     public const string Big = "Big";
     public const string Bloodthirsty = "Bloodthirsty";
@@ -37,6 +38,7 @@ public static class TraitNames
     public const string QuickLearner = "Quick Learner";
     public const string ScientificExpertise = "Scientific Expertise";
     public const string SituationalAwareness = "Situational Awareness";
+    public const string Sneaky = "Sneaky";
     public const string TechReliance = "Tech Reliance";
     public const string Weird = "Weird";
 }

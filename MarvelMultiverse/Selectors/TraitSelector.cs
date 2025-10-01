@@ -45,6 +45,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Beguiling,
+            Effect =
+            [
+                "The character has an edge when making an Ego check to persuade someone who could be attracted to them.",
+            ]
+        },
+        new()
+        {
             Name = TraitNames.Berserker,
             Effect =
             [
@@ -299,6 +307,14 @@ public class TraitSelector : ITraitSelector
                 "The character is trained to always keep an eye out for trouble. They have an edge on initiative checks.",
             ],
             InitiativeEdge = true
+        },
+        new()
+        {
+            Name = TraitNames.Sneaky,
+            Effect =
+            [
+                "The character has an edge on Agility checks when sneaking around. Enemies have trouble on Vigilance checks to detect the character when the character is invisible or hiding.",
+            ],
         },
         new()
         {

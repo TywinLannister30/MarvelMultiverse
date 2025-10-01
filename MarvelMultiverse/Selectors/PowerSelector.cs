@@ -32,7 +32,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Accuracy1,
             Description = "The character is an ace with ranged attacks.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -46,7 +46,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Accuracy2,
             Description = "The character is a sharpshooter.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Accuracy1}, Rank 2",
             Duration = Duration.Permanent,
             Effect =
@@ -60,7 +60,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Accuracy3,
             Description = "The character could hit a fly at one hundred paces.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Accuracy2}, Rank 3",
             Duration = Duration.Permanent,
             Effect =
@@ -74,7 +74,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Accuracy4,
             Description = " The character can out-target almost anyone.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Accuracy3}, Rank 4",
             Duration = Duration.Permanent,
             Effect =
@@ -227,7 +227,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Brawling,
             Description = "The character has the moves and is hard to hit.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -240,7 +240,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Brilliance1,
             Description = "The character puts their brain to work.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -254,7 +254,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Brilliance2,
             Description = "Everything makes more sense to the character.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Brilliance1}, Rank 2",
             Duration = Duration.Permanent,
             Effect =
@@ -268,7 +268,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Brilliance3,
             Description = "Little can stop the character’s mind.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Brilliance2}, Rank 3",
             Duration = Duration.Permanent,
             Effect =
@@ -282,7 +282,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Brilliance4,
             Description = "The character’s intelligence is unparalleled.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Brilliance3}, Rank 4",
             Duration = Duration.Permanent,
             Effect =
@@ -367,7 +367,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.CombatTrickery,
             Description = "The character is a tricky one!",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Rank 2",
             Action = ActionType.Reaction,
             Trigger = "The character makes an attack.",
@@ -440,7 +440,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Discipline1,
             Description = "The character works to hone their power.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -454,7 +454,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Discipline2,
             Description = "The character is more in touch with their power than ever.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Discipline 1, Rank 2",
             Duration = Duration.Permanent,
             Effect =
@@ -468,7 +468,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Discipline3,
             Description = "Few can top the character’s grasp on their power.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Discipline 2, Rank 3",
             Duration = Duration.Permanent,
             Effect =
@@ -482,7 +482,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Discipline4,
             Description = "The character has mastered their power.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Discipline 3, Rank 4",
             Duration = Duration.Permanent,
             Effect =
@@ -625,7 +625,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.EnvironmentalProtection,
             Description = "Environmental e£fects don’t bother the character.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -708,7 +708,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Flight1,
             Description = "The character can soar into the sky.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Rank 2",
             Duration = Duration.Permanent,
             Effect =
@@ -721,7 +721,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Flight2,
             Description = "The character can zoom across the sky.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Flight 1, Rank 3",
             Duration = Duration.Permanent,
             Effect =
@@ -762,7 +762,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.HealingFactor,
             Description = "The character heals amazingly fast.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -774,7 +774,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.HeightenedSenses1,
             Description = "The character has superior senses.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -786,7 +786,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.HeightenedSenses2,
             Description = "The character has senses as sharp as radar.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.HeightenedSenses1}",
             Duration = Duration.Permanent,
             Effect =
@@ -798,7 +798,7 @@ public class PowerSelector : IPowerSelector
         new()
         {
             Name = PowerNames.IconicWeapon,
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -841,7 +841,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Inspiration,
             Description = "The character’s words inspire their allies.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Action = ActionType.Standard,
             Duration = Duration.OneRound,
@@ -965,7 +965,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Mighty1,
             Description = "The character is superhumanly strong.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -979,7 +979,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Mighty2,
             Description = "The character could lift a bus.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Mighty 1, Rank 2",
             Duration = Duration.Permanent,
             Effect =
@@ -993,7 +993,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Mighty3,
             Description = "The character could lift a house.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Mighty 2, Rank 3",
             Duration = Duration.Permanent,
             Effect =
@@ -1007,7 +1007,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Mighty4,
             Description = "The character is among the strongest there are.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Mighty 3, Rank 4",
             Duration = Duration.Permanent,
             Effect =
@@ -1235,10 +1235,24 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SlowMotionDodge,
+            Description = "Time seems to slow down for the character, making it easy to dodge enemy attacks.",
+            PowerSets = [],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy makes an attack against the character’s Agility defense.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The enemy has trouble on the attack."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Smash,
             Description = "SMASH!",
             PowerSets = [PowerSetNames.SuperStrength],
-            Prerequsites = "Clobber, Rank 2",
+            Prerequsites = $"{PowerNames.Clobber}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
             Cost = "5 or more Focus",
@@ -1258,6 +1272,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, an affected target takes half regular damage. On a Fantastic success, an affected target takes full damage and is bleeding."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Sniping,
+            Description = "The character takes aim and shoots with deadly accuracy.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = "Rank 2",
+            Action = $"Both {ActionType.Standard} and {ActionType.Movement} (character cannot move this turn)",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack against an enemy at least 20 spaces away. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes triple damage instead."
             ],
         },
         new()
@@ -1290,7 +1318,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Sturdy1,
             Description = "The character has protection from physical damage.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -1304,7 +1332,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Sturdy2,
             Description = "The character is protected as if by steel.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Sturdy 1, Rank 2",
             Duration = Duration.Permanent,
             Effect =
@@ -1317,7 +1345,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Sturdy3,
             Description = "The character is protected like a tank.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Sturdy 2, Rank 4",
             Duration = Duration.Permanent,
             Effect =
@@ -1330,7 +1358,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Sturdy4,
             Description = "The character is protected like a battleship.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "Sturdy 3, Rank 6",
             Duration = Duration.Permanent,
             Effect =
@@ -1469,7 +1497,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Uncanny1,
             Description = "The character has protection against mental assaults.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
@@ -1483,7 +1511,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Uncanny2,
             Description = "The character’s mind is protected as if by steel.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Uncanny1}, Rank 2",
             Duration = Duration.Permanent,
             Effect =
@@ -1496,7 +1524,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Uncanny3,
             Description = "The character’s mind is protected like a tank.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Uncanny2}, Rank 4",
             Duration = Duration.Permanent,
             Effect =
@@ -1509,7 +1537,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.Uncanny4,
             Description = "The character’s mind is protected like a battleship.",
-            PowerSets = ["None"],
+            PowerSets = [],
             Prerequsites = $"{PowerNames.Uncanny3}, Rank 6",
             Duration = Duration.Permanent,
             Effect =
@@ -1520,10 +1548,22 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.UnflappablePoise,
+            Description = "The character can dodge most close attacks.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.DefenseStance}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Any close attacks against the character have trouble. While they use Defense Stance, such attacks have double trouble.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.UnrelentingSmash,
             Description = "The character smashes everything in reach.",
             PowerSets = [PowerSetNames.SuperStrength],
-            Prerequsites = "Ground-Shaking Stomp, Mighty 2, Rank 4",
+            Prerequsites = $"{PowerNames.GroundShakingStomp}, {PowerNames.Mighty2}, Rank 4",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
             Cost = "15 Focus",
