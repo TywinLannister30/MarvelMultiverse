@@ -10,6 +10,7 @@ public static class TraitNames
     public const string Big = "Big";
     public const string Bloodthirsty = "Bloodthirsty";
     public const string CombatExpert = "Combat Expert";
+    public const string CombatReflexes = "Combat Reflexes";
     public const string Connections = "Connections";
     public const string Determination = "Determination";
     public const string EideticMemory = "Eidetic Memory";
@@ -24,6 +25,7 @@ public static class TraitNames
     public const string Investigation = "Investigation";
     public const string IronWill = "Iron Will";
     public const string Leverage = "Leverage";
+    public const string Loner = "Loner";
     public const string OutOfShape = "Out of Shape";
     public const string Presence = "Presence";
     public const string PublicSpeaking = "Public Speaking";

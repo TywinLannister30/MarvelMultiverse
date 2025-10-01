@@ -82,6 +82,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.CombatReflexes,
+            Effect =
+            [
+                " The character can react quickly in combat. This grants them one additional reaction each round.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Connections,
             Effect =
             [
@@ -190,7 +198,15 @@ public class TraitSelector : ITraitSelector
             Name = TraitNames.Leverage,
             Effect =
             [
-                "The character is good at fi guring out what people want and using it against them. They have an edge on Logic checks to investigate people and on Ego checks to persuade people they’ve investigated.",
+                "The character is good at figuring out what people want and using it against them. They have an edge on Logic checks to investigate people and on Ego checks to persuade people they’ve investigated.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Loner,
+            Effect =
+            [
+                "The character does not play well with others. They cannot be given an edge via assistance by someone who is not a teammate.",
             ],
         },
         new()

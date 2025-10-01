@@ -22,6 +22,9 @@ public class PowerSetNames
     public const string MagicSorcery = "Magic (Sorcery)";
     public const string MagicRitualMagic = "Magic (Ritual Magic)";
     public const string MartialArts = "Martial Arts";
+    public const string MeleeWeapons = "Melee Weapons";
+    public const string MeleeWeaponsBlunt = "Melee Weapons (Blunt)";
+    public const string MeleeWeaponsSharp = "Melee Weapons (Sharp)";
     public const string OmniversalTravel = "Omniversal Travel";
     public const string OmniversalTravelDimensional = "Omniversal Travel (Dimensional)";
     public const string OmniversalTravelMultiversal = "Omniversal Travel (Multiversal)";

@@ -2,9 +2,15 @@
 
 public static class TeamNames
 {
+    //Hydra, Masters of Evil, Thunderbolts
     public const string AIM = "A.I.M.";
+    public const string Avengers = "Avengers";
     public const string DaughtersOfLiberty = "Daughters of Liberty";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
+    public const string FutureFoundation = "Future Foundation";
+    public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
+    public const string Hydra = "Hydra";
+    public const string MastersOfEvil = "Masters of Evil";
     public const string PowerElite = "Power Elite";
     public const string ProjectGreenSpring = "Project Green Spring";
     public const string SecretAvengers = "Secret Avengers";

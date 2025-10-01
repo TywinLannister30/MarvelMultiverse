@@ -26,12 +26,6 @@ public class PowerSelector : IPowerSelector
 
     private static List<Power> GetAllPowers() =>
     [
-        /*
-         * /*
-     * Resize Object
- ◆Shrinking Dodge
- ◆Shrink 4
-     */
         new()
         {
             Name = PowerNames.Accuracy1,
@@ -116,6 +110,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character can project an avatar into the Astral Plane, leaving their physical body in a deep trance in the real world, where it is vulnerable to attack. While in the Astral Plane, they can interact with other characters in the Astral Plane, but they are intangible, invisible and generally undetectable in the real world. However, they can sense things in the real world. If the character is Rank 4 or higher, they can also take on a transparent form that can be seen in the real world.",
                 "While in the Astral Plane, the character can fly, and in combat, their Flight Speed is equal to their rank times their Run Speed. Outside of combat, they can move 10 times as fast."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.AttackStance,
+            Description = "The character enters an aggressive attack stance, ready to strike in any direction.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character doubles their Melee ability bonus to damage.",
             ]
         },
         new()
@@ -286,6 +293,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.CounterstrikeTechnique,
+            Description = "The character counters an enemy’s strike with one of their own.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.AttackStance}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "While Attack Stance is active, a close attack against the character does damage.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character deals half the attacker’s regular damage to the attacker.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.CrimsonBandsOfCyttorak,
             Description = "The character unleashes red bands of magic that lash out to capture their target.",
             PowerSets = [PowerSetNames.Magic],
@@ -312,6 +334,19 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a Melee attack against the grabbed target’s Resilience defense. If it’s a success, the target takes regular damage. On a Fantastic success, the target takes double damage instead and is pinned."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.DefenseStance,
+            Description = "The character enters a fluid defensive stance, hands poised to parry and counterattack.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "Any close attacks made against the character have trouble until they are successfully attacked in this combat.",
             ]
         },
         new()
@@ -383,6 +418,20 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes an Ego check against the Ego defense of a target using a magic power that requires concentration. On a success, the target’s concentration on that power is broken. On a Fantastic success, the target’s concentration is broken entirely."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.DoThisAllDay,
+            Description = "The character draws on their inner strength to heal themselves.",
+            PowerSets = [PowerSetNames.MartialArts, PowerSetNames.ShieldBearer],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 or more Focus",
+            Effect =
+            [
+                "The character heals Ž points of Health for every point of Focus they spend.",
+            ]
         },
         new()
         {
@@ -482,6 +531,47 @@ public class PowerSelector : IPowerSelector
                 "The character can reach out with their mind to sense the presence of others within 100 spaces per rank. This tells them the person’s location and general status. It can also identify if they have super-powers or not.",
                 "If a target or targets wish to remain undetected, the character must make a Logic check and compare it against each target’s Vigilance defense. If they succeed, they sense the target. On a Fantastic success, they can also identify they sense the target. On a Fantastic the source of any powers the target has.",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.Exploit,
+            Description = "The character finds a weak spot and exploits it.",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = $"{PowerNames.ViciousAttack}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "A Fantastic success on an attack using the character’s weapon that deals at least 1 point of damage",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a Melee attack against the target’s Resilience defense score. If the attack is a success, the damage it does ignores Health Damage Reduction. On a Fantastic success, the target suffers double damage and the weapon’s special effect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.FastAttacks,
+            Description = "The character’s weapons lash out!",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character splits their attack to make two close attacks against separate targets within reach (or they can focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. On a success, the affected target takes half regular damage. On a Fantastic success, the affected target takes full damage, and the character can make a bonus attack with this power against any target within reach, with the same effect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.FastStrikes,
+            Description = "The character unleashes a fl urry of strikes.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character splits their attack to make two close attacks against separate targets within reach (or they can  focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. On a success, the affected target takes half regular damage. On a Fantastic success, the affected target takes full damage.",
+            ]
         },
         new()
         {
@@ -809,6 +899,50 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ResizeObject,
+            Description = "The character can change the size of an object within reach.",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Grow2} or {PowerNames.Shrink2}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Permanent,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character can make an object within reach grow or shrink. The character can resize the object as much as their own Grow or Shrink power would allow them to."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ReturnFire,
+            Description = "The character responds to an assault with a hail of shots.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.SuppressiveFire}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy declares an attack against the character.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes an Agility attack against a target’s Vigilance defense. If the attack is a success, apply Health Damage Reduction normally. Any damage taken is then applied to the target’s Focus instead. If it’s a Fantastic success, the damage is doubled and, if the target takes any Focus damage, they are stunned for 1 round."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ReverseMomentumThrow,
+            Description = "The character uses the momentum of their attacker to hurl them to the ground.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.DefenseStance}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "While Defense Stance is active, a close attack against the character misses.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The attacker is knocked prone and takes half the damage their attack would have inflicted if it had succeeded.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.ShieldOfTheSeraphim,
             Description = "The character produces a magical shield.",
             PowerSets = [PowerSetNames.Magic],
@@ -820,6 +954,77 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character produces a magical shield that protects them from physical damage. Any attacks against them that do 20 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 20 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Shrink1,
+            Description = "The character thinks small.",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = "None",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can shrink down to little size. They can return to their normal size at will."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Shrink2,
+            Description = "The character becomes even smaller!",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Shrink1}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can shrink down to tiny size. They can return to their normal size at will."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Shrink3,
+            Description = "The character is smaller than an action figure.",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Shrink2}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can shrink down to miniature size. They can return to their normal size at will."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Shrink4,
+            Description = " The character is so small that they’re hard to see.",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Shrink3}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can shrink down to microscopic size. They can return to their normal size at will."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ShrinkingDodge,
+            Description = "The character shrinks to avoid an attack.",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Shrink1}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "The character is attacked.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The attacker has trouble on the attack."
             ],
         },
         new()
@@ -1067,6 +1272,31 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes a Melee check and compares it against the Melee defense of every enemy within their reach. Any enemy the attack succeeds against takes half regular damage. On a Fantastic success, those enemies take full regular damage and are knocked prone instead.",
                 "The character may then pay 15 more Focus to do the same thing again—before which they can move up to half their speed with anything left from their normal movement action. They can keep doing this until they run out of speed or Focus. Each target can be a­ ected by this attack by this character only once per round."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.UntouchablePosition,
+            Description = "The character’s enemies struggle to gang up on them.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.CounterstrikeTechnique}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "If the character is attacked, all other close attacks against them have trouble until the start of their next turn.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ViciousAttack,
+            Description = "The character strikes a felling blow.",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes a close attack. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and suffers the weapon’s special effect.",
             ],
         },
         new()

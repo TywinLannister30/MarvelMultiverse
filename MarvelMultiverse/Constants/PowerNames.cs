@@ -8,6 +8,7 @@ public static class PowerNames
     public const string Accuracy4 = "Accuracy 4";
     public const string AnimalCommunication = "Animal Communication";
     public const string AstralForm = "Astral Form";
+    public const string AttackStance = "Attack Stance";
     public const string BangingHeads = "Banging Heads";
     public const string BattlePlan = "Battle Plan";
     public const string BlazingFastFists = "Blazing-Fast Fists";
@@ -20,13 +21,16 @@ public static class PowerNames
     public const string Brilliance4 = "Brilliance 4";
     public const string Clobber = "Clobber";
     public const string CombatTrickery = "Combat Trickery";
+    public const string CounterstrikeTechnique = "Counterstrike Technique";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
     public const string CrushingGrip = "Crushing Grip";
+    public const string DefenseStance = "Defense Stance";
     public const string Discipline1 = "Discipline 1";
     public const string Discipline2 = "Discipline 2";
     public const string Discipline3 = "Discipline 3";
     public const string Discipline4 = "Discipline 4";
     public const string DispelSpell = "Dispel Spell";
+    public const string DoThisAllDay = " Do This All Day";
     public const string DoubleTap = "Double Tap";
     public const string EditMemory = "Edit Memory";
     public const string ElementalBlast = "Elemental Blast";
@@ -34,10 +38,15 @@ public static class PowerNames
     public const string ElementalPush = "Elemental Push";
     public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
+    public const string Exploit = "Exploit";
+    public const string FastAttacks = "Fast Attacks";
+    public const string FastStrikes = "Fast Strikes";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
     public const string Flight1 = "Flight 1";
     public const string Flight2 = "Flight 2";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
+    public const string Grow1 = "Grow 1";
+    public const string Grow2 = "Grow 2";
     public const string HealingFactor = "Healing Factor";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
     public const string Inspiration = "Inspiration";
@@ -58,6 +67,8 @@ public static class PowerNames
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
     public const string QuickToss = "Quick Toss";
     public const string ResizeObject = "Resize Object";
+    public const string ReturnFire = "Return Fire";
+    public const string ReverseMomentumThrow = "Reverse-Momentum Throw";
     public const string ShieldOfTheSeraphim = "Shield of the Seraphim";
     public const string Shrink1 = "Shrink 1";
     public const string Shrink2 = "Shrink 2";
@@ -82,7 +93,9 @@ public static class PowerNames
     public const string TimeTravel = "Time Travel";
     public const string TimeTravelTogether = "Time Travel Together";
     public const string UnrelentingSmash = "Unrelenting Smash";
+    public const string UntouchablePosition = "Untouchable Position";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
+    public const string ViciousAttack = "Vicious Attack";
     public const string WeaponsBlazing = "Weapons Blazing";
     public const string WindsOfWatoomb = "Winds of Watoomb";
 }

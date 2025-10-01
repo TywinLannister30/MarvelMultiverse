@@ -10,6 +10,7 @@ public static class TagNames
     public const string Headquarters = "Headquarters";
     public const string Heroic = "Heroic";
     public const string Hounded = "Hounded";
+    public const string Hunted = "Hunted";
     public const string Immunity = "Immunity";
     public const string LabAccess = "Lab Access";
     public const string Linguist = "Linguist";

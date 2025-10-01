@@ -100,6 +100,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Hunted,
+            Effect =
+            [
+                "The character is hunted by the law for crimes they have supposedly (or actually) committed. If captured by the police, they may be arrested, tried for their crimes and potentially sent to jail.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.Immunity,
             Effect =
             [
