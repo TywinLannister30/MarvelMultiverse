@@ -494,6 +494,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Disguise,
+            Description = "The character appears to be someone else.",
+            PowerSets = [],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character instantly alters their appearance so that they appear to be someone else. The target number for anyone trying to see through the disguise is the character’s Ego defense. If the character is impersonating someone known to the other person, that person has an edge."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.DispelSpell,
             Description = "The character puts an end to a foe’s magic.",
             PowerSets = [PowerSetNames.Magic],

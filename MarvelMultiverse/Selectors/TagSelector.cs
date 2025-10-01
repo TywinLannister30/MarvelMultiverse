@@ -28,6 +28,14 @@ public class TagSelector : ITagSelector
     [
         new()
         {
+            Name = TagNames.AlternateForm,
+            Effect =
+            [
+                "The character can change from their regular human form into another form and back. When in either form, the character can only access powers assigned to that form. In most cases, this means that the character can use powers only when in their alternate form. This tag applies to characters that switch from one humanoid form to another, like Colossus, Emma Frost and many of the Hulks. It also applies to characters that have inhuman forms, like werewolves and vampires."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Authority,
             Effect =
             [

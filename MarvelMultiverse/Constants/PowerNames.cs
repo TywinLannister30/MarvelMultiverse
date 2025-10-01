@@ -35,6 +35,7 @@ public static class PowerNames
     public const string Discipline2 = "Discipline 2";
     public const string Discipline3 = "Discipline 3";
     public const string Discipline4 = "Discipline 4";
+    public const string Disguise = "Disguise";
     public const string DispelSpell = "Dispel Spell";
     public const string DoThisAllDay = " Do This All Day";
     public const string DoubleTap = "Double Tap";
