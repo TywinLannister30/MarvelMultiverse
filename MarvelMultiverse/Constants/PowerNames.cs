@@ -36,6 +36,8 @@ public static class PowerNames
     public const string DoThisAllDay = " Do This All Day";
     public const string DoubleTap = "Double Tap";
     public const string EditMemory = "Edit Memory";
+    public const string ElementalBarrage = "Elemental Barrage";
+    public const string ElementalBarrier = "Elemental Barrier";
     public const string ElementalBlast = "Elemental Blast";
     public const string ElementalBurst = "Elemental Burst";
     public const string ElementalPush = "Elemental Push";

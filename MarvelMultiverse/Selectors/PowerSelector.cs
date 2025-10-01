@@ -507,6 +507,35 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ElementalBarrage,
+            Description = "The character hurls a barrage of their element at their foes.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBlast}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character designates a space within their line of sight. The attack can a­ ect every enemy within 10 spaces of that. The character makes a single Ego check and compares it to each target’s Resilience defense. A­ ected enemies take half regular damage. On a Fantastic success, they take full regular damage and the elemental type’s special e­ffect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalBarrier,
+            Description = "The character forms a wall of their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBlast}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character forms a wall of their element within their line of sight and up to 10 spaces away per rank. This covers up to 2 spaces across (vertically/horizontally) per their rank. The character makes an Agility check and compares the results against the Agility defense of any target in the a­ffected spaces. On a success, the character chooses which side of the barrier the target winds up on. On a failure, the target chooses. On a Fantastic success, the target su­ffers the element’s special e­ffect too.",
+                "Attacks against the barrier are against the character’s Ego defense. Any attacks against it that do 10 points of damage or less are instantly absorbed, and the barrier continues. If an attack does more than 10 points of damage, it destroys the barrier. Either way, the attack leaves those behind the barrier unharmed."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ElementalBlast,
             Description = "The character blasts a foe with their element.",
             PowerSets = [PowerSetNames.ElementControl],
@@ -1328,7 +1357,7 @@ public class PowerSelector : IPowerSelector
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 1. If this power is part of a battle suit, the power is integrated into a removable helmet. Otherwise, it’s a part of the character.",
                 "If this power stems from armor or anything else removable—like Magneto’s helmet—the character should apply the Tech Reliance trait to it."
             ],
-            FocusDamageReductionModifier = 1
+            FocusDamageReductionModifier = -1
         },
         new()
         {
@@ -1341,7 +1370,7 @@ public class PowerSelector : IPowerSelector
             [
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 2.",
             ],
-            FocusDamageReductionModifier = 2
+            FocusDamageReductionModifier = -2
         },
         new()
         {
@@ -1354,7 +1383,7 @@ public class PowerSelector : IPowerSelector
             [
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 3.",
             ],
-            FocusDamageReductionModifier = 3
+            FocusDamageReductionModifier = -3
         },
         new()
         {
@@ -1367,7 +1396,7 @@ public class PowerSelector : IPowerSelector
             [
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 4.",
             ],
-            FocusDamageReductionModifier = 4
+            FocusDamageReductionModifier = -4
         },
         new()
         {

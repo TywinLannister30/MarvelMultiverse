@@ -111,8 +111,20 @@ public class TagSelector : ITagSelector
             Name = TagNames.Immunity,
             Effect =
             [
-                "The character is immune to the usual e­ ects of something. This can be selected multiple times.",
+                "The character is immune to the usual e­ffects of something. This can be selected multiple times.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.InhumanGenes,
+            Effect =
+            [
+                "The character has latent Inhuman genes that cause them to develop super-powers when exposed to the Terrigen Mist.",
+            ],
+            Restrictions =
+            [
+                "For Inhumans only."
+                ]
         },
         new()
         {
@@ -153,6 +165,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Mute,
+            Effect =
+            [
+                "The character cannot speak. Unless otherwise specified, they can use other means to communicate.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.Obligation,
             Effect =
             [
@@ -165,6 +185,14 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character has little access to money and struggles to make ends meet. This can cause them all sorts of problems.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Powerful,
+            Effect =
+            [
+                "The character has access to the resources of their entire community. In most cases, they must be careful about how they use such resources so that they don’t lose that access.",
             ],
         },
         new()

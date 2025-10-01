@@ -131,10 +131,28 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.EnhancedPhysique,
+            Effect =
+            [
+                "The character is stronger than regular humans. Treat them as one size bigger for lifting, carrying, swinging and throwing things. (This does not stack with other factors.)",
+                "They also have an Edge on Melee non-combat checks."
+            ],
+        },
+        new()
+        {
             Name = TraitNames.ExtraOccupation,
             Effect =
             [
                 "The character has a busy life and has done all sorts of things. They can choose another occupation.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Famous,
+            Effect =
+            [
+                "The character is widely known—at least among a certain group of people or a population. They may be well-liked or they may be hated, but either way, they are famous. They have an edge when making an Ego check to persuade someone who thinks favorably of them. They have trouble when making an Ego check to persuade someone who dislikes them.",
+                "If the character has a secret identity, this trait works for only one of their identities. However, it can be taken multiple times for multiple identities."
             ],
         },
         new()
