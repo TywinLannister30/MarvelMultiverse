@@ -41,5 +41,6 @@ public static class TraitNames
     public const string SituationalAwareness = "Situational Awareness";
     public const string Sneaky = "Sneaky";
     public const string TechReliance = "Tech Reliance";
+    public const string Weakness = "Weakness";
     public const string Weird = "Weird";
 }

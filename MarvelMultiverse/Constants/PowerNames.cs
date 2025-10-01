@@ -43,7 +43,13 @@ public static class PowerNames
     public const string ElementalBarrier = "Elemental Barrier";
     public const string ElementalBlast = "Elemental Blast";
     public const string ElementalBurst = "Elemental Burst";
+    public const string ElementalProtection1 = "Elemental Protection 1";
+    public const string ElementalProtection2 = "Elemental Protection 2";
+    public const string ElementalProtection3 = "Elemental Protection 3";
+    public const string ElementalProtection4 = "Elemental Protection 4";
     public const string ElementalPush = "Elemental Push";
+    public const string ElementalReinforcement = "Elemental Reinforcement";
+    public const string ElementalRicochet = "Elemental Ricochet";
     public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
     public const string Exploit = "Exploit";
@@ -104,6 +110,7 @@ public static class PowerNames
     public const string Sturdy2 = "Sturdy 2";
     public const string Sturdy3 = "Sturdy 3";
     public const string Sturdy4 = "Sturdy 4";
+    public const string Supernova = "Supernova";
     public const string SuppressiveFire = "Suppressive Fire";
     public const string SummonPortal = "Summon Portal";
     public const string TelekineticManipulation = "Telekinetic Manipulation";

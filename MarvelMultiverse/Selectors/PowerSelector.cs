@@ -609,6 +609,66 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ElementalProtection1,
+            Description = "The character protects themselves with their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBarrier}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character protects themselves with their element. Any attacks against them that do 10 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 10 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalProtection2,
+            Description = "The character’s elemental protection is like armor.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalProtection1}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character protects themselves with their element. Any attacks against them that do 20 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 20 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalProtection3,
+            Description = "The character’s elemental protection is like a tank.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalProtection2}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character protects themselves with their element. Any attacks against them that do 30 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 30 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalProtection4,
+            Description = "The character’s elemental protection is like a fortress.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalProtection3}, Rank 5",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "The character protects themselves with their element. Any attacks against them that do 40 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 40 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ElementalPush,
             Description = "The character can move a target with their element.",
             PowerSets = [PowerSetNames.ElementControl],
@@ -619,6 +679,36 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego attack against the target’s Agility defense. If the attack succeeds, the character can move the target in any direction, up to 1 space times the character’s rank. On a Fantastic success, the target also takes regular damage, is knocked prone and suffers the element’s special effect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalReinforcement,
+            Description = "The character reinforces their powers with their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalProtection1}",
+            Action = ActionType.Reaction,
+            Trigger = "Damage gets through an elemental power",
+            Duration = Duration.Instant,
+            Cost = "Varies",
+            Effect =
+            [
+                "The character can transfer any Health damage that gets through an elemental power that grants damage protection to their Focus instead, leaving the protection intact.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalRicochet,
+            Description = "The character bounces the burst off one foe and into another.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBurst}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 spaces times the character’s rank",
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack against a target in line of sight. If the attack is a success, it inflicts regular damage. On a Fantastic success, energy also bounces off­ the first target to another in line of sight, and the character can make a new attack against that target, adding the new range to the previous attack’s range. This can be repeated until an attack is not fantastic.",
             ],
         },
         new()
@@ -1435,6 +1525,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character opens a glowing portal in a space next to them that teleports anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. This can be between any two points in the Multiverse, as long as the character has seen the destination. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Supernova,
+            Description = "The character blasts out a massive burst of their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBlast}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 or more Focus",
+            Effect =
+            [
+                "The character makes an Ego check and compares that against the Resilience defense of every enemy within 10 spaces. For these attacks, add +1 to the character’s Ego damage bonus for every 2 points of Focus they spend. On a success, an a­ffected target takes half that total damage. On a Fantastic success, an a­ffected target takes full damage and su­ffers the elemental type’s special e­ffect.",
             ],
         },
         new()

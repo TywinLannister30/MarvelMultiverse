@@ -335,6 +335,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Weakness,
+            Effect =
+            [
+                "The character su­ffers an unusual amount of harm from certain substances. Any attack made with that substance ignores all inherent damage reduction the character has and cannot be healed by their Healing Factor.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Weird,
             Effect =
             [
