@@ -5,7 +5,7 @@ namespace MarvelMultiverse.Selectors;
 
 public class PowerSelector : IPowerSelector
 {
-    public Power GetPower(string name, string specialization = null)
+    public Power GetPower(string name, bool isTech = false, string specialization = null)
     {
         var staticPower = GetAllPowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
 
@@ -15,6 +15,8 @@ public class PowerSelector : IPowerSelector
         {
             power.Name += $": {specialization}";
         }
+
+        power.IsTech = isTech;
 
         return power;
     }
@@ -81,6 +83,18 @@ public class PowerSelector : IPowerSelector
             ],
             AgilityDamageModifier = 4,
             AgilityNonCombatCheckModifier = 4
+        },
+        new()
+        {
+            Name = PowerNames.AlwaysReady,
+            Description = "The character is prepared to fight.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.DoThisAllDay}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains one additional reaction per round, which can be used only to activate a Martial Arts power.",
+            ]
         },
         new()
         {
@@ -196,6 +210,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.BraceForImpact,
+            Description = "The character mentally toughens themselves for a fight.",
+            PowerSets = [PowerSetNames.MartialArts, PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.DoThisAllDay}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy deals physical damage to the character.",
+            Duration = Duration.Instant,
+            Cost = "5 or more Focus",
+            Effect =
+            [
+                "For every point of Focus spent, the character can ignore 1 point of Health damage dealt by the attack.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Brawling,
             Description = "The character has the moves and is hard to hit.",
             PowerSets = ["None"],
@@ -262,6 +291,21 @@ public class PowerSelector : IPowerSelector
             ],
             LogicDamageModifier = 4,
             LogicNonCombatCheckModifier = 4
+        },
+        new()
+        {
+            Name = PowerNames.CatchBullets,
+            Description = "The character is fast enough to catch bullets—safely!",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = $"{PowerNames.SpeedRun2}, Rank 3",
+            Action = ActionType.Reaction,
+            Trigger = "A ranged attack using physical projectiles (arrows, bullets and so on) is made against the character—or a character within their character’s reach.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes an Agility check, using the attacker’s attack result as the target number. If the character’s check succeeds, the attack is nullified. On a Fantastic success, the character gets their reaction back."
+            ]
         },
         new()
         {
@@ -688,6 +732,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.FocusFire,
+            Description = "The character calls out a target.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.BattlePlan}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character calls out an enemy in line of sight and inspires one or more allies of their choice in earshot, up to the character’s Vigilance. They gain an edge on all action checks against that enemy."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.GroundShakingStomp,
             Description = "The character smashes the ground so hard the earth trembles.",
             PowerSets = [PowerSetNames.SuperStrength],
@@ -710,6 +768,42 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "At the end of the character’s turn, they regain Health equal to their Resilience. (This works outside of combat too, quickly bringing them back to full Health.)"
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.HeightenedSenses1,
+            Description = "The character has superior senses.",
+            PowerSets = ["None"],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can sense things roughly twice as far away as normal. They also have an edge on Vigilance checks to perceive things, and enemies have trouble on checks they make to sneak past the character."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.HeightenedSenses2,
+            Description = "The character has senses as sharp as radar.",
+            PowerSets = ["None"],
+            Prerequsites = $"{PowerNames.HeightenedSenses1}",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can sense things roughly four times as far away as normal. Their senses are so sharp that they can use some of them to compensate for the loss of others (say, if blinded or deafened). They can even listen to the heartbeat of a person in the same room to see if they are lying—although this is as reliable as a traditional lie detector: far from 100% and not admissible in court.",
+                "They also have a double edge on Vigilance checks to perceive things, and enemies have double trouble on checks they make to sneak past the character."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.IconicWeapon,
+            PowerSets = ["None"],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character is known for owning and using a unique and powerful weapon, like Mjolnir (Thor’s hammer) or Captain America’s shield. The Narrator must approve the details of this weapon. This power can be taken more than once, but each time must be with a di­fferent weapon.",
             ]
         },
         new()
@@ -837,6 +931,18 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a close attack. If it succeeds, the enemy takes regular damage and is knocked prone. If it’s a Fantastic success, the enemy is stunned for one round too."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.LightningActions,
+            Description = "The character has lightning-fast moves.",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = $"Rank 4",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Once per round, the character can use a standard action as a reaction or a reaction as a standard action. Additionally, they can turn their Marvel die to a Fantastic success when making an initiative check."
             ]
         },
         new()
@@ -970,10 +1076,24 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.OperationsCenter,
+            Description = "The character directs their allies in combat.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.CombatSupport}, {PowerNames.FocusFire}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character inspires one or more allies of their choice in earshot, up to the character’s Vigilance defense. A­ffected allies gain an edge on all action checks until the start of the character’s next turn. The character breaks concentration on this power if they use a movement action."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.QuickToss,
             Description = "The character tosses a person like a toy.",
             PowerSets = [PowerSetNames.SuperStrength],
-            Prerequsites = "Crushing Grip, Mighty 1, Rank 3",
+            Prerequsites = $"{PowerNames.CrushingGrip}, {PowerNames.Mighty1}, Rank 3",
             Action = ActionType.Reaction,
             Trigger = "A person the character can pick up is grabbed.",
             Duration = Duration.Instant,

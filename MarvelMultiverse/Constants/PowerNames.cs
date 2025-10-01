@@ -6,6 +6,7 @@ public static class PowerNames
     public const string Accuracy2 = "Accuracy 2";
     public const string Accuracy3 = "Accuracy 3";
     public const string Accuracy4 = "Accuracy 4";
+    public const string AlwaysReady = "Always Ready";
     public const string AnimalCommunication = "Animal Communication";
     public const string AstralForm = "Astral Form";
     public const string AttackStance = "Attack Stance";
@@ -14,11 +15,13 @@ public static class PowerNames
     public const string BlazingFastFists = "Blazing-Fast Fists";
     public const string Blur = "Blur";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
+    public const string BraceForImpact = "Brace for Impact";
     public const string Brawling = "Brawling";
     public const string Brilliance1 = "Brilliance 1";
     public const string Brilliance2 = "Brilliance 2";
     public const string Brilliance3 = "Brilliance 3";
     public const string Brilliance4 = "Brilliance 4";
+    public const string CatchBullets = "Catch Bullets";
     public const string ChainStrikes = "Chain Strikes";
     public const string ChangeOfPlans = "Change of Plans";
     public const string Clobber = "Clobber";
@@ -49,11 +52,15 @@ public static class PowerNames
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
     public const string Flight1 = "Flight 1";
     public const string Flight2 = "Flight 2";
+    public const string FocusFire = "Focus Fire"; 
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string Grow1 = "Grow 1";
     public const string Grow2 = "Grow 2";
     public const string HealingFactor = "Healing Factor";
+    public const string HeightenedSenses1 = "Heightened Senses 1";
+    public const string HeightenedSenses2 = "Heightened Senses 2";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
+    public const string IconicWeapon = "Iconic Weapon";
     public const string Inspiration = "Inspiration";
     public const string ImagesOfIkonn = "Images of Ikonn";
     public const string Immovable = "Immovable";
@@ -62,6 +69,7 @@ public static class PowerNames
     public const string Jump3 = "Jump 3";
     public const string KeepMoving = "Keep Moving";
     public const string LegSweep = "Leg Sweep";
+    public const string LightningActions = "Lightning Actions";
     public const string MemoryBlip = "Memory Blip";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";
@@ -71,6 +79,7 @@ public static class PowerNames
     public const string MultiversalPortal = "Multiversal Portal";
     public const string MultiversalTravel = "Multiversal Travel";
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
+    public const string OperationsCenter = "Operations Center";
     public const string QuickToss = "Quick Toss";
     public const string ResizeObject = "Resize Object";
     public const string ReturnFire = "Return Fire";

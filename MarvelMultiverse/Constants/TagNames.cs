@@ -5,6 +5,7 @@ public static class TagNames
     public const string Authority = "Authority";
     public const string Backup = "Backup";
     public const string BlackMarketAccess = "Black Market Access";
+    public const string Enemy = "Enemy";
     public const string ExtremeAppearance = "Extreme Appearance";
     public const string GreenDoor = "Green Door";
     public const string Headquarters = "Headquarters";
@@ -12,14 +13,18 @@ public static class TagNames
     public const string Hounded = "Hounded";
     public const string Hunted = "Hunted";
     public const string Immunity = "Immunity";
+    public const string InhumanGenes = "Inhuman Genes";
     public const string Krakoan = "Krakoan";
     public const string LabAccess = "Lab Access";
     public const string Linguist = "Linguist";
     public const string Mentor = "Mentor";
+    public const string Mute = "Mute";
     public const string Obligation = "Obligation";
     public const string Poor = "Poor";
+    public const string Powerful = "Powerful";
     public const string PublicIdentity = "Public Identity";
     public const string Radioactive = "Radioactive";
+    public const string Rich = "Rich";
     public const string SecretIdentity = "Secret Identity";
     public const string SignatureWeapon = "Signature Weapon";
     public const string Sorcerous = "Sorcerous";

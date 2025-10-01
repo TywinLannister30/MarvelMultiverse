@@ -148,6 +148,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.ExtraordinaryOrigin,
+            Effect =
+            [
+                "The character has an additional origin. This trait can be selected multiple times, but each time must be cleared with the Narrator. Take care to make sure that the origins make some kind of sense when combined together.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Famous,
             Effect =
             [

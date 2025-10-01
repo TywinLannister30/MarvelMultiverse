@@ -52,6 +52,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Enemy,
+            Effect =
+            [
+                "There’s someone out there who has sworn to defeat the character. The enemy is of at least the same rank as the character and is obsessed with bringing them down. This tag can be taken multiple times, but it should be reserved for truly obsessed foes."
+            ]
+        },
+        new()
+        {
             Name = TagNames.ExtremeAppearance,
             Effect =
             [
@@ -209,6 +217,14 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character constantly emits low levels of some sort of radiation. This can be picked up by a Geiger counter.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Rich,
+            Effect =
+            [
+                "The character has access to plenty of money. If they want something normally and legally available to people, they can simply buy it.",
             ],
         },
         new()

@@ -72,6 +72,8 @@ public class Power : ICloneable
     [JsonIgnore]
     public bool RunSpeedMultipliedByRank { get; set; }
 
+    public bool IsTech { get; set; }
+
     public object Clone()
     {
         return new Power
@@ -101,7 +103,8 @@ public class Power : ICloneable
             FlySpeed = this.FlySpeed,
             JumpSpeed = this.JumpSpeed,
             JumpSpeedMultipliedByRank  = this.JumpSpeedMultipliedByRank,
-            RunSpeedMultipliedByRank = this.RunSpeedMultipliedByRank
+            RunSpeedMultipliedByRank = this.RunSpeedMultipliedByRank,
+            IsTech = this.IsTech
         };
     }
 }

@@ -16,7 +16,10 @@ public static class TraitNames
     public const string Determination = "Determination";
     public const string EideticMemory = "Eidetic Memory";
     public const string EnduringConstitution = "Enduring Constitution";
+    public const string EnhancedPhysique = "Enhanced Physique";
     public const string ExtraOccupation = "Extra Occupation";
+    public const string ExtraordinaryOrigin = "Extraordinary Origin";
+    public const string Famous = "Famous";
     public const string Fearless = "Fearless";
     public const string FontOfInformation = "Font of Information";
     public const string FreeRunning = "Free Running";
