@@ -5,6 +5,7 @@ public static class TagNames
     public const string Authority = "Authority";
     public const string Backup = "Backup";
     public const string BlackMarketAccess = "Black Market Access";
+    public const string Deceased = "Deceased";
     public const string Enemy = "Enemy";
     public const string ExtremeAppearance = "Extreme Appearance";
     public const string GreenDoor = "Green Door";
@@ -12,6 +13,7 @@ public static class TagNames
     public const string Heroic = "Heroic";
     public const string Hounded = "Hounded";
     public const string Hunted = "Hunted";
+    public const string Imageless = "Imageless";
     public const string Immunity = "Immunity";
     public const string InhumanGenes = "Inhuman Genes";
     public const string Krakoan = "Krakoan";

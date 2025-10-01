@@ -13,6 +13,8 @@ public static class TeamNames
     public const string Hydra = "Hydra";
     public const string InfinityWatch = "Infinity Watch";
     public const string MastersOfEvil = "Masters of Evil";
+    public const string MI13 = "MI13";
+    public const string MidnightSons = "Midnight Sons";
     public const string PantherCult = "Panther Cult";
     public const string PowerElite = "Power Elite";
     public const string ProjectGreenSpring = "Project Green Spring";

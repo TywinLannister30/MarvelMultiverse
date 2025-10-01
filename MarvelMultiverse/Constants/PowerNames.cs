@@ -52,10 +52,13 @@ public static class PowerNames
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
     public const string Flight1 = "Flight 1";
     public const string Flight2 = "Flight 2";
-    public const string FocusFire = "Focus Fire"; 
+    public const string FocusFire = "Focus Fire";
+    public const string FocusedFury = "Focused Fury";
+    public const string FuriousAttacks = "Furious Attacks";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string Grow1 = "Grow 1";
     public const string Grow2 = "Grow 2";
+    public const string Headshot = "Headshot";
     public const string HealingFactor = "Healing Factor";
     public const string HeightenedSenses1 = "Heightened Senses 1";
     public const string HeightenedSenses2 = "Heightened Senses 2";
@@ -96,6 +99,7 @@ public static class PowerNames
     public const string Sniping = "Sniping";
     public const string SpeedRun1 = "Speed Run 1";
     public const string SpeedRun2 = "Speed Run 2";
+    public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";
     public const string Sturdy3 = "Sturdy 3";
@@ -115,9 +119,11 @@ public static class PowerNames
     public const string Uncanny4 = "Uncanny 4";
     public const string UnflappablePoise = "Unflappable Poise";
     public const string UnrelentingSmash = "Unrelenting Smash";
+    public const string UnstoppableAssault = "Unstoppable Assault";
     public const string UntouchablePosition = "Untouchable Position";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
     public const string ViciousAttack = "Vicious Attack";
     public const string WeaponsBlazing = "Weapons Blazing";
+    public const string WhirlingFrenzy = "Whirling Frenzy";
     public const string WindsOfWatoomb = "Winds of Watoomb";
 }

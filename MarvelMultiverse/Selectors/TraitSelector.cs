@@ -261,6 +261,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Monster,
+            Effect =
+            [
+                "The character is some kind of monster, often of a type spoken of in legend. They have an edge whenever they attempt to intimidate someone.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.OutOfShape,
             Effect =
             [

@@ -52,6 +52,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Deceased,
+            Effect =
+            [
+                "The character is technically dead—although presumably still able to interact with the rest of the world in some way. They might be a vampire, a ghost, a zombie or even a brain floating in a jar."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Enemy,
             Effect =
             [
@@ -112,6 +120,14 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character is hunted by the law for crimes they have supposedly (or actually) committed. If captured by the police, they may be arrested, tried for their crimes and potentially sent to jail.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Imageless,
+            Effect =
+            [
+                "The character casts no reflection, and their image cannot be captured by cameras.",
             ],
         },
         new()

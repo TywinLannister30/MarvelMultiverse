@@ -33,4 +33,6 @@ public class Biography
     public List<string> History { get; set; }
 
     public List<string> Personality { get; set; }
+
+    public List<BiographySection> BiographySections { get; set; }
 }

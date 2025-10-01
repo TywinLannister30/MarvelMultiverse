@@ -746,6 +746,34 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.FocusedFury,
+            Description = "The character channels their rage into a devastating blow.",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = $"{PowerNames.Exploit}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 or more Focus",
+            Effect =
+            [
+                "The character makes a close attack with an edge. For this attack, add +1 to the character’s Melee damage bonus for every 2 points of Focus they spend. On a success, an a­ffected target takes that total damage. On a Fantastic success, an a­ffected target takes double that total damage and su­ffers the weapon’s special e­ffect."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.FuriousAttacks,
+            Description = "The character’s weapons smash into the foe.",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = $"{PowerNames.WhirlingFrenzy}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 or more Focus",
+            Effect =
+            [
+                "The character splits their attack to make two close attacks against separate targets within reach (or they can focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. For these attacks, add +1 to the character’s Melee damage bonus for every 2 points of Focus they spend. On a success, an a­ ected target takes half that total damage. On a Fantastic success, an a­ ected target takes full damage and su­ffers the weapon’s special e­ffect."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.GroundShakingStomp,
             Description = "The character smashes the ground so hard the earth trembles.",
             PowerSets = [PowerSetNames.SuperStrength],
@@ -756,6 +784,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a Melee check and compares that against the Agility defense of every target within the character’s reach plus their rank in spaces. Any targets the attack succeeds against take half regular damage. On a Fantastic success, the targets take full damage and are knocked prone."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Headshot,
+            Description = "Ouch!",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.StoppingPower}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack with trouble on an enemy within the weapon’s range. If the attack is a success, the enemy takes double normal damage. On a Fantastic success, the enemy takes triple damage. Either way, if the enemy su­ ers any actual damage, they are also stunned for one round."
             ]
         },
         new()
@@ -1316,6 +1358,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.StoppingPower,
+            Description = "The character keeps shooting at the target.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.DoubleTap}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack on an enemy. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage, and the character can make another regular ranged attack on the same target.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Sturdy1,
             Description = "The character has protection from physical damage.",
             PowerSets = [],
@@ -1575,6 +1631,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.UnstoppableAssault,
+            Description = "The character hews a path through their foes.",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = $"{PowerNames.FuriousAttacks}, {PowerNames.FocusedFury}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes a Melee check and compares that against the Melee defense of every enemy within their reach. Any enemy the attack succeeds against takes half regular damage. On a Fantastic success, those enemies take full regular damage instead and su­ffer the weapon’s special e­ffect.",
+                "The character may then pay 15 more Focus to do the same thing again—before which they can move up to half their Speed with whatever is left from their normal movement action. They can keep doing this until they run out of Speed or Focus. Each target can only be a­ ected by this attack by this character once per round."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.UntouchablePosition,
             Description = "The character’s enemies struggle to gang up on them.",
             PowerSets = [PowerSetNames.MartialArts],
@@ -1623,6 +1694,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, the affected target takes half regular damage. On a Fantastic success, the affected target takes full damage, and the character can make a bonus attack with this power against any available target, with the same effect. "
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.WhirlingFrenzy,
+            Description = "The character assaults a foe with a tornado of whirling attacks.",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = $"{PowerNames.FastAttacks}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a Melee check and compares it against the Melee defense of every enemy within their reach. If an attack is a success, the enemy takes half regular damage. On a Fantastic success, the enemy takes full damage and su­ffers the weapon’s special e­ffect.",
             ],
         },
         new()

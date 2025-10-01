@@ -32,6 +32,7 @@ public static class TraitNames
     public const string IronWill = "Iron Will";
     public const string Leverage = "Leverage";
     public const string Loner = "Loner";
+    public const string Monster = "Monster";
     public const string OutOfShape = "Out of Shape";
     public const string Presence = "Presence";
     public const string PublicSpeaking = "Public Speaking";
