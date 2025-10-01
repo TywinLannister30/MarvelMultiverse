@@ -1328,6 +1328,7 @@ public class PowerSelector : IPowerSelector
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 1. If this power is part of a battle suit, the power is integrated into a removable helmet. Otherwise, it’s a part of the character.",
                 "If this power stems from armor or anything else removable—like Magneto’s helmet—the character should apply the Tech Reliance trait to it."
             ],
+            FocusDamageReductionModifier = 1
         },
         new()
         {
@@ -1340,6 +1341,7 @@ public class PowerSelector : IPowerSelector
             [
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 2.",
             ],
+            FocusDamageReductionModifier = 2
         },
         new()
         {
@@ -1352,6 +1354,7 @@ public class PowerSelector : IPowerSelector
             [
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 3.",
             ],
+            FocusDamageReductionModifier = 3
         },
         new()
         {
@@ -1364,6 +1367,7 @@ public class PowerSelector : IPowerSelector
             [
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 4.",
             ],
+            FocusDamageReductionModifier = 4
         },
         new()
         {

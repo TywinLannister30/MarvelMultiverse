@@ -55,6 +55,9 @@ public class Power : ICloneable
     public int HealthDamageReductionModifier { get; set; }
 
     [JsonIgnore]
+    public int FocusDamageReductionModifier { get; set; }
+
+    [JsonIgnore]
     public bool MeleeInsteadOfAgilityForDefence { get; set; }
 
     [JsonIgnore]
@@ -93,6 +96,7 @@ public class Power : ICloneable
             LogicDamageModifier = this.LogicDamageModifier,
             LogicNonCombatCheckModifier  = this.LogicNonCombatCheckModifier,
             HealthDamageReductionModifier = this.HealthDamageReductionModifier,
+            FocusDamageReductionModifier = this.FocusDamageReductionModifier,
             MeleeInsteadOfAgilityForDefence = this.MeleeInsteadOfAgilityForDefence,
             FlySpeed = this.FlySpeed,
             JumpSpeed = this.JumpSpeed,

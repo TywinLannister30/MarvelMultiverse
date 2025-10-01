@@ -82,6 +82,7 @@ public class Character
         Focus = new DamageCapacity
         {
             Value = focus,
+            DamageReduction = Powers.Sum(x => x.Powers.Sum(p => p.FocusDamageReductionModifier))
         };
     }
 
