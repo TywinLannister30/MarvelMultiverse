@@ -12,6 +12,7 @@ public static class TagNames
     public const string Hounded = "Hounded";
     public const string Hunted = "Hunted";
     public const string Immunity = "Immunity";
+    public const string Krakoan = "Krakoan";
     public const string LabAccess = "Lab Access";
     public const string Linguist = "Linguist";
     public const string Mentor = "Mentor";
@@ -25,4 +26,5 @@ public static class TagNames
     public const string Streetwise = "Streetwise";
     public const string Supernatural = "Sorcerous";
     public const string Villainous = "Villainous";
+    public const string XGene = "X-Gene";
 }

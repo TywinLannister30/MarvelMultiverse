@@ -9,6 +9,7 @@ public static class TraitNames
     public const string Berserker = "Berserker";
     public const string Big = "Big";
     public const string Bloodthirsty = "Bloodthirsty";
+    public const string Clinician = "Clinician";
     public const string CombatExpert = "Combat Expert";
     public const string CombatReflexes = "Combat Reflexes";
     public const string Connections = "Connections";
@@ -18,6 +19,7 @@ public static class TraitNames
     public const string ExtraOccupation = "Extra Occupation";
     public const string Fearless = "Fearless";
     public const string FontOfInformation = "Font of Information";
+    public const string FreeRunning = "Free Running";
     public const string Gearhead = "Gearhead";
     public const string Glibness = "Glibness";
     public const string Interrogation = "Interrogation";

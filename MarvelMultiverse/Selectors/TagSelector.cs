@@ -124,6 +124,19 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Krakoan,
+            Effect =
+            [
+                "As a mutant, the character is automatically a citizen of the island-nation of Krakoa and can travel to and from there freely. Also, if they are killed and the Five—a group of powerful mutants—are able to work together, the character can be resurrected into an identical new body with most of their memories intact.",
+                "If killed in Otherworld, the character can still be resurrected, but they will be changed in unpredictable ways. Just how this might a­ffect the character is up to the Narrator."
+            ],
+            Restrictions =
+            [
+                "For mutants only."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Linguist,
             Effect =
             [
@@ -222,6 +235,18 @@ public class TagSelector : ITagSelector
             [
                 "The character cannot also be Heroic.",
             ],
-        }
+        },
+        new()
+        {
+            Name = TagNames.XGene,
+            Effect =
+            [
+                "The character has mutant genes that cause them to develop super-powers.",
+            ],
+            Restrictions =
+            [
+                "For mutants only."
+            ]
+        },
     ];
 }

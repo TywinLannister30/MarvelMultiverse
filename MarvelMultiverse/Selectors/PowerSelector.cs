@@ -45,7 +45,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.Accuracy2,
             Description = "The character is a sharpshooter.",
             PowerSets = ["None"],
-            Prerequsites = "Accuracy 1, Rank 2",
+            Prerequsites = $"{PowerNames.Accuracy1}, Rank 2",
             Duration = Duration.Permanent,
             Effect =
             [
@@ -59,7 +59,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.Accuracy3,
             Description = "The character could hit a fly at one hundred paces.",
             PowerSets = ["None"],
-            Prerequsites = "Accuracy 2, Rank 3",
+            Prerequsites = $"{PowerNames.Accuracy2}, Rank 3",
             Duration = Duration.Permanent,
             Effect =
             [
@@ -73,7 +73,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.Accuracy4,
             Description = " The character can out-target almost anyone.",
             PowerSets = ["None"],
-            Prerequsites = "Accuracy 3, Rank 4",
+            Prerequsites = $"{PowerNames.Accuracy3}, Rank 4",
             Duration = Duration.Permanent,
             Effect =
             [
@@ -265,6 +265,35 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ChainStrikes,
+            Description = "The character unleashes a hail of strikes.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.FastStrikes}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a close attack with an edge. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the character can also make an additional Chain Strike."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ChangeOfPlans,
+            Description = "The character thinks of a better way.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.Inspiration}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An ally has trouble on an action check.",
+            Duration = Duration.OneRound,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The ally gains an edge on that action check."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Clobber,
             Description = "The character pummels their foe with enough force to knock them flat.",
             PowerSets = [PowerSetNames.SuperStrength],
@@ -274,6 +303,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a close attack against an enemy. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and is knocked prone."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.CombatSupport,
+            Description = "The character gives a friend a hand.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.ChangeOfPlans}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.OneRound,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "Once per battle, the character chooses an ally in earshot. If the ally makes an action check before the start of the character’s next turn, the ally automatically rolls a 1 on their Marvel die, and that die cannot be a­ffected by trouble."
             ]
         },
         new()
@@ -751,6 +794,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The demoralized or stunned condition ends."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.LegSweep,
+            Description = "The character knocks the enemy’s legs from under them.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.FastStrikes}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a close attack. If it succeeds, the enemy takes regular damage and is knocked prone. If it’s a Fantastic success, the enemy is stunned for one round too."
             ]
         },
         new()
@@ -1257,6 +1314,55 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego check against the Vigilance defense of a target they have grabbed. If the check is successful, the character can send the target to another time. The target can be sent to any location in that time that the character has been to before. Otherwise, the target arrives at the closest available corresponding space in the other time.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Uncanny1,
+            Description = "The character has protection against mental assaults.",
+            PowerSets = ["None"],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Any damage multiplier for attacks against the character’s Focus is reduced by 1. If this power is part of a battle suit, the power is integrated into a removable helmet. Otherwise, it’s a part of the character.",
+                "If this power stems from armor or anything else removable—like Magneto’s helmet—the character should apply the Tech Reliance trait to it."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Uncanny2,
+            Description = "The character’s mind is protected as if by steel.",
+            PowerSets = ["None"],
+            Prerequsites = $"{PowerNames.Uncanny1}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Any damage multiplier for attacks against the character’s Focus is reduced by 2.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Uncanny3,
+            Description = "The character’s mind is protected like a tank.",
+            PowerSets = ["None"],
+            Prerequsites = $"{PowerNames.Uncanny2}, Rank 4",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Any damage multiplier for attacks against the character’s Focus is reduced by 3.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Uncanny4,
+            Description = "The character’s mind is protected like a battleship.",
+            PowerSets = ["None"],
+            Prerequsites = $"{PowerNames.Uncanny3}, Rank 6",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Any damage multiplier for attacks against the character’s Focus is reduced by 4.",
             ],
         },
         new()

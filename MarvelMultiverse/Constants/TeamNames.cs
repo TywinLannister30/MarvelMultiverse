@@ -18,5 +18,7 @@ public static class TeamNames
     public const string StrangeAcademy = "Strange Academy";
     public const string Thunderbolts = "Thunderbolts";
     public const string Ultimates = "Ultimates";
+    public const string XMen = "X-Men";
+    public const string XForce = "X-Force";
     public const string YoungAvengers = "Young Avengers";
 }

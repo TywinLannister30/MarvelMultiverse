@@ -19,7 +19,10 @@ public static class PowerNames
     public const string Brilliance2 = "Brilliance 2";
     public const string Brilliance3 = "Brilliance 3";
     public const string Brilliance4 = "Brilliance 4";
+    public const string ChainStrikes = "Chain Strikes";
+    public const string ChangeOfPlans = "Change of Plans";
     public const string Clobber = "Clobber";
+    public const string CombatSupport = "Combat Support";
     public const string CombatTrickery = "Combat Trickery";
     public const string CounterstrikeTechnique = "Counterstrike Technique";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
@@ -56,6 +59,7 @@ public static class PowerNames
     public const string Jump2 = "Jump 2";
     public const string Jump3 = "Jump 3";
     public const string KeepMoving = "Keep Moving";
+    public const string LegSweep = "Leg Sweep";
     public const string MemoryBlip = "Memory Blip";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";
@@ -92,6 +96,10 @@ public static class PowerNames
     public const string TimePortal = "Time Portal";
     public const string TimeTravel = "Time Travel";
     public const string TimeTravelTogether = "Time Travel Together";
+    public const string Uncanny1 = "Uncanny 1";
+    public const string Uncanny2 = "Uncanny 2";
+    public const string Uncanny3 = "Uncanny 3";
+    public const string Uncanny4 = "Uncanny 4";
     public const string UnrelentingSmash = "Unrelenting Smash";
     public const string UntouchablePosition = "Untouchable Position";
     public const string VaporsOfValtorr = "Vapors of Valtorr";

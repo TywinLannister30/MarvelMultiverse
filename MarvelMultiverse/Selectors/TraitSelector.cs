@@ -74,6 +74,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Clinician,
+            Effect =
+            [
+                "The character has an edge on Logic checks to determine what is medically wrong with someone they examine.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.CombatExpert,
             Effect =
             [
@@ -143,6 +151,14 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character has an edge on Logic checks having to do with knowledge.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.FreeRunning,
+            Effect =
+            [
+                "The character has an edge on Agility checks made to perform acrobatics during a movement action.",
             ],
         },
         new()
