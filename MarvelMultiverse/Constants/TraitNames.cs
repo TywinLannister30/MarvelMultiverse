@@ -29,6 +29,7 @@ public static class TraitNames
     public const string FreshEyes = "Fresh Eyes";
     public const string Gearhead = "Gearhead";
     public const string Glibness = "Glibness";
+    public const string GodHeritage = "God Heritage";
     public const string Honest = "Honest";
     public const string Interrogation = "Interrogation";
     public const string Inventor = "Inventor";

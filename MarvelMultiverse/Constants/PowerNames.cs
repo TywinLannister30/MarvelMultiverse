@@ -87,6 +87,7 @@ public static class PowerNames
     public const string HeightenedSenses1 = "Heightened Senses 1";
     public const string HeightenedSenses2 = "Heightened Senses 2";
     public const string HellfireChains = "Hellfire Chains";
+    public const string HexBolt = "Hex Bolt";
     public const string HitAndRun = "Hit & Run";
     public const string HurledShieldBash = "Hurled Shield Bash";
     public const string HurledShieldBlock = "Hurled Shield Block";
@@ -97,6 +98,7 @@ public static class PowerNames
     public const string Inspiration = "Inspiration";
     public const string ImagesOfIkonn = "Images of Ikonn";
     public const string Immovable = "Immovable";
+    public const string Jinx = "Jinx";
     public const string Jump1 = "Jump 1";
     public const string Jump2 = "Jump 2";
     public const string Jump3 = "Jump 3";
@@ -106,6 +108,7 @@ public static class PowerNames
     public const string LightningActions = "Lightning Actions";
     public const string MachineTelepathy = "Machine Telepathy";
     public const string MemoryBlip = "Memory Blip";
+    public const string MentalShelter = "Mental Shelter";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";
     public const string Mighty3 = "Mighty 3";
@@ -167,6 +170,7 @@ public static class PowerNames
     public const string TelepathicBlast = "Telepathic Blast";
     public const string TelepathicLink = "Telepathic Link";
     public const string TelepathicNetwork = "Telepathic Network";
+    public const string TelepathicPossession = "Telepathic Possession";
     public const string TimePortal = "Time Portal";
     public const string TimeTravel = "Time Travel";
     public const string TimeTravelTogether = "Time Travel Together";

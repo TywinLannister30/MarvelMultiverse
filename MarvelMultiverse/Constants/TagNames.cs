@@ -8,6 +8,7 @@ public static class TagNames
     public const string Authority = "Authority";
     public const string Backup = "Backup";
     public const string BlackMarketAccess = "Black Market Access";
+    public const string Chaotic = "Chaotic";
     public const string Cursed = "Cursed";
     public const string Deceased = "Deceased";
     public const string Enemy = "Enemy";
@@ -38,5 +39,6 @@ public static class TagNames
     public const string Supernatural = "Sorcerous";
     public const string Villainous = "Villainous";
     public const string VisionIssues = "Vision Issues";
+    public const string Worshipped = "Worshipped";
     public const string XGene = "X-Gene";
 }

@@ -7,9 +7,11 @@ public static class TeamNames
     public const string AgentsOfAtlas = "Agents of Atlas";
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
+    public const string AstonishingAvengers = "Astonishing Avengers";
     public const string Avengers = "Avengers";
     public const string Champions = "Champions";
     public const string DarkAvengers = "Dark Avengers";
+    public const string DarkCouncil = "Dark Council";
     public const string DaughtersOfLiberty = "Daughters of Liberty";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";

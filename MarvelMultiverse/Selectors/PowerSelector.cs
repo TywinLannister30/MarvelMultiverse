@@ -1239,6 +1239,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.HexBolt,
+            Description = "The character hurls a hex bolt at their foe.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Chaotic}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character fires a hex bolt at a foe. Make an Ego check against the target’s Agility defense. On a success, the attack does regular damage. On a Fantastic success, it does double damage and causes the target trouble for one round.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.HitAndRun,
             Description = "The character hits hard and keeps moving!",
             PowerSets = [PowerSetNames.MeleeWeapons],
@@ -1383,6 +1397,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Jinx,
+            Description = "The character puts a jinx on a foe.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Chaotic}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes an Ego check against the target’s Ego defense. If it succeeds, the target has trouble on all actions. On a Fantastic success, the target loses their next standard action.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Jump1,
             Description = "The character can leap about like a frog.",
             PowerSets = [PowerSetNames.SpiderPowers, PowerSetNames.SuperStrength],
@@ -1504,6 +1532,20 @@ public class PowerSelector : IPowerSelector
                 "The character causes a target with whom they’ve established a Telepathic Link to forget something that’s happened in the past hour. This gap can be up to an hour in length.",
                 "The character makes a Logic check against the target’s Logic defense. On a success, the memories are forgotten. On a Fantastic success, the target has trouble on checks to recover such memories in the future.",
                 "Any time the target is given good reason to question the blank in their memory, they can make a Logic check to recover their memory. If they succeed, the original memory floods back. On a Fantastic success, they know for sure who did this to them."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.MentalShelter,
+            Description = "The character can create a shelter for their mind.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.Uncanny1}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character extends their mental defenses to protect any chosen people within up to 5 spaces times their rank. The protected targets are granted Focus Damage Reduction equal to the character’s Uncanny power.",
             ],
         },
         new()
@@ -2355,13 +2397,30 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.TelepathicNetwork,
             Description = "The character can speak telepathically with a group of people.",
             PowerSets = [PowerSetNames.Telepathy],
-            Prerequsites = "Telepathic Link, Rank 2",
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
             Cost = "5 Focus",
             Effect =
             [
                 "The character can communicate telepathically with a group of willing, previously linked people, each of whom they have met or seen before. The communication can be verbal, visual or even more complex, such as imparting location information. The group can number up to five people per rank. There is no limit to the distance of the communication, as long as everyone involved is in the same dimension.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelepathicPossession,
+            Description = "The character mentally takes over someone else’s body.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.Orders}, Rank 5",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "The character possesses a target with whom they’ve established a Telepathic Link and who has no Focus left. The character makes a Logic check with trouble against the target’s Logic defense. On a success, the character takes over the target’s body completely.",
+                "The result of the character’s check is the target number for any attempts by the target to end the possession. If the character attempts to harm someone with the possessed body, the target gets to make a Logic check to end the possession. If the target has the Heroic tag, they get an edge on the check.",
+                "If the character attempts to harm the possessed body, the target gets an edge on the check. If the target has the Heroic tag, they get a double edge.",
+                "This power can also be used to transfer the character’s mind into an empty-minded target—like a fresh clone or android—permanently. This requires no check, as there is"
             ],
         },
         new()

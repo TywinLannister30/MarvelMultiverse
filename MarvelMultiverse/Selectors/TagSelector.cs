@@ -81,6 +81,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Chaotic,
+            Effect =
+            [
+                "The character has been a­ ected by the chaos lord Chthon."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Cursed,
             Effect =
             [
@@ -339,6 +347,14 @@ public class TagSelector : ITagSelector
             Effect =
             [
                 "The character has trouble seeing that can range from partial to full blindness. This can also include color blindness, astigmatisms and being nearsighted or farsighted.",
+            ],
+        },
+        new()
+        {
+            Name = TagNames.Worshipped,
+            Effect =
+            [
+                "The character is worshipped by others as a god.",
             ],
         },
         new()

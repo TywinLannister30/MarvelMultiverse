@@ -8,6 +8,8 @@ public class Trait: ICloneable
 
     public List<string> Effect { get; set; }
 
+    public List<string> Restrictions { get; set; }
+
     [JsonIgnore]
     public string Specialization { get; set; }
     
