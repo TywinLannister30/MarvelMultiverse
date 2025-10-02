@@ -14,6 +14,7 @@ public static class OriginName
     public const string Mutant = "Mutant";
     public const string MythicAsgardian = "Mythic: Asgardian";
     public const string SpecialTraining = "Special Training";
+    public const string SpiritOfVengeance = "Spirit of Vengeance";
     public const string WeirdScience = "Weird Science";
     public const string WeirdScienceGammaMutate = "Weird Science: Gamma Mutate";
 }

@@ -51,6 +51,7 @@ public static class PowerNames
     public const string ElementalBarrier = "Elemental Barrier";
     public const string ElementalBlast = "Elemental Blast";
     public const string ElementalBurst = "Elemental Burst";
+    public const string ElementalInfusion = "Elemental Infusion";
     public const string ElementalProtection1 = "Elemental Protection 1";
     public const string ElementalProtection2 = "Elemental Protection 2";
     public const string ElementalProtection3 = "Elemental Protection 3";
@@ -125,7 +126,11 @@ public static class PowerNames
     public const string OnYourFeet = "On Your Feet";
     public const string OperationsCenter = "Operations Center";
     public const string Orders = "Orders";
+    public const string PartialPhase = "Partial Phase";
+    public const string PenanceStare = "Penance Stare";
+    public const string PhaseSelf = "Phase Self";
     public const string PointBlankParry = "Point-Blank Parry";
+    public const string PossessVehicle = "Possess Vehicle";
     public const string QuickToss = "Quick Toss";
     public const string RallyOnMe = "Rally on Me";
     public const string ReinforcedSkeleton = "Reinforced Skeleton";

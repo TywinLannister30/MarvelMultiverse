@@ -740,6 +740,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ElementalInfusion,
+            Description = "The character infuses a weapon with their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBurst}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character infuses their energy into a handheld weapon in their grasp. When the character gets a Fantastic success attacking with the weapon, add the energy’s special e­ffect.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ElementalProtection1,
             Description = "The character protects themselves with their element.",
             PowerSets = [PowerSetNames.ElementControl],
@@ -1778,6 +1792,48 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.PartialPhase,
+            Description = "The character can make a portion of themselves tangible or intangible.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character has greater control over their phasing ability. They can make any portion of their body and clothing tangible or intangible, as they like.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.PenanceStare,
+            Description = "The character can punish the wicked with their gaze.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Cursed}",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes an Ego attack against a target character within 3 spaces per rank. If it’s a success, the target takes Focus damage. On a Fantastic success, the target takes double damage and is paralyzed for one round.",
+                "Characters with the Heroic tag take half the listed damage from this power in either case.",
+                "If a target is shattered by this power, they can recover, but they come back in one of two ways. Either they are cleansed of their sins and ready to make a new start with a clean slate, or their emotions are drained from them permanently. How this works in each case is up to the Narrator."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.PhaseSelf,
+            Description = "The character can become as intangible as a ghost.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character (and their clothing) becomes intangible and can move through anything as if it wasn’t there. Nothing can physically a­ ect them, nor can they a­ ect anything else that is not phasing along with them.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.PointBlankParry,
             Description = "When the enemy steps in, the character lets loose.",
             PowerSets = [PowerSetNames.RangedWeapons],
@@ -1789,6 +1845,22 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a ranged attack against the enemy who missed them. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and is bleeding."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.PossessVehicle,
+            Description = "The character takes control of a vehicle.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Cursed}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character takes magical control of a vehicle they are inside of or touching. Hellfire engulfs the outside of the vehicle, but it does no damage to it. Anyone that comes into contact with it, though, takes regular damage with a damage multiplier equal to the character’s rank. On a Fantastic success, it inflicts regular Health damage and regular Focus damage instead.",
+                "The character controls the vehicle by will, as long as it is within 20spaces times the character’s rank. They use their Ego for all checks to operate it, and they get an edge on all such checks.",
+                "The vehicle’s speed doubles. It can climb walls at this speed and can even make jumps at that same speed."
             ],
         },
         new()

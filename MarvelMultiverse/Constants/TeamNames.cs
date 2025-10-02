@@ -19,6 +19,7 @@ public static class TeamNames
     public const string FantasticFour = "Fantastic Four";
     public const string FiskIndustries = "Fisk Industries";
     public const string FutureFoundation = "Future Foundation";
+    public const string Graces = "Graces";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
     public const string HellLords = "Hell Lords";
     public const string HellfireClub = "Hellfire Club";
@@ -37,6 +38,7 @@ public static class TeamNames
     public const string SecretAvengers = "Secret Avengers";
     public const string SHIELD = "S.H.I.E.L.D.";
     public const string SinisterSix = "Sinister Six";
+    public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";
     public const string TerribleTrio = "Terrible Trio";
     public const string TheHand = "The Hand";
