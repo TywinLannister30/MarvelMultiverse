@@ -2774,5 +2774,81 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Dora Milaje Warrior",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 2, vigilance: 1, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Dora Milaje)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "Vibranium armor, weaponry",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.DoraMilaje],
+                Base = "Wakanda",
+                History =
+                [
+                    "The Dora Milaje, also known as the “Mighty and Adored,” are the militarized personal guard of the Black Panther. The first incarnation of the Dora Milaje was established in Wakanda many centuries ago, but they had long been put out of commission until T’Challa (the current Black Panther) reinstated them.",
+                    "Following some recent revolts within the Dora Milaje, the Black Panther agreed to limit his own powers as monarch and establish a democratic government in Wakanda. The Dora Milaje still exist and still protect the Panther, but their powers as a military organization have also considerably diminished.",
+                ],
+                Personality =
+                [
+                    "The warriors of the Dora Milaje are, by and large, proud and powerful military women. They join the Dora out of pride for their country and respect for the Black Panther. Most members of the Dora Milaje shave themselves bald when they enter the organization as a show of dedication.",
+                ]
+            }
+        },
     ];
 }

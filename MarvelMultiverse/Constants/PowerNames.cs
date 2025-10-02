@@ -118,6 +118,7 @@ public static class PowerNames
     public const string ReturnFire = "Return Fire";
     public const string ReverseMomentumThrow = "Reverse-Momentum Throw";
     public const string RicoShield = "Rico-Shield";
+    public const string Riposte = "Riposte";
     public const string Shield1 = "Shield 1";
     public const string Shield2 = "Shield 2";
     public const string Shield3 = "Shield 3";

@@ -1675,6 +1675,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Riposte,
+            Description = "Seeing the enemy o£ balance, the character strikes back.",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy makes a close attack against the character that fails.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes a close attack on the enemy who just missed them. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and su­ffers the weapon’s special e­ffect.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Shield1,
             Description = "The character wields a personal shield.",
             PowerSets = [PowerSetNames.ShieldBearer],

@@ -11,6 +11,7 @@ public static class TeamNames
     public const string DaughtersOfLiberty = "Daughters of Liberty";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";
+    public const string DoraMilaje = "Dora Milaje";
     public const string FantasticFour = "Fantastic Four";
     public const string FiskIndustries = "Fisk Industries";
     public const string FutureFoundation = "Future Foundation";
