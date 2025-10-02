@@ -15,6 +15,8 @@ public static class PowerNames
     public const string BattlePlan = "Battle Plan";
     public const string BlazingFastFists = "Blazing-Fast Fists";
     public const string Blur = "Blur";
+    public const string BodySheet = "Body Sheet";
+    public const string BodySphere = "Body Sphere";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
     public const string BraceForImpact = "Brace for Impact";
     public const string Brawling = "Brawling";
@@ -71,6 +73,9 @@ public static class PowerNames
     public const string FastHands = "Fast Hands";
     public const string FastStrikes = "Fast Strikes";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
+    public const string FlexibleBones1 = "Flexible Bones 1";
+    public const string FlexibleBones2 = "Flexible Bones 2";
+    public const string FlexibleFingers = "Flexible Fingers";
     public const string Flight1 = "Flight 1";
     public const string Flight2 = "Flight 2";
     public const string FlyingDoubleKick = "Flying Double Kick";
@@ -137,8 +142,10 @@ public static class PowerNames
     public const string ResizeObject = "Resize Object";
     public const string ReturnFire = "Return Fire";
     public const string ReverseMomentumThrow = "Reverse-Momentum Throw";
+    public const string ReversePunch = "Reverse Punch";
     public const string RicoShield = "Rico-Shield";
     public const string Riposte = "Riposte";
+    public const string Rubberneck = "Rubberneck";
     public const string SenseSins = "Sense Sins";
     public const string SenseSupernatural = "Sense Supernatural";
     public const string Shield1 = "Shield 1";
@@ -165,6 +172,7 @@ public static class PowerNames
     public const string SpiderDodge = "Spider-Dodge";
     public const string SpiderSense = "Spider-Sense";
     public const string SpiderStrike = "Spider-Strike";
+    public const string StiltSteps = "Stilt Steps";
     public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";

@@ -211,7 +211,7 @@ public class PowerSelector : IPowerSelector
         new()
         {
             Name = PowerNames.Blur,
-            Description = " The character moves like a blur!",
+            Description = "The character moves like a blur!",
             PowerSets = [PowerSetNames.SuperSpeed],
             Prerequsites = $"{PowerNames.SpeedRun2}, Rank 2",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
@@ -221,6 +221,37 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "Any attacks against the character have trouble."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.BodySheet,
+            Description = "The character can flatten themselves like a sheet.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.FlexibleBones2}, {PowerNames.ExtendedReach2}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character falls or is the target of an attack.",
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character gains Health Damage Reduction 3, but they cannot make attacks. They gain a Glide Speed equal to double their Run Speed."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.BodySphere,
+            Description = "The character can form their body into a protective sphere.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.BodySheet}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character or an ally is the target of an attack.",
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character forms their body into a sphere, protecting up to one ally per rank, squeezed into the same space. Those inside the sphere gain Health Damage Reduction 3 against outside attacks, but they cannot move on their own until the character releases them.",
+                "Alternatively, if the attacker is within the character’s reach, the character can make an Agility check against the target’s Agility defense. On a success, the character envelops the attacker, grabbing them. On a Fantastic success, the character closes the sphere enough to pin the attacker too."
             ]
         },
         new()
@@ -1010,9 +1041,9 @@ public class PowerSelector : IPowerSelector
         new()
         {
             Name = PowerNames.FlamesOfTheFaltine,
-            Description = "The character shoots jets of enchanted fi re from their hands.",
+            Description = "The character shoots jets of enchanted fire from their hands.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 2",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
             Range = "10 spaces",
@@ -1020,6 +1051,44 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego check against the Agility defense of a target in their line of sight. If the attack is a success, it infl icts regular damage. On a Fantastic success, the target takes double damage and then su­ffers 5 points of damage at the end of every round until someone uses an action to put out the flames."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.FlexibleBones1,
+            Description = "The character’s skeleton is rubbery.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains Health Damage Reduction 1. They also have an edge on Agility checks for contortion and escape."
+            ],
+            HealthDamageReductionModifier = -1
+        },
+        new()
+        {
+            Name = PowerNames.FlexibleBones2,
+            Description = "The character’s skeleton is flexible and pliable.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.FlexibleBones1}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains Health Damage Reduction 2. They also have a double edge on Agility checks for contortion and escape."
+            ],
+            HealthDamageReductionModifier = -2
+        },
+        new()
+        {
+            Name = PowerNames.FlexibleFingers,
+            Description = "The character can turn their fingers and hands into whatever tool they need.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "With a standard action, the character can automatically pick any lock that requires a physical key. They can also shape their hands to form almost any other kind of simple tool."
             ],
         },
         new()
@@ -1953,6 +2022,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ReversePunch,
+            Description = "The character can reach past an enemy and punch them from behind.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.FlexibleBones1}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a close attack with an edge on an enemy. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and is stunned for one round",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.RicoShield,
             Description = "The character ricochets their shield from target to target.",
             PowerSets = [PowerSetNames.ShieldBearer],
@@ -1979,6 +2062,18 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a close attack on the enemy who just missed them. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and su­ffers the weapon’s special e­ffect.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Rubberneck,
+            Description = "The character can lengthen and twist their neck.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.FlexibleBones1}, {PowerNames.ExtendedReach1}",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can move their head away from their body, up to their reach, to establish a line of sight to a target.",
             ]
         },
         new()
@@ -2345,6 +2440,19 @@ public class PowerSelector : IPowerSelector
                 "The character splits their attack to make two close attacks against separate targets within reach (or they can focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. On a success, the a­ffected target takes half regular damage. On a Fantastic success, the a­ffected target takes full damage and is paralyzed by webbing. Breaking free from webbing requires a Melee check (target number 20).",
                 "After the attacks, the character may run, jump or climb at half speed for free."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.StiltSteps,
+            Description = "The character can stretch their legs like extendable stilts.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.ExtendedReach1}, Rank 2",
+            Action = ActionType.Movement,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character’s Run Speed doubles, as does their Climb Speed.",
+            ]
         },
         new()
         {
