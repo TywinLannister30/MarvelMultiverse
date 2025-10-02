@@ -36,7 +36,16 @@ public class TraitSelector : ITraitSelector
             Name = TraitNames.Abrasive,
             Effect =
             [
-                "The character rubs people the wrong way. This gives them trouble when trying to make Ego checks to persuade someone to help them out. It gives them an edge when they’re trying to make Ego checks to intimidate someone."
+                "The character su­ffers direct harm when exposed to a particular substance. They cannot voluntarily enter the same space with it. If they are touched by it, they instantly su­ffer the damage of a Rank 3 attack roll that automatically succeeds. This continues each turn until they are separated from the substance or are killed or destroyed.",
+                "Damage caused by Anathema ignores all damage reduction the character has and cannot be healed by their Healing Factor."
+            ]
+        },
+        new()
+        {
+            Name = TraitNames.Anathema,
+            Effect =
+            [
+                "Many people follow the character’s work and treat them with the respect they deserve. By making an Ego check, the character can persuade their audience to provide help in the form of information or resources. The Narrator determines the TN of the Ego check based on the favor requested."
             ]
         },
         new()

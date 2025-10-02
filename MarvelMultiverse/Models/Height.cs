@@ -8,6 +8,8 @@ public class Height
 
     public bool IsVariable { get; set; }
 
+    public bool IsUnknown { get; set; }
+
     public string GetString() 
     {
         var retVal = string.Empty;

@@ -5,6 +5,7 @@ namespace MarvelMultiverse.Constants;
 public static class TraitNames
 {
     public const string Abrasive = "Abrasive";
+    public const string Anathema = "Anathema";
     public const string Audience = "Audience";
     public const string BattleReady = "Battle Ready";
     public const string Beguiling = "Beguiling";
