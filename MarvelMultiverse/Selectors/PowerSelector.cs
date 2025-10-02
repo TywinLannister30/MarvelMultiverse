@@ -440,6 +440,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.DanceOfDeath,
+            Description = "The character spins about, shooting at every enemy around them.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.SlowMotionDodge}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes an Agility check and compares that against the Agility defense of every enemy within 5 spaces and in their line of sight. Each success does half the regular damage. On a Fantastic success, each enemy takes full damage instead and is bleeding.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.DefenseStance,
             Description = "The character enters a fluid defensive stance, hands poised to parry and counterattack.",
             PowerSets = [PowerSetNames.MartialArts],
@@ -825,8 +839,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.FastHands,
+            Description = "The character can shoot faster than the eye can blink.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.PointBlankParry}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains one additional reaction per round. This reaction can be used only to trigger a Ranged Weapons power.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.FastStrikes,
-            Description = "The character unleashes a fl urry of strikes.",
+            Description = "The character unleashes a flurry of strikes.",
             PowerSets = [PowerSetNames.MartialArts],
             Prerequsites = "None",
             Action = ActionType.Standard,
@@ -921,10 +947,24 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.GrapplingTechnique,
+            Description = "The character snags an enemy.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a close attack. If the attack is a success, the enemy takes regular damage and is grabbed. On a Fantastic success, the target takes double damage instead and is pinned too."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.GroundShakingStomp,
             Description = "The character smashes the ground so hard the earth trembles.",
             PowerSets = [PowerSetNames.SuperStrength],
-            Prerequsites = "Smash, Rank 3",
+            Prerequsites = $"{PowerNames.Smash}, Rank 3",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
             Cost = "10 Focus",
@@ -1638,6 +1678,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The enemy has trouble on the attack."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.SlowMotionShootDodge,
+            Description = "The character dives sideways, weapons blazing, hanging in midair for a split second.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.SlowMotionDodge}, {PowerNames.WeaponsBlazing}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = $"{Duration.Instant} + {Duration.OneRound}",
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, an a­ffected target takes half regular damage. On a Fantastic success, an a­ffected target takes full damage, and the character can make a bonus attack with this power against any available target, with the same e­ffect.",
+                "When the character moves, is moved or starts their next turn, they instantly fall prone. Until that happens, all attacks against their Agility defense have trouble."
             ],
         },
         new()

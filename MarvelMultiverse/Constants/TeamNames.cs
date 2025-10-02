@@ -29,6 +29,7 @@ public static class TeamNames
     public const string TheHand = "The Hand";
     public const string TheHouseOfAgon = "The House of Agon";
     public const string Thunderbolts = "Thunderbolts";
+    public const string SkeletonCrew = "Skeleton Crew";
     public const string Ultimates = "Ultimates";
     public const string UniversalInhumans = "Universal Inhumans";
     public const string USAirForce = "U.S. Air Force";

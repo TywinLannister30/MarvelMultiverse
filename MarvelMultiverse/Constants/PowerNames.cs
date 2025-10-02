@@ -31,6 +31,7 @@ public static class PowerNames
     public const string CounterstrikeTechnique = "Counterstrike Technique";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
     public const string CrushingGrip = "Crushing Grip";
+    public const string DanceOfDeath = "Dance of Death";
     public const string DefenseStance = "Defense Stance";
     public const string Discipline1 = "Discipline 1";
     public const string Discipline2 = "Discipline 2";
@@ -58,6 +59,7 @@ public static class PowerNames
     public const string Evasion = "Evasion";
     public const string Exploit = "Exploit";
     public const string FastAttacks = "Fast Attacks";
+    public const string FastHands = "Fast Hands";
     public const string FastStrikes = "Fast Strikes";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
     public const string Flight1 = "Flight 1";
@@ -65,6 +67,7 @@ public static class PowerNames
     public const string FocusFire = "Focus Fire";
     public const string FocusedFury = "Focused Fury";
     public const string FuriousAttacks = "Furious Attacks";
+    public const string GrapplingTechnique = "Grappling Technique";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string Grow1 = "Grow 1";
     public const string Grow2 = "Grow 2";
@@ -118,6 +121,7 @@ public static class PowerNames
     public const string Shrink4 = "Shrink 4";
     public const string ShrinkingDodge = "Shrinking Dodge";
     public const string SlowMotionDodge = "Slow-Motion Dodge";
+    public const string SlowMotionShootDodge = "Slow-Motion Shoot-Dodge";
     public const string Smash = "Smash";
     public const string SnapShooting = "Snap Shooting";
     public const string Sniping = "Sniping";
