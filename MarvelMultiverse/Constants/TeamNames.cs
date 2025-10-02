@@ -19,6 +19,7 @@ public static class TeamNames
     public const string FantasticFour = "Fantastic Four";
     public const string FiskIndustries = "Fisk Industries";
     public const string FutureFoundation = "Future Foundation";
+    public const string GoblinNation = "Goblin Nation";
     public const string Graces = "Graces";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
     public const string HellLords = "Hell Lords";

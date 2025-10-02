@@ -2,6 +2,7 @@
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
 using System.Numerics;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
@@ -4039,7 +4040,7 @@ public class CharacterSelector(
                 Heights = [new() { IsUnknown = true }],
                 Weights = [],
                 UnknownWieght = true,
-                Gender = Gender.Female,
+                Gender = Gender.Male,
                 Eyes = "Yellow",
                 Hair = "Bald",
                 Size = Size.Average,
@@ -4057,6 +4058,106 @@ public class CharacterSelector(
                 [
                     "Gorr believes that the universe would be better off without gods, who all sat around in luxury while the people of his planet suffered. Why should they get to continue living while his own family had to die?",
                     "As powerful as he is vengeful, Gorr’s quest for the complete eradication of the gods has only ever been hampered by the thunder god Thor—and by his own self-doubt."
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Green Goblin (Norman Osborn)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 5, resilience: 4, vigilance: 2, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Spider-Man"),
+                tagSelector.GetTag(TagNames.Headquarters),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pumpkin Bombs (frag grenades)"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Norman Osborn",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [185],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Auburn",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Tycoon],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.DarkAvengers, TeamNames.GoblinNation, TeamNames.SinisterSix, TeamNames.Thunderbolts],
+                Base = "New York City",
+                History =
+                [
+                    "From an early age, Norman Osborn had a relentless drive to succeed. Using notes stolen from his business partner, Osborn developed the Goblin formula to give himself superhuman powers. It also transformed Osborn into the Green Goblin— and set him on the road to insanity. He decided to use these powers to establish himself as the criminal leader of New York City. While doing so, he became enemies with Spider-Man (Peter Parker), who he later discovered to be his son Harry’s best friend. Although he seems to have died several times, Osborn keeps returning, apparently fated to be a constant thorn in Spider-Man’s side.",
+                ],
+                Personality =
+                [
+                    "Osborn is a smooth operator, a wealthy, powerful and sharp schemer who is often several steps ahead of his foes. He is often cool and collected— right up until something frustrates his plans, at which point he becomes unhinged.",
                 ]
             }
         },
