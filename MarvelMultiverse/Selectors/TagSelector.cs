@@ -68,6 +68,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Cursed,
+            Effect =
+            [
+                "Willingly or not, the character is affiliated with Hell. This can open them up to all sorts of nefarious plots and plans."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Deceased,
             Effect =
             [

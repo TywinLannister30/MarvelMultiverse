@@ -380,6 +380,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Command,
+            Description = "The character forces someone to follow an order.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.OneRound,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character gives an order to a target with whom they’ve established a Telepathic Link. The character makes a Logic check against the target’s Logic defense. On a success, the target complies with the order. On a Fantastic success, the character gains an edge the next time they use this power against this same target.",
+                "The command must be something that can be completed in a single action. If it involves harming someone, the character has trouble on the check. If it would cause the target to harm themselves, the character has double trouble on the check."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.CounterstrikeTechnique,
             Description = "The character counters an enemy’s strike with one of their own.",
             PowerSets = [PowerSetNames.MartialArts],
@@ -1240,10 +1255,24 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.MistsOfMorpheus,
+            Description = "The character causes their foe to fall asleep.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes an Ego check against the target’s Vigilance defense. On a success, the target is stunned and remains that way while the character concentrates. On a Fantastic success, the target falls asleep instead.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.MistsOfMunnopor,
             Description = "The character weaves a thick fog.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 2",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
             Cost = "5 Focus",
@@ -1784,6 +1813,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Agility attack against a target’s Vigilance defense. If the attack is a success, apply Health Damage Reduction normally. Any damage taken is then applied to the target’s Focus instead. If it’s a Fantastic success, the damage is doubled, and if the target takes any Focus damage, they are stunned for one round."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticAttack,
+            Description = "The character can punch or choke an enemy with their mind.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticManipulation}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "5 Focus",
+            Effect =
+            [
+                "The character makes a Logic attack against the Melee defense of a target within 5 spaces times the character’s rank. If the attack is a success, it inflicts regular damage. On a Fantastic success, the damage is doubled instead, and the target is stunned for one round.",
             ],
         },
         new()

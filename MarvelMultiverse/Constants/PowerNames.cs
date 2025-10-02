@@ -27,6 +27,7 @@ public static class PowerNames
     public const string Clobber = "Clobber";
     public const string CombatSupport = "Combat Support";
     public const string CombatTrickery = "Combat Trickery";
+    public const string Command = "Command";
     public const string CounterstrikeTechnique = "Counterstrike Technique";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
     public const string CrushingGrip = "Crushing Grip";
@@ -90,6 +91,7 @@ public static class PowerNames
     public const string Mighty2 = "Mighty 2";
     public const string Mighty3 = "Mighty 3";
     public const string Mighty4 = "Mighty 4";
+    public const string MistsOfMorpheus = "Mists of Morpheus";
     public const string MistsOfMunnopor = "Mists of Munnopor";
     public const string MultiversalPortal = "Multiversal Portal";
     public const string MultiversalTravel = "Multiversal Travel";
@@ -129,6 +131,7 @@ public static class PowerNames
     public const string Supernova = "Supernova";
     public const string SuppressiveFire = "Suppressive Fire";
     public const string SummonPortal = "Summon Portal";
+    public const string TelekineticAttack = "Telekinetic Attack";
     public const string TelekineticManipulation = "Telekinetic Manipulation";
     public const string TelepathicBlast = "Telepathic Blast";
     public const string TelepathicLink = "Telepathic Link";

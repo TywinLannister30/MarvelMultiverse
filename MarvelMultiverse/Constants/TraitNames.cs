@@ -14,6 +14,7 @@ public static class TraitNames
     public const string CombatExpert = "Combat Expert";
     public const string CombatReflexes = "Combat Reflexes";
     public const string Connections = "Connections";
+    public const string Dealmaker = "Dealmaker";
     public const string Determination = "Determination";
     public const string EideticMemory = "Eidetic Memory";
     public const string EnduringConstitution = "Enduring Constitution";
@@ -24,6 +25,7 @@ public static class TraitNames
     public const string Fearless = "Fearless";
     public const string FontOfInformation = "Font of Information";
     public const string FreeRunning = "Free Running";
+    public const string FreshEyes = "Fresh Eyes";
     public const string Gearhead = "Gearhead";
     public const string Glibness = "Glibness";
     public const string Interrogation = "Interrogation";
@@ -42,6 +44,7 @@ public static class TraitNames
     public const string SignatureAttack = "Signature Attack";
     public const string SituationalAwareness = "Situational Awareness";
     public const string Sneaky = "Sneaky";
+    public const string Stranger = "Stranger";
     public const string TechReliance = "Tech Reliance";
     public const string Weakness = "Weakness";
     public const string Weird = "Weird";

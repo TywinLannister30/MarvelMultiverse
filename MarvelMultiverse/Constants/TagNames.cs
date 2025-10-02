@@ -7,6 +7,7 @@ public static class TagNames
     public const string Authority = "Authority";
     public const string Backup = "Backup";
     public const string BlackMarketAccess = "Black Market Access";
+    public const string Cursed = "Cursed";
     public const string Deceased = "Deceased";
     public const string Enemy = "Enemy";
     public const string ExtremeAppearance = "Extreme Appearance";

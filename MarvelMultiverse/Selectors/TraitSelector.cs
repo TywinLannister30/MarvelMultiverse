@@ -115,6 +115,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Dealmaker,
+            Effect =
+            [
+                "The character is skilled at the art of negotiation. They have an edge on action checks that have to do with making deals.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Determination,
             Effect =
             [
@@ -193,6 +201,14 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character has an edge on Agility checks made to perform acrobatics during a movement action.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.FreshEyes,
+            Effect =
+            [
+                "The character has their own way of doing things. This often makes them seem strange to those around them, but it means they can bring new perspectives to existing issues. They have an edge on Logic checks when faced with something for the first time.",
             ],
         },
         new()
@@ -339,6 +355,14 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character has an edge on Agility checks when sneaking around. Enemies have trouble on Vigilance checks to detect the character when the character is invisible or hiding.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Stranger,
+            Effect =
+            [
+                "The character doesn’t understand local customs. They have trouble on checks made when trying to decipher such things or when trying to pass themselves o­ff as a local.",
             ],
         },
         new()
