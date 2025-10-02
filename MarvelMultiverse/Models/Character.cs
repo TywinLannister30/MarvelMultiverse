@@ -37,7 +37,7 @@ public class Character
     public void SetDefences()
     {
         var meleeDefence = Abilities.Melee.Score + 10 + Traits.Sum(x => x.MeleeDefenceModifier);
-        var agilityDefence = Abilities.Agility.Score + 10 + Traits.Sum(x => x.AgilityDefenceModifier);
+        var agilityDefence = Abilities.Agility.Score + 10 + Traits.Sum(x => x.AgilityDefenceModifier) + Powers.Sum(x => x.Powers.Sum(p => p.AgiltyDefenceModifier));
         var resilienceDefence = Abilities.Resilience.Score + 10;
         var vigilanceDefence = Abilities.Vigilance.Score + 10;
         var egoDefence = Abilities.Ego.Score + 10;
@@ -113,7 +113,7 @@ public class Character
         Initiative = new Initiative
         {
             Modifier = Abilities.Vigilance.Score,
-            HasEdge = Traits.Any(x => x.InitiativeEdge)
+            HasEdge = Traits.Any(x => x.InitiativeEdge) || Powers.Any(x => x.Powers.Any(p => p.InitiativeEdge))
         };
     }
 

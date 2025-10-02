@@ -3,6 +3,7 @@ using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Numerics;
+using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -3669,7 +3670,7 @@ public class CharacterSelector(
             Rank = 5,
             Abilities = new Abilities
             (
-                melee: 7, agility: 2, resilience: 5, vigilance: 2, ego: 71, logic: 2
+                melee: 7, agility: 2, resilience: 5, vigilance: 2, ego: 7, logic: 2
             ),
             Traits =
             [
@@ -3779,6 +3780,100 @@ public class CharacterSelector(
                 Personality =
                 [
                     "As an orphan, Reyes’ primary motivation in life is to act as a guide and protector to his younger brother, Gabe. Around others, Reyes can be anxious and distant, but in Gabe’s presence, Reyes always puts up a tough front.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Ghost-Spider",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 3, vigilance: 3, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "George Stacy"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.PublicIdentity, reminder: "Earth-65"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "Earth-616"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelMultiversal,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MultiversalPortal),
+                        powerSelector.GetPower(PowerNames.MultiversalTravel),
+                        powerSelector.GetPower(PowerNames.MultiversalTravelTogether),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Gwen Stacy",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.SpiderArmy, TeamNames.WebWarriors],
+                Base = "New York City",
+                History =
+                [
+                    "On Earth-65, teenager Gwen Stacy was bitten by a genetically engineered spider and gained spider-based powers. Soon after, she became her world’s costumed crime-fighting Spider-Woman. In an early adventure, she battled her friend Peter Parker—who had not acquired spider-powers in this universe but had turned himself into the Lizard in an attempt to become a hero like Spider-Woman—and accidentally killed him, a mistake she has been trying to make up for since.",
+                    "After being drawn into the multiversal battle of Spider-Totems against the murderous Inheritors, Stacy began traveling among worlds, particular between her own and Earth-616. After surviving the battle with the Inheritors, she took on the name Ghost-Spider. Her identity has become public in her universe, but she enjoys the anonymity she often finds in other worlds.",
+                    "At one point, Stacy lost her spider-powers, but she regained them after bonding with a sentient costume made of synthetic spiders. She also has pendant/bracelet called the Ticket to the Multiverse that allows her to move between worlds."
+                ],
+                Personality =
+                [
+                    "Stacy is smart and friendly, an independent free spirit who enjoys playing drums in her rock band, the Mary Janes. Growing up the daughter of police detective George Stacy helped instill a strong sense of justice in her, and she tries to live up to her own ideals every day. She doesn’t always manage it, but she’s determined to keep making the effort.",
                 ]
             }
         },

@@ -37,6 +37,9 @@ public class Power : ICloneable
     public int AgilityDamageModifier { get; set; }
 
     [JsonIgnore]
+    public int AgiltyDefenceModifier { get; set; }
+
+    [JsonIgnore]
     public int AgilityNonCombatCheckModifier { get; set; }
 
     [JsonIgnore]
@@ -81,6 +84,9 @@ public class Power : ICloneable
     [JsonIgnore]
     public bool SwinglineSpeed { get; set; }
 
+    [JsonIgnore]
+    public bool InitiativeEdge { get; set; }
+
     public bool IsTech { get; set; }
 
     public object Clone()
@@ -101,6 +107,7 @@ public class Power : ICloneable
             MeleeDamageModifier = this.MeleeDamageModifier,
             MeleeNonCombatCheckModifier = this.MeleeNonCombatCheckModifier,
             AgilityDamageModifier = this.AgilityDamageModifier,
+            AgiltyDefenceModifier = this.AgiltyDefenceModifier,
             AgilityNonCombatCheckModifier = this.AgilityNonCombatCheckModifier,
             EgoDamageModifier = this.EgoDamageModifier,
             EgoNonCombatCheckModifier = this.EgoNonCombatCheckModifier,
@@ -116,6 +123,7 @@ public class Power : ICloneable
             JumpSpeedMultipliedByRank  = this.JumpSpeedMultipliedByRank,
             RunSpeedMultipliedByRank = this.RunSpeedMultipliedByRank,
             SwinglineSpeed = this.SwinglineSpeed,
+            InitiativeEdge = this.InitiativeEdge,
             IsTech = this.IsTech
         };
     }

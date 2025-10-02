@@ -163,6 +163,8 @@ public static class PowerNames
     public const string SpeedRun1 = "Speed Run 1";
     public const string SpeedRun2 = "Speed Run 2";
     public const string SpiderDodge = "Spider-Dodge";
+    public const string SpiderSense = "Spider-Sense";
+    public const string SpiderStrike = "Spider-Strike";
     public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";
@@ -192,6 +194,10 @@ public static class PowerNames
     public const string ViciousAttack = "Vicious Attack";
     public const string Wallcrawling = "Wallcrawling";
     public const string WeaponsBlazing = "Weapons Blazing";
+    public const string Webcasting = "Webcasting";
+    public const string Webgrabbing = "Webgrabbing";
+    public const string Webslinging = "Webslinging";
+    public const string Webtrapping = "Webtrapping";
     public const string WhirlingFrenzy = "Whirling Frenzy";
     public const string WindsOfWatoomb = "Winds of Watoomb";
 }

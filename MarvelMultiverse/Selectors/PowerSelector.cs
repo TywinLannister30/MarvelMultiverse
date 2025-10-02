@@ -25,7 +25,9 @@ public class PowerSelector : IPowerSelector
             power.Name += $" ({reminder})";
 
         power.IsTech = isTech;
-        power.SwinglineSpeed = swinglineSpeed;
+        
+        if (swinglineSpeed)
+            power.SwinglineSpeed = true;
 
         if (meleeDamageModifier.HasValue)
             power.MeleeDamageModifier += meleeDamageModifier.Value;
@@ -2318,6 +2320,34 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SpiderSense,
+            Description = "The character has a sense of danger that tingles when threats are near.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character has an edge on initiative checks and on Vigilance checks to perceive danger. Enemies have trouble on Agility checks against the character’s Vigilance defense. The character also gains a permanent +2 bonus to their Agility defense.",
+            ],
+            InitiativeEdge = true,
+            AgiltyDefenceModifier = 2
+        },
+        new()
+        {
+            Name = PowerNames.SpiderStrike,
+            Description = "The character strikes in a blur of punches, kicks and webbing.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character splits their attack to make two close attacks against separate targets within reach (or they can focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. On a success, the a­ffected target takes half regular damage. On a Fantastic success, the a­ffected target takes full damage and is paralyzed by webbing. Breaking free from webbing requires a Melee check (target number 20).",
+                "After the attacks, the character may run, jump or climb at half speed for free."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.StoppingPower,
             Description = "The character keeps shooting at the target.",
             PowerSets = [PowerSetNames.RangedWeapons],
@@ -2711,7 +2741,63 @@ public class PowerSelector : IPowerSelector
             Duration = Duration.Instant,
             Effect =
             [
-                "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, the affected target takes half regular damage. On a Fantastic success, the affected target takes full damage, and the character can make a bonus attack with this power against any available target, with the same effect. "
+                "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, the affected target takes half regular damage. On a Fantastic success, the affected target takes full damage, and the character can make a bonus attack with this power against any available target, with the same effect."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Webcasting,
+            Description = "The character can snare a target in a web.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 spaces",
+            Effect =
+            [
+                "The character makes a ranged attack on an enemy. If the attack is a success, the web paralyzes the enemy. On a Fantastic success, the enemy is also pinned. Breaking free from webbing requires a Melee check (target number 20)."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Webgrabbing,
+            Description = "The character snares a foe in a web.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.Webcasting}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 spaces",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack on an enemy. If the attack is a success, the character grabs the target with a web. On a Fantastic success, the target can also be pinned. Breaking free from webbing requires a Melee check (target number 20)."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Webslinging,
+            Description = "The character can swing through the city on their webs.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.Webcasting}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains the swingline movement mode, with a Speed equal to triple their Run Speed. The reach of their swingline is equal to their Swingline Speed."
+            ],
+            SwinglineSpeed = true
+        },
+        new()
+        {
+            Name = PowerNames.Webtrapping,
+            Description = "The character creates a giant web to trap those within it.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.Webgrabbing}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = "The character’s rank times 15 minutes",
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character fills up to 5 spaces with sticky webs, and the a­ ected spaces are considered difficult terrain. Any creature that starts its turn in or moves into an a­ffected space must make an Agility check (target number 20) or be paralyzed by the webbing. Breaking free from webbing requires a Melee check (target number 20)."
             ],
         },
         new()

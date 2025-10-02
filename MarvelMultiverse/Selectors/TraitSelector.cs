@@ -41,6 +41,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Audience,
+            Effect =
+            [
+                "Many people follow the character’s work and treat them with the respect they deserve. By making an Ego check, the character can persuade their audience to provide help in the form of information or resources. The Narrator determines the TN of the Ego check based on the favor requested."
+            ]
+        },
+        new()
+        {
             Name = TraitNames.BattleReady,
             Effect =
             [

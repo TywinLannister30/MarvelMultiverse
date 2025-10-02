@@ -38,6 +38,7 @@ public static class TeamNames
     public const string SecretAvengers = "Secret Avengers";
     public const string SHIELD = "S.H.I.E.L.D.";
     public const string SinisterSix = "Sinister Six";
+    public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";
     public const string TerribleTrio = "Terrible Trio";
@@ -50,6 +51,7 @@ public static class TeamNames
     public const string UniversalInhumans = "Universal Inhumans";
     public const string USAirForce = "U.S. Air Force";
     public const string USArmy = "U.S. Army";
+    public const string WebWarriors = "Web-Warriors";
     public const string XMen = "X-Men";
     public const string XForce = "X-Force";
     public const string YoungAvengers = "Young Avengers";
