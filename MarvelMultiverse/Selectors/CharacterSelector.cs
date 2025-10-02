@@ -2892,6 +2892,14 @@ public class CharacterSelector(
                 },
                 new PowerSet
                 {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SenseSupernatural),
+                    ],
+                },
+                new PowerSet
+                {
                     Name = PowerSetNames.MagicDemonicMagic,
                     Powers =
                     [

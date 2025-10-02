@@ -122,6 +122,7 @@ public static class PowerNames
     public const string RicoShield = "Rico-Shield";
     public const string Riposte = "Riposte";
     public const string SenseSins = "Sense Sins";
+    public const string SenseSupernatural = "Sense Supernatural";
     public const string Shield1 = "Shield 1";
     public const string Shield2 = "Shield 2";
     public const string Shield3 = "Shield 3";

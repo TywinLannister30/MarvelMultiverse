@@ -1732,6 +1732,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SenseSupernatural,
+            Description = "The character can sense the supernatural.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character can reach out with their mind to sense the presence of supernatural people, places or things within 100 spaces per rank. This tells them the location of the supernatural thing and its general status.",
+                "If a target or targets wish to remain undetected, the character must make an Ego check and compare it against each target’s Vigilance defense. If they succeed, they sense the target. On a Fantastic success, they can also identify if the target is cursed or demonic."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Shield1,
             Description = "The character wields a personal shield.",
             PowerSets = [PowerSetNames.ShieldBearer],
