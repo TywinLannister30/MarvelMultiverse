@@ -19,6 +19,7 @@ public static class TeamNames
     public const string FutureFoundation = "Future Foundation";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
     public const string HellLords = "Hell Lords";
+    public const string HellfireClub = "Hellfire Club";
     public const string Hydra = "Hydra";
     public const string InfinityWatch = "Infinity Watch";
     public const string IntergalacticCouncil = "Intergalactic Council";

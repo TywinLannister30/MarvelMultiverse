@@ -25,6 +25,7 @@ public static class PowerNames
     public const string CatchBullets = "Catch Bullets";
     public const string ChainStrikes = "Chain Strikes";
     public const string ChangeOfPlans = "Change of Plans";
+    public const string Cloak = "Cloak";
     public const string Clobber = "Clobber";
     public const string CloneMoves = "Clone Moves";
     public const string CombatSupport = "Combat Support";
@@ -33,6 +34,7 @@ public static class PowerNames
     public const string CounterstrikeTechnique = "Counterstrike Technique";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
     public const string CrushingGrip = "Crushing Grip";
+    public const string DampenPower = "Dampen Power";
     public const string DanceOfDeath = "Dance of Death";
     public const string DefenseStance = "Defense Stance";
     public const string Discipline1 = "Discipline 1";
@@ -42,6 +44,7 @@ public static class PowerNames
     public const string Disguise = "Disguise";
     public const string DispelSpell = "Dispel Spell";
     public const string DoThisAllDay = " Do This All Day";
+    public const string Domination = "Domination";
     public const string DoubleTap = "Double Tap";
     public const string EditMemory = "Edit Memory";
     public const string ElementalBarrage = "Elemental Barrage";
@@ -88,8 +91,9 @@ public static class PowerNames
     public const string HurledShieldBash = "Hurled Shield Bash";
     public const string HurledShieldBlock = "Hurled Shield Block";
     public const string HurledShieldDeflection = "Hurled Shield Deflection";
-    public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
     public const string IconicWeapon = "Iconic Weapon";
+    public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
+    public const string InformationUpload = "Information Upload";
     public const string Inspiration = "Inspiration";
     public const string ImagesOfIkonn = "Images of Ikonn";
     public const string Immovable = "Immovable";
@@ -106,6 +110,9 @@ public static class PowerNames
     public const string Mighty2 = "Mighty 2";
     public const string Mighty3 = "Mighty 3";
     public const string Mighty4 = "Mighty 4";
+    public const string MindInterrogation = "MindInterrogation";
+    public const string MindReading = "Mind Reading";
+    public const string Mirage = "Mirage";
     public const string MistsOfMorpheus = "Mists of Morpheus";
     public const string MistsOfMunnopor = "Mists of Munnopor";
     public const string MultiversalPortal = "Multiversal Portal";
@@ -113,6 +120,7 @@ public static class PowerNames
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
     public const string OnYourFeet = "On Your Feet";
     public const string OperationsCenter = "Operations Center";
+    public const string Orders = "Orders";
     public const string PointBlankParry = "Point-Blank Parry";
     public const string QuickToss = "Quick Toss";
     public const string RallyOnMe = "Rally on Me";
@@ -137,6 +145,7 @@ public static class PowerNames
     public const string Shrink3 = "Shrink 3";
     public const string Shrink4 = "Shrink 4";
     public const string ShrinkingDodge = "Shrinking Dodge";
+    public const string ShutDownPowers = "Shut Down Powers";
     public const string SlowMotionDodge = "Slow-Motion Dodge";
     public const string SlowMotionShootDodge = "Slow-Motion Shoot-Dodge";
     public const string Smash = "Smash";

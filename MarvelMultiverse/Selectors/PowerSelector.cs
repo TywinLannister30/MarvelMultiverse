@@ -366,6 +366,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Cloak,
+            Description = "The character makes people believe they’re not there.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character uses a mirage to block their presence from the minds of people within 20 spaces per rank. Cameras (for instance) can still record them, but when people look in the character’s direction, they see nothing there.",
+                "The target number for anyone trying to detect the character is the character’s Logic defense."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Clobber,
             Description = "The character pummels their foe with enough force to knock them flat.",
             PowerSets = [PowerSetNames.SuperStrength],
@@ -479,6 +494,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a Melee attack against the grabbed target’s Resilience defense. If it’s a success, the target takes regular damage. On a Fantastic success, the target takes double damage instead and is pinned."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.DampenPower,
+            Description = "The character tamps down another character’s power.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "Varies",
+            Effect =
+            [
+                "The character picks one power from another character within 20 spaces and makes an Ego attack against them. On a success, they tamp the power down. If the power has ranges or e­ffective areas or durations, these are halved. If the power affects a damage multiplier, subtract 1 from the effect. The power can no longer enjoy Fantastic successes.",
+                "If the power has a Focus cost, the character must also pay that cost to dampen it."
             ]
         },
         new()
@@ -603,6 +633,22 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character heals Ž points of Health for every point of Focus they spend.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Domination,
+            Description = "The character forces someone to follow their orders—permanently.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.Orders}, Rank 5",
+            Action = ActionType.Standard,
+            Duration = Duration.Permanent,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "The character dominates a target with whom they’ve established a Telepathic Link and who has no Focus left. The character makes a Logic check with trouble against the target’s Logic defense. On a success, the target is completely dominated and will follow the character’s orders. On a Fantastic success, the character gains an edge the next time they use this power against this same target.",
+                "The result of the character’s check is the target number for any attempts by the target to end the domination. If any order involves harming someone, the target gets to make a Logic check to end the domination. If the target has the Heroic tag, they get an edge on the check.",
+                "If the order would cause the target to harm themselves, the target gets an edge on the check. If they have the Heroic tag, they get a double edge."
             ]
         },
         new()
@@ -1282,7 +1328,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.ImagesOfIkonn,
             Description = "The character creates illusory duplicates of a person.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 2",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
             Cost = "5 Focus",
@@ -1292,6 +1338,21 @@ public class PowerSelector : IPowerSelector
                 "The duplicates can move up to 10 spaces away from the character, and they can pretend to attack (and miss) opponents. Any attack that hits a duplicate instantly removes it. If the character successfully attacks someone or does something else to make the truth evident, the illusion ends.",
                 "This spell can also be used to see through someone else’s illusion. When used in this way, it gives the character a double edge on their Ego check."
             ],
+        },
+         new()
+        {
+            Name = PowerNames.InformationUpload,
+            Description = "The character can transmit loads of information straight into another’s mind.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character transmits a knowledge-based label (a trait or tag) of their own to a target with whom they have established a telepathic link—willing or not. The label lasts until the target sleeps.",
+                "The character can also impart any other kind of knowledge they have to a target this way. The process is almost instantaneous."
+            ]
         },
         new()
         {
@@ -1464,7 +1525,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.Mighty2,
             Description = "The character could lift a bus.",
             PowerSets = [],
-            Prerequsites = "Mighty 1, Rank 2",
+            Prerequsites = $"{PowerNames.Mighty1}, Rank 2",
             Duration = Duration.Permanent,
             Effect =
             [
@@ -1478,7 +1539,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.Mighty3,
             Description = "The character could lift a house.",
             PowerSets = [],
-            Prerequsites = "Mighty 2, Rank 3",
+            Prerequsites = $"{PowerNames.Mighty2}, Rank 3",
             Duration = Duration.Permanent,
             Effect =
             [
@@ -1492,7 +1553,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.Mighty4,
             Description = "The character is among the strongest there are.",
             PowerSets = [],
-            Prerequsites = "Mighty 3, Rank 4",
+            Prerequsites = $"{PowerNames.Mighty3}, Rank 4",
             Duration = Duration.Permanent,
             Effect =
             [
@@ -1500,6 +1561,47 @@ public class PowerSelector : IPowerSelector
             ],
             MeleeDamageModifier = 4,
             MeleeNonCombatCheckModifier = 4
+        },
+        new()
+        {
+            Name = PowerNames.MindInterrogation,
+            Description = "The character can root through a target’s mind.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.MindReading}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.OneRound,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can delve into the mind of a single person with whom they have established a telepathic link. This requires a Logic check against the target’s Logic defense. On a success, the character can ask a single simple question and get the answer from the target’s mind. On a Fantastic success, the character can get more complex information.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.MindReading,
+            Description = "The character can read thoughts.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}",
+            Action = ActionType.Standard,
+            Duration = Duration.OneRound,
+            Effect =
+            [
+                "The character can read the thoughts of a single person with whom they have established a Telepathic Link. This requires a Logic check against the target’s Logic defense. On a success, the character can read the target’s surface thoughts. On a Fantastic success, the character can ask a single simple question and get the answer from the target’s mind.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Mirage,
+            Description = "The character can make mirages appear in a target’s mind.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character creates a full-sensory mirage that a­ffects any target with whom they have established a link. The mirage can be of anything the character desires, and it can move freely.",
+            ],
         },
         new()
         {
@@ -1599,6 +1701,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character inspires one or more allies of their choice in earshot, up to the character’s Vigilance defense. A­ffected allies gain an edge on all action checks until the start of the character’s next turn. The character breaks concentration on this power if they use a movement action."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Orders,
+            Description = "The character forces someone to follow a complex set of orders.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.Command}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Permanent,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character gives an order to a target with whom they’ve established a Telepathic Link and who has no Focus left. The character makes a Logic check against the target’s Logic defense. On a success, the target complies with the orders. On a Fantastic success, the character gains an edge the next time they use this power against this same target.",
+                "The command must be to do something that can be completed in an hour or less. If it involves harming someone, the character has trouble on the check. If it would cause the target to harm themselves, the character has double trouble on the check."
             ],
         },
         new()
@@ -1943,6 +2060,21 @@ public class PowerSelector : IPowerSelector
             [
                 "The attacker has trouble on the attack."
             ],
+        },
+         new()
+        {
+            Name = PowerNames.ShutDownPowers,
+            Description = "The character removes all of a target’s powers!",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = $"{PowerNames.DampenPower}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 or more Focus",
+            Effect =
+            [
+                "The character picks another character within 20 spaces and makes an Ego attack against them. On a success, they remove all of a target’s powers.",
+                "If the target’s powers have costs, the character must pay the highest of them, or a minimum of 15 Focus."
+            ]
         },
         new()
         {

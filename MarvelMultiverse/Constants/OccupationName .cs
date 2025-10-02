@@ -16,4 +16,5 @@ public static class OccupationName
     public const string Scientist = "Scientist";
     public const string Spy = "Spy";
     public const string Student = "Student";
+    public const string Tycoon = "Tycoon";
 }

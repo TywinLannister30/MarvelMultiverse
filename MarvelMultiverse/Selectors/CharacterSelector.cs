@@ -3156,5 +3156,186 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Elektra",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 2, vigilance: 1, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Fast Attacks"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Sai"),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Elektra Natchios",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.TheHand, TeamNames.SavageAvengers],
+                Base = "Hell’s Kitchen",
+                History =
+                [
+                    "Already working as an agent of the Hand, Elektra first encountered Matt Murdock while in college. Admirers of each other’s skills, the two quickly fell in love, but after a tragic accident killed Elektra’s father, she abandoned Matt to return to her work as an assassin.",
+                    "Years later, while working for Kingpin, Elektra encountered Matt again, this time as the super hero Daredevil. They slowly began to rekindle their romance, and after years of fi ghting both together and separately—both of them being killed and resurrected multiple times—they seem to have finally gotten it together as partners. They now defend Hell’s Kitchen together, both acting as Daredevil.",
+                ],
+                Personality =
+                [
+                    "Trained as an assassin, Elektra is generally a cold and private person. However, she does have a soft spot for Matt Murdock. More than anything, she is defi ned by the unwavering determination she shows in pursuit of her goals.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Emma Frost",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 4, vigilance: 6, ego: 4, logic: 8
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Crystalline Form"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Form"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DampenPower),
+                        powerSelector.GetPower(PowerNames.ShutDownPowers),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Domination),
+                        powerSelector.GetPower(PowerNames.EditMemory),
+                        powerSelector.GetPower(PowerNames.InformationUpload),
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Emma Frost",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [144],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Dyed blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Tycoon],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.HellfireClub, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "The mutant daughter of a wealthy family, Emma Frost was born with psychic powers rivaling those of Professor X himself. Later in life, she would further obtain the ability to transform herself into a powerful crystalline form.",
+                    "As a young woman, Emma rejected multiple invitations to join the X-Men, only revealing herself to the world as a mutant after encountering Sebastian Shaw, the Black King of the villainous Hellfire Club. Frost became his White Queen, and together, they fought the X-Men. After defeating the Black King, the X-Men persuaded Emma to leave the Hellfire Club behind. Since then, Emma Frost has often been on the side of good, only occasionally falling back into old ways.",
+                ],
+                Personality =
+                [
+                    "As a wealthy heiress, Emma Frost was taught from birth to be proud, spoiled and petty. Over the course of decades, she has managed to become a bit more considerate and self-aware, but the attitudes she picked up in her youth frequently overwhelm her better nature.",
+                ],
+                BiographySections =
+                [
+                    new()
+                    {
+                        Name = "Alternate Form",
+                        Description =
+                        [
+                            "Frost underwent a secondary mutation that allows her to transform into crystalline form. This grants her the Mighty 1 and Sturdy 2 powers. She cannot use her Brilliance 1, Telepathy and Power Control powers when in that form. She can use her Uncanny 2 power in either form.",
+                            "Numbers before a slash are for her regular human form, and numbers after a slash are for her crystalline form."
+                        ]
+                    }
+                ]
+            }
+        },
     ];
 }
