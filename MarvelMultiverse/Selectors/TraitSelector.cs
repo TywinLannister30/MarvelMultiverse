@@ -309,6 +309,15 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.SignatureAttack,
+            Effect =
+            [
+                "The character is known for favoring a particular kind of weapon or attack power. They have an edge when making attacks that way.",
+                "This trait can be taken more than once, but each time must be with a di­ erent kind of weapon or attack power."
+            ],
+        },
+        new()
+        {
             Name = TraitNames.SituationalAwareness,
             Effect =
             [

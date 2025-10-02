@@ -753,6 +753,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Evasion,
+            Description = "The character can dodge fists quickly.",
+            PowerSets = [],
+            Prerequsites = $"None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can use their Agility defense score against Melee attacks too.",
+            ],
+            AgilityInsteadOfMeleeForDefence = true
+        },
+        new()
+        {
             Name = PowerNames.Exploit,
             Description = "The character finds a weak spot and exploits it.",
             PowerSets = [PowerSetNames.MeleeWeapons],
@@ -1235,6 +1248,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.PointBlankParry,
+            Description = "When the enemy steps in, the character lets loose.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy within 2 spaces misses an attack against the character.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack against the enemy who missed them. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and is bleeding."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.QuickToss,
             Description = "The character tosses a person like a toy.",
             PowerSets = [PowerSetNames.SuperStrength],
@@ -1247,6 +1275,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character throws the grabbed person at another target. The range is determined by the level of the character’s Mighty power and the grabbed person's size. The character makes a ranged attack against the target. A failure inflicts regular damage on the thrown person, who falls prone within 1 space of the target. If the attack is a success, the target takes regular damage too. On a Fantastic success, the target is knocked prone as well."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.ReinforcedSkeleton,
+            Description = "The character’s bones have been reinforced or replaced with a super-strong alloy or metal.",
+            PowerSets = [],
+            Prerequsites = $"None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains Health Damage Reduction 1.",
+            ],
+            HealthDamageReductionModifier = -1
         },
         new()
         {

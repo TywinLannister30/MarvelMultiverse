@@ -42,7 +42,10 @@ public class Character
         var egoDefence = Abilities.Ego.Score + 10;
         var logicDefence = Abilities.Logic.Score + 10;
 
-        Abilities.Melee.Defence = meleeDefence;
+        if (Powers.Any(x => x.Powers.Any(p => p.AgilityInsteadOfMeleeForDefence)))
+            Abilities.Melee.Defence = agilityDefence;
+        else
+            Abilities.Melee.Defence = meleeDefence;
 
         if (Powers.Any(x => x.Powers.Any(p => p.MeleeInsteadOfAgilityForDefence)))
             Abilities.Agility.Defence = meleeDefence;

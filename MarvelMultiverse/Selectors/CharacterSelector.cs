@@ -1,10 +1,6 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Numerics;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -126,8 +122,8 @@ public class CharacterSelector(
                 Hair = "Bald",
                 Size = Size.Big,
                 DistinguishingFeatures = "Green, scaly skin, webbed ears, two massive toes per foot",
-                Occupations = ["Spy"],
-                Origins = ["Weird Science: Gamma Mutate"],
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.WeirdScienceGammaMutate],
                 Teams = [TeamNames.Thunderbolts, TeamNames.ProjectGreenSpring],
                 Base = "Secret",
                 History =
@@ -229,8 +225,8 @@ public class CharacterSelector(
                 Hair = "Gray",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = ["Educator"],
-                Origins = ["Magic: Sorcery"],
+                Occupations = [OccupationName.Educator],
+                Origins = [OriginName.MagicSorcery],
                 Teams = [TeamNames.DaughtersOfLiberty, TeamNames.DepartmentOfTheUncanny, TeamNames.StrangeAcademy],
                 Base = "Mobile",
                 History =
@@ -330,8 +326,8 @@ public class CharacterSelector(
                 Hair = "Brown",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = ["Law Enforcer"],
-                Origins = ["Special Training"],
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
                 Teams = [TeamNames.PowerElite, TeamNames.SHIELD, TeamNames.SecretAvengers],
                 Base = "S.H.I.E.L.D. Helicarrier",
                 History =
@@ -438,8 +434,8 @@ public class CharacterSelector(
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "Star tattoos on wrists",
-                Occupations = ["Adventurer", "Student"],
-                Origins = ["Weird Science"],
+                Occupations = [OccupationName.Adventurer, OccupationName.Student],
+                Origins = [OriginName.WeirdScience],
                 Teams = [TeamNames.Thunderbolts, TeamNames.Ultimates, TeamNames.YoungAvengers],
                 Base = "Mobile",
                 History =
@@ -507,8 +503,8 @@ public class CharacterSelector(
                 Hair = "Varies",
                 Size = Size.Average,
                 DistinguishingFeatures = "Bright yellow beekeeper-esque hazmat uniforms.",
-                Occupations = ["Scientist"],
-                Origins = ["High Tech"],
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTech],
                 Teams = [TeamNames.AIM],
                 Base = "A.I.M. Island",
                 History =
@@ -600,8 +596,8 @@ public class CharacterSelector(
                 Hair = "Red",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = ["Criminal"],
-                Origins = ["High Tech: Pym Particles"],
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.HighTechPymParticles],
                 Teams = [TeamNames.Avengers, TeamNames.FutureFoundation, TeamNames.GuardiansOfTheGalaxy],
                 Base = "Mobile",
                 History =
@@ -637,9 +633,9 @@ public class CharacterSelector(
                 Hair = "Varies",
                 Size = Size.Average,
                 DistinguishingFeatures = "Any",
-                Occupations = ["Any"],
-                Origins = ["None"],
-                Teams = ["None"],
+                Occupations = [],
+                Origins = [],
+                Teams = [],
                 Base = "Anywhere",
                 History =
                 [
@@ -648,204 +644,6 @@ public class CharacterSelector(
                 Personality =
                 [
                     "This profi le is for an average, unpowered human. It can be used in a pinch for many characters, but it can also be tailored to suit particular characters with just a few adjustments.",
-                ]
-            }
-        },
-        new()
-        {
-            Name = "Baron Mordo",
-            Rank = 5,
-            Abilities = new Abilities
-            (
-                melee: 3, agility: 4, resilience: 3, vigilance: 5, ego: 8, logic: 2
-            ),
-            Traits =
-            [
-                traitSelector.GetTrait(TraitNames.Abrasive),
-                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
-                traitSelector.GetTrait(TraitNames.Fearless),
-                traitSelector.GetTrait(TraitNames.IronWill),
-                traitSelector.GetTrait(TraitNames.Loner),
-                traitSelector.GetTrait(TraitNames.QuickLearner),
-                traitSelector.GetTrait(TraitNames.SituationalAwareness),
-            ],
-            Tags =
-            [
-                tagSelector.GetTag(TagNames.BlackMarketAccess),
-                tagSelector.GetTag(TagNames.PublicIdentity),
-                tagSelector.GetTag(TagNames.Sorcerous),
-                tagSelector.GetTag(TagNames.Supernatural),
-                tagSelector.GetTag(TagNames.Villainous),
-
-            ],
-            Powers =
-            [
-                new PowerSet
-                {
-                    Name = PowerSetNames.Basic,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Discipline3),
-                        powerSelector.GetPower(PowerNames.Flight1),
-                    ],
-                },
-                new PowerSet
-                {
-                    Name = PowerSetNames.MagicSorcery,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.AstralForm),
-                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
-                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
-                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
-                        powerSelector.GetPower(PowerNames.MistsOfMunnopor),
-                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
-                        powerSelector.GetPower(PowerNames.SummonPortal),
-                        powerSelector.GetPower(PowerNames.VaporsOfValtorr),
-                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
-                    ],
-                },
-                new PowerSet
-                {
-                    Name = PowerSetNames.MartialArts,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.AttackStance),
-                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
-                        powerSelector.GetPower(PowerNames.DefenseStance),
-                        powerSelector.GetPower(PowerNames.DoThisAllDay),
-                        powerSelector.GetPower(PowerNames.FastStrikes),
-                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
-                        powerSelector.GetPower(PowerNames.UntouchablePosition),
-                    ],
-                },
-                new PowerSet
-                {
-                    Name = PowerSetNames.Telepathy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.TelepathicLink),
-                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
-                    ],
-                },
-            ],
-            Biography = new Biography
-            {
-                RealName = "Karl Amadeus Mordo",
-                Heights = [new() { Feet = 6 }],
-                Weights = [250],
-                Gender = Gender.Male,
-                Eyes = "Brown",
-                Hair = "Black",
-                Size = Size.Average,
-                DistinguishingFeatures = "Bright green and yellow robes, goatee",
-                Occupations = ["Adventurer"],
-                Origins = ["Magic: Sorcery"],
-                Teams = [],
-                Base = "Castle Mordo",
-                History =
-                [
-                    "Starting in his youth, Mordo studied the mystic arts under the tutelage of the Ancient One. A greedy and resentful man, he sought magic power primarily as a means to restore the Transylvania of his youth to its once-great feudal status.",
-                    "Mordo eventually got sick of the Ancient One’s mystic methods and betrayed him in favor of the power offered by the dread demon Dormammu instead. In the years since, Mordo has spent much of his time serving Dormammu and butting heads with the Ancient One’s most famous disciple: Doctor Strange.",
-                ],
-                Personality =
-                [
-                    "Boastful, zealous and often verging on insane, Baron Mordo is not the type to make friends. More than anything, he desires the power to prove to the world that he is the greatest sorcerer in existence. He has returned from death and madness on multiple occasions to continue his pursuit of ultimate power.",
-                ]
-            }
-        },
-        new()
-        {
-            Name = "Baron Zemo (Helmut Zemo)",
-            Rank = 3,
-            Abilities = new Abilities
-            (
-                melee: 2, agility: 3, resilience: 2, vigilance: 1, ego: 4, logic: 3
-            ),
-            Traits =
-            [
-                traitSelector.GetTrait(TraitNames.BattleReady),
-                traitSelector.GetTrait(TraitNames.CombatExpert),
-                traitSelector.GetTrait(TraitNames.CombatReflexes),
-                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Hydra)"),
-                traitSelector.GetTrait(TraitNames.Determination),
-                traitSelector.GetTrait(TraitNames.Inventor),
-                traitSelector.GetTrait(TraitNames.SituationalAwareness),
-            ],
-            Tags =
-            [
-                tagSelector.GetTag(TagNames.Backup),
-                tagSelector.GetTag(TagNames.ExtremeAppearance),
-                tagSelector.GetTag(TagNames.Hunted),
-                tagSelector.GetTag(TagNames.PublicIdentity),
-                tagSelector.GetTag(TagNames.Villainous),
-                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Adhesive X"),
-
-            ],
-            Powers =
-            [
-                new PowerSet
-                {
-                    Name = PowerSetNames.Basic,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Accuracy2),
-                        powerSelector.GetPower(PowerNames.Inspiration),
-                    ],
-                },
-                new PowerSet
-                {
-                    Name = PowerSetNames.Tactics,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.BattlePlan),
-                        powerSelector.GetPower(PowerNames.KeepMoving),
-                    ],
-                },
-                new PowerSet
-                {
-                    Name = PowerSetNames.MeleeWeaponsSharp,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Exploit),
-                        powerSelector.GetPower(PowerNames.FastAttacks),
-                        powerSelector.GetPower(PowerNames.ViciousAttack),
-                    ],
-                },
-                new PowerSet
-                {
-                    Name = PowerSetNames.RangedWeapons,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.DoubleTap),
-                        powerSelector.GetPower(PowerNames.ReturnFire),
-                        powerSelector.GetPower(PowerNames.SnapShooting),
-                        powerSelector.GetPower(PowerNames.SuppressiveFire),
-                    ],
-                },
-            ],
-            Biography = new Biography
-            {
-                RealName = "Helmut Zemo",
-                Heights = [new() { Feet = 5, Inches = 10 }],
-                Weights = [183],
-                Gender = Gender.Male,
-                Eyes = "Blue",
-                Hair = "Blonde",
-                Size = Size.Average,
-                DistinguishingFeatures = "Heavily scarred face, covered with a mask",
-                Occupations = ["Military"],
-                Origins = ["Special Training"],
-                Teams = [TeamNames.Hydra, TeamNames.MastersOfEvil, TeamNames.Thunderbolts],
-                Base = "Tower Zemo",
-                History =
-                [
-                    "Helmut Zemo was born the son of Heinrich Zemo, a Nazi scientist and super villain. Heinrich spent years seeking the destruction of America and the resurrection of fascist Germany but ultimately died in a rockslide while fighting with Captain America. Helmut, furious, chose to follow in his father’s footsteps.",
-                    "Helmut has long served as a key figure among fascist organizations, acting as an ally to the likes of the Red Skull and Hydra. Over the years, he’s personally founded and led a number of super teams, including multiple incarnations of the Masters of Evil and the Thunderbolts.",
-                ],
-                Personality =
-                [
-                    "Despite being a fascist zealot bent on world domination, Zemo has a good head for battle. He lacks extensive super-powers, relying instead on careful scheming to best his opponents. His duplicitous nature makes him a danger both to his enemies and his supposed allies.",
                 ]
             }
         },
@@ -941,8 +739,8 @@ public class CharacterSelector(
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "Bright green and yellow robes, goatee",
-                Occupations = ["Adventurer"],
-                Origins = ["Magic: Sorcery"],
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicSorcery],
                 Teams = [],
                 Base = "Castle Mordo",
                 History =
@@ -1036,8 +834,8 @@ public class CharacterSelector(
                 Hair = "Blonde",
                 Size = Size.Average,
                 DistinguishingFeatures = "Heavily scarred face, covered with a mask",
-                Occupations = ["Military"],
-                Origins = ["Special Training"],
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.SpecialTraining],
                 Teams = [TeamNames.Hydra, TeamNames.MastersOfEvil, TeamNames.Thunderbolts],
                 Base = "Tower Zemo",
                 History =
@@ -1135,8 +933,8 @@ public class CharacterSelector(
                 Hair = "Covered with blue fur",
                 Size = Size.Big,
                 DistinguishingFeatures = "Pointed teeth and ears, claws, blue fur",
-                Occupations = ["Scientist"],
-                Origins = ["Mutant"],
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.Mutant],
                 Teams = [TeamNames.Avengers, TeamNames.XMen, TeamNames.XForce],
                 Base = "Krakoa",
                 History =
@@ -1235,8 +1033,8 @@ public class CharacterSelector(
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = ["Leader"],
-                Origins = ["Inhuman"],
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.Inhuman],
                 Teams = [TeamNames.TheHouseOfAgon, TeamNames.UniversalInhumans],
                 Base = "Attilan",
                 History =
@@ -1331,8 +1129,8 @@ public class CharacterSelector(
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = ["Leader"],
-                Origins = ["High Tech", "Magic"],
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.HighTech, OriginName.Magic],
                 Teams = [TeamNames.AgentsOfWakanda, TeamNames.Avengers, TeamNames.FantasticFour, TeamNames.PantherCult, TeamNames.Ultimates],
                 Base = "Wakanda",
                 History =
@@ -1422,8 +1220,8 @@ public class CharacterSelector(
                 Hair = "Red",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = ["Spy"],
-                Origins = ["Special Training"],
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.SpecialTraining],
                 Teams = [TeamNames.Avengers, TeamNames.InfinityWatch, TeamNames.SHIELD],
                 Base = "Mobile",
                 History =
@@ -1516,8 +1314,8 @@ public class CharacterSelector(
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "Back tattoos, fangs",
-                Occupations = ["Adventurer"],
-                Origins = ["Monstrous: Vampire", "Special Training"],
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MonstrousVampire, OriginName.SpecialTraining],
                 Teams = [TeamNames.Avengers, TeamNames.MI13, TeamNames.MidnightSons],
                 Base = "Mobile",
                 History =
@@ -1628,8 +1426,8 @@ public class CharacterSelector(
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = ["Educator", "Military"],
-                Origins = ["Weird Science"],
+                Occupations = [OccupationName.Educator, OccupationName.Military],
+                Origins = [OriginName.WeirdScience],
                 Teams = [TeamNames.Avengers, TeamNames.Ultimates],
                 Base = "New York City",
                 History =
@@ -1722,8 +1520,8 @@ public class CharacterSelector(
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "Green skin (while using powers)",
-                Occupations = ["Scientist"],
-                Origins = ["Weird Science: Gamma Mutate"],
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScienceGammaMutate],
                 Teams = [TeamNames.AgentsOfAtlas, TeamNames.Champions],
                 Base = "Mobile",
                 History =
@@ -1734,6 +1532,81 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Like many gamma mutates, Cho has struggled with anger issues, but compared to Bruce Banner, Cho is as cool as an ice cube. Cho’s super-intelligence is matched with an emotional immaturity that can land him in over his head in certain situations. Thanks to his Champions teammates and his brilliant sister, Maddy, Cho has begun to navigate the world more thoughtfully.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Bullseye",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 3, vigilance: 2, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Sniping"),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lester",
+                Heights = [new() { Feet = 6 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bull’s-eye scar on forehead",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.SpecialTraining, OriginName.HighTechCybernetics],
+                Teams = [TeamNames.DarkAvengers, TeamNames.FiskIndustries, TeamNames.TheHand],
+                Base = "Hell’s Kitchen, New York City",
+                History =
+                [
+                    "Beyond his first name, the world knows next to nothing about the man who became Bullseye. He trained for some period as a mercenary with the United States government, eventually resurfacing in New York as Bullseye, extortionist and killer for hire.",
+                    "Hell’s Kitchen has long been Bullseye’s base of choice, regularly putting him into conflict with Daredevil. Besides the Kingpin himself, Bullseye may be Daredevil’s most dangerous nemesis. His superhuman ability to hit any target from any angle makes him a perfect match for the swift and acrobatic Man Without Fear.",
+                ],
+                Personality =
+                [
+                    "Bullseye is a madman who enjoys killing above all else. He’s generally not the type to be reasoned with, though he has been persuaded to cooperate",
                 ]
             }
         },

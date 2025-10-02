@@ -53,6 +53,7 @@ public static class PowerNames
     public const string ElementalRicochet = "Elemental Ricochet";
     public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
+    public const string Evasion = "Evasion";
     public const string Exploit = "Exploit";
     public const string FastAttacks = "Fast Attacks";
     public const string FastStrikes = "Fast Strikes";
@@ -90,7 +91,9 @@ public static class PowerNames
     public const string MultiversalTravel = "Multiversal Travel";
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
     public const string OperationsCenter = "Operations Center";
+    public const string PointBlankParry = "Point-Blank Parry";
     public const string QuickToss = "Quick Toss";
+    public const string ReinforcedSkeleton = "Reinforced Skeleton";
     public const string ResizeObject = "Resize Object";
     public const string ReturnFire = "Return Fire";
     public const string ReverseMomentumThrow = "Reverse-Momentum Throw";

@@ -38,6 +38,7 @@ public static class TraitNames
     public const string PublicSpeaking = "Public Speaking";
     public const string QuickLearner = "Quick Learner";
     public const string ScientificExpertise = "Scientific Expertise";
+    public const string SignatureAttack = "Signature Attack";
     public const string SituationalAwareness = "Situational Awareness";
     public const string Sneaky = "Sneaky";
     public const string TechReliance = "Tech Reliance";
