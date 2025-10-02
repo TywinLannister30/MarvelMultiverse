@@ -1581,6 +1581,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.LeechLife,
+            Description = "The character consumes the life force of another.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "Target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes an Ego attack against the target’s Resilience defense. If it succeeds, the target takes regular Health damage, and the character heals half that much Health for themselves. On a Fantastic success, the character heals the full Health damage instead."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.LegSweep,
             Description = "The character knocks the enemy’s legs from under them.",
             PowerSets = [PowerSetNames.MartialArts],

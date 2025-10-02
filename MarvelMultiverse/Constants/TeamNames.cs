@@ -9,6 +9,7 @@ public static class TeamNames
     public const string AIM = "A.I.M.";
     public const string AstonishingAvengers = "Astonishing Avengers";
     public const string Avengers = "Avengers";
+    public const string BlackOrder = "Black Order";
     public const string Champions = "Champions";
     public const string DarkAvengers = "Dark Avengers";
     public const string DarkCouncil = "Dark Council";
@@ -20,6 +21,7 @@ public static class TeamNames
     public const string FiskIndustries = "Fisk Industries";
     public const string FutureFoundation = "Future Foundation";
     public const string GoblinNation = "Goblin Nation";
+    public const string GodsOfAsgard = "Gods of Asgard";
     public const string Graces = "Graces";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
     public const string HellLords = "Hell Lords";

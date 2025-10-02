@@ -1,12 +1,6 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System;
-using System.Numerics;
-using System.Runtime.Intrinsics.X86;
-using System.Security.Cryptography;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -58,6 +52,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersE());
         allCharacters.AddRange(GetAllCharactersF());
         allCharacters.AddRange(GetAllCharactersG());
+        allCharacters.AddRange(GetAllCharactersH());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -4251,6 +4246,293 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Groot is talkative and intelligent, but due to his stiff and inflexible larynx, it appears to others that he can only say “I am Groot.” In actuality, those with a trained ear can discern what Groot is saying in the subtle sigh and breeze under the words.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersH() =>
+    [
+        new()
+        {
+            Name = "Hand Ninja",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 0, vigilance: 1, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Snap Shooting"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bright red ninja outfits",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.TheHand],
+                Base = "Japan",
+                History =
+                [
+                    "The Hand is a cult composed entirely of dangerous ninja assassins, first formed in feudal Japan. Members of the Hand worship an elder god known only as the Beast. Manipulating the world from the shadows, they sow chaos wherever they roam.",
+                    "For centuries, the Hand’s machinations have been opposed primarily by a rival ninja organization: the Chaste. Many of the world’s most famous ninja have at some point joined forces with either the Hand or the Chaste.",
+                ],
+                Personality =
+                [
+                    "Members of the Hand are fanatical and dedicated killers. Behind closed doors, the leaders of the Hand give loud and raving religious sermons, but your average Hand ninja is a professional— soft-spoken on the job and communicating only when absolutely necessary.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Hawkeye (Clint Barton)",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 1, vigilance: 2, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AuditoryIssues),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Bow and arrow"),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Clinton Francis “Clint” Barton",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.Thunderbolts],
+                Base = "Brooklyn, New York City",
+                History =
+                [
+                    "After his parents were killed in a tragic car accident, Clint Barton ran away to join the circus. Naturally talented, he quickly made a name as Hawkeye, one of the premier archers. Barton might have stayed a performer into his old age if a chance encounter hadn’t brought Iron Man to his circus. Inspired by Iron Man’s exploits, Barton created a costume and began fi ghting crime as Hawkeye.",
+                    "While Barton sometimes operates solo, he’s best known for his work with the Avengers. After years of such adventures, Barton trained and mentored Kate Bishop into becoming a second Hawkeye.",
+                ],
+                Personality =
+                [
+                    "Clint Barton is well aware that his lack of super-powers places the upper limits of his abilities well below those of most super heroes. He sometimes puts on an arrogant attitude to cover his insecurities. Barton is sometimes led astray by his passions, but his conscience always brings him back to the fi ght for justice.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Hela",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 9, agility: 4, resilience: 6, vigilance: 3, ego: 6, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.LeechLife),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelTime,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TimeTravel),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Hela",
+                Heights = [new() { Feet = 7 }],
+                Weights = [500],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Black",
+                Size = Size.Big,
+                DistinguishingFeatures = "Covered by illusions, the left side of her body is dead",
+                Occupations = [OccupationName.Leader, OccupationName.Outsider],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.BlackOrder, TeamNames.GodsOfAsgard, TeamNames.HellLords],
+                Base = "Hel",
+                History =
+                [
+                    "The current incarnation of the Asgardian god of death was born under mysterious circumstances, half dead and half alive. Just as Thor must wield his hammer to operate at full power, Hela must wear her green cloak lest she return to her half-dead state.",
+                    "As the god of death, Hela has had a tumultuous relationship with her fellow Asgardians. She can kill even a god with her touch, so other Asgardians tend to avoid her company. Despite this, she rarely attacks healthy Asgardians, preferring to swoop in and reap the souls of the injured and dying.",
+                ],
+                Personality =
+                [
+                    "Though not above the occasional bit of queenly mercy, Hela’s actions naturally trend toward destruction. While she’s usually content scheming up ways to capture the souls of her fellow Asgardians, Hela has been known to commit mass murder upon regular people, often with help from powerful villains like Thanos or Loki.",
                 ]
             }
         },
