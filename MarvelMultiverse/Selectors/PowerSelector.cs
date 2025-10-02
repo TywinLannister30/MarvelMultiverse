@@ -955,6 +955,53 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.HurledShieldBash,
+            Description = "The character hurls their mighty shield at an enemy.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.ShieldBash}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 spaces times the character’s rank",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack on an enemy. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and is knocked prone. The shield then bounces back to the character.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.HurledShieldBlock,
+            Description = "The character hurls their mighty shield to protect an ally from an attack.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.Shield1}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy makes an attack against an ally’s Agility.",
+            Duration = Duration.Instant,
+            Range = "5 spaces times the character’s rank",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The ally gains Health Damage Reduction equal to the character’s Shield power against that attack. The shield then bounces back to the character.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.HurledShieldDeflection,
+            Description = "The character hurls their mighty shield to save an ally from an attack.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.ShieldDeflection}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy makes an attack against an ally’s Agility.",
+            Duration = Duration.Instant,
+            Range = "5 spaces times the character’s rank",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The enemy has trouble on the attack. The shield then bounces back to the character.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.IconicWeapon,
             PowerSets = [],
             Prerequsites = "None",
@@ -1335,6 +1382,108 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.RicoShield,
+            Description = "The character ricochets their shield from target to target.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.HurledShieldBash}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 spaces times the character’s rank",
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack on a target. If the attack is a success, the target takes regular damage. On a Fantastic success, the target is also knocked prone, and the character can make an extra attack on another target, adding the extra range between the two targets to the new attack roll. This can be repeated until an attack is not a Fantastic success.",
+                "When the attacks are over, the shield then bounces back to the character."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Shield1,
+            Description = "The character wields a personal shield.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = "None",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character gains Health Damage Reduction 1.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Shield2,
+            Description = "The character’s shield protects them like a wall.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.Shield1}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character gains Health Damage Reduction 2.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Shield3,
+            Description = "The character’s shield protects better than a tank.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.Shield2}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character gains Health Damage Reduction 3.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Shield4,
+            Description = "The character’s shield protects like a concrete barrier.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.Shield3}, Rank 6",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Cost = "25 Focus",
+            Effect =
+            [
+                "The character gains Health Damage Reduction 4.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ShieldBash,
+            Description = "The character bashes a foe with their shield.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes a close attack on an enemy within their reach. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and is knocked prone.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ShieldDeflection,
+            Description = "The character uses their shield to deflect attacks.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "The character is the target of an attack against their Agility defense.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The attack has trouble.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.ShieldOfTheSeraphim,
             Description = "The character produces a magical shield.",
             PowerSets = [PowerSetNames.Magic],
@@ -1347,6 +1496,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character produces a magical shield that protects them from physical damage. Any attacks against them that do 20 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 20 points of damage, it destroys the protection, allowing excess damage through.",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.ShieldWall,
+            Description = "The character stands like an impenetrable wall.",
+            PowerSets = [PowerSetNames.ShieldBearer],
+            Prerequsites = $"{PowerNames.BraceForImpact}, Rank 3",
+            Action = ActionType.Movement,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "Attacks against the character have trouble. The character breaks concentration on this power if they use a movement action.",
+            ]
         },
         new()
         {

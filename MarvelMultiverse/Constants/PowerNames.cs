@@ -70,6 +70,9 @@ public static class PowerNames
     public const string HealingFactor = "Healing Factor";
     public const string HeightenedSenses1 = "Heightened Senses 1";
     public const string HeightenedSenses2 = "Heightened Senses 2";
+    public const string HurledShieldBash = "Hurled Shield Bash";
+    public const string HurledShieldBlock = "Hurled Shield Block";
+    public const string HurledShieldDeflection = "Hurled Shield Deflection";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
     public const string IconicWeapon = "Iconic Weapon";
     public const string Inspiration = "Inspiration";
@@ -97,7 +100,15 @@ public static class PowerNames
     public const string ResizeObject = "Resize Object";
     public const string ReturnFire = "Return Fire";
     public const string ReverseMomentumThrow = "Reverse-Momentum Throw";
+    public const string RicoShield = "Rico-Shield";
+    public const string Shield1 = "Shield 1";
+    public const string Shield2 = "Shield 2";
+    public const string Shield3 = "Shield 3";
+    public const string Shield4 = "Shield 4";
+    public const string ShieldBash = "ShieldBash";
+    public const string ShieldDeflection = "Shield Deflection";
     public const string ShieldOfTheSeraphim = "Shield of the Seraphim";
+    public const string ShieldWall = "Shield Wall";
     public const string Shrink1 = "Shrink 1";
     public const string Shrink2 = "Shrink 2";
     public const string Shrink3 = "Shrink 3";
