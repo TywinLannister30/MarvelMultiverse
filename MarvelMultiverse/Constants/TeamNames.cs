@@ -17,6 +17,7 @@ public static class TeamNames
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
     public const string Hydra = "Hydra";
     public const string InfinityWatch = "Infinity Watch";
+    public const string IntergalacticCouncil = "Intergalactic Council";
     public const string MastersOfEvil = "Masters of Evil";
     public const string MercsForMoney = "Mercs for Money";
     public const string MI13 = "MI13";
@@ -24,9 +25,11 @@ public static class TeamNames
     public const string PantherCult = "Panther Cult";
     public const string PowerElite = "Power Elite";
     public const string ProjectGreenSpring = "Project Green Spring";
+    public const string SavageAvengers = "Savage Avengers";
     public const string SecretAvengers = "Secret Avengers";
     public const string SHIELD = "S.H.I.E.L.D.";
     public const string StrangeAcademy = "Strange Academy";
+    public const string TerribleTrio = "Terrible Trio";
     public const string TheHand = "The Hand";
     public const string TheHouseOfAgon = "The House of Agon";
     public const string Thunderbolts = "Thunderbolts";

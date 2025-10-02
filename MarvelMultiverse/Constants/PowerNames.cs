@@ -94,6 +94,7 @@ public static class PowerNames
     public const string LeapingLeglock = "Leaping Leglock";
     public const string LegSweep = "Leg Sweep";
     public const string LightningActions = "Lightning Actions";
+    public const string MachineTelepathy = "Machine Telepathy";
     public const string MemoryBlip = "Memory Blip";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";

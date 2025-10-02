@@ -1335,10 +1335,24 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.MemoryBlip,
-            Description = " The character erases a bit of someone’s memory.",
+            Name = PowerNames.MachineTelepathy,
+            Description = "The character can communicate with machines with their mind.",
             PowerSets = [PowerSetNames.Telepathy],
-            Prerequsites = "Telepathic Link, Rank 2",
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character can communicate telepathically with one machine at a time, and they must have met or seen the machine before. The communication can be verbal, visual or even more complex, such as imparting location information. There is no limit to the distance of the communication, as long as the character and the machine are in the same dimension.",
+                "Simple machines do not have much to o­ffer in the way of conversation, but they are also generally compliant with requests. Complex machines—like computers, smartphones and other electronics—are also often compliant, but if they are secured in any way, they usually refuse to communicate with strangers. A Logic check can get the character past such security, and the Narrator should set the target number according to the strength of the security.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.MemoryBlip,
+            Description = "The character erases a bit of someone’s memory.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Permanent,
             Cost = "5 Focus",
