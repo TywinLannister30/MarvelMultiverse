@@ -2367,5 +2367,88 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Devil Dinosaur",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 2, resilience: 6, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mute, reminder: "Can only roar."),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow1, reminder: "permanently Huge size; Reach 5"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Devil",
+                Heights = [new() { Feet = 20 }],
+                Weights = [600],
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "None",
+                Size = Size.Huge,
+                DistinguishingFeatures = "Red T. rex.",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Alien],
+                Teams = ["Partner to Moon Girl and Moon-Boy"],
+                Base = "New York City",
+                History =
+                [
+                    "The Tyrannosaurus rex known as Devil Dinosaur was born on an alternate Earth, one filled with dinosaurs and simple, apelike humans. As a child, Devil was almost burned to death by a tribe of humans known as the Killer-Folk. He was rescued by a young human of the rival Small-Folk tribe, who called himself Moon-Boy. Together, the two adventured throughout Dinosaur World, repeatedly foiling the dastardly plots of the Killer-Folk.",
+                    "Following the death of Moon-Boy at the hands of the Killer-Folk, Devil and a number of the Killer-Folk were transported to Earth-616. There, he teamed up with child prodigy Lunella Lafayette, who took the title of Moon Girl, and the two have been adventuring together ever since.",
+                ],
+                Personality =
+                [
+                    "Although he cannot speak, Devil Dinosaur shows signs of human-level intelligence. He seems to have the ability to understand human language and follow complex plans. In any case, he’s no less ferocious or effective in battle than any other T. rex.",
+                ]
+            }
+        },
     ];
 }

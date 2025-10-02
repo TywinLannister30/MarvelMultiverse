@@ -10,6 +10,7 @@ public class PowerSelector : IPowerSelector
         bool isTech = false,
         bool swinglineSpeed = false,
         string specialization = null, 
+        string reminder = null,
         int? meleeDamageModifier = null, 
         int? agilityDamageModifier = null)
     {
@@ -19,6 +20,9 @@ public class PowerSelector : IPowerSelector
 
         if (!string.IsNullOrEmpty(specialization))
             power.Name += $": {specialization}";
+
+        if (!string.IsNullOrEmpty(reminder))
+            power.Name += $" ({reminder})";
 
         power.IsTech = isTech;
         power.SwinglineSpeed = swinglineSpeed;
@@ -996,6 +1000,62 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a Melee check and compares that against the Agility defense of every target within the character’s reach plus their rank in spaces. Any targets the attack succeeds against take half regular damage. On a Fantastic success, the targets take full damage and are knocked prone."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Grow1,
+            Description = "The character sizes up!",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = "None",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can grow up to huge size. They can return to their normal size at will."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Grow2,
+            Description = "The character becomes even bigger!",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Grow1}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can grow up to gigantic size. They can return to their normal size at will."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Grow3,
+            Description = "The character can be the size of a house!",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Grow2}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can grow up to titanic size. They can return to their normal size at will."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Grow4,
+            Description = "The character can tackle kaiju!",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Grow3}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can grow up to gargantuan size. They can return to their normal size at will."
             ]
         },
         new()

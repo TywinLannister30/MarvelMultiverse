@@ -3,6 +3,7 @@
 
 
 using MarvelMultiverse.Constants;
+using MarvelMultiverse.Enums;
 using System.Security.Claims;
 
 namespace MarvelMultiverse.Models;
@@ -59,6 +60,12 @@ public class Character
         Abilities.Ego.Defence = egoDefence;
 
         Abilities.Logic.Defence = logicDefence;
+
+        if (Biography.Size == Size.Huge)
+        {
+            Abilities.Melee.Defence -= 2;
+            Abilities.Agility.Defence -= 2;
+        }
     }
 
     public void SetHealth()
@@ -116,6 +123,9 @@ public class Character
 
         baseSpeed += Abilities.Agility.Score / 5;
 
+        if (Biography.Size == Size.Huge)
+            baseSpeed *= 5;
+
         Speed = new Speeds
         {
             Run = baseSpeed,
@@ -163,5 +173,10 @@ public class Character
         Abilities.Agility.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.AgilityDamageModifier));
         Abilities.Ego.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.EgoDamageModifier));
         Abilities.Logic.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.LogicDamageModifier));
+
+        if (Biography.Size == Size.Huge)
+        {
+            Abilities.Melee.DamageModifier += 2;
+        }
     }
 }

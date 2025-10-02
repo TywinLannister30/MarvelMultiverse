@@ -9,6 +9,7 @@ public interface IPowerSelector
         bool isTech = false,
         bool swinglineSpeed = false,
         string specialization = null,
+        string reminder = null,
         int? meleeDamageModifier = null,
         int? agilityDamageModifier = null);
 

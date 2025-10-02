@@ -72,6 +72,8 @@ public static class PowerNames
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string Grow1 = "Grow 1";
     public const string Grow2 = "Grow 2";
+    public const string Grow3 = "Grow 3";
+    public const string Grow4 = "Grow 4";
     public const string Headshot = "Headshot";
     public const string HealingFactor = "Healing Factor";
     public const string HeightenedSenses1 = "Heightened Senses 1";
