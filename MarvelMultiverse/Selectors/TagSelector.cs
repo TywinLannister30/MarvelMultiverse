@@ -28,6 +28,14 @@ public class TagSelector : ITagSelector
     [
         new()
         {
+            Name = TagNames.AlienHeritage,
+            Effect =
+            [
+                "The character—or at least one of their ancestors—is not from Earth. Pick an alien race that they belong to. If they were not raised on Earth, they should consider taking the Outsider occupation."
+            ]
+        },
+        new()
+        {
             Name = TagNames.AlternateForm,
             Effect =
             [

@@ -277,6 +277,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Piloting,
+            Effect =
+            [
+                "The character knows how to operate vehicles of all kinds. They have an edge on Agility checks triggered when piloting or driving a vehicle during a movement action. This applies to cars, boats, aircraft and so on.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Presence,
             Effect =
             [

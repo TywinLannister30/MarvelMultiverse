@@ -30,6 +30,7 @@ public static class TeamNames
     public const string Thunderbolts = "Thunderbolts";
     public const string Ultimates = "Ultimates";
     public const string UniversalInhumans = "Universal Inhumans";
+    public const string USAirForce = "U.S. Air Force";
     public const string USArmy = "U.S. Army";
     public const string XMen = "X-Men";
     public const string XForce = "X-Force";

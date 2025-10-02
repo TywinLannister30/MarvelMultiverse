@@ -726,6 +726,22 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.EnergyAbsorption,
+            Description = "The character turns damage into power.",
+            PowerSets = [],
+            Prerequsites = "Rank 4",
+            Action = ActionType.Reaction,
+            Trigger = "The character takes Health damage.",
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character can take any Health damage done to them (after applying any damage reduction), ignore it and add that number to their Focus instead. In this way, they can increase their Focus up to double their regular maximum Focus.",
+                "Once the combat is over, any extra Focus over the character’s regular maximum Focus score fades away. This power cannot be used again until any Focus the character gained in this way is spent.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.EnvironmentalProtection,
             Description = "Environmental e£fects don’t bother the character.",
             PowerSets = [],
