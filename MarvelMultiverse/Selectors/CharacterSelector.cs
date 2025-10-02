@@ -3,6 +3,7 @@ using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Cryptography;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -2963,6 +2964,110 @@ public class CharacterSelector(
                 Personality =
                 [
                     "As one of the most intelligent and long-lived conquerors across all existence, Dormammu is proud in victory and a pragmatist in defeat. Dormammu considers every defeat a minor setback on the road to his eternal reign. Ever the opportunist, he always fi nds a way to turn an unfavorable shortterm situation into a long-term advantage.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Drax",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 4, resilience: 7, vigilance: 3, ego: 3, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Thanos"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.UntouchablePosition),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Arthur Sampson Douglas",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [680],
+                Gender = Gender.Male,
+                Eyes = "Entirely red",
+                Hair = "Bald",
+                Size = Size.Big,
+                DistinguishingFeatures = "Green skin covered in red tattoos",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.GuardiansOfTheGalaxy, TeamNames.InfinityWatch, TeamNames.UnitedFront],
+                Base = "Mobile",
+                History =
+                [
+                    "While driving through the Mojave Desert, Arthur Douglas and his wife and daughter spotted Thanos’ spaceship on a reconnaissance mission, and Thanos destroyed their car to keep his presence secret. Horrified, Thanos’ father (Mentor) asked his own father (Kronos) to help him create someone powerful enough to defeat Thanos. Together, they formed a body and imbued it with Douglas’ spirit, calling it Drax. Awakening in this new form, Drax had no memory of his original life, only a driving hatred for his murderer.",
+                    "Drax later regained his memories and learned Mentor had also rescued his daughter, who had become Moondragon. He has killed Thanos a number of times, although the Mad Titan keeps coming back.",
+                    "After helping end the Annihilation War, Drax joined the Guardians of the Galaxy. He was resurrected once after being killed, but he came back in a smaller form with fewer powers. He later sacrificed himself to save the rest of the Guardians of the Galaxy, but a clone with his memories has since taken his place."
+                ],
+                Personality =
+                [
+                    "As Drax began as a moody person bent on vengeance. While he can still be dire and serious when on a mission, he has lightened up a great deal over the years and come to enjoy fi ghting for the sheer thrill of it. He has a dark, off-beat sense of humor rooted in the fact that he has only a rudimentary understanding of society, how jokes work and what most people would consider terrifying.",
                 ]
             }
         },
