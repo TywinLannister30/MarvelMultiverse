@@ -32,6 +32,7 @@ public static class TraitNames
     public const string Inventor = "Inventor";
     public const string Investigation = "Investigation";
     public const string IronWill = "Iron Will";
+    public const string LegalEagle = "Legal Eagle";
     public const string Leverage = "Leverage";
     public const string Loner = "Loner";
     public const string Monster = "Monster";

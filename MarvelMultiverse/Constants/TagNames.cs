@@ -36,5 +36,6 @@ public static class TagNames
     public const string Streetwise = "Streetwise";
     public const string Supernatural = "Sorcerous";
     public const string Villainous = "Villainous";
+    public const string VisionIssues = "Vision Issues";
     public const string XGene = "X-Gene";
 }

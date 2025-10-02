@@ -266,6 +266,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.LegalEagle,
+            Effect =
+            [
+                "The character knows the laws of their homeland and can help others navigate them. They have an edge on Logic checks when dealing with legalities.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Leverage,
             Effect =
             [

@@ -13,4 +13,6 @@ public class Speeds
     public int Jump { get; set; }
 
     public int Flight { get; set; }
+
+    public int Swingline { get; set; }
 }

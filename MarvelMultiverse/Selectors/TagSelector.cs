@@ -327,6 +327,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.VisionIssues,
+            Effect =
+            [
+                "The character has trouble seeing that can range from partial to full blindness. This can also include color blindness, astigmatisms and being nearsighted or farsighted.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.XGene,
             Effect =
             [

@@ -5,18 +5,29 @@ namespace MarvelMultiverse.Selectors;
 
 public class PowerSelector : IPowerSelector
 {
-    public Power GetPower(string name, bool isTech = false, string specialization = null)
+    public Power GetPower(
+        string name, 
+        bool isTech = false,
+        bool swinglineSpeed = false,
+        string specialization = null, 
+        int? meleeDamageModifier = null, 
+        int? agilityDamageModifier = null)
     {
         var staticPower = GetAllPowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
 
         var power = staticPower.Clone() as Power;
 
         if (!string.IsNullOrEmpty(specialization))
-        {
             power.Name += $": {specialization}";
-        }
 
         power.IsTech = isTech;
+        power.SwinglineSpeed = swinglineSpeed;
+
+        if (meleeDamageModifier.HasValue)
+            power.MeleeDamageModifier += meleeDamageModifier.Value;
+
+        if (agilityDamageModifier.HasValue)
+            power.AgilityDamageModifier += agilityDamageModifier.Value;
 
         return power;
     }

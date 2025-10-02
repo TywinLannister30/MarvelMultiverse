@@ -1,7 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using System;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -49,6 +49,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersA());
         allCharacters.AddRange(GetAllCharactersB());
         allCharacters.AddRange(GetAllCharactersC());
+        allCharacters.AddRange(GetAllCharactersD());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -1088,7 +1089,13 @@ public class CharacterSelector(
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.HeightenedSenses1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Electrified vibranium claws [+1 damage multiplier]"),
+                        
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon, 
+                            specialization: "Electrified vibranium claws [+1 damage multiplier]",
+                            meleeDamageModifier: 1,
+                            agilityDamageModifier: 1),
+                       
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
@@ -1650,7 +1657,12 @@ public class CharacterSelector(
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Captain America’s shield [+1 Melee and Agility Damage multiplier. Grants the user one extra level of the power Shield (up to Shield 4), which they can use without paying the additional level’s Focus cost.]"),
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon, 
+                            specialization: "Captain America’s shield [+1 Melee and Agility Damage multiplier. Grants the user one extra level of the power Shield (up to Shield 4), which they can use without paying the additional level’s Focus cost.]",
+                            meleeDamageModifier: 1,
+                            agilityDamageModifier: 1),
+
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
@@ -2179,6 +2191,88 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Despite being an intelligent and commanding leader, Scott has often struggled in personal social situations. Over the years, with the help of his mutant friends, he’s managed to overcome much of his social anxiety.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersD() =>
+    [
+        new()
+        {
+            Name = "Daredevil",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 1, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.LegalEagle),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Work"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.VisionIssues),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon, 
+                            specialization: "Daredevil’s Billy Club. Adds +1 damage multiplier and grants the swingline movement mode, with a speed equal to triple his Run Speed. The Billy Club can be thrown and instantly retrieved. The range of the Billy Club and the reach of the swingline is equal to its Swingline Speed: 15 spaces.",
+                            swinglineSpeed: true,
+                            meleeDamageModifier: 1,
+                            agilityDamageModifier: 1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Matthew “Matt” Murdock",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [185],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "Blind",
+                Occupations = [OccupationName.Lawyer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Defenders],
+                Base = "Hell’s Kitchen, New York City",
+                History =
+                [
+                    "When Matt Murdock was just a boy, his face was splashed with a rare radioactive isotope. While the isotope cost him his sight, it enhanced all his other senses. Shortly thereafter, his father was killed by mobsters for refusing to take a fall in a mob-run boxing match. Matt vowed revenge on all the criminals of Hell’s Kitchen and began training in martial arts with the legendary sensei Stick.",
+                    "As an adult, Matt fights crime both within and without the boundaries of the law. In addition to his duties as Daredevil, he often runs a thriving law office with his longtime pal Foggy Nelson.",
+                ],
+                Personality =
+                [
+                    "Though firmly dedicated to the pursuit of justice, Matt is not above a joke or engaging in a bit of romance. His legal clients think of him as a charming, highly considerate gentleman.",
                 ]
             }
         },

@@ -140,6 +140,11 @@ public class Character
             if (Powers.Any(x => x.Powers.Any(p => p.JumpSpeedMultipliedByRank)))
                 Speed.Jump = baseSpeed * Rank;
         }
+
+        if (Powers.Any(x => x.Powers.Any(p => p.SwinglineSpeed)))
+        {
+            Speed.Swingline = baseSpeed * 3;
+        }
     }
 
     public void SetNonCombatCheckModifiers()
