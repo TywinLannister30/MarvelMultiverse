@@ -1097,6 +1097,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.GrowingAttack,
+            Description = "The character attacks as they grow",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Grow1}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "The character grows.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a close attack with an edge. If the attack succeeds, they do regular damage for the size they are growing to. On a Fantastic success, they do double damage and stun the target."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Headshot,
             Description = "Ouch!",
             PowerSets = [PowerSetNames.RangedWeapons],
@@ -1144,6 +1159,21 @@ public class PowerSelector : IPowerSelector
             [
                 "The character can sense things roughly four times as far away as normal. Their senses are so sharp that they can use some of them to compensate for the loss of others (say, if blinded or deafened). They can even listen to the heartbeat of a person in the same room to see if they are lying—although this is as reliable as a traditional lie detector: far from 100% and not admissible in court.",
                 "They also have a double edge on Vigilance checks to perceive things, and enemies have double trouble on checks they make to sneak past the character."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.HellfireChains,
+            Description = "The character shoots out chains covered in hellfire.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Cursed}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character summons chains covered in hellfire and can use them to bind or smash targets. They can attack anyone within 10 spaces per rank and line of sight. Make an Ego attack. On a success, the target takes regular Health damage. On a Fantastic success, the target is grabbed and paralyzed too.",
+                "If a target is grabbed by the hellfire chains, on each subsequent round, the character can make an Ego check against the target’s Resilience Resilience defense to inflict regular Health damage and regular Focus damage. Breaking free from the hellfire chains requires a Melee check with a target number of 20."
             ]
         },
         new()
@@ -1685,6 +1715,19 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a close attack on the enemy who just missed them. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes double damage and su­ffers the weapon’s special e­ffect.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.SenseSins,
+            Description = "The character can look into a person’s soul.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Cursed}",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character looks into a target’s eyes and makes an Ego check against the target’s Ego defense. On a success, the character can sense what sorts of horrible things the target has done. On a Fantastic success, they can sense what sorts of horrible things the target intends to do in the immediate future.",
             ]
         },
         new()

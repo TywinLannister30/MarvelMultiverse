@@ -8,6 +8,7 @@ public static class OriginName
     public const string HighTechPymParticles = "High Tech: Pym Particles";
     public const string Inhuman = "Inhuman";
     public const string Magic = "Magic";
+    public const string MagicDemonic = "Magic: Demonic";
     public const string MagicSorcery = "Magic: Sorcery";
     public const string MonstrousVampire = "Monstrous: Vampire";
     public const string Mutant = "Mutant";

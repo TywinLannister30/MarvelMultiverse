@@ -77,10 +77,12 @@ public static class PowerNames
     public const string Grow2 = "Grow 2";
     public const string Grow3 = "Grow 3";
     public const string Grow4 = "Grow 4";
+    public const string GrowingAttack = "Growing Attack";
     public const string Headshot = "Headshot";
     public const string HealingFactor = "Healing Factor";
     public const string HeightenedSenses1 = "Heightened Senses 1";
     public const string HeightenedSenses2 = "Heightened Senses 2";
+    public const string HellfireChains = "Hellfire Chains";
     public const string HitAndRun = "Hit & Run";
     public const string HurledShieldBash = "Hurled Shield Bash";
     public const string HurledShieldBlock = "Hurled Shield Block";
@@ -119,6 +121,7 @@ public static class PowerNames
     public const string ReverseMomentumThrow = "Reverse-Momentum Throw";
     public const string RicoShield = "Rico-Shield";
     public const string Riposte = "Riposte";
+    public const string SenseSins = "Sense Sins";
     public const string Shield1 = "Shield 1";
     public const string Shield2 = "Shield 2";
     public const string Shield3 = "Shield 3";

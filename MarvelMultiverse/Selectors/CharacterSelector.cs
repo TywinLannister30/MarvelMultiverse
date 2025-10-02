@@ -2850,5 +2850,113 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Dormammu",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 5, vigilance: 5, ego: 9, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicDemonicMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HellfireChains),
+                        powerSelector.GetPower(PowerNames.SenseSins),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow3),
+                        powerSelector.GetPower(PowerNames.GrowingAttack),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Dormammu",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Male,
+                Eyes = "Yellow",
+                Hair = "Flames",
+                Size = Size.Average,
+                DistinguishingFeatures = "Flaming body",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.MagicDemonic],
+                Teams = [TeamNames.HellLords, TeamNames.LordsOfTheSplinterRealms],
+                Base = "Dark Dimension",
+                History =
+                [
+                    "Exiled from the mystical realm known as the Faltine, Dormammu and his family singlehandedly conquered the native people of the Multiversespanning Dark Dimension, turning it into their fortress. Over untold centuries, Dormammu slowly pushed the other members of his family out of power, eventually declaring himself the sole Lord of the Dark.",
+                    "As a being of nearly limitless power, Dormammu’s conquest of all reality has been halted solely by the ancient lineage of the Sorcerer Supreme, but time has not dulled the dark one’s ambitions. Aided by his servant Baron Mordo, Dormammu’s schemes to defeat the Sorcerer Supreme have only become more frequent and dangerous over the last several decades.",
+                ],
+                Personality =
+                [
+                    "As one of the most intelligent and long-lived conquerors across all existence, Dormammu is proud in victory and a pragmatist in defeat. Dormammu considers every defeat a minor setback on the road to his eternal reign. Ever the opportunist, he always fi nds a way to turn an unfavorable shortterm situation into a long-term advantage.",
+                ]
+            }
+        },
     ];
 }
