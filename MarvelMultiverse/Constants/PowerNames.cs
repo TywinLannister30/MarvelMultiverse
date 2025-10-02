@@ -8,6 +8,7 @@ public static class PowerNames
     public const string Accuracy4 = "Accuracy 4";
     public const string AdditionalLimbs = "Additional Limbs";
     public const string AlwaysReady = "Always Ready";
+    public const string Anger = "Anger";
     public const string AnimalCommunication = "Animal Communication";
     public const string AstralForm = "Astral Form";
     public const string AttackStance = "Attack Stance";

@@ -128,6 +128,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Anger,
+            Description = "You won’t like them when they’re angry.",
+            PowerSets = [],
+            Prerequsites = $"{PowerNames.Mighty3}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is harmed by an attack.",
+            Duration = Duration.Concentration,
+            Cost = "10 or more Focus",
+            Effect =
+            [
+                "The character becomes angry and uses that anger to increase their strength. For every 10 points of Focus they spend, they add +15 to their Melee damage bonus and lose –2 from their Logic—and subsequently their Logic defense. While using this power, they cannot use any other powers that require concentration.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.AnimalCommunication,
             Description = "The character can enter the Astral Plane.",
             PowerSets = [PowerSetNames.Magic, PowerSetNames.Telepathy],

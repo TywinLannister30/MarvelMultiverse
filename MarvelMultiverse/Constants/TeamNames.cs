@@ -55,6 +55,7 @@ public static class TeamNames
     public const string UniversalInhumans = "Universal Inhumans";
     public const string USAirForce = "U.S. Air Force";
     public const string USArmy = "U.S. Army";
+    public const string USHulkOperations = "U.S. Hulk Operations";
     public const string WebWarriors = "Web-Warriors";
     public const string XMen = "X-Men";
     public const string XForce = "X-Force";
