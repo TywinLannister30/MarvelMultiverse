@@ -2562,5 +2562,109 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Doctor Octopus (Otto Octavius)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 3, vigilance: 2, ego: 4, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, isTech: true),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Otto Octavius",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [245],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Four mechanical arms",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTech, OriginName.WeirdScience],
+                Teams = [TeamNames.MastersOfEvil, TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "Everything changed for brilliant scientist Otto Octavius after a lab experiment gone wrong drove him mad and left him with mental control of four mechanicals arms. With these powerful limbs at his disposal, Octavius decided to fi nance his future research through crime, becoming the super villain Doctor Octopus.",
+                    "Doc Ock’s life has been intertwined with that of his one-time admirer Peter Parker (Spider-Man). Ock has fought Spider-Man countless times, romanced Parker’s Aunt May and even become Parker himself for a brief period. As more multiversal variants of Spider-Man appear, more versions of Doc Ock have also manifested themselves.",
+                ],
+                Personality =
+                [
+                    "Doctor Octopus is a Grade-A narcissist. He considers his scientific endeavors to be of the greatest importance to humanity, and he is not above robbing, hurting and even killing others in the pursuit of his research.",
+                ]
+            }
+        },
     ];
 }

@@ -138,6 +138,11 @@ public class Character
         Speed.Swim = (int)Math.Ceiling(Speed.Run / 2.0);
         Speed.Jump = (int)Math.Ceiling(Speed.Run / 2.0);
 
+        if (Powers.Any(x => x.Powers.Any(p => p.ClimbSpeedEqualToBaseSpeed)))
+        {
+            Speed.Climb = baseSpeed;
+        }
+
         if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
         {
             Speed.Flight = baseSpeed * Rank;

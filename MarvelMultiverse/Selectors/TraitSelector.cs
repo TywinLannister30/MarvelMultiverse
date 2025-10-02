@@ -364,6 +364,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Skeptical,
+            Effect =
+            [
+                "The character is hard to fool. People lying to them have trouble on their Ego checks to persuade the character of something.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Sneaky,
             Effect =
             [

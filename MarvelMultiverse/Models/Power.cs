@@ -64,6 +64,9 @@ public class Power : ICloneable
     public bool AgilityInsteadOfMeleeForDefence { get; set; }
 
     [JsonIgnore]
+    public bool ClimbSpeedEqualToBaseSpeed { get; set; }
+
+    [JsonIgnore]
     public bool FlySpeed { get; set; }
 
     [JsonIgnore]
@@ -107,6 +110,7 @@ public class Power : ICloneable
             FocusDamageReductionModifier = this.FocusDamageReductionModifier,
             MeleeInsteadOfAgilityForDefence = this.MeleeInsteadOfAgilityForDefence,
             AgilityInsteadOfMeleeForDefence = this.AgilityInsteadOfMeleeForDefence,
+            ClimbSpeedEqualToBaseSpeed = this.ClimbSpeedEqualToBaseSpeed, 
             FlySpeed = this.FlySpeed,
             JumpSpeed = this.JumpSpeed,
             JumpSpeedMultipliedByRank  = this.JumpSpeedMultipliedByRank,

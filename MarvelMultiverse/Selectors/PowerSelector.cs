@@ -101,6 +101,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.AdditionalLimbs,
+            Description = "The character has extra limbs that can grab objects and attack foes.",
+            PowerSets = [],
+            Prerequsites = $"None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character has an additional prehensile appendage (like a tail) or a symmetrical pair of them (like arms) that can be used to lift objects, use tools or otherwise take actions that normally require the use of a hand. This grants them an edge in Melee and Agility checks.",
+                "A character can have as many additional limbs as they like—within reason—but they get no additional advantages for them."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.AlwaysReady,
             Description = "The character is prepared to fight.",
             PowerSets = [PowerSetNames.MartialArts],
@@ -837,6 +850,30 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a Melee attack against the target’s Resilience defense score. If the attack is a success, the damage it does ignores Health Damage Reduction. On a Fantastic success, the target suffers double damage and the weapon’s special effect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ExtendedReach1,
+            Description = "The character’s reach grows.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character’s reach quadruples.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ExtendedReach2,
+            Description = "The character can reach a looong way.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.ExtendedReach1}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character’s reach is 10 times normal.",
             ],
         },
         new()
@@ -1919,6 +1956,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SpiderDodge,
+            Description = "The character dodges attacks with a spiderlike scuttle.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "Someone makes an Agility attack against the character.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The attacker has trouble on the attack. If the attack misses, the character can leap in any direction at their Jump Speed.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.StoppingPower,
             Description = "The character keeps shooting at the target.",
             PowerSets = [PowerSetNames.RangedWeapons],
@@ -2271,6 +2322,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character creates an inky mist for up to 25 nspaces per rank around them that blocks all line of sight beyond 5 spaces. On later turns, the character can have the mist attacks one target at a time. Make an Ego check against the target’s Vigilance defense. On a success, the attack does regular damage. On a Fantastic success, it does double damage and blinds the target for one turn.",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.Wallcrawling,
+            Description = "The character can climb like a spider.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can climb at a speed equal to their regular speed. Under normal conditions, they never lose their grip, no matter the angle of the surface.",
+            ],
+            ClimbSpeedEqualToBaseSpeed = true
         },
         new()
         {

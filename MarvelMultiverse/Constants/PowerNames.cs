@@ -6,6 +6,7 @@ public static class PowerNames
     public const string Accuracy2 = "Accuracy 2";
     public const string Accuracy3 = "Accuracy 3";
     public const string Accuracy4 = "Accuracy 4";
+    public const string AdditionalLimbs = "Additional Limbs";
     public const string AlwaysReady = "Always Ready";
     public const string AnimalCommunication = "Animal Communication";
     public const string AstralForm = "Astral Form";
@@ -58,6 +59,8 @@ public static class PowerNames
     public const string ESP = "ESP";
     public const string Evasion = "Evasion";
     public const string Exploit = "Exploit";
+    public const string ExtendedReach1 = "Extended Reach 1";
+    public const string ExtendedReach2 = "Extended Reach 2";
     public const string FastAttacks = "Fast Attacks";
     public const string FastHands = "Fast Hands";
     public const string FastStrikes = "Fast Strikes";
@@ -135,6 +138,7 @@ public static class PowerNames
     public const string Sniping = "Sniping";
     public const string SpeedRun1 = "Speed Run 1";
     public const string SpeedRun2 = "Speed Run 2";
+    public const string SpiderDodge = "Spider-Dodge";
     public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";
@@ -161,6 +165,7 @@ public static class PowerNames
     public const string UntouchablePosition = "Untouchable Position";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
     public const string ViciousAttack = "Vicious Attack";
+    public const string Wallcrawling = "Wallcrawling";
     public const string WeaponsBlazing = "Weapons Blazing";
     public const string WhirlingFrenzy = "Whirling Frenzy";
     public const string WindsOfWatoomb = "Winds of Watoomb";
