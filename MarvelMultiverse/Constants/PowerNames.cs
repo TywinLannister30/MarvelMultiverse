@@ -64,6 +64,7 @@ public static class PowerNames
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
     public const string Flight1 = "Flight 1";
     public const string Flight2 = "Flight 2";
+    public const string FlyingDoubleKick = "Flying Double Kick";
     public const string FocusFire = "Focus Fire";
     public const string FocusedFury = "Focused Fury";
     public const string FuriousAttacks = "Furious Attacks";
@@ -75,6 +76,7 @@ public static class PowerNames
     public const string HealingFactor = "Healing Factor";
     public const string HeightenedSenses1 = "Heightened Senses 1";
     public const string HeightenedSenses2 = "Heightened Senses 2";
+    public const string HitAndRun = "Hit & Run";
     public const string HurledShieldBash = "Hurled Shield Bash";
     public const string HurledShieldBlock = "Hurled Shield Block";
     public const string HurledShieldDeflection = "Hurled Shield Deflection";
@@ -87,6 +89,7 @@ public static class PowerNames
     public const string Jump2 = "Jump 2";
     public const string Jump3 = "Jump 3";
     public const string KeepMoving = "Keep Moving";
+    public const string LeapingLeglock = "Leaping Leglock";
     public const string LegSweep = "Leg Sweep";
     public const string LightningActions = "Lightning Actions";
     public const string MemoryBlip = "Memory Blip";

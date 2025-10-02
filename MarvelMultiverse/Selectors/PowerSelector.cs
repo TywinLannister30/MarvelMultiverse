@@ -916,6 +916,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.FlyingDoubleKick,
+            Description = "The character leaps into the air and snap kicks two enemies at once.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.LegSweep}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes a close attack against two enemies within reach. If an attack is a success, the enemy takes regular damage. If an attack is a Fantastic success, the enemy takes double damage and is knocked prone."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.FocusFire,
             Description = "The character calls out a target.",
             PowerSets = [PowerSetNames.Tactics],
@@ -1033,6 +1047,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character can sense things roughly four times as far away as normal. Their senses are so sharp that they can use some of them to compensate for the loss of others (say, if blinded or deafened). They can even listen to the heartbeat of a person in the same room to see if they are lying—although this is as reliable as a traditional lie detector: far from 100% and not admissible in court.",
                 "They also have a double edge on Vigilance checks to perceive things, and enemies have double trouble on checks they make to sneak past the character."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.HitAndRun,
+            Description = "The character hits hard and keeps moving!",
+            PowerSets = [PowerSetNames.MeleeWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes a close attack with an edge on an enemy. If the attack is a success, the enemy takes regular damage, and the character can make an additional movement up to half their Run Speed for free. On a Fantastic success, the enemy takes double damage and su­ffers the weapon’s special e­ffect.",
             ]
         },
         new()
@@ -1204,6 +1231,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The demoralized or stunned condition ends."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.LeapingLeglock,
+            Description = "The character leaps into the air and snaps their legs around an enemy.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.FlyingDoubleKick}, {PowerNames.CrushingGrip}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes a close attack against an enemy. If the attack is a success, the enemy is grabbed and dealt regular damage. On a Fantastic success, the enemy takes double damage and is grabbed and stunned for one round. Either way, both the character and the enemy are knocked prone."
             ]
         },
         new()
