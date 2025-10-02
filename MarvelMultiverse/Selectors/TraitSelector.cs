@@ -194,6 +194,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.FirstAid,
+            Effect =
+            [
+                "The character knows how to administer first aid. They have an edge on Logic checks to stop bleeding.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.FontOfInformation,
             Effect =
             [
@@ -230,6 +238,14 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character can strike up a conversation with anyone at any time and can often convince them to lend a hand. They have an edge on Ego checks to persuade characters they are speaking to for the first time.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.Honest,
+            Effect =
+            [
+                "The character is a terrible liar. They have trouble any time they make an Ego check that involves telling a lie. However, they have an edge on any friendly Ego (persuasion) checks in which they’re truthful.",
             ],
         },
         new()

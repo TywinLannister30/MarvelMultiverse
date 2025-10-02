@@ -23,11 +23,13 @@ public static class TraitNames
     public const string ExtraordinaryOrigin = "Extraordinary Origin";
     public const string Famous = "Famous";
     public const string Fearless = "Fearless";
+    public const string FirstAid = "First Aid";
     public const string FontOfInformation = "Font of Information";
     public const string FreeRunning = "Free Running";
     public const string FreshEyes = "Fresh Eyes";
     public const string Gearhead = "Gearhead";
     public const string Glibness = "Glibness";
+    public const string Honest = "Honest";
     public const string Interrogation = "Interrogation";
     public const string Inventor = "Inventor";
     public const string Investigation = "Investigation";

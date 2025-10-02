@@ -2,6 +2,7 @@
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Cryptography;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -2663,6 +2664,113 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Doctor Octopus is a Grade-A narcissist. He considers his scientific endeavors to be of the greatest importance to humanity, and he is not above robbing, hurting and even killing others in the pursuit of his research.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Doctor Strange",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 3, vigilance: 7, ego: 9, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Loner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Baron Mordo"),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Dormammu"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.MistsOfMorpheus),
+                        powerSelector.GetPower(PowerNames.MistsOfMunnopor),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                        powerSelector.GetPower(PowerNames.VaporsOfValtorr),
+                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Stephen Vincent Strange",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [180],
+                Gender = Gender.Male,
+                Eyes = "Gray",
+                Hair = "Black, gray",
+                Size = Size.Average,
+                DistinguishingFeatures = "Minor scars on hands",
+                Occupations = [OccupationName.HealthCareWorker],
+                Origins = [OriginName.MagicSorcery],
+                Teams = [TeamNames.Avengers, TeamNames.StrangeAcademy],
+                Base = "New York City",
+                History =
+                [
+                    "After a car accident damaged the nerves in his hands, Dr. Stephen Strange was forced to retire from his job as a successful neurosurgeon. Desperate for a cure, Stephen pawned what few possessions he had and voyaged to Tibet, where he sought out a powerful sorcerer known only as the Ancient One.",
+                    "Rather than simply heal Stephen’s hands, the Ancient One offered to make the gifted young man his apprentice. Stephen accepted the offer and spent years training under the Ancient One’s tutelage. Following his master’s death, Stephen ascended to the title of Sorcerer Supreme and became the world’s foremost mystical defender.",
+                ],
+                Personality =
+                [
+                    "Even back in his surgeon days, Stephen Strange was known for his haughty and cold personality. He has since learned several lessons in humility, and he’s developed a soft spot for his closest allies, particularly his wife, Clea.",
                 ]
             }
         },
