@@ -5,7 +5,7 @@ namespace MarvelMultiverse.Selectors;
 
 public class TraitSelector : ITraitSelector
 {
-    public Trait GetTrait(string name, string specialization = null)
+    public Trait GetTrait(string name, string specialization = null, string reminder = null)
     {
         var staticTrait = GetAllTraits().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
 
@@ -14,6 +14,11 @@ public class TraitSelector : ITraitSelector
         if (!string.IsNullOrEmpty(specialization) )
         {
             trait.Name += $": {specialization}";
+        }
+
+        if (!string.IsNullOrEmpty(reminder))
+        {
+            trait.Name += $" ({reminder})";
         }
 
         return trait;
@@ -363,6 +368,14 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character doesn’t understand local customs. They have trouble on checks made when trying to decipher such things or when trying to pass themselves o­ff as a local.",
+            ],
+        },
+        new()
+        {
+            Name = TraitNames.SurprisingPower,
+            Effect =
+            [
+                "The character can choose a power they normally wouldn’t be able to use. The character will still need to have any prerequisite powers, but they can ignore rank and origin requirements. This trait can be selected multiple times.",
             ],
         },
         new()

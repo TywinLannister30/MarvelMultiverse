@@ -64,7 +64,7 @@ public class CharacterSelector(
             [
                 traitSelector.GetTrait(TraitNames.Abrasive),
                 traitSelector.GetTrait(TraitNames.Berserker),
-                traitSelector.GetTrait(TraitNames.Big),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
                 traitSelector.GetTrait(TraitNames.Bloodthirsty),
                 traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
                 traitSelector.GetTrait(TraitNames.EnduringConstitution),
@@ -860,7 +860,7 @@ public class CharacterSelector(
             ),
             Traits =
             [
-                traitSelector.GetTrait(TraitNames.Big),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
                 traitSelector.GetTrait(TraitNames.Clinician),
                 traitSelector.GetTrait(TraitNames.CombatReflexes),
                 traitSelector.GetTrait(TraitNames.FreeRunning),
@@ -973,7 +973,7 @@ public class CharacterSelector(
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.Hunted),
                 tagSelector.GetTag(TagNames.InhumanGenes),
-                tagSelector.GetTag(TagNames.Mute, specialization: "Cannot speak without activating sonic blasts."),
+                tagSelector.GetTag(TagNames.Mute, reminder: "Cannot speak without activating sonic blasts."),
                 tagSelector.GetTag(TagNames.Powerful),
                 tagSelector.GetTag(TagNames.PublicIdentity),
             ],
@@ -1462,8 +1462,8 @@ public class CharacterSelector(
             ],
             Tags =
             [
-                tagSelector.GetTag(TagNames.AlternateForm, specialization: "(Gamma Forms)"),
-                tagSelector.GetTag(TagNames.ExtremeAppearance, specialization: "(in Alternate Forms)"),
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Gamma Forms"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Forms"),
                 tagSelector.GetTag(TagNames.GreenDoor),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.Hounded),
@@ -1907,6 +1907,89 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Determined and hotheaded, Clea refuses to let anyone stand in the way of her goals, whatever they may be. While she has a soft spot for Strange, Clea is often condescending to those she considers to be her lessers, and that category includes most people.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Colossus",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 3, resilience: 7, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "in Alternate Form; Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: $"{PowerNames.Sturdy4}"),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Adamantium or vibranium weapons"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Metallic Form"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Form"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "English, Japanese, Russian"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Piotr Nikolaievitch “Peter” Rasputin",
+                Heights = [new() { Feet = 6, Inches = 6 }, new() { Feet = 7, Inches = 5 }],
+                Weights = [250, 500],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XForce, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Piotr Rasputin first discovered his latent mutant powers as a teenager, when he jumped in front of a runaway tractor in order to save his little sister, Illyana. He discovered that he could, at will, assume the form of a metal man, greatly increasing his size, strength and durability.",
+                    "Shortly after he discovered his powers, Colossus was recruited by Professor X and became a member of the X-Men’s second incarnation. Since then, Colossus has served the world as both a hero and a mutant activist.",
+                ],
+                Personality =
+                [
+                    "For a long time, Colossus was known for letting his passion get the best of him in the heat of battle, turning him into a nigh-unstoppable metal berserker. In recent years he has adopted a softer and more sympathetic attitude. For those he loves, his heart is as big as his anger is strong.",
                 ]
             }
         },

@@ -4,7 +4,7 @@ namespace MarvelMultiverse.Selectors;
 
 public interface ITraitSelector
 {
-    Trait GetTrait(string name, string specialization = null);
+    Trait GetTrait(string name, string specialization = null, string reminder = null);
 
     List<Trait> GetTraits();
 }

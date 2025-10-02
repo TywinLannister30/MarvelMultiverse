@@ -5,7 +5,7 @@ namespace MarvelMultiverse.Selectors;
 
 public class TagSelector : ITagSelector
 {
-    public Tag GetTag(string name, string specialization = null)
+    public Tag GetTag(string name, string specialization = null, string reminder = null)
     {
         var staticTag = GetAllTags().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
 
@@ -14,6 +14,11 @@ public class TagSelector : ITagSelector
         if (!string.IsNullOrEmpty(specialization) )
         {
             tag.Name += $": {specialization}";
+        }
+
+        if (!string.IsNullOrEmpty(reminder))
+        {
+            tag.Name += $" ({reminder})";
         }
 
         return tag;
