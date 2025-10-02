@@ -49,6 +49,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.AuditoryIssues,
+            Effect =
+            [
+                "The character has trouble hearing that can range from partial to full deafness."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Authority,
             Effect =
             [

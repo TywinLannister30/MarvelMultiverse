@@ -52,6 +52,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersB());
         allCharacters.AddRange(GetAllCharactersC());
         allCharacters.AddRange(GetAllCharactersD());
+        allCharacters.AddRange(GetAllCharactersE());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -3068,6 +3069,90 @@ public class CharacterSelector(
                 Personality =
                 [
                     "As Drax began as a moody person bent on vengeance. While he can still be dire and serious when on a mission, he has lightened up a great deal over the years and come to enjoy fi ghting for the sheer thrill of it. He has a dark, off-beat sense of humor rooted in the fact that he has only a rudimentary understanding of society, how jokes work and what most people would consider terrifying.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersE() =>
+    [
+        new()
+        {
+            Name = "Echo",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 1, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "Clone Moves"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AuditoryIssues),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CloneMoves),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Maya Lopez",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "White handprint makeup on face",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.DaughtersOfLiberty],
+                Base = "Avengers Mountain",
+                History =
+                [
+                    "When Maya Lopez was a child, her father was gunned down by his own boss: Wilson Fisk (Kingpin). Seeing the young girl’s potential, Fisk took her in, giving her special training and eventually tricking her into believing that her father’s killer was Daredevil.",
+                    "After fighting the Man Without Fear several times, Maya discovered the Kingpin’s deception and turned on him. Her quest for vengeance resolved, she became a tireless fighter for justice around the world.",
+                ],
+                Personality =
+                [
+                    "As a deaf woman and a member of the Cheyenne Nation, Maya has faced many struggles. Despite this, she generally manages to stay upbeat. She has a particular love for the theatrical arts, having become a concert pianist and an expert dancer.",
                 ]
             }
         },

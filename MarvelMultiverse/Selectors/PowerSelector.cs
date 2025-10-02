@@ -379,6 +379,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.CloneMoves,
+            Description = "The character duplicates another character’s combat moves.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 or more Focus",
+            Effect =
+            [
+                "The character picks another character within 10 spaces and in their line of sight and duplicates all their powers that could be selected with the Special Training origin. They can now use those powers as if they were always theirs. If the copied powers have costs, the character must pay the highest of them, or a minimum of 5 Focus.",
+                "When the character uses a copied power, they must pay any cost normally as well."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.CombatSupport,
             Description = "The character gives a friend a hand.",
             PowerSets = [PowerSetNames.Tactics],

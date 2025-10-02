@@ -26,6 +26,7 @@ public static class PowerNames
     public const string ChainStrikes = "Chain Strikes";
     public const string ChangeOfPlans = "Change of Plans";
     public const string Clobber = "Clobber";
+    public const string CloneMoves = "Clone Moves";
     public const string CombatSupport = "Combat Support";
     public const string CombatTrickery = "Combat Trickery";
     public const string Command = "Command";

@@ -4,6 +4,7 @@ public static class TagNames
 {
     public const string AlienHeritage = "Alien Heritage";
     public const string AlternateForm = "Alternate Form";
+    public const string AuditoryIssues = "Auditory Issues";
     public const string Authority = "Authority";
     public const string Backup = "Backup";
     public const string BlackMarketAccess = "Black Market Access";

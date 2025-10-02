@@ -30,6 +30,7 @@ public class PowerSetNames
     public const string OmniversalTravelMultiversal = "Omniversal Travel (Multiversal)";
     public const string OmniversalTravelTime = "Omniversal Travel (Time)";
     public const string Plasticity = "Plasticity";
+    public const string PowerControl = "Power Control";
     public const string RangedWeapons = "Ranged Weapons";
     public const string Resize = "Resize";
     public const string ShieldBearer = "Shield Bearer";
