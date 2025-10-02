@@ -53,6 +53,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersC());
         allCharacters.AddRange(GetAllCharactersD());
         allCharacters.AddRange(GetAllCharactersE());
+        allCharacters.AddRange(GetAllCharactersF());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -3438,6 +3439,105 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Equal parts vain and vengeful, Amora takes no half measures. She takes great pride in her abilities as a seductress and a sorceress, and she extracts brutal retribution against anyone brave enough to slight her. The only thing she fears is being left completely alone, with no one to adore her.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersF() =>
+    [
+        new()
+        {
+            Name = "Forge",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 4, vigilance: 3, ego: 5, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin, reminder: "2"),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 6 }],
+                Weights = [179],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bionic leg and hand",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTechCybernetics, OriginName.MagicSorcery, OriginName.Mutant],
+                Teams = [TeamNames.XForce, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "As a powerful Cheyenne shaman and an equally brilliant inventor, the young Forge joined the military and had a traumatic tour of duty, during which he lost his right hand and leg. He went on to work in the field of advanced weapons research. On behalf of the U.S. government, Forge built a gun that could temporarily neutralize super-powers.",
+                    "When Forge saw that his weapon was being used by S.H.I.E.L.D. agents to target mutants like himself, he abandoned his government job and took up adventuring with the X-Men. While he occasionally goes out adventuring on his own, Forge most enjoys serving as a technician for his fellow X-Men, equipping them with all kinds of powerful gadgets.",
+                ],
+                Personality =
+                [
+                    "Forge revels in his abilities as an inventor to “make the impossible real” as he has called it. He can be both a proud inventor and a soft - hearted romantic, proven by his long on-againoff -again relationship with fellow mutant and super hero Storm.",
                 ]
             }
         },

@@ -58,6 +58,7 @@ public static class PowerNames
     public const string ElementalPush = "Elemental Push";
     public const string ElementalReinforcement = "Elemental Reinforcement";
     public const string ElementalRicochet = "Elemental Ricochet";
+    public const string ElementalSphere = "Elemental Sphere";
     public const string EnergyAbsorption = "Energy Absorption";
     public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
