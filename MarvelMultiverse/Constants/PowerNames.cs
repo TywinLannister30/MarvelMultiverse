@@ -99,9 +99,11 @@ public static class PowerNames
     public const string MultiversalPortal = "Multiversal Portal";
     public const string MultiversalTravel = "Multiversal Travel";
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
+    public const string OnYourFeet = "On Your Feet";
     public const string OperationsCenter = "Operations Center";
     public const string PointBlankParry = "Point-Blank Parry";
     public const string QuickToss = "Quick Toss";
+    public const string RallyOnMe = "Rally on Me";
     public const string ReinforcedSkeleton = "Reinforced Skeleton";
     public const string ResizeObject = "Resize Object";
     public const string ReturnFire = "Return Fire";

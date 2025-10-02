@@ -1366,6 +1366,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.OnYourFeet,
+            Description = "The character stands their friends on their feet.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.KeepMoving}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An ally in line of sight and earshot is knocked prone.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "All prone allies within earshot, who are able to, can immediately stand up for free. Allies currently unable to stand up for any reason are not a­ffected."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.OperationsCenter,
             Description = "The character directs their allies in combat.",
             PowerSets = [PowerSetNames.Tactics],
@@ -1406,6 +1421,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character throws the grabbed person at another target. The range is determined by the level of the character’s Mighty power and the grabbed person's size. The character makes a ranged attack against the target. A failure inflicts regular damage on the thrown person, who falls prone within 1 space of the target. If the attack is a success, the target takes regular damage too. On a Fantastic success, the target is knocked prone as well."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.RallyOnMe,
+            Description = "The character rallies their friends around them.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.OnYourFeet}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "Any allies in earshot can be a­ffected, up to a number equal to the character’s Vigilance. Each a­ffected ally can move toward the character at half speed. If they are within the character’s reach at the end of this move, they recover lost Focus equal to 5 times the character’s rank. The character can use this power once per battle."
             ],
         },
         new()
