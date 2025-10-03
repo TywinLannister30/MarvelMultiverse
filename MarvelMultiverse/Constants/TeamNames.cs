@@ -10,6 +10,7 @@ public static class TeamNames
     public const string AstonishingAvengers = "Astonishing Avengers";
     public const string Avengers = "Avengers";
     public const string BlackOrder = "Black Order";
+    public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
     public const string DarkAvengers = "Dark Avengers";

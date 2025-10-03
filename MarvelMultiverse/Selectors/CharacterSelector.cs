@@ -5390,5 +5390,83 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Juggernaut",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 2, resilience: 7, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "Sturdy 4"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Crimson Gem of Cyttorak [Any attack which deals less than 30 points of damage to the user of the Crimson Gem is instantly negated.]"),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Cain Marko",
+                Heights = [new() { Feet = 6, Inches = 10 }],
+                Weights = [900],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Big,
+                DistinguishingFeatures = "Unnatural strength and bulk as result of powers",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "While not a mutant himself, Cain Marko’s fate was permanently bound to that of mutant society the day that Charles Xavier—the future Professor X—became his stepbrother. As boys, they had a rocky relationship, with Marko resenting Xavier’s obvious brilliance.",
+                    "While serving as a U.S. soldier, Marko stumbled upon the Crimson Gem of Cyttorak, a mystical artifact that infused his body with superhuman strength and size. Seeing a chance to get the better of his stepbrother, Marko became the new Juggernaut and used his power for super-villainy."
+                ],
+                Personality =
+                [
+                    "Marko and Xavier have slowly managed to repair their relationship, and in recent years, the Juggernaut has been more often a force for good than evil. Although a bit dense by nature, Marko has shown surprising moments of intelligence and humility. The main thing that still manages to set him off is Xavier, who struggles to fully trust him.",
+                ]
+            }
+        },
     ];
 }
