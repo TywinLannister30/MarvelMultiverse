@@ -72,6 +72,7 @@ public static class PowerNames
     public const string ESP = "ESP";
     public const string Evasion = "Evasion";
     public const string Exploit = "Exploit";
+    public const string ExtendInvisibility = "Extend Invisibility";
     public const string ExtendedReach1 = "Extended Reach 1";
     public const string ExtendedReach2 = "Extended Reach 2";
     public const string FastAttacks = "Fast Attacks";
@@ -89,6 +90,7 @@ public static class PowerNames
     public const string FuriousAttacks = "Furious Attacks";
     public const string GrapplingTechnique = "Grappling Technique";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
+    public const string GroupInvisibility = "Group Invisibility";
     public const string Grow1 = "Grow 1";
     public const string Grow2 = "Grow 2";
     public const string Grow3 = "Grow 3";
@@ -106,8 +108,10 @@ public static class PowerNames
     public const string HurledShieldDeflection = "Hurled Shield Deflection";
     public const string IconicWeapon = "Iconic Weapon";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
+    public const string Illumination = "Illumination";
     public const string InformationUpload = "Information Upload";
     public const string Inspiration = "Inspiration";
+    public const string Invisibility = "Invisibility";
     public const string ImagesOfIkonn = "Images of Ikonn";
     public const string Immovable = "Immovable";
     public const string Jinx = "Jinx";
@@ -188,6 +192,7 @@ public static class PowerNames
     public const string SuppressiveFire = "Suppressive Fire";
     public const string SummonPortal = "Summon Portal";
     public const string TelekineticAttack = "Telekinetic Attack";
+    public const string TelekineticGrab = "Telekinetic Grab";
     public const string TelekineticManipulation = "Telekinetic Manipulation";
     public const string TelepathicBlast = "Telepathic Blast";
     public const string TelepathicLink = "Telepathic Link";

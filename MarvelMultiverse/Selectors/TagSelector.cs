@@ -113,6 +113,18 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.EternallyImmortal,
+            Effect =
+            [
+                "The character does not age and could theoretically live forever. If the character is killed, they can be brought back to life in the Activation Chamber found in the Exclusion, an Eternal base located beneath the South Pole. To make this happen, the Activation Chamber sacrifices the life of a random human anywhere on Earth."
+            ],
+            Restrictions =
+            [
+                "For Eternals only."
+            ]
+        },
+        new()
+        {
             Name = TagNames.ExtremeAppearance,
             Effect =
             [
@@ -223,6 +235,18 @@ public class TagSelector : ITagSelector
             [
                 "The character is fluent in a language other than their native tongue. This tag can be selected multiple times, once for each language.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.MahdWyry,
+            Effect =
+            [
+                "The character lives for so long that their accumulated memories have the potential to drive them insane. The only cure for this condition is to die and then be reborn with a restoration of their mind from a clean backup. This happens rarely, but the disease can progress quickly once it starts."
+            ],
+            Restrictions =
+            [
+                "For Eternals only."
+            ]
         },
         new()
         {

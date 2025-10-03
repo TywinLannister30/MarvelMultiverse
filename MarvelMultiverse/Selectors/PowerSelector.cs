@@ -1052,6 +1052,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ExtendInvisibility,
+            Description = "The character makes something else invisible.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.Invisibility}",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes something—a single person or object—within reach invisible. This can be one size bigger than them for every rank they have.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ExtendedReach1,
             Description = "The character’s reach grows.",
             PowerSets = [PowerSetNames.Plasticity],
@@ -1274,6 +1288,20 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes a Melee check and compares that against the Agility defense of every target within the character’s reach plus their rank in spaces. Any targets the attack succeeds against take half regular damage. On a Fantastic success, the targets take full damage and are knocked prone."
             ]
+        },
+        new()
+        {
+            Name = PowerNames.GroupInvisibility,
+            Description = "The character can make something else invisible.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.ExtendInvisibility}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "For every point of Ego defense the character has, they can make one person or thing invisible, including themselves. Each of these can be one size bigger than them for every rank they have.",
+            ],
         },
         new()
         {
@@ -1514,6 +1542,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Illumination,
+            Description = "The character creates a bright light.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character illuminates one object or point in line of sight, within 50 spaces, with bright light. The character can maintain concentration on the e­ ect even if they move out of range or line of sight.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ImagesOfIkonn,
             Description = "The character creates illusory duplicates of a person.",
             PowerSets = [PowerSetNames.Magic],
@@ -1528,7 +1569,21 @@ public class PowerSelector : IPowerSelector
                 "This spell can also be used to see through someone else’s illusion. When used in this way, it gives the character a double edge on their Ego check."
             ],
         },
-         new()
+        new()
+        {
+            Name = PowerNames.Immovable,
+            Description = "Nobody pushes the character around.",
+            PowerSets = [PowerSetNames.ShieldBearer, PowerSetNames.SuperStrength],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "The character is knocked back or knocked prone.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "For every point of Melee defense the character has, they can reduce knockback by 1 space."
+            ]
+        },
+        new()
         {
             Name = PowerNames.InformationUpload,
             Description = "The character can transmit loads of information straight into another’s mind.",
@@ -1558,17 +1613,17 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.Immovable,
-            Description = "Nobody pushes the character around.",
-            PowerSets = [PowerSetNames.ShieldBearer, PowerSetNames.SuperStrength],
-            Prerequsites = "None",
-            Action = ActionType.Reaction,
-            Trigger = "The character is knocked back or knocked prone.",
-            Duration = Duration.Instant,
+            Name = PowerNames.Invisibility,
+            Description = "The character turns as transparent as glass.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
             Effect =
             [
-                "For every point of Melee defense the character has, they can reduce knockback by 1 space."
-            ]
+                "The character becomes invisible. They have an edge on Agility checks to sneak past people, and enemies have trouble on Vigilance checks to perceive them. It’s even harder to spot things that are invisible but aren’t moving. Characters must be actively trying to do so to be able to make a Vigilance check.",
+            ],
         },
         new()
         {
@@ -2663,6 +2718,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a Logic attack against the Melee defense of a target within 5 spaces times the character’s rank. If the attack is a success, it inflicts regular damage. On a Fantastic success, the damage is doubled instead, and the target is stunned for one round.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticGrab,
+            Description = "The character can grab a foe with their mind.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticManipulation}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "5 Focus",
+            Effect =
+            [
+                "The character makes a Logic attack against the Melee defense of a target within 5 spaces times the character’s rank. If the attack is a success, the character grabs the target with their mind. On a Fantastic success, the target can also be pinned. Breaking free requires a successful Melee check against target number 20.",
             ],
         },
         new()

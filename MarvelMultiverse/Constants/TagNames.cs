@@ -12,6 +12,7 @@ public static class TagNames
     public const string Cursed = "Cursed";
     public const string Deceased = "Deceased";
     public const string Enemy = "Enemy";
+    public const string EternallyImmortal = "Eternally Immortal";
     public const string ExtremeAppearance = "Extreme Appearance";
     public const string GreenDoor = "Green Door";
     public const string Headquarters = "Headquarters";
@@ -24,6 +25,7 @@ public static class TagNames
     public const string Krakoan = "Krakoan";
     public const string LabAccess = "Lab Access";
     public const string Linguist = "Linguist";
+    public const string MahdWyry = "Mahd Wy’ry";
     public const string Mentor = "Mentor";
     public const string Mute = "Mute";
     public const string Obligation = "Obligation";

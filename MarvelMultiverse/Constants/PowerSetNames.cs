@@ -16,6 +16,7 @@ public class PowerSetNames
     public const string ElementControlIron = "Element Control (Iron)";
     public const string ElementControlSound = "Element Control (Sound)";
     public const string ElementControlWater = "Element Control (Water)";
+    public const string Illusion = "Illusion";
     public const string Magic = "Magic";
     public const string MagicChaosMagic = "Magic (Chaos Magic)";
     public const string MagicDemonicMagic = "Magic (Demonic Magic)";

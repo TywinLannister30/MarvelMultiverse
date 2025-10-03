@@ -47,6 +47,7 @@ public static class TeamNames
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";
     public const string TerribleTrio = "Terrible Trio";
+    public const string TheEternals = "The Eternals";
     public const string TheHand = "The Hand";
     public const string TheHouseOfAgon = "The House of Agon";
     public const string Thunderbolts = "Thunderbolts";
