@@ -6747,5 +6747,101 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Misty Knight",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 3, resilience: 3, vigilance: 2, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Mercedes “Misty” Knight",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [136],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bionic arm",
+                Occupations = [OccupationName.Investigator, OccupationName.LawEnforcer],
+                Origins = [OriginName.HighTechCybernetics, OriginName.SpecialTraining],
+                Teams = [TeamNames.AberrantCrimesDivisionOfTheFBI, TeamNames.DaughtersOfTheDragon, TeamNames.Defenders],
+                Base = "Mobile",
+                History =
+                [
+                    "Misty Knight was a talented rookie in the NYPD bomb squad—until the day her arm got blown off in the line of duty. Admiring the young woman’s heroism, billionaire Tony Stark personally commissioned a bionic arm to replace Knight’s lost limb.",
+                    "Newly empowered, Knight quit her job with the NYPD and started a private detective agency called Nightwing Restorations. Her adventures as a private investigator have frequently brought her into the orbit of other heroes for hire, particularly Colleen Wing, Luke Cage and her longtime fl ame Danny Rand (Iron Fist)."
+                ],
+                Personality =
+                [
+                    "Although charming and coolheaded, Knight’s steadfast belief in the righteousness of the law sometimes leads her astray. She has little patience for those she believes to be criminals—and perhaps too much patience for those who claim to support the law. On more than one occasion, she’s hung up the title of P.I. to return to a career as a law enforcement officer.",
+                ]
+            }
+        },
     ];
 }

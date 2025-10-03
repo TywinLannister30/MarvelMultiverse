@@ -4,6 +4,7 @@ namespace MarvelMultiverse.Constants;
 
 public static class TeamNames
 {
+    public const string AberrantCrimesDivisionOfTheFBI = "Aberrant Crimes Division (ACD) of the F.B.I.";
     public const string AgentsOfAtlas = "Agents of Atlas";
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
@@ -17,6 +18,7 @@ public static class TeamNames
     public const string DarkCouncil = "Dark Council";
     public const string DarkElves = "Dark Elves";
     public const string DaughtersOfLiberty = "Daughters of Liberty";
+    public const string DaughtersOfTheDragon = "Daughters of the Dragon";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";
     public const string DoraMilaje = "Dora Milaje";
