@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System.Net.NetworkInformation;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -10122,6 +10123,112 @@ public class CharacterSelector(
                             "Namor is a mutant Atlantean. This combination of origins removes the standard Atlantean traits Breathe Different and Enhanced Physique and the tag Extreme Appearance. It also removes the mutant tag Hounded. While he technically has the right to be Krakoan, he generally refuses to use it."
                         ]
                     }
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Sunspot",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 6, resilience: 3, vigilance: 3, ego: 8, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "when using powers"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Askani, English, Portuguese, Spanish"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalPrison),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Roberto “Bobby” Da Costa",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Body cloaked in darkness (when powers are active)",
+                Occupations = [OccupationName.Tycoon],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.GreatRingOfArakko, TeamNames.NewMutants, TeamNames.XMen],
+                Base = "Arakko",
+                History =
+                [
+                    "Wealthy Brazilian heir Bobby Da Costa’s powers manifested suddenly in his teen years when he accidentally punched a racist bully halfway across a soccer fi eld. Pursued by an organization of mutant-hating evildoers, Da Costa found his way into the care of Charles Xavier (Professor X) and became a founding member of the New Mutants.",
+                    "Bobby used his wealth as well as his powers to help not only the X-Men but the Avengers. He even purchased A.I.M. at one point and transformed the organization into one dedicated to doing good. He died during the War of the Realms, but he was later resurrected on Krakoa."
+                ],
+                Personality =
+                [
+                    "Sunspot is a strong conversationalist and orator. He has a talent for relating to others, making him an effective team manager. Bobby rarely turns his nose up at an opportunity for a good joke or a bit of fun.",
                 ]
             }
         },

@@ -33,6 +33,7 @@ public static class TeamNames
     public const string GodsOfWakanda = "Gods of Wakanda";
     public const string Graces = "Graces";
     public const string GreatLakesAvengers = "Great Lakes Avengers";
+    public const string GreatRingOfArakko = "Great Ring of Arakko";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
     public const string HellLords = "Hell Lords";
     public const string HellfireClub = "Hellfire Club";
