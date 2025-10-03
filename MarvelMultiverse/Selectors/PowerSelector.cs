@@ -3717,13 +3717,27 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.VaporsOfValtorr,
             Description = "The character weaves an inky mist that can attack those inside it.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 3",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 3",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
             Cost = "10 Focus",
             Effect =
             [
                 "The character creates an inky mist for up to 25 nspaces per rank around them that blocks all line of sight beyond 5 spaces. On later turns, the character can have the mist attacks one target at a time. Make an Ego check against the target’s Vigilance defense. On a success, the attack does regular damage. On a Fantastic success, it does double damage and blinds the target for one turn.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.VenomBlast,
+            Description = "The character unleashes a bioelectric shock.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "5 spaces",
+            Effect =
+            [
+                "The character makes a ranged attack. If the attack is a success, it does regular damage. On a Fantastic success, the attack does double damage, and if the target su­ffers any actual damage, they are also stunned for one round.",
             ],
         },
         new()

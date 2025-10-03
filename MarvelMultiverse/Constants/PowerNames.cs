@@ -261,6 +261,7 @@ public static class PowerNames
     public const string UnstoppableAssault = "Unstoppable Assault";
     public const string UntouchablePosition = "Untouchable Position";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
+    public const string VenomBlast = "Venom Blast";
     public const string ViciousAttack = "Vicious Attack";
     public const string Wallcrawling = "Wallcrawling";
     public const string WeaponsBlazing = "Weapons Blazing";
