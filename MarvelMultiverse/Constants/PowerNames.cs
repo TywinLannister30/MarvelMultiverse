@@ -45,6 +45,11 @@ public static class PowerNames
     public const string CombatSupport = "Combat Support";
     public const string CombatTrickery = "Combat Trickery";
     public const string Command = "Command";
+    public const string ControlFog = "Control Fog";
+    public const string ControlWeather1 = "Control Weather 1";
+    public const string ControlWeather2 = "Control Weather 2";
+    public const string ControlWeather3 = "Control Weather 3";
+    public const string ControlWeather4 = "Control Weather 4";
     public const string CounterstrikeTechnique = "Counterstrike Technique";
     public const string CoveringFire = "Covering Fire";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
@@ -111,6 +116,7 @@ public static class PowerNames
     public const string GrandMirage = "Grand Mirage";
     public const string GrapplingTechnique = "Grappling Technique";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
+    public const string GroupFlight = "Group Flight";
     public const string GroupInvisibility = "Group Invisibility";
     public const string Grow1 = "Grow 1";
     public const string Grow2 = "Grow 2";
@@ -249,6 +255,7 @@ public static class PowerNames
     public const string Teleport1 = "Teleport 1";
     public const string Teleport2 = "Teleport 2";
     public const string TeleportObject = "Teleport Object";
+    public const string Thunder = "Thunder";
     public const string TimeOut = "Time Out";
     public const string TimePortal = "Time Portal";
     public const string TimeTravel = "Time Travel";
@@ -266,6 +273,8 @@ public static class PowerNames
     public const string ViciousAttack = "Vicious Attack";
     public const string Wallcrawling = "Wallcrawling";
     public const string WeaponsBlazing = "Weapons Blazing";
+    public const string WeatherChill = "Weather Chill";
+    public const string WeatherWarm = "Weather Warm";
     public const string Webcasting = "Webcasting";
     public const string Webgliding = "Webgliding";
     public const string Webgrabbing = "Webgrabbing";

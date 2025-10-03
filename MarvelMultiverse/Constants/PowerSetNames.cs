@@ -43,4 +43,5 @@ public class PowerSetNames
     public const string Telekinesis = "Telekinesis";
     public const string Telepathy = "Telepathy";
     public const string Teleportation = "Teleportation";
+    public const string WeatherControl = "Weather Control";
 }

@@ -9916,5 +9916,98 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Storm",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 3, vigilance: 4, ego: 4, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.GroupFlight),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.WeatherControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ControlFog),
+                        powerSelector.GetPower(PowerNames.ControlWeather3),
+                        powerSelector.GetPower(PowerNames.Thunder),
+                        powerSelector.GetPower(PowerNames.WeatherChill),
+                        powerSelector.GetPower(PowerNames.WeatherWarm),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ororo Munroe",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [145],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "Her eyes turn white when using her powers",
+                Occupations = [OccupationName.Adventurer, OccupationName.Leader],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Avengers, TeamNames.GodsOfWakanda, TeamNames.Marauders, TeamNames.QuietCouncilOfKrakoa, TeamNames.XMen],
+                Base = "Krakoa, Wakanda",
+                History =
+                [
+                    "The latest in a long line of witch-priestesses from Africa, Ororo Munroe was orphaned during a war in Egypt and wound up living on the streets of Cairo as a thief. Later, Professor X found her and convinced her to join the X-Men where she quickly became one of the team’s strongest members and has long served as one of its leaders.",
+                    "Munroe fell in love with and married the Black Panther (T’Challa), but confl ict between the X-Men and the Avengers led to their marriage being annulled. She has since reconciled with him, but she spends much of her time on the island of Krakoa, serving in the government there, while his duties require him to live in Wakanda.",
+                ],
+                Personality =
+                [
+                    "Munroe is a force of nature in her powers and her personality. She is comfortable as a thief and a queen, and she is majestic in both roles. Despite her regal nature, she has a sharp sense of humor.",
+                ]
+            }
+        },
     ];
 }

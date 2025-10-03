@@ -29,6 +29,7 @@ public static class TeamNames
     public const string FutureFoundation = "Future Foundation";
     public const string GoblinNation = "Goblin Nation";
     public const string GodsOfAsgard = "Gods of Asgard";
+    public const string GodsOfWakanda = "Gods of Wakanda";
     public const string Graces = "Graces";
     public const string GreatLakesAvengers = "Great Lakes Avengers";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
@@ -60,6 +61,7 @@ public static class TeamNames
     public const string PowerElite = "Power Elite";
     public const string ProjectGreenSpring = "Project Green Spring";
     public const string Protectors = "Protectors";
+    public const string QuietCouncilOfKrakoa = "Quiet Council of Krakoa";
     public const string SantaRosaSheriffsDepartment = "Santa Rosa Sheriff’s Department";
     public const string SavageAvengers = "Savage Avengers";
     public const string SecretAvengers = "Secret Avengers";

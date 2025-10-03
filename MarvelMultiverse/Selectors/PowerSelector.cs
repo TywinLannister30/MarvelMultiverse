@@ -664,6 +664,76 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ControlFog,
+            Description = "The character can create or dispel a thick fog.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character creates a thick fog for up to 50 spaces per rank around them that blocks all line of sight beyond 10 spaces. They can also dispel any fog in a similar area.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ControlWeather1,
+            Description = "The character can make it rain.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "It starts to rain in an area up to 5 miles across times the character’s rank, centered on the character. All ranges are cut in half. Movement is not a­ffected.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ControlWeather2,
+            Description = "The character can make it storm.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = $"{PowerNames.ControlWeather1}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "It starts to storm in an area up to 5 miles across times the character’s rank, centered on the character. All ranges and all speeds are cut in half.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ControlWeather3,
+            Description = "The character creates a thunderstorm.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = $"{PowerNames.ControlWeather2}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "It starts to storm in an area up to 5 miles across times the character’s rank, centered on the character. All ranges and all speeds are cut in half.",
+                "If the character also has the Elemental Blast (Electricity) power, they can use it as a reaction when attacked while this power is active."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ControlWeather4,
+            Description = "The character generates a hurricane.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = $"{PowerNames.ControlWeather3}, Rank 5",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "It starts to storm in an area up to 5 miles across times the character’s rank, centered on the character. All ranges and all speeds are cut to one quarter normal, and flying is impossible.",
+                "If the character also has the Elemental Barrage (Electricity) power, they can use it as a reaction when attacked while this power is active."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.CounterstrikeTechnique,
             Description = "The character counters an enemy’s strike with one of their own.",
             PowerSets = [PowerSetNames.MartialArts],
@@ -1594,6 +1664,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a Melee check and compares that against the Agility defense of every target within the character’s reach plus their rank in spaces. Any targets the attack succeeds against take half regular damage. On a Fantastic success, the targets take full damage and are knocked prone."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.GroupFlight,
+            Description = "The character can carry others with them into the sky.",
+            PowerSets = [],
+            Prerequsites = $"{PowerNames.Flight1}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "For every point of Ego the character has, they can hoist one ally into the air with them. The Flight Speed of the group is half the character’s, and all a­ ected allies must remain within 5 spaces times the character’s rank. The character controls each ally’s speed and position during the character’s turn, but they can release any or all allies at any time."
             ]
         },
         new()
@@ -3548,6 +3632,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Thunder,
+            Description = "The character causes a deafening crack of thunder.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes an Ego check and compares that against the Resilience defense of every character within 10 spaces. Any character the attack succeeds against is deafened. On a Fantastic success, the character is also stunned for one round.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.TimeOut,
             Description = "The character and allies step out of time.",
             PowerSets = [PowerSetNames.OmniversalTravel],
@@ -3777,6 +3874,32 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character splits their attack to make two ranged attacks against separate targets (or they can focus a single attack on a single target). Make a single Agility check and compare it to the targets’ Agility defenses. On a success, the affected target takes half regular damage. On a Fantastic success, the affected target takes full damage, and the character can make a bonus attack with this power against any available target, with the same effect."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.WeatherChill,
+            Description = "The character cools things down.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The temperature in an area roughly a mile across falls as low as 0°F."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.WeatherWarm,
+            Description = "The character heats things up.",
+            PowerSets = [PowerSetNames.WeatherControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The temperature in an area roughly a mile climbs as high as 100°F."
             ],
         },
         new()
