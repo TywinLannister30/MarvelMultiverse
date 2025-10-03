@@ -266,6 +266,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Mysterious,
+            Effect =
+            [
+                "The character does not entirely understand how or why they have powers. This can prove unsettling and perhaps even dangerous, or they can just take it in stride.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.Obligation,
             Effect =
             [

@@ -28,6 +28,7 @@ public static class TagNames
     public const string MahdWyry = "Mahd Wy’ry";
     public const string Mentor = "Mentor";
     public const string Mute = "Mute";
+    public const string Mysterious = "Mysterious";
     public const string Obligation = "Obligation";
     public const string Poor = "Poor";
     public const string Powerful = "Powerful";
