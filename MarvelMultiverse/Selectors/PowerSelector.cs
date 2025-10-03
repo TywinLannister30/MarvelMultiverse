@@ -359,6 +359,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.BoostPowers,
+            Description = "The character turbocharges all of another character’s powers!",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = $"{PowerNames.BumpPower}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 or more Focus",
+            Effect =
+            [
+                "The character picks one character within 5 spaces and boosts all of their powers. If the powers have ranges or e­ffective areas or durations, these are doubled. If the powers a­ ect a damage multiplier, add 1 to the e­ffects. Any e­ffects that normally happen with a Fantastic successes automatically happen on any success, not just a Fantastic one.",
+                "If the target’s powers have costs, the character must pay the highest of them or a minimum of 15 Focus."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.BorrowSenses,
             Description = "The character can use another person’s senses.",
             PowerSets = [PowerSetNames.Telepathy],
@@ -469,6 +484,21 @@ public class PowerSelector : IPowerSelector
             ],
             LogicDamageModifier = 4,
             LogicNonCombatCheckModifier = 4
+        },
+        new()
+        {
+            Name = PowerNames.BumpPower,
+            Description = "The character bumps up another character's power.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 or more Focus",
+            Effect =
+            [
+                "The character picks one power from another character within 5 spaces and boosts it. If the power has ranges or e­ffective areas or durations, these are doubled. If the power a­ffects a damage multiplier, add 1 to the e­ ect. Any e­ffects that normally happen with a Fantastic success automatically happen on any success, not just a Fantastic one.",
+                "If the power has a cost, the character must pay it as well, with a minimum of 5Focus."
+            ]
         },
         new()
         {
@@ -2467,6 +2497,49 @@ public class PowerSelector : IPowerSelector
                 "The character takes magical control of a vehicle they are inside of or touching. Hellfire engulfs the outside of the vehicle, but it does no damage to it. Anyone that comes into contact with it, though, takes regular damage with a damage multiplier equal to the character’s rank. On a Fantastic success, it inflicts regular Health damage and regular Focus damage instead.",
                 "The character controls the vehicle by will, as long as it is within 20spaces times the character’s rank. They use their Ego for all checks to operate it, and they get an edge on all such checks.",
                 "The vehicle’s speed doubles. It can climb walls at this speed and can even make jumps at that same speed."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.PowerfulHex,
+            Description = "The character simulates another power with their magic.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Chaotic}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = "Varies",
+            Cost = "5 or more Focus",
+            Effect =
+            [
+                "The character casts a hex that allows them to use any other power that they have the rank to use, even if they would not normally meet the power’s other prerequisites. They must pay whatever the regular Focus cost is for that power, plus 5 Focus.",
+                "If the duration of the used power is permanent, it is concentration for the character instead. If the power is a numbered permanent power (like Mighty 3), the Focus cost is 5 times that number instead. (Mighty 3 would cost 15 Focus.)",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ProbabilityManipulationHex,
+            Description = "The character makes unlikely things happen.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Chaotic}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "When an ally within 5 spaces times the character’s rank attempts a check on which they have trouble, this hex eliminates all trouble and gives them an edge instead.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ProtectionHex,
+            Description = "The character casts a hex to protect themselves.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Chaotic}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character produces a hex to help protect themselves. Make an Ego check. The result is now the character’s defense against any attack. If the result isn’t as high as the character would like, they can end the hex and try again later. On a Fantastic success, the hex also grants Health Damage Reduction 1 for its duration.",
             ],
         },
         new()

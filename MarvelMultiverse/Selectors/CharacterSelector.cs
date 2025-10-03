@@ -1,7 +1,6 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using System.Security.Cryptography;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -8812,6 +8811,111 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Creed is vicious and callous, caring little for anyone but himself. He shows no mercy to those who dare cross his path. He likes to give into his animalistic nature and has never opted to take up any of the chances at redemption offered to him.",
+                ]
+            }
+        },
+         new()
+        {
+            Name = "Scarlet Witch",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 3, vigilance: 5, ego: 8, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Chaotic),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicChaosMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HexBolt),
+                        powerSelector.GetPower(PowerNames.Jinx),
+                        powerSelector.GetPower(PowerNames.PowerfulHex),
+                        powerSelector.GetPower(PowerNames.ProbabilityManipulationHex),
+                        powerSelector.GetPower(PowerNames.ProtectionHex),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.MistsOfMorpheus),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BumpPower),
+                        powerSelector.GetPower(PowerNames.BoostPowers),
+                        powerSelector.GetPower(PowerNames.DampenPower),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Wanda Maximoff",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [132],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Auburn",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience, OriginName.MagicChaosMagic],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "As infants, Wanda Maximoff and her twin brother, Pietro, were subjected to dangerous experiments, and as they aged, they began to exhibit strange powers. Wanda developed powerful magic, while Pietro developed superhuman speed. Superstitious villagers were about to kill the twins when Magneto saved them and invited them to join his Brotherhood of Evil Mutants as Quicksilver and the Scarlet Witch.",
+                    "The twins later renounced such evil and became early members of the Avengers. As part of the team, Scarlet Witch met and fell in love with the Vision, with whom she had two children. When that went wrong, she broke down and unleashed the full powers of her chaos magic with disastrous results. She has since recovered and works to redeem herself.",
+                ],
+                Personality =
+                [
+                    "Although good at heart, Scarlet Witch has suffered repeated bouts of mental illness. When she is stable, she is kind, warm and friendly.",
                 ]
             }
         },

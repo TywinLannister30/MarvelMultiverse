@@ -24,6 +24,7 @@ public static class PowerNames
     public const string BodySheet = "Body Sheet";
     public const string BodySphere = "Body Sphere";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
+    public const string BoostPowers = "Boost Powers";
     public const string BorrowSenses = "Borrow Senses";
     public const string BounceBack = "Bounce Back";
     public const string BraceForImpact = "Brace for Impact";
@@ -32,6 +33,7 @@ public static class PowerNames
     public const string Brilliance2 = "Brilliance 2";
     public const string Brilliance3 = "Brilliance 3";
     public const string Brilliance4 = "Brilliance 4";
+    public const string BumpPower = "Bump Power";
     public const string CatchBullets = "Catch Bullets";
     public const string ChainStrikes = "Chain Strikes";
     public const string ChangeOfPlans = "Change of Plans";
@@ -173,6 +175,9 @@ public static class PowerNames
     public const string PhaseWalk = "Phase Walk";
     public const string PointBlankParry = "Point-Blank Parry";
     public const string PossessVehicle = "Possess Vehicle";
+    public const string PowerfulHex = "Powerful Hex";
+    public const string ProbabilityManipulationHex = "Probability-Manipulation Hex";
+    public const string ProtectionHex = "Protection Hex";
     public const string QuickPhase = "Quick Phase";
     public const string QuickToss = "Quick Toss";
     public const string RallyOnMe = "Rally on Me";
