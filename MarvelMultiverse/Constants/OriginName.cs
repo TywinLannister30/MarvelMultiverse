@@ -5,6 +5,7 @@ public static class OriginName
     public const string Alien = "Alien";
     public const string AlienKree = "Alien: Kree";
     public const string AlienSkrull = "Alien: Skrull";
+    public const string Atlantean = "Atlantean";
     public const string Eternal = "Eternal";
     public const string HighTech = "High Tech";
     public const string HighTechBattleSuit = "High Tech: Battle Suit";

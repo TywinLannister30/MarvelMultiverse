@@ -49,6 +49,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Amphibious,
+            Effect =
+            [
+                "The character can breathe just fi ne underwater and can see and hear well in it too."
+            ]
+        },
+        new()
+        {
             Name = TagNames.AuditoryIssues,
             Effect =
             [

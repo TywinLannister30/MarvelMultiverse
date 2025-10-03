@@ -3191,6 +3191,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SpeedSwim,
+            Description = "The character can swim faster than a dolphin!",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = "Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Multiply the character’s regular Swim Speed by their rank to get their new Swim Speed. Outside of combat, they can move three times as fast.",
+            ],
+            SwimSpeedMultipliedByRank = true
+        },
+        new()
+        {
             Name = PowerNames.SpiderDodge,
             Description = "The character dodges attacks with a spiderlike scuttle.",
             PowerSets = [PowerSetNames.SpiderPowers],

@@ -224,6 +224,7 @@ public static class PowerNames
     public const string SpeedBlast = "Speed Blast";
     public const string SpeedRun1 = "Speed Run 1";
     public const string SpeedRun2 = "Speed Run 2";
+    public const string SpeedSwim = "Speed Swim";
     public const string SpiderDodge = "Spider-Dodge";
     public const string SpiderPheromones = "Spider-Pheromones";
     public const string SpiderSense = "Spider-Sense";

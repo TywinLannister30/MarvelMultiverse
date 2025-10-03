@@ -10009,5 +10009,121 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Sub-Mariner (Namor)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 4, resilience: 3, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat/Flame"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Amphibious),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Atlantis"),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlWater,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpeedSwim),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "Fish"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Namor McKenzie",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [278],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Gills, pointed ears and small ankle wings",
+                Occupations = [OccupationName.Leader, OccupationName.Outsider],
+                Origins = [OriginName.Atlantean, OriginName.Mutant],
+                Teams = [TeamNames.AtlanteanRoyalFamily, TeamNames.Avengers],
+                Base = "Atlantis",
+                History =
+                [
+                    "Born a mutant, half-human Atlantean prince, Namor fought alongside the Allies in World War II, joining the Invaders and the All-Winners Squad. In the 1950s, the Serpent Crown was used to wipe his memory, and he spent decades as a confused vagrant, until the Human Torch (Johnny Storm) stumbled upon him. Returning to Atlantis, Namor took back the throne that was his birthright and ruled as the king.",
+                    "In the years since, Namor has fended off coup attempts and led attacks against the surface world in retaliation for their abuse of the oceans. He allies himself with those who support Atlantean interests. As such, he has joined the Avengers and Defenders, but he also has allied himself with villains like Doctor Doom.",
+                ],
+                Personality =
+                [
+                    "Namor has a regal bearing and a tendency to condescend toward others, coupled with a short temper for those condescending toward him. Despite his pompous manner, he truly cares for his subjects.",
+                ],
+                BiographySections =
+                [
+                    new()
+                    {
+                        Name = "Mutant Status",
+                        Description =
+                        [
+                            "Namor is a mutant Atlantean. This combination of origins removes the standard Atlantean traits Breathe Different and Enhanced Physique and the tag Extreme Appearance. It also removes the mutant tag Hounded. While he technically has the right to be Krakoan, he generally refuses to use it."
+                        ]
+                    }
+                ]
+            }
+        },
     ];
 }

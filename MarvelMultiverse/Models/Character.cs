@@ -137,19 +137,13 @@ public class Character
         Speed.Jump = (int)Math.Ceiling(Speed.Run / 2.0);
 
         if (Powers.Any(x => x.Powers.Any(p => p.ClimbSpeedEqualToBaseSpeed)))
-        {
             Speed.Climb = baseSpeed;
-        }
 
         if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
-        {
             Speed.Flight = baseSpeed * Rank;
-        }
 
         if (Powers.Any(x => x.Powers.Any(p => p.GlideSpeed)))
-        {
             Speed.Glide = baseSpeed * 2;
-        }
 
         if (Powers.Any(x => x.Powers.Any(p => p.JumpSpeed)))
         {
@@ -160,14 +154,13 @@ public class Character
         }
 
         if (Powers.Any(x => x.Powers.Any(p => p.LevitationSpeed)))
-        {
             Speed.Levitation = baseSpeed;
-        }
+
+        if (Powers.Any(x => x.Powers.Any(p => p.SwimSpeedMultipliedByRank)))
+            Speed.Swim = Speed.Swim * Rank;
 
         if (Powers.Any(x => x.Powers.Any(p => p.SwinglineSpeed)))
-        {
             Speed.Swingline = baseSpeed * 3;
-        }
     }
 
     public void SetNonCombatCheckModifiers()

@@ -7,6 +7,7 @@ public static class TeamNames
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
     public const string AstonishingAvengers = "Astonishing Avengers";
+    public const string AtlanteanRoyalFamily = "Atlantean Royal Family";
     public const string Avengers = "Avengers";
     public const string AvengersAcademy = "Avengers Academy";
     public const string BlackOrder = "Black Order";
