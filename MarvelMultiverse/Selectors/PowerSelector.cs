@@ -801,6 +801,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ElementalGrab,
+            Description = "The character uses their element to snare a target.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalBurst}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes an Ego attack against a target’s Melee defense within 5 spaces times the character’s rank. If the attack is a success, the character grabs the target with their element. On a Fantastic success, the target can also be pinned and su­ffers the element’s special e­ffect. Breaking free requires a successful Melee check against target number 20.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ElementalInfusion,
             Description = "The character infuses a weapon with their element.",
             PowerSets = [PowerSetNames.ElementControl],
@@ -946,6 +960,23 @@ public class PowerSelector : IPowerSelector
                 "The character envelops themselves—and any chosen people within up to 5 spaces times their rank—in a protective sphere comprised of their element.",
                 "When the sphere is formed, the character makes an Ego check and compares the results against the Agility defense of unwanted characters in the enclosed spaces. On a success, the character can move any unwanted people within the sphere’s perimeter to spaces outside of the sphere. On a Fantastic success, such moved people su­ffer full damage and the element’s special effect.",
                 "Attacks against the sphere are against the character’s Ego defense. Any attacks against the sphere are absorbed as if made against the character’s Elemental Protection power, and the sphere continues. If an attack does more damage than the character’s Elemental Protection power can sustain, it destroys the sphere, but no one inside is harmed."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalSuffocation,
+            Description = "The character envelops a target’s head in an element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalGrab}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed with Elemental Grab.",
+            Duration = Duration.Instant,
+            Range = "Varies",
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes an Ego attack against the grabbed target’s Resilience defense. If the attack is a success, the target takes regular damage. On a Fantastic success, the target can also be pinned and su­ffers the element’s special e­ffect.",
+                "With elements that aren’t suited to suffocation, this power chokes the target instead.",
             ],
         },
         new()

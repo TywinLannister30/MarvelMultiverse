@@ -55,6 +55,7 @@ public static class PowerNames
     public const string ElementalBlast = "Elemental Blast";
     public const string ElementalBurst = "Elemental Burst";
     public const string ElementalForm = "Elemental Form";
+    public const string ElementalGrab = "ElementalGrab";
     public const string ElementalInfusion = "Elemental Infusion";
     public const string ElementalPrison = "Elemental Prison";
     public const string ElementalProtection1 = "Elemental Protection 1";
@@ -65,6 +66,7 @@ public static class PowerNames
     public const string ElementalReinforcement = "Elemental Reinforcement";
     public const string ElementalRicochet = "Elemental Ricochet";
     public const string ElementalSphere = "Elemental Sphere";
+    public const string ElementalSuffocation = "Elemental Suffocation";
     public const string EnergyAbsorption = "Energy Absorption";
     public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
