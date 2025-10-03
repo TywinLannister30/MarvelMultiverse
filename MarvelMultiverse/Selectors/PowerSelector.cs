@@ -3854,7 +3854,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.WindsOfWatoomb,
             Description = "The character creates swirling winds for protection.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 2",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 2",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
             Trigger = "Damage gets through the Shield of the Seraphim",
             Duration = Duration.Concentration,
@@ -3864,6 +3864,20 @@ public class PowerSelector : IPowerSelector
                 "The character conjures swirling winds that they control. All movement by a foe within 10 spaces per the character’s rank is cut in half.",
                 "The character can also use this spell to push away smoke, mist or fog. If such a thing was created by a power, the character makes an Ego check with an edge against the Ego defense of the opposing controller. On a success, the controller’s power ends. On a Fantastic success, the controller is knocked prone.",
                 "Additionally, the Winds of Watoomb can be used to reinforce the Shield of the Seraphim. The character can transfer any Health damage that gets through the Shield of the Seraphim’s protection to their Focus instead, leaving the Shield of the Seraphim intact."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Wisecracker,
+            Description = "The character irritates a foe with their sharp wit.",
+            PowerSets = [],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "The character succeeds in an attack on an enemy in earshot, or an enemy in earshot fails an attack on them.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character cracks a joke at the enemy’s expense. Make an Ego attack. On a success, it does regular Focus damage. On a Fantastic success, the damage is doubled, and the target is stunned for one round.",
             ],
         },
     ];

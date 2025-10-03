@@ -9529,5 +9529,89 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Spider-Man (Peter Parker)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 7, resilience: 3, vigilance: 3, ego: 0, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Sources"),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Pundit),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Aunt May"),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Integrity),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgliding),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter Parker",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Hazel",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Journalist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.FantasticFour, TeamNames.SpiderArmy],
+                Base = "New York City",
+                History =
+                [
+                    "Bitten by a radioactive spider when he was in high school, Peter Parker gained a suite of spider-related powers. He exploited them for profi t until he let a robber get away who later shot and killed his Uncle Ben in a botched burglary, driving home the lesson “with great power there must also come great responsibility.” Since then, Parker has dedicated himself to fi ghting crime and helping those who have less power than him.",
+                    "Over the years, Parker has been cloned, discovered one of his costumes was an alien symbiote and learned more about his deep connection to the Spider-Totem. At the same time, he’s battled against the most colorful rogues’ gallery around. Meanwhile, he’s met up with several different variations of Spider-Man hailing from alternate dimensions, including the younger Miles Morales, also known as Spider-Man.",
+                ],
+                Personality =
+                [
+                    "Parker is a genius who oft en lets his sense of responsibility get in the way of taking care of the basics of his life. He’s known for his sharp wit and his wisecracking ways, which he often uses to enrage his foes. Despite the problems that often plague his personal life, it’s rare that he lets feeling sorry for himself stop him from helping others, especially when he’s in costume, webswinging through the city’s streets.",
+                ]
+            }
+        },
     ];
 }

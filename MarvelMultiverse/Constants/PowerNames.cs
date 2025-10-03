@@ -272,4 +272,5 @@ public static class PowerNames
     public const string Webtrapping = "Webtrapping";
     public const string WhirlingFrenzy = "Whirling Frenzy";
     public const string WindsOfWatoomb = "Winds of Watoomb";
+    public const string Wisecracker = "Wisecracker";
 }
