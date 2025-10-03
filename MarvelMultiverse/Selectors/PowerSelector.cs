@@ -2056,6 +2056,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.MentalPunch,
+            Description = "The character can blast a foe’s mind in melee.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes a Melee attack against a target. If the attack is a success, it inflicts regular Focus damage (instead of Health damage). On a Fantastic success, the target takes double damage instead and is stunned for one round.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.MentalShelter,
             Description = "The character can create a shelter for their mind.",
             PowerSets = [PowerSetNames.Telepathy],

@@ -144,6 +144,7 @@ public static class PowerNames
     public const string LightningActions = "Lightning Actions";
     public const string MachineTelepathy = "Machine Telepathy";
     public const string MemoryBlip = "Memory Blip";
+    public const string MentalPunch = "Mental Punch";
     public const string MentalShelter = "Mental Shelter";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";

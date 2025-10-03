@@ -8051,5 +8051,96 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Psylocke (Kwannon)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 2, vigilance: 2, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: $"{PowerNames.MentalPunch}"),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MentalPunch),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kwannon",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [155],
+                Gender = Gender.Female,
+                Eyes = "Purple",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Marauders, TeamNames.TheHand, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "Kwannon was raised from birth by the shadowy Hand organization to become a super-powered assassin, but she balked at the cold-blooded murder of innocents. It wasn’t long before she turned against her handlers, slaughtering them and escaping to Japan.",
+                    "Shortly thereafter, Kwannon suffered an accident that left her comatose. While she slept, Betsy Braddock—another mutant psychic on the verge of death—swapped bodies with Kwannon. Only recently did Kwannon manage to regain control over her own body. In the short career she’s had since, she has already proven herself as a capable leader among the X-Men.",
+                ],
+                Personality =
+                [
+                    "Although the traumatic events of her past have filled Kwannon with some deep-seated anger and resentment, she retains a cool head for battle. She’s an effective tactical leader, and she’s well trained in focusing her fury at those who most deserve it.",
+                ]
+            }
+        },
     ];
 }
