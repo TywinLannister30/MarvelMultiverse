@@ -8,6 +8,7 @@ public static class TeamNames
     public const string AIM = "A.I.M.";
     public const string AstonishingAvengers = "Astonishing Avengers";
     public const string Avengers = "Avengers";
+    public const string AvengersAcademy = "Avengers Academy";
     public const string BlackOrder = "Black Order";
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string Champions = "Champions";

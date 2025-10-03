@@ -8432,5 +8432,96 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Reptil",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 5, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Dinosaur Forms"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Forms"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Vicente Lopez"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Family"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                        powerSelector.GetPower(PowerNames.Shrink2),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Humberto “Berto” Lopez",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [142],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Dinosaur tail and limbs (when using powers)",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechPymParticles, OriginName.Magic],
+                Teams = [TeamNames.AvengersAcademy],
+                Base = "Los Angeles",
+                History =
+                [
+                    "While out at a dig site with his paleontologist parents, Humberto Lopez stumbled upon a mystical fossilized amulet that gave him the power to shape-shift into prehistoric creatures, particularly dinosaurs. As a lifelong fan of super heroes, he leaped at this opportunity to become a hero himself, adopting the codename Reptil.",
+                    "Shortly after Reptil began adventuring, his parents mysteriously disappeared. While he continued to search for them, he joined the Avengers Academy and became good friends with many of his fellow students. Although the academy is no more, he continues to do his best to help those in need.",
+                ],
+                Personality =
+                [
+                    "Reptil loves adventure, but he fears his own powers as much as he appreciates them. His reptilian transformations can occasionally send him into a berserker state, where he has little more reasoning power than a T. rex. He fears the possibility of accidentally lashing out at those closest to him.",
+                ]
+            }
+        },
     ];
 }
