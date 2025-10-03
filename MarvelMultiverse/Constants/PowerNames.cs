@@ -9,6 +9,7 @@ public static class PowerNames
     public const string AdditionalLimbs = "Additional Limbs";
     public const string AlwaysReady = "Always Ready";
     public const string Anger = "Anger";
+    public const string AnimalBond = "Animal Bond";
     public const string AnimalCommunication = "Animal Communication";
     public const string AstralForm = "Astral Form";
     public const string AttackStance = "Attack Stance";
@@ -93,6 +94,7 @@ public static class PowerNames
     public const string FocusedStrike = "Focused Strike";
     public const string Fool = "Fool";
     public const string FuriousAttacks = "Furious Attacks";
+    public const string GrandMirage = "Grand Mirage";
     public const string GrapplingTechnique = "Grappling Technique";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string GroupInvisibility = "Group Invisibility";

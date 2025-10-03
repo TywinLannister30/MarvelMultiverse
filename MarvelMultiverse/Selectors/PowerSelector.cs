@@ -143,17 +143,33 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.AnimalCommunication,
-            Description = "The character can enter the Astral Plane.",
-            PowerSets = [PowerSetNames.Magic, PowerSetNames.Telepathy],
-            Prerequsites = "Rank 2",
+            Name = PowerNames.AnimalBond,
+            Description = "The character can communicate with an animal friend.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "None",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
-            Cost = "5 Focus",
             Effect =
             [
-                "The character can project an avatar into the Astral Plane, leaving their physical body in a deep trance in the real world, where it is vulnerable to attack. While in the Astral Plane, they can interact with other characters in the Astral Plane, but they are intangible, invisible and generally undetectable in the real world. However, they can sense things in the real world. If the character is Rank 4 or higher, they can also take on a transparent form that can be seen in the real world.",
-                "While in the Astral Plane, the character can fly, and in combat, their Flight Speed is equal to their rank times their Run Speed. Outside of combat, they can move 10 times as fast."
+                "The character can communicate telepathically with one animal of their choice, and they must have befriended the animal before. They cannot switch to another animal unless the animal dies, but they can select this power multiple times if desired.",
+                "The communication can be verbal, visual or even more complex, such as imparting location information. There is no limit to the distance of the communication, as long as the character and the animal are in the same dimension.",
+                "Animals with a telepathic bond are generally willing to communicate, even if they aren’t friendly. Bonded animals often do whatever the character asks, even if it might put them in danger."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.AnimalCommunication,
+            Description = "The character can communicate with a type of animal.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character can communicate telepathically with one taxonomic order of animals, such as birds, mammals, fish, amphibians and so on. They can call out to them as a group up to 500 spaces per rank away, and they can communicate specifically with ones they have met or at least seen.",
+                "They cannot switch to another taxonomic order, but they can select this power multiple times if desired.",
+                "The communication with the animals can be verbal, visual or even more complex, such as imparting location information. There is no limit to the distance of the communication, as long as the character and the animals are in the same dimension.",
+                "Friendly animals often do whatever the character asks, as long as it doesn’t put them in danger—and they may be willing to risk even that for one they consider a friend. Hostile animals simply ignore all such requests—which make them a poor choice for communication."
             ]
         },
         new()
@@ -1329,7 +1345,21 @@ public class PowerSelector : IPowerSelector
             Cost = "10 or more Focus",
             Effect =
             [
-                "The character splits their attack to make two close attacks against separate targets within reach (or they can focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. For these attacks, add +1 to the character’s Melee damage bonus for every 2 points of Focus they spend. On a success, an a­ ected target takes half that total damage. On a Fantastic success, an a­ ected target takes full damage and su­ffers the weapon’s special e­ffect."
+                "The character splits their attack to make two close attacks against separate targets within reach (or they can focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. For these attacks, add +1 to the character’s Melee damage bonus for every 2 points of Focus they spend. On a success, an a­ffected target takes half that total damage. On a Fantastic success, an a­ ected target takes full damage and su­ffers the weapon’s special e­ffect."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.GrandMirage,
+            Description = "The character can make a mirage appear in a group’s mind.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.Mirage}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character creates a full-sensory mirage that a­ffects everyone in a Telepathic Network they set up who is also in the same locale. The mirage can be of anything the character desires, and it can move freely."
             ],
         },
         new()

@@ -2,6 +2,7 @@
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using System;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MarvelMultiverse.Selectors;
@@ -6583,6 +6584,85 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Maximus’ strongest desire has always been to take over as ruler of the Inhumans and make his brother suffer. How much of this is motivated by madness and how much by self-interest is hard to discern.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Mirage (Dani Moonstar)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 3, ego: 1, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "Grand Mirage"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "Brightwind"),
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "Mammals"),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.GrandMirage),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Danielle “Dani” Moonstar",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [123],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.NewMutants, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "As a teenager, Dani Moonstar discovered she had the ability to create powerful psychic illusions. When those illusions began to attack those closest to her, her grandfather—the shaman Black Eagle—asked Charles Xavier (Professor X) to train her in the use of her powers. Before Xavier could arrive, Black Eagle was assassinated by a madman bent on destroying mutantkind. As part of Xavier’s brand-new New Mutants team, Moonstar helped put an end to that madman’s plans.",
+                    "For a while, Moonstar served as one of Asgard’s Valkyries, but today she lives on Krakoa, where she has joined a revived New Mutants team. She uses her powers to help other mutants process their trauma. Despite no longer being a Valkyrie, she still retains her bond with her Asgardian winged horse, Brightwind.",
+                ],
+                Personality =
+                [
+                    "Moonstar is a powerful and serious combatant, not the type to joke around during a mission. Away from battle, she is a highly intelligent and empathetic person. Her psychic abilities allow her to literally dig into the emotional problems of her teammates.",
                 ]
             }
         },

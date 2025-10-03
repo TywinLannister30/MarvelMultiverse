@@ -46,6 +46,7 @@ public static class TeamNames
     public const string MI13 = "MI13";
     public const string MidnightSons = "Midnight Sons";
     public const string MightyAvengers = "Mighty Avengers";
+    public const string NewMutants = "New Mutants";
     public const string PantherCult = "Panther Cult";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
     public const string PowerElite = "Power Elite";
