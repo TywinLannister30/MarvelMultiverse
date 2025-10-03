@@ -59,6 +59,8 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersL());
         allCharacters.AddRange(GetAllCharactersM());
         allCharacters.AddRange(GetAllCharactersN());
+        allCharacters.AddRange(GetAllCharactersO());
+        allCharacters.AddRange(GetAllCharactersP());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -7771,6 +7773,281 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Kurt Wagner numbers among the kindest and most heroic people ever to join the X-Men. Despite having long left the circus behind, he’s never lost his carnie spirit and fights his battles with a smile on his face. A highly religious man, Nightcrawler acts as a spiritual and moral guide to his fellow mutants.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersO() =>
+    [
+        new()
+        {
+            Name = "Okoye",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 1, resilience: 2, vigilance: 1, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Dora Milaje)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup, reminder: "Dora Milaje"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Okoye",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [110],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "Wakandan tribal tattoos",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.DoraMilaje],
+                Base = "Wakanda",
+                History =
+                [
+                    "Renowned for her capabilities as a warrior, Okoye was personally selected by the Black Panther (T’Challa) to be the head of his personal guard: the Dora Milaje. There is no one among the Dora Milaje who the Panther trusts more than Okoye. She assists him in nearly all of his heroic exploits, and she has personally put down rebellions against his government.",
+                    "Due to her skills and her loyalty, Okoye helped found and became the director of the Agents of Wakanda, a team of heroes organized to support the Avengers during the Black Panther’s time as their leader.",
+                ],
+                Personality =
+                [
+                    "As a seasoned warrior, Okoye isn’t the type for small talk. As a bodyguard, she spends much of her time silently standing behind the Panther, looking intimidating. When battle inevitably breaks out, she focuses on communicating her orders clearly and effectively. She’s not above a rare bit of humor, but her jokes tend to be on the dry side.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersP() =>
+    [
+        new()
+        {
+            Name = "Photon (Monica Rambeau)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 5, resilience: 4, vigilance: 4, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                        powerSelector.GetPower(PowerNames.Shrink1),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Monica Rambeau",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.Thunderbolts, TeamNames.Ultimates],
+                Base = "Mobile",
+                History =
+                [
+                    "Monica Rambeau was a lieutenant with the New Orleans Harbor Patrol when she stumbled upon an experimental energy weapon hidden aboard a Roxxon oil rig. In the process of destroying the weapon, her body was bathed in extradimensional energy, giving her the power to transform her body into powerful forms of electromagnetic radiation. Embracing her new abilities, Rambeau quit her job and became the new Captain Marvel. She’s since gone by a number of aliases, including Photon, Pulsar and Spectrum, but she’s recently returned to Photon.",
+                    "Rambeau has often been a part of the Avengers and has even led the team. Her powers and her leadership skills put her in high demand.",
+                ],
+                Personality =
+                [
+                    "Although generally agreeable, Rambeau has a short fuse when it comes to people messing with her. She knows her abilities make her one of the most powerful people in the universe, and she expects to be treated as such. She does not suffer condescension or discrimination from anyone.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Professor X (Charles Xavier)",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 2, vigilance: 9, ego: 9, logic: 9
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Community"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance4),
+                        powerSelector.GetPower(PowerNames.Uncanny3),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BorrowSenses),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.CloakGroup),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Domination),
+                        powerSelector.GetPower(PowerNames.EditMemory),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.Fool),
+                        powerSelector.GetPower(PowerNames.GrandFool),
+                        powerSelector.GetPower(PowerNames.GrandMirage),
+                        powerSelector.GetPower(PowerNames.InformationUpload),
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.MentalShelter),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                        powerSelector.GetPower(PowerNames.TelepathicPossession),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Charles Francis Xavier",
+                Heights = [new() { Feet = 6 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Educator],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "As a mutant, Charles Xavier was gifted with powerful psychic abilities. Although he hid his own status as a mutant in his youth, Xavier decided to become an activist for mutant rights. He turned his old family mansion into a School for Gifted Youngsters and began recruiting young mutants across the globe.",
+                    "It was within this school that Xavier founded the X-Men, a team of mutant heroes dedicated to showing the world just how helpful mutants can be. He later went on to expand the school and the number of mutant hero teams. He recently helped found a mutant homeland on the living island of Krakoa.",
+                ],
+                Personality =
+                [
+                    "Xavier’s greatest flaw is paternalism. He has the well-earned right to feel pride for his accomplishments, but his belief that he knows best leads him to occasionally make decisions for other people rather than leaving them to their own devices.",
                 ]
             }
         },

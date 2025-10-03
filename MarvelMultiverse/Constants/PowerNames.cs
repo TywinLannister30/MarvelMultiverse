@@ -36,6 +36,7 @@ public static class PowerNames
     public const string ChainStrikes = "Chain Strikes";
     public const string ChangeOfPlans = "Change of Plans";
     public const string Cloak = "Cloak";
+    public const string CloakGroup = "Cloak Group";
     public const string Clobber = "Clobber";
     public const string CloneMoves = "Clone Moves";
     public const string CoilingCrush = "Coiling Crush";
@@ -102,6 +103,7 @@ public static class PowerNames
     public const string FocusedStrike = "Focused Strike";
     public const string Fool = "Fool";
     public const string FuriousAttacks = "Furious Attacks";
+    public const string GrandFool = "Grand Fool";
     public const string GrandIllusion = "Grand Illusion";
     public const string GrandMirage = "Grand Mirage";
     public const string GrapplingTechnique = "Grappling Technique";

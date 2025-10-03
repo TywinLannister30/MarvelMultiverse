@@ -531,6 +531,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.CloakGroup,
+            Description = "The character mentally hides themselves and their friends.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.Cloak}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "Using a mirage, the character blocks their presence—and the presence of up to one other person per rank, within 10 spaces—from the minds of people within 20 spaces per rank. Cameras (for instance) can still record them, but when people look in the characters’ direction, they see nothing there.",
+                "The target number for anyone trying to detect the character or the others protected is the character’s Logic defense."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Clobber,
             Description = "The character pummels their foe with enough force to knock them flat.",
             PowerSets = [PowerSetNames.SuperStrength],
@@ -1463,6 +1478,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character splits their attack to make two close attacks against separate targets within reach (or they can focus a single attack on a single target). Make a single Melee check and compare it to the targets’ Melee defenses. For these attacks, add +1 to the character’s Melee damage bonus for every 2 points of Focus they spend. On a success, an a­ffected target takes half that total damage. On a Fantastic success, an a­ ected target takes full damage and su­ffers the weapon’s special e­ffect."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.GrandFool,
+            Description = "The character mentally makes the group they’re with appear to be like other people.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.Fool}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character uses a mirage to alter their appearance—and the appearance of up to one other person per rank, within 10 spaces—in the minds of people within 20 spaces per rank. Cameras (for instance) can still record them, but when people look in the characters’ direction, they see other people.",
+                "The target number for anyone trying to see through the mirage is the character’s Logic defense. If the a­ ected characters are impersonating people known to the other person, that person has an edge."
             ],
         },
         new()
