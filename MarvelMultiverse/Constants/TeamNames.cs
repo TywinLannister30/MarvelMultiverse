@@ -37,6 +37,8 @@ public static class TeamNames
     public const string InfinityWatch = "Infinity Watch";
     public const string Intelligencia = "Intelligencia";
     public const string IntergalacticCouncil = "Intergalactic Council";
+    public const string KreeImperium = "Kree Imperium";
+    public const string LeagueOfEvilInhumans = "League of Evil Inhumans";
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";
     public const string Marauders = "Marauders";
     public const string MastersOfEvil = "Masters of Evil";
