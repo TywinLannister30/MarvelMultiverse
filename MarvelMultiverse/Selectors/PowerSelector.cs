@@ -3108,6 +3108,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SpiderPheromones,
+            Description = "The character exudes pheromones that a£ ect those nearby.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "5 spaces",
+            Effect =
+            [
+                "The character has an edge on Ego (intimidation) checks against people who are not attracted to their gender. They also have an edge on Ego (persuasion) checks against people who are attracted to their gender.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.SpiderSense,
             Description = "The character has a sense of danger that tingles when threats are near.",
             PowerSets = [PowerSetNames.SpiderPowers],
@@ -3751,6 +3765,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes a ranged attack on an enemy. If the attack is a success, the web paralyzes the enemy. On a Fantastic success, the enemy is also pinned. Breaking free from webbing requires a Melee check (target number 20)."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.Webgliding,
+            Description = "The character can glide through the air on their webbing.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.Webcasting}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains the Glide movement mode, with a speed equal to double their Run Speed."
+            ],
+            GlideSpeed = true
         },
         new()
         {

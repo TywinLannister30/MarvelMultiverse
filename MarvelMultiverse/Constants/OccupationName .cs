@@ -10,6 +10,7 @@ public static class OccupationName
     public const string Entertainer = "Entertainer";
     public const string HealthCareWorker = "Health Care Worker";
     public const string Investigator = "Investigator";
+    public const string Journalist = "Journalist";
     public const string LawEnforcer = "Law Enforcer";
     public const string Lawyer = "Lawyer";
     public const string Leader = "Leader";

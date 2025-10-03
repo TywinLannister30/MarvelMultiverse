@@ -218,6 +218,7 @@ public static class PowerNames
     public const string SpeedRun1 = "Speed Run 1";
     public const string SpeedRun2 = "Speed Run 2";
     public const string SpiderDodge = "Spider-Dodge";
+    public const string SpiderPheromones = "Spider-Pheromones";
     public const string SpiderSense = "Spider-Sense";
     public const string SpiderStrike = "Spider-Strike";
     public const string SpinAndThrow = "Spin & Throw";
@@ -264,6 +265,7 @@ public static class PowerNames
     public const string Wallcrawling = "Wallcrawling";
     public const string WeaponsBlazing = "Weapons Blazing";
     public const string Webcasting = "Webcasting";
+    public const string Webgliding = "Webgliding";
     public const string Webgrabbing = "Webgrabbing";
     public const string Webslinging = "Webslinging";
     public const string Webtrapping = "Webtrapping";

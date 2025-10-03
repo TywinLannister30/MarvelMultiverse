@@ -385,6 +385,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Pundit,
+            Effect =
+            [
+                "The character knows how to break news items and put them into context to craft a story around them. They have an edge on Ego or Logic rolls made when giving their opinion via media.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.QuickLearner,
             Effect =
             [

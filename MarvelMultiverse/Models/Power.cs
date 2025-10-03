@@ -76,6 +76,9 @@ public class Power : ICloneable
     public bool FlySpeed { get; set; }
 
     [JsonIgnore]
+    public bool GlideSpeed { get; set; }
+
+    [JsonIgnore]
     public bool JumpSpeed { get; set; }
 
     [JsonIgnore]
@@ -123,6 +126,7 @@ public class Power : ICloneable
             LogicInsteadOfEgoForDefence = this.LogicInsteadOfEgoForDefence,
             ClimbSpeedEqualToBaseSpeed = this.ClimbSpeedEqualToBaseSpeed, 
             FlySpeed = this.FlySpeed,
+            GlideSpeed = this.GlideSpeed,
             JumpSpeed = this.JumpSpeed,
             JumpSpeedMultipliedByRank  = this.JumpSpeedMultipliedByRank,
             RunSpeedMultipliedByRank = this.RunSpeedMultipliedByRank,

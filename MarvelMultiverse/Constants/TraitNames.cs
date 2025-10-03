@@ -44,6 +44,7 @@ public static class TraitNames
     public const string Monster = "Monster";
     public const string OutOfShape = "Out of Shape";
     public const string Piloting = "Piloting";
+    public const string Pundit = "Pundit";
     public const string Presence = "Presence";
     public const string PublicSpeaking = "Public Speaking";
     public const string QuickLearner = "Quick Learner";

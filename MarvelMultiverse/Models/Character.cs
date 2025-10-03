@@ -1,10 +1,5 @@
-﻿
-
-
-
-using MarvelMultiverse.Constants;
+﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
-using System.Security.Claims;
 
 namespace MarvelMultiverse.Models;
 
@@ -149,6 +144,11 @@ public class Character
         if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
         {
             Speed.Flight = baseSpeed * Rank;
+        }
+
+        if (Powers.Any(x => x.Powers.Any(p => p.GlideSpeed)))
+        {
+            Speed.Glide = baseSpeed * 2;
         }
 
         if (Powers.Any(x => x.Powers.Any(p => p.JumpSpeed)))

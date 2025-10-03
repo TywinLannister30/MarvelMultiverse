@@ -9005,5 +9005,355 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "She-Hulk",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 4, resilience: 3, vigilance: 3, ego: 1, logic:6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.LegalEagle),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Gamma Forms"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Forms"),
+                tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Jump3),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jennifer Walters",
+                Heights = [new() { Feet = 5, Inches = 10 }, new() { Feet = 6, Inches = 7 }],
+                Weights = [150, 700],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Brown/dark green",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Lawyer],
+                Origins = [OriginName.WeirdScienceGammaMutate],
+                Teams = [TeamNames.Avengers, TeamNames.FantasticFour],
+                Base = "New York City",
+                History =
+                [
+                    "Young attorney Jennifer Walters nearly died after being shot by a criminal. A blood transfusion from her cousin Bruce Banner—also known as the Hulk—saved her life, but the gamma-irradiated blood granted her powers similar to those of her cousin. Unlike the Hulk though, Walters can control the transformations into her emerald-skinned alter ego and retains her intelligence.",
+                    "In the years since, Walters has proven herself a valuable member of the Avengers and a regular substitute member of the Fantastic Four. While she spent some time as a bounty hunter, she regularly returns to the law. Her skills as a sharp litigator with hands-on experience with super-powered people keeps her in high demand."
+                ],
+                Personality =
+                [
+                    "In her regular form, Walters is often an introverted homebody, but when in her She-Hulk form, she is much more extroverted, to the point of aggressiveness. She struggles to balance these two sides of her personality and sometimes prefers to simply remain She-Hulk, who she considers more fun.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "S.H.I.E.L.D. Agent",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 1, vigilance: 1, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.LegalEagle),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.SHIELD],
+                Base = "S.H.I.E.L.D. Helicarrier",
+                History =
+                [
+                    "Born out of an ancient brotherhood of peacekeepers, the modern S.H.I.E.L.D. was founded in the 1960s as part of a collaboration between the U.N. and arms magnate Howard Stark. As an anti-terrorist peacekeeping force, its primary goal has always been to dismantle the worldwide fascist terror organization Hydra.",
+                    "S.H.I.E.L.D.’s incredible resources have proven to be a double-edged sword. Its upper ranks have been repeatedly infiltrated by terrorists, temporarily turning the organization into a terrifying evil army. Even when it works properly, S.H.I.E.L.D. leaders sometimes overreach, suspending civil liberties in pursuit of their anti-terrorist goals. At the moment, it has been disbanded entirely.",
+                ],
+                Personality =
+                [
+                    "Agents of S.H.I.E.L.D. tend to be combat-hardened soldiers with a strong sense of justice. While this makes them effective fighters, their training sometimes makes them too unwilling to question orders.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Shuri",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 4, resilience: 3, vigilance: 2, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Wakanda"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Wakanda"),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AlwaysReady),
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                        powerSelector.GetPower(PowerNames.OperationsCenter),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Shuri",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [127],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader, OccupationName.Scientist],
+                Origins = [OriginName.HighTech, OriginName.Magic],
+                Teams = [TeamNames.PantherCult],
+                Base = "Wakanda",
+                History =
+                [
+                    "As the lone daughter of the Wakandan royal family, Shuri was narrowly defeated by her brother, T’Challa, in a contest to determine the next Wakandan regent, the Black Panther. Although she had long dreamed of becoming the Panther, Shuri did not let her envy consume her. Instead, she set out to make a name for herself in her own right.",
+                    "Shuri’s brilliant mind and natural combat skills make her a fi ghter on par with T’Challa. In times of national upheaval, Shuri has temporarily accepted the title of Black Panther, but more often, she works as an advocate for the Wakandan people under her own name and to great success.",
+                ],
+                Personality =
+                [
+                    "Shuri sometimes resents the disproportionate amount of attention and power given to her brother, but her love for him and the Wakandan people outweighs all that. Eloquent, personable and incredibly sharp, she has proven herself an excellent leader.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Silk",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 6, resilience: 3, vigilance: 3, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Sources"),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Pundit),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Integrity),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderPheromones),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgliding),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Cindy Moon",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Journalist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.AgentsOfAtlas, TeamNames.SpiderArmy],
+                Base = "New York City",
+                History =
+                [
+                    "As a teenager, Cindy Moon was bitten by the exact same radioactive spider that gave Spider-Man (Peter Parker) his powers. Her own powers proved a powerful lure for the multiversal predator Morlun, so she was locked away in a bunker for her own safety for thirteen years. After learning of Moon’s existence, Parker freed her from her bunker, unintentionally launching Morlun’s hunt for her once again.",
+                    "Morlun and his family of hero hunters have since been defeated, and Moon has been reunited with her family. Today, she works as a reporter for J. Jonah Jameson’s new outlet, Threats and Menaces, and helps save the world as the spiderpowered hero Silk.",
+                ],
+                Personality =
+                [
+                    "A decade of nearly complete isolation gave Moon no small amount of social anxiety. Although she’s made great strides in the last few years, she still has some trouble socializing, particularly with people she doesn’t know well. Despite her fears, Moon’s unwavering heroic spirit allows her to push forward in her adventures.",
+                ]
+            }
+        },
     ];
 }
