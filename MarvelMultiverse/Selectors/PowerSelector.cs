@@ -649,6 +649,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.CoveringFire,
+            Description = "The character covers an ally’s attack.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.ReturnFire}, Rank 3",
+            Action = ActionType.Reaction,
+            Trigger = "An ally within the character’s line of sight begins its turn.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes an Agility attack against a target’s Vigilance defense. If the attack is a success, apply Health Damage Reduction normally. The target takes any damage to their Focus. If it’s a Fantastic success, the damage is doubled, and if the target takes any Focus damage, they are stunned for one round.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.CrimsonBandsOfCyttorak,
             Description = "The character unleashes red bands of magic that lash out to capture their target.",
             PowerSets = [PowerSetNames.Magic],

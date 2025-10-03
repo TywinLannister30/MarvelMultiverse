@@ -62,6 +62,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersO());
         allCharacters.AddRange(GetAllCharactersP());
         allCharacters.AddRange(GetAllCharactersQ());
+        allCharacters.AddRange(GetAllCharactersR());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -8241,6 +8242,105 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Due to his powers, Quicksilver is often impatient with others to the point of condescension, and he can come across as humorless. When he’s able to cut loose, though, he smiles with joy.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersR() =>
+    [
+        new()
+        {
+            Name = "Red Skull (Johann Shmidt)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 2, vigilance: 1, ego: 3, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CoveringFire),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Johann Shmidt",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [189],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Head is disfigured into a red skull",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Hydra],
+                Base = "Mobile",
+                History =
+                [
+                    "Declaring that he could turn anyone into the ideal Nazi soldier, Adolf Hitler selected a random bellboy by the name of Johann Shmidt to be his next secret agent. He personally trained Shmidt to be a killer and spy, transforming him into one of the deadliest soldiers in the Third Reich.",
+                    "After World War II, the crimson-faced Shmidt carried the mad führer’s dream of a worldwide Nazi government into the modern age. Were he not so dangerous, it would be easy to write him off as a cackling madman. A regular ally or even commander of fascist organizations like Hydra, he’s capable of launching complex schemes that threaten to bring the entire planet beneath his heel.",
+                ],
+                Personality =
+                [
+                    "In his day-to-day interactions with others, the Red Skull shows himself to be little more than a fascist zealot and a madman. Despite this, he is an expert propagandist who deftly recruits crowds of bigots.",
                 ]
             }
         },

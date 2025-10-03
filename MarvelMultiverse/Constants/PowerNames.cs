@@ -44,6 +44,7 @@ public static class PowerNames
     public const string CombatTrickery = "Combat Trickery";
     public const string Command = "Command";
     public const string CounterstrikeTechnique = "Counterstrike Technique";
+    public const string CoveringFire = "Covering Fire";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
     public const string CrushingGrip = "Crushing Grip";
     public const string DampenPower = "Dampen Power";
