@@ -427,6 +427,17 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Small,
+            Effect =
+            [
+                "The character’s size is small, which adds +1 to their Melee and Agility defenses and takes –1 from their Run Speed.",
+            ],
+            MeleeDefenceModifier = 1,
+            AgilityDefenceModifier = 1,
+            RunSpeedModifier = -1
+        },
+        new()
+        {
             Name = TraitNames.Sneaky,
             Effect =
             [

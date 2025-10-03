@@ -302,6 +302,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.BorrowSenses,
+            Description = "The character can use another person’s senses.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can use the full senses of someone or something with whom they have established a telepathic link or bond. While they do, they retain the use of their own senses too.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.BounceBack,
             Description = "The character bounces back from even the hardest falls.",
             PowerSets = [PowerSetNames.Plasticity],
@@ -3057,6 +3071,23 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character’s personal telekinetic field protects them. Any attacks against them that do 40 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 40 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticSphere,
+            Description = "The character can create a protective sphere with their mind.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticProtection1}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "Same as the character’s Telekinetic Protection power",
+            Effect =
+            [
+                "The character envelops themselves—and any chosen people within up to 5 spaces times their rank—in a protective telekinetic sphere.",
+                "When the sphere is formed, the character makes a Logic check and compares the results against the Agility defense of unwanted characters in the enclosed spaces. On a success, the character can move any unwanted people within the sphere’s perimeter to spaces outside of the sphere. On a Fantastic success, such moved people su­ er full damage.",
+                "Attacks on the sphere are against the character’s Logic defense. Any attacks on the sphere are absorbed as if made against the character’s Telekinetic Protection power, and the sphere continues. If an attack does more damage than the character’s Telekinetic Protection power can sustain, it destroys the sphere, but no one inside is harmed."
             ],
         },
         new()

@@ -43,4 +43,5 @@ public static class TagNames
     public const string VisionIssues = "Vision Issues";
     public const string Worshipped = "Worshipped";
     public const string XGene = "X-Gene";
+    public const string Young = "Young";
 }

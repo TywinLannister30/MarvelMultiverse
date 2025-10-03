@@ -393,5 +393,13 @@ public class TagSelector : ITagSelector
                 "For mutants only."
             ]
         },
+        new()
+        {
+            Name = TagNames.Young,
+            Effect =
+            [
+                "The character is a minor, under 18 years old. If possible, they must report in to their parents or guardians on a regular basis.",
+            ],
+        },
     ];
 }

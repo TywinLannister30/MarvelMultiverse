@@ -6942,5 +6942,82 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Moon Girl",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 0, vigilance: 2, ego: 2, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: $"{PowerNames.Brilliance3}"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Devil Dinosaur"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.VisionIssues),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance3),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "Devil Dinosaur"),
+                        powerSelector.GetPower(PowerNames.BorrowSenses),
+                        powerSelector.GetPower(PowerNames.InformationUpload),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lunella Louise Lafayette",
+                Heights = [new() { Feet = 3, Inches = 9 }],
+                Weights = [48],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Small,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist, OccupationName.Student],
+                Origins = [OriginName.Inhuman],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "As a hyper-intelligent grade-schooler, Lunella Lafayette faced ridicule from her fellow students and even her teachers, all of whom were unable to comprehend the depths of her brilliance. Her life dragged on in a boring sort of way until the day she accidentally activated a portal to an alternate dimension.",
+                    "From this portal emerged Devil Dinosaur, a highly intelligent red Tyrannosaurus rex. Lafayette and the dinosaur became fast friends and agreed to adventure together. Determined to explore the universe, Lafayette adopted the alter ego Moon Girl, reclaiming a name once thrown at her by schoolyard bullies."
+                ],
+                Personality =
+                [
+                    "Lafayette is a fun-loving kid with a strong sense of justice. She loves exploration and experimentation as much as she hates bullies. Lafayette will go far out of her way to stop people from pushing others around. The only bullies she has trouble standing up to are her own.",
+                ]
+            }
+        },
     ];
 }

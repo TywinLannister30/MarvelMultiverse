@@ -20,6 +20,7 @@ public static class PowerNames
     public const string BodySheet = "Body Sheet";
     public const string BodySphere = "Body Sphere";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
+    public const string BorrowSenses = "Borrow Senses";
     public const string BounceBack = "Bounce Back";
     public const string BraceForImpact = "Brace for Impact";
     public const string Brawling = "Brawling";
