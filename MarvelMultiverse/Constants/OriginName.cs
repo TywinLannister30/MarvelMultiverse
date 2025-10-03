@@ -5,6 +5,7 @@ public static class OriginName
     public const string Alien = "Alien";
     public const string Eternal = "Eternal";
     public const string HighTech = "High Tech";
+    public const string HighTechBattleSuit = "High Tech: Battle Suit";
     public const string HighTechCybernetics = "High Tech: Cybernetics";
     public const string HighTechPymParticles = "High Tech: Pym Particles";
     public const string Inhuman = "Inhuman";
