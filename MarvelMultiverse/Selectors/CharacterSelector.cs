@@ -8523,5 +8523,199 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Rocket Racoon",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 3, vigilance: 4, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "2 Pistols"),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Rifle"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DanceOfDeath),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Rocket",
+                Heights = [new() { Feet = 4 }],
+                Weights = [55],
+                Gender = Gender.Male,
+                Eyes = "Brown (with tapetal reflection)",
+                Hair = "Brown, black and white",
+                Size = Size.Small,
+                DistinguishingFeatures = "Raccoon-like alien",
+                Occupations = [OccupationName.Criminal, OccupationName.Outsider],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.Avengers, TeamNames.GuardiansOfTheGalaxy],
+                Base = "Mobile",
+                History =
+                [
+                    "Rocket is a genetically and cybernetically engineered extraterrestrial created to resemble an Earth raccoon and to work as one of the protectors of the Loonies, a group of criminally insane aliens sentenced to life on the prison planet Halfworld in the Keystone Quadrant. After leaving his position, Rocket made his way into the wider galaxy, where he wound up involved in questionable activities that landed him in a Kree prison. There, he met his best friend, Groot, and together, they helped form the Guardians of the Galaxy.",
+                    "With the rest of the Guardians, Rocket saved the galaxy from being destroyed by the alien hive fl eet known as the Phalanx. After that, they decided to band together permanently, becoming a family as much as a team. Rocket has even stepped up to lead the team when Star-Lord wasn’t available.",
+                ],
+                Personality =
+                [
+                    "Rocket is sharp and conniving, one of the smartest people around, especially when it comes to tactics and logistics. He carries larceny in his heart and is always looking for a better angle on any problem that presents itself.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Ronan the Accuser",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 4, vigilance: 2, ego: 6, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.BreatheDifferent),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ronan",
+                Heights = [new() { Feet = 7, Inches = 5 }],
+                Weights = [480],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "Blue skin",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.AlienKree],
+                Teams = [TeamNames.KreeEmpire],
+                Base = "Kree-Lar",
+                History =
+                [
+                    "A powerful warrior, Ronan rose through the ranks of the Kree military, eventually achieving the position of Supreme Accuser. Second only to the Emperor himself, Ronan was in charge of overseeing all Kree military operations.",
+                    "Ronan has battled some of the deadliest warriors in the galaxy and personally led invasions of Earth, the Skrull Empire and the Inhuman homeland. After a coup resulted in the death of the Kree Emperor, Ronan himself was elected to the position. He later made peace with the Inhumans and entered into an arranged marriage with Crystal to cement it, but this didn’t last.",
+                ],
+                Personality =
+                [
+                    "A hulking mass of a warrior, Ronan demands respect from those around him, and any show of disrespect can cause him to erupt in a murderous rage. His proud loyalty to the Kree people outweighs his ferocious nature, though, and he tends to look down on those from “lesser races.”",
+                ]
+            }
+        },
     ];
 }
