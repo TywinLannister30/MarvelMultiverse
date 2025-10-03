@@ -8814,7 +8814,7 @@ public class CharacterSelector(
                 ]
             }
         },
-         new()
+        new()
         {
             Name = "Scarlet Witch",
             Rank = 5,
@@ -8916,6 +8916,92 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Although good at heart, Scarlet Witch has suffered repeated bouts of mental illness. When she is stable, she is kind, warm and friendly.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Shang-Chi",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 3, resilience: 3, vigilance: 5, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Cantonese, Mandarin and other dialects), English"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.FocusedStrike),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.LeapingLeglock),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                        powerSelector.GetPower(PowerNames.RegainFocus),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                        powerSelector.GetPower(PowerNames.SpinAndThrow),
+                        powerSelector.GetPower(PowerNames.UnflappablePoise),
+                        powerSelector.GetPower(PowerNames.UntouchablePosition),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Zheng Shang-Chi",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.AgentsOfAtlas, TeamNames.Avengers, TeamNames.FiveWeaponsSociety, TeamNames.HeroesForHire, TeamNames.Protectors],
+                Base = "Chinatown, New York City",
+                History =
+                [
+                    "As the son of the criminal mastermind Zheng Zu, Shang-Chi—who believed his father to be a good man—was trained from an early age to become the ultimate martial artist. When sent on a mission to assassinate one of his father’s enemies, he learned the truth and vowed to destroy his father’s criminal empire instead.",
+                    "After Zheng Zu’s death, Shang-Chi inherited his father’s position as the Supreme Commander of the Five Weapons Society. He also learned that his mother—Jiang Li—hailed from the pocket dimension Ta Lo, and that her father—Chieftain Xin—wanted to destroy Shang-Chi’s entire family and take possession of the mystical Ten Rings."
+                ],
+                Personality =
+                [
+                    "Shang-Chi is a loyal friend and a determined leader who works hard to refute his father’s criminal legacy. He regularly resists the temptations of power and respects the rule of law. Despite this, he tries to maintain a light and friendly demeanor.",
                 ]
             }
         },

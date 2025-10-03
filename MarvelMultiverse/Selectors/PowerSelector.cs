@@ -2588,6 +2588,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.RegainFocus,
+            Description = "The character takes a moment to fi nd their center.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.UnflappablePoise}, {PowerNames.UntouchablePosition}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "None",
+            Effect =
+            [
+                "The character recovers Focus equal to their Vigilance."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ReinforcedSkeleton,
             Description = "The character’s bones have been reinforced or replaced with a super-strong alloy or metal.",
             PowerSets = [],

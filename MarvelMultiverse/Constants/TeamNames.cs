@@ -25,6 +25,7 @@ public static class TeamNames
     public const string Eternals = "Eternals";
     public const string FantasticFour = "Fantastic Four";
     public const string FiskIndustries = "Fisk Industries";
+    public const string FiveWeaponsSociety = "Five Weapons Society";
     public const string FutureFoundation = "Future Foundation";
     public const string GoblinNation = "Goblin Nation";
     public const string GodsOfAsgard = "Gods of Asgard";
