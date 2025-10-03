@@ -20,6 +20,7 @@ public static class PowerNames
     public const string BodySheet = "Body Sheet";
     public const string BodySphere = "Body Sphere";
     public const string BoltsOfBalthakk = "Bolts of Balthakk";
+    public const string BounceBack = "Bounce Back";
     public const string BraceForImpact = "Brace for Impact";
     public const string Brawling = "Brawling";
     public const string Brilliance1 = "Brilliance 1";
@@ -32,6 +33,7 @@ public static class PowerNames
     public const string Cloak = "Cloak";
     public const string Clobber = "Clobber";
     public const string CloneMoves = "Clone Moves";
+    public const string CoilingCrush = "Coiling Crush";
     public const string CombatSupport = "Combat Support";
     public const string CombatTrickery = "Combat Trickery";
     public const string Command = "Command";
@@ -184,6 +186,7 @@ public static class PowerNames
     public const string Shrink4 = "Shrink 4";
     public const string ShrinkingDodge = "Shrinking Dodge";
     public const string ShutDownPowers = "Shut Down Powers";
+    public const string SlipFree = "Slip Free";
     public const string SlowMotionDodge = "Slow-Motion Dodge";
     public const string SlowMotionShootDodge = "Slow-Motion Shoot-Dodge";
     public const string Smash = "Smash";

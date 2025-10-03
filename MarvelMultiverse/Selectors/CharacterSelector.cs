@@ -6666,5 +6666,86 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Mister Fantastic",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 4, vigilance: 2, ego: 2, logic: 7
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Doctor Doom"),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "4 Yancy Street"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance4),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BodySheet),
+                        powerSelector.GetPower(PowerNames.BodySphere),
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.CoilingCrush),
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.FlexibleFingers),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.Rubberneck),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                        powerSelector.GetPower(PowerNames.StiltSteps),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Reed Richards",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [180],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown, gray",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.FantasticFour, TeamNames.FutureFoundation],
+                Base = "New York City",
+                History =
+                [
+                    "Brilliant young physicist Reed Richards gambled his family’s considerable fortune on an experimental space mission, during which he and his crew were bombarded by cosmic rays, giving them super-powers. Back on Earth, with Richards as their leader, the crew formed the Fantastic Four.",
+                    "Richards’ intellect is just as critical a component of his heroism as his powers. With eighteen separate doctorates, he is arguably the most brilliant scientist on the planet. Richards later married one of the crew—Susan Storm (Invisible Woman)— with whom he has two kids, and nothing is more important to him than his family and friends.",
+                ],
+                Personality =
+                [
+                    "Richards’ intense and calculating nature occasionally puts him at odds with his more outwardly emotional teammates, but at heart, he is a humanitarian. He believes that science has the potential to solve all of humanity’s problems, and nothing frustrates him more than an unsolvable problem.",
+                ]
+            }
+        },
     ];
 }

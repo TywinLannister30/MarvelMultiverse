@@ -290,7 +290,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.BoltsOfBalthakk,
             Description = "The character fires enchanted bolts of electricity from their fingers.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 2",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
             Range = "20 spaces",
@@ -298,6 +298,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego check with an edge against the Agility defense of a target in their line of sight. For this attack, add +1 to the character’s Ego damage bonus for every 2 points of Focus they spend. On a success, an a­ffected target takes that total damage. On a Fantastic success, an a­ffected target takes double that total damage and is stunned for one round.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.BounceBack,
+            Description = "The character bounces back from even the hardest falls.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.FlexibleBones1}, {PowerNames.SlipFree}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "The character takes damage from a fall or is knocked prone.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The fall doesn’t damage the character. If they are prone, they stand up. If they’d like, they can also jump a number of spaces, up to their Run Speed.",
             ]
         },
         new()
@@ -469,6 +484,22 @@ public class PowerSelector : IPowerSelector
             [
                 "The character picks another character within 10 spaces and in their line of sight and duplicates all their powers that could be selected with the Special Training origin. They can now use those powers as if they were always theirs. If the copied powers have costs, the character must pay the highest of them, or a minimum of 5 Focus.",
                 "When the character uses a copied power, they must pay any cost normally as well."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.CoilingCrush,
+            Description = "The character wraps around a target and crushes it.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = $"{PowerNames.ExtendedReach1}, {PowerNames.ReversePunch}, Rank 3",
+            Action = ActionType.Reaction,
+            Trigger = "The character grabs an enemy.",
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes a Melee attack. On a success, the enemy is paralyzed. On a Fantastic success, the enemy also takes regular damage. During the character’s subsequent turns, they can spend their movement action to make a Melee check against the enemy's Resilience. If this succeeds, they inflict regular Health damage. On a Fantastic success, they do double damage instead.",
+                "During the paralyzed enemy’s turn, they can make a Melee check against the character’s Melee defense to break free."
             ]
         },
         new()
@@ -2620,6 +2651,20 @@ public class PowerSelector : IPowerSelector
             [
                 "The character picks another character within 20 spaces and makes an Ego attack against them. On a success, they remove all of a target’s powers.",
                 "If the target’s powers have costs, the character must pay the highest of them, or a minimum of 15 Focus."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.SlipFree,
+            Description = "The character is impossible to restrain.",
+            PowerSets = [PowerSetNames.Plasticity],
+            Prerequsites = "None",
+            Action = ActionType.Reaction,
+            Trigger = "The character is grabbed or pinned.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character is not grabbed or pinned.",
             ]
         },
         new()
