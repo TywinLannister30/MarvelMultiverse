@@ -64,6 +64,7 @@ public static class TeamNames
     public const string SecretAvengers = "Secret Avengers";
     public const string SHIELD = "S.H.I.E.L.D.";
     public const string SinisterSix = "Sinister Six";
+    public const string SkrullEmpire = "Skrull Empire";
     public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";
