@@ -52,6 +52,7 @@ public static class TeamNames
     public const string MidnightSons = "Midnight Sons";
     public const string MightyAvengers = "Mighty Avengers";
     public const string NewMutants = "New Mutants";
+    public const string NineteenFiftyNineAvengers = "1959 Avengers";
     public const string PantherCult = "Panther Cult";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
     public const string PowerElite = "Power Elite";
@@ -65,6 +66,7 @@ public static class TeamNames
     public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";
+    public const string TeamX = "Team X";
     public const string TerribleTrio = "Terrible Trio";
     public const string TheHand = "The Hand";
     public const string TheHouseOfAgon = "The House of Agon";

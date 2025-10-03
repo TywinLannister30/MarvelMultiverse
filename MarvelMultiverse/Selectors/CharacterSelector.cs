@@ -64,6 +64,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersP());
         allCharacters.AddRange(GetAllCharactersQ());
         allCharacters.AddRange(GetAllCharactersR());
+        allCharacters.AddRange(GetAllCharactersS());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -8714,6 +8715,103 @@ public class CharacterSelector(
                 Personality =
                 [
                     "A hulking mass of a warrior, Ronan demands respect from those around him, and any show of disrespect can cause him to erupt in a murderous rage. His proud loyalty to the Kree people outweighs his ferocious nature, though, and he tends to look down on those from “lesser races.”",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersS() =>
+    [
+        new()
+        {
+            Name = "Sabretooth (Victor Creed)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 6, vigilance: 4, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Victor Creed",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [275],
+                Gender = Gender.Male,
+                Eyes = "Amber",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Muttonchops, long canines, claws, slitted pupils",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechCybernetics, OriginName.Mutant],
+                Teams = [TeamNames.NineteenFiftyNineAvengers, TeamNames.BrotherhoodOfEvilMutants, TeamNames.TheHand, TeamNames.Marauders, TeamNames.TeamX, TeamNames.XFactor],
+                Base = "Krakoa",
+                History =
+                [
+                    "Victor Creed’s father treated him like an animal as a child, keeping him chained in the basement of their home. Once freed, Creed entered a life of murder and betrayal that caused him to cross paths several times with Wolverine (Logan), often with fatal results for those around them, despite their many similarities.",
+                    "Magik killed Creed during the War of the Realms, but the mutants of Krakoa eventually brought him back to life. While on a mission for Krakoa, he killed a couple of humans, breaking one of Krakoa’s main laws, for which he was sentenced to being imprisoned inside Krakoa for life.",
+                ],
+                Personality =
+                [
+                    "Creed is vicious and callous, caring little for anyone but himself. He shows no mercy to those who dare cross his path. He likes to give into his animalistic nature and has never opted to take up any of the chances at redemption offered to him.",
                 ]
             }
         },
