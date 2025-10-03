@@ -57,7 +57,10 @@ public class Character
 
         Abilities.Vigilance.Defence = vigilanceDefence;
 
-        Abilities.Ego.Defence = egoDefence;
+        if (Powers.Any(x => x.Powers.Any(p => p.LogicInsteadOfEgoForDefence)))
+            Abilities.Ego.Defence = logicDefence;
+        else
+            Abilities.Ego.Defence = egoDefence;
 
         Abilities.Logic.Defence = logicDefence;
 

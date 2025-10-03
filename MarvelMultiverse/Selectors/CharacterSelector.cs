@@ -7633,5 +7633,64 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Night Nurse",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 1, vigilance: 1, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Iron Man's gloves (Elemental Burst: Energy)"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Integrity),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Linda Carter",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.HealthCareWorker],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "After being rescued by a costumed super hero, registered nurse Linda Carter decided to dedicate her medical talents to treating heroes who wished to keep their identities secret. To do so, she took on a secret identity of her own, calling herself the Night Nurse. She has helped numerous heroes over the years, including Captain America (Steve Rogers), Daredevil (Matt Murdock), Firestar, Iron Fist (Danny Rand), Luke Cage and Spider-Man (Peter Parker). She even dated Doctor Strange and Hawkeye (Clint Barton) in the past.",
+                    "In an effort to be more effective in her relatively unique position, Carter went back to school and obtained her medical degree to become a general practitioner. Despite that, she continues to use the codename Night Nurse. Her original clinic burned down, but she reopened in Chinatown.",
+                ],
+                Personality =
+                [
+                    "Carter is a dedicated doctor who cares deeply for her patients. She knows that she may be the only recourse many of them have for getting actual medical treatment without blowing their secret identities. Because this requires a deep level of trust, she takes their privacy as seriously as she takes her Hippocratic Oath.",
+                ]
+            }
+        },
     ];
 }

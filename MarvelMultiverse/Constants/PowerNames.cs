@@ -124,6 +124,7 @@ public static class PowerNames
     public const string Illumination = "Illumination";
     public const string InformationUpload = "Information Upload";
     public const string Inspiration = "Inspiration";
+    public const string Integrity = "Integrity";
     public const string Invisibility = "Invisibility";
     public const string ImagesOfIkonn = "Images of Ikonn";
     public const string Immovable = "Immovable";

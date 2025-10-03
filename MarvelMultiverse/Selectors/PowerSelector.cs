@@ -1802,6 +1802,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Integrity,
+            Description = "The character can think their way through.",
+            PowerSets = [],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can use their Logic defense score against Ego attacks too.",
+            ],
+            LogicInsteadOfEgoForDefence = true
+        },
+        new()
+        {
             Name = PowerNames.Invisibility,
             Description = "The character turns as transparent as glass.",
             PowerSets = [PowerSetNames.Illusion],
