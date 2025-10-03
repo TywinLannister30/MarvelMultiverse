@@ -1249,6 +1249,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.FocusedStrike,
+            Description = "The character finds the right spot and strikes.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.ChainStrikes}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 or more Focus",
+            Effect =
+            [
+                "The character makes a close attack. Add +1 to the character’s Melee damage bonus for every 2 points of Focus they spend. On a success, an a­ ected target takes that total damage. On a Fantastic success, an a­ ected target takes double that total damage and is stunned for one round."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.FuriousAttacks,
             Description = "The character’s weapons smash into the foe.",
             PowerSets = [PowerSetNames.MeleeWeapons],

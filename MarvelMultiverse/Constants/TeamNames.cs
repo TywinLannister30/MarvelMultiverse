@@ -11,13 +11,14 @@ public static class TeamNames
     public const string Avengers = "Avengers";
     public const string BlackOrder = "Black Order";
     public const string Champions = "Champions";
-    public const string ChampionsOfLosAngeles = "Champions of Los Angeles"
+    public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
     public const string DarkAvengers = "Dark Avengers";
     public const string DarkCouncil = "Dark Council";
     public const string DaughtersOfLiberty = "Daughters of Liberty";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";
     public const string DoraMilaje = "Dora Milaje";
+    public const string Eternals = "Eternals";
     public const string FantasticFour = "Fantastic Four";
     public const string FiskIndustries = "Fisk Industries";
     public const string FutureFoundation = "Future Foundation";
@@ -47,7 +48,6 @@ public static class TeamNames
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";
     public const string TerribleTrio = "Terrible Trio";
-    public const string TheEternals = "The Eternals";
     public const string TheHand = "The Hand";
     public const string TheHouseOfAgon = "The House of Agon";
     public const string Thunderbolts = "Thunderbolts";

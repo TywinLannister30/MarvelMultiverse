@@ -2,6 +2,7 @@
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -4918,7 +4919,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalPush),
                         powerSelector.GetPower(PowerNames.ElementalReinforcement),
                         powerSelector.GetPower(PowerNames.ElementalSphere),
-                        powerSelector.GetPower(PowerNames.ElementalSuffocation),
+                        powerSelector.GetPower(PowerNames.ElementalSuffocation),
                     ],
                 }
             ],
@@ -5037,7 +5038,7 @@ public class CharacterSelector(
                 DistinguishingFeatures = "None",
                 Occupations = [OccupationName.Leader, OccupationName.Outsider],
                 Origins = [OriginName.Eternal],
-                Teams = [TeamNames.TheEternals],
+                Teams = [TeamNames.Eternals],
                 Base = "Olympia",
                 History =
                 [
@@ -5137,6 +5138,85 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Coolheaded and compassionate, the Invisible Woman helps to balance out the more hotheaded and intense members of the Fantastic Four. However, she only lets the others push her so far before she emphasizes clear boundaries.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Iron Fist (Danny Rand)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 2, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Focused Strike"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.FocusedStrike),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                        powerSelector.GetPower(PowerNames.UnflappablePoise),
+                        powerSelector.GetPower(PowerNames.UntouchablePosition),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Daniel Thomas “Danny” Rand",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Dragon insignia on chest.",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic, OriginName.SpecialTraining],
+                Teams = [TeamNames.Defenders],
+                Base = "New York City",
+                History =
+                [
+                    "After his parents were murdered on an expedition to the Himalayas, Danny Rand inadvertently stumbled through a portal to the mystical city of K’un-Lun. The people of K’un-Lun adopted Danny and gave him extensive tutelage in the martial arts.",
+                    "After ten years of grueling training, Danny’s mentor sent him on a mission to defeat the evil serpent Shou-Lao. Narrowly beating the beast, Danny took hold of its molten heart, infusing his hands and body with mystical chi energies and assuming the title of Iron Fist. He left K’un-Lun, vowing to take vengeance upon the man who killed his parents and upon evildoers everywhere."
+                ],
+                Personality =
+                [
+                    "Danny Rand is a serious fi ghter prone to acting like a lone wolf. He is devoted to martial arts and despises nothing more than people who put such skills to evil uses. Years of living in NYC have tempered Danny’s demeanor. He’s allowed himself to develop a small group of friends and allies—including his best friend, Luke Cage— though he often still prefers to work alone.",
                 ]
             }
         },

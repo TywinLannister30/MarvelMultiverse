@@ -87,6 +87,7 @@ public static class PowerNames
     public const string FlyingDoubleKick = "Flying Double Kick";
     public const string FocusFire = "Focus Fire";
     public const string FocusedFury = "Focused Fury";
+    public const string FocusedStrike = "Focused Strike";
     public const string FuriousAttacks = "Furious Attacks";
     public const string GrapplingTechnique = "Grappling Technique";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
