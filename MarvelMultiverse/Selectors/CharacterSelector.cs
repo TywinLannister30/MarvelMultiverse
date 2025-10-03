@@ -7211,5 +7211,87 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Ms. Marvel (Kamala Khan)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 4, vigilance: 1, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Captain Marvel (Carol Danvers)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                        powerSelector.GetPower(PowerNames.StiltSteps),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                        powerSelector.GetPower(PowerNames.Shrink2),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kamala Khan",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.Inhuman],
+                Teams = [TeamNames.Champions, TeamNames.Protectors],
+                Base = "Jersey City",
+                History =
+                [
+                    "From a young age, Kamala Khan idolized Captain Marvel (Carol Danvers), who exemplifi ed a sort of uncomplicated femininity missing from Khan’s own life as the teenage daughter of Pakistani immigrants. One night, while sneaking out of her parents’ house to go to a party, Khan was exposed to a mysterious cloud of Terrigen Mist that activated the Inhuman DNA lurking in her system, giving her the power to grow, shrink and morph into whatever shape or appearance she pleased.",
+                    "Donning a costume of her own, Khan adopted Carol Danvers’ former alias and became the new Ms. Marvel. In short order, she met her idol Carol and even joined the Avengers, but she later left them to form the new teenage Champions.",
+                ],
+                Personality =
+                [
+                    "Khan is a lovable and friendly nerd and a natural leader. She’s also a teenager still trying to fi gure out the specifi cs of who she is, but she’s gradually becoming more confident in herself and her identity.",
+                ]
+            }
+        },
     ];
 }
