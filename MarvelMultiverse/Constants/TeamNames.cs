@@ -55,6 +55,7 @@ public static class TeamNames
     public const string PowerElite = "Power Elite";
     public const string ProjectGreenSpring = "Project Green Spring";
     public const string Protectors = "Protectors";
+    public const string SantaRosaSheriffsDepartment = "Santa Rosa Sheriff’s Department";
     public const string SavageAvengers = "Savage Avengers";
     public const string SecretAvengers = "Secret Avengers";
     public const string SHIELD = "S.H.I.E.L.D.";

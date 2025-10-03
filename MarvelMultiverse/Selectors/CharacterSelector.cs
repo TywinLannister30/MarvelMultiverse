@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System.Security.Cryptography;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -8341,6 +8342,93 @@ public class CharacterSelector(
                 Personality =
                 [
                     "In his day-to-day interactions with others, the Red Skull shows himself to be little more than a fascist zealot and a madman. Despite this, he is an expert propagandist who deftly recruits crowds of bigots.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Red Wolf",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 1, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: $"{PowerNames.AnimalCommunication}"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "Wolves"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Red Wolf",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.SantaRosaSheriffsDepartment],
+                Base = "Mobile",
+                History =
+                [
+                    "Red Wolf was born to a community of Cheyenne natives in the old west of an alternate universe (Earth-51920). As a young man, he was sent to destroy a dam in Timely, a settler community that was diverting water from Cheyenne lands. Red Wolf made a deal with the townsfolk of Timely: in exchange for the destruction of their dam, he would take down their corrupt mayor, Wilson Fisk. With the help of some locals, Red Wolf killed Fisk and became the town’s sheriff.",
+                    "Sometime later, Red Wolf fought a time-traveling super villain and wound up in the present day of Earth-616, where he has worked alongside Hawkeye (Clint Barton) and other heroes to help fi ght injustice.",
+                ],
+                Personality =
+                [
+                    "Red Wolf has a deep and abiding love for the communities he protects. While he enjoys his time in what he thinks of as the future—and especially the relationships he’s made there—he still wishes to return home.",
                 ]
             }
         },
