@@ -208,8 +208,14 @@ public static class PowerNames
     public const string SuppressiveFire = "Suppressive Fire";
     public const string SummonPortal = "Summon Portal";
     public const string TelekineticAttack = "Telekinetic Attack";
+    public const string TelekineticBarrier = "Telekinetic Barrier";
     public const string TelekineticGrab = "Telekinetic Grab";
     public const string TelekineticManipulation = "Telekinetic Manipulation";
+    public const string TelekineticProtection1 = "Telekinetic Protection 1";
+    public const string TelekineticProtection2 = "Telekinetic Protection 2";
+    public const string TelekineticProtection3 = "Telekinetic Protection 3";
+    public const string TelekineticProtection4 = "Telekinetic Protection 4";
+    public const string TelekineticSphere = "Telekinetic Sphere";
     public const string TelepathicBlast = "Telepathic Blast";
     public const string TelepathicLink = "Telepathic Link";
     public const string TelepathicNetwork = "Telepathic Network";

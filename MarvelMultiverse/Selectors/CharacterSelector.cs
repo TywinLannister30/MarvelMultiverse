@@ -6843,5 +6843,104 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "M.O.D.O.K.",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 2, resilience: 2, vigilance: 4, ego: 5, logic: 7
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticBarrier),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                        powerSelector.GetPower(PowerNames.TelekineticProtection2),
+                        powerSelector.GetPower(PowerNames.TelekineticSphere),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "George Tarleton",
+                Heights = [new() { Feet = 12 }],
+                Weights = [750],
+                Gender = Gender.Male,
+                Eyes = "White",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "Massive cranium",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.WeirdScience],
+                Teams = [TeamNames.AIM, TeamNames.Intelligencia],
+                Base = "Mobile",
+                History =
+                [
+                    "A low-level lab technician at Advanced Idea Mechanics, George Tarleton was forced by his superiors to undergo a dangerous mutagenic experiment so they could create a being intelligent enough to study the newly fashioned Cosmic Cube. To that end, A.I.M. scientists radically enlarged George’s head and placed his now-frail body into a weaponized hover chair.",
+                    "The mutated George immediately turned on and slaughtered his superiors. Dubbing himself M.O.D.O.K. (Mental Organism Designed Only for Killing), Tarleton took control of A.I.M. and set the organization to the task of sowing chaos everywhere."
+                ],
+                Personality =
+                [
+                    "Although a frequent ally of Hydra and the Red Skull, M.O.D.O.K.’s evil is born more out of madness and egomania than any political agenda. He only really enjoys himself while engaging in or plotting mass murder. On the rare occasions he isn’t killing, M.O.D.O.K. wears a perpetual sneer upon his face.",
+                ]
+            }
+        },
     ];
 }

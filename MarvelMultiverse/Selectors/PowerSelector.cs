@@ -2958,6 +2958,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.TelekineticBarrier,
+            Description = "The character forms a protective barrier with their mind.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticGrab}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "5 Focus",
+            Effect =
+            [
+                "The character forms an invisible barrier in their line of sight and up to 2 spaces away per rank. This covers up to 2 spaces across (vertically/horizontally) per their rank. The character makes a Logic check and compares the results against the Agility defense of any target in the a­ ected spaces. On a success, the character chooses which side of the barrier the target winds up on. On a failure, the target chooses. On a Fantastic success, the target is paralyzed for one round too.",
+                "Attacks on the barrier are against the character’s Logic defense. Any attacks on it that do 10 points of damage or less are instantly absorbed, and the barrier continues. If an attack does more than 10 points of damage, it destroys the barrier. Either way, the attack leaves those behind the barrier unharmed."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.TelekineticGrab,
             Description = "The character can grab a foe with their mind.",
             PowerSets = [PowerSetNames.Telekinesis],
@@ -2982,6 +2997,66 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character can manipulate objects in their line of sight with their mind. The maximum range for this is 5 spaces times the character’s rank. If someone tries to prevent the character from taking control of an object, the character makes a Logic check against the opponent’s Agility defense.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticProtection1,
+            Description = "The character uses their mind to physically protect themselves.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticBarrier}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character’s personal telekinetic field protects them. Any attacks against them that do 10 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 10 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticProtection2,
+            Description = "The character toughens their mind against physical damage.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticProtection1}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character’s personal telekinetic field protects them. Any attacks against them that do 20 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 20 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticProtection3,
+            Description = "The character’s mind protects them like a tank.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticProtection2}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character’s personal telekinetic field protects them. Any attacks against them that do 30 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 30 points of damage, it destroys the protection, allowing excess damage through.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticProtection4,
+            Description = "The character’s mind protects them like a fortress.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticProtection3}, Rank 5",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Concentration,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "The character’s personal telekinetic field protects them. Any attacks against them that do 40 points of damage or less are instantly absorbed, and the protection continues. If an attack does more than 40 points of damage, it destroys the protection, allowing excess damage through.",
             ],
         },
         new()
