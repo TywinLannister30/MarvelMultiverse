@@ -46,6 +46,7 @@ public static class TeamNames
     public const string MastersOfEvil = "Masters of Evil";
     public const string MercsForMoney = "Mercs for Money";
     public const string MI13 = "MI13";
+    public const string MidnightMission = "Midnight Mission";
     public const string MidnightSons = "Midnight Sons";
     public const string MightyAvengers = "Mighty Avengers";
     public const string NewMutants = "New Mutants";
