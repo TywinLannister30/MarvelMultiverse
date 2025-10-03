@@ -15,6 +15,7 @@ public static class TeamNames
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
     public const string DarkAvengers = "Dark Avengers";
     public const string DarkCouncil = "Dark Council";
+    public const string DarkElves = "Dark Elves";
     public const string DaughtersOfLiberty = "Daughters of Liberty";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";

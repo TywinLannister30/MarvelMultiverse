@@ -15,6 +15,7 @@ public static class OriginName
     public const string MagicSorcery = "Magic: Sorcery";
     public const string MonstrousVampire = "Monstrous: Vampire";
     public const string Mutant = "Mutant";
+    public const string Mythic = "Mythic";
     public const string MythicAsgardian = "Mythic: Asgardian";
     public const string SpecialTraining = "Special Training";
     public const string SpiritOfVengeance = "Spirit of Vengeance";
