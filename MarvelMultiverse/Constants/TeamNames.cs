@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace MarvelMultiverse.Constants;
+﻿namespace MarvelMultiverse.Constants;
 
 public static class TeamNames
 {
@@ -14,6 +12,7 @@ public static class TeamNames
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
+    public const string CIA = "C.I.A.";
     public const string DarkAvengers = "Dark Avengers";
     public const string DarkCouncil = "Dark Council";
     public const string DarkElves = "Dark Elves";

@@ -1,10 +1,6 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using System;
-using System.Reflection;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -62,6 +58,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersK());
         allCharacters.AddRange(GetAllCharactersL());
         allCharacters.AddRange(GetAllCharactersM());
+        allCharacters.AddRange(GetAllCharactersN());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -3604,7 +3601,6 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
                         powerSelector.GetPower(PowerNames.UntouchablePosition),
                     ],
-                    IsTech = true
                 },
                 new PowerSet
                 {
@@ -7364,6 +7360,276 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Mysterio has an undying flair for the theatrical. Rather than attacking his enemies directly, he prefers to trick them into hurting themselves, or otherwise gaslight them into insanity. Years of media coverage have only heightened his delusions of grandeur. He might be persuaded to give up crime if he could be assured that he would still be famous.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Mystique",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 2, vigilance: 3, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in true form"),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Czech, English, Farsi, French, German, Korean, Portuguese, Spanish, Swedish"),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Raven Darkhölme",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [120],
+                Gender = Gender.Female,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "Her true form has blue skin and yellow eyes",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.HellfireClub, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "No one, save perhaps Raven Darkhölme herself, knows the true origins of Mystique. She has existed in some form or another for well over a hundred years. Before the turn of the previous century, she worked extensively with the precognitive mutant Irene Adler, who later became Destiny—and her wife.",
+                    "In modern times, Mystique fi rst surfaced as a minor member of the Brotherhood of Evil Mutants, but circumstances quickly forced her to switch sides and join the X-Men. In the years since, she’s regularly fl ip-fl opped, sometimes working as a hero and other times as a villain. Her shape-shifting powers make her a perfect spy or double agent."
+                ],
+                Personality =
+                [
+                    "Mystique’s abnormally long life has granted her a world-weary coolheadedness her younger teammates could never achieve. Unfortunately, her jaded instincts frequently drive her down the path to villainy. She is happy to ignore ethics if she believes that doing so is for the betterment of mutants.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersN() =>
+    [
+        new()
+        {
+            Name = "Nebula",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 4, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Sniping),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nebula",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [185],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "Blue and purple skin, cyborg",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.Graces],
+                Base = "Mobile",
+                History =
+                [
+                    "As the daughter of Zorr the Conqueror (a Luphomoid warlord) and the granddaughter of Thanos, Nebula was always destined for battle. Thanos raised her alongside her adopted sister, Gamora, who was clearly Thanos’ favorite. When she set out on her own as a conqueror, she destroyed the planet Xandar, home of the Nova Corps. She later thwarted Thanos’ plan to kill all living creatures in the universe, but she suffered such horrible injuries that much of her body had to be replaced with cybernetics. This includes a cybernetic eye and a cybernetic arm that fi res energy bursts.",
+                    "Nebula’s hatred for Gamora knows few bounds. Given the chance, she would kill her sister in a heartbeat, and she has tried to do so many times. So far, she hasn’t managed to succeed, but their rivalry seems doomed to end in one of their deaths.",
+                ],
+                Personality =
+                [
+                    "Nebula is cold-hearted, manipulative and murderous. She has no qualms about destroying entire planets to get what she wants, but she also knows that most things require a more delicate touch. She can be as brutal with her words as she is with her weapons.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Nick Fury Jr.",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 2, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nicholas Joseph “Nick” Fury Jr.",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "Eyepatch covers a lost left eye",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.CIA, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Born of a secret love affair between spies Nick Fury and Nia Jones, Marcus Johnson spent his youth not knowing who his father was. Imbued from birth with strength and vitality beyond the human norm, Johnson made a name for himself as an elite soldier. In time, heinous villains discovered Johnson’s parentage and began targeting him for the Infi nity Formula lurking in his blood, but with the help of S.H.I.E.L.D. operatives— including his own father—Johnson fought off his pursuers.",
+                    "Adopting the name of Nick Fury Jr., he followed in his heroic father’s footsteps and became an agent of S.H.I.E.L.D. With the dissolution of that organization, he retreated to the shadows, where he works to save humanity as a freelance spy, an agent of nothing.",
+                ],
+                Personality =
+                [
+                    "Years of combat have molded Nick Fury Jr. into a steel-headed, no-nonsense operator. However, he is not above cracking a joke or two while on the job.",
                 ]
             }
         },
