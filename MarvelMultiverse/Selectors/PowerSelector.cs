@@ -2074,6 +2074,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Levitation,
+            Description = "The character can hover and move.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can move through the air in any direction at their Run Speed."
+            ],
+            LevitationSpeed = true
+        },
+        new()
+        {
             Name = PowerNames.LightningActions,
             Description = "The character has lightning-fast moves.",
             PowerSets = [PowerSetNames.SuperSpeed],

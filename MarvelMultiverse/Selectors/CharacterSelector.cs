@@ -9796,5 +9796,125 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Star-Lord",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 5, vigilance: 4, ego: 3, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Linguist, reminder: "translator implant"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection, reminder: "space helmet", isTech: true),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Element Gun [Can pick elemental effect from air, earth, fire, water, or energy; returns when summoned]"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Element Gun"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Element Gun"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Element Gun"),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Illumination),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Levitation),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter Jason Quill",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Glowing left eye (formerly cybernetic), sun tattoo on right hand",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.GuardiansOfTheGalaxy, TeamNames.UnitedFront],
+                Base = "Mobile",
+                History =
+                [
+                    "Quill grew up without a father, unaware that his mother, Meredith Quill, had conceived him during an affair with a humanoid alien named J’son, the heir to the interstellar Spartax Empire. As a young adult, he worked as a NASA mechanic, but after being fired, he stole a Kree space ship and escaped to the stars. The space pirates known as the Ravagers found him stranded in space, and their leader, Yondu, allowed him to join their crew. He eventually turned against them and set out on his own, calling himself Star-Lord.",
+                    "Quill learned of his father’s identity but refused to join him and rule Spartax. Instead, he helped defeat the massive galactic threats mounted by both Annihilus and then Ultron, after which he formed a group of adventurers known as the Guardians of the Galaxy. Quill recently gained the title Master of the Sun (along with some new powers) and spent over a hundred years adventuring in another dimension before returning to his home reality.",
+                    "In addition to his powers, Quill carries the Element Gun (which allows him to fi re different elements), and he wears a space helmet that protects him in outer space, provides him with air to breathe, and allows him to remotely pilot a linked starship."
+                ],
+                Personality =
+                [
+                    "Quill is a natural leader who exudes confi dence, even when it’s unjustifi ed. He thinks of himself as a principled thief, an outlaw with standards. Despite his disdain for rulers, when he found himself elected as the first president of Spartax, he rose to the occasion—until he was ousted and became an outlaw again.",
+                    "Quill is often wracked with guilt over the mistakes he’s made, some of which have cost hundreds of thousands of lives, but he does his best to cover those with his bravado and his natural charm. Time has helped heal those wounds."
+                ]
+            }
+        },
     ];
 }

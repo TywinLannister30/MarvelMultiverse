@@ -159,6 +159,11 @@ public class Character
                 Speed.Jump = baseSpeed * Rank;
         }
 
+        if (Powers.Any(x => x.Powers.Any(p => p.LevitationSpeed)))
+        {
+            Speed.Levitation = baseSpeed;
+        }
+
         if (Powers.Any(x => x.Powers.Any(p => p.SwinglineSpeed)))
         {
             Speed.Swingline = baseSpeed * 3;

@@ -85,6 +85,9 @@ public class Power : ICloneable
     public bool JumpSpeedMultipliedByRank { get; set; }
 
     [JsonIgnore]
+    public bool LevitationSpeed { get; set; }
+
+    [JsonIgnore]
     public bool RunSpeedMultipliedByRank { get; set; }
 
     [JsonIgnore]
@@ -129,6 +132,7 @@ public class Power : ICloneable
             GlideSpeed = this.GlideSpeed,
             JumpSpeed = this.JumpSpeed,
             JumpSpeedMultipliedByRank  = this.JumpSpeedMultipliedByRank,
+            LevitationSpeed = this.LevitationSpeed,
             RunSpeedMultipliedByRank = this.RunSpeedMultipliedByRank,
             SwinglineSpeed = this.SwinglineSpeed,
             InitiativeEdge = this.InitiativeEdge,

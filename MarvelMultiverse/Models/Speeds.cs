@@ -16,5 +16,7 @@ public class Speeds
 
     public int Glide { get; set; }
 
+    public int Levitation { get; set; }
+
     public int Swingline { get; set; }
 }
