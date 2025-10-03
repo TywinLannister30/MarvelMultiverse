@@ -255,6 +255,49 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Blink,
+            Description = "The character teleports a short distance away.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = "None",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character teleports into a clear space they can see or have been to, up to their rank in spaces away. If someone was about to attack them and they are now out of reach or line of sight, the attack automatically fails. If they are still within reach or line of sight, the attack has trouble instead."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.BlinkBarrage,
+            Description = "The character teleports rapidly around an opponent.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Blink}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Movement}",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character teleports several times in quick succession and winds up in a clear space they can see or have been to, up to their rank in spaces away. Any attacks have trouble against them for one round."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.BlinkDefense,
+            Description = "The character teleports a short distance away.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Blink}, Rank 3",
+            Action = ActionType.Reaction,
+            Trigger = "The character or an ally within reach is the subject of a ranged attack.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character pops away just as the attack reaches them and then pops back into the same space, leaving the projectile behind. The character makes an Ego check with an edge against the attacker’s Agility check result. On a success, the projectile from the attack is teleported away, someplace safe. On a Fantastic success, the attack is turned against the attacker, using the Ego check the character just made as the attack check."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Blur,
             Description = "The character moves like a blur!",
             PowerSets = [PowerSetNames.SuperSpeed],
@@ -3233,6 +3276,47 @@ public class PowerSelector : IPowerSelector
                 "If the character attempts to harm the possessed body, the target gets an edge on the check. If the target has the Heroic tag, they get a double edge.",
                 "This power can also be used to transfer the character’s mind into an empty-minded target—like a fresh clone or android—permanently. This requires no check, as there is"
             ],
+        },
+        new()
+        {
+            Name = PowerNames.Teleport1,
+            Description = "The character teleports someplace else.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Blink}",
+            Action = $"{ActionType.Standard} or {ActionType.Movement}",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character teleports into a clear space they can see or have been to, up to 10 times their rank in spaces away. Outside of combat, they can teleport up to 100 times their rank in spaces away."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Teleport2,
+            Description = "The character teleports great distances.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Teleport1}",
+            Action = $"{ActionType.Standard} or {ActionType.Movement}",
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character teleports into a clear space they can see or have been to, up to 10 times their rank in spaces away. Outside of combat, they can teleport up to 1,000 times their rank in spaces away."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.TeleportObject,
+            Description = "The character can teleport something else with them.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Teleport1}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Permanent,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character can teleport along with them an object within reach as far away as their Teleport power normally allows them.",
+                "The object (and things attached to or inside of it) can be up to their rank in sizes bigger than them. For example, if they are Rank 4, the object can be up to four sizes bigger than them."
+            ]
         },
         new()
         {

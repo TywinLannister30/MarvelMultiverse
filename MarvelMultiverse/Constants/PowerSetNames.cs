@@ -40,6 +40,7 @@ public class PowerSetNames
     public const string SuperStrength = "Super-Strength";
     public const string SuperSpeed = "Super-Speed";
     public const string Tactics = "Tactics";
-    public const string Telepathy = "Telepathy";
     public const string Telekinesis = "Telekinesis";
+    public const string Telepathy = "Telepathy";
+    public const string Teleportation = "Teleportation";
 }

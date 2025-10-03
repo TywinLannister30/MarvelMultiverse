@@ -17,6 +17,9 @@ public static class PowerNames
     public const string BangingHeads = "Banging Heads";
     public const string BattlePlan = "Battle Plan";
     public const string BlazingFastFists = "Blazing-Fast Fists";
+    public const string Blink = "Blink";
+    public const string BlinkBarrage = "Blink Barrage";
+    public const string BlinkDefense = "Blink Defense";
     public const string Blur = "Blur";
     public const string BodySheet = "Body Sheet";
     public const string BodySphere = "Body Sphere";
@@ -227,6 +230,9 @@ public static class PowerNames
     public const string TelepathicLink = "Telepathic Link";
     public const string TelepathicNetwork = "Telepathic Network";
     public const string TelepathicPossession = "Telepathic Possession";
+    public const string Teleport1 = "Teleport 1";
+    public const string Teleport2 = "Teleport 2";
+    public const string TeleportObject = "Teleport Object";
     public const string TimePortal = "Time Portal";
     public const string TimeTravel = "Time Travel";
     public const string TimeTravelTogether = "Time Travel Together";

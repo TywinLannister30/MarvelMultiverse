@@ -7692,5 +7692,87 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Nightcrawler",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 2, vigilance: 2, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "English, German, Japanese, Russian, Spanish"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AlwaysReady),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.BlinkBarrage),
+                        powerSelector.GetPower(PowerNames.BlinkDefense),
+                        powerSelector.GetPower(PowerNames.Teleport1),
+                        powerSelector.GetPower(PowerNames.TeleportObject),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kurt Wagner",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [161],
+                Gender = Gender.Male,
+                Eyes = "Yellow",
+                Hair = "Blue",
+                Size = Size.Average,
+                DistinguishingFeatures = "Mutant with demonic appearance",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Abandoned in the Alps by his mutant parents, the future Nightcrawler was adopted by traveling Romani performers. His incredible agility and bizarre appearance made him a star circus performer. Sadly, this life did not last. He was on the verge of being burned at the stake by an angry mob when psychic Professor X intervened and saved his life.",
+                    "The grateful Nightcrawler agreed to become a part of the X-Men, and he’s been a hero to the mutant community ever since. He was one of the fi rst to join the new mutant government in Krakoa."
+                ],
+                Personality =
+                [
+                    "Kurt Wagner numbers among the kindest and most heroic people ever to join the X-Men. Despite having long left the circus behind, he’s never lost his carnie spirit and fights his battles with a smile on his face. A highly religious man, Nightcrawler acts as a spiritual and moral guide to his fellow mutants.",
+                ]
+            }
+        },
     ];
 }
