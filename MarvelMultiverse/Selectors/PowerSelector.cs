@@ -2368,13 +2368,28 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.SenseSupernatural,
             Description = "The character can sense the supernatural.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = $"None",
+            Prerequsites = "None",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
             Effect =
             [
                 "The character can reach out with their mind to sense the presence of supernatural people, places or things within 100 spaces per rank. This tells them the location of the supernatural thing and its general status.",
                 "If a target or targets wish to remain undetected, the character must make an Ego check and compare it against each target’s Vigilance defense. If they succeed, they sense the target. On a Fantastic success, they can also identify if the target is cursed or demonic."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.ShapeShift,
+            Description = "The character can change forms.",
+            PowerSets = [],
+            Prerequsites = $"{PowerNames.Disguise}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked or otherwise in danger.",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can change into another form no more than one size bigger or smaller than their regular form.",
+                "When in any form, the character has access to the natural abilities of that form. For instance, if they transformed into a bird, they could fly. When transformed into a fish, they can breathe water."
             ]
         },
         new()
