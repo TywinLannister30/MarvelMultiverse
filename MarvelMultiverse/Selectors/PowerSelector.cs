@@ -1305,6 +1305,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Fool,
+            Description = "The character makes people believe they are someone else.",
+            PowerSets = [PowerSetNames.Telepathy],
+            Prerequsites = $"{PowerNames.TelepathicLink}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character uses a mirage to alter their appearance in the minds of anyone within 20 spaces per rank. Cameras (for instance) can still record them normally, but when people look in the character’s direction, they see someone else.",
+                "The target number for anyone trying to see through the mirage is the character’s Logic defense. If the character is impersonating someone known to the other person, that person has an edge."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.FuriousAttacks,
             Description = "The character’s weapons smash into the foe.",
             PowerSets = [PowerSetNames.MeleeWeapons],
