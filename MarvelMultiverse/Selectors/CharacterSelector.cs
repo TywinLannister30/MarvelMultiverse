@@ -57,6 +57,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersH());
         allCharacters.AddRange(GetAllCharactersI());
         allCharacters.AddRange(GetAllCharactersJ());
+        allCharacters.AddRange(GetAllCharactersK());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -5465,6 +5466,90 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Marko and Xavier have slowly managed to repair their relationship, and in recent years, the Juggernaut has been more often a force for good than evil. Although a bit dense by nature, Marko has shown surprising moments of intelligence and humility. The main thing that still manages to set him off is Xavier, who struggles to fully trust him.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersK() =>
+    [
+        new()
+        {
+            Name = "Kate Pryde",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 2, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Magical Attacks"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "English, Japanese, Russian, Shi’ar, Skrullos"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Phasing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DisruptElectronics),
+                        powerSelector.GetPower(PowerNames.DisruptNerves),
+                        powerSelector.GetPower(PowerNames.DisruptPerson),
+                        powerSelector.GetPower(PowerNames.PartialPhase),
+                        powerSelector.GetPower(PowerNames.PhaseObject),
+                        powerSelector.GetPower(PowerNames.PhaseOther),
+                        powerSelector.GetPower(PowerNames.PhaseSelf),
+                        powerSelector.GetPower(PowerNames.PhaseWalk),
+                        powerSelector.GetPower(PowerNames.QuickPhase),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Katherine Anne “Kate” Pryde",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [110],
+                Gender = Gender.Female,
+                Eyes = "Hazel",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Knuckle tattoos",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.HellfireTradingCompany, TeamNames.Marauders, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "When she was 13, Kate Pryde discovered that her recurring migraines were in fact a byproduct of her developing mutant powers. With intense concentration, she found she could phase through solid matter. She was quickly whisked away to Professor Xavier’s School for Gifted Youngsters, and she’s been an important member of the X-Men ever since.",
+                    "For mysterious reasons, Pryde has been cut off from many of the powers provided by the mutant homeland in Krakoa. Regardless of this setback, she remains a critical member of the Krakoan government and the leader of the Marauders."
+                ],
+                Personality =
+                [
+                    "Pryde numbers among the most charming and friendly people, let alone mutants, on the planet. She has an uncanny knack for connecting with others, even those as gruff as Wolverine (Logan).",
                 ]
             }
         },

@@ -660,13 +660,55 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.DispelSpell,
             Description = "The character puts an end to a foe’s magic.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 4",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 4",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
             Cost = "15 Focus",
             Effect =
             [
                 "The character makes an Ego check against the Ego defense of a target using a magic power that requires concentration. On a success, the target’s concentration on that power is broken. On a Fantastic success, the target’s concentration is broken entirely."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.DisruptElectronics,
+            Description = "The character can scramble electronics by moving through them.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "When phasing through electronics, the character can scramble them, causing them to either shut down or crash. In the case of powers that are Tech Reliant (and feature electronics), they are unusable for one turn while they reboot."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.DisruptNerves,
+            Description = "The character can scramble someone’s nervous system.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "When phasing through a person, the character can attempt to scramble their nervous system. The character makes an Ego check against the target’s Resilience defense. On a success, the target is stunned for one round. On a Fantastic success, the target also falls prone."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.DisruptPerson,
+            Description = "The character can hurt someone with their phasing powers.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character becomes the slightest bit solid while phasing themselves or a phased weapon through someone. They make a close attack. On a success, the attack does normal damage, ignoring any Health Damage Reduction. On a Fantastic success, the attack does double damage instead, ignoring any Health Damage Reduction, and the target is stunned for one round."
             ],
         },
         new()
@@ -2050,6 +2092,37 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.PhaseObject,
+            Description = "The character can make something they’re touching intangible.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can make any object they are touching intangible. The object (and things attached to or inside of it) can be up to their rank in sizes bigger than them. For example, if they are Rank 5, the object can be 5 sizes bigger than them. For an average person, this would be Gargantuan.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.PhaseOther,
+            Description = "The character can phase someone they are touching.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can make any person (and their clothing) they are touching intangible. The character can also phase any people the initial person is touching or grabbing. People the character has phased remain tangible to each other.",
+                "If the target does not wish to be phased, the character must grab them first. When contact is broken, the phasing for those no longer in contact with the character (even indirectly) ends.",
+                "If a person is inside something when they stop phasing, they are automatically pushed out of it but take damage from the disruption equal to a standard action check. The damage multiplier is 1 for every space they must move to reach a clear area. If this kills them, their body is trapped inside the material they were phased into."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.PhaseSelf,
             Description = "The character can become as intangible as a ghost.",
             PowerSets = [PowerSetNames.Phasing],
@@ -2059,6 +2132,19 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character (and their clothing) becomes intangible and can move through anything as if it wasn’t there. Nothing can physically a­ ect them, nor can they a­ ect anything else that is not phasing along with them.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.PhaseWalk,
+            Description = "The character can walk on air.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 2",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "When phasing, the character can move freely in any direction through anything—not just air, but also water, buildings and so on—at their Run Speed. The character can take anything or anyone they are phasing along with them.",
             ],
         },
         new()
@@ -2090,6 +2176,21 @@ public class PowerSelector : IPowerSelector
                 "The character takes magical control of a vehicle they are inside of or touching. Hellfire engulfs the outside of the vehicle, but it does no damage to it. Anyone that comes into contact with it, though, takes regular damage with a damage multiplier equal to the character’s rank. On a Fantastic success, it inflicts regular Health damage and regular Focus damage instead.",
                 "The character controls the vehicle by will, as long as it is within 20spaces times the character’s rank. They use their Ego for all checks to operate it, and they get an edge on all such checks.",
                 "The vehicle’s speed doubles. It can climb walls at this speed and can even make jumps at that same speed."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.QuickPhase,
+            Description = "The character can become as intangible as a ghost.",
+            PowerSets = [PowerSetNames.Phasing],
+            Prerequsites = $"{PowerNames.PhaseSelf}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character and their clothing can instantly become intangible.",
             ],
         },
         new()

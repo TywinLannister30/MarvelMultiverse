@@ -46,6 +46,9 @@ public static class PowerNames
     public const string Discipline4 = "Discipline 4";
     public const string Disguise = "Disguise";
     public const string DispelSpell = "Dispel Spell";
+    public const string DisruptElectronics = "Disrupt Electronics";
+    public const string DisruptNerves = "Disrupt Nerves";
+    public const string DisruptPerson = "Disrupt Person";
     public const string DoThisAllDay = " Do This All Day";
     public const string Domination = "Domination";
     public const string DoubleTap = "Double Tap";
@@ -144,9 +147,13 @@ public static class PowerNames
     public const string Orders = "Orders";
     public const string PartialPhase = "Partial Phase";
     public const string PenanceStare = "Penance Stare";
+    public const string PhaseObject = "Phase Object";
+    public const string PhaseOther = "Phase Other";
     public const string PhaseSelf = "Phase Self";
+    public const string PhaseWalk = "Phase Walk";
     public const string PointBlankParry = "Point-Blank Parry";
     public const string PossessVehicle = "Possess Vehicle";
+    public const string QuickPhase = "Quick Phase";
     public const string QuickToss = "Quick Toss";
     public const string RallyOnMe = "Rally on Me";
     public const string ReinforcedSkeleton = "Reinforced Skeleton";
