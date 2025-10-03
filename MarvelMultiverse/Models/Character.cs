@@ -57,7 +57,10 @@ public class Character
         else
             Abilities.Ego.Defence = egoDefence;
 
-        Abilities.Logic.Defence = logicDefence;
+        if (Powers.Any(x => x.Powers.Any(p => p.EgoInsteadOfLogicForDefence)))
+            Abilities.Logic.Defence = egoDefence;
+        else
+            Abilities.Logic.Defence = logicDefence;
 
         if (Biography.Size == Size.Huge)
         {

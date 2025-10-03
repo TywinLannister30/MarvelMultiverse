@@ -4017,6 +4017,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Wisdom,
+            Description = "The character not only has brains but knows when to use them.",
+            PowerSets = [],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can use their Ego defense score against Logic attacks too.",
+            ],
+            EgoInsteadOfLogicForDefence = true
+        },
+        new()
+        {
             Name = PowerNames.Wisecracker,
             Description = "The character irritates a foe with their sharp wit.",
             PowerSets = [],
