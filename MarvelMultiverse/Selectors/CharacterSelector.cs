@@ -10520,5 +10520,202 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Thor (Jane Foster)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 4, vigilance: 3, ego: 3, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+                traitSelector.GetTrait(TraitNames.GodHeritage, reminder: "via Mjolnir"),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Gorr the God Butcher"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped, reminder: "as Thor"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon, 
+                            specialization: "Mjolnir [+1 Melee and Agility damage multiplier. Returns to thrower. Can only be wielded by the worthy.]",
+                            meleeDamageModifier: 1,
+                            agilityDamageModifier: 1),
+
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.WeatherControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ControlFog),
+                        powerSelector.GetPower(PowerNames.ControlWeather4),
+                        powerSelector.GetPower(PowerNames.Thunder),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jane Foster",
+                Heights = [new() { Feet = 5, Inches = 7 }, new() { Feet = 5, Inches = 9 }],
+                Weights = [135, 450],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown/blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.HealthCareWorker],
+                Origins = [OriginName.MythicAsgardian, OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers],
+                Base = "New York City, Asgard",
+                History =
+                [
+                    "Jane Foster served as a nurse for Doctor Donald Blake, the alter ego of Thor Odinson, with whom she fell in love. Thor’s father, Odin, separated them, though, and Foster went on to become a doctor herself, as well as a wife and mother. She later divorced her husband, who retained custody of their son.",
+                    "While Foster battled breast cancer, Thor Odinson lost the ability to use his magic hammer, Mjolnir. The hammer reached out to Foster, who took possession of it and gained the power of Thor. Odinson gave his blessing and approved of Foster using the name Thor. Becoming Thor purged Foster’s body of the chemotherapy drugs fighting her cancer, though and aftr a series of adventures that nearly killed her, she gave up being Thor and succesfully fought her cancer. She later became a Valkyrie to help shepherd the souls of dead heroes to Valhalla.",
+                ],
+                Personality =
+                [
+                    "Foster is smart, capable and determined, able to stand up to Asgardian gods. Life has not always been kind to her, but she’s survived it all and come out more independent and capable than ever.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Thor (Thor Odinson)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 4, resilience: 8, vigilance: 2, ego: 5, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Clueless),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Gorr the God Butcher"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            specialization: "Mjolnir [+1 Melee and Agility damage multiplier. Returns to thrower. Can only be wielded by the worthy.]",
+                            meleeDamageModifier: 1,
+                            agilityDamageModifier: 1),
+
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.WeatherControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ControlWeather4),
+                        powerSelector.GetPower(PowerNames.Thunder),
+                        powerSelector.GetPower(PowerNames.WeatherChill),
+                        powerSelector.GetPower(PowerNames.WeatherWarm),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Thor Odinson",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [640],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader, OccupationName.Outsider],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.Avengers, TeamNames.GodsOfAsgard, TeamNames.GodSquad],
+                Base = "Asgard",
+                History =
+                [
+                    "As the son of Odin—ruler of the Asgardian gods— Thor was destined for greatness. Raised alongside his adopted brother, Loki—the God of Mischief— Thor had many adventures as a youth. When Odin realized Thor needed to learn humility, he erased Thor’s memories and sent him to Earth as medical student Donald Blake. After learning his lesson, he recovered his powers and memories, and served both Asgard and Earth as Thor. After Thor (and a number of variants) defeated Malekith in the War of the Realms, he became the new All-Father of Asgard. Ruling over his people does not suit the thunder god, well as he prefers to be an active hero instead.",
+                ],
+                Personality =
+                [
+                    "Thor can be grim when faced with his responsibilities, but he feels most himself when given something he can strike with his enchanted hammer, Mjolnir—preferably a worthy foe. There is little he enjoys more than a drink a\u0097 er a wellfought battle. Despite all his time on Earth—and in America—he still speaks with an Asgardian accent and often in an old-fashioned way.",
+                ]
+            }
+        },
     ];
 }

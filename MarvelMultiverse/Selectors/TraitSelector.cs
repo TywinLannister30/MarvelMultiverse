@@ -120,6 +120,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Clueless,
+            Effect =
+            [
+                "The character tends to shut out things they’re not entirely focused on. They have trouble on any Vigilance checks to spot hidden or invisible things. Enemies have an edge on Agility checks to sneak near or past them.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.CombatExpert,
             Effect =
             [

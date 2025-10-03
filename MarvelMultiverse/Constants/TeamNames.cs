@@ -31,6 +31,7 @@ public static class TeamNames
     public const string GoblinNation = "Goblin Nation";
     public const string GodsOfAsgard = "Gods of Asgard";
     public const string GodsOfWakanda = "Gods of Wakanda";
+    public const string GodSquad = "God Squad";
     public const string Graces = "Graces";
     public const string GreatLakesAvengers = "Great Lakes Avengers";
     public const string GreatRingOfArakko = "Great Ring of Arakko";

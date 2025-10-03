@@ -14,6 +14,7 @@ public static class TraitNames
     public const string Bloodthirsty = "Bloodthirsty";
     public const string BreatheDifferent = "Breathe Different";
     public const string Clinician = "Clinician";
+    public const string Clueless = "Clueless";
     public const string CombatExpert = "Combat Expert";
     public const string CombatReflexes = "Combat Reflexes";
     public const string Connections = "Connections";
