@@ -788,6 +788,19 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ElementalForm,
+            Description = "The character’s body is made of their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalReinforcement}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character’s body is made entirely of their element, which gives them a steady supply of their element to use and makes them essentially unkillable. When they lose all their Health, their form loses its cohesion and falls apart. When they have at least 1 Health—which they can gain back over time, normally— they can re-form.",
+                "If the character wishes to use their elemental body in unusual ways, they should pick Plasticity powers. If they wish to be able to be fully human at times, they should take the Shape-Shift power."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.ElementalInfusion,
             Description = "The character infuses a weapon with their element.",
             PowerSets = [PowerSetNames.ElementControl],
@@ -798,6 +811,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character infuses their energy into a handheld weapon in their grasp. When the character gets a Fantastic success attacking with the weapon, add the energy’s special e­ffect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.ElementalPrison,
+            Description = "The character can create a cage of their element.",
+            PowerSets = [PowerSetNames.ElementControl],
+            Prerequsites = $"{PowerNames.ElementalProtection1}",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "Same as the character’s Elemental Protection power",
+            Effect =
+            [
+                "The character picks a point within their line of sight and traps any chosen targets within up to 5 spaces times their rank—in a prison comprised of their element. When the Elemental Prison is formed, the character makes an Ego check and compares the results against the Agility defense of targets inside the enclosed spaces. On each success, the character traps the target within the prison’s perimeter. On a Fantastic success, such imprisoned people su­ffer full damage and the element’s special e­ffect too.",
+                "Attacks against the prison are against the character’s Ego defense. Any attacks against the prison are absorbed as if made against the character’s Elemental Protection power, and the prison continues. If an attack does more damage than the character’s Elemental Protection power can sustain, it destroys the prison, but no one inside is harmed."
             ],
         },
         new()

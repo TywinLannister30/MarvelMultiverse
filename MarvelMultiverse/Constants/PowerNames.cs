@@ -54,7 +54,9 @@ public static class PowerNames
     public const string ElementalBarrier = "Elemental Barrier";
     public const string ElementalBlast = "Elemental Blast";
     public const string ElementalBurst = "Elemental Burst";
+    public const string ElementalForm = "Elemental Form";
     public const string ElementalInfusion = "Elemental Infusion";
+    public const string ElementalPrison = "Elemental Prison";
     public const string ElementalProtection1 = "Elemental Protection 1";
     public const string ElementalProtection2 = "Elemental Protection 2";
     public const string ElementalProtection3 = "Elemental Protection 3";

@@ -4713,5 +4713,89 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Human Torch (Johnny Storm)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 3, vigilance: 4, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Doctor Doom"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "4 Yancy Street"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalPrison),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jonathan Lowell Spencer “Johnny” Storm",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.FantasticFour],
+                Base = "New York City",
+                History =
+                [
+                    "As an ambitious young test pilot, Johnny Storm was invited aboard an experimental space mission led by his older sister Sue’s boyfriend, Reed Richards. Shortly after takeoff , Storm and the crew were bombarded by cosmic rays, granting them each fantastical abilities. Together, they formed the Fantastic Four and vowed to use their new powers for the good of all humanity.",
+                    "As the Human Torch, Storm has control over the forces of heat and flame. He can spontaneously burst into flames, shoot fire from his hands, fly and even assume an ultra-hot nova form in times of great need."
+                ],
+                Personality =
+                [
+                    "While good at heart, Johnny Storm has always been a natural hothead. It doesn’t help that as the youngest member of the Fantastic Four, he has a hard time being taken seriously by his fellow adventurers. Part of that might arise from the fact that he delights in teasing and playing pranks on his older and grumpier teammate, the Thing.",
+                ]
+            }
+        },
     ];
 }
