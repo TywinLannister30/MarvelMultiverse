@@ -7293,5 +7293,79 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Mysterio (Quentin Beck)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 0, resilience: 1, vigilance: 2, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "(2) Grand Illusion, Mirror Images"),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimatedIllusion),
+                        powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.GrandIllusion),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                        powerSelector.GetPower(PowerNames.MirrorImages),
+                        powerSelector.GetPower(PowerNames.StaticIllusion),
+                    ],
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Quentin Beck",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "A special effects designer of extraordinary skill, Quentin Beck grew frustrated with the lack of recognition he received from the public. Feeling that his expertise could be put to more profi table uses, he assumed the title of Mysterio, master illusionist, and began a life of crime.",
+                    "Unfortunately, all of Mysterio’s earliest schemes were foiled by Spider-Man (Peter Parker), and his plans gradually became less about profi t and more about revenge. He has appeared to have been killed numerous times—and others have sometimes temporarily taken his place—but he has always managed to return from the grave."
+                ],
+                Personality =
+                [
+                    "Mysterio has an undying flair for the theatrical. Rather than attacking his enemies directly, he prefers to trick them into hurting themselves, or otherwise gaslight them into insanity. Years of media coverage have only heightened his delusions of grandeur. He might be persuaded to give up crime if he could be assured that he would still be famous.",
+                ]
+            }
+        },
     ];
 }

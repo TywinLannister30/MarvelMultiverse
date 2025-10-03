@@ -174,6 +174,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.AnimatedIllusion,
+            Description = "By manipulating visual light, the character creates a moving hologram.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.StaticIllusion}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character creates a visual-only illusion anywhere in line of sight, within 50 spaces. The illusion can be anything up to four sizes larger than the character, and it can move freely within its limits. The character breaks concentration if they move beyond 50 spaces from the illusion or lose line of sight to it.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.AstralForm,
             Description = "The character can enter the Astral Plane.",
             PowerSets = [PowerSetNames.Magic, PowerSetNames.Telepathy],
@@ -632,6 +646,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Agility check and compares that against the Agility defense of every enemy within 5 spaces and in their line of sight. Each success does half the regular damage. On a Fantastic success, each enemy takes full damage instead and is bleeding.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Dazzle,
+            Description = "The character blasts a blinding light into the face of their foe.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.Illumination}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes an Ego check against an enemy in their line of sight and compares that against the target’s Vigilance defense. If the attack is a success, the enemy is blinded for 1 turn. On a Fantastic success, it also inflicts regular damage.",
+                "Alternatively, the character can blind the victim with darkness."
             ]
         },
         new()
@@ -1395,6 +1424,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.GrandIllusion,
+            Description = "By manipulating light and sound, the character creates an incredibly real hologram.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.AnimatedIllusion}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character creates a sound and sight illusion anywhere in line of sight, within 50 spaces. The illusion can be of anything up to fi ve sizes larger than the character, and it can move freely within its limits. The character breaks concentration if they move beyond 50 spaces from the illusion or lose line of sight of it.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.GrandMirage,
             Description = "The character can make a mirage appear in a group’s mind.",
             PowerSets = [PowerSetNames.Telepathy],
@@ -2035,6 +2078,21 @@ public class PowerSelector : IPowerSelector
             [
                 "The character creates a full-sensory mirage that a­ffects any target with whom they have established a link. The mirage can be of anything the character desires, and it can move freely.",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.MirrorImages,
+            Description = "The character conjures up illusory duplicates of themselves.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.AnimatedIllusion}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character creates one sound and sight illusory duplicate of themselves per rank. The duplicates look and sound exactly like them and are under their complete control. They start in the same space as the character and instantly move into any open space around them, up to 2 spaces away, during which time the character can swap places with any of the duplicates. The character’s player should secretly record which one is the actual character.",
+                "The duplicates can move up to 2 spaces away from the character, and they can pretend to attack (and miss) opponents. Any attack that hits a duplicate instantly removes it. If the character successfully attacks someone or does something else to make the truth evident, the illusion ends."
+            ]
         },
         new()
         {
@@ -2834,6 +2892,20 @@ public class PowerSelector : IPowerSelector
                 "The character makes a Melee attack against the grabbed foe. If the attack is a success, the enemy takes regular damage and is knocked prone. On a Fantastic success, the enemy takes double damage and is knocked prone, pinned and stunned for one round.",
                 "Either way, the character can move the enemy to any open space within reach."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.StaticIllusion,
+            Description = "By manipulating visual light, the character creates a realistic hologram.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.Illumination}",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character creates a visual-only illusion anywhere in line of sight, within 50 spaces. The illusion can be of anything up to three sizes larger than the character, but it must be static. The character breaks concentration if they move beyond 50 spaces from the illusion or lose line of sight of it.",
+            ]
         },
         new()
         {

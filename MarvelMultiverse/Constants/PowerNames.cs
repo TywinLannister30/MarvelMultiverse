@@ -11,6 +11,7 @@ public static class PowerNames
     public const string Anger = "Anger";
     public const string AnimalBond = "Animal Bond";
     public const string AnimalCommunication = "Animal Communication";
+    public const string AnimatedIllusion = "Animated Illusion";
     public const string AstralForm = "Astral Form";
     public const string AttackStance = "Attack Stance";
     public const string BangingHeads = "Banging Heads";
@@ -43,6 +44,7 @@ public static class PowerNames
     public const string CrushingGrip = "Crushing Grip";
     public const string DampenPower = "Dampen Power";
     public const string DanceOfDeath = "Dance of Death";
+    public const string Dazzle = "Dazzle";
     public const string DefenseStance = "Defense Stance";
     public const string Discipline1 = "Discipline 1";
     public const string Discipline2 = "Discipline 2";
@@ -97,6 +99,7 @@ public static class PowerNames
     public const string FocusedStrike = "Focused Strike";
     public const string Fool = "Fool";
     public const string FuriousAttacks = "Furious Attacks";
+    public const string GrandIllusion = "Grand Illusion";
     public const string GrandMirage = "Grand Mirage";
     public const string GrapplingTechnique = "Grappling Technique";
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
@@ -143,6 +146,7 @@ public static class PowerNames
     public const string MindInterrogation = "MindInterrogation";
     public const string MindReading = "Mind Reading";
     public const string Mirage = "Mirage";
+    public const string MirrorImages = "Mirror Images";
     public const string MistsOfMorpheus = "Mists of Morpheus";
     public const string MistsOfMunnopor = "Mists of Munnopor";
     public const string MultiversalPortal = "Multiversal Portal";
@@ -199,6 +203,7 @@ public static class PowerNames
     public const string SpiderSense = "Spider-Sense";
     public const string SpiderStrike = "Spider-Strike";
     public const string SpinAndThrow = "Spin & Throw";
+    public const string StaticIllusion = "Static Illusion";
     public const string StiltSteps = "Stilt Steps";
     public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";
