@@ -2,6 +2,7 @@
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using System;
+using System.Reflection;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -7016,6 +7017,197 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Lafayette is a fun-loving kid with a strong sense of justice. She loves exploration and experimentation as much as she hates bullies. Lafayette will go far out of her way to stop people from pushing others around. The only bullies she has trouble standing up to are her own.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Moon Knight",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 3, vigilance: 2, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Crescent-Darts (knife or thrown knife)"),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Truncheon (club)"),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Marc Spector",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Investigator, OccupationName.Military],
+                Origins = [OriginName.Mythic],
+                Teams = [TeamNames.Defenders, TeamNames.MidnightMission, TeamNames.MidnightSons],
+                Base = "New York City",
+                History =
+                [
+                    "Brutally beaten by his superiors for attempting to save the life of an innocent young woman, mercenary Marc Spector was left for dead in the Egyptian desert. Unconscious, Spector’s spirit was visited by Khonshu, the ancient Egyptian god of the moon, who struck a deal with the dying man. In exchange for entering into the lunar deity’s benevolent service, Khonshu saved Spector’s life and granted him divine powers. Donning a white costume, Spector declared himself Moon Knight and set out on a quest to make up for his muddled past as a mercenary.",
+                ],
+                Personality =
+                [
+                    "On account of being partially possessed by a god, Spector suffers from a condition similar to dissociative identity disorder. His main alter egos are cabbie Jake Lockley and fi nancier Steven Grant. While Spector is a decent guy who regrets his life as a mercenary and wishes to atone for his actions, he is sometimes motivated—at least partially by Khonshu (or the version of Khonshu in his head)—to use extreme methods as Moon Knight.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Morbius",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 3, vigilance: 1, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Monster),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.LeechLife),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Michael Morbius",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Pale skin, fangs, retractable claws",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.MidnightSons, TeamNames.LegionOfMonsters],
+                Base = "Mobile",
+                History =
+                [
+                    "In a desperate bid to save himself from a terminal blood condition, Dr. Michael Morbius subjected himself to an experimental treatment using vampire bat DNA. The treatment saved Morbius’ life but transformed him into a hideous vampire. Horrified by his insatiable lust for blood, Morbius attempted to throw himself into the sea only to discover that his new form was seemingly unkillable. Forced to live, Morbius embarked on a blood-fueled rampage across New York.",
+                    "In the years since, Morbius has found temporary cures for his condition, but he lives in constant fear of reverting into a bloodsucking monster.",
+                ],
+                Personality =
+                [
+                    "Highly eloquent and intelligent, Morbius still cares for those he left behind in his human life. In his more lucid moments, he does his best to redirect his feeding instincts toward violent criminals, particularly those who would do his loved ones harm.",
                 ]
             }
         },
