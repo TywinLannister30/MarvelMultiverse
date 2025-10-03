@@ -56,6 +56,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersG());
         allCharacters.AddRange(GetAllCharactersH());
         allCharacters.AddRange(GetAllCharactersI());
+        allCharacters.AddRange(GetAllCharactersJ());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -5304,6 +5305,88 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Stark is one of the smartest, wealthiest and most famous people on Earth, something that can make him both arrogant and sarcastic. He’s all too aware of his shortcomings and tries to temper his sharp tongue, especially around his longtime friends, to whom he is extremely loyal.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersJ() =>
+    [
+        new()
+        {
+            Name = "Jessica Jones",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 3, vigilance: 2, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Harlem Apartment"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jessica Campbell Jones",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [124],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Investigator],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Defenders],
+                Base = "New York City",
+                History =
+                [
+                    "Jessica Campbell’s entire family was killed when their car hit a truck carrying dangerous radioactive chemicals. Jessica survived, but the chemicals gave her super-powers. Adopted by a new family, she changed her last name to Jones and began fighting crime as the costumed hero Jewel, but after being captured and mind-controlled by the Purple Man for months, she hung up her mask.",
+                    "Jones later opened up Alias Investigations, a forprofit P.I. firm, using her powers to help people— but without a costume. She has since married her love Luke Cage, with whom she has a little girl, Danielle."
+                ],
+                Personality =
+                [
+                    "Jones’ hard life has made her more than a little world-weary, but despite her travails she remains a strongly caring person. She may work for profit, but still she strives to deliver the best possible outcomes for her clients, going out of her way to ensure that they get the justice they pay for.",
                 ]
             }
         },
