@@ -190,6 +190,7 @@ public static class PowerNames
     public const string SpiderDodge = "Spider-Dodge";
     public const string SpiderSense = "Spider-Sense";
     public const string SpiderStrike = "Spider-Strike";
+    public const string SpinAndThrow = "Spin & Throw";
     public const string StiltSteps = "Stilt Steps";
     public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";

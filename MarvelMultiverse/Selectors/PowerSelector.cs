@@ -2702,6 +2702,22 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.SpinAndThrow,
+            Description = "The character throws a grabbed foe to the ground.",
+            PowerSets = [PowerSetNames.MartialArts],
+            Prerequsites = $"{PowerNames.GrapplingTechnique}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy the character can pick up is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a Melee attack against the grabbed foe. If the attack is a success, the enemy takes regular damage and is knocked prone. On a Fantastic success, the enemy takes double damage and is knocked prone, pinned and stunned for one round.",
+                "Either way, the character can move the enemy to any open space within reach."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.StiltSteps,
             Description = "The character can stretch their legs like extendable stilts.",
             PowerSets = [PowerSetNames.Plasticity],
