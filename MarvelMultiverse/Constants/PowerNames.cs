@@ -129,6 +129,7 @@ public static class PowerNames
     public const string Illumination = "Illumination";
     public const string InformationUpload = "Information Upload";
     public const string Inspiration = "Inspiration";
+    public const string InstantReplay = "Instant Replay";
     public const string Integrity = "Integrity";
     public const string Invisibility = "Invisibility";
     public const string ImagesOfIkonn = "Images of Ikonn";
@@ -156,6 +157,7 @@ public static class PowerNames
     public const string MirrorImages = "Mirror Images";
     public const string MistsOfMorpheus = "Mists of Morpheus";
     public const string MistsOfMunnopor = "Mists of Munnopor";
+    public const string MolecularDestabilization = "Molecular Destabilization";
     public const string MultiversalPortal = "Multiversal Portal";
     public const string MultiversalTravel = "Multiversal Travel";
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
@@ -181,6 +183,7 @@ public static class PowerNames
     public const string RicoShield = "Rico-Shield";
     public const string Riposte = "Riposte";
     public const string Rubberneck = "Rubberneck";
+    public const string RunOnWater = "Run on Water";
     public const string SenseSins = "Sense Sins";
     public const string SenseSupernatural = "Sense Supernatural";
     public const string ShapeShift = "Shape-Shift";
@@ -204,6 +207,7 @@ public static class PowerNames
     public const string Smash = "Smash";
     public const string SnapShooting = "Snap Shooting";
     public const string Sniping = "Sniping";
+    public const string SpeedBlast = "Speed Blast";
     public const string SpeedRun1 = "Speed Run 1";
     public const string SpeedRun2 = "Speed Run 2";
     public const string SpiderDodge = "Spider-Dodge";
@@ -236,6 +240,7 @@ public static class PowerNames
     public const string Teleport1 = "Teleport 1";
     public const string Teleport2 = "Teleport 2";
     public const string TeleportObject = "Teleport Object";
+    public const string TimeOut = "Time Out";
     public const string TimePortal = "Time Portal";
     public const string TimeTravel = "Time Travel";
     public const string TimeTravelTogether = "Time Travel Together";

@@ -76,6 +76,7 @@ public static class TeamNames
     public const string USHulkOperations = "U.S. Hulk Operations";
     public const string WebWarriors = "Web-Warriors";
     public const string XMen = "X-Men";
+    public const string XFactor = "X-Factor";
     public const string XForce = "X-Force";
     public const string YoungAvengers = "Young Avengers";
 }

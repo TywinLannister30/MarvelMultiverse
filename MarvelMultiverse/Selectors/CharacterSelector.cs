@@ -61,6 +61,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersN());
         allCharacters.AddRange(GetAllCharactersO());
         allCharacters.AddRange(GetAllCharactersP());
+        allCharacters.AddRange(GetAllCharactersQ());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -8139,6 +8140,107 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Although the traumatic events of her past have filled Kwannon with some deep-seated anger and resentment, she retains a cool head for battle. She’s an effective tactical leader, and she’s well trained in focusing her fury at those who most deserve it.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersQ() =>
+    [
+        new()
+        {
+            Name = "Quicksilver",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 7, resilience: 3, vigilance: 4, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelTime,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.InstantReplay),
+                        powerSelector.GetPower(PowerNames.TimeOut),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BlazingFastFists),
+                        powerSelector.GetPower(PowerNames.Blur),
+                        powerSelector.GetPower(PowerNames.CatchBullets),
+                        powerSelector.GetPower(PowerNames.LightningActions),
+                        powerSelector.GetPower(PowerNames.MolecularDestabilization),
+                        powerSelector.GetPower(PowerNames.RunOnWater),
+                        powerSelector.GetPower(PowerNames.SpeedBlast),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Pietro Django Maximoff",
+                Heights = [new() { Feet = 6 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Silver",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.BrotherhoodOfEvilMutants, TeamNames.XFactor],
+                Base = "Mobile",
+                History =
+                [
+                    "As infants, Pietro Maximoff and his twin sister, Wanda, were subjected to dangerous experiments, and as they aged, they began to exhibit strange powers. Pietro developed superhuman speed, while Wanda developed powerful magic. Superstitious villagers were about to kill the twins when Magneto saved them and invited them to join his Brotherhood of Evil Mutants as Quicksilver and the Scarlet Witch.",
+                    "The twins later renounced such evil and became early members of the Avengers. Like the Scarlet Witch, Quicksilver is a hero at heart. He cares deeply for his sister and is ready to give his life to defend her, and he considers his work as a hero a form of atonement for the years he spent living as a terrorist.",
+                ],
+                Personality =
+                [
+                    "Due to his powers, Quicksilver is often impatient with others to the point of condescension, and he can come across as humorless. When he’s able to cut loose, though, he smiles with joy.",
                 ]
             }
         },

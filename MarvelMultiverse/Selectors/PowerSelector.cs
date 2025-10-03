@@ -1875,6 +1875,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.InstantReplay,
+            Description = "The character rewinds time.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = "Rank 3",
+            Action = ActionType.Reaction,
+            Trigger = "The character fails a check.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "Once per battle, the character can make a second attempt at a check that they just failed, erasing and replacing the first attempt entirely.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Integrity,
             Description = "The character can think their way through.",
             PowerSets = [],
@@ -2220,7 +2235,21 @@ public class PowerSelector : IPowerSelector
             [
                 "The character creates a thick fog for up to 100 spaces per rank around them that blocks all line of sight beyond 10 spaces and keeps people or creatures inside it from flying, gliding or webslinging.",
             ],
-        }, 
+        },
+        new()
+        {
+            Name = PowerNames.MolecularDestabilization,
+            Description = "The character causes something to vibrate fast enough to explode.",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = $"{PowerNames.SpeedRun2}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes a close attack against an object their size or smaller. If the attack is a success, the object explodes. All targets within 2 spaces of the object— other than the character—take regular damage. On a Fantastic success, double the damage and ignore any Health Damage Reduction.",
+            ],
+        },
         new()
         {
             Name = PowerNames.MultiversalPortal,
@@ -2584,6 +2613,18 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.RunOnWater,
+            Description = "The character can run across water.",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = $"{PowerNames.SpeedRun2}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character can run so that their feet skip across the surface of water. As long as they keep running (even in place), they do not sink.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.SenseSins,
             Description = "The character can look into a person’s soul.",
             PowerSets = [PowerSetNames.Magic],
@@ -2906,6 +2947,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes a ranged attack against an enemy at least 20 spaces away. If the attack is a success, the enemy takes regular damage. On a Fantastic success, the enemy takes triple damage instead."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.SpeedBlast,
+            Description = "The character fans their arms fast enough to blast a target with a gust of air!",
+            PowerSets = [PowerSetNames.SuperSpeed],
+            Prerequsites = $"{PowerNames.SpeedRun2}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack. If it succeeds, the target is stunned for one round. On a Fantastic success, the character is knocked prone too.",
             ],
         },
         new()
@@ -3360,6 +3416,22 @@ public class PowerSelector : IPowerSelector
                 "The character can teleport along with them an object within reach as far away as their Teleport power normally allows them.",
                 "The object (and things attached to or inside of it) can be up to their rank in sizes bigger than them. For example, if they are Rank 4, the object can be up to four sizes bigger than them."
             ]
+        },
+        new()
+        {
+            Name = PowerNames.TimeOut,
+            Description = "The character and allies step out of time.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.TimeOut}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character or an ally is attacked.",
+            Duration = $"{Duration.OneRound} per rank",
+            Cost = "15 Focus per round",
+            Effect =
+            [
+                "The character freezes time for everyone but themselves. During this period, they can act normally while everyone else seems to be frozen in place. The character can choose to activate the power for the maximum duration or choose to stop at any time. However long, they must pay the Focus cost for each round.",
+                "For example, a Rank 6 character uses Time-Out as an action and pays 30 Focus to activate it for two rounds. They can take their normal number of actions, reactions and movement, while the other characters cannot take any actions, reactions or movements until after the two rounds end."
+            ],
         },
         new()
         {
