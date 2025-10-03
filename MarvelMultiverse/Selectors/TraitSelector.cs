@@ -104,6 +104,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.BreatheDifferent,
+            Effect =
+            [
+                "The character cannot breathe Earth’s air for long. They lose 1 point of Health for every minute they do not have some sort of assistance to allow them to breathe properly.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Clinician,
             Effect =
             [

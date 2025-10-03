@@ -32,6 +32,7 @@ public static class TeamNames
     public const string HellfireTradingCompany = "Hellfire Trading Company";
     public const string HeroesForHire = "Heroes for Hire";
     public const string Hydra = "Hydra";
+    public const string ImperialKreeAmy = "Imperial Kree Amy";
     public const string InfinityWatch = "Infinity Watch";
     public const string Intelligencia = "Intelligencia";
     public const string IntergalacticCouncil = "Intergalactic Council";
