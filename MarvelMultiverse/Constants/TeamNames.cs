@@ -101,6 +101,7 @@ public static class TeamNames
     public const string Triads = "Triads";
     public const string SkeletonCrew = "Skeleton Crew";
     public const string Ultimates = "Ultimates";
+    public const string Underground = "Underground";
     public const string UnitedFront = "United Front";
     public const string UniversalInhumans = "Universal Inhumans";
     public const string USAirForce = "U.S. Air Force";

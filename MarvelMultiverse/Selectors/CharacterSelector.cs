@@ -7729,6 +7729,89 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Inhuman Royal Guard",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 2, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Inhumans)"),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Inhuman],
+                Teams = [TeamNames.InhumanRoyalGuard],
+                Base = "New Attilan",
+                History =
+                [
+                    "The Inhuman Royal Guard has existed in one form or another since the dawn of the Inhuman monarchy itself. For thousands of years, they have been charged with the protection and preservation of the Royal Family. It is a duty that most of its members treat with deadly importance.",
+                    "The Royal Guard has always been led by off shoots of the Royal Family itself. The most recent commander of the guard was Gorgon Petragon, cousin to both the king and the queen. The few who have obtained signifi cant ranks within the Royal Guard have earned the privilege of direct proximity to ultimate power. Inhuman children grow up dreaming of gaining so much as a temporary position within the guard’s lowliest ranks.",
+                    "Early incarnations of the guard wielded spears and swords, and on ceremonial occasions the modern guard has been known to return to these implements. However, when out and about on duty, members of the current guard carry energy pistols and wear suits of gray cyber-armor. They are crack shots who shoot fi rst and ask questions later.",
+                ],
+                Personality =
+                [
+                    "While the leaders of the Royal Guard have distinct and boisterous personalities, the rankand- fi le members of the institution are often indistinguishable from normal humans. Some of them have undergone Terrigenesis and acquired low-level super-powers, but many others have chosen to forgo the mists and strengthen themselves in more traditional ways.",
+                    "When in the presence of royalty, members of the guard are expected to maintain complete and reverent silence. Much of a guard’s regular duties can be summed up in a single sentence: stand still and look intimidating."
+                ],
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Invisible Woman",
             Rank = 4,
             Abilities = new Abilities
@@ -7833,7 +7916,7 @@ public class CharacterSelector(
                 traitSelector.GetTrait(TraitNames.Determination),
                 traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
                 traitSelector.GetTrait(TraitNames.Fearless),
-                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Focused Strike"),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.FocusedStrike),
             ],
             Tags =
             [
@@ -7895,6 +7978,97 @@ public class CharacterSelector(
                     "Danny Rand is a serious fi ghter prone to acting like a lone wolf. He is devoted to martial arts and despises nothing more than people who put such skills to evil uses. Years of living in NYC have tempered Danny’s demeanor. He’s allowed himself to develop a small group of friends and allies—including his best friend, Luke Cage— though he often still prefers to work alone.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Iron Fist (Lin Lie)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 2, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.FocusedStrike),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Iron Fist (Danny Rand)"),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Shang-Chi"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FocusedStrike),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lin Lie",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Dragon insignia on right arm.",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic, OriginName.SpecialTraining],
+                Teams = [TeamNames.AgentsOfAtlas],
+                Base = "Mobile",
+                History =
+                [
+                    "One year after Lin Lie’s father and brother mysteriously disappeared, Lie was attacked at his home in Shanghai by a deliveryman—who turned out to be one of the demons who had kidnapped his missing kin. In a last-ditch effort to ward off the hellish creature, Lie took hold of his father’s old sword and lashed out. To his surprise, the demon disappeared.",
+                    "The blade once belonged to Fu Xi, one of China’s three legendary sovereigns, and as Xi’s descendant, Lie was one of a select few who could wield it against demons. Determined to save his family, Lie took on the codename of Sword Master and embarked on a global demon-killing spree.",
+                    "After months of adventures, Lie fi nally encountered a demon he could not defeat. This fearsome creature shattered the legendary blade, embedding the shards within Lie’s body. He would have perished had it not been for the intervention of the dragon spirit Shou-Lao. The serpent imbued Lie with chi power, transforming him into the latest incarnation of Iron Fist.",
+                    "Lie’s search for his family continues, but now he must juggle that quest with the responsibility of being the new Iron Fist."
+                ],
+                Personality =
+                [
+                    "In his heart, Lin Lie is still just a kid from Shanghai. He is young and insecure and constantly questions whether he deserves the power he has been given. Only with the constant support of those around him has Lie been able to build and maintain the confidence to carry on.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -7982,6 +8156,87 @@ public class CharacterSelector(
                     "Stark is one of the smartest, wealthiest and most famous people on Earth, something that can make him both arrogant and sarcastic. He’s all too aware of his shortcomings and tries to temper his sharp tongue, especially around his longtime friends, to whom he is extremely loyal.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Ironheart (Riri Williams)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 3, vigilance: 2, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Tony Stark"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection, isTech: true),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Riri Williams",
+                Heights = [new() { Feet = 5, Inches = 2 }],
+                Weights = [100],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Engineer],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.Champions, TeamNames.Underground],
+                Base = "Mobile",
+                History =
+                [
+                    "As a shy kid from the south side of Chicago, Riri Williams had few prospects and even fewer friends. However, as a certifi ed child genius, Williams earned a full ride to M.I.T. at the age of 11. Lacking the skills to make friends there—and surrounded by students twice her age—her fi rst two years at the institute passed uneventfully. She withdrew into her studies, rarely speaking to anyone save for her parents and her childhood friend Natalie Washington.",
+                    "In the summer of her sophomore year, Williams’ social circle shrank even further when both her stepfather and Natalie were killed in a senseless drive-by shooting. Determined to avenge the deaths of her loved ones, Williams built a battle suit in the style of Iron Man (Tony Stark). Her escapades in this initial prototype drew the attention and admiration of Stark himself, who offered Williams the mentorship and resources she needed to build a new suit and become a fullfledged super hero.",
+                    "As Ironheart, Williams has everything she ever wanted, including the opportunities to make friends. She often fights as part of the Champions, a team of young super heroes ready to help save the world."
+                ],
+                Personality =
+                [
+                    "As a young girl, Williams could not have been any more timid and awkward, but as she matured into a young adult, she learned how to speak her mind with confi dence. As such, she’s made friends both within the super hero community and without. What little free time she has she spends listening to hip-hop and poring over circuit diagrams.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
     ];
 
