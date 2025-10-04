@@ -15,7 +15,7 @@ public class OriginController(IOriginManager originManager) : ControllerBase
     }
 
     [HttpGet("name")]
-    public ActionResult<List<Origin>> GetNames()
+    public ActionResult<List<string>> GetNames()
     {
         return Ok(originManager.GetAllNames());
     }

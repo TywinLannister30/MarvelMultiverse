@@ -15,7 +15,7 @@ public class OccupationController(IOccupationManager occupationManager) : Contro
     }
 
     [HttpGet("name")]
-    public ActionResult<List<Occupation>> GetNames()
+    public ActionResult<List<string>> GetNames()
     {
         return Ok(occupationManager.GetAllNames());
     }
