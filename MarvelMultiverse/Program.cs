@@ -11,11 +11,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<ICharacterSelector, CharacterSelector>();
+builder.Services.AddTransient<IOriginSelector, OriginSelector>();
 builder.Services.AddTransient<IPowerSelector, PowerSelector>();
 builder.Services.AddTransient<ITagSelector, TagSelector>();
 builder.Services.AddTransient<ITraitSelector, TraitSelector>();
 
 builder.Services.AddTransient<ICharacterManager, CharacterManager>();
+builder.Services.AddTransient<IOriginManager, OriginManager>();
 
 
 var app = builder.Build();

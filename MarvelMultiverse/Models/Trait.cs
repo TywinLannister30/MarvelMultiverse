@@ -1,9 +1,15 @@
-﻿using System.Text.Json.Serialization;
+﻿using MarvelMultiverse.Constants;
+using System.Text.Json.Serialization;
 
 namespace MarvelMultiverse.Models;
 
 public class Trait: ICloneable
 {
+    public Trait()
+    {
+        Source = BookSource.Core;
+    }
+
     public string Name { get; set; }
 
     public List<string> Effect { get; set; }
@@ -28,6 +34,8 @@ public class Trait: ICloneable
     [JsonIgnore]
     public bool InitiativeEdge { get; set; }
 
+    public string Source {  get; set; }
+
     public object Clone()
     {
         return new Trait
@@ -39,7 +47,8 @@ public class Trait: ICloneable
             AgilityDefenceModifier = this.AgilityDefenceModifier,
             FocusModifier = this.FocusModifier,
             RunSpeedModifier = this.RunSpeedModifier,
-            InitiativeEdge = this.InitiativeEdge
+            InitiativeEdge = this.InitiativeEdge,
+            Source = this.Source
         };
     }
 }

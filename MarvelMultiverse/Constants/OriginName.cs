@@ -4,8 +4,10 @@ public static class OriginName
 {
     public const string Alien = "Alien";
     public const string AlienKree = "Alien: Kree";
+    public const string AlienShiar = "Alien: Shi’ar";
     public const string AlienSkrull = "Alien: Skrull";
     public const string Atlantean = "Atlantean";
+    public const string Deviant = "Deviant";
     public const string Eternal = "Eternal";
     public const string HighTech = "High Tech";
     public const string HighTechAndroid = "High Tech: Android";
@@ -17,10 +19,13 @@ public static class OriginName
     public const string MagicChaosMagic = "Magic: Chaos Magic";
     public const string MagicDemonic = "Magic: Demonic";
     public const string MagicSorcery = "Magic: Sorcery";
+    public const string Monstrous = "Monstrous";
     public const string MonstrousVampire = "Monstrous: Vampire";
+    public const string MonstrousWerewolf = "Monstrous: Werewolf";
     public const string Mutant = "Mutant";
     public const string Mythic = "Mythic";
     public const string MythicAsgardian = "Mythic: Asgardian";
+    public const string MythicOlympian = "Mythic: Olympian";
     public const string SpecialTraining = "Special Training";
     public const string SpiritOfVengeance = "Spirit of Vengeance";
     public const string Symbiote = "Symbiote";

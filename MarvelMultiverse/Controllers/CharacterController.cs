@@ -6,25 +6,18 @@ namespace MarvelMultiverse.Controllers;
 
 [Route("api/v1/[controller]")]
 [ApiController]
-public class CharacterController : ControllerBase
+public class CharacterController(ICharacterManager characterManager) : ControllerBase
 {
-    private readonly ICharacterManager _characterManager;
-
-    public CharacterController(ICharacterManager characterManager)
-    {
-        _characterManager = characterManager;
-    }
-
     [HttpGet]
     public ActionResult<List<Character>> Get()
     {
-        return Ok(_characterManager.GetAll());
+        return Ok(characterManager.GetAll());
     }
 
     [HttpGet("{name}")]
     public ActionResult<Character> GetSingle(string name)
     {
-        var character = _characterManager.Get(name);
+        var character = characterManager.Get(name);
 
         if (character == null) return NotFound("No character found.");
 

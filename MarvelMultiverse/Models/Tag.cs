@@ -1,9 +1,15 @@
-﻿using System.Text.Json.Serialization;
+﻿using MarvelMultiverse.Constants;
+using System.Text.Json.Serialization;
 
 namespace MarvelMultiverse.Models;
 
 public class Tag : ICloneable
 {
+    public Tag()
+    {
+        Source = BookSource.Core;
+    }
+
     public string Name { get; set; }
 
     public List<string> Effect { get; set; }
@@ -13,6 +19,8 @@ public class Tag : ICloneable
     [JsonIgnore]
     public string Specialization { get; set; }
 
+    public string Source { get; set; }
+
     public object Clone()
     {
         return new Tag
@@ -21,6 +29,7 @@ public class Tag : ICloneable
             Effect = [.. this.Effect],
             Restrictions = this.Restrictions != null ? [.. this.Restrictions] : [],
             Specialization = this.Specialization,
+            Source = this.Source
         };
     }
 }

@@ -29,6 +29,13 @@ public class Character
 
     public Biography Biography { get; set; }
 
+    public string Source { get; set; }
+
+    public Character()
+    {
+        Source = BookSource.Core;
+    }
+
     public void SetDefences()
     {
         var meleeDefence = Abilities.Melee.Score + 10 + Traits.Sum(x => x.MeleeDefenceModifier);

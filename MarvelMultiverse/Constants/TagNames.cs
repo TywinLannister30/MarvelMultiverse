@@ -27,6 +27,7 @@ public static class TagNames
     public const string Krakoan = "Krakoan";
     public const string LabAccess = "Lab Access";
     public const string Linguist = "Linguist";
+    public const string LunarTransformation = "Lunar Transformation";
     public const string MahdWyry = "Mahd Wy’ry";
     public const string Mentor = "Mentor";
     public const string Mute = "Mute";

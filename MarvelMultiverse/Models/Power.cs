@@ -1,9 +1,15 @@
-﻿using System.Text.Json.Serialization;
+﻿using MarvelMultiverse.Constants;
+using System.Text.Json.Serialization;
 
 namespace MarvelMultiverse.Models;
 
 public class Power : ICloneable
 {
+    public Power()
+    {
+        Source = BookSource.Core;
+    }
+
     public string Name { get; set; }
 
     public string Description { get; set; }
@@ -104,6 +110,8 @@ public class Power : ICloneable
 
     public bool IsTech { get; set; }
 
+    public string Source { get; set; }
+
     public object Clone()
     {
         return new Power
@@ -144,7 +152,8 @@ public class Power : ICloneable
             SwimSpeedMultipliedByRank = this.SwimSpeedMultipliedByRank,
             SwinglineSpeed = this.SwinglineSpeed,
             InitiativeEdge = this.InitiativeEdge,
-            IsTech = this.IsTech
+            IsTech = this.IsTech,
+            Source = this.Source,
         };
     }
 }

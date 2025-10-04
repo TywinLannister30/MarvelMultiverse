@@ -233,6 +233,18 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.LunarTransformation,
+            Effect =
+            [
+                "On the three nights that the moon is at its fullest and while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe.",
+            ],
+            Restrictions =
+            [
+                "For werewolves only."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Krakoan,
             Effect =
             [
