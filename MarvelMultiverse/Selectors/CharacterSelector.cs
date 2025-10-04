@@ -8,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
 using System.Numerics;
+using System.Text.RegularExpressions;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -9603,6 +9604,232 @@ public class CharacterSelector(
 
     private List<Character> GetAllCharactersM() =>
     [
+        new()
+        {
+            Name = "Madame Mask",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 2, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Submachine gun"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Giuletta Kristina Nefaria",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Gray",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Scarred face beneath mask",
+                Occupations = [OccupationName.Criminal, OccupationName.Spy],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Maggia],
+                Base = "Mobile",
+                History =
+                [
+                    "As a baby, Giuletta Nefaria was discarded by her father Count Nefaria—the one-time leader of the Maggia. She spent her youth believing she was the daughter of a pair of wealthy Wall Street fi nanciers. It was only after the death of her adoptive parents that Luchino re-entered Giuletta’s life.",
+                    "Sensing potential in the young woman, Luchino coerced his daughter into joining the Maggia. He gave her special training in combat and forced her to act as a Maggia spy under the codename of Madame Masque. Although she eventually separated herself from her toxic father, Giuletta has continued to work as a Maggia agent.",
+                ],
+                Personality =
+                [
+                    "Unlike a lot of mafiosos, Madame Masque is not driven primarily by greed. She works for the Maggia because it’s the only way she knows to make a sound living. A well-conceived moral argument could convince her to compromise her criminal ways.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Maddy Cho",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 0, vigilance: 1, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pistol"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Madame Curie “Maddy” Cho",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [118],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.OlympusGroup],
+                Base = "Mobile",
+                History =
+                [
+                    "Despite having an intellect to rival the world’s top scientists, Maddy Cho spends most of her time acting as a caretaker for her younger brother Amadeus—the boy better known as Brawn. Maddy is one of the few people in the world who Amadeus truly respects. Her calm maturity helps to temper her brother’s fi ery and often unstable personality.",
+                    "Maddy is, ostensibly, a student, but her vast intellect makes school a minimal concern. She spends most of her time either looking after her brother or working on some self-driven scientifi c project. She jumps at any opportunity to study mysterious scientifi c phenomena.",
+                ],
+                Personality =
+                [
+                    "Although she’s just a teenager herself, Maddy has a very serious personality. Since the death of their parents, she’s had to act more and more as a mother to her younger brother. Only on the rare occasions that she’s separated from Amadeus does Maddy relax her typically stern demeanor.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Maggia Tough",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 0, vigilance: 1, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pistols or clubs"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [],
+                Base = "Varies",
+                History =
+                [
+                    "Born out of European crime syndicates that date back centuries, the modern Maggia are less a singular entity and more a group of criminal families who occasionally aid one another. They have no hidden bases or Helicarriers. They’re a bunch of racketeers who scratch each other’s backs.",
+                    "Unlike Hydra or other fanatical criminal organizations, Maggia toughs are motivated primarily by profi t, not political ideology. Their pursuit of money often leads them to commit heinous crimes and even bankroll super villains, but they can be persuaded down more righteous paths—for the right price.",
+                ],
+                Personality =
+                [
+                    "Many members of the Maggia are suit-wearing wiseguys. Most high-ranking members gain their status by being born into one crime family or another. Regular toughs, on the other hand, come from all sorts of places. New recruits tend to be poor youths with few scruples, folks happy to join up with a well-established criminal outfit.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
         new()
         {
             Name = "Magneto",

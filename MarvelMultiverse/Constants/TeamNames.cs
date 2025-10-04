@@ -66,6 +66,7 @@ public static class TeamNames
     public const string LeagueOfEvilInhumans = "League of Evil Inhumans";
     public const string LegionOfMonsters = "Legion of Monsters";
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";
+    public const string Maggia = "Maggia";
     public const string Marauders = "Marauders";
     public const string MastersOfEvil = "Masters of Evil";
     public const string MercsForMoney = "Mercs for Money";
@@ -76,6 +77,7 @@ public static class TeamNames
     public const string NewMutants = "New Mutants";
     public const string NineteenFiftyNineAvengers = "1959 Avengers";
     public const string NYPD = "NYPD";
+    public const string OlympusGroup = "Olympus Group";
     public const string PantherCult = "Panther Cult";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
     public const string PetAvengers = "Pet Avengers";
