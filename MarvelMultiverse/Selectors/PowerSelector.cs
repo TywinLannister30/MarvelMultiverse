@@ -2115,6 +2115,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.KillZone,
+            Description = "The character shoots at every target that moves through their kill zone.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.CoveringFire}, {PowerNames.Headshot}, Rank 4",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy in the character’s line of sight starts to move.",
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes a ranged attack on the enemy. If the attack is a success, the enemy takes normal damage. On a Fantastic success, the enemy takes double damage. Either way, the character regains their reaction. Each target can be a­ ected by this attack by this character only once per round."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.LeapingLeglock,
             Description = "The character leaps into the air and snaps their legs around an enemy.",
             PowerSets = [PowerSetNames.MartialArts],

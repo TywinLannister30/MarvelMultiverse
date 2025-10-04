@@ -69,6 +69,7 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersT());
         allCharacters.AddRange(GetAllCharactersU());
         allCharacters.AddRange(GetAllCharactersV());
+        allCharacters.AddRange(GetAllCharactersW());
         return allCharacters;
     }
     private List<Character> GetAllCharactersA() =>
@@ -11231,6 +11232,102 @@ public class CharacterSelector(
                 Personality =
                 [
                     "Toomes is an old man who’s bitter about how his life turned out, and he uses that as an excuse for his criminal behavior. His one soft spot is his granddaughter Tiana Toomes, who uses his technology as the costumed adventurer Starling.",
+                ]
+            }
+        },
+    ];
+
+    private List<Character> GetAllCharactersW() =>
+    [
+        new()
+        {
+            Name = "War Machine",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 3, vigilance: 3, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Stark Tower"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CoveringFire),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.KillZone),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "James Rupert “Jim” Rhodes",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [240],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD],
+                Base = "New York City",
+                History =
+                [
+                    "While working as an army pilot, James Rhodes was forced to make an emergency landing, deep in the Sin-Cong jungle, where he ran into Tony Stark, who had just escaped the Sin-Cong prison where he had fashioned his original Iron Man suit. Together, they fought their way out.",
+                    "Rhodey quickly became one of Tony’s closest friends and has even taken over as Iron Man on occasion. Eventually, he wound up with his own suit of Stark-designed armor as War Machine. He was killed in action during the second superhuman Civil War, but Tony later restored him to life."
+                ],
+                Personality =
+                [
+                    "Although Rhodey is perfectly personable around his friends and family, he takes battle seriously and isn’t the type to fire off quips while fighting a super villain. He serves as a coolheaded and focused counterpart to the off en-erratic Tony.",
                 ]
             }
         },
