@@ -3592,6 +3592,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.TelekineticReinforcement,
+            Description = "The character reinforces their defenses with their mind.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticProtection1}",
+            Action = ActionType.Reaction,
+            Trigger = "A character using a telekinetic power that grants damage protection is attacked.",
+            Duration = Duration.Instant,
+            Cost = "Varies",
+            Effect =
+            [
+                "The character can transfer any Health damage that gets through a telekinetic power that grants damage protection to their Focus instead, leaving the protection intact.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.TelekineticSphere,
             Description = "The character can create a protective sphere with their mind.",
             PowerSets = [PowerSetNames.Telekinesis],

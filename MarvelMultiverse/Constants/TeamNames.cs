@@ -96,8 +96,10 @@ public static class TeamNames
     public const string SymbioteHive = "Symbiote Hive";
     public const string TeamX = "Team X";
     public const string TerribleTrio = "Terrible Trio";
+    public const string TheDailyBugle = "The Daily Bugle";
     public const string TheHand = "The Hand";
     public const string Thunderbolts = "Thunderbolts";
+    public const string TNM = "TNM";
     public const string Triads = "Triads";
     public const string SkeletonCrew = "Skeleton Crew";
     public const string Ultimates = "Ultimates";

@@ -252,6 +252,7 @@ public static class PowerNames
     public const string TelekineticProtection2 = "Telekinetic Protection 2";
     public const string TelekineticProtection3 = "Telekinetic Protection 3";
     public const string TelekineticProtection4 = "Telekinetic Protection 4";
+    public const string TelekineticReinforcement = "Telekinetic Reinforcement";
     public const string TelekineticSphere = "Telekinetic Sphere";
     public const string TelepathicBlast = "Telepathic Blast";
     public const string TelepathicLink = "Telepathic Link";
