@@ -3,6 +3,7 @@
 public static class TeamNames
 {
     public const string AberrantCrimesDivisionOfTheFBI = "Aberrant Crimes Division (ACD) of the F.B.I.";
+    public const string ActionPack = "ActionPack";
     public const string AgentsOfAtlas = "Agents of Atlas";
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
@@ -83,6 +84,7 @@ public static class TeamNames
     public const string SinisterSix = "Sinister Six";
     public const string SinisterTwelve = "Sinister Twelve";
     public const string SkrullEmpire = "Skrull Empire";
+    public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";

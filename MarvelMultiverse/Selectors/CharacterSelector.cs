@@ -5321,6 +5321,87 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Frog-Man",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 1, vigilance: 0, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in suit"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Eugene Paul Patilio",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [185],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.ActionPack, TeamNames.SpaceFriends],
+                Base = "NYC",
+                History =
+                [
+                    "Vincent Patilio was a penniless inventor who thought he could make a quick buck by building a super-suit that would allow him to make a quick escape from any heist. Donning a frog-themed costume, Vincent Patilio made his debut upon the world stage as the villain Leap-Frog.",
+                    "He was almost immediately arrested by Daredevil.",
+                    "From then on, Vincent’s life only got worse. Despite having sworn off crime, the public continued to see him as little more than a petty menace. He and his son Eugene fell further and further into poverty.",
+                    "Eventually, Eugene became sick of people bad-mouthing his father. He dug up his dad’s old suit and vowed to clear the name of frog-themed adventurers everywhere. Under the title of Frog- Man, he wages a one-amphibian war on crime."
+                ],
+                Personality =
+                [
+                    "Eugene has a good heart, but his own bumbling and awkward nature has kept him from achieving his dreams. Despite having been an adventurer for a few years, he has yet to make much of a name for himself. He often falls back on his old job as a busboy to make rent.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
     ];
 
     private List<Character> GetAllCharactersG() =>
