@@ -2,6 +2,7 @@
 
 public static class TagNames
 {
+    public const string AI = "A.I.";
     public const string AlienHeritage = "Alien Heritage";
     public const string AlternateForm = "Alternate Form";
     public const string Amphibious = "Amphibious";

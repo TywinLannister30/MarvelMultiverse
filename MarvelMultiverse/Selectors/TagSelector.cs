@@ -33,6 +33,14 @@ public class TagSelector : ITagSelector
     [
         new()
         {
+            Name = TagNames.AI,
+            Effect =
+            [
+                "The character possesses an artifi cial intelligence in a computerized mind. Their digital nature means that copies or backups can be made of their mind and can even be transferred into other compatible forms."
+            ]
+        },
+        new()
+        {
             Name = TagNames.AlienHeritage,
             Effect =
             [

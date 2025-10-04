@@ -2240,6 +2240,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.MicrodimensionalTravel,
+            Description = "The character shrinks out of the universe!",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Shrink4}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character can shrink enough to travel into subatomic realms. They can return to their normal size at will.",
+                "Note that this is something that most characters would rarely want to do, as it removes them entirely from their regular universe and places them in a dimension in which the rules of time and space work di­ erently. The Underspace, for example, might make a fi ne place to hide, but there’s little else of interest there."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Mighty1,
             Description = "The character is superhumanly strong.",
             PowerSets = [],
