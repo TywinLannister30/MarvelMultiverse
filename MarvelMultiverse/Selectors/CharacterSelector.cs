@@ -4,6 +4,7 @@ using MarvelMultiverse.Models;
 using Microsoft.VisualBasic;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
+using System.Numerics;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -3555,6 +3556,171 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Dagger",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 3, vigilance: 2, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Light daggers [act as regular ranged weapons, but inflict Focus damage rather than Health damage]"),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.FastHands),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Tandy Bowen",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Crescent moon mark on face",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant, OriginName.WeirdScience],
+                Teams = [TeamNames.SavageAvengers, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "Tandy Bowen was born into a cold and distant family of wealthy socialites. As a teenager, she became fed up with her a¼ uent but unloving life in Ohio and ran away from home.",
+                    "At a bus station in Manhattan, she ran into another teenage runaway: a penniless boy named Tyrone Johnson. She and Tyrone had only just begun commiserating over their mutual homelessness when they were kidnapped by Maggia goons.",
+                    "The Maggia injected Bowen, Johnson and other teenagers with an experimental narcotic. While this drug killed most of the runaways, it reacted with something lying dormant in Johnson and Bowen. Johnson gained a metaphysical connection to a dimension of darkness, while Bowen tapped into the power of light.",
+                    "Under the codenames Cloak and Dagger, Johnson and Bowen took their revenge on the Maggia. Since then, they have worked to protect young people across the world. They frequently fight with Mister Negative, a super villain created by the same narcotic that empowered them."
+                ],
+                Personality =
+                [
+                    "Dagger’s personality contrasts sharply with that of her partner. While Cloak is serious, demure and soft-spoken, Dagger is friendly and outgoing. Cloak prefers to fi ght evasively, while Dagger attacks head-on.",
+                    "Despite their differences, Dagger is connected to Cloak by their powers and their mutual desire to protect the young and innocent. Dagger is one of the few people who can enter Cloak’s Darkforce dimension unharmed."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Dakota North",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 2, resilience: 1, vigilance: 1, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Dakota North Investigations"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pistol"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Dakota North",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Investigator],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.DakotaNorthInvestigations],
+                Base = "Dakota North Investigations",
+                History =
+                [
+                    "As the daughter of a cold and distant C.I.A. agent, Dakota North grew up hearing only whispers of her father’s world-spanning escapades. Despite her father’s protests, Dakota became determined to understand what his work was really all about. She became a world-famous child model, but from her teen years onward, she spent every day training, preparing for the day when she would enter the world of adventuring herself.",
+                    "On the day of her eighteenth birthday, Dakota founded Dakota North Investigations—a private detective agency based out of New York City. Using her connections in the fashion industry, the business quickly took off. Over the course of the next few years, she opened three more branches of the investigative company in major cities across the United States.",
+                    "In her time as a P.I., Dakota North has solved serial murders, thwarted terrorist attacks and assisted several other investigative super heroes in their escapades. Few other P.I.s in the world are as respected as Dakota North.",
+                ],
+                Personality =
+                [
+                    "Dakota North is a no-nonsense woman of action. She would not hesitate for a moment to jump through a window or to take a bullet for a client.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Daredevil",
             Rank = 2,
             Abilities = new Abilities
@@ -3721,6 +3887,87 @@ public class CharacterSelector(
                     "Thoroughly insane, Deadpool can be a good guy one minute and a terrifying villain the next. He’s best known for his anarchic jokester attitude. He takes almost nothing seriously, not even his status—at least in his own mind—as a comic-book character.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Demolisher (Wrecking Crew)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 1, resilience: 2, vigilance: 3, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Ball and chain (throwable club)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Laura Lopez",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [240],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.WreckingCrew],
+                Base = "Mobile",
+                History =
+                [
+                    "Unlike the core four members of the Wrecking Crew, Laura Lopez joined the criminal organization long after its initial formation. She had been training to be muscle for Wilson Fisk, but the Kingpin believed that her incredible talents could be made better use of elsewhere. He introduced her to the Wrecker, and she’s been part of the crew ever since.",
+                    "Little is known about the Demolisher’s early life. She presumably has some history in the professional bodybuilding scene because—unlike the other members of Wrecking Crew—she does not rely on the Wrecker’s magic. Instead, her strength arises from years of hard work and training.",
+                ],
+                Personality =
+                [
+                    "Lopez is the youngest member of the Wrecking Crew, and as such, she is less hardheaded and jaded than her compatriots. She truly enjoys the thrill of battle and isn’t above cracking a joke in the midst of a life-or-death situation. She’s also the only woman on the team, which she is always aware of.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -4127,6 +4374,101 @@ public class CharacterSelector(
                     "Even back in his surgeon days, Stephen Strange was known for his haughty and cold personality. He has since learned several lessons in humility, and he’s developed a soft spot for his closest allies, particularly his wife, Clea.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Doombot",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 3, vigilance: 3, ego: 3, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Doombot army)"),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "English, German, Hungarian, Latverian, Romani"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "typically around 6'6\"",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "typically around 500 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Varies, usually brown",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Robotic body, usually hidden by armor",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.AlliesOfDoctorDoom],
+                Base = "Latveria",
+                History =
+                [
+                    "Victor von Doom is an ambitious and intelligent man with more enemies than he can count. By the end of his college years, Doom realized that, if he wanted to survive the coming decades, he would need trained body doubles.",
+                    "Unwilling to settle for using regular men, Doom began prototyping robots that could act in his place. The fi rst of these Doombots were impressive but fl imsy, barely able to fi ght for themselves. Ever undeterred by defeat, Doom continued to rebuild and rework his bots until they became a force to be reckoned with.",
+                    "The modern Doombots are among the toughest and most fearsome androids on the planet Earth. A single Doombot can contend with the likes of Spider-Man, and Doom’s enemies are rarely lucky enough to be faced with just a single bot. Doom has been known to deploy entire armies of Doombots to deal with his archrivals in the Fantastic Four, or to put down peasant uprisings in his home country of Latveria."
+                ],
+                Personality =
+                [
+                    "The A.I. that runs the Doombots is both sophisticated and limited. When Doom himself is not available, they are capable of emulating his personality almost exactly, to the point where they begin to believe that they themselves are the real Doom.",
+                    "However, when Doom is present, the Doombots shift into a mode more resembling that of mindless zombies. They follow Doom’s orders to the letter, with no comments or complaints."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
