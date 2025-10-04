@@ -28,6 +28,7 @@ public static class TeamNames
     public const string FiskIndustries = "Fisk Industries";
     public const string FiveWeaponsSociety = "Five Weapons Society";
     public const string FutureFoundation = "Future Foundation";
+    public const string GammaFlight = "Gamma Flight";
     public const string GoblinNation = "Goblin Nation";
     public const string GodsOfAsgard = "Gods of Asgard";
     public const string GodsOfWakanda = "Gods of Wakanda";
