@@ -3813,7 +3813,7 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.TimeTravelTogether,
+            Name = PowerNames.TimeTravelOther,
             Description = "The character sends someone to another time.",
             PowerSets = [PowerSetNames.OmniversalTravel],
             Prerequsites = $"{PowerNames.TimeTravel}, Rank 4",
@@ -3824,6 +3824,22 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego check against the Vigilance defense of a target they have grabbed. If the check is successful, the character can send the target to another time. The target can be sent to any location in that time that the character has been to before. Otherwise, the target arrives at the closest available corresponding space in the other time.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TimeTravelTogether,
+            Description = "The character sends someone to another time.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.TimeTravel}, Rank 3",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character moves to a di­ erent time, taking any person they are touching with them. If the target does not wish to come along, the character must grab them first.",
+                "When they move to the other time, they can arrive in any place they’ve been to before. Otherwise, they arrive at the closest available corresponding space in the other time."
             ],
         },
         new()

@@ -8581,6 +8581,205 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Kang the Conqueror",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 3, vigilance: 6, ego: 5, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelTime,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TimePortal),
+                        powerSelector.GetPower(PowerNames.TimeTravel),
+                        powerSelector.GetPower(PowerNames.TimeTravelOther),
+                        powerSelector.GetPower(PowerNames.TimeTravelTogether),
+                    ],
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nathaniel Richards",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.Anachronauts, TeamNames.CouncilOfKangs],
+                Base = "Mobile",
+                History =
+                [
+                    "Nathaniel Richards grew up in the near-utopian environment of the 30th century of Earth-6311. As an adult, he became sick of luxury and became determined to live a life of adventure in a more interesting era.",
+                    "Disguising himself as the Pharaoh Rama-Tut, he built a time machine and set about conquering ancient Egypt. The Avengers put a quick end to his reign, but Richards remained undeterred. He conquered the war-torn 40th century and returned to the Avengers’ era equipped with the greatest weaponry the future could offer.",
+                    "As Kang the Conqueror, Richards has attempted many times to take down Earth’s mightiest heroes. He has faced many defeats, but his powers over time have always allowed him to return and try again.",
+                    "Kang is not above meddling in anyone’s timeline, even his own. As a result, his early life has become shrouded in mystery and divergence, including other identities like those of Iron Lad and the Scarlet Centurion. Several alternate Kangs from across the Multiverse have had adventuring careers to rival his own. His future timeline is just as convoluted, often due to him trying to avoid becoming the more peaceful Immortus."
+                ],
+                Personality =
+                [
+                    "Kang is a megalomaniac and a narcissist of the highest order. He believes he's the most important being in existence, and he goes to great lengths to prove it. He often speaks in the style of ancient Greco-Roman conquerors.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Karnak",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 5, resilience: 3, vigilance: 4, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Community"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.Exploit),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Karnak’s hands (act as melee weapons)"),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                        powerSelector.GetPower(PowerNames.RegainFocus),
+                        powerSelector.GetPower(PowerNames.UnflappablePoise),
+                        powerSelector.GetPower(PowerNames.UntouchablePosition),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Karnak Mander-Azur",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [150],
+                Gender = Gender.Male,
+                Eyes = "No irises",
+                Hair = "Shaved",
+                Size = Size.Average,
+                DistinguishingFeatures = "Numerous face tattoos",
+                Occupations = [OccupationName.Adventurer, OccupationName.Educator],
+                Origins = [OriginName.Inhuman, OriginName.SpecialTraining],
+                Teams = [TeamNames.HouseOfAgon, TeamNames.UniversalInhumans],
+                Base = "Mobile",
+                History =
+                [
+                    "Karnak was born into a prominent family of Inhuman geneticists, an off shoot of the royal House of Agon. When Karnak was just a boy, his brother Triton was exposed to the Terrigen Mist and mutated into a fi shlike creature incapable of surviving on dry land. Subsequently, Karnak’s parents forbade him from ever touching the mists.",
+                    "Unwilling to be left behind by the other members of the Royal Family, Karnak embarked on a course of specialized and mysterious training. With the help of his strong Inhuman genes, Karnak quickly became an expert in combat. He can break most barriers and defeat most opponents in a single punch, given a chance to analyze their weaknesses.",
+                    "Karnak’s skill in combat makes him an invaluable asset to Black Bolt and the rest of the Inhuman Royal Family, though he’s not as attached to the royals as many of the other members of their court. In recent years, he has dedicated much of his time to educating the next generation of warriors.",
+                ],
+                Personality =
+                [
+                    "More so than any of the other Inhuman royals, Karnak is ruthless in combat. He does not hesitate to kill an opponent, especially one he considers inferior.",
+                    "Outside of combat, he is equally single-minded. He spends much of his free time meditating on the nature of existence. He cares for the other members of the House of Agon, but only in a distant, brooding manner."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Kate Pryde",
             Rank = 3,
             Abilities = new Abilities

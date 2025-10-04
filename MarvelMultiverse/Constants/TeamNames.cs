@@ -9,6 +9,7 @@ public static class TeamNames
     public const string AIM = "A.I.M.";
     public const string AlliesOfDoctorDoom = "Allies of Doctor Doom";
     public const string AlphaFlight = "Alpha Flight";
+    public const string Anachronauts = "Anachronauts";
     public const string Annihilators = "Annihilators";
     public const string AstonishingAvengers = "Astonishing Avengers";
     public const string AtlanteanRoyalFamily = "Atlantean Royal Family";
@@ -19,6 +20,7 @@ public static class TeamNames
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
     public const string CIA = "C.I.A.";
+    public const string CouncilOfKangs = "Council of Kangs";
     public const string DakotaNorthInvestigations = "Dakota North Investigations";
     public const string DarkAvengers = "Dark Avengers";
     public const string DarkCouncil = "Dark Council";

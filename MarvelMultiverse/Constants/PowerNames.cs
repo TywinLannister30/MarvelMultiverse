@@ -267,6 +267,7 @@ public static class PowerNames
     public const string TimeOut = "Time Out";
     public const string TimePortal = "Time Portal";
     public const string TimeTravel = "Time Travel";
+    public const string TimeTravelOther = "Time Travel Other";
     public const string TimeTravelTogether = "Time Travel Together";
     public const string Uncanny1 = "Uncanny 1";
     public const string Uncanny2 = "Uncanny 2";
