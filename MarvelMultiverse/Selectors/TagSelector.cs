@@ -105,6 +105,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Convict,
+            Effect =
+            [
+                "The character has been convicted of a crime, which is reflected on their record."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Cursed,
             Effect =
             [
