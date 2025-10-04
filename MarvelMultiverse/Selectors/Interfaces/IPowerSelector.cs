@@ -7,6 +7,7 @@ public interface IPowerSelector
     public Power GetPower(
         string name,
         bool isTech = false,
+        bool flySpeed = false,
         bool swinglineSpeed = false,
         string specialization = null,
         string reminder = null,

@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using Microsoft.VisualBasic;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
 
@@ -1393,7 +1394,7 @@ public class CharacterSelector(
                 DistinguishingFeatures = "None",
                 Occupations = [OccupationName.Leader],
                 Origins = [OriginName.Inhuman],
-                Teams = [TeamNames.TheHouseOfAgon, TeamNames.UniversalInhumans],
+                Teams = [TeamNames.HouseOfAgon, TeamNames.UniversalInhumans],
                 Base = "Attilan",
                 History =
                 [
@@ -2250,6 +2251,105 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Captain America (Sam Wilson)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 5, resilience: 3, vigilance: 3, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            specialization: "Captain America’s shield [+1 damage multiplier. Grants the user one extra level of the power Shield (up to Shield 4).]",
+                            meleeDamageModifier: 1,
+                            agilityDamageModifier: 1),
+
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.HurledShieldBlock),
+                        powerSelector.GetPower(PowerNames.HurledShieldDeflection),
+                        powerSelector.GetPower(PowerNames.RicoShield),
+                        powerSelector.GetPower(PowerNames.Shield3),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "Redwing"),
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "birds"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Samuel Thomas “Sam” Wilson",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [240],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTech, OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD],
+                Base = "NYC",
+                History =
+                [
+                    "Sam Wilson grew up as an orphan in Harlem. As an adult, he was determined to give back to the community that raised him. He was helping out as a social worker when a fateful encounter with the Red Skull and a Cosmic Cube granted him super-strength and the ability to communicate with birds.",
+                    "Shortly thereafter, Wilson ran into Steve Rogers— the original Captain America. Wilson and Rogers became fast friends, and together, they defeated the Red Skull. Subsequently, Rogers and Wilson became crimefi ghting partners: Captain America and the Falcon.",
+                    "Wilson gradually developed a prowess in battle to rival Rogers’ own. At times when Rogers has been unwilling or unable to take up the mantle of Captain America, Wilson has taken his place. Nowadays, both Wilson and Rogers go by the codename of Captain America."
+                ],
+                Personality =
+                [
+                    "Even more so than Rogers, Wilson’s defi ning trait is his love for the downtrodden. His one goal in life is to use his powers for the protection of the weak and the oppressed.",
+                    "Although Wilson is generally a serious man, he has a soft spot for those closest to him, particularly his avian companion Redwing."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Captain America (Steve Rogers)",
             Rank = 4,
             Abilities = new Abilities
@@ -2347,6 +2447,113 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Captain Avalon (Brian Braddock)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 3, resilience: 6, vigilance: 4, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HitTheDirt),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Brian Braddock",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [257],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.MagicSorcery],
+                Teams = [TeamNames.Excalibur, TeamNames.SHIELD],
+                Base = "Krakoa",
+                History =
+                [
+                    "Brian Braddock was once just a promising young physicist working out of an obscure facility in England. Then came the day the villainous mercenary Reaver attacked his workplace and slaughtered all of his co-workers. Braddock himself was on the verge of death when the specter of the wizard Merlin suddenly appeared before him.",
+                    "Merlin offered Braddock one of two powerful gifts: a sword or an amulet. Out of a desire not to harm others, Braddock chose the amulet.",
+                    "Instantly fi lled with power, he transformed into Captain Britain. As the one true defender of the British Isles, Braddock spent years defending both the United Kingdom and the mystical Otherworld of Arthurian legend, from which he drew his incredible powers.",
+                    "Eventually, he learned of other ways to draw power from the Otherworld and granted possession of his amulet to his sister, Betsy Braddock. Today, Betsy fi ghts under the title of Captain Britain, while Brian acts as Captain Avalon.",
+                    "When he’s not adventuring, Brian spends most of his time at home with his wife—Meggan Puceanu (codename Gloriana)— and their daughter Maggie."
+                ],
+                Personality =
+                [
+                    "Although he holds a doctorate in physics, Braddock is hardly a stuffy old professor. His friends know him as a kind and caring father with a good sense of humor. His enemies know him as a fearsome and determined opponent.",
+                    "Braddock’s natural confi dence and charisma serve as the source of his mystic powers, which can be channeled only by those who believe in themselves. When he is feeling self-assured, Captain Avalon is nearly impossible to defeat."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Captain Marvel (Carol Danvers)",
             Rank = 6,
             Abilities = new Abilities
@@ -2435,6 +2642,77 @@ public class CharacterSelector(
                     "Danvers is a strong-willed and pragmatic person who has embraced her role as a mentor to younger heroes like the new Ms. Marvel (Kamala Khan). She cares for her friends deeply and does whatever it takes to protect them and the worlds in which they live.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Claire Dixon",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 0, resilience: 1, vigilance: 1, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pistol"),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Claire Dixon",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [133],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.WeirdScience], 
+                Teams = [TeamNames.FBI],
+                Base = "Mobile",
+                History =
+                [
+                    "Claire Dixon was the head of the F.B.I.’s Anti-Symbiote Task Force, until the day she was forcibly bonded to a symbiote of her own. Under the infl uence of the dark creature, she wrought chaos against her former allies. As the super villain Raze, she slaughtered members of her own unit. Eventually, Venom himself intervened to separate her from the alien slime.",
+                    "Following the separation, Claire discovered that she had retained a portion of the symbiote’s power. Vowing to make up for the evils she committed as Raze, Claire took a leave of absence from the F.B.I. and set out to become a super hero.",
+                ],
+                Personality =
+                [
+                    "Claire takes her job as a government agent very seriously, and she has a strong sense of justice. Although she used to harbor an almost fanatical hatred of all things alien, her interactions with Venom have led her to soften her stance on symbiotes.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -2550,6 +2828,256 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Cloak",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 2, vigilance: 4, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, specialization: PowerNames.TeleportOther),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "The Cloak (Can imprison grabbed opponents in the Darkforce dimension, during which time Cloak automatically makes a free Ego attack against them on his turn each round. To escape, imprisoned creatures must succeed on an Ego check against Cloak’s Ego defense.)"),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Phasing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.PartialPhase),
+                        powerSelector.GetPower(PowerNames.PhaseSelf),
+                        powerSelector.GetPower(PowerNames.QuickPhase),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.Teleport2),
+                        powerSelector.GetPower(PowerNames.TeleportObject),
+                        powerSelector.GetPower(PowerNames.TeleportOther),
+                        powerSelector.GetPower(PowerNames.TeleportTogether),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Tyrone Johnson",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [155],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant, OriginName.WeirdScience],
+                Teams = [TeamNames.SavageAvengers, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "Tyrone Johnson grew up in a poor neighborhood in south Boston where, despite a signifi cant stutter, he excelled in school. As a well-respected member of his community, he had no intention of leaving his hometown—until the day he watched his best friend get gunned down in the street by a trigger-happy cop.",
+                    "Terrifi ed and racked with guilt over his inability to prevent his friend’s death, Johnson fl ed for New York. At a bus station in Manhattan, he and fellow runaway Tandy Bowen were kidnapped by Maggia goons.",
+                    "The Maggia injected Johnson, Bowen and a number of other teenagers with an experimental narcotic. While this drug killed most of the runaways, it reacted with something lying dormant in Johnson and Bowen. Johnson gained a metaphysical connection to a dimension of darkness, while Bowen tapped into the power of light.",
+                    "Under the codenames of Cloak and Dagger, Johnson and Bowen took their revenge on the Maggia. Since then, they have worked to protect young people across the world. They frequently fi ght with Mister Negative, a super villain created by the same narcotic that empowered them."
+                ],
+                Personality =
+                [
+                    "Years of adventuring have softened Cloak’s naturally anxious personality. He spends most of his time in the form of his heroic alter ego, scouring the world for people to protect. Serious and soft-spoken, Cloak no longer stutters—except on the few occasions he returns to his old identity and becomes fully tangible.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Cole North",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 1, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Cole North",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Fist, TeamNames.NYPD],
+                Base = "NYC",
+                History =
+                [
+                    "Cole North was once a revered detective in the Chicago Police Department. Then, for reasons unknown, he took a transfer to the New York Police Department. His fi rst task in New York was to investigate a murder supposedly committed by Daredevil (Matt Murdock).",
+                    "North took to that case the same way he does with all his cases: with dogged determination. In a matter of days, he tracked Daredevil down, beat him up and arrested him. Unfortunately, North’s incredible and public defeat of Daredevil only made the hero’s subsequent escape from custody all the more humiliating for the NYPD.",
+                    "For a while after that, North harbored a grudge against all costumed super heroes. However, recent events have begun to push him into closer cooperation with the hero he once called an enemy.",
+                ],
+                Personality =
+                [
+                    "North is a serious, by-the-book cop. He has trouble understanding why his fellow officers would willingly allow costumed vigilantes to act freely within their city.",
+                    "Although he would typically prefer to avoid violence, North is more than capable of it. He is a highly trained boxer and a serious bodybuilder. North’s status as the most muscular cop in New York has granted him a level of respect within the NYPD typically reserved for much older officers."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Colleen Wing",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 1, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Nightwing Restorations Ltd."),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Sword"),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Colleen Wing",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Investigator],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.HeroesForHire, TeamNames.DaughtersOfTheDragon],
+                Base = "NYC",
+                History =
+                [
+                    "With her mother dead and her father busy, Colleen Wing grew up in the custody of her grandfather: Kenji Ozawa, the head of the Japanese Secret Service. As a combat veteran, Ozawa was eager to tutor Wing in the art of sword fi ghting, training her to be a world-class expert with the katana.",
+                    "As an adult, Wing moved to New York City, where she met Misty Knight, who soon became her best friend and her partner in their private investigation business, Nightwing Restorations Ltd. They often join Luke Cage and Iron Fist (Danny Rand) to round out their team, known as the Heroes for Hire.",
+                    "Wing later learned that her mother had been the leader of the Nail, a faction of the ninja clan called the Hand. For a short while, she led a new incarnation of the Nail, but later betrayed them when she couldn’t stomach their harsh methods.",
+                ],
+                Personality =
+                [
+                    "Wing is a bit more socially reserved than Misty Knight, but the women have more in common than not. Both are thrill-seeking daredevils with a cool head for combat.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Colossus",
             Rank = 4,
             Abilities = new Abilities
@@ -2630,6 +3158,125 @@ public class CharacterSelector(
                     "For a long time, Colossus was known for letting his passion get the best of him in the heat of battle, turning him into a nigh-unstoppable metal berserker. In recent years he has adopted a softer and more sympathetic attitude. For those he loves, his heart is as big as his anger is strong.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Crimson Surfer",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 6, resilience: 5, vigilance: 4, ego: 7, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            flySpeed: true,
+                            specialization: "Crimson surfoard [Summonable by Crimson Surfer. Grants Flight 2.]"),
+
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CoveringFire),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "The Crimson Surfer’s powers are not identical to those of the Silver Surfer and are, in fact, weaker. This is because Kang the Devourer does not trust Shmidt with that much power and so gave him less of it."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Johann Shmidt",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [189],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Body covered in nigh-indestructible crimson material",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.SpecialTraining, OriginName.WeirdScience],
+                Teams = [TeamNames.Hydra],
+                Base = "Mobile",
+                History =
+                [
+                    "The Crimson Surfer started out the same way as Earth-616’s Red Skull. Adolf Hitler—declaring that he could turn anyone into the ideal Nazi soldier—selected a random bellboy by the name of Johann Shmidt to be his next secret agent. After World War II, the crimson-headed Shmidt carried the mad führer’s dream of a worldwide Nazi government into the modern age. This is where his fate and that of his Earth-616 counterpart diverge, as he successfully led Hydra to take over the world.",
+                    "At some point, Kang the Devourer targeted the timeline of this Red Skull for destruction. Much like Norrin Radd made a deal with Galactus in the universe of Earth-616 to save his people, the Red Skull presented himself to the Devourer and offered to become his herald. He did it only to save his own skin, though, and for the Devourer to grant him a portion of his Power Cosmic. This gave him powers comparable to those of Earth- 616’s Silver Surfer and transformed him into the Crimson Surfer—after which, he helped oversee the destruction of his own universe’s timeline."
+                ],
+                Personality =
+                [
+                    "Shmidt is a fascist zealot, a madman and a master propagandist who deftly recruits crowds of bigots. Gaining the Power Cosmic has only heightened Shmidt’s megalomania. If he did not have to serve Kang the Devourer, the Crimson Surfer would already be scouring the universe, forcing as many worlds under his boot as he possibly could. He constantly looks for ways to betray the Devourer and take the rest of his power too.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -2717,6 +3364,89 @@ public class CharacterSelector(
                     "Crossbones carries himself in the manner of a classic hard-talking, no-nonsense military man. He is a ruthless mercenary who lives for the rush of battle. His deep-seated belief that might makes right regularly puts him into conflict with defenders of the weak. He is loyal to no one but his longtime girlfriend—the Red Skull’s daughter, Sin.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Crystal",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 3, vigilance: 3, ego: 6, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline3),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = $"{PowerSetNames.ElementControl} Air/Earth/Fire/Ice/Water",
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalPrison),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                        powerSelector.GetPower(PowerNames.ElementalSuffocation),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Crystalia Amaquelin",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [110],
+                Gender = Gender.Female,
+                Eyes = "Blue-green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Inhuman],
+                Teams = [TeamNames.FantasticFour, TeamNames.HouseOfAgon, TeamNames.UniversalInhumans],
+                Base = "Mobile",
+                History =
+                [
+                    "Crystal was born in the Inhuman city of Attilan into a family of royal nutritionists. Just like her older sister, Medusa, Crystal was exposed to the Terrigen Mist as a baby. Subsequently, she gained the power to control the four classical elements: earth, air, fi re and water.",
+                    "As young girls, Crystal and Medusa were inseparable. Sadly, war and chaos conspired to tear them apart when Crystal was just eight years old. Crystal spent her youth traveling the world, searching for Medusa. By the time they fi nally reunited, Crystal had grown into a young woman.",
+                    "Crystal accompanied her sister back to Attilan, and in time, both became prominent members of the royal court. Medusa became queen of the Inhumans, while Crystal became an important ambassador and royal advisor.",
+                    "Even after the bulk of Inhuman society was destroyed by Black Bolt, Crystal remained close to the Royal Family, providing whatever help she could to assist her sister in rebuilding their kingdom."
+                ],
+                Personality =
+                [
+                    "Having spent her youth traveling the world, Crystal is far more outgoing and personable than most Inhumans. She’s the only member of the Inhuman royal court to have had a number of signifi cant romantic relationships outside of Inhuman society. She dated the Human Torch (Johnny Storm) and was even briefl y married to Quicksilver. Together, they had one child, a girl named Luna.",
+                    "Even more than Medusa, Crystal is headstrong. She relishes adventure and never hesitates to rush into the most dangerous situations."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {

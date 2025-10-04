@@ -25,8 +25,11 @@ public static class TeamNames
     public const string Defenders = "Defenders";
     public const string DoraMilaje = "Dora Milaje";
     public const string Eternals = "Eternals";
+    public const string Excalibur = "Excalibur";
     public const string FantasticFour = "Fantastic Four";
+    public const string FBI = "F.B.I.";
     public const string FiskIndustries = "Fisk Industries";
+    public const string Fist = "Fist";
     public const string FiveWeaponsSociety = "Five Weapons Society";
     public const string FutureFoundation = "Future Foundation";
     public const string GammaFlight = "Gamma Flight";
@@ -42,6 +45,7 @@ public static class TeamNames
     public const string HellfireClub = "Hellfire Club";
     public const string HellfireTradingCompany = "Hellfire Trading Company";
     public const string HeroesForHire = "Heroes for Hire";
+    public const string HouseOfAgon = "House of Agon";
     public const string Hydra = "Hydra";
     public const string ImperialKreeAmy = "Imperial Kree Amy";
     public const string InfinityWatch = "Infinity Watch";
@@ -62,6 +66,7 @@ public static class TeamNames
     public const string MightyAvengers = "Mighty Avengers";
     public const string NewMutants = "New Mutants";
     public const string NineteenFiftyNineAvengers = "1959 Avengers";
+    public const string NYPD = "NYPD";
     public const string PantherCult = "Panther Cult";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
     public const string PowerElite = "Power Elite";
@@ -83,7 +88,6 @@ public static class TeamNames
     public const string TeamX = "Team X";
     public const string TerribleTrio = "Terrible Trio";
     public const string TheHand = "The Hand";
-    public const string TheHouseOfAgon = "The House of Agon";
     public const string Thunderbolts = "Thunderbolts";
     public const string Triads = "Triads";
     public const string SkeletonCrew = "Skeleton Crew";

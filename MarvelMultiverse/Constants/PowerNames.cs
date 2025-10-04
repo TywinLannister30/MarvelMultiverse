@@ -130,6 +130,7 @@ public static class PowerNames
     public const string HellfireChains = "Hellfire Chains";
     public const string HexBolt = "Hex Bolt";
     public const string HitAndRun = "Hit & Run";
+    public const string HitTheDirt = "Hit the Dirt";
     public const string HurledShieldBash = "Hurled Shield Bash";
     public const string HurledShieldBlock = "Hurled Shield Block";
     public const string HurledShieldDeflection = "Hurled Shield Deflection";
@@ -258,6 +259,8 @@ public static class PowerNames
     public const string Teleport1 = "Teleport 1";
     public const string Teleport2 = "Teleport 2";
     public const string TeleportObject = "Teleport Object";
+    public const string TeleportOther = "Teleport Other";
+    public const string TeleportTogether = "Teleport Together";
     public const string Thunder = "Thunder";
     public const string TimeOut = "Time Out";
     public const string TimePortal = "Time Portal";

@@ -8,6 +8,7 @@ public class PowerSelector : IPowerSelector
     public Power GetPower(
         string name, 
         bool isTech = false,
+        bool flySpeed = false,
         bool swinglineSpeed = false,
         string specialization = null, 
         string reminder = null,
@@ -25,7 +26,10 @@ public class PowerSelector : IPowerSelector
             power.Name += $" ({reminder})";
 
         power.IsTech = isTech;
-        
+
+        if (flySpeed)
+            power.FlySpeed = true;
+
         if (swinglineSpeed)
             power.SwinglineSpeed = true;
 
@@ -1860,6 +1864,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.HitTheDirt,
+            Description = "The character gets their allies to take cover.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.KeepMoving}, Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy in line of sight makes an attack on an lly within earshot.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "All allies within earshot can fall prone if they wish and are able to. If falling prone makes the ally an ineligible target for the initial attack, the attack automatically fails.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.HurledShieldBash,
             Description = "The character hurls their mighty shield at an enemy.",
             PowerSets = [PowerSetNames.ShieldBearer],
@@ -3671,6 +3690,38 @@ public class PowerSelector : IPowerSelector
             [
                 "The character can teleport along with them an object within reach as far away as their Teleport power normally allows them.",
                 "The object (and things attached to or inside of it) can be up to their rank in sizes bigger than them. For example, if they are Rank 4, the object can be up to four sizes bigger than them."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.TeleportOther,
+            Description = "The character can teleport someone else away.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Teleport2}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes an Ego check against the Vigilance defense of a target they have grabbed. If the check is successful, the character can teleport the target as far away as their Teleport power normally allows them in combat.",
+                "If the target winds up in something solid, they are automatically pushed out of it but take damage from the disruption equal to a standard action check. The damage multiplier is 1 for every space they must move to reach a clear area. If this kills them, their body is trapped inside the material they teleported into."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.TeleportTogether,
+            Description = "The character can teleport someone they are touching.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Teleport1}, Rank 3",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character teleports, taking any person they are touching with them, into clear spaces they can see or have been to, up to 10 times their rank in spaces away. Outside of combat, they can teleport up to 100 times their rank in spaces away.",
+                "If the target does not wish to be teleported, the character must grab them first."
             ]
         },
         new()
