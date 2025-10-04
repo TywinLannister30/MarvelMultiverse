@@ -3,20 +3,20 @@ using MarvelMultiverse.Selectors;
 
 namespace MarvelMultiverse.Managers;
 
-public class TraitManager(ITraitSelector originSelector) : ITraitManager
+public class TraitManager(ITraitSelector traitSelector) : ITraitManager
 {
     public List<Trait> GetAll()
     {
-        return originSelector.GetTraits();
+        return traitSelector.GetTraits();
     }
 
     public List<string> GetAllNames()
     {
-        return [.. originSelector.GetTraits().Select(x => x.Name)];
+        return [.. traitSelector.GetTraits().Select(x => x.Name)];
     }
 
     public Trait Get(string name)
     {
-        return originSelector.GetTrait(name);
+        return traitSelector.GetTrait(name);
     }
 }

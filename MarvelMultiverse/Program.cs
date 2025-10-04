@@ -20,6 +20,7 @@ builder.Services.AddTransient<ITraitSelector, TraitSelector>();
 builder.Services.AddTransient<ICharacterManager, CharacterManager>();
 builder.Services.AddTransient<IOccupationManager, OccupationManager>();
 builder.Services.AddTransient<IOriginManager, OriginManager>();
+builder.Services.AddTransient<ITagManager, TagManager>();
 builder.Services.AddTransient<ITraitManager, TraitManager>();
 
 
