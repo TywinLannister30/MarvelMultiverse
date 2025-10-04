@@ -67,7 +67,7 @@ public static class PowerNames
     public const string DisruptElectronics = "Disrupt Electronics";
     public const string DisruptNerves = "Disrupt Nerves";
     public const string DisruptPerson = "Disrupt Person";
-    public const string DoThisAllDay = " Do This All Day";
+    public const string DoThisAllDay = "Do This All Day";
     public const string Domination = "Domination";
     public const string DoubleTap = "Double Tap";
     public const string EditMemory = "Edit Memory";
