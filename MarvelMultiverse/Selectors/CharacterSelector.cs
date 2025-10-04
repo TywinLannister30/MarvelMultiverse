@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using Microsoft.Extensions.Hosting;
 using Microsoft.VisualBasic;
 using System;
 using System.Diagnostics;
@@ -6483,7 +6484,7 @@ public class CharacterSelector(
         new()
         {
             Name = "Hawkeye (Clint Barton)",
-            Rank = 1,
+            Rank = 2,
             Abilities = new Abilities
             (
                 melee: 2, agility: 4, resilience: 1, vigilance: 2, ego: 0, logic: 1
@@ -6515,7 +6516,6 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Accuracy2),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
-                    IsTech = true
                 },
                 new PowerSet
                 {
@@ -6561,6 +6561,90 @@ public class CharacterSelector(
                     "Clint Barton is well aware that his lack of super-powers places the upper limits of his abilities well below those of most super heroes. He sometimes puts on an arrogant attitude to cover his insecurities. Barton is sometimes led astray by his passions, but his conscience always brings him back to the fi ght for justice.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Hawkeye (Kate Bishop)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 2, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Hawkeye (Clint Barton)"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Bow and arrow"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Katherine Elizabeth “Kate” Bishop",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [120],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Investigator],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.WestCoastAvengers, TeamNames.YoungAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "When Kate Bishop was a young girl, she was kidnapped by a super villain named El Matador. After being rescued by the Avengers, she developed an abiding admiration for the team, especially Hawkeye (Clint Barton), who fought for justice despite his lack of super-powers.",
+                    "Bishop decided to follow in Hawkeye’s footsteps. As a teenager, she adopted Hawkeye’s codename and began fighting crime as a member of the Young Avengers, with whom she has had numerous adventures. In the years since taking on the codename Hawkeye, she has worked several times with the original Hawkeye, who has made her his o¸ cial protege, and she even took over ownership of his dog, Lucky. She recently started her own detective agency: Hawkeye Investigations.",
+                ],
+                Personality =
+                [
+                    "Despite her outwardly casual and sometimes flighty attitude, Bishop has a strong and determined sense of justice. She wouldn’t hesitate to put herself in harm’s way to save another, even if it risked certain death.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -6774,6 +6858,272 @@ public class CharacterSelector(
                     "A star from a young age, Walker is a lot more media savvy than most super heroes. Highly charismatic, she can befriend just about anyone. Hellcat’s love life has frequently been marked by misfortune, but she always manages to stay brave and cheerful no matter the circumstances.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "H.E.R.B.I.E (Security Unit)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 3, resilience: 1, vigilance: 1, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Community"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Opti-Blaster (works like a regular pistol, but blinds the target on a Fantastic success)"),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                    IsTech = true
+                },
+            ],
+            PowerNotes =
+            [
+                "Not all H.E.R.B.I.E. units are equipped with weapons. Such non-security units can fly but are otherwise no more powerful than an average civilian (see that profile in the Core Rulebook)."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Humanoid Experimental Robot, B-type, Integrated Electronics",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually 2'",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "usually 70 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Yellow",
+                Hair = "None",
+                Size = Size.Small,
+                DistinguishingFeatures = "Child-sized metallic robot with screen for a face",
+                Occupations = [OccupationName.Educator, OccupationName.Scientist],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.FantasticFour],
+                Base = "NYC",
+                History =
+                [
+                    "The fi rst prototype H.E.R.B.I.E. was created by Mister Fantastic (Reed Richards) of the Fantastic Four to aid in the search for Galactus and to act as his personal laboratory assistant. HERBIE was designed to be smart, helpful and generally cheerful. Incredibly, he actually turned out to be all those things.",
+                    "In fact, the H.E.R.B.I.E. project was such a success that Richards slowly began to produce more H.E.R.B.I.E.s. Within a few years, H.E.R.B.I.E. units were running almost all of the day-to-day activities at the Fantastic Four’s headquarters.",
+                    "H.E.R.B.I.E. units sometimes accompany the Fantastic Four on their adventures across time and space. However, the average H.E.R.B.I.E.’s duties are far more pedestrian. For example, a specialized H.E.R.B.I.E. unit often acts as the personal caretaker to Richards’ two children, Franklin and Valeria."
+                ],
+                Personality =
+                [
+                    "For the most part, H.E.R.B.I.E. units are thoughtful and chipper. Built with a heroic spirit, they are quick to offer a hand in assistance to any who need one.",
+                    "Some H.E.R.B.I.E.s, particularly those assigned to menial and boring tasks, harbor some resentment for their creator, but they rarely let it show. Only a select few H.E.R.B.I.E. units have ever chosen to leave the Fantastic Four behind."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Hive",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 1, resilience: 4, vigilance: 2, ego: 2, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Hydra)"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Monster),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Mute, reminder: "can only speak in eldritch gibberih"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.CoilingCrush),
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.Rubberneck),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                        powerSelector.GetPower(PowerNames.StiltSteps),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Hive",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "typically around 7'",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "typically around 340 lbs.",
+                Gender = Gender.Male,
+                Eyes = "White",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Humanoid hive of parasitic organisms",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Hydra],
+                Base = "Mobile",
+                History =
+                [
+                    "The Hive is a living bioweapon, the result of experiments performed by Hydra researchers on some of the world’s deadliest creatures. These maniacal scientists sought to create a living monster that was also a physical representation of everything Hydra stands for. In the many-tentacled Hive, they found their champion.",
+                    "Just like Hydra, the Hive is conniving, amoral and parasitic. It can survive only by regularly bonding with a host—that it takes over entirely—and feeding upon innocent people. If left isolated for an extended period, the Hive dissolves back down into its original form: a pathetic and squirming pile of prehensile appendages.",
+                    "The Hive’s innate loyalty to Hydra as an organization is the only thing that keeps it in check. For high-ranking members of Hydra, the Hive has been known to sacrifi ce pieces of itself, merging with its allies in order to extend their lifespans."
+                ],
+                Personality =
+                [
+                    "Although the Hive is thought to be intelligent, it cannot speak any known human language. It can understand English, but its own speech consists of a garbled mess of undersea squeals and eldritch burbling. A few select members of Hydra have learned to decipher this language, and they serve as the Hive’s handlers.",
+                    "The Hive needs to feed on a new human only once every few years, but it prefers to feast on a daily basis. It can bond with persons of any gender, but it tends to present as male."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Hood",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 1, vigilance: 3, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Parker Davis Robbins",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [165],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.MagicSorcery],
+                Teams = [TeamNames.Illuminati],
+                Base = "Mobile",
+                History =
+                [
+                    "With a pregnant wife at home and an ailing mother in the hospital, Parker Robbins turned to a life of crime to make ends meet. Off a tip from his cousin, Robbins broke into a warehouse that was supposed to contain a large shipment of valuable foreign goods.",
+                    "Robbins found no such riches. What he discovered instead was a summoning circle and a terrifying cloaked demon spawned from the depths of hell.",
+                    "More out of panic than malice, Robbins riddled the demon with bullets. In a frenzy, he stole the creature’s clothes and made off into the night.",
+                    "Only after the fact did Robbins realize that the garments had special powers. Using them, he could turn invisible, walk on air and even shoot bolts of lightning from his hands.",
+                    "Under the codename of the Hood, Robbins set out to turn his newly found powers toward the pursuit of personal profi t. He found that he had a talent for villainy and, after a few rocky capers, his crimes began to pay for themselves. Today, the Hood oversees a crime syndicate worthy of the Kingpin himself."
+                ],
+                Personality =
+                [
+                    "Despite his many crimes, Robbins still sees himself as basically a good person, a misunderstood man of the people. He rarely fl aunts his wealth, stowing most of it away for the future benefi t of an infant son he hardly ever sees.",
+                    "Largely estranged from his family, Robbins spends most of his time drinking heavily and skulking around his own gambling dens."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -7009,6 +7359,183 @@ public class CharacterSelector(
                     "Agents join Hydra for a number of reasons that usually boil down to money and power. They believe that Hydra can take over any organization or government, and they want to be on the winning side, no matter what they have to do to manage it. The Hydra uniform makes them mostly anonymous, fi tting well with their oath to replace one fallen agent with two more just like them.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Hydra Officer",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 2, vigilance: 2, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Hydra)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "The green-and-yellow Hydra uniform",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Hydra],
+                Base = "Secret",
+                History =
+                [
+                    "Hydra tends to treat its lowest-level recruits (Hydra Agents) as cannon fodder, foot soldiers who can be spent or lost without hesitation. After all, there never seems to be a lack of disaffected people looking to join up with the fascist organization to do their part for world domination. As the Hydra oath goes, “Cut off a limb and two more shall take its place!”",
+                    "Those agents who survive long enough—or are ambitious enough—find themselves promoted to positions of leadership within their hierarchical organization. Often they’re the leaders of independent cells sequestered from the rest of Hydra for operational security, and the fact that they’ve survived to that point means (at least to them) that they must be doing something right.",
+                ],
+                Personality =
+                [
+                    "While Hydra agents like to follow orders, Hydra officers have developed a taste for giving them. They like to shout at their underlings and boss them around, and many of them harbor aspirations of one day becoming the Supreme Hydra themselves. They tend to be mean and merciless— to outsiders, to their subordinates and most especially to those they see as rivals. Many of them see the fact that they’ve risen in the ranks as the proof of their superiority, and because of this, they tend to be cocky as well.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Hyperion",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 2, resilience: 6, vigilance: 3, ego: 5, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.EternallyImmortal),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.MahdWyry),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Marcus “Marc” Milton",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [460],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Auburn",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Eternal],
+                Teams = [TeamNames.AlphaFlight, TeamNames.Avengers, TeamNames.SquadronSupreme],
+                Base = "Mobile",
+                History =
+                [
+                    "Marcus Milton was born in an alternate universe— Earth-13034—as the sole survivor of a dying world of Eternals. His people sent him to Earth, where he was raised by a humble family of ordinary people.",
+                    "Under the codename Hyperion, Milton worked to make that Earth into a utopia. Sadly, his home, his family and every other member of his universe were destroyed by the incursion of another reality, leaving him—once again—the sole survivor.",
+                    "Hyperion was pulled from the void of his dead universe to Earth-616 by a group of A.I.M. scientists experimenting with multiversal travel. The Avengers freed Hyperion from A.I.M. containment, and for a while, he traveled with them on their adventures. However, he eventually tired of hero work, abandoned his identity as Hyperion and took up a job as a trucker, hoping to learn more about his new home.",
+                    "Events outside of his control have occasionally forced Milton to return to his super-hero identity, but he continues to spend most of his time living on the road."
+                ],
+                Personality =
+                [
+                    "Milton struggles with his identity. He is not even the fi rst version of himself to be pulled from another universe into Earth-616. The original Hyperion—Mark Milton of Earth-712—died shortly after this Milton’s arrival.",
+                    "Having survived so much death and destruction, Milton sometimes feels like fi ghting for justice may be a futile effort when, at any second, his whole world could be destroyed or reset. Still, he can’t help but answer the call to action when he sees a person in need."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
     ];
 

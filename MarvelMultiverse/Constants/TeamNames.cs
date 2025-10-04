@@ -8,6 +8,7 @@ public static class TeamNames
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
     public const string AlliesOfDoctorDoom = "Allies of Doctor Doom";
+    public const string AlphaFlight = "Alpha Flight";
     public const string Annihilators = "Annihilators";
     public const string AstonishingAvengers = "Astonishing Avengers";
     public const string AtlanteanRoyalFamily = "Atlantean Royal Family";
@@ -51,6 +52,7 @@ public static class TeamNames
     public const string HeroesForHire = "Heroes for Hire";
     public const string HouseOfAgon = "House of Agon";
     public const string Hydra = "Hydra";
+    public const string Illuminati = "Illuminati";
     public const string ImperialKreeAmy = "Imperial Kree Amy";
     public const string InfinityWatch = "Infinity Watch";
     public const string InhumanRoyalGuard = "Inhuman Royal Guard";
@@ -89,6 +91,7 @@ public static class TeamNames
     public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
+    public const string SquadronSupreme = "Squadron Supreme";
     public const string StrangeAcademy = "Strange Academy";
     public const string SymbioteHive = "Symbiote Hive";
     public const string TeamX = "Team X";
@@ -104,6 +107,7 @@ public static class TeamNames
     public const string USArmy = "U.S. Army";
     public const string USHulkOperations = "U.S. Hulk Operations";
     public const string WebWarriors = "Web-Warriors";
+    public const string WestCoastAvengers = "West Coast Avengers";
     public const string WreckingCrew = "Wrecking Crew";
     public const string XMen = "X-Men";
     public const string XFactor = "X-Factor";
