@@ -14,6 +14,9 @@ public class Biography
 
     public bool VariableWieght { get; set; }
 
+    public string WeightReminder { get; set; }
+
+
     public string Gender { get; set; }
 
     public string Eyes { get; set; }

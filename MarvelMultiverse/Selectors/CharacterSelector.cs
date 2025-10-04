@@ -11593,5 +11593,194 @@ public class CharacterSelector(
                 ]
             }
         },
+        new()
+        {
+            Name = "Wolverine (Laura Kinney)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 3, vigilance: 2, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon, 
+                            specialization: "Adamantium Claws [+1 Melee damage multiplier]",
+                            meleeDamageModifier: 1),
+
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Laura Kinney",
+                Heights = [new() { Feet = 5, Inches = 1 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Retractable adamantium claws in hands and feet",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechCybernetics, OriginName.Mutant],
+                Teams = [TeamNames.XForce, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Laura Kinney was created as part of a secret attempt to re-create the experiment that gave the original Wolverine (Logan) his adamantium skeleton. She’s a partial clone of Logan himself, with DNA mixed in from Sarah Kinney, the geneticist who created her.",
+                    "The shadowy figures funding this experiment intended for Laura to be an assassin, but Sarah Kinney took pity on her creation and helped Laura escape from their clutches. Free from her captors, Laura tracked down her genetic father and became his protégé. Now she fights alongside Logan, both of them acting under the codename Wolverine.",
+                ],
+                Personality =
+                [
+                    "Although the people who funded her creation did their best to erase her humanity, Laura Kinney has grown into a mature and empathetic young woman. She serves as a levelheaded counterpart to her younger, freewheeling genetic twin sister, Gabrielle Kinney (Scout).",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Wolverine (Logan)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 2, resilience: 5, vigilance: 4, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Sabretooth"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            specialization: "Adamantium Claws [+1 Melee damage multiplier]",
+                            meleeDamageModifier: 1),
+
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "James Howlett (a.k.a. Logan)",
+                Heights = [new() { Feet = 5, Inches = 3 }],
+                Weights = [195],
+                WeightReminder = "300 lbs. with adamantium",
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Retractable adamantium claws, muttonchops",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechCybernetics, OriginName.Mutant],
+                Teams = [TeamNames.Avengers, TeamNames.FantasticFour, TeamNames.XForce, TeamNames.XMen],
+                Base = "Krakoa, Summer House (the Blue Area of the Moon)",
+                History =
+                [
+                    "Born in Canada in the late 1800s, James Howlett wandered the world under the name Logan. At one point, the Weapon X program captured him and bonded adamantium metal to his entire skeleton, including his retractable claws; his mutant healing factor enabled him to survive the experience. He escaped, but with large gaps in his memory.",
+                    "Logan later joined the X-Men and became a valued member of various X-teams. Over time, he recovered most of his memories. He was killed in recent years, but returned to life in time to help establish a new mutant nation on the island of Krakoa.",
+                ],
+                Personality =
+                [
+                    "Logan can be cold-blooded and slow to trust others, but the restoration of his memory blunted those edges. He’s still a no-nonsense man, but that’s tempered with the wisdom age brings. After living as a loner for so long, he treasures his found family.",
+                ]
+            }
+        },
     ];
 }
