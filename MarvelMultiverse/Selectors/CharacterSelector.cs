@@ -2,6 +2,7 @@
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using Microsoft.VisualBasic;
+using System;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
 using System.Numerics;
@@ -5820,6 +5821,197 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Gorgon",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 3, resilience: 5, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Inhuman Royal Guard)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Gorgon Petragon",
+                Heights = [new() { Feet = 6, Inches = 8 }],
+                Weights = [485],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "Hooved feet",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Inhuman],
+                Teams = [TeamNames.HouseOfAgon, TeamNames.InhumanRoyalGuard],
+                Base = "Mobile",
+                History =
+                [
+                    "Born into an off shoot of the royal House of Agon, Gorgon Petragon was taught from a young age to revere and respect Inhuman royalty. As a young man, he befriended the future Inhuman king, Black Bolt, pledging his loyalty to the young prince. In the years since, Gorgon has never strayed far from Black Bolt or his queen, Medusa.",
+                    "As the head of the Inhuman Royal Guard and the personal bodyguard of the royals themselves, Gorgon has been entrusted with the protection and preservation of the House of Agon. This is a job he takes with deadly seriousness, one he continued to perform even after Black Bolt was forced to kill the bulk of the Inhuman population.",
+                    "If he can be convinced that doing so would be in the Royal Family’s best interests, Gorgon has sometimes been known to work against the royals’ wishes. On multiple occasions, the Inhuman villain Maximus has used this fact to manipulate Gorgon into attacking those he was sworn to protect.",
+                ],
+                Personality =
+                [
+                    "Gorgon’s unfl inching loyalty to the House of Agon is both his greatest strength and his greatest weakness. He stops at nothing to ensure the safety of the Inhuman Royal Family. In times of relative unity, this dedication has been an immense boon for the royals. In times of division and confusion, Gorgon can be as much a danger as an asset.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Gorgon (Tomi Shishido)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 2, resilience: 3, vigilance: 4, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.FocusedFury),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BorrowSenses),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Tomi Shishido",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [215],
+                Gender = Gender.Male,
+                Eyes = "Yellow",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Glowing yellow eyes, pale-gray undead skin",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.GreatCaptainsOfKrakoa, TeamNames.TheHand, TeamNames.Hydra],
+                Base = "Mobile",
+                History =
+                [
+                    "Unlike most mutants, Tomi Shishido’s powers began to manifest almost immediately after his birth. As a mere toddler, Shishido had the skills to rival the world’s greatest artists. His intelligence advanced so quickly and erratically that by the time he was a teenager, something fundamental within his psyche could no longer bear the strain. He became increasingly despondent and, eventually, violent.",
+                    "At the age of eighteen, Shishido killed his entire family. Shortly thereafter, he took control of the Hand and merged the ninja organization’s already considerable resources with those of Hydra. As the mighty Gorgon—high commander of both Hydra and the Hand—Shishido committed himself to sowing death and destruction across the globe.",
+                    "For the good of mutantkind, the founders of Krakoa convinced Shishido to put aside his evil ways. However, few doubt that he could return to his old patterns under different circumstances.",
+                    "As a man who cares deeply about the well-being of Japan, Wolverine (Logan) keeps tabs on Shishido. He has already foiled Gorgon’s plots for world domination several times, and if and when the time comes, he will be prepared to do so again."
+                ],
+                Personality =
+                [
+                    "Unlike most members of Hydra, Gorgon is not a fascist. Rather, he is an extreme nihilist. He sees the world as only a cruel joke played by an unloving god. In his heart, he desires nothing more than to wipe the slate clean and destroy all of creation. Hydra and the Hand are simply means to that end.",
+                    "Rumors hold that—like the monster of Greek myth from which he takes his name—Gorgon can turn a person to stone with a single glance. However, no one has witnessed this happen for a long time, and it may be that Gorgon himself is the source of these rumors."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Gorr the God Butcher",
             Rank = 6,
             Abilities = new Abilities
@@ -6109,6 +6301,105 @@ public class CharacterSelector(
                     "Groot is talkative and intelligent, but due to his stiff and inflexible larynx, it appears to others that he can only say “I am Groot.” In actuality, those with a trained ear can discern what Groot is saying in the subtle sigh and breeze under the words.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Growing Man",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 2, resilience: 5, vigilance: 2, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow4),
+                        powerSelector.GetPower(PowerNames.GrowingAttack),
+                        powerSelector.GetPower(PowerNames.MacrodimensionalTravel),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                    IsTech = true
+                },
+            ],
+            PowerNotes =
+            [
+                "Whenever possible, the Growing Man uses the Energy Absorption power as a reaction. Every time he successfully uses this power, he automatically grows one size. He cannot willingly return to his default size."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Male,
+                Eyes = "Varies",
+                Hair = "None",
+                Size = Size.Small,
+                DistinguishingFeatures = "Robotic humanoid with bright orange skin",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = ["Ally to Kang the Conqueror", TeamNames.Hydra],
+                Base = "Mobile",
+                History =
+                [
+                    "As part of his usual plans to cement himself as ruler of the known multiverse, Kang the Conqueror created the world’s fi rst stimuloid: an artifi cial human with the ability to absorb kinetic energy and turn it into mass. Kang proudly named his creation the Growing Man, and he buried it in Earth’s ancient past for safekeeping.",
+                    "In the early twenty-first century, a group of archaeologists working out of Manhattan inadvertently uncovered this stimuloid, awakening it much earlier than Kang had wished. Without the guidance of his creator, the Growing Man embarked on a wild rampage that drew Kang to that period of time. In the end, it took Thor himself to stop both the Growing Man and Kang himself.",
+                    "Kang has rebuilt the Growing Man several times, only to see the stimuloid defeated again and again. He long ago abandoned any hope that the Growing Man would be his ultimate weapon, and these days he mostly uses the android as a bodyguard."
+                ],
+                Personality =
+                [
+                    "The Growing Man is intelligent, but only at the level of a toddler. Though he does not really understand why, he has an instinctive loyalty to his creator. Nothing bothers him more than the idea that Kang may have betrayed or otherwise abandoned him.",
+                    "The Growing Man’s control over his own powers is limited, and a slow and steady beating can force him into a spiral of uncontrollable growth. Whenever the Growing Man is in the fi eld, Kang carries a “De-Energizer” gun capable of instantly reverting the stimuloid to his default size of small."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
     ];
 

@@ -41,6 +41,7 @@ public static class TeamNames
     public const string GodsOfWakanda = "Gods of Wakanda";
     public const string GodSquad = "God Squad";
     public const string Graces = "Graces";
+    public const string GreatCaptainsOfKrakoa = "Great Captains of Krakoa";
     public const string GreatLakesAvengers = "Great Lakes Avengers";
     public const string GreatRingOfArakko = "Great Ring of Arakko";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
@@ -52,6 +53,7 @@ public static class TeamNames
     public const string Hydra = "Hydra";
     public const string ImperialKreeAmy = "Imperial Kree Amy";
     public const string InfinityWatch = "Infinity Watch";
+    public const string InhumanRoyalGuard = "Inhuman Royal Guard";
     public const string Intelligencia = "Intelligencia";
     public const string IntergalacticCouncil = "Intergalactic Council";
     public const string KGB = "KGB";

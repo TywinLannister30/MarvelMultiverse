@@ -156,6 +156,7 @@ public static class PowerNames
     public const string Levitation = "Levitation";
     public const string LightningActions = "Lightning Actions";
     public const string MachineTelepathy = "Machine Telepathy";
+    public const string MacrodimensionalTravel = "Macrodimensional Travel";
     public const string MemoryBlip = "Memory Blip";
     public const string MentalPunch = "Mental Punch";
     public const string MentalShelter = "Mental Shelter";

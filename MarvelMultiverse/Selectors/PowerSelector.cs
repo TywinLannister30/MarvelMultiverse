@@ -2231,6 +2231,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.MacrodimensionalTravel,
+            Description = "The character outgrows the universe!",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Grow4}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character can grow enough to travel into the Macroverse, the Overspace or other dimensions of enlarged space. They can return to their normal size at will.",
+                "Note that this is something that most characters would rarely want to do, as it removes them entirely from their regular universe and places them in a dimension in which the rules of time and space work di­ erently. An hour in the Macroverse, for example, is roughly equivalent to a month in a regular universe. A trip to the Overspace is too overwhelming for most minds to handle.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.MemoryBlip,
             Description = "The character erases a bit of someone’s memory.",
             PowerSets = [PowerSetNames.Telepathy],
