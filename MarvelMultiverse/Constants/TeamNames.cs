@@ -75,6 +75,7 @@ public static class TeamNames
     public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string StrangeAcademy = "Strange Academy";
+    public const string SymbioteHive = "Symbiote Hive";
     public const string TeamX = "Team X";
     public const string TerribleTrio = "Terrible Trio";
     public const string TheHand = "The Hand";
