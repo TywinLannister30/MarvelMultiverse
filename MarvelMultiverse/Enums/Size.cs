@@ -12,5 +12,6 @@ public enum Size
     Huge,
     Gigantic,
     Titanic,
-    Gargantuan
+    Gargantuan,
+    Varies
 }
