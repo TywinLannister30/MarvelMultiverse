@@ -20,6 +20,8 @@ public class Biography
 
     public string Gender { get; set; }
 
+    public string GenderReminder { get; set; }
+
     public string Eyes { get; set; }
 
     public string Hair { get; set; }

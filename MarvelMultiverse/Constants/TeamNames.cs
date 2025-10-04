@@ -6,6 +6,7 @@ public static class TeamNames
     public const string AgentsOfAtlas = "Agents of Atlas";
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
+    public const string Annihilators = "Annihilators";
     public const string AstonishingAvengers = "Astonishing Avengers";
     public const string AtlanteanRoyalFamily = "Atlantean Royal Family";
     public const string Avengers = "Avengers";
@@ -93,6 +94,7 @@ public static class TeamNames
     public const string USArmy = "U.S. Army";
     public const string USHulkOperations = "U.S. Hulk Operations";
     public const string WebWarriors = "Web-Warriors";
+    public const string WreckingCrew = "Wrecking Crew";
     public const string XMen = "X-Men";
     public const string XFactor = "X-Factor";
     public const string XForce = "X-Force";

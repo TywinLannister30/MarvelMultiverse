@@ -1199,6 +1199,116 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Beta Ray Bill",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 3, resilience: 8, vigilance: 2, ego: 4, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin, reminder: "2"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage, reminder: "via Twilight Sword"),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "regular Korbinite form"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped, reminder: "as Thor"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            specialization: "Twilight Sword [Adds elemental fire effect to melee attacks.]"),
+
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty4, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Beta Ray Bill",
+                Heights = [new() { Feet = 6, Inches = 7 }],
+                Weights = [480],
+                Gender = Gender.Male,
+                Eyes = "No irises",
+                Hair = "None",
+                Size = Size.Big,
+                DistinguishingFeatures = "Bright orange skin, horse-like head",
+                Occupations = [OccupationName.Adventurer, OccupationName.Outsider],
+                Origins = [OriginName.Alien, OriginName.HighTechCybernetics, OriginName.MythicAsgardian],
+                Teams = [TeamNames.Annihilators, TeamNames.GuardiansOfTheGalaxy],
+                Base = "Mobile",
+                History =
+                [
+                    "Years ago, the demonic Surtur of Muspelheim unleashed his minions upon the planet of Korbin. Korbinite civilization was annihilated, and the few who survived fled across the cosmos.",
+                    "Korbinite scientists performed torturous experiments upon their own people, hoping to create a champion capable of fi ghting the demons. Only one subject named Bill survived the transformation, but even his newfound powers were not enough to hold back the demons.",
+                    "All hope was lost until a chance encounter with Thor Odinson led Bill into an alliance with Asgard. Impressed by Bill’s strength, Odin himself granted the Korbinite a hammer with a set of powers to match Thor’s own. Together, Bill and Thor pushed the demons back into Muspelheim.",
+                    "Much later, Bill invaded Muspelheim and defeated Surtur once and for all. He abandoned Odin’s gifts and claimed Surtur’s Twilight Sword as his own. Although he is still revered in Asgard, Bill now focuses most of his energies on caring for his people."
+                ],
+                Personality =
+                [
+                    "Beta Ray Bill’s noble and serious demeanor matches well with those of the gods of Asgard. The Asgardians accept him as one of their own—more so than his fellow Korbinites, who are largely frightened by his monstrous form. Bill can use his sword to disguise himself as a regular Korbinite, and he tends to stay in this disguise when among his own.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Black Bolt",
             Rank = 5,
             Abilities = new Abilities
@@ -1296,6 +1406,105 @@ public class CharacterSelector(
                     "While generally considered by his people to be a benevolent ruler, Black Bolt can come off as a bit aloof, especially to non-Inhumans.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Black Knights / Fenris Twins",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 2, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Hydra)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight1, reminder: "adjacent"),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "adjacent"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "adjacent"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "adjacent"),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet, reminder: "adjacent"),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "The Fenris Twins are two mechanically identical characters. They can move separately, but several of their abilities work only when the twins are close enough to touch. These powers bear the label “(adjacent).”"
+            ],
+            Biography = new Biography
+            {
+                RealName = "Andrea and Andreas von Strucker",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                HeightReminder = "both",
+                Weights = [],
+                WeightReminder = "110 lbs. (Andrea), 165 lbs. (Andreas)",
+                Gender = Gender.Varies,
+                GenderReminder = "Female (Andrea), Male (Andreas)",
+                Eyes = "Blue (both)",
+                Hair = "Blond (both)",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Mutant, OriginName.WeirdScience],
+                Teams = [TeamNames.HellfireTradingCompany, TeamNames.Hydra],
+                Base = "Krakoa",
+                History =
+                [
+                    "Decades ago, fascist leader Baron von Strucker forced his pregnant wife to undergo experimental treatments developed by the brilliant but evil Dr. Arnim Zola. The genomes of the twin embryos were modifi ed to include a number of unusual genes, including the X-Gene of mutant fame.",
+                    "Andrea and Andreas von Strucker displayed few symptoms of this meddling at birth, but as young adults their powers began to emerge. The twins could fl y, perform incredible feats of acrobatics, and shoot blasts of energy from their fi sts—but only while in direct contact with each other.",
+                    "Under the codename Fenris, the twins went into business for themselves as super-powered mercenaries. They have spent most of their adult lives menacing the rest of mutantkind, attacking super heroes for profi t and pleasure.",
+                    "Although the Fenris Twins were granted permission to live on Krakoa—despite the artifi cial nature of their mutant status—most other mutants do not regard them with respect. As the Black Knights of the Hellfi re Club, they act as personal bodyguards for the villainous Sebastian Shaw."
+                ],
+                Personality =
+                [
+                    "The Fenris Twins are almost comically spoiled. They grew up in the lap of luxury, their every whim attended to by a squadron of servants. From a young age, they were taught to understand that they were better than other people and to violently oppose any who gainsaid that idea.",
+                    "Like their father, both of the Fenris Twins are committed fascists and white supremacists. However, their fi rst and greatest loyalty is to money. They do terrible things not out of a commitment to an ideology but out of a desire to maintain their opulent lifestyle."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -1597,6 +1806,93 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Blindspot (Sam Chung)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 1, vigilance: 2, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Daredevil (Matt Murdock)"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Steel pole (club)"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Samuel “Sam” Chung",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Black eyes with glowing blue irises",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.TheHand],
+                Base = "NYC",
+                History =
+                [
+                    "When Sam Chung was just a boy, he and his family emigrated from China to the United States. With a prodigious mind and a strong admiration for the super heroes of New York City, Chung spent much of his childhood working on designs for an invisibility suit.",
+                    "As soon as he was able, Chung built his suit and began to fight crime on the streets of New York’s Chinatown under the codename Blindspot. Later, the super villain Muse tore out his eyes. They were eventually replaced with mystic counterparts, but his new glowing eyes have made maintaining his secret identity difficult.",
+                ],
+                Personality =
+                [
+                    "Chung is a bit of a loner and a cynic. His mentor, Daredevil, is one of the few people on Earth he genuinely admires.",
+                    "As an undocumented immigrant, Chung displays trepidation around law-enforcement o¸ cers."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Blue Marvel",
             Rank = 6,
             Abilities = new Abilities
@@ -1788,6 +2084,90 @@ public class CharacterSelector(
                     "Like many gamma mutates, Cho has struggled with anger issues, but compared to Bruce Banner, Cho is as cool as an ice cube. Cho’s super-intelligence is matched with an emotional immaturity that can land him in over his head in certain situations. Thanks to his Champions teammates and his brilliant sister, Maddy, Cho has begun to navigate the world more thoughtfully.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Bulldozer (Wrecking Crew)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 4, resilience: 3, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Ram"),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Henry Camp",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [325],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.WreckingCrew],
+                Base = "Mobile",
+                History =
+                [
+                    "Abandoned on a trash heap when he was just 2 days old, Henry Camp grew up in an orphanage. Following a dishonorable discharge from the U.S. Army, he turned to a life of crime. After being picked up on burglary charges multiple times, he was sentenced to an extended stay on Ryker’s Island.",
+                    "In prison, Camp met Dirk Garthwaite, A.K.A. the villainous Wrecker. Along with a couple of other inmates, Camp helped Garthwaite escape from Ryker’s. In exchange, Garthwaite granted Camp and his compatriots a portion of his own super-powers. Together, they formed the super-villain group known as the Wrecking Crew, and they’ve been in each other’s orbits ever since.",
+                    "At times when Henry Camp is not available, his daughter, Marci Camp, takes his place in the Wrecking Crew as the new Bulldozer."
+                ],
+                Personality =
+                [
+                    "Henry Camp’s outwardly cool and tough demeanor conceals an inner bitterness. He harbors a burning resentment toward the government, society and the world at large, stemming from how they all failed him his entire life. It is this resentment that drives him forward in his criminal activities.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {

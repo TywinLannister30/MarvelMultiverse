@@ -27,6 +27,8 @@ public class Character
 
     public List<PowerSet> Powers { get; set; }
 
+    public List<string> PowerNotes { get; set; }
+
     public Biography Biography { get; set; }
 
     public string Source { get; set; }
