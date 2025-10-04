@@ -68,9 +68,11 @@ public static class TeamNames
     public const string QuietCouncilOfKrakoa = "Quiet Council of Krakoa";
     public const string SantaRosaSheriffsDepartment = "Santa Rosa Sheriff’s Department";
     public const string SavageAvengers = "Savage Avengers";
+    public const string SavageSix = "Savage Six";
     public const string SecretAvengers = "Secret Avengers";
     public const string SHIELD = "S.H.I.E.L.D.";
     public const string SinisterSix = "Sinister Six";
+    public const string SinisterTwelve = "Sinister Twelve";
     public const string SkrullEmpire = "Skrull Empire";
     public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
