@@ -855,6 +855,36 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.DimensionalTravel,
+            Description = "The character moves from one dimension to another.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = "Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Movement}",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character instantly moves from their current dimension to another dimension within the same universe. For instance: from Earth to Asgard, Limbo or K’un-Lun. When they move to the other dimension, they can arrive in any place they’ve been to before. Otherwise, they arrive at the most common entrance to that dimension.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.DimensionalTravelTogether,
+            Description = "The character brings someone with them to another dimension.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.DimensionalTravel}, Rank 3",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character moves to a di­fferent dimension, taking any person they are touching with them. If the target does not wish to come along, the character must grab them first.",
+                "When they move to the other dimension, they can arrive in any place they’ve been to before. Otherwise, they arrive at the most common entrance to that dimension."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Discipline1,
             Description = "The character works to hone their power.",
             PowerSets = [],
@@ -3705,6 +3735,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character teleports into a clear space they can see or have been to, up to 10 times their rank in spaces away. Outside of combat, they can teleport up to 1,000 times their rank in spaces away."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.TeleportBlind,
+            Description = "The character teleports someplace new to them.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Teleport1}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Movement}",
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character teleports to someplace they’ve never been and never seen, up to 10 times their rank in spaces away. Outside of combat, they can teleport up to 100 times their rank in spaces away.",
+                "If the character teleports into something solid, they are automatically pushed out of it but take damage from the disruption equal to a standard action check. The damage multiplier is 1 for every space they must move to reach a clear area. If this kills them, their body is trapped inside the material they teleported into."
             ]
         },
         new()

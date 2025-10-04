@@ -9230,6 +9230,183 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Lockjaw",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 3, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.Mute, reminder: "can only bark"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelDimensional,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DimensionalTravel),
+                        powerSelector.GetPower(PowerNames.DimensionalTravelTogether),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelMultiversal,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MultiversalTravel),
+                        powerSelector.GetPower(PowerNames.MultiversalTravelTogether),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.Teleport2),
+                        powerSelector.GetPower(PowerNames.TeleportBlind),
+                        powerSelector.GetPower(PowerNames.TeleportObject),
+                        powerSelector.GetPower(PowerNames.TeleportOther),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lockjaw",
+                Heights = [new() { Feet = 5 }],
+                Weights = [1240],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "Giant bulldog with small tuning-fork-like antennae",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Inhuman, OriginName.WeirdScience],
+                Teams = [TeamNames.HouseOfAgon, TeamNames.PetAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "Lockjaw is the fi nal result of a series of experiments on animals performed by Inhuman geneticists. He was implanted with Inhuman genes and exposed to the Terrigen Mist while still in the womb. As a result, he later grew to an immense size and gained the ability to teleport nearly unlimited distances.",
+                    "The data from the experiments on Lockjaw was used to give the future Inhuman king Black Bolt his own powers. Mere days after Black Bolt was born, the young prince developed an attachment to the dog who had been mutated in the same manner as himself. Soon enough, Lockjaw had become the official pet of the Inhuman Royal Family.",
+                    "Lockjaw accompanies the royals on nearly all of their adventures. Although his combat abilities are limited, his powers of teleportation make him an indispensable teammate. In the rare event that the Inhuman royals are outmatched by an opponent, they can always cling to Lockjaw and teleport away.",
+                ],
+                Personality =
+                [
+                    "Although more intelligent and observant than an average bulldog, Lockjaw is still an animal. He whines, barks, begs and behaves like any other dog.",
+                    "Lockjaw can be rambunctious, and he has been known to run off on his own adventures from time to time. However, he is, above all else, loyal to Black Bolt. Any who make themselves an enemy of the Inhuman king must also contend with his dog."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Logos (of Earth-56438)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 1, vigilance: 2, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.LegalEagle),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Hounded, reminder: "outside ancient Egypt"),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Powerful, reminder: "within ancient Egypt"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Logos",
+                Heights = [new() { Feet = 5 }],
+                Weights = [125],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.Mutant],
+                Teams = ["Personal advisor to Rama-Tut Kang"],
+                Base = "Ancient Egypt",
+                History =
+                [
+                    "Having been born into a wealthy Egyptian family, Logos was raised from birth to act as an advisor within the pharaoh’s royal court. His brilliant mind and his preternatural ability to sense what others are thinking brought Logos prestige and renown. However, he obtained the status of grand vizier only after Kang’s arrival.",
+                    "When Kang fi rst arrived in Egypt, he slaughtered most of the last pharaoh’s court. Logos is one of the few who Kang chose to spare.",
+                    "Although he does not know it himself, Logos is a mutant, one of the earliest. He is a brilliant advisor, but Logos’ mutant status is the main reason Kang kept him around. Kang has been on the lookout for Apocalypse since the moment he set foot on Egyptian soil. Some part of him believes that by retaining control over one mutant, he can somehow draw in another.",
+                ],
+                Personality =
+                [
+                    "Logos was raised to have unquestioning loyalty to the pharaoh. However, Kang’s brutality has shaken his resolve. Logos remains committed to Kang’s service, and he treats any threats to the pharaoh’s well-being with deadly seriousness. However, he would be willing to assist an investigation into Kang’s true origins.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Loki",
             Rank = 5,
             Abilities = new Abilities

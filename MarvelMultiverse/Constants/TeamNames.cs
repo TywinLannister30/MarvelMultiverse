@@ -78,6 +78,7 @@ public static class TeamNames
     public const string NYPD = "NYPD";
     public const string PantherCult = "Panther Cult";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
+    public const string PetAvengers = "Pet Avengers";
     public const string PowerElite = "Power Elite";
     public const string ProjectGreenSpring = "Project Green Spring";
     public const string Protectors = "Protectors";

@@ -58,6 +58,8 @@ public static class PowerNames
     public const string DanceOfDeath = "Dance of Death";
     public const string Dazzle = "Dazzle";
     public const string DefenseStance = "Defense Stance";
+    public const string DimensionalTravel = "Dimensional Travel";
+    public const string DimensionalTravelTogether = "Dimensional Travel Together";
     public const string Discipline1 = "Discipline 1";
     public const string Discipline2 = "Discipline 2";
     public const string Discipline3 = "Discipline 3";
@@ -260,6 +262,7 @@ public static class PowerNames
     public const string TelepathicPossession = "Telepathic Possession";
     public const string Teleport1 = "Teleport 1";
     public const string Teleport2 = "Teleport 2";
+    public const string TeleportBlind = "Teleport Blind";
     public const string TeleportObject = "Teleport Object";
     public const string TeleportOther = "Teleport Other";
     public const string TeleportTogether = "Teleport Together";
