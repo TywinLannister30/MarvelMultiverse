@@ -8,6 +8,8 @@ public class Biography
 
     public List<Height> Heights { get; set; }
 
+    public string HeightReminder { get; set; }
+
     public List<int> Weights { get; set; }
 
     public bool UnknownWieght { get; set; }
@@ -15,7 +17,6 @@ public class Biography
     public bool VariableWieght { get; set; }
 
     public string WeightReminder { get; set; }
-
 
     public string Gender { get; set; }
 

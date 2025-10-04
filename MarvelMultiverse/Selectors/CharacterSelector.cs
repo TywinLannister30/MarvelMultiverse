@@ -301,25 +301,6 @@ public class CharacterSelector(
                 },
                 new PowerSet
                 {
-                    Name = PowerSetNames.MagicSorcery,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.AstralForm),
-                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
-                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
-                        powerSelector.GetPower(PowerNames.DispelSpell),
-                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
-                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
-                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
-                        powerSelector.GetPower(PowerNames.MistsOfMunnopor),
-                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
-                        powerSelector.GetPower(PowerNames.SummonPortal),
-                        powerSelector.GetPower(PowerNames.VaporsOfValtorr),
-                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
-                    ],
-                },
-                new PowerSet
-                {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
                     [
@@ -364,6 +345,84 @@ public class CharacterSelector(
                     "While considered fun and personable by his allies, Coulson is nonetheless a strict and serious field commander, not to mention a formidable combatant. Having worked in intelligence for so long, he is accustomed to keeping big secrets.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Agent Sum",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 1, vigilance: 0, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Leverage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mysterious),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pistol"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Hui Lin",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [207],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Facial scar",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.Unknown],
+                Teams = [TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Born to a family of Chinese peasants in the mid-fourteenth century, Hui Lin grew up with no prospects in life. At the ripe age of forty, he took a fall off a horse and cracked his head wide open.",
+                    "The fall should have killed Hui, but within minutes, his head had fully healed, leaving nothing but a small scar behind. Horrifi ed and confused, he fled his little village into the countryside.",
+                    "From that day forward, Hui stopped aging. He spent the next several centuries living the quiet life, only emerging into the world on the rare occasions that he found a cause worth fighting for.",
+                    "Going by the name of David Sum, Hui joined S.H.I.E.L.D. sometime in the late twentieth century. He’s been a top-ranking member of the organization ever since, maintaining ties with S.H.I.E.L.D. leadership even after its dissolution."
+                ],
+                Personality =
+                [
+                    "As a veteran of numerous wars, Agent Sum is a bit self-serious, if not outright world-weary. He has too often found himself as the lone survivor of a devastating attack.",
+                ],
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -543,6 +602,80 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Alpha Primitive",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 2, vigilance: 0, ego: 0, logic: -2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Inhuman Royal Guard)"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "typically around 5½ feet",
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                GenderReminder = "Mostly male",
+                Eyes = "Varies",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.WeirdScience],
+                Teams = ["Servants and defenders of the Inhuman Royal Family"],
+                Base = "Mobile",
+                History =
+                [
+                    "Thousands of years ago, a brilliant but cruel geneticist appeared before the ruling council of Inhuman society. This geneticist argued that to turn their society into a true paradise, the Inhumans of the future would need docile, unintelligent attendants who could take care of their every physical want. To that end, he claimed he could breed a genetically perfect servant.",
+                    "The ruling council approved the geneticist’s request. Within a few years, hundreds of his creations— which he dubbed Alpha Primitives—had joined Inhuman society.",
+                    "At first, the Alpha Primitives were everything the geneticist had promised: unintelligent, physically strong and largely obedient. Even after the fall of the old Inhuman society and the rise of the Royal Family, the Alpha Primitives continued to provide their labor freely and without complaint.",
+                    "However, deep down, beneath all their societal and genetic programming, some part of each Alpha Primitive yearns to be free. Across the last several decades, bloody Alpha Primitive rebellions have wracked the foundations of Inhuman society. With the recent collapse of New Attilan, most of the remaining Alpha Primitives have scattered to the winds."
+                ],
+                Personality =
+                [
+                    "Most Alpha Primitives are kind, but they have the vocabulary of a young child. They can speak in simple sentences and follow simple instructions, but they would be lost if asked to assemble anything more complex than a cardboard box.",
+                    "However, when pushed to the breaking point, Alpha Primitives have been known to exhibit sudden flashes of incredible intelligence. Their rebellions have been organized and swift."
+                ],
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Ant-Man",
             Rank = 3,
             Abilities = new Abilities
@@ -633,6 +766,98 @@ public class CharacterSelector(
                     "Scott Lang is a good friend and a caring father, if a bit of a goofball. He serves as an inspiration to his daughter, Cassie, now a super hero herself under the codename Stinger.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Arnim Zola",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 3, vigilance: 2, ego: 2, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance3),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Arnim Zola",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "None",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Humanoid robot with a screen for a face in his chest",
+                Occupations = [OccupationName.Criminal, OccupationName.Scientist],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.Hydra],
+                Base = "Mobile",
+                History =
+                [
+                    "Arnim Zola was once a brilliant Nazi scientist who, in order to protect himself from the dangers of his own creations, transferred his mind into a robotic body he made. Atop this body he mounted an experimental “ESP Box”—a device designed to amplify his own brain waves.",
+                    "The ESP Box worked better than Zola ever could have expected, granting him a slew of telepathic powers. His renown in fascist circles skyrocketed, and after the fall of the Third Reich, Zola joined with the Red Skull and several other fanatical fascists to form the latest incarnation of the terrorist group Hydra.",
+                    "In the years since, Zola has always been a top-ranking member of Hydra High Command. He forms the backbone of the evil organization’s scientific efforts, and has been personally responsible for the creation of many of their most powerful villains. Doughboy, Man-Fish, Primus and the Black Knights (A.K.A. the Fenris Twins) all owe their existence to the dastardly inventions of Zola.",
+                    "Zola is not a skilled fi ghter, but his ESP Box allows him to hold his own in battles against the likes of Captain America and the Falcon."
+                ],
+                Personality =
+                [
+                    "Like most of Hydra’s leaders, Arnim Zola is a committed fascist and megalomaniac. His complete disregard for the lives of others has been made apparent by his many horrific and torturous experiments. Zola is single-mindedly determined to continue his terrible research, and he will let no one stand in his way.",
+                ],
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
