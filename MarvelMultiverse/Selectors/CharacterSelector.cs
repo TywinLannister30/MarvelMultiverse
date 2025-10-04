@@ -4375,7 +4375,7 @@ public class CharacterSelector(
                 ]
             }
         },
-        new()
+        new()  
         {
             Name = "Doombot",
             Rank = 3,
@@ -4849,6 +4849,93 @@ public class CharacterSelector(
                     "As a deaf woman and a member of the Cheyenne Nation, Maya has faced many struggles. Despite this, she generally manages to stay upbeat. She has a particular love for the theatrical arts, having become a concert pianist and an expert dancer.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Egghead",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 2, resilience: 1, vigilance: 1, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminals"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Egg bombs (frag grenades)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Elihas Starr",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [320],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Unusually large, conconical head",
+                Occupations = [OccupationName.Criminal, OccupationName.Scientist],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.MastersOfEvil],
+                Base = "NYC",
+                History =
+                [
+                    "For attempting to smuggle atomic secrets out of his own government-backed laboratory, Elihas Starr was fi red from his job and became a pariah in the scientifi c community. Unfortunately for humanity, this served only to drive Starr further down the criminal path.",
+                    "Shortly after Starr was fired, a group of upperclass criminals contacted him. Impressed by his supposed intellect, they hired Starr to defeat the scientist/crimefi ghter Ant-Man (Hank Pym).",
+                    "Starr’s initial attempts at this were, by and large, catastrophic failures, but that did not matter to him. He had gotten a taste for the thrill of supervillainy, and he was never going back.",
+                    "Despite repeatedly being beaten, locked in jail and—on at least one occasion—killed outright, Starr has continued to menace the scientifi c world. Under the codename Egghead, he plots the destruction of all legitimate scientists, particularly Hank Pym and his heroic proteges."
+                ],
+                Personality =
+                [
+                    "Egghead is a delusional egomaniac who believes he is the smartest man in the world. In reality, he is nothing more than a mediocre scientist with a decent head for on-the-fl y inventions. He can be reasoned with, but only insofar as he can be fl attered.",
+                    "Though Egghead may make an exception for the right price, he prefers criminal assignments that allow him to face off against important scientists like Hank Pym and Tony Stark. He wants nothing more than to prove himself in a battle of wits with those whom he believes are his intellectual rivals. He never succeeds."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
