@@ -194,6 +194,22 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.ExternalAwareness,
+            Effect =
+            [
+                "The character has a telepathic link with all other Externals. This allows them to:",
+                "- Know where other Externals are.",
+                "- Know when an External kills another External.",
+                "- Telepathically call for other Externals.",
+            ],
+            Restrictions =
+            [
+                "For Externals only."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = TraitNames.ExtraOccupation,
             Effect =
             [
@@ -297,11 +313,33 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.HiveMind,
+            Effect =
+            [
+                "The character has some independence but is connected to others of their kind by a telepathic network with an unlimited range and an unlimited number of members. When given orders by the leader of that network, the character must make an Ego vs. TN 18 action check or follow those orders. On a Fantastic success, the character can choose to permanently break free from the network.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = TraitNames.Honest,
             Effect =
             [
                 "The character is a terrible liar. They have trouble any time they make an Ego check that involves telling a lie. However, they have an edge on any friendly Ego (persuasion) checks in which they’re truthful.",
             ],
+        },
+        new()
+        {
+            Name = TraitNames.Infector,
+            Effect =
+            [
+                "The character can infect a target with a disease, which must be chosen along with the trait. Examples include:",
+                "- Brood implantation",
+                "- Techno-Organic virus",
+                "- Transmode virus",
+                "See the infected condition for details about how infection works, the Infections and Possessions section for the effects of the above diseases."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -492,6 +530,15 @@ public class TraitSelector : ITraitSelector
                 "The character relies on technology for powers. When they take damage that would render them unconscious, they can instead choose to lose all of their technology-related powers and remain conscious with 1 point of Health remaining.",
                 "Assuming the character has access to parts and tools, lost powers can be repaired aœ er a battle"
             ],
+        },
+        new()
+        {
+            Name = TraitNames.Venomous,
+            Effect =
+            [
+                "When the character uses sharp Melee Weapons powers and gets a Fantastic success, they have the option of causing a target to be poisoned rather than bleeding.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {

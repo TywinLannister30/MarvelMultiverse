@@ -5,6 +5,7 @@ public static class TagNames
     public const string AI = "A.I.";
     public const string AlienHeritage = "Alien Heritage";
     public const string AlternateForm = "Alternate Form";
+    public const string Arakkii = "Arakkii";
     public const string Amphibious = "Amphibious";
     public const string AuditoryIssues = "Auditory Issues";
     public const string Authority = "Authority";
@@ -17,6 +18,7 @@ public static class TagNames
     public const string Dependents = "Dependents";
     public const string Enemy = "Enemy";
     public const string EternallyImmortal = "Eternally Immortal";
+    public const string ExternallyImmortal = "Eternally Immortal";
     public const string ExtremeAppearance = "Extreme Appearance";
     public const string GreenDoor = "Green Door";
     public const string Headquarters = "Headquarters";
@@ -32,6 +34,7 @@ public static class TagNames
     public const string LunarTransformation = "Lunar Transformation";
     public const string MahdWyry = "Mahd Wy’ry";
     public const string Mentor = "Mentor";
+    public const string MutantAssociate = "Mutant Associate";
     public const string Mute = "Mute";
     public const string Mysterious = "Mysterious";
     public const string Obligation = "Obligation";

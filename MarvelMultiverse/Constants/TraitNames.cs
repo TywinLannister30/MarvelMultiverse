@@ -25,6 +25,7 @@ public static class TraitNames
     public const string EnhancedPhysique = "Enhanced Physique";
     public const string ExtraOccupation = "Extra Occupation";
     public const string ExtraordinaryOrigin = "Extraordinary Origin";
+    public const string ExternalAwareness = "External Awareness";
     public const string Famous = "Famous";
     public const string Fearless = "Fearless";
     public const string FirstAid = "First Aid";
@@ -35,7 +36,9 @@ public static class TraitNames
     public const string Glibness = "Glibness";
     public const string GodHeritage = "God Heritage";
     public const string Gullible = "Gullible";
+    public const string HiveMind = "Hive Mind";
     public const string Honest = "Honest";
+    public const string Infector = "Infector";
     public const string Interrogation = "Interrogation";
     public const string Inventor = "Inventor";
     public const string Investigation = "Investigation";
@@ -59,6 +62,7 @@ public static class TraitNames
     public const string Stranger = "Stranger";
     public const string SurprisingPower = "Surprising Power";
     public const string TechReliance = "Tech Reliance";
+    public const string Venomous = "Venomous";
     public const string Weakness = "Weakness";
     public const string Weird = "Weird";
 }

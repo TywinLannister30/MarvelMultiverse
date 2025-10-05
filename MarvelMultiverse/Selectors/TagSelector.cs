@@ -65,6 +65,19 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Arakkii,
+            Effect =
+            [
+                "The character hails from Arakko, which was once part of the same island as Krakoa before it was severed and sent into the dark dimension of Amenth. Arakko has since returned to the regular world and been transplanted onto a terraformed Mars.",
+                "Arakkii society emphasizes independence. Arakkii do not accept help from others and often settle disputes by means of formal duels. They refuse to allow the Five to resurrect them."
+            ],
+            Restrictions =
+            [
+                "For mutants only."
+            ]
+        },
+        new()
+        {
             Name = TagNames.AuditoryIssues,
             Effect =
             [
@@ -157,6 +170,20 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.ExternallyImmortal,
+            Effect =
+            [
+                "The character is nearly impossible to permanently kill. If they die, they are either revived somehow or reincarnated with their full memories, and then they age quickly till they reach the age of their first death, at which point they stop aging at all.",
+                "The only way for an External to permanently die is for another External to kill all the others within a certain period of time and either drain their life energies or eat their hearts, which grants the killer the victim’s powers. Otherwise, they come back again."
+            ],
+            Restrictions =
+            [
+                "For Externals only."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = TagNames.ExtremeAppearance,
             Effect =
             [
@@ -237,26 +264,6 @@ public class TagSelector : ITagSelector
             Restrictions =
             [
                 "For Inhumans only."
-                ]
-        },
-        new()
-        {
-            Name = TagNames.LabAccess,
-            Effect =
-            [
-                "The character either owns or has access to a laboratory filled with the technical equipment, supplies and tools they need for their work. This can be anything from a well-stocked high-school classroom to a forensics lab to an industrial site.",
-            ],
-        },
-        new()
-        {
-            Name = TagNames.LunarTransformation,
-            Effect =
-            [
-                "On the three nights that the moon is at its fullest and while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe.",
-            ],
-            Restrictions =
-            [
-                "For werewolves only."
             ]
         },
         new()
@@ -274,11 +281,31 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.LabAccess,
+            Effect =
+            [
+                "The character either owns or has access to a laboratory filled with the technical equipment, supplies and tools they need for their work. This can be anything from a well-stocked high-school classroom to a forensics lab to an industrial site.",
+            ],
+        },
+        new()
+        {
             Name = TagNames.Linguist,
             Effect =
             [
                 "The character is fluent in a language other than their native tongue. This tag can be selected multiple times, once for each language.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.LunarTransformation,
+            Effect =
+            [
+                "On the three nights that the moon is at its fullest and while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe.",
+            ],
+            Restrictions =
+            [
+                "For werewolves only."
+            ]
         },
         new()
         {
@@ -299,6 +326,19 @@ public class TagSelector : ITagSelector
             [
                 "The character knows an older person they can ask for advice, even when it comes to having super-powers. This tag can be selected multiple times.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.MutantAssociate,
+            Effect =
+            [
+                "Much of the public believes—or has believed—the character to be a mutant. While this isn’t technically true, the character is lumped in with other mutants in most people’s minds.",
+            ],
+            Restrictions =
+            [
+                "For non-mutants or those with the Mutant: Artificial origin."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {

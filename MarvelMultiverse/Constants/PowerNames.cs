@@ -28,6 +28,7 @@ public static class PowerNames
     public const string BorrowSenses = "Borrow Senses";
     public const string BounceBack = "Bounce Back";
     public const string BraceForImpact = "Brace for Impact";
+    public const string BrainDrain = "Brain Drain";
     public const string Brawling = "Brawling";
     public const string Brilliance1 = "Brilliance 1";
     public const string Brilliance2 = "Brilliance 2";

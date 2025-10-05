@@ -426,6 +426,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.BrainDrain,
+            Description = "The character consumes the energies of another.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Reaction,
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes an Ego attack against the target’s Vigilance. If it succeeds, the target takes regular Focus damage, and the character heals half that much Focus for themselves. On a Fantastic success, the character heals their full Focus damage instead.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Brawling,
             Description = "The character has the moves and is hard to hit.",
             PowerSets = [],

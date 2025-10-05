@@ -30,6 +30,24 @@ public class OriginSelector : IOriginSelector
         },
         new()
         {
+            Name = OriginName.AlienBrood,
+            Description =
+            [
+                "The character is a member of the Brood, one of the most feared alien species in the galaxy. The Brood are insectoid creatures overseen by Brood Queens who all serve the Empress Brood. The Empress rules the entire Brood population through a hive mind that extends across the universe.",
+                "Only Brood Queens (including the Empress) can implant a Brood embryo in creatures from other species, which is how the Brood reproduce. Queens prefer to implant embryos in an unconscious host to prevent the host from knowing about it. They often poison the host with their tail stinger and wait for them to fall before implanting the embryo, which neutralizes the poison.",
+                "If a character is fully taken over by a Brood embryo implanted in them, they automatically gain this origin, along with the Extraordinary Origin trait."
+            ],
+            Examples = "Broo, Brood Drone, Brood Queen, Empress Brood.",
+            Tags= $"{TagNames.AlienHeritage}, {TagNames.ExtremeAppearance}, {TagNames.Villainous}",
+            Traits = $"{TraitNames.Fearless}, {TraitNames.HiveMind}, {TraitNames.Infector} (Brood implantation, Queens only), {TraitNames.Venomous}.",
+            SuggestedOccupation = OccupationName.Military,
+            Powers = $"{PowerNames.AdditionalLimbs}, {PowerNames.Flight1} (except for Queens), {PowerNames.Mighty1}, {PowerNames.Sturdy1}",
+            MinimumRank = 2,
+            Limitation = "Unless the Brood is a Queen, the character can only pick additional powers as if they had the Special Training origin.",
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = OriginName.AlienKree,
             Description =
             [
@@ -40,6 +58,21 @@ public class OriginSelector : IOriginSelector
             Tags= $"{TagNames.AlienHeritage}, {TagNames.ExtremeAppearance} (if blue-skinned).",
             Traits = $"{TraitNames.BreatheDifferent}, {TraitNames.EnhancedPhysique}.",
             SuggestedOccupation = OccupationName.Outsider
+        },
+        new()
+        {
+            Name = OriginName.AlienMarginalian,
+            Description =
+            [
+                "The character is a Marginal, a species of asexually reproducing hermaphrodites who come from Marginalia, a space between universes. They are legless, shaped like a green potato with arms, and they get around by means of levitation.",
+            ],
+            Examples = "Doop.",
+            Tags= $"{TagNames.AlienHeritage}, {TagNames.ExtremeAppearance}",
+            Traits = $"{TraitNames.Weird}.",
+            SuggestedOccupation = OccupationName.Outsider,
+            Powers = $"{PowerNames.DimensionalPortal}, {PowerNames.DimensionalTravel}, {PowerNames.DimensionalTravelOther}, {PowerNames.DimensionalTravelTogether}, {PowerNames.Grow2}, {PowerNames.HealingFactor}, {PowerNames.Levitation}, {PowerNames.Shrink2}, {PowerNames.Sturdy2}, {PowerNames.Uncanny2}",
+            MinimumRank = 3,
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -66,6 +99,21 @@ public class OriginSelector : IOriginSelector
             Traits = $"{TraitNames.EnhancedPhysique}.",
             SuggestedOccupation = OccupationName.Outsider,
             Powers = $"{PowerNames.Disguise}, {PowerNames.ExtendedReach1}, {PowerNames.FlexibleBones1}, {PowerNames.ShapeShift}, {PowerNames.SlipFree}.",
+        },
+        new()
+        {
+            Name = OriginName.AlienTechnarch,
+            Description =
+            [
+                "The character is a member of the alien species known as the Technarchy. These artificially intelligent techno-organic beings use a Transmode virus to infect other creatures and eventually take over a planet to prepare it to become part of the Phalanx or be devoured.",
+            ],
+            Examples = "Warlock, Magus.",
+            Tags= $"{TagNames.AI}, {TagNames.AlienHeritage}, {TagNames.ExtremeAppearance}, {TagNames.Powerful}",
+            Traits = $"{TraitNames.EnduringConstitution}, {TraitNames.FreshEyes}, {TraitNames.Infector} (Transmode virus).",
+            SuggestedOccupation = OccupationName.Outsider,
+            Powers = $"{PowerNames.BrainDrain}, {PowerNames.Disguise}, {PowerNames.EnvironmentalProtection}, {PowerNames.ExtendedReach1}, {PowerNames.FlexibleBones1}, {PowerNames.LeechLife}, {PowerNames.ShapeShift}",
+            MinimumRank = 3,
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -233,6 +281,19 @@ public class OriginSelector : IOriginSelector
         },
         new()
         {
+            Name = OriginName.MonstrousMummudrai,
+            Description =
+            [
+                "The character is a monster known as a Mummudrai, an evil twin spirit from the Astral Plane that each fetus must fight and defeat in the womb to be born. Few of them survive, but those who do can become terrifyingly powerful, as they can copy DNA and fashion physical forms for themselves.",
+            ],
+            Examples = "Cassandra Nova.",
+            Traits = $"{TraitNames.Monster}.",
+            SuggestedOccupation = OccupationName.Outsider,
+            NarrativePowers = $"{NarrativePowerNames.DNAManipulation}.",
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = OriginName.MonstrousVampire,
             Description =
             [
@@ -268,7 +329,32 @@ public class OriginSelector : IOriginSelector
                 "The character’s powers spring from them being a member of the subspecies Homo superior. They have a latent X-Gene that grants them powers, often triggered at adolescence.",
             ],
             Examples = "Cyclops, Jean Grey, Storm, Wolverine (Logan), Wolverine (Laura Kinney).",
-            Tags= $"{TagNames.Hounded}, {TagNames.Krakoan}, {TagNames.XGene}.",
+            Tags = $"{TagNames.Hounded}, {TagNames.XGene}.",
+            SuggestedTags = $"{TagNames.Arakkii}, {TagNames.Krakoan}.",
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = OriginName.MutantArtificial,
+            Description =
+            [
+                "The character’s powers spring from DNA manipulation—or a natural, inherent condition—that makes them appear to be a true mutant. They believe themselves to be a mutant, or they did for years. However, they were not born with an X-Gene.",
+            ],
+            Examples = "Deadpool, Mister Sinister, Quicksilver, Scarlet Witch.",
+            Tags = $"{TagNames.Hounded}, {TagNames.MutantAssociate}.",
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = OriginName.MutantExternal,
+            Description =
+            [
+                "The character is a member of a rare and powerful subspecies of immortal mutants that stretches back thousands of years. Roughly a thousand years ago, the Externals formed a group called the High Lords that continues to influence the world’s destiny from behind the scenes. Some of them believe Cannonball to be the latest of their kind, although this is unconfirmed.",
+            ],
+            Examples = "Apocalypse, Selene.",
+            Tags = $"{TagNames.ExternallyImmortal}, {TagNames.Hounded}, {TagNames.XGene}.",
+            Traits = $"{TraitNames.ExternalAwareness}.",
+            Source = BookSource.XMenExpansion
         },
         new()
         {
