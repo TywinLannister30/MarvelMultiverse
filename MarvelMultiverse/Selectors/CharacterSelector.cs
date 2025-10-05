@@ -3649,6 +3649,223 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Cable",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 5, vigilance: 4, ego: 4, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Infector, reminder: "Techno-Organic virus"),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.CloakGroup),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                        powerSelector.GetPower(PowerNames.MentalShelter),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "The Graymalkin II is a city-sized starship that grants Cable a range of Teleportation powers, which he refers to as “bodysliding.” As long as he remains in contact with his ship, he can access the following Teleportation powers: Blink, Teleport 2, Teleport Object, Teleport Together, Teleportal"
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nathan Christopher Charles Summers",
+                Heights = [new() { Feet = 6, Inches = 8 }],
+                Weights = [350],
+                Gender = Gender.Male,
+                Eyes = "Naturally blue, but left eye glows yellow when using powers",
+                Hair = "Gray",
+                Size = Size.Average,
+                DistinguishingFeatures = "Scar over right eye, glowing left eye, Techno-Organic left arm",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechCybernetics, OriginName.Mutant],
+                Teams = [TeamNames.XForce, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "As an infant, Nathan Summers was kidnapped by Apocalypse and infected with the deadly Techno-Organic virus. To save his life, Summers was sent to the dystopian future of Earth-4935, where Apocalypse ruled supreme.",
+                    "The people of this alternate Earth spent years tutoring Summers in the use of his mutant psychic powers, teaching him to telekinetically halt the advance of the Techno-Organic virus. His training went spectacularly well, allowing him to defeat Apocalypse early in his teenage years.",
+                    "As a young man, Summers returned to Earth-616 shortly before the Krakoan era to discover that an older version of himself arrived well ahead of him. Summers killed his future self, but helped the Five revive the older version on Krakoa before returning to Earth-4935.",
+                    "Summers spent the next few decades fighting on Earth-4935, dealing with the aftermath of Apocalypse’s reign and slowly becoming that older version of himself. Battle-hardened, he returned to Earth-616 at a point in the timeline near when he had been kidnapped as a baby. During that era, he founded X-Force and participated in countless world-saving adventures—before being killed and revived by a younger version of himself."
+                ],
+                Personality =
+                [
+                    "After decades of battle on Earth-4935, Cable became a gruff veteran with a penchant for three things: battling, shouting one-liners and shouting one-liners in battle.",
+                    "Cable has few close friends or attachments, but he does share a bond with his father (Cyclops), his adoptive mother (Jean Grey) and his adopted daughter (Hope Summers)."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Callisto",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 1, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Eyepatch",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.HellfireTradingCompany, TeamNames.Morlocks],
+                Base = "Krakoa",
+                History =
+                [
+                    "As a young mutant, Callisto was attacked by mutant-hating humans, who scarred her and blinded her in one eye. Shortly thereafter, she gave up on trying to live alongside normal humans and took to a life of seclusion in the sewers beneath Manhattan.",
+                    "Underground, Callisto met with a number of other mutants who had similarly abandoned human society. With Callisto as their leader, these exiles banded together and formed their own society, becoming the Morlocks.",
+                    "Although initially wary of the X-Men, these Morlocks nonetheless came to assist the mutant heroes on many of their adventures. One of the X-Men—Storm—eventually came to replace Callisto as the de facto leader of the Morlocks.",
+                    "However, not long after Storm’s takeover, the Morlocks were driven from their underground home by a band of evil mutants and slaughtered by the dozens. Callisto was one of the few survivors.",
+                    "Callisto and the remaining Morlocks spent the next several years drifting around the world until the founders of Krakoa provided them with a new place to settle down. Many of the Morlocks occupy critical positions within the new Krakoan government, with Callisto herself serving as the White Knight of the Hellfire Trading Company."
+                ],
+                Personality =
+                [
+                    "Callisto is a proud woman and a born leader. Equally charismatic and stubborn, she has a strong sense of justice and a correspondingly strong distaste for most normal humans.",
+                    "Although she puts up a tough front, Callisto has a soft spot for the Morlocks and the X-Men, particularly Storm. Callisto and Storm have long been rivals of a sort, but within that rivalry, they share a strong and mutual respect."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Captain America (Sam Wilson)",
             Rank = 4,
             Abilities = new Abilities

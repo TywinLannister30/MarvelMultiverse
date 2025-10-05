@@ -19,6 +19,7 @@ public static class TeamNames
     public const string AvengersAcademy = "Avengers Academy";
     public const string BlackOrder = "Black Order";
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
+    public const string CaptainBritainCorps = "Captain Britain Corps";
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
     public const string Chaste = "Chaste";
@@ -72,6 +73,7 @@ public static class TeamNames
     public const string Intelligencia = "Intelligencia";
     public const string IntergalacticCouncil = "Intergalactic Council";
     public const string KGB = "KGB";
+    public const string KnightsOfX = "Knights of X";
     public const string KreeEmpire = "Kree Empire";
     public const string KreeImperium = "Kree Imperium";
     public const string LeagueOfEvilInhumans = "League of Evil Inhumans";
@@ -86,6 +88,7 @@ public static class TeamNames
     public const string MidnightMission = "Midnight Mission";
     public const string MidnightSons = "Midnight Sons";
     public const string MightyAvengers = "Mighty Avengers";
+    public const string Morlocks = "Morlocks";
     public const string NewAvengers = "New Avengers";
     public const string NewMutants = "New Mutants";
     public const string NewWarriors = "New Warriors";
@@ -144,5 +147,6 @@ public static class TeamNames
     public const string XForce = "X-Force";
     public const string XSE = "X.S.E.";
     public const string XStatix = "X-Statix";
+    public const string XTerminators = "X-Terminators";
     public const string YoungAvengers = "Young Avengers";
 }
