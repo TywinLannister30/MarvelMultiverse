@@ -11,6 +11,8 @@ public static class TeamNames
     public const string AlphaFlight = "Alpha Flight";
     public const string Anachronauts = "Anachronauts";
     public const string Annihilators = "Annihilators";
+    public const string ARMOR = "A.R.M.O.R.";
+    public const string AsgardiansOfTheGalaxy = "Asgardians of the Galaxy";
     public const string AstonishingAvengers = "Astonishing Avengers";
     public const string AtlanteanRoyalFamily = "Atlantean Royal Family";
     public const string Avengers = "Avengers";
@@ -34,6 +36,7 @@ public static class TeamNames
     public const string Eternals = "Eternals";
     public const string Excalibur = "Excalibur";
     public const string FantasticFour = "Fantastic Four";
+    public const string FearlessDefenders = "Fearless Defenders";
     public const string FBI = "F.B.I.";
     public const string FiskIndustries = "Fisk Industries";
     public const string Fist = "Fist";
@@ -104,10 +107,12 @@ public static class TeamNames
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string SquadronSinister = "Squadron Sinister";
     public const string SquadronSupreme = "Squadron Supreme";
+    public const string STAKE = "S.T.A.K.E.";
     public const string StrangeAcademy = "Strange Academy";
     public const string SymbioteHive = "Symbiote Hive";
     public const string TeamX = "Team X";
     public const string TerribleTrio = "Terrible Trio";
+    public const string TerrorInc = "Terror Inc.";
     public const string TheDailyBugle = "The Daily Bugle";
     public const string TheHand = "The Hand";
     public const string Thunderbolts = "Thunderbolts";
@@ -121,11 +126,13 @@ public static class TeamNames
     public const string USAirForce = "U.S. Air Force";
     public const string USArmy = "U.S. Army";
     public const string USHulkOperations = "U.S. Hulk Operations";
+    public const string VillainsForHire = "Villains for Hire";
     public const string WebWarriors = "Web-Warriors";
     public const string WestCoastAvengers = "West Coast Avengers";
     public const string WreckingCrew = "Wrecking Crew";
     public const string XMen = "X-Men";
     public const string XFactor = "X-Factor";
     public const string XForce = "X-Force";
+    public const string XStatix = "X-Statix";
     public const string YoungAvengers = "Young Avengers";
 }

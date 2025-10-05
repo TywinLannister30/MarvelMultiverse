@@ -41,6 +41,7 @@ public static class PowerNames
     public const string CloakGroup = "Cloak Group";
     public const string Clobber = "Clobber";
     public const string CloneMoves = "Clone Moves";
+    public const string ClonePowers = "Clone Powers";
     public const string CoilingCrush = "Coiling Crush";
     public const string CombatSupport = "Combat Support";
     public const string CombatTrickery = "Combat Trickery";
@@ -50,6 +51,9 @@ public static class PowerNames
     public const string ControlWeather2 = "Control Weather 2";
     public const string ControlWeather3 = "Control Weather 3";
     public const string ControlWeather4 = "Control Weather 4";
+    public const string CopyAbility = "Copy Ability";
+    public const string CopyPower = "Copy Power";
+    public const string CopyTrait = "Copy Trait";
     public const string CounterstrikeTechnique = "Counterstrike Technique";
     public const string CoveringFire = "Covering Fire";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
@@ -58,7 +62,9 @@ public static class PowerNames
     public const string DanceOfDeath = "Dance of Death";
     public const string Dazzle = "Dazzle";
     public const string DefenseStance = "Defense Stance";
+    public const string DimensionalPortal = "Dimensional Portal";
     public const string DimensionalTravel = "Dimensional Travel";
+    public const string DimensionalTravelOther = "Dimensional Travel Other";
     public const string DimensionalTravelTogether = "Dimensional Travel Together";
     public const string Discipline1 = "Discipline 1";
     public const string Discipline2 = "Discipline 2";
@@ -120,6 +126,7 @@ public static class PowerNames
     public const string GroundShakingStomp = "Ground-Shaking Stomp";
     public const string GroupFlight = "Group Flight";
     public const string GroupInvisibility = "Group Invisibility";
+    public const string GroupLevitation = "Group Levitation";
     public const string Grow1 = "Grow 1";
     public const string Grow2 = "Grow 2";
     public const string Grow3 = "Grow 3";
@@ -188,6 +195,7 @@ public static class PowerNames
     public const string PhaseWalk = "Phase Walk";
     public const string PointBlankParry = "Point-Blank Parry";
     public const string PossessVehicle = "Possess Vehicle";
+    public const string PowerSliderSerenity = "Power Slider (Serenity)";
     public const string PowerfulHex = "Powerful Hex";
     public const string ProbabilityManipulationHex = "Probability-Manipulation Hex";
     public const string ProtectionHex = "Protection Hex";

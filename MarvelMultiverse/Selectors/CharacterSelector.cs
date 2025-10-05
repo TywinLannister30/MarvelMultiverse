@@ -74,6 +74,74 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "A.I.M. Agent",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 0, vigilance: 1, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bright yellow beekeeper-esque hazmat uniforms.",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.AIM],
+                Base = "A.I.M. Island",
+                History =
+                [
+                    "Founded during World War II, Advanced Idea Mechanics (aka A.I.M.) was created by regular Nick Fury nemesis and Hydra leader Baron Von Strucker. A.I.M. was initially intended to be nothing more than a scientific wing for Hydra, but the organization could not long be kept under Hydra control.",
+                    "A.I.M. agents are highly intelligent scientific terrorists who desire nothing more than complete world domination. In pursuit of this goal, A.I.M. has aligned itself with countless super villains. As an organization, they are responsible for the creation of many of the most dangerous weapons in existence, including the Cosmic Cube and M.O.D.O.K.",
+                ],
+                Personality =
+                [
+                    "A.I.M. scientists are typically power-hungry outsiders to the scientific community—intelligent people furious that the world does not revere their brilliance. They seek to take revenge on a society that refuses to treat them as kings",
+                ]
+            }
+        },
+        new()
+        {
             Name = "Abomination (Emil Blonsky)",
             Rank = 5,
             Abilities = new Abilities
@@ -424,6 +492,80 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Alpha Primitive",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 2, vigilance: 0, ego: 0, logic: -2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Inhuman Royal Guard)"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "typically around 5½ feet",
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                GenderReminder = "Mostly male",
+                Eyes = "Varies",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.WeirdScience],
+                Teams = ["Servants and defenders of the Inhuman Royal Family"],
+                Base = "Mobile",
+                History =
+                [
+                    "Thousands of years ago, a brilliant but cruel geneticist appeared before the ruling council of Inhuman society. This geneticist argued that to turn their society into a true paradise, the Inhumans of the future would need docile, unintelligent attendants who could take care of their every physical want. To that end, he claimed he could breed a genetically perfect servant.",
+                    "The ruling council approved the geneticist’s request. Within a few years, hundreds of his creations— which he dubbed Alpha Primitives—had joined Inhuman society.",
+                    "At first, the Alpha Primitives were everything the geneticist had promised: unintelligent, physically strong and largely obedient. Even after the fall of the old Inhuman society and the rise of the Royal Family, the Alpha Primitives continued to provide their labor freely and without complaint.",
+                    "However, deep down, beneath all their societal and genetic programming, some part of each Alpha Primitive yearns to be free. Across the last several decades, bloody Alpha Primitive rebellions have wracked the foundations of Inhuman society. With the recent collapse of New Attilan, most of the remaining Alpha Primitives have scattered to the winds."
+                ],
+                Personality =
+                [
+                    "Most Alpha Primitives are kind, but they have the vocabulary of a young child. They can speak in simple sentences and follow simple instructions, but they would be lost if asked to assemble anything more complex than a cardboard box.",
+                    "However, when pushed to the breaking point, Alpha Primitives have been known to exhibit sudden flashes of incredible intelligence. Their rebellions have been organized and swift."
+                ],
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "America Chavez",
             Rank = 5,
             Abilities = new Abilities
@@ -532,91 +674,24 @@ public class CharacterSelector(
         },
         new()
         {
-            Name = "A. I. M. Agent",
-            Rank = 1,
+            Name = "Annabelle Riggs",
+            Rank = 2,
             Abilities = new Abilities
             (
-                melee: 0, agility: 1, resilience: 0, vigilance: 1, ego: 1, logic: 3
+                melee: 2, agility: 1, resilience: 1, vigilance: 2, ego: 0, logic: 4
             ),
             Traits =
             [
-                traitSelector.GetTrait(TraitNames.BattleReady),
-                traitSelector.GetTrait(TraitNames.Inventor),
-                traitSelector.GetTrait(TraitNames.ScientificExpertise),
-                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
             ],
             Tags =
             [
-                tagSelector.GetTag(TagNames.LabAccess),
-                tagSelector.GetTag(TagNames.SecretIdentity),
-                tagSelector.GetTag(TagNames.Villainous),
-            ],
-            Powers =
-            [
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Basic,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Accuracy1),
-                        powerSelector.GetPower(PowerNames.Brilliance1),
-                    ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlEnergy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                    ],
-                    IsTech = true
-                },
-            ],
-            Biography = new Biography
-            {
-                RealName = "Varies",
-                Heights = [new() { IsVariable = true }],
-                Weights = [],
-                VariableWieght = true,
-                Gender = Gender.Varies,
-                Eyes = "Varies",
-                Hair = "Varies",
-                Size = Size.Average,
-                DistinguishingFeatures = "Bright yellow beekeeper-esque hazmat uniforms.",
-                Occupations = [OccupationName.Scientist],
-                Origins = [OriginName.HighTech],
-                Teams = [TeamNames.AIM],
-                Base = "A.I.M. Island",
-                History =
-                [
-                    "Founded during World War II, Advanced Idea Mechanics (aka A.I.M.) was created by regular Nick Fury nemesis and Hydra leader Baron Von Strucker. A.I.M. was initially intended to be nothing more than a scientific wing for Hydra, but the organization could not long be kept under Hydra control.",
-                    "A.I.M. agents are highly intelligent scientific terrorists who desire nothing more than complete world domination. In pursuit of this goal, A.I.M. has aligned itself with countless super villains. As an organization, they are responsible for the creation of many of the most dangerous weapons in existence, including the Cosmic Cube and M.O.D.O.K.",
-                ],
-                Personality =
-                [
-                    "A.I.M. scientists are typically power-hungry outsiders to the scientific community—intelligent people furious that the world does not revere their brilliance. They seek to take revenge on a society that refuses to treat them as kings",
-                ]
-            }
-        },
-        new()
-        {
-            Name = "Alpha Primitive",
-            Rank = 1,
-            Abilities = new Abilities
-            (
-                melee: 3, agility: 2, resilience: 2, vigilance: 0, ego: 0, logic: -2
-            ),
-            Traits =
-            [
-                traitSelector.GetTrait(TraitNames.BattleReady),
-                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Inhuman Royal Guard)"),
-                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
-                traitSelector.GetTrait(TraitNames.SituationalAwareness),
-                traitSelector.GetTrait(TraitNames.Weird),
-            ],
-            Tags =
-            [
-                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.PublicIdentity),
             ],
             Powers =
@@ -626,51 +701,62 @@ public class CharacterSelector(
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon, 
+                            specialization: "Valkyrie spear [+1 Melee damage multiplier; range is reach +1]",
+                            meleeDamageModifier: 1),
+                        
+                        powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.SuperStrength,
+                    Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.BangingHeads),
-                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                }
             ],
             Biography = new Biography
             {
-                RealName = "Varies",
-                Heights = [new() { IsVariable = true }],
-                HeightReminder = "typically around 5½ feet",
-                Weights = [],
-                VariableWieght = true,
-                Gender = Gender.Varies,
-                GenderReminder = "Mostly male",
-                Eyes = "Varies",
-                Hair = "Bald",
+                RealName = "Annabelle Riggs",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [143],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Brown",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = [OccupationName.Military],
-                Origins = [OriginName.WeirdScience],
-                Teams = ["Servants and defenders of the Inhuman Royal Family"],
-                Base = "Mobile",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.AsgardiansOfTheGalaxy, TeamNames.FearlessDefenders],
+                Base = "New York City",
                 History =
                 [
-                    "Thousands of years ago, a brilliant but cruel geneticist appeared before the ruling council of Inhuman society. This geneticist argued that to turn their society into a true paradise, the Inhumans of the future would need docile, unintelligent attendants who could take care of their every physical want. To that end, he claimed he could breed a genetically perfect servant.",
-                    "The ruling council approved the geneticist’s request. Within a few years, hundreds of his creations— which he dubbed Alpha Primitives—had joined Inhuman society.",
-                    "At first, the Alpha Primitives were everything the geneticist had promised: unintelligent, physically strong and largely obedient. Even after the fall of the old Inhuman society and the rise of the Royal Family, the Alpha Primitives continued to provide their labor freely and without complaint.",
-                    "However, deep down, beneath all their societal and genetic programming, some part of each Alpha Primitive yearns to be free. Across the last several decades, bloody Alpha Primitive rebellions have wracked the foundations of Inhuman society. With the recent collapse of New Attilan, most of the remaining Alpha Primitives have scattered to the winds."
+                    "Archaeologist Annabelle Riggs asked her old friend and associate—the Hero for Hire Misty Knight—for her assistance in retrieving a handful of stolen artifacts. As part of this work, Knight recovered a powerful Asgardian totem capable of reviving the dead, and shortly therea« er, Viking zombies began attacking Riggs’ place of work. Soon enough, Riggs and Knight were caught up in an evil plot to revive some of Asgard’s fiercest foes.",
+                    "The two eventually managed to end those vile plans, but not before Riggs was fatally wounded. As a reward for Riggs’ heroic efforts, Valkyrie (Brunnhilde) merged her essence with that of the fallen archaeologist. Now Valkyrie could transform into Riggs at will—and vice versa—but the pair could never exist in the same space. While one of them adventured in the real world, the other was forced to reside in a pocket dimension.",
+                    "During the War of the Realms, Malekith slew Valkyrie, leaving Riggs barred from returning to reality. With the help of the Asgardians of the Galaxy, Riggs escaped Limbo and returned to rejoin the fight. Afterward, she retired as an adventurer and returned to her old archaeology position."
                 ],
                 Personality =
                 [
-                    "Most Alpha Primitives are kind, but they have the vocabulary of a young child. They can speak in simple sentences and follow simple instructions, but they would be lost if asked to assemble anything more complex than a cardboard box.",
-                    "However, when pushed to the breaking point, Alpha Primitives have been known to exhibit sudden flashes of incredible intelligence. Their rebellions have been organized and swift."
-                ],
+                    "Although she fashions herself an intrepid explorer in the vein of Indiana Jones, Annabelle Riggs is actually something of a shy and awkward bookworm. When she’s not adventuring, she mostly keeps to herself and her studies. However, she still keeps an old Valkyrie weapon on hand, just in case. Her teammate and girlfriend, Ren Kimura, is more important to her than anyone else on the planet.",
+                ]
             },
-            Source = BookSource.TheCataclysmOfKang
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
         },
         new()
         {
@@ -3979,6 +4065,121 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Deadpool-Bot 2000",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 8, vigilance: 4, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Giant swords"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "None",
+                Heights = [new() { Feet = 10 }],
+                Weights = [900],
+                Gender = Gender.Male,
+                Eyes = "White",
+                Hair = "None",
+                Size = Size.Big,
+                DistinguishingFeatures = "Giant clanky robot",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [],
+                Base = "Bagalia",
+                History =
+                [
+                    "When A.I.M. decided that nothing could possibly go wrong with creating an A.I. to train mercenaries, they evaluated a number of assassins, henchmen and hired guns. They even downloaded the thought patterns of a few of them—including Deadpool.",
+                    "Deadpool’s thought patterns corrupted the A.I., which started calling itself M.A.D.E.M. (Murderous Application Designed Exclusively for Mayhem). It created a number of hideous challenges to train—or slaughter— mercenaries. Among these creations was the Deadpool-Bot 2000.",
+                ],
+                Personality =
+                [
+                    "This clattering, clunky robot believes itself to be Deadpool, and—like 90% of the comic creators in the world—it believes its own hype. It taunts opponents, cracks bad jokes and runs its mechanical mouth during battle… and pretty much all other times too.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Demolisher (Wrecking Crew)",
             Rank = 2,
             Abilities = new Abilities
@@ -4558,6 +4759,127 @@ public class CharacterSelector(
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Doop",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 6, vigilance: 7, ego: 4, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Mysterious),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance4),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelDimensional,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DimensionalPortal),
+                        powerSelector.GetPower(PowerNames.DimensionalTravel),
+                        powerSelector.GetPower(PowerNames.DimensionalTravelOther),
+                        powerSelector.GetPower(PowerNames.DimensionalTravelTogether),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ClonePowers),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                        powerSelector.GetPower(PowerNames.Shrink2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.GroupLevitation),
+                        powerSelector.GetPower(PowerNames.Levitation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.MentalShelter),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually 3’",
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "None",
+                Size = Size.Small,
+                DistinguishingFeatures = "Legless green creature resembling a large, fat pickle with arms",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.AlienMarginalian],
+                Teams = [TeamNames.XStatix],
+                Base = "Mobile",
+                History =
+                [
+                    "No one knows for sure where Doop came from, not even Doop. He grew up in the mysterious dimension of Marginalia, a place that exists outside of space and time, metaphorically in the margins of comic-book pages themselves.",
+                    "Some say that Doop was the result of top-secret experiments performed by the U.S. military in the eighties. Others claim Doop spawned entirely from the imagination of an anonymous hospital orderly who scribbled the fi rst known image of the creature in the margins of a screenplay written by fi lm director Ingmar Bergman.",
+                    "Whatever the truth may be, Doop spent his formative years believing that Ingmar Bergman was his creator. Out of respect for the director, Doop began practicing the art of fi lmmaking. Eventually, he lucked into a videography job with the private, for-profi t X-Statix super-hero team.",
+                    "Doop is the only member of the original X-Statix lineup still with the team. All the others either died or abandoned the group long ago, but Doop remains steadfast, always watching from the background, recording every movement.",
+                    "When not with X-Statix, Doop mingles with mutants of all kinds. He once even served as a receptionist at the Jean Grey School for Higher Learning."
+                ],
+                Personality =
+                [
+                    "Doop has powers beyond comprehension, but he rarely uses them to their fullest extent. He does not want to make himself the subject of his own movies, preferring instead to let his teammates in X-Statix speak for themselves.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
         },
         new()
         {
@@ -7035,6 +7357,94 @@ public class CharacterSelector(
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Hit Monkey",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 2, vigilance: 3, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.DanceOfDeath),
+                traitSelector.GetTrait(TraitNames.Small),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Mute, reminder: "can only make monkey noises"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DanceOfDeath),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "None",
+                Heights = [new() { Feet = 2, Inches = 5 }],
+                Weights = [31],
+                Gender = Gender.Male,
+                Eyes = "Amber",
+                Hair = "Gray",
+                Size = Size.Small,
+                DistinguishingFeatures = "Small Japanese macaque who o« en stands on two legs and wears a suit",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.MercsForMoney, TeamNames.STAKE],
+                Base = "Mobile",
+                History =
+                [
+                    "As a young macaque, Hit-Monkey grew up among a tribe of his species hidden deep within the mountains of Japan. Life was peaceful until, one day, a dying hit man stumbled into the tribe’s territory. Hit-Monkey demanded that the murderous man be cast back out into the snowy wastes, but the other macaques refused to listen. Determined to have his way, Hit-Monkey lashed out at the tribe’s leader, injuring him. As punishment, the leader sent Hit-Monkey into exile. On the same day that exile began, a group of hired mercenaries came to the mountainside, looking for the hit man. They slaughtered him—along with every one of the macaques protecting him.",
+                    "Filled with rage upon discovering the fate of his tribe, Hit-Monkey took up the dead man’s weapons and destroyed the mercenaries. He then set out for vengeance upon the men who’d hired those killers.",
+                    "In short order, Hit-Monkey had his revenge, but it brought him little solace, as he had no home to return to. To keep on living, he became a hit man himself.",
+                    "In the years since, Hit-Monkey has taken on and defeated some of the best mercenaries on the planet, including Deadpool. Many consider him the greatest contract killer to ever live. The upper echelons of the underworld utter his name only in hushed whispers."
+                ],
+                Personality =
+                [
+                    "Although Hit-Monkey understands human speech, he cannot speak any human language. He can communicate only with normal simian grunts and screeches. He has a hair-trigger temper, and in the heat of battle, he all but perpetually screams.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
         },
         new()
         {
@@ -12263,6 +12673,94 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Paladin",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 3, vigilance: 2, ego: 3, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mysterious),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Stun gun [ranged weapon; deals electricity damage, stunning target on a Fantastic success]"),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Unknown],
+                Teams = [TeamNames.HeroesForHire, TeamNames.VillainsForHire],
+                Base = "Mobile",
+                History =
+                [
+                    "Paladin’s past is a secret to everyone except maybe the man himself, and he isn’t forthcoming with details. S.H.I.E.L.D.’s archives on Paladin date back only as far as a few years ago when, during a mission to capture the Purple Man, he fought with Daredevil. Although Paladin was already a moderately well-established mercenary by this point, no one knows for sure what jobs he had completed before facing off against the Man Without Fear.",
+                    "Although Paladin ultimately failed to capture the Purple Man, his ability to hold his own against Daredevil made him famous overnight. Job offers came pouring in, from both super heroes and super villains.",
+                    "For a while, Paladin sold his services exclusively to the highest bidder. Some days he was a hero, and other days he was a villain. He is one of the few people who can truthfully claim to have fought on both sides of the superhuman Civil War.",
+                    "As the years drew on, though, Paladin’s duplicitousness began to gnaw at his conscience. There was no single moment of reform and repentance, but slowly, he stopped accepting villainous jobs. These days, he works primarily as an independent hero for hire."
+                ],
+                Personality =
+                [
+                    "Ninety percent amoral mercenary and ten percent big-hearted softy, Paladin has a strangely charming aura. He’s had a number of romantic relationships within the super-hero community, most notably with the Wasp. Even his enemies regard him as a gentleman and a consummate professional.",
+                    "Paladin’s need to make money exists in perpetual confl ict with his conscience. He has, on several occasions, dropped well-paying assassination jobs at the last moment because he couldn’t bear to kill his target."
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Patriot (Rayshaun Lucas)",
             Rank = 2,
             Abilities = new Abilities
@@ -13296,6 +13794,91 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Ren Kimura",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 2, vigilance: 1, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        
+                        powerSelector.GetPower(PowerNames.IconicWeapon, 
+                            specialization: "Razor arms [hands act as melee weapons; +1 Melee damage multiplier]",
+                            meleeDamageModifier: 1),
+
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ren Kimura",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [122],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.Inhuman],
+                Teams = [TeamNames.AsgardiansOfTheGalaxy, TeamNames.FearlessDefenders],
+                Base = "New York City",
+                History =
+                [
+                    "Growing up, Ren Kimura wanted to be a dancer. Unfortunately, her parents never approved of her aspirations or—for that matter—her homosexuality. She was forced to take up dancing (and dating) in secret, regularly sneaking away from home to spend long hours practicing at a local dance studio.",
+                    "Because of this, Kimura was at the dance studio—not safe at home— when the Terrigen Bomb detonated over New York City. The Terrigen Mist activated the Inhuman DNA lurking inside her genes, transforming her arms into twisted masses of metal wire. With effort, Kimura discovered that she could make the wires float through the air like dancing ribbons, able to slice distant targets to pieces.",
+                    "That night, super villains invaded New York City, looking to kidnap the newly awakened Inhumans. Kimura would have fallen prey to them were it not for the intervention of the Fearless Defenders.",
+                    "Kimura joined the Defenders and fell deeply in love with one of her new teammates: Annabelle Riggs. Even after the Defenders fell apart, Riggs and Kimura stuck together. They became part of the Asgardians of the Galaxy, and later, Riggs helped Kimura form her own dance studio. Although they’ve officially retired from the adventuring business, they remain ready to answer any call to action."
+                ],
+                Personality =
+                [
+                    "Despite their mutual affection, Riggs and Kimura have diametrically opposed personalities. Riggs is bookish, shy and more than a little awkward, while Kimura is as outgoing and charming as a person can be. She adores the stage and the spotlight.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Reptil",
             Rank = 3,
             Abilities = new Abilities
@@ -13948,6 +14531,95 @@ public class CharacterSelector(
                     "In her regular form, Walters is often an introverted homebody, but when in her She-Hulk form, she is much more extroverted, to the point of aggressiveness. She struggles to balance these two sides of her personality and sometimes prefers to simply remain She-Hulk, who she considers more fun.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "She-Hulk (Lyra)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 3, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.PowerSliderSerenity),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Jump2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lyra",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [220],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Big,
+                DistinguishingFeatures = "Green skin",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScienceGammaMutate],
+                Teams = [TeamNames.ARMOR, TeamNames.AvengersAcademy],
+                Base = "Mobile",
+                History =
+                [
+                    "On Earth-8009, massive environmental and military disasters long ago rendered the vast majority of humanity infertile. The survivors underwent experimental body modifi cations, granting them longer lives and incredible powers, and in the ensuing chaos, society stratified along strict gender lines, with the men of the world making perpetual war against the women.",
+                    "In an attempt to gain the upper hand, one of the leaders of the female resistance—Thundra—stole some skin cells from the Hulk of Earth-616 and used his DNA to impregnate herself. Her daughter, Lyra, was the first person naturally born on the planet in decades.",
+                    "When Lyra was just 16, her handlers sent her to Earth-616 so she could obtain fertile male DNA in much the same way her mother had. She was supposed to obtain cells from Norman Osborn, but once she saw how evil he was, she refused to complete her mission. Her handlers generously released her from her duties, allowing her to stay on Earth-616 and train with its heroes.",
+                    "Over the years, Lyra has been tutored by many of Earth’s greatest warriors, but she considers the original She-Hulk (Jennifer Walters) her number-one mentor. The pair are good friends, and Lyra sometimes uses the She-Hulk codename in honor of Walters."
+                ],
+                Personality =
+                [
+                    "When not in combat, Lyra has the personality of a normal, peppy teenage girl. In battle, she acts much more like a traditional stoic warrior. As opposed to most gamma mutates, Lyra’s powers get weaker as she gets angrier. To keep herself in top form, she forces herself to roll with the punches, literally and fi guratively.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
         },
         new()
         {
@@ -15481,6 +16153,108 @@ public class CharacterSelector(
                     "Tony lacks any lofty political goals. He just loves to fight. Getting paid for it is just frosting on the cupcake. He eventually regained his memories of his time as a S.H.I.E.L.D. agent, but he kept on as a mercenary. He enjoys being the Taskmaster too much to let it go.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Terror",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 3, vigilance: 4, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Head spikes [can extrude green spikes from his head that can be broken off and used as knives]"),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CopyAbility),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                        powerSelector.GetPower(PowerNames.CopyTrait),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "Terror’s Healing Factor and Power Control powers function only as long as he has a steady supply of body parts. To use any of his “Copy” powers, he must first steal a body part from his target and then attach it to himself."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown, sometimes goes by “Shreck”",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually around 6'2\"",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "usually around 170 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Varies",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Patchwork body with reptilian torso and head; other parts salvaged from various humanoid species",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicDemonic],
+                Teams = [TeamNames.MercsForMoney, TeamNames.TerrorInc],
+                Base = "New York City",
+                History =
+                [
+                    "Terror hails from Earth-88194, a world that resembles Earth-616 in some superfi cial ways but lacks costumed super heroes. In their place, Earth-88194 has the Shadow Dwellers, a mysterious and immortal off shoot of humanity that manipulates world affairs from behind the scenes.",
+                    "Terror is not one of these Shadow Dwellers. Instead, he claims to have been a caveman who heroically defended his tribe of early humans from a demon. Unfortunately, before he could kill the demon, it infl icted a terrible curse upon him: He would live forever, but in a constant state of decay.",
+                    "Terror spent the subsequent centuries wandering the planet, harvesting new parts for himself from corpses as the old bits decayed and fell away. Sometime during the medieval era, he met the love of his life, a knight named Talita. When she died, he sealed her left arm in iron and attached it to himself. It is the one part of his body that he has refused to ever replace.",
+                    "In the modern era, Terror became a mercenary, first on Earth-88194, then later on Earth-616. Currently he lives in New York City, where he operates a private detective/mercenary business under the name of Terror Inc."
+                ],
+                Personality =
+                [
+                    "Terror’s personality largely resembles that of a classic P.I. He’s hardnosed and ruthless but not exactly cruel. However, the fi ne details of who Terror is shift constantly, as he absorbs a bit of the knowledge and personality of the people whose body parts he attaches to himself.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
         },
         new()
         {
@@ -17224,7 +17998,7 @@ public class CharacterSelector(
 
                         powerSelector.GetPower(
                             PowerNames.IconicWeapon,
-                            specialization: "Adamantium Claws [+1 Melee damage multiplier]",
+                            specialization: "Adamantium Claws [+1 Melee damage multiplier; ignores 1 level of DR]]",
                             meleeDamageModifier: 1),
 
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),

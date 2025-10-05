@@ -612,6 +612,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ClonePowers,
+            Description = "The character duplicates all of another character’s powers.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = $"{PowerNames.CopyPower}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 or more Focus",
+            Effect =
+            [
+                "The character picks another character within 10 spaces and duplicates all of their powers. They can now use those powers as if they were always theirs. If the target’s powers have costs, the character must pay the highest of them, or a minimum of 15 Focus.",
+                "When the character uses a copied power, they must pay any cost normally as well."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.CoilingCrush,
             Description = "The character wraps around a target and crushes it.",
             PowerSets = [PowerSetNames.Plasticity],
@@ -742,6 +757,46 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.CopyAbility,
+            Description = "The character duplicates another character’s ability.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character picks one ability score of another character within 10 spaces and duplicates it. They now use that ability score in place of their own.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.CopyPower,
+            Description = "The character duplicates another character’s power.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character picks one power a target within 10 spaces has and duplicates it. They can now use it as if it was always theirs. When the character uses such a power, they must pay any cost normally as well.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.CopyTrait,
+            Description = "The character duplicates another character’s trait.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character picks one trait another character within 10 spaces has and duplicates it. They can now use it as if it was always theirs.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.CounterstrikeTechnique,
             Description = "The character counters an enemy’s strike with one of their own.",
             PowerSets = [PowerSetNames.MartialArts],
@@ -859,6 +914,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.DimensionalPortal,
+            Description = "The character opens a portal to another place.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.DimensionalTravelTogether}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character opens a glowing portal in a space next to them that moves anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. The other end of the portal must be in a clear space in another dimension that the character has been to. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.DimensionalTravel,
             Description = "The character moves from one dimension to another.",
             PowerSets = [PowerSetNames.OmniversalTravel],
@@ -869,6 +938,21 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character instantly moves from their current dimension to another dimension within the same universe. For instance: from Earth to Asgard, Limbo or K’un-Lun. When they move to the other dimension, they can arrive in any place they’ve been to before. Otherwise, they arrive at the most common entrance to that dimension.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.DimensionalTravelOther,
+            Description = "The character sends someone to another dimension.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.DimensionalTravel}, Rank 4",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes an Ego check against the Vigilance defense of a target they have grabbed. If the check is successful, the character can send the target to another dimension. The target can be sent to any location in that dimension that the character has been to before. Otherwise, the target arrives at the most common entrance to that dimension.",
             ]
         },
         new()
@@ -1730,6 +1814,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "For every point of Ego defense the character has, they can make one person or thing invisible, including themselves. Each of these can be one size bigger than them for every rank they have.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.GroupLevitation,
+            Description = "The character can lift others into the air too.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.Levitation}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can move up to one person per rank through the air in any direction at the character’s Run Speed. The levitated target(s) must remain within 5 spaces times the character’s rank. If any target does not wish to be moved like this, they must be telekinetically grabbed first.",
             ],
         },
         new()
@@ -2693,6 +2791,23 @@ public class PowerSelector : IPowerSelector
                 "The character controls the vehicle by will, as long as it is within 20spaces times the character’s rank. They use their Ego for all checks to operate it, and they get an edge on all such checks.",
                 "The vehicle’s speed doubles. It can climb walls at this speed and can even make jumps at that same speed."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.PowerSliderSerenity,
+            Description = "The character’s power waxes and wanes with what’s vital to them.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character has a single criterion that affects the strength of their powers on a spectrum. The character starts off normal, but they can become boosted or dampened from there.",
+                "When things are going well for the character, all of their other powers are boosted. If the powers have ranges or effective areas or durations, these are doubled. If the powers affect damage multipliers, add 1 to the effects. Any effects that normally happen on a Fantastic success automatically happen on any success, not just a Fantastic one. Also, anything that would dampen their powers only brings them back to normal.",
+                "When things are going poorly for the character, all of their other powers are dampened. If the powers have ranges or effective areas or durations, these are halved. If the powers affect damage multipliers, subtract 1 from the effects. The powers can no longer enjoy Fantastic successes. Also, anything that would boost their powers only brings them back to normal.",
+                "These effects last for a single combat or—if they happen outside of combat—a single day.",
+                "Lyra’s criterion is maintaining her serenity by keeping cool. If she takes Focus damage, she must make an Ego check with the TN equal to the amount of Focus damage sustained. If she succeeds, her powers are boosted. If she fails, her powers are dampened."
+            ],
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
         },
         new()
         {

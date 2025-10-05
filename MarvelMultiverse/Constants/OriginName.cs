@@ -4,6 +4,7 @@ public static class OriginName
 {
     public const string Alien = "Alien";
     public const string AlienKree = "Alien: Kree";
+    public const string AlienMarginalian = "Alien: Marginalian";
     public const string AlienShiar = "Alien: Shi’ar";
     public const string AlienSkrull = "Alien: Skrull";
     public const string Atlantean = "Atlantean";
