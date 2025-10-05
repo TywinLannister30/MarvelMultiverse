@@ -15774,6 +15774,182 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Thunderball (Wrecking Crew)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 1, resilience: 4, vigilance: 2, ego: 0, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Thunderball and chain [Throwable club. Automatically returns to thrower.]"),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Eliot Augustus Franklin",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [325],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.Illuminati, TeamNames.WreckingCrew],
+                Base = "Mobile",
+                History =
+                [
+                    "Eliot Franklin was a world-renowned physicist who seemed to be living the dream—until the day he invented a miniature gamma bomb. The bomb’s design was brilliant, but as his reward, Franklin’s employers fi red him and patented the bomb in their own names instead of his.",
+                    "Franklin tried to steal back his invention but was caught and sent to prison, where he wound up alongside Dirk Garthwaite, the super villain known as the Wrecker. Franklin and a couple of his fellow inmates helped break Garthwaite out of prison, and in exchange, Garthwaite granted them each a portion of his own powers. Together, these escapees formed the Wrecking Crew.",
+                    "For most of his criminal career, Franklin has worked with the Wrecking Crew, but he did join the Hood’s version of the Illuminati for a while too."
+                ],
+                Personality =
+                [
+                    "Thunderball is known for being smarter and more restrained than the rest of the Wrecking Crew and has occasionally contested the Wrecker for the group’s leadership. He has stayed with the crew largely so that he can continue to fund his research into gamma radiation. If any member of the crew can be reasoned with, it’s Thunderball.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Tigra",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 3, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Tigra form"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in alternate form"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Greer Grant Nelson",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [180],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Orange",
+                Size = Size.Average,
+                DistinguishingFeatures = "Body covered with orange-and-black striped fur. Eyes have vertical slits like a cat’s. Also has claws, fangs and a tail.",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mythic, OriginName.WeirdScience],
+                Teams = [TeamNames.Defenders, TeamNames.WestCoastAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "As a newly widowed woman in need of a steady income, Greer Nelson took a job working as a laboratory assistant for the kind but mysterious Dr. Joanne Tumolo, who was researching cats as a means of developing physical conditioning treatments for eccentric health club owner Malcolm Donalbain. However, when Tumolo discovered that Donalbain planned on using her treatments for evil, she abandoned her bizarre benefactor and made Nelson her primary test subject.",
+                    "The experimental treatments gave Nelson catlike refl exes and agility. Under the codename the Cat, Nelson embarked on a short stint as a costumed crimefi ghter, using her abilities to defeat Donalbain once and for all.",
+                    "After sustaining a critical injury in a fi ght with Hydra, Nelson discovered Tumolo’s true identity. Her beloved boss was not merely a professor with an interest in feline physiology but part of an ancient and underground race of super-powered cat-people.",
+                    "To save her assistant’s life, Tumolo was forced to transform Nelson into a full-fledged cat-person too. Nelson quickly came to appreciate her new form, and she returned to her crimefi ghting career under the new codename Tigra."
+                ],
+                Personality =
+                [
+                    "Tigra makes the most of her powers with her fi erce determination. She fi ghts with a ferocity bordering on savagery when forced to it.",
+                    "Although she has been part of both the Avengers and the Defenders, Tigra is oftn not shown the same level of respect as her peers in the superhero community. A part of her resents the lack of recognition, but she never lets that stop her."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Titania",
             Rank = 2,
             Abilities = new Abilities
