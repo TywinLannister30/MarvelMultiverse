@@ -37,6 +37,7 @@ public static class TeamNames
     public const string FiskIndustries = "Fisk Industries";
     public const string Fist = "Fist";
     public const string FiveWeaponsSociety = "Five Weapons Society";
+    public const string ForceWorks = "Force Works";
     public const string FutureFoundation = "Future Foundation";
     public const string GammaFlight = "Gamma Flight";
     public const string GoblinNation = "Goblin Nation";

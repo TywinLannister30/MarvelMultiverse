@@ -10218,6 +10218,89 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Mariah Hill",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Maria Hill",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.ForceWorks, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Having gotten a taste of action on a tour of duty with the US Marine Corps, a young Maria Hill joined up with S.H.I.E.L.D. the moment she was able. Her determination to succeed and her natural ability to make hard decisions propelled her through the ranks of the organization. Within a few years, she became the right hand of S.H.I.E.L.D. director Nick Fury Sr. Soon after, she replaced Fury.",
+                    "Although supported by her subordinates, many of Hill’s actions as director of S.H.I.E.L.D. remain controversial. The foundation of Pleasant Hill— an artifi cial-town prison designed to reform super villains through brainwashing—caused an international outcry. For her role in overseeing that project, Hill was booted from S.H.I.E.L.D. The organization itself dissolved shortly thereafter.",
+                    "Despite her notoriety, Hill has found a second life as an agent for the CIA. She is wholly committed to the cause of making the world a safer place for regular people."
+                ],
+                Personality =
+                [
+                    "Hill’s ability to make tough calls makes her a strong leader, but it’s also her greatest fl aw. Like many members of S.H.I.E.L.D., her knack for working within ethical gray areas gets her in trouble as often as it helps her succeed. If she can be convinced that doing so is for the greater good, Hill can steel herself to commit atrocious deeds.",
+                    "Despite her headstrong and driven nature, Hill is not above cracking the occasional joke. Her social circle consists almost entirely of former S.H.I.E.L.D. agents."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Maximus",
             Rank = 3,
             Abilities = new Abilities
@@ -10292,6 +10375,164 @@ public class CharacterSelector(
                     "Maximus’ strongest desire has always been to take over as ruler of the Inhumans and make his brother suffer. How much of this is motivated by madness and how much by self-interest is hard to discern.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "May Parker",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 0, resilience: 0, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.OutOfShape),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Maybelle “May” Parker-Jameson",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [110],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Gray",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [],
+                Origins = [],
+                Teams = ["Howard T. Duck Private Investigations, Uncle Ben Foundation"],
+                Base = "NYC",
+                History =
+                [
+                    "May Parker’s early life was, for the most part, unremarkable. She was born into a poor and religious family that placed a high value on decency and responsibility. As an adult, she began dating a carnival barker named Ben Parker.",
+                    "Ben was just as poor as May, if not more so, but he was kind and thoughtful. May valued that more than any riches in the world. Unable to have children themselves, Ben and May devoted their energies toward helping out with their nephew, Peter Parker.",
+                    "After Peter’s parents died in a tragic plane crash, he came to live with his aunt and uncle full-time. Ben and May treated Peter like their own son, which only made it all the more di¸ cult for the boy when, a few short years later, Ben was gunned down in a robbery.",
+                    "Ben’s tragic death inspired Peter to become the world-renowned super hero Spider-Man. For many years Peter hid this fact from his aunt, but May eventually discovered her nephew’s secret identity. Although she was wary at fi rst, May has come to accept who Peter is and even appreciate his heroics.",
+                    "At one point, she married J. Jonah Jameson’s father, Jay, but he has since passed away."
+                ],
+                Personality =
+                [
+                    "Although she’s getting up there in years, May Parker believes she can still take care of herself. She is a proud woman, and she resents the idea that she would need help with basic tasks. However, her increasingly ailing state has forced her, bit by bit, to accept more and more assistance.",
+                    "May’s greatest fear is that she will become a burden on Peter, the one person on Earth who she cares the most about."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Medusa",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 6, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = $"{PowerSetNames.Plasticity}",
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Medusalith Amaquelin-Boltagon",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "Long, freely controllable hair",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.Inhuman],
+                Teams = [TeamNames.FantasticFour, TeamNames.HouseOfAgon, TeamNames.UniversalInhumans],
+                Base = "Mobile",
+                History =
+                [
+                    "Medusalith Amaquelin was born in the Inhuman city of Attilan into a family of royal nutritionists. As an infant, she was exposed to the Terrigen Mist and subsequently gained the power to control strands of her hair as if they were superstrong tendrils emerging from her head.",
+                    "At a young age, Medusa developed close friendships with core members of the Inhuman Royal Family, particularly her second cousin, the Inhuman prince Black Bolt. Medusa later helped Black Bolt overthrow the cruel rulers of Attilan and establish himself as the king of all Inhumans.",
+                    "As the years drew on, Medusa and Black Bolt grew closer and were married. Together, they’ve had one child, a boy named Ahura.",
+                    "Following the tragic events wherein Black Bolt was forced to kill the bulk of the Inhuman population, Medusa and her husband began to grow apart. Although they remain close friends, they have functionally separated."
+                ],
+                Personality =
+                [
+                    "Medusa has exactly the personality one would expect of a powerful queen. She is headstrong, righteously vindictive and often a bit pompous. Her self-confi dence makes her an effective ruler and team leader, though in more interpersonal settings it can cause troubles.",
+                    "Even more than Black Bolt, Medusa takes her role as an Inhuman leader with deadly seriousness. She is determined to live up to the title of queen, no matter the personal cost."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
@@ -10647,6 +10888,92 @@ public class CharacterSelector(
                     "Although a frequent ally of Hydra and the Red Skull, M.O.D.O.K.’s evil is born more out of madness and egomania than any political agenda. He only really enjoys himself while engaging in or plotting mass murder. On the rare occasions he isn’t killing, M.O.D.O.K. wears a perpetual sneer upon his face.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Mocking Bird (Bobbi Morse)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 2, vigilance: 2, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Fighting batons (clubs)"),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Barbara “Bobbi” Morse",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.SpecialTraining, OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD, TeamNames.WestCoastAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "As a young but up-and-coming name in the world of biological science, Bobbi Morse was recruited by S.H.I.E.L.D. to act both as an agent and an on-staff scientist. Under the codename Mockingbird, she fought to keep the world safe from all manners of nefarious threats.",
+                    "Morse eventually left S.H.I.E.L.D. to become an independent adventurer. In the years since, she has been an invaluable member of countless super-hero teams. Most famously, she has been a regular partner to the hero Hawkeye, to whom she was briefl y married.",
+                    "For a long while, she was thought to be dead, killed by Mephisto while she was on a mission with the West Coast Avengers. It turned out that she had been kidnapped and replaced with a Skrull impersonator who had died in her place."
+                ],
+                Personality =
+                [
+                    "Much like her ex-husband, Hawkeye (Clint Barton), years of adventuring have tempered Morse’s attitude toward danger. Threats that would have terrifi ed her in her early days now elicit little more than an eye roll or a pained groan from her. Her years terrorizing the Skrulls as the Robed Witch—while temporarily escaped on their home planet—contributed to that.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
