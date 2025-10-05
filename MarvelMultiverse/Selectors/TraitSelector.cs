@@ -399,6 +399,17 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.TechReliance,
+            Effect =
+            [
+                "The character relies on a magically empowered item for some or all of their powers. When they take Health damage that would render them unconscious, they can instead choose to lose all of their magic-item–related powers and remain conscious with 1 point of Health left.",
+                "Similarly, if they take Focus damage that would render them demoralized, they can instead choose to lose all of their magic-item–related powers and have 1 point of Focus left.",
+                "Magic items are notoriously difficult to destroy. They cannot be harmed by most attacks. However, they can be taken away or lost. Many characters would go to great lengths to recover the magic items that grant them powers."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = TraitNames.Monster,
             Effect =
             [
@@ -530,6 +541,16 @@ public class TraitSelector : ITraitSelector
                 "The character relies on technology for powers. When they take damage that would render them unconscious, they can instead choose to lose all of their technology-related powers and remain conscious with 1 point of Health remaining.",
                 "Assuming the character has access to parts and tools, lost powers can be repaired aœ er a battle"
             ],
+        },
+        new()
+        {
+            Name = TraitNames.UnusualSize,
+            Effect =
+            [
+                "The character’s regular size is beyond those for small, average or big, as shown on the Resize Effects Table.",
+                "The one exception is a character’s Flight Speed. If they are microscopic, miniature, tiny or little, calculate their Flight Speed as if they were small-sized. If they are huge, gigantic, titanic or gargantuan, calculate their Flight Speed as if they were big-sized.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {

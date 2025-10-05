@@ -46,6 +46,7 @@ public static class TraitNames
     public const string LegalEagle = "Legal Eagle";
     public const string Leverage = "Leverage";
     public const string Loner = "Loner";
+    public const string MagicItemReliance = "Magic Item Reliance";
     public const string Monster = "Monster";
     public const string OutOfShape = "Out of Shape";
     public const string Piloting = "Piloting";
@@ -62,6 +63,7 @@ public static class TraitNames
     public const string Stranger = "Stranger";
     public const string SurprisingPower = "Surprising Power";
     public const string TechReliance = "Tech Reliance";
+    public const string UnusualSize = "Unusual Size";
     public const string Venomous = "Venomous";
     public const string Weakness = "Weakness";
     public const string Weird = "Weird";
