@@ -12929,6 +12929,107 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Rama-Tut",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 3, vigilance: 4, ego: 4, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Disguise, isTech: true),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                    ],
+                    IsTech = true
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelTime,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TimePortal),
+                        powerSelector.GetPower(PowerNames.TimeTravel),
+                        powerSelector.GetPower(PowerNames.TimeTravelOther),
+                        powerSelector.GetPower(PowerNames.TimeTravelTogether),
+                    ],
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nathaniel Richards",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.Anachronauts, TeamNames.CouncilOfKangs],
+                Base = "Ancient Egypt",
+                History =
+                [
+                    "Nathaniel Richards grew up in the near-utopian environment of the 30th century of Earth-6311. As an adult, he became sick of luxury and became determined to live a life of adventure in a more interesting era.",
+                    "Disguising himself as the Pharaoh Rama-Tut, Richards built a time machine and set about conquering ancient Egypt. As the supreme ruler of Egyptian civilization, Richards sought to secure his reign over all the Earth. As such, he is constantly on the lookout for any who may have the power to oppose him, particularly the mutant conqueror known as Apocalypse.",
+                    "He does not yet know it, but Apocalypse will be the least of his worries. He later takes on a number of other identities, the most famous of which is Kang the Conqueror.",
+                ],
+                Personality =
+                [
+                    "Richards is a megalomaniac and a narcissist of the highest order. He believes himself to be the most important being in existence, and he will go to any length to prove his own importance. He often speaks in the style of the old Greco-Roman conquerors.",
+                    "Richards is not above meddling in anyone’s timeline, even his own. As a result, his early life has become shrouded in mystery and divergence. A number of alternate versions of him from across the Multiverse have had adventuring careers to rival Richards’ own."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Red Skull (Johann Shmidt)",
             Rank = 3,
             Abilities = new Abilities
