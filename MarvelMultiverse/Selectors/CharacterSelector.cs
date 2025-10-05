@@ -1,15 +1,6 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using Microsoft.Extensions.Hosting;
-using Microsoft.VisualBasic;
-using System;
-using System.ComponentModel.Design;
-using System.Data;
-using System.Diagnostics;
-using System.Net.NetworkInformation;
-using System.Numerics;
-using System.Text.RegularExpressions;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -773,6 +764,99 @@ public class CharacterSelector(
                     "Scott Lang is a good friend and a caring father, if a bit of a goofball. He serves as an inspiration to his daughter, Cassie, now a super hero herself under the codename Stinger.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Armored Hydra Agent",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 3, vigilance: 3, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Hydra)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CoveringFire),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.KillZone),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "The green-and-yellow Hydra uniform",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.SpecialTraining],
+                Teams = [TeamNames.Hydra],
+                Base = "Secret",
+                History =
+                [
+                    "As a terrorist organization, Hydra uses most of its many recruits (Hydra Agents) as cannon fodder. But sometimes, Hydra will spend the resources upgrading an agent to be their tank on the battlefield. Hydra reverse-engineers the technology of heroes and villains, like Iron Man, War Machine, Iron Monger, Titanium Man and others, to create their own specialized armor. While this new armor may not be as dependable as those superbeings, it can still create a shock troop who can carry out the heaviest Hydra missions.",
+                ],
+                Personality =
+                [
+                    "While Armored Hydra Agents remain anonymous members of the terrorist organization, they have an elevated status among their peers. Like all Hydra agents, they are fanatical, mean and merciless.",
+                ]
+            },
+            Source = BookSource.EnterHydra
         },
         new()
         {
