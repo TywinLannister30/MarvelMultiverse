@@ -12179,6 +12179,196 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Patriot (Rayshaun Lucas)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 1, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Falcon (Sam Wilson)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            glideSpeed: true,
+                            specialization: "Patriot’s Shield. Grants Glide Speed equal to double his Run Speed. Also acts as a drone that can move within his line of sight and fire energy blasts with a range of 10."),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Shield2),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Rayshaun “Shaun” Lucas",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.Champions],
+                Base = "NYC",
+                History =
+                [
+                    "As a young teenager, Rayshaun Lucas was an active participant in the protests that followed the wrongful arrest of the super hero Rage. The connections he made during those protests led him further into the world of super heroes, and during the rise of Hydra’s plot to take over the USA with the help of a twisted version of Captain America (Steve Rogers), he helped provide vital intel to the resistance.",
+                    "The leaders of the resistance later rewarded Lucas for his noble efforts. Iron Man built him a hightech shield based on Lucas’ own designs, and the Falcon (Sam Wilson) took him on as a super-heroin- training. Ever since, Lucas has fought crime and injustice—often alongside the Champions— under the codename Patriot.",
+                    "Lucas is the latest hero by the name Patriot. The original was Jeffrey Mace, who became a replacement Captain America in the late 1940s. More recently was Elijah Bradley, a member of the Young Avengers, who has since given up the codename."
+                ],
+                Personality =
+                [
+                    "Lucas is young and inexperienced in battle, but he has an unfl inching sense of justice that transcends the law. He refuses to let any authority stand between him and doing the right thing.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Phoenix",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 5, vigilance: 4, ego: 8, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AuditoryIssues),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CloneMoves),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Maya Lopez",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "White handprint makeup on face",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.Mythic, OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.DaughtersOfLiberty],
+                Base = "Mobile",
+                History =
+                [
+                    "When Maya Lopez was a child, her father was gunned down by his own boss: the Kingpin (Wilson Fisk). Seeing the young girl’s potential, Fisk took her in, giving her special training and eventually tricking her into believing that Daredevil had killed her father.",
+                    "Eventually, Lopez discovered the Kingpin’s deception and turned on him. Her quest for vengeance resolved, she became a tireless fi ghter for justice around the world. Under the codename Echo, she fought to keep the streets of Hell’s Kitchen safe.",
+                    "Recently, Echo took part in a contest held by the Phoenix Force, a primordial entity of fire and instability older than the universe itself. The Phoenix Force gathered heroes from around the globe and pitted them against each other to determine who would best serve as a host for its unfathomable power.",
+                    "Echo lost her bout to the Sub-Mariner (Namor). However, the Phoenix Force admired Echo’s unflinching determination in battle and decided to take her as its host anyway. With the power of the Phoenix Force within her, Maya Lopez has quickly advanced from a neighborhood vigilante to a defender of entire worlds."
+                ],
+                Personality =
+                [
+                    "As a deaf woman and a member of the Cheyenne Nation, Lopez’s life has been full of struggles. Despite it all, she generally manages to stay upbeat. She has a particular love for the theatrical arts, having become a concert pianist and an expert dancer.",
+                    "The Phoenix Force has, at times, threatened to turn Lopez into an unstoppable berserker. However, her strong sense of right and wrong helps her keep the primordial entity under control."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Photon (Monica Rambeau)",
             Rank = 5,
             Abilities = new Abilities
@@ -12266,6 +12456,86 @@ public class CharacterSelector(
                     "Although generally agreeable, Rambeau has a short fuse when it comes to people messing with her. She knows her abilities make her one of the most powerful people in the universe, and she expects to be treated as such. She does not suffer condescension or discrimination from anyone.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Piledriver (Wrecking Crew)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 3, vigilance: 2, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Brian Phillip Calusky",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [310],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Giant hands",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.WreckingCrew],
+                Base = "Mobile",
+                History =
+                [
+                    "As a teenager in the countryside, Brian Calusky turned to a life of crime more out of boredom than anything else. Calusky’s initial infractions were minor, but over the course of a decade, he managed to build himself a solid rap sheet. Eventually, he was sentenced to an extended stay in the maximum-security prison on Ryker’s Island.",
+                    "It was at Ryker’s that Calusky met the super villain Wrecker. Along with a couple other inmates, Calusky helped the Wrecker escape from Ryker’s. Out of gratitude, the Wrecker granted his allies a portion of his own powers, and together, they formed the Wrecking Crew.",
+                    "Calusky has been with the super-villain group ever since. At one point, he mentored his son, Rick Calusky, who become the criminal known as Excavator."
+                ],
+                Personality =
+                [
+                    "Outside of the Wrecker himself, Piledriver might be the most unhinged member of the Wrecking Crew. He can be utterly reckless, both in a battle and outside of it. Unlike his allies, Piledriver prefers to fi ght without weapons or armor, smashing his opponents with his giant bare fists.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {

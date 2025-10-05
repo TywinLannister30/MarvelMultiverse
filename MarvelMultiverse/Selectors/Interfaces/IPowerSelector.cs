@@ -8,6 +8,7 @@ public interface IPowerSelector
         string name,
         bool isTech = false,
         bool flySpeed = false,
+        bool glideSpeed = false,
         bool swinglineSpeed = false,
         string specialization = null,
         string reminder = null,

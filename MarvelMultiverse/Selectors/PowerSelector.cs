@@ -9,6 +9,7 @@ public class PowerSelector : IPowerSelector
         string name, 
         bool isTech = false,
         bool flySpeed = false,
+        bool glideSpeed = false,
         bool swinglineSpeed = false,
         string specialization = null, 
         string reminder = null,
@@ -29,6 +30,9 @@ public class PowerSelector : IPowerSelector
 
         if (flySpeed)
             power.FlySpeed = true;
+
+        if (glideSpeed)
+            power.GlideSpeed = true;
 
         if (swinglineSpeed)
             power.SwinglineSpeed = true;
