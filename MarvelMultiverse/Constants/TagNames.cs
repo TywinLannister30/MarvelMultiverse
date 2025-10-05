@@ -14,6 +14,7 @@ public static class TagNames
     public const string Convict = "Convict";
     public const string Cursed = "Cursed";
     public const string Deceased = "Deceased";
+    public const string Dependents = "Dependents";
     public const string Enemy = "Enemy";
     public const string EternallyImmortal = "Eternally Immortal";
     public const string ExtremeAppearance = "Extreme Appearance";

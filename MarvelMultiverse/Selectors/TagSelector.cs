@@ -129,6 +129,14 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Dependents,
+            Effect =
+            [
+                "The character has young children, elderly relatives or others who rely on them. They can’t just abandon these people and must check on them and help care for them on a regular basis."
+            ]
+        },
+        new()
+        {
             Name = TagNames.Enemy,
             Effect =
             [

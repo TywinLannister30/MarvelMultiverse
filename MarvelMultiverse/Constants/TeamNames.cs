@@ -76,6 +76,7 @@ public static class TeamNames
     public const string MidnightMission = "Midnight Mission";
     public const string MidnightSons = "Midnight Sons";
     public const string MightyAvengers = "Mighty Avengers";
+    public const string NewAvengers = "New Avengers";
     public const string NewMutants = "New Mutants";
     public const string NineteenFiftyNineAvengers = "1959 Avengers";
     public const string NovaCorps = "Nova Corps";

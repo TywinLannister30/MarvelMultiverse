@@ -14135,6 +14135,109 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Silver Surfer",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 6, vigilance: 6, ego: 8, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Chaotic),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            flySpeed: true,
+                            specialization: "Cosmic surfoard [Summonable by Silver Surfer. Grants Flight 2.]"),
+
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection4),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicChaosMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.PowerfulHex, reminder: "represents his Power Cosmic"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Norrin Radd",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Silver",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Body covered in nigh-indestructible silvery metal",
+                Occupations = [OccupationName.Adventurer, OccupationName.Outsider],
+                Origins = [OriginName.Alien, OriginName.WeirdScience],
+                Teams = [TeamNames.Annihilators, TeamNames.Defenders],
+                Base = "Mobile",
+                History =
+                [
+                    "Norrin Radd was an ordinary man born on the utopian planet of Zenn-La. Fascinated by the opportunities provided by space, Radd endeavored to explore the cosmos. He was well on his way to achieving his dream when Galactus arrived on his planet.",
+                    "Despite the best efforts of Zenn-La’s leaders, none of their weapons could drive Galactus away. In a last-ditch effort to save his people, Radd boarded a spaceship and made a deal with the planet-eater. In exchange for sparing Zenn-La, Radd became Galactus’ herald, imbued with a portion of Galactus’ Power Cosmic, which transformed him into the Silver Surfer.",
+                    "The Silver Surfer served Galactus faithfully until the day he arrived on Earth. Radd took pity on the people of Earth and fought Galactus on their behalf. Galactus ultimately spared the planet and stripped Radd of his position.",
+                    "As a free agent, Radd has spent most of his subsequent years wandering the cosmos. His adventures have taken him across the universe and made him central in the fate of countless worlds."
+                ],
+                Personality =
+                [
+                    "The Silver Surfer regrets his time serving Galactus, and he often misses the people of Zenn-La he left behind. In addition, he is racked with guilt for all those he couldn’t save.",
+                    "The Silver Surfer does his best to act as a hero, but decades of tragic escapades have worn him down. The primary thing that keeps him going is his love for life itself."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Skrull",
             Rank = 3,
             Abilities = new Abilities
@@ -14484,6 +14587,104 @@ public class CharacterSelector(
                     "Miguel is a serious crimefi ghter and a brilliant scientist. While he has a particular hatred for the type of corporate evildoers who forced him to mutate his own body, Miguel will fi ght anyone who threatens the safety of innocents.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Spider-Woman (Jessica Drew)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 7, resilience: 3, vigilance: 3, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation, reminder: "2"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Dependents, specialization: "Gerry Drew"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.VenomBlast),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgliding),
+                    ],
+                },
+                 new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jessica Miriam “Jess” Drew",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Blond, usually dyed black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Investigator, OccupationName.Spy],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.DaughtersOfLiberty, TeamNames.NewAvengers, TeamNames.SHIELD],
+                Base = "NYC",
+                History =
+                [
+                    "When Jessica Drew was just a child, she contracted an acute case of radiation poisoning. Her father—a top geneticist and nuclear researcher—searched desperately for a cure to his daughter’s condition. Hoping to grant her the increased radiation immunity enjoyed by many insects, he injected her with an irradiated form of spider DNA.",
+                    "The treatment saved Drew’s life but forced her into a coma that lasted more than a decade. By the time she awoke, her parents were long gone.",
+                    "Lost and alone, Drew briefly stumbled into the care of Hydra agents who attempted to make her into a spider-themed superspy named Spider-Woman. Drew quickly turned on her handlers, but she kept the Spider-Woman costume.",
+                    "As Spider-Woman, Drew spent the next several years traveling across Europe and the United States, occasionally allying herself with S.H.I.E.L.D. and other heroic organizations. Eventually, she settled down in NYC and decided to start a family on her own. When she’s not adventuring, she spends much of her time caring for her son, Gerry."
+                ],
+                Personality =
+                [
+                    "Spider-Woman’s early days as an adventurer were rocky. Having spent most of her life in a coma, her brain was deeply undeveloped. She often fled from conflict, fighting more out of necessity than a desire to enact justice.",
+                    "The Spider-Woman of today hardly resembles her younger self. Years of experience have molded her into a confi dent and capable crimefi ghter. Drew is an expert in the arts of both espionage and investigation, and she suffers nonsense from no one."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
         new()
         {
