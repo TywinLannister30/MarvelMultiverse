@@ -16,6 +16,7 @@ public static class TagNames
     public const string Cursed = "Cursed";
     public const string Deceased = "Deceased";
     public const string Dependents = "Dependents";
+    public const string EarlyBloomer = "Early Bloomer";
     public const string Enemy = "Enemy";
     public const string EternallyImmortal = "Eternally Immortal";
     public const string ExternallyImmortal = "Eternally Immortal";
@@ -33,7 +34,9 @@ public static class TagNames
     public const string Linguist = "Linguist";
     public const string LunarTransformation = "Lunar Transformation";
     public const string MahdWyry = "Mahd Wy’ry";
+    public const string MentalHealthConditions = "Mental Health Conditions";
     public const string Mentor = "Mentor";
+    public const string MobilityIssues = "Mobility Issues";
     public const string MutantAssociate = "Mutant Associate";
     public const string Mute = "Mute";
     public const string Mysterious = "Mysterious";
@@ -44,6 +47,7 @@ public static class TagNames
     public const string Radioactive = "Radioactive";
     public const string Rich = "Rich";
     public const string SecretIdentity = "Secret Identity";
+    public const string SecondaryMutation = "Secondary Mutation";
     public const string SignatureWeapon = "Signature Weapon";
     public const string Sorcerous = "Sorcerous";
     public const string Streetwise = "Streetwise";

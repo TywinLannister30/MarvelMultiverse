@@ -74,7 +74,8 @@ public class TagSelector : ITagSelector
             Restrictions =
             [
                 "For mutants only."
-            ]
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -147,6 +148,15 @@ public class TagSelector : ITagSelector
             [
                 "The character has young children, elderly relatives or others who rely on them. They can’t just abandon these people and must check on them and help care for them on a regular basis."
             ]
+        },
+        new()
+        {
+            Name = TagNames.EarlyBloomer,
+            Effect =
+            [
+                "The character is a rare kind of throwback mutant who gained their powers at birth. In most cases, this means their parents hid their powers as long as they could—or that the authorities took charge of them early on, supposedly for everyone’s protection.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -271,13 +281,15 @@ public class TagSelector : ITagSelector
             Name = TagNames.Krakoan,
             Effect =
             [
-                "As a mutant, the character is automatically a citizen of the island-nation of Krakoa and can travel to and from there freely. Also, if they are killed and the Five—a group of powerful mutants—are able to work together, the character can be resurrected into an identical new body with most of their memories intact.",
-                "If killed in Otherworld, the character can still be resurrected, but they will be changed in unpredictable ways. Just how this might a­ffect the character is up to the Narrator."
+                "The character is a citizen of the mutant nation of Krakoa.",
+                "Upon the founding of Krakoa as a nation, citizenship was granted automatically to all Earth-born mutants. At the height of that nation’s power, if a Krakoan was killed, the Five—a group of powerful mutants—could work together to resurrect that mutant in a cloned body, with most of their memories intact. If killed in Otherworld, the character could still be resurrected, but they would be changed in unpredictable ways. How this might affect the character is up to the Narrator.",
+                "In the current status quo, Krakoa has fallen. Mutants no longer automatically have access to the Krakoan gates or resurrection by the Five. Characters who once lived on Krakoa might retain this tag, though, to represent their attachment to the mutant homeland."
             ],
             Restrictions =
             [
                 "For mutants only."
-            ]
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -321,11 +333,29 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.MentalHealthConditions,
+            Effect =
+            [
+                "The character has mental health conditions. These might include anxiety, depression, dissociative identity disorder or other conditions.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = TagNames.Mentor,
             Effect =
             [
                 "The character knows an older person they can ask for advice, even when it comes to having super-powers. This tag can be selected multiple times.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.MobilityIssues,
+            Effect =
+            [
+                "The character has mobility issues. This can range from using a cane to using a wheelchair.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -411,6 +441,29 @@ public class TagSelector : ITagSelector
             [
                 "The character’s real identity is a secret to the public, and they must take precautions to maintain this status. This might help keep the people they care about safe from their enemies, but it can also cause strain in those same relationships.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.SecondaryMutation,
+            Effect =
+            [
+                "In rare cases, a mutant can experience a secondary mutation at some point after their original mutation. A good example is Emma Frost, who started out as a fairly straightforward telepath but later gained a secondary mutation that allowed her to turn into living diamond.",
+                "This is not a new origin but a new tag that serves as an extension of the regular Mutant origin. Only characters with the Mutant origin can have a secondary mutation.",
+                "If a character has this tag, it means that they once had a lower rank cap and broke through it. For example, they might have been at Rank 3 for years and then gained a secondary mutation that let them eventually rise to Rank 5.",
+                "When an existing character gains this tag, they advance to the next rank. Thus, a character can take it only after they’ve had enough adventures that they would normally be able to rank up but cannot because of their rank cap. Taking this tag means they can add a single rank, and if their new rank cap allows further growth, they can play to gain more ranks as normal.",
+                "If the player of an existing character wants to take this tag for their character, they should talk to their Narrator about the rank cap. This should cover:",
+                "- The character’s current rank cap and the reasons it was chosen.",
+                "- The ranks and rank caps of the other characters on the team.",
+                "- What the new rank cap should be.",
+                "Alternatively, the Narrator can suggest the Secondary Mutation tag to one or more players. If the Narrator wants to expand the horizons for the team’s adventures, they might propose this to help ensure that the characters are powerful enough to meet the new challenges the game has in store for them.",
+                "Sometimes this is as simple as allowing the character to reach the same ranks as others on the team who are of a higher rank. Initially, the player might have thought it would be fun to play at a lower rank (like Hawkeye on the Avengers) but now wants their character to be on a more equal footing with their teammates.",
+                "However, if the player wants their character to reach a higher rank than the rest of the team, that could cause friction. In such cases, it’s best to include the entire team in the conversation to make sure that everyone is comfortable with the decision. Otherwise, the characters can find themselves in a race to reach Rank 6. That’s fine if that’s what everyone wants, but it can change the nature of the game and the challenges the characters face in their adventures.",
+            ],
+            Restrictions =
+            [
+                "For mutants only."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
