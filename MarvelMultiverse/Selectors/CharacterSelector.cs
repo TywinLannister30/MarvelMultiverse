@@ -674,6 +674,97 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Angel",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 2, vigilance: 2, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Glibness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Archangel"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Techno-organic wings [when in Archangel form, can fire feathery flechettes (treat like a submachine gun) and can act as a protective barrier (20 points to shatter)]"),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Warren Kenneth Worthington III",
+                Heights = [new() { Feet = 6 }],
+                Weights = [150],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Feathery wings",
+                Occupations = [OccupationName.Tycoon],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XFactor, TeamNames.XMen, TeamNames.XCorp],
+                Base = "Krakoa",
+                History =
+                [
+                    "From birth, Warren Worthington III wanted for nothing. His natural talents carried him through most of life’s troubles, and his parents’ wealth dealt with everything else.",
+                    "Late in Worthington’s senior year of high school, his mutant powers kicked in, and two full-size wings spontaneously sprouted from his back. Under the codename of the Angel, Worthington decided to take a crack at emulating the super heroes he admired as a kid and waged a private one-man war on crime.",
+                    "Angel’s solo exploits drew the attention of the fledgling X-Men, who invited him to become a founding member of their organization. He accepted, and he’s been in their orbit ever since.",
+                    "During one of his regular adventures with the X-Men, Angel had his wings ripped from his back. Apocalypse kidnapped the injured Angel and attempted to turn him into a villainous Archangel of Death by brainwashing him and implanting stronger techno-organic wings into his body.",
+                    "Angel eventually escaped Apocalypse’s control and found a way to return to his original form, but the incident left him forever scarred. He can become the blue-skinned Archangel when necessary, but he rarely wishes to do so. These days, Angel spends most of his time far from the field of battle, running Krakoa’s X-Corp."
+                ],
+                Personality =
+                [
+                    "Angel’s natural charisma and stunning looks inspire admiration in some and jealousy in others. When he’s not working or adventuring, he lives the life of a wealthy playboy, hanging out with supermodels and relaxing by the pool in his private mansion. However, Angel has no compunctions about using his wealth to help his friends—or the nation of Krakoa itself.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Annabelle Riggs",
             Rank = 2,
             Abilities = new Abilities
@@ -850,6 +941,194 @@ public class CharacterSelector(
                     "Scott Lang is a good friend and a caring father, if a bit of a goofball. He serves as an inspiration to his daughter, Cassie, now a super hero herself under the codename Stinger.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Aphelion",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 2, resilience: 1, vigilance: 2, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlIce,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Reed Fox",
+                Heights = [new() { Feet = 6, Inches = 3}],
+                Weights = [198],
+                Gender = Gender.Nonbinary,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.NextMutants],
+                Base = "NYC",
+                History =
+                [
+                    "Reed Fox was one of the queer and transgender mutants who answered the call to join the Super Trans support group at the Matt Baker Community Center in Queens.",
+                    "During the group’s first meeting, the center was attacked by a group of super villains seeking to create chaos across the city. Thankfully, with the help of the other members of the support group, Fox managed to send these villains packing before they could do any significant damage.",
+                    "Having discovered that they enjoyed fighting together, Fox and the other mutants decided to form a more permanent team. Calling themselves the Next Mutants, they now spend their afternoons fighting to keep the streets of New York City safe for people everywhere.",
+                    "To onlookers, it may appear that Fox simply has the power to freeze things, but this is not exactly the case. Fox can, at will, open a portal to a cold and largely empty universe that exists within their own body. They freeze things somewhat indirectly, by sucking heat out of the environment and into this other universe."
+                ],
+                Personality =
+                [
+                    "Fox is the closest thing the Next Mutants have to a team leader. They are, by far, the most eloquent and quick-witted of the group. Whenever the Next Mutants need to send someone forward to negotiate—or to lead them in a call to battle—Fox is the one who steps up",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Apocalypse",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 2, resilience: 8, vigilance: 5, ego: 3, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExternalAwareness),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Infector, reminder: "Techno-Organic virus"),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExternallyImmortal),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Linguist, reminder: "all known human languages"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "En Sabah Nur",
+                Heights = [new() { Feet = 7}],
+                Weights = [300],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "None",
+                Size = Size.Big,
+                DistinguishingFeatures = "Gray-blue skin covered in dark blue markings",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MutantExternal],
+                Teams = [TeamNames.Externals, TeamNames.HorsemenOfApocalypse, TeamNames.QuietCouncilOfKrakoa],
+                Base = "Mobile",
+                History =
+                [
+                    "One of the first of the modern era’s mutants, En Sabah Nur was born in Egypt thousands of years ago. Rejected by his parents as an infant, Nur was taken in by a brutal clan of mercenaries. Life among this clan taught him a single twisted lesson: Might makes right.",
+                    "As a young man, Nur renamed himself Apocalypse and set out to make himself the most fearsome warrior in the universe. Some years later, he married a female warrior named Genesis and had four children with her. These children each became powerful fighters in their own right, waging war as Apocalypse’s Four Horsemen.",
+                    "Apocalypse’s family life came to an unexpected end when his wife and children were sucked through a dimensional portal to a demonic hellscape called Amenth. As a tribute to his lost family, he spent the next several millennia capturing rival super-beings and forcibly transforming the best of them into his new Horsemen.",
+                    "Not long ago, Apocalypse managed to build a portal to Otherworld—and, by means of that, to Amenth—on the island-nation of Krakoa. The demons of Amenth attempted to invade Krakoa, but the island’s defenders pushed them back into their dimension, along with Apocalypse and his family. They recently reappeared when Genesis launched an invasion of Arakko (Mars) from Amenth, with Apocalypse standing against them."
+                ],
+                Personality =
+                [
+                    "Despite having a large and studied vocabulary, Apocalypse typically speaks in short, commanding sentences. He cares for little outside of war and family, and in that way, his new life in Amenth seemed an ideal one. He had his kin by his side and unending waves of demonic foes to vanquish as he pleased.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -1035,6 +1314,213 @@ public class CharacterSelector(
                 ],
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Askani",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 3, vigilance: 5, ego: 5, logic: 8
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelTime,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TimeTravel),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticBarrier),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                        powerSelector.GetPower(PowerNames.TelekineticProtection2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.CloakGroup),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Rachel “Ray” Anne Summers",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "Various tattoos",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Excalibur, TeamNames.XFactor, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Rachel Summers was born to Marvel Girl and Cyclops on Earth-811, a dystopian possible future in which most mutants have been herded into camps or outright slaughtered. She was spared from the horrors of the death camps only to face a fate perhaps even worse. Her oppressors made her into a “Hound,” a brainwashed government tracker tasked with hunting down members of the mutant resistance.",
+                    "As a Hound, Summers participated in the capture and execution of dozens of mutants. She eventually broke free of her brainwashing and escaped to Earth-616, but the guilt has stuck with her to this day.",
+                    "As soon as she arrived on Earth-616, Summers joined the X-Men and worked with them to help ensure that their universe would not go down the same dark path as her own. Although she later managed to return to her home universe and liberate its mutants, Summers still prefers life on Earth-616. These days, she spends most of her time as part of Krakoa’s Excalibur team, alongside her girlfriend and longtime teammate, Betsy Braddock.",
+                ],
+                Personality =
+                [
+                    "Although they are not—strictly speaking—her birth family, Rachel Summers is close with the Earth-616 versions of her mother (Jean Grey), father (Cyclops) and brother (Cable). She lives with them in the Summer House in the Blue Area of the Moon.",
+                    "Rachel is more like her mother than she would ever like to admit. They are both gifted telepaths and favored hosts for the Phoenix Force. Their personal traumas spring from very different sources, but both Rachel and her mother have fiery and occasionally erratic personalities."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Aurora",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 2, vigilance: 3, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BlazingFastFists),
+                        powerSelector.GetPower(PowerNames.Blur),
+                        powerSelector.GetPower(PowerNames.CatchBullets),
+                        powerSelector.GetPower(PowerNames.LightningActions),
+                        powerSelector.GetPower(PowerNames.MolecularDestabilization),
+                        powerSelector.GetPower(PowerNames.SpeedBlast),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jeanne-Marie Beaubier",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [140],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Unusually pointy ears",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.AlphaFlight, TeamNames.Marauders],
+                Base = "Krakoa",
+                History =
+                [
+                    "Jeanne-Marie Beaubier and her brother, Jean-Paul, were just infants when their parents died in a car accident. In the chaos of the aftermath, the twins were sent to different orphanages. Jean-Paul grew up bouncing around the foster system, while Jeanne-Marie spent her childhood in a Catholic boarding school.",
+                    "The twins had no knowledge of each other’s existence until they were well into their adult years after being recruited into Canada’s Department H. The moment they grasped hands, their mutant powers activated, and a powerful and blinding light emerged from their bodies, blasting them backward.",
+                    "The twins decided to use their powers for the betterment of humanity. They joined the Canadian super-team Alpha Flight and spent most of the next decade adventuring together, making up for lost time.",
+                    "The twins began living separate lives again after the founding of Krakoa drew them away from their Alpha Flight colleagues. These days, Jean-Paul runs Krakoa’s X-Factor Investigations team, while Jeanne-Marie serves as a member of the secretive Marauders."
+                ],
+                Personality =
+                [
+                    "The sadistic nuns who ran the boarding school where Jeanne-Marie grew up taught her to be demure and obedient the only way they knew how: by beating it into her.",
+                    "To survive, Jeanne-Marie increasingly had to compartmentalize the freewheeling aspects of her personality. This eventually led to her manifesting a form of dissociative identity disorder, in which she had one uninhibited personality and one well-behaved, repressed personality.",
+                    "Only recently did she manage to integrate these disparate aspects of herself into a single core personality. The current Jeanne-Marie is both levelheaded and fun-loving."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
