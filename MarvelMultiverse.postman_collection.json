@@ -1,0 +1,1430 @@
+{
+	"info": {
+		"_postman_id": "666d169d-8bc6-464b-a3cc-e9b6141aeec2",
+		"name": "MarvelMultiverse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "831546"
+	},
+	"item": [
+		{
+			"name": "api/v1/character",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/character",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"character"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/character/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/character/Patriot (Rayshaun Lucas)",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"character",
+						"Patriot (Rayshaun Lucas)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/origin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/origin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"origin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/origin/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/origin/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"origin",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/origin/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/origin/Alien",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"origin",
+						"Alien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/occupation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/occupation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"occupation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/occupation/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/occupation/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"occupation",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/occupation/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/occupation/spy",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"occupation",
+						"spy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/trait",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/trait",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"trait"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/trait/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/trait/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"trait",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/trait/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/trait/Beguiling",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"trait",
+						"Beguiling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/tag",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/tag/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/tag/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"tag",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/tag/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/tag/Chaotic",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"tag",
+						"Chaotic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/power/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/power/Anger",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"power",
+						"Anger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/Element Control",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"Element Control"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/basic/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/basic/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"basic",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/magic/basic/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/basic/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"basic",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/element control/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/element control/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"element control",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/element control/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/element control/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"element control",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/illusion/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/illusion/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"illusion",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/illusion/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/illusion/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"illusion",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/magic/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/magic/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"magic",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/magic/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/magic/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"magic",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/martial arts/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/martial arts/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"martial arts",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/martial arts/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/martial arts/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"martial arts",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/melee weapons/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/melee weapons/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"melee weapons",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/melee weapons/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/melee weapons/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"melee weapons",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/omniversal travel/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/omniversal travel/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"omniversal travel",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/omniversal travel/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/omniversal travel/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"omniversal travel",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/phasing/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/phasing/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"phasing",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/phasing/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/phasing/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"phasing",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/plasticity/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/plasticity/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"plasticity",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/plasticity/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/plasticity/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"plasticity",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/power control/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/power control/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"power control",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/power control/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/power control/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"power control",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/ranged weapons/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/ranged weapons/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"ranged weapons",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/ranged weapons/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/ranged weapons/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"ranged weapons",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/resize/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/resize/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"resize",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/resize/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/resize/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"resize",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/shield bearer/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/shield bearer/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"shield bearer",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/shield bearer/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/shield bearer/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"shield bearer",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/spider-powers/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/spider-powers/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"spider-powers",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/spider-powers/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/spider-powers/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"spider-powers",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/super-speed/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/super-speed/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"super-speed",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/super-speed/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/super-speed/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"super-speed",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/super-strength/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/super-strength/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"super-strength",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/super-strength/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/super-strength/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"super-strength",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/tactics/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/tactics/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"tactics",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/tactics/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/tactics/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"tactics",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/telekinesis/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/telekinesis/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"telekinesis",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/telekinesis/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/telekinesis/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"telekinesis",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/telepathy/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/telepathy/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"telepathy",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/telepathy/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/telepathy/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"telepathy",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/teleportation/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/teleportation/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"teleportation",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/teleportation/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/teleportation/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"teleportation",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/weather control/power",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/weather control/power",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"weather control",
+						"power"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/powerset/weather control/power/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/v1/powerset/weather control/power/name",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"v1",
+						"powerset",
+						"weather control",
+						"power",
+						"name"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

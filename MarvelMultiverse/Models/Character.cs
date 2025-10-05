@@ -25,7 +25,7 @@ public class Character
 
     public List<Tag> Tags { get; set; }
 
-    public List<PowerSet> Powers { get; set; }
+    public List<CharacterPowerSet> Powers { get; set; }
 
     public List<string> PowerNotes { get; set; }
 

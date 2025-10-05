@@ -113,7 +113,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -125,7 +125,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -195,7 +195,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -204,7 +204,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -223,7 +223,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -231,7 +231,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticManipulation)
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -297,7 +297,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -306,7 +306,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -317,7 +317,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -377,7 +377,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -385,7 +385,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.HealingFactor),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -393,7 +393,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.AttackStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -462,7 +462,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -473,7 +473,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelMultiversal,
                     Powers =
@@ -483,7 +483,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.MultiversalTravelTogether),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelTime,
                     Powers =
@@ -493,7 +493,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TimeTravelTogether),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperSpeed,
                     Powers =
@@ -503,7 +503,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SpeedRun2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -562,7 +562,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -571,7 +571,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Brilliance1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -630,7 +630,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -639,7 +639,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -709,7 +709,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -717,7 +717,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -728,7 +728,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -737,7 +737,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -804,7 +804,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -814,7 +814,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlElectricity,
                     Powers =
@@ -823,7 +823,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -935,7 +935,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -944,7 +944,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -960,7 +960,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -974,7 +974,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UntouchablePosition),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -1039,7 +1039,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1048,7 +1048,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -1057,7 +1057,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.KeepMoving),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -1067,7 +1067,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -1133,7 +1133,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1145,7 +1145,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -1158,7 +1158,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -1167,7 +1167,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Jump1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -1240,7 +1240,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1257,7 +1257,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -1270,7 +1270,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -1343,7 +1343,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1355,7 +1355,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlSound,
                     Powers =
@@ -1367,7 +1367,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalPush),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperSpeed,
                     Powers =
@@ -1379,7 +1379,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SpeedRun2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -1442,7 +1442,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1452,7 +1452,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight1, reminder: "adjacent"),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -1463,7 +1463,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalRicochet, reminder: "adjacent"),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -1544,7 +1544,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1562,7 +1562,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -1576,7 +1576,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -1640,7 +1640,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1649,7 +1649,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -1660,7 +1660,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UnflappablePoise),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -1670,7 +1670,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -1735,7 +1735,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1747,7 +1747,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -1761,7 +1761,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -1840,7 +1840,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Illusion,
                     Powers =
@@ -1849,7 +1849,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -1861,7 +1861,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -1931,7 +1931,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -1943,7 +1943,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy4),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -1959,7 +1959,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Supernova),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -2030,7 +2030,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2043,7 +2043,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -2056,7 +2056,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Smash),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -2117,7 +2117,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2126,7 +2126,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -2134,7 +2134,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -2203,7 +2203,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2214,7 +2214,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -2284,7 +2284,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2300,7 +2300,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ShieldBearer,
                     Powers =
@@ -2316,7 +2316,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ShieldDeflection),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -2383,7 +2383,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2398,7 +2398,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ShieldBearer,
                     Powers =
@@ -2416,7 +2416,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ShieldWall),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -2483,7 +2483,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2496,7 +2496,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -2504,7 +2504,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -2517,7 +2517,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Smash),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -2593,7 +2593,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2610,7 +2610,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -2675,7 +2675,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2684,7 +2684,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -2754,7 +2754,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2763,7 +2763,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -2783,7 +2783,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -2792,7 +2792,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticManipulation),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -2863,7 +2863,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2871,7 +2871,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "The Cloak (Can imprison grabbed opponents in the Darkforce dimension, during which time Cloak automatically makes a free Ego attack against them on his turn each round. To escape, imprisoned creatures must succeed on an Ego check against Cloak’s Ego defense.)"),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Phasing,
                     Powers =
@@ -2881,7 +2881,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.QuickPhase),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Teleportation,
                     Powers =
@@ -2947,7 +2947,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -2956,7 +2956,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -2966,7 +2966,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -3032,7 +3032,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -3044,7 +3044,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -3114,7 +3114,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3123,7 +3123,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy4),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -3198,7 +3198,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3217,7 +3217,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -3231,7 +3231,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalReinforcement),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -3244,7 +3244,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SuppressiveFire),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -3312,7 +3312,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3321,7 +3321,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -3330,7 +3330,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.GrapplingTechnique),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -3396,7 +3396,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3406,7 +3406,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = $"{PowerSetNames.ElementControl} Air/Earth/Fire/Ice/Water",
                     Powers =
@@ -3484,7 +3484,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3493,7 +3493,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -3503,7 +3503,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -3518,7 +3518,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.RallyOnMe),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -3587,7 +3587,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3597,7 +3597,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -3671,7 +3671,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3679,7 +3679,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Accuracy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -3687,7 +3687,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -3750,7 +3750,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3764,7 +3764,7 @@ public class CharacterSelector(
                             agilityDamageModifier: 1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -3829,7 +3829,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3840,7 +3840,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -3855,7 +3855,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -3918,7 +3918,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -3927,7 +3927,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -3935,7 +3935,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -4000,7 +4000,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4009,7 +4009,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -4023,7 +4023,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UnrelentingSmash),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -4089,7 +4089,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4102,7 +4102,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -4113,7 +4113,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -4125,7 +4125,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SummonPortal),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -4134,7 +4134,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -4196,7 +4196,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4207,7 +4207,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Plasticity,
                     Powers =
@@ -4216,7 +4216,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -4226,7 +4226,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -4239,7 +4239,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -4304,7 +4304,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4315,7 +4315,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -4335,7 +4335,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -4345,7 +4345,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DoThisAllDay),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -4408,7 +4408,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4422,7 +4422,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -4433,7 +4433,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -4502,7 +4502,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4511,7 +4511,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -4581,7 +4581,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4591,7 +4591,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty4),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Magic,
                     Powers =
@@ -4599,7 +4599,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SenseSupernatural),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicDemonicMagic,
                     Powers =
@@ -4608,7 +4608,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SenseSins),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -4620,7 +4620,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SummonPortal),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -4629,7 +4629,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.GrowingAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -4697,7 +4697,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4710,7 +4710,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -4721,7 +4721,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Smash),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -4733,7 +4733,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UntouchablePosition),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -4800,7 +4800,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4808,7 +4808,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -4821,7 +4821,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.PowerControl,
                     Powers =
@@ -4883,7 +4883,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -4894,7 +4894,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -4904,7 +4904,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -4967,7 +4967,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -4978,7 +4978,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -5044,7 +5044,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5055,7 +5055,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.PowerControl,
                     Powers =
@@ -5064,7 +5064,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ShutDownPowers),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -5154,7 +5154,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5165,7 +5165,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicChaosMagic,
                     Powers =
@@ -5174,7 +5174,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Jinx),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -5186,7 +5186,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SummonPortal),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -5262,7 +5262,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5273,7 +5273,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -5289,7 +5289,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -5351,7 +5351,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5360,7 +5360,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -5368,7 +5368,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.HitAndRun),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -5440,7 +5440,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5453,7 +5453,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -5463,7 +5463,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UntouchablePosition),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -5474,7 +5474,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -5482,7 +5482,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sniping),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperSpeed,
                     Powers =
@@ -5490,7 +5490,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SpeedRun1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -5557,7 +5557,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5567,7 +5567,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty4),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlHellfire,
                     Powers =
@@ -5581,7 +5581,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicDemonicMagic,
                     Powers =
@@ -5592,7 +5592,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SenseSins),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Phasing,
                     Powers =
@@ -5601,7 +5601,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.PhaseSelf),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperSpeed,
                     Powers =
@@ -5609,7 +5609,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SpeedRun1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -5672,7 +5672,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5685,7 +5685,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelMultiversal,
                     Powers =
@@ -5696,7 +5696,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -5764,7 +5764,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5773,7 +5773,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -5783,7 +5783,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -5849,7 +5849,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5860,7 +5860,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -5876,7 +5876,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UnrelentingSmash),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -5940,7 +5940,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -5951,7 +5951,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -5962,7 +5962,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -5974,7 +5974,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -6044,7 +6044,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6057,7 +6057,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy4),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -6072,7 +6072,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -6144,7 +6144,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6158,7 +6158,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -6168,7 +6168,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -6179,7 +6179,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.QuickToss),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -6242,7 +6242,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6252,7 +6252,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Plasticity,
                     Powers =
@@ -6268,7 +6268,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -6334,7 +6334,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6344,7 +6344,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -6355,7 +6355,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -6432,7 +6432,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -6441,7 +6441,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -6449,7 +6449,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastAttacks),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -6511,7 +6511,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6520,7 +6520,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -6529,7 +6529,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -6594,7 +6594,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6602,7 +6602,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Accuracy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -6611,7 +6611,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -6687,7 +6687,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6698,7 +6698,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Magic,
                     Powers =
@@ -6706,7 +6706,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LeechLife),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -6717,7 +6717,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SummonPortal),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -6727,7 +6727,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelTime,
                     Powers =
@@ -6735,7 +6735,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TimeTravel),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -6802,7 +6802,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6811,7 +6811,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -6823,7 +6823,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -6891,7 +6891,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6903,7 +6903,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -6979,7 +6979,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -6989,7 +6989,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Plasticity,
                     Powers =
@@ -7061,7 +7061,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7070,7 +7070,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Illusion,
                     Powers =
@@ -7078,7 +7078,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Invisibility),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -7086,7 +7086,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -7162,7 +7162,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7175,7 +7175,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -7247,7 +7247,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7258,7 +7258,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlFire,
                     Powers =
@@ -7325,7 +7325,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -7387,7 +7387,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7396,7 +7396,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -7407,7 +7407,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -7472,7 +7472,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7486,7 +7486,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -7496,7 +7496,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -7572,7 +7572,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7583,7 +7583,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlIce,
                     Powers =
@@ -7658,7 +7658,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7672,7 +7672,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -7684,7 +7684,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Supernova),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -7693,7 +7693,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticManipulation),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -7753,7 +7753,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7764,7 +7764,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -7774,7 +7774,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -7842,7 +7842,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7851,7 +7851,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Discipline3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlForce,
                     Powers =
@@ -7866,7 +7866,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalSphere),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Illusion,
                     Powers =
@@ -7930,7 +7930,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -7938,7 +7938,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -8011,7 +8011,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8019,7 +8019,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -8035,7 +8035,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -8106,7 +8106,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8121,7 +8121,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -8187,7 +8187,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8201,7 +8201,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -8270,7 +8270,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8278,7 +8278,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -8346,7 +8346,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8355,7 +8355,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -8370,7 +8370,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticSphere),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -8448,7 +8448,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8461,7 +8461,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -8525,7 +8525,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8536,7 +8536,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy4),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -8608,7 +8608,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8619,7 +8619,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -8632,7 +8632,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -8643,7 +8643,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelTime,
                     Powers =
@@ -8714,7 +8714,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8724,7 +8724,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -8741,7 +8741,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UntouchablePosition),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -8807,7 +8807,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -8818,7 +8818,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Phasing,
                     Powers =
@@ -8887,7 +8887,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8898,7 +8898,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -8912,7 +8912,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -8977,7 +8977,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -8987,7 +8987,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -9056,7 +9056,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9065,7 +9065,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -9074,7 +9074,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -9083,7 +9083,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.StoppingPower),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -9093,7 +9093,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wallcrawling),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -9102,7 +9102,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CrushingGrip),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -9170,7 +9170,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9179,7 +9179,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -9188,7 +9188,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticManipulation),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -9257,7 +9257,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9266,7 +9266,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelDimensional,
                     Powers =
@@ -9275,7 +9275,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DimensionalTravelTogether),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelMultiversal,
                     Powers =
@@ -9284,7 +9284,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.MultiversalTravelTogether),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Teleportation,
                     Powers =
@@ -9350,7 +9350,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9360,7 +9360,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -9368,7 +9368,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -9437,7 +9437,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9451,7 +9451,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ShapeShift),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -9465,7 +9465,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SummonPortal),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -9474,7 +9474,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticManipulation),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -9544,7 +9544,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9553,7 +9553,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -9562,7 +9562,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DoThisAllDay),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -9631,7 +9631,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9639,7 +9639,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Accuracy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -9649,7 +9649,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -9710,7 +9710,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9719,7 +9719,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -9727,7 +9727,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SuppressiveFire),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -9785,7 +9785,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -9794,7 +9794,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -9861,7 +9861,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9873,7 +9873,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny4, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlIron,
                     Powers =
@@ -9889,7 +9889,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalSuffocation),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -9957,7 +9957,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -9969,7 +9969,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -9979,7 +9979,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -10046,7 +10046,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10057,7 +10057,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.HealingFactor),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -10072,7 +10072,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -10137,7 +10137,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10145,7 +10145,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Discipline3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -10154,7 +10154,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -10168,7 +10168,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -10181,7 +10181,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.UnflappablePoise),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -10242,7 +10242,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10251,7 +10251,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -10261,7 +10261,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sniping),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -10326,7 +10326,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10335,7 +10335,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -10400,7 +10400,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10464,7 +10464,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10475,7 +10475,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = $"{PowerSetNames.Plasticity}",
                     Powers =
@@ -10483,7 +10483,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -10495,7 +10495,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.QuickToss),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -10562,7 +10562,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10571,7 +10571,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -10642,7 +10642,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10651,7 +10651,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Plasticity,
                     Powers =
@@ -10724,7 +10724,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10732,7 +10732,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -10742,7 +10742,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -10753,7 +10753,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DoThisAllDay),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -10821,7 +10821,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10831,7 +10831,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -10841,7 +10841,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -10854,7 +10854,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticSphere),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -10919,7 +10919,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -10928,7 +10928,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -10938,7 +10938,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -11007,7 +11007,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11016,7 +11016,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -11085,7 +11085,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11096,7 +11096,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -11106,7 +11106,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -11117,7 +11117,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -11179,7 +11179,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11191,7 +11191,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Magic,
                     Powers =
@@ -11199,7 +11199,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LeechLife),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -11209,7 +11209,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.QuickToss),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -11270,7 +11270,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11278,7 +11278,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Disguise),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Plasticity,
                     Powers =
@@ -11291,7 +11291,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.StiltSteps),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -11352,7 +11352,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11360,7 +11360,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Discipline1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Illusion,
                     Powers =
@@ -11427,7 +11427,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11440,7 +11440,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -11451,7 +11451,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -11515,7 +11515,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11528,7 +11528,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -11537,7 +11537,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -11546,7 +11546,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -11554,7 +11554,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sniping),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -11615,7 +11615,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11624,7 +11624,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -11635,7 +11635,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -11700,7 +11700,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11710,7 +11710,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -11719,7 +11719,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -11731,7 +11731,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -11793,7 +11793,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11858,7 +11858,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -11873,7 +11873,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Teleportation,
                     Powers =
@@ -11938,7 +11938,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -11950,7 +11950,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -11961,7 +11961,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -12030,7 +12030,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12043,7 +12043,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wisdom),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -12119,7 +12119,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12129,7 +12129,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -12139,7 +12139,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -12204,7 +12204,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12215,7 +12215,7 @@ public class CharacterSelector(
                             specialization: "Patriot’s Shield. Grants Glide Speed equal to double his Run Speed. Also acts as a drone that can move within his line of sight and fire energy blasts with a range of 10."),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ShieldBearer,
                     Powers =
@@ -12288,7 +12288,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12302,7 +12302,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlFire,
                     Powers =
@@ -12316,7 +12316,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Supernova),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -12329,7 +12329,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.PowerControl,
                     Powers =
@@ -12396,7 +12396,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12409,7 +12409,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -12422,7 +12422,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalReinforcement),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -12483,7 +12483,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12495,7 +12495,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wisecracker),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -12569,7 +12569,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12578,7 +12578,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -12659,7 +12659,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12667,7 +12667,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -12677,7 +12677,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -12686,7 +12686,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TelekineticManipulation),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -12757,7 +12757,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12769,7 +12769,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -12788,7 +12788,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Supernova),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Teleportation,
                     Powers =
@@ -12853,7 +12853,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12864,7 +12864,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -12873,7 +12873,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DoThisAllDay),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelTime,
                     Powers =
@@ -12882,7 +12882,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.TimeOut),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperSpeed,
                     Powers =
@@ -12953,7 +12953,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -12965,7 +12965,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -12977,7 +12977,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -12987,7 +12987,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.OmniversalTravelTime,
                     Powers =
@@ -13057,7 +13057,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13067,7 +13067,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -13075,7 +13075,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.AttackStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -13088,7 +13088,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SuppressiveFire),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -13148,7 +13148,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13156,7 +13156,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Accuracy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -13165,7 +13165,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Riposte),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -13176,7 +13176,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.StoppingPower),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -13241,7 +13241,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13250,7 +13250,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -13260,7 +13260,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -13333,7 +13333,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13346,7 +13346,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -13361,7 +13361,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -13427,7 +13427,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13438,7 +13438,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -13449,7 +13449,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperSpeed,
                     Powers =
@@ -13459,7 +13459,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Smash),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -13529,7 +13529,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13542,7 +13542,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -13558,7 +13558,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -13623,7 +13623,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13632,7 +13632,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Flight2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicChaosMagic,
                     Powers =
@@ -13644,7 +13644,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ProtectionHex),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -13661,7 +13661,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.PowerControl,
                     Powers =
@@ -13724,7 +13724,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13732,7 +13732,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Brawling),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -13814,7 +13814,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13825,7 +13825,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -13890,7 +13890,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13898,7 +13898,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Accuracy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -13906,7 +13906,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.AttackStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -13977,7 +13977,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -13989,7 +13989,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -14001,7 +14001,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DoThisAllDay),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -14068,7 +14068,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14079,7 +14079,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -14097,7 +14097,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Webtrapping),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -14166,7 +14166,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14186,7 +14186,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy4),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -14198,7 +14198,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalReinforcement),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicChaosMagic,
                     Powers =
@@ -14265,7 +14265,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14274,7 +14274,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ShapeShift),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Plasticity,
                     Powers =
@@ -14288,7 +14288,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.StiltSteps),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -14350,7 +14350,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14359,7 +14359,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -14376,7 +14376,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Webtrapping),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Illusion,
                     Powers =
@@ -14437,7 +14437,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14451,7 +14451,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wisecracker),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -14522,7 +14522,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14533,7 +14533,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -14550,7 +14550,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Webtrapping),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -14619,7 +14619,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14631,7 +14631,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -14645,7 +14645,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Webgliding),
                     ],
                 },
-                 new PowerSet
+                 new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -14712,7 +14712,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14722,7 +14722,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -14731,7 +14731,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wallcrawling),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -14740,7 +14740,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Clobber),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -14804,7 +14804,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14820,7 +14820,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wisecracker),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControl,
                     Powers =
@@ -14831,7 +14831,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Illusion,
                     Powers =
@@ -14839,7 +14839,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Illumination),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -14849,7 +14849,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DoThisAllDay),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telekinesis,
                     Powers =
@@ -14857,7 +14857,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Levitation),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -14922,7 +14922,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -14931,7 +14931,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -15005,7 +15005,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15017,7 +15017,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlElectricity,
                     Powers =
@@ -15028,7 +15028,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalRicochet),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.WeatherControl,
                     Powers =
@@ -15098,7 +15098,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15109,7 +15109,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlWater,
                     Powers =
@@ -15119,7 +15119,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperSpeed,
                     Powers =
@@ -15127,7 +15127,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SpeedSwim),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -15137,7 +15137,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Smash),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -15213,7 +15213,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15224,7 +15224,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -15242,7 +15242,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Supernova),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -15251,7 +15251,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -15318,7 +15318,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15326,7 +15326,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Accuracy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -15336,7 +15336,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.FastStrikes),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -15345,7 +15345,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.PowerControl,
                     Powers =
@@ -15353,7 +15353,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CloneMoves),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -15362,7 +15362,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SnapShooting),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ShieldBearer,
                     Powers =
@@ -15428,7 +15428,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15442,7 +15442,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -15452,7 +15452,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -15521,7 +15521,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15533,7 +15533,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wisdom),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -15606,7 +15606,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15625,7 +15625,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlElectricity,
                     Powers =
@@ -15637,7 +15637,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalRicochet),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.WeatherControl,
                     Powers =
@@ -15707,7 +15707,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15725,7 +15725,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlElectricity,
                     Powers =
@@ -15736,7 +15736,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.ElementalPush),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.WeatherControl,
                     Powers =
@@ -15797,7 +15797,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15809,7 +15809,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
@@ -15819,7 +15819,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -15886,7 +15886,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15897,7 +15897,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -15910,7 +15910,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -15973,7 +15973,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -15982,7 +15982,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =
@@ -16055,7 +16055,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16067,7 +16067,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlElectricity,
                     Powers =
@@ -16078,7 +16078,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -16151,7 +16151,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16161,7 +16161,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Magic,
                     Powers =
@@ -16169,7 +16169,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LeechLife),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Telepathy,
                     Powers =
@@ -16234,7 +16234,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16246,7 +16246,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
@@ -16262,7 +16262,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Webtrapping),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -16325,7 +16325,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16334,7 +16334,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -16404,7 +16404,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16417,7 +16417,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -16428,7 +16428,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Phasing,
                     Powers =
@@ -16492,7 +16492,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16504,7 +16504,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -16573,7 +16573,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16584,7 +16584,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -16594,7 +16594,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -16669,7 +16669,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16685,7 +16685,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Wisdom),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlEnergy,
                     Powers =
@@ -16698,7 +16698,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Supernova),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Magic,
                     Powers =
@@ -16707,7 +16707,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.SenseSupernatural),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -16775,7 +16775,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16784,7 +16784,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.ElementControlElectricity,
                     Powers =
@@ -16795,7 +16795,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Resize,
                     Powers =
@@ -16807,7 +16807,7 @@ public class CharacterSelector(
                     ],
                     IsTech = true
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Tactics,
                     Powers =
@@ -16869,7 +16869,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16877,7 +16877,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -16886,7 +16886,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.DefenseStance),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -16951,7 +16951,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -16960,7 +16960,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -16973,7 +16973,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
@@ -17038,7 +17038,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -17057,7 +17057,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -17128,7 +17128,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -17147,7 +17147,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -17156,7 +17156,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.GrapplingTechnique),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MeleeWeaponsSharp,
                     Powers =
@@ -17227,7 +17227,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -17235,7 +17235,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Brilliance3),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MagicSorcery,
                     Powers =
@@ -17251,7 +17251,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WindsOfWatoomb),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -17315,7 +17315,7 @@ public class CharacterSelector(
             ],
             Powers =
             [
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.Basic,
                     Powers =
@@ -17325,7 +17325,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.MartialArts,
                     Powers =
@@ -17335,7 +17335,7 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new PowerSet
+                new CharacterPowerSet
                 {
                     Name = PowerSetNames.SuperStrength,
                     Powers =

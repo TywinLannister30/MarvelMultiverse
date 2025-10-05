@@ -5,7 +5,5 @@ public class PowerSet
 
     public string Name { get; set; }
 
-    public List<Power> Powers { get; set; }
-
-    public bool IsTech { get; set; }
+    public List<string> Description { get; set; }
 }
