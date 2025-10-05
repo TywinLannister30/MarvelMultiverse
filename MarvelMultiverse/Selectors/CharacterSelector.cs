@@ -16638,6 +16638,118 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Warlock",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 5, resilience: 5, vigilance: 4, ego: 9, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline3),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                        powerSelector.GetPower(PowerNames.Wisdom),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.SenseSupernatural),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Adam Warlock",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [240],
+                Gender = Gender.Male,
+                Eyes = "No irises",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "eyes and bright golden skin",
+                Occupations = [OccupationName.Adventurer, OccupationName.Outsider],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.GuardiansOfTheGalaxy, TeamNames.InfinityWatch],
+                Base = "Mobile",
+                History =
+                [
+                    "Adam Warlock was created by a group of evil geneticists known only as the Enclave. This shadowy organization sought to create the perfect human being—an all-powerful creature they could use to control the world. They succeeded in creating a very powerful creature, just not one that they could control.",
+                    "Adam Warlock emerged from his biomechanical cocoon a fully grown adult. He instantly sensed the evil in the hearts of his creators and destroyed them. Then he set off across the cosmos to find his purpose.",
+                    "In the years since his birth, Warlock has been at the center of several galaxy-spanning confl icts. He has contended with forces that threatened to consume all of existence, including the mad titan Thanos and the insatiable Hunger. Warlock has, on several occasions, died fi ghting for justice only to rise again, stronger than before.",
+                    "Warlock’s already considerable powers are frequently augmented by the Soul Stone, one of the six Infi nity Gems. Although Warlock currently lacks a fully powered Soul Stone, he is still regarded as one of the toughest beings in the known universe."
+                ],
+                Personality =
+                [
+                    "Warlock’s early days were filled with anger and confusion. He had incredible power but only the most basic grasp of right and wrong. Years passed before he could form a coherent identity for himself. Only then was he ready to become the hero the world knows today.",
+                    "The modern Warlock is a humble and determined warrior. He seeks to preserve life across the universe and to defeat evil wherever it may be."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Wasp (Janet Van Dyne)",
             Rank = 4,
             Abilities = new Abilities
@@ -17177,6 +17289,91 @@ public class CharacterSelector(
                     "Wong and Strange couldn’t be more different as people. Strange is generally sharp and sometimes abrasive to those around him, rarely cracking jokes. Wong, conversely, is a charming and humble man who has an easy time empathizing with the struggles of others.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Wrecker (Wrecking Crew)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 2, resilience: 5, vigilance: 1, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Gullible),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Magic crowbar [Throwable club. Automatically returns to thrower.]"),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Dirk Garthwaite",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [320],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.WreckingCrew],
+                Base = "Mobile",
+                History =
+                [
+                    "Dirk Garthwaite was just a small-time thief with a crowbar until the day he was accidentally granted magical powers originally meant for Loki. As the Wrecker, Garthwaite used his new powers to embark on a one-man crime spree across New York City, and it took the intervention of Thor to end his villainous rampage.",
+                    "Garthwaite wound up serving time in Ryker’s Island. He eventually escaped, but only with the help of a few of his fellow inmates. Out of gratitude, he granted a portion of his own power to each of them, and they formed the nefarious Wrecking Crew.",
+                    "Under the Wrecker’s leadership, the Wrecking Crew has committed countless crimes, often in the employ of smarter, more ambitious or more powerful villains."
+                ],
+                Personality =
+                [
+                    "Even before he had powers, Garthwaite was prone to fits of anger and violence. Most people consider him an impulsive man in need of some serious psychiatric help. He is admired by the other members of his crew—if by no one else.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
     ];
 }

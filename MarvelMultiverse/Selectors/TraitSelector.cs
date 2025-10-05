@@ -289,6 +289,14 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Gullible,
+            Effect =
+            [
+                "The character is easy to fool. People lying to them have an edge on their Ego checks to persuade the character of something.",
+            ],
+        },
+        new()
+        {
             Name = TraitNames.Honest,
             Effect =
             [
