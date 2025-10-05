@@ -14897,6 +14897,84 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Stick",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 1, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.VisionIssues),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [135],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic, OriginName.SpecialTraining],
+                Teams = [TeamNames.Chaste, TeamNames.Fist],
+                Base = "NYC",
+                History =
+                [
+                    "Born both blind and penniless, Stick took up martial arts at a young age to survive. He found that he had a natural talent for fi ghting, and soon enough he had drawn the attention and mentorship of the mystic martial arts master Yao (A.K.A. the Ancient One). The next several decades of Stick’s life were spent in the shadows, during which he became the leader of the Chaste, an elite organization of ninjas created to counter the insidious clan of the Hand.",
+                    "Stick’s life was full of thrills and adventures, but as he got older, life in the shadows started to wear on him. He took a young blind boy named Matt Murdock under his wing to train as his heir. He taught the boy to fi ght and to develop his radarlike senses, which compensated for his blindness. Within a few years, Murdock’s abilities began to rival Stick’s.",
+                    "As the super hero Daredevil, Murdock uses the training Stick gave him for the betterment of humanity. Stick died years ago, saving Daredevil and Black Widow from the Hand. He has returned to life occasionally since."
+                ],
+                Personality =
+                [
+                    "Stick is a gruff and disagreeable old man whose training methods often verge upon outright cruelty. He is hard on everyone, but none more than Matt Murdock.",
+                    "Stick cares deeply for Murdock but that care often translates to harsh treatment. Stick’s life has been hard, and he had to become hard to get through it. He fears that his star pupil lacks that same hardness, and that it may one day get him killed."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Storm",
             Rank = 4,
             Abilities = new Abilities

@@ -19,6 +19,7 @@ public static class TeamNames
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
+    public const string Chaste = "Chaste";
     public const string CIA = "C.I.A.";
     public const string CouncilOfKangs = "Council of Kangs";
     public const string DakotaNorthInvestigations = "Dakota North Investigations";
