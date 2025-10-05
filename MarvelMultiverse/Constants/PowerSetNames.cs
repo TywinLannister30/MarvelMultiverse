@@ -6,6 +6,7 @@ public class PowerSetNames
 
     public const string ElementControl = "Element Control";
     public const string ElementControlAir = "Element Control (Air)";
+    public const string ElementControlChemical = "Element Control (Chemical)";
     public const string ElementControlEarth = "Element Control (Earth)";
     public const string ElementControlElectricity = "Element Control (Electricity)";
     public const string ElementControlEnergy = "Element Control (Energy)";
@@ -15,8 +16,11 @@ public class PowerSetNames
     public const string ElementControlIce = "Element Control (Ice)";
     public const string ElementControlIron = "Element Control (Iron)";
     public const string ElementControlSound = "Element Control (Sound)";
+    public const string ElementControlToxin = "Element Control (Toxin)";
     public const string ElementControlWater = "Element Control (Water)";
+    public const string Healing = "Healing";
     public const string Illusion = "Illusion";
+    public const string Luck = "Luck";
     public const string Magic = "Magic";
     public const string MagicChaosMagic = "Magic (Chaos Magic)";
     public const string MagicDemonicMagic = "Magic (Demonic Magic)";
@@ -36,6 +40,7 @@ public class PowerSetNames
     public const string RangedWeapons = "Ranged Weapons";
     public const string Resize = "Resize";
     public const string ShieldBearer = "Shield Bearer";
+    public const string SixthSense = "Sixth Sense";
     public const string SpiderPowers = "Spider-Powers";
     public const string SuperStrength = "Super-Strength";
     public const string SuperSpeed = "Super-Speed";
@@ -43,5 +48,6 @@ public class PowerSetNames
     public const string Telekinesis = "Telekinesis";
     public const string Telepathy = "Telepathy";
     public const string Teleportation = "Teleportation";
+    public const string Translation = "Translation";
     public const string WeatherControl = "Weather Control";
 }

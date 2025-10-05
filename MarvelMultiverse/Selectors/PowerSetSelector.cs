@@ -25,6 +25,7 @@ public class PowerSetSelector : IPowerSetSelector
                 "When a character selects an Elemental Control power, they must select the type of element their power uses, as shown in the list below. Most characters stick to a single type of element, but this is not required.",
                 "Each type of element has its own special e­ffect associated with it that’s triggered by Fantastic successes on checks made with that power. The special effects are as follows:",
                 "- Air: Target is knocked prone for one round.",
+                "- Chemical: The target is corroding.",
                 "- Earth: Target moves at half speed for one round.",
                 "- Electricity: Stuns target for one round.",
                 "- Energy: Blinds target for one round.",
@@ -34,6 +35,7 @@ public class PowerSetSelector : IPowerSetSelector
                 "- Ice: Paralyzes target for one round.",
                 "- Iron: Pins target for one round.",
                 "- Sound: Deafens target for one round.",
+                "- Toxin: The target is poisoned.",
                 "- Water: Surprises target until the end of the next round.",
                 "The character’s power produces or locates each of these elements as necessary.",
                 "Force is an invisible but hard material, the sort of thing a force-fi eld is made from.",
@@ -45,6 +47,15 @@ public class PowerSetSelector : IPowerSetSelector
         },
         new()
         {
+            Name = PowerSetNames.Healing,
+            Description =
+            [
+                "This power set allows the character to heal both physical and mental damage. This ranges from stopping bleeding all the way up to resuscitating someone who is technically dead. Characters like Elixir and Healer often use such powers. While such characters often aren’t a direct help in a fight, they can get the bruisers on their team patched up and right back into a brawl. Some of them can reverse their healing powers to cause damage to people instead.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerSetNames.Illusion,
             Description =
             [
@@ -53,6 +64,16 @@ public class PowerSetSelector : IPowerSetSelector
                 "The Illusion power set also includes things like invisibility and other powers that hamper or block the senses. You can’t disbelieve such things. However, you can still attack things in the dark or things that are invisible— as long as you have any indication that there’s something there. Characters that attempt to do so have trouble on their attack checks.",
                 "Invisible characters have an edge on Agility checks to sneak past people, and enemies have trouble on Vigilance checks to perceive them. It’s even harder to spot things that are invisible but aren’t moving. Characters must be actively trying to do so to be able to make a Vigilance check.",
             ]
+        },
+        new()
+        {
+            Name = PowerSetNames.Luck,
+            Description =
+            [
+                "This power set gives a character the ability to influence probability, both for good and for bad. This can cause the most unlikely of things to happen—although not the impossible. Domino and Longshot are examples of heroes who use such powers to their own advantage. Conversely, Black Cat uses her powers to inflict bad luck on those who cross her path.",
+                "Remember that edges due to the same factor do not stack. This means that a character can have only one edge from a Luck power at a time. This is true whether the Luck powers belong to the same character or different characters."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -180,6 +201,18 @@ public class PowerSetSelector : IPowerSetSelector
         },
         new()
         {
+            Name = PowerSetNames.SixthSense,
+            Description =
+            [
+                "This power set covers the knowledge of things that have already happened, are currently happening or will happen at some point in the future. This can range from the content of someone’s DNA all the way up to the death of a star on the far side of a galaxy. It also can help you figure out what happened in a particular place or—perhaps more importantly—what’s likely to happen in the near future.",
+                "If possible, the Narrator and the player should work out a way to communicate such information secretly. This could be as simple as passing notes back and forth or sending private messages electronically. This way the player can decide what to do with the knowledge their power grants them, including if and when to reveal it.",
+                "Characters don’t have to tell the other members of their team the truth about what’s going to happen. After they establish proof of their power, they can use that earned trust however they like.",
+                "Tinkering with visions of the future is always fraught with challenges. Any future events that a character sees or knows about are not set in stone. They present only the most likely outcome. Characters can try to prevent these events from coming about, although they might not succeed. In fact, their attempts might unintentionally cause the feared events to happen."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerSetNames.SpiderPowers,
             Description =
             [
@@ -240,6 +273,17 @@ public class PowerSetSelector : IPowerSetSelector
                 "Whereas Omniversal Travel moves characters between universes, dimensions and even time, Teleportation moves them from place to place instead. This can gain the character quick entry to places that are normally shut o­ to others, so their players must take care with them.",
                 "Conversely, Narrators must take teleportation into account when designing encounters. When a character can simply teleport past physical fortifi cations, there should be other means to keep them from stampeding wherever they wish. The main deterrent, of course, is that characters that teleport blindly into places run the risk of teleporting into solid matter, which can be painful and potentially fatal.",
             ]
+        },
+        new()
+        {
+            Name = PowerSetNames.Translation,
+            Description =
+            [
+                "With this power set, a character can understand and translate different forms of communication, written, spoken or otherwise. This can include languages of all kinds but also raw data, body language, facial expressions and more. They can also break codes and other sorts of encryption.",
+                "This power set might not seem all that important when the character is in the middle of a battle, but when it comes to diplomacy and helping people (even sentient islands like Krakoa) understand each other, it’s invaluable. Cypher is the ultimate example of a character with these powers.",
+                "If a character fails a translation check, they can attempt it again either after one day or after a full hour of dedicated study.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
