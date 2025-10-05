@@ -4,6 +4,7 @@ using MarvelMultiverse.Models;
 using Microsoft.Extensions.Hosting;
 using Microsoft.VisualBasic;
 using System;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
@@ -11671,6 +11672,106 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Nick Fury Sr.",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nicholas Joseph “Nick” Fury Sr.",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [221],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Bald, formerly brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Eye patch, various scars",
+                Occupations = [OccupationName.Adventurer, OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining, OriginName.WeirdScience],
+                Teams = [TeamNames.CIA, TeamNames.SHIELD, TeamNames.HowlingCommandos],
+                Base = "Mobile",
+                History =
+                [
+                    "As a stringent anti-fascist, Fury was among the fi rst in his neighborhood to join the fi ght against the Axis Powers during World War II. He soon became a sergeant and was eventually appointed to lead a covert attack squadron of “Howling Commandos” through the European theater.",
+                    "Late in the war, Fury took a stray piece of shrapnel to the face. The injury permanently blinded him in one eye and left him on the edge of death. To save his life, government scientists injected him with the experimental Infi nity Formula. Miraculously, Fury made a quick recovery and fi nished out the war in style.",
+                    "Shortly thereafter, Fury was tapped to lead the newly established UN peacekeeping force S.H.I.E.L.D. His run as the organization’s director remains legendary.",
+                    "Fury later left S.H.I.E.L.D. but continued working on his own to keep the world safe, no matter the costs. He recently took over for the Watcher (Uatu) as the one keeping watch over the Earth, but he’s since moved on to helping protect the entirety of the Multiverse."
+                ],
+                Personality =
+                [
+                    "The serum in Nick Fury’s blood slows his aging to a crawl. This has allowed him to act as a hero across several decades, but it has not kept him from being stuck in the past.",
+                    "Nick Fury is, by most modern standards, a conservative old grump. He left Earth behind, in large part, because he was looking for new challenges."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Night Nurse",
             Rank = 1,
             Abilities = new Abilities
@@ -11809,6 +11910,183 @@ public class CharacterSelector(
                     "Kurt Wagner numbers among the kindest and most heroic people ever to join the X-Men. Despite having long left the circus behind, he’s never lost his carnie spirit and fights his battles with a smile on his face. A highly religious man, Nightcrawler acts as a spiritual and moral guide to his fellow mutants.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Nighthawk (Kyle Richmond)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 1, resilience: 3, vigilance: 3, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Sunlight (Nighthawk loses his damage reduction during the day)"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kyle Richmond",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [180],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Auburn",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Tycoon],
+                Origins = [OriginName.HighTech, OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.Defenders, TeamNames.SquadronSinister],
+                Base = "NYC",
+                History =
+                [
+                    "Kyle Richmond was once just a scrawny, spoiled college kid who believed that his family’s wealth could get him out of any jam. Then he got into a drunk driving accident that lefthim badly injured and—worse yet—confi ned his girlfriend to a wheelchair. Racked with guilt, Richmond dropped out of school and spent the next few years wandering around the United States, looking for something that could bring meaning back into his life.",
+                    "An interdimensional being known as the Grandmaster took note of Richmond’s plight. In exchange for Richmond helping found a team of super villains, the Grandmaster offered him a serum that made him superhumanly powerful whenever the moon shone.",
+                    "Richmond accepted the serum, but his conscience eventually got the better of him. Within a few months, he turned against his own super-villain team. In the years since, Richmond has done his best to earn the trust of the super-hero community and has served as a member of both the Avengers and the Defenders.",
+                ],
+                Personality =
+                [
+                    "Kyle Richmond’s childhood as a lonely rich kid led him to a life of excessive thrill-seeking. However, years of adventuring have shaped his youthful hotheadedness into a more balanced vigilance. The missteps of his past weigh heavily upon his mind.",
+                    "Nighthawk’s ability to fly comes not from his innate superhuman strength, but from a custom jetpack he designed."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Nova (Rich Rider)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 4, vigilance: 3, ego: 7, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Nova form"),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new PowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                        powerSelector.GetPower(PowerNames.Wisdom),
+                    ],
+                },
+                new PowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Richard “Rich” Rider",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.GuardiansOfTheGalaxy, TeamNames.NovaCorps],
+                Base = "Mobile",
+                History =
+                [
+                    "Many years ago, on the planet Xandar, a group of scientists tapped into a mysterious source of incredible power. They dubbed it the Nova Force and decided to imbue their most brilliant citizens with it. These brave explorers dedicated themselves to the betterment of the galaxy, forming the fi rst Nova Corps.",
+                    "Then came the day Zorr the Conqueror arrived on Xandar and slaughtered nearly the entire planet. Only a single, mortally wounded Nova Centurion escaped.",
+                    "This dying warrior used the last of his power to send the entirety of the Nova Force to Earth, where it inhabited a scrawny teenager named Richard Rider.",
+                    "Under the codename Nova, Rider has defeated countless cosmic threats, some on the level of Thanos himself. As he matured, he became more of a leader, even heading up the Guardians of the Galaxy for a while and—on a couple occasions— rebuilding the entire Nova Corps from scratch."
+                ],
+                Personality =
+                [
+                    "In his early adventures, Nova was a bit of a jokester, imitating the likes of other teenage heroes. Only after years of battle did he start to develop an identity for himself.",
+                    "Today, Nova isn’t humorless, but he is experienced enough to project a level of gravitas that was unavailable to him in his youth. He takes his role as a protector of the innocent seriously and is haunted by those he could not save."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
         },
     ];
 

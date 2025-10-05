@@ -54,6 +54,7 @@ public static class TeamNames
     public const string HellfireTradingCompany = "Hellfire Trading Company";
     public const string HeroesForHire = "Heroes for Hire";
     public const string HouseOfAgon = "House of Agon";
+    public const string HowlingCommandos = "Howling Commandos";
     public const string Hydra = "Hydra";
     public const string Illuminati = "Illuminati";
     public const string ImperialKreeAmy = "Imperial Kree Amy";
@@ -77,6 +78,7 @@ public static class TeamNames
     public const string MightyAvengers = "Mighty Avengers";
     public const string NewMutants = "New Mutants";
     public const string NineteenFiftyNineAvengers = "1959 Avengers";
+    public const string NovaCorps = "Nova Corps";
     public const string NYPD = "NYPD";
     public const string OlympusGroup = "Olympus Group";
     public const string PantherCult = "Panther Cult";
@@ -97,6 +99,7 @@ public static class TeamNames
     public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
+    public const string SquadronSinister = "Squadron Sinister";
     public const string SquadronSupreme = "Squadron Supreme";
     public const string StrangeAcademy = "Strange Academy";
     public const string SymbioteHive = "Symbiote Hive";
