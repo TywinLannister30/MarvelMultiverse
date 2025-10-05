@@ -35,6 +35,7 @@ public static class TeamNames
     public const string DoraMilaje = "Dora Milaje";
     public const string Eternals = "Eternals";
     public const string Excalibur = "Excalibur";
+    public const string Exiles = "Exiles";
     public const string Externals = "Externals";
     public const string FantasticFour = "Fantastic Four";
     public const string FearlessDefenders = "Fearless Defenders";
@@ -43,8 +44,10 @@ public static class TeamNames
     public const string Fist = "Fist";
     public const string FiveWeaponsSociety = "Five Weapons Society";
     public const string ForceWorks = "Force Works";
+    public const string FreedomForce = "Freedom Force";
     public const string FutureFoundation = "Future Foundation";
     public const string GammaFlight = "Gamma Flight";
+    public const string GenerationX = "Generation X";
     public const string GoblinNation = "Goblin Nation";
     public const string GodsOfAsgard = "Gods of Asgard";
     public const string GodsOfWakanda = "Gods of Wakanda";
@@ -73,6 +76,7 @@ public static class TeamNames
     public const string KreeImperium = "Kree Imperium";
     public const string LeagueOfEvilInhumans = "League of Evil Inhumans";
     public const string LegionOfMonsters = "Legion of Monsters";
+    public const string LivingArmada = "The Living Armada (Brood fleet)";
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";
     public const string Maggia = "Maggia";
     public const string Marauders = "Marauders";
@@ -84,6 +88,7 @@ public static class TeamNames
     public const string MightyAvengers = "Mighty Avengers";
     public const string NewAvengers = "New Avengers";
     public const string NewMutants = "New Mutants";
+    public const string NewWarriors = "New Warriors";
     public const string NextMutants = "Next Mutants";
     public const string NineteenFiftyNineAvengers = "1959 Avengers";
     public const string NovaCorps = "Nova Corps";
@@ -137,6 +142,7 @@ public static class TeamNames
     public const string XMen = "X-Men";
     public const string XFactor = "X-Factor";
     public const string XForce = "X-Force";
+    public const string XSE = "X.S.E.";
     public const string XStatix = "X-Statix";
     public const string YoungAvengers = "Young Avengers";
 }
