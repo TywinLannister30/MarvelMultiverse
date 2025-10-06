@@ -2,6 +2,7 @@
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
 using System;
+using System.Net.NetworkInformation;
 using System.Reflection.Metadata;
 using System.Runtime.Intrinsics.X86;
 
@@ -12202,28 +12203,27 @@ public class CharacterSelector(
             ],
             Biography = new Biography
             {
-                RealName = "Akihiro",
+                RealName = "Isca",
                 Heights = [new() { Feet = 5, Inches = 9 }],
-                Weights = [167],
-                Gender = Gender.Male,
-                Eyes = "Blue",
-                Hair = "Black",
+                Weights = [151],
+                Gender = Gender.Female,
+                Eyes = "Varies, typically white",
+                Hair = "Varies, typically black",
                 Size = Size.Average,
-                DistinguishingFeatures = "Retractable bone claws",
+                DistinguishingFeatures = "Skin, eye and hair colors vary with her allegiance; skin is often covered in black geometric markings",
                 Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.Mutant],
-                Teams = [TeamNames.AlphaFlight, TeamNames.Marauders, TeamNames.XFactor],
-                Base = "Mobile",
+                Teams = [TeamNames.GreatRingOfArakko],
+                Base = "Arakko",
                 History =
                 [
-                    "After World War II, Wolverine (Logan) moved to a small village in the Japanese countryside, where he met and married a local villager named Itsu. She was on the verge of giving birth to their child when the mutant warlord Romulus ordered her assassination, which was carried out by the then-brainwashed Winter Soldier.",
-                    "Unaware that his child had survived, Wolverine left Japan, and the infant was taken in by a local couple who named him Akihiro. The couple was rich but cold, and they treated his burgeoning powers with disdain. The local kids treated him no better, bullying him with calls of “Daken,” the Japanese word for mongrel.",
-                    "In a fit of teenage rage, Akihiro killed his adoptive mother. He took on the codename Daken and fled into the custody of Romulus to begin training as an assassin. Unaware that his mentor had ordered his mother’s murder, Akihiro spent years working as a hit man for Romulus. These missions eventually brought him into contact with Wolverine, who showed his long-lost son the truth.",
-                    "Together, Akihiro and Wolverine defeated Romulus. Although Akihiro returned to assassination work for a while, Wolverine’s heroic spirit slowly rubbed off on him. He eventually took on a new codename—Fang—and joined Krakoa’s Marauders in their efforts to save mutant refugees."
+                    "Isca grew up on the sentient island of Okkara some hundreds of years ago in a settlement of other powerful mutants. Her X-Gene activated in her early childhood, and from that moment on, she could never lose. Ironically, this power served to alienate her from the other people of Okkara, none of whom could stand to compete with her. Only her older sister, Genesis, remained faithful.",
+                    "Some years later, the island of Okkara was split into the twin islands of Krakoa and Arakko. While Krakoa remained on Earth, Isca, Genesis and Arakko were sucked through a portal to the demonic dimension of Amenth. Genesis did her best to organize the mutants of Arakko into a fighting force capable of holding back the demonic hordes, but Isca—seeing the overwhelming odds arrayed against them—switched sides and joined the demons, who quickly took over Arakko and possessed Genesis.",
+                    "The tide of this battle would not turn again until many years later, when the demons of Amenth attempted to invade Earth through a portal to Krakoa. Isca, working with the people of Krakoa, finally managed to defeat the demons and rejoin her sister. Subsequently, Isca took on a position in the governing Great Ring of Arakko.",
                 ],
                 Personality =
                 [
-                    "Much like his father, Fang is prone to going berserk. He fights with a combination of rage and raw instinct. In his youth, he spent nearly every moment on the edge of a murderous frenzy. As he’s gotten older, he has developed a soft spot for a select few people—in particular, the other members of the Wolverine family.",
+                    "Isca’s outward confidence masks a tragic emotional interior. Her powers ensure that she is always on the winning team, but they don’t always allow her to pick which team wins. If her preferred side is doomed to fail, her powers cannot make them succeed. Instead, they compel her to switch sides. This has forced her into a duplicitous lifestyle she quietly despises.",
                 ]
             },
             Source = BookSource.XMenExpansion
@@ -12485,6 +12485,103 @@ public class CharacterSelector(
                     "Jones’ hard life has made her more than a little world-weary, but despite her travails she remains a strongly caring person. She may work for profit, but still she strives to deliver the best possible outcomes for her clients, going out of her way to ensure that they get the justice they pay for.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Jubilee",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 3, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Dependents, reminder: "Shogo"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.Flare),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jubilation Lee",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Excalibur, TeamNames.GenerationX, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Jubilation Lee’s parents were killed when she was just a teenager. Unwilling to spend the rest of her childhood in an orphanage, she took to living in the back rooms of a shopping mall. It was around this time that Lee’s mutant powers began to manifest. She used her newfound control over light energy to become a busker, living on donations from local shoppers.",
+                    "Soon enough, an anti-mutant militia caught wind of Lee’s superhuman performances and attempted to run her out of the mall. Thankfully, a group of X-Men managed to rescue her from the bigots.",
+                    "Lee’s rescuers offered her a position within their ranks. She accepted, and for a time, she was an active member of the main team. However, as a younger person, Lee never felt fully accepted by her older teammates. She eventually left the X-Men to form Generation X, a team consisting entirely of mutant teenagers.",
+                    "Lee and the other Generation X members eventually got older and went their separate ways, but they still remain close. With the help of her former teammate Jono Starsmore (A.K.A. Chamber), Lee adopted and is currently raising a young boy she named Shogo."
+                ],
+                Personality =
+                [
+                    "Lee has been a hero long enough now to consider herself a seasoned adventurer. That said, she still emanates a certain kind of endearing dorkiness. Her favorite activities include going to the arcade and LARPing with her friends.",
+                    "Despite the hardships she’s been through, Lee is as enduringly upbeat as her first name would imply. She is also a caring mother, always putting Shogo’s safety first, something that’s often proved a real challenge."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
