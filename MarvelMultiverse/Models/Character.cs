@@ -73,6 +73,11 @@ public class Character
         else
             Abilities.Logic.Defence = logicDefence;
 
+        if (Biography.Size == Size.Little)
+        {
+            Abilities.Melee.Defence += 2;
+            Abilities.Agility.Defence += 2;
+        }
         if (Biography.Size == Size.Huge)
         {
             Abilities.Melee.Defence -= 2;
@@ -135,6 +140,10 @@ public class Character
 
         baseSpeed += Abilities.Agility.Score / 5;
 
+        var flightBaseSpeed = baseSpeed;
+
+        if (Biography.Size == Size.Little)
+            baseSpeed /= 4;
         if (Biography.Size == Size.Huge)
             baseSpeed *= 5;
 
@@ -154,7 +163,7 @@ public class Character
             Speed.Climb = baseSpeed;
 
         if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
-            Speed.Flight = baseSpeed * Rank;
+            Speed.Flight = flightBaseSpeed * Rank;
 
         if (Powers.Any(x => x.Powers.Any(p => p.GlideSpeed)))
             Speed.Glide = baseSpeed * 2;
@@ -194,6 +203,10 @@ public class Character
         Abilities.Ego.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.EgoDamageModifier));
         Abilities.Logic.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.LogicDamageModifier));
 
+        if (Biography.Size == Size.Little)
+        {
+            Abilities.Melee.DamageModifier -= 2;
+        }
         if (Biography.Size == Size.Huge)
         {
             Abilities.Melee.DamageModifier += 2;

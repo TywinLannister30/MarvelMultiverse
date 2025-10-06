@@ -10,6 +10,7 @@ public static class TeamNames
     public const string AIM = "A.I.M.";
     public const string AlliesOfDoctorDoom = "Allies of Doctor Doom";
     public const string AlphaFlight = "Alpha Flight";
+    public const string AlphaStrike = "Alpha Strike";
     public const string Anachronauts = "Anachronauts";
     public const string Annihilators = "Annihilators";
     public const string ARMOR = "A.R.M.O.R.";

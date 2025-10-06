@@ -1,0 +1,2097 @@
+﻿using MarvelMultiverse.Constants;
+using MarvelMultiverse.Enums;
+using MarvelMultiverse.Models;
+
+namespace MarvelMultiverse.Selectors.Characters;
+
+public class CharactersB
+{
+    public static List<Character> GetAllCharacters(
+        INarrativePowerSelector narrativePowerSelector,
+        IPowerSelector powerSelector,
+        ITagSelector tagSelector,
+        ITraitSelector traitSelector) =>
+    [
+        new()
+        {
+            Name = "Banshee",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 5, resilience: 2, vigilance: 3, ego: 6, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Investigation),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlSound,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Sean Cassidy",
+                Heights = [new() { Feet = 6 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.GenerationX, TeamNames.XCorp, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "After serving as an officer for Interpol, Sean Cassidy fell in with a group of nefarious blackmailers who forced him to use his powers publicly for the first time in his life. Luckily for Cassidy, the X-Men managed to free him from these villainous handlers. The X-Men offered Cassidy a position within their ranks, and he eventually took the deal, joining them as a member of their second lineup.",
+                    "Sadly, Cassidy’s time with the X-Men did not last. Weighed down by injuries sustained on the field of battle, he left the organization less than a year into his tenure to focus on spending more time with his daughter, Theresa, who eventually became the hero known as Siryn.",
+                    "Once his daughter was older, Cassidy returned to the X-Men and ended up dying in action.",
+                    "The next several years of Cassidy’s life—or death, as it may be—were hell. He was resurrected on several occasions, each time by a villain who wanted to use him for their own purposes—and each time being killed again.",
+                    "He was recently resurrected on Krakoa, to a much happier life."
+                ],
+                Personality =
+                [
+                    "In his youth, Cassidy was the stereotypical picture of a romantic, fun-loving, hard-drinking Irishman. He still has some of that spirit in him, but with the traumas he’s sustained over the last decade, that part of his personality has become muted.",
+                    "Cassidy’s new world-weary outlook does have a silver lining. He had a long-standing rivalry with his cousin, Black Tom Cassidy, but now that they’ve gotten older and become a lot more like one another, they’ve mostly managed to bury the hatchet."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Baron Mordo",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 3, vigilance: 5, ego: 8, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline3),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.MistsOfMunnopor),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                        powerSelector.GetPower(PowerNames.VaporsOfValtorr),
+                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                        powerSelector.GetPower(PowerNames.UntouchablePosition),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Karl Amadeus Mordo",
+                Heights = [new() { Feet = 6 }],
+                Weights = [250],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bright green and yellow robes, goatee",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicSorcery],
+                Teams = [],
+                Base = "Castle Mordo",
+                History =
+                [
+                    "Starting in his youth, Mordo studied the mystic arts under the tutelage of the Ancient One. A greedy and resentful man, he sought magic power primarily as a means to restore the Transylvania of his youth to its once-great feudal status.",
+                    "Mordo eventually got sick of the Ancient One’s mystic methods and betrayed him in favor of the power offered by the dread demon Dormammu instead. In the years since, Mordo has spent much of his time serving Dormammu and butting heads with the Ancient One’s most famous disciple: Doctor Strange.",
+                ],
+                Personality =
+                [
+                    "Boastful, zealous and often verging on insane, Baron Mordo is not the type to make friends. More than anything, he desires the power to prove to the world that he is the greatest sorcerer in existence. He has returned from death and madness on multiple occasions to continue his pursuit of ultimate power.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Baron Zemo (Helmut Zemo)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 1, ego: 4, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Hydra)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Adhesive X"),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Helmut Zemo",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [183],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blonde",
+                Size = Size.Average,
+                DistinguishingFeatures = "Heavily scarred face, covered with a mask",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Hydra, TeamNames.MastersOfEvil, TeamNames.Thunderbolts],
+                Base = "Tower Zemo",
+                History =
+                [
+                    "Helmut Zemo was born the son of Heinrich Zemo, a Nazi scientist and super villain. Heinrich spent years seeking the destruction of America and the resurrection of fascist Germany but ultimately died in a rockslide while fighting with Captain America. Helmut, furious, chose to follow in his father’s footsteps.",
+                    "Helmut has long served as a key figure among fascist organizations, acting as an ally to the likes of the Red Skull and Hydra. Over the years, he’s personally founded and led a number of super teams, including multiple incarnations of the Masters of Evil and the Thunderbolts.",
+                ],
+                Personality =
+                [
+                    "Despite being a fascist zealot bent on world domination, Zemo has a good head for battle. He lacks extensive super-powers, relying instead on careful scheming to best his opponents. His duplicitous nature makes him a danger both to his enemies and his supposed allies.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Beak",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 0, vigilance: 1, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Gullible),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.Flight1),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Dependents, reminder: "More than a dozen young children"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Barnell “Barry” Bohusk",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [140],
+                Gender = Gender.Male,
+                Eyes = "Black",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "Birdlike physique and appearance, with a beak, talons and feathers",
+                Occupations = [],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.NewWarriors, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Barnell Bohusk was once an ordinary teenager. Then his mutant powers kicked in.",
+                    "Practically overnight, his entire appearance changed. His hands and feet curled into talons, and feathers began to sprout all over his body. His skin took on a more wrinkled and pinkish tone, and his bones shrank and hollowed.",
+                    "Unable to continue a normal life in human society, Beak fled from home and into the welcoming arms of Charles Xavier’s school for mutants. It was at this school that he met Angel Salvadore (codename: Tempest), a girl with insectoid powers mirroring his own. They began a whirlwind romance of the highest order. Within a year, they had married and had five kids.",
+                    "Beak and Tempest have both acted as super heroes from time to time, more out of necessity than a desire to change the world. Neither of them has a particular desire to be part of a battle team, preferring to concentrate on raising their children instead.",
+                ],
+                Personality =
+                [
+                    "Although he has, on occasion, been manipulated or threatened into committing evil deeds, Beak doesn’t have a mean bone in his body. He cares deeply for others, especially those he considers family. After the formation of the nation of Krakoa, he delayed his move there for months so he could take care of his ailing father.",
+                    "Despite appearances, Beak is actually quite timid and easily embarrassed. Thankfully, his wife is as assertive as Beak is shy. They balance each other nicely."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Beast (Hank McCoy)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 2, vigilance: 2, ego: 3, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Henry Philip “Hank” McCoy",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [402],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Covered with blue fur",
+                Size = Size.Big,
+                DistinguishingFeatures = "Pointed teeth and ears, claws, blue fur",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Avengers, TeamNames.XMen, TeamNames.XForce],
+                Base = "Krakoa",
+                History =
+                [
+                    "Despite his obvious brilliance, Hank McCoy was expelled from college because of his mutant status. Shortly thereafter, he was recruited by Professor Xavier to become a founding member of the X-Men.",
+                    "Hank was born with super-strength, agility and intelligence, but he acquired his trademark blue fur during a brief sabbatical from the X-Men, when he ingested an experimental serum designed to activate latent mutations. He’s temporarily morphed into other forms since, but he always seems to return to the bushy blue Beast he’s best known as.",
+                    "Hank is widely regarded as one of the world’s greatest scientists and super heroes. In recent years, he’s taken on more of a leadership role among the X-Men and mutant society at large, becoming the leader of X-Force."
+                ],
+                Personality =
+                [
+                    "Though something of a hothead in his youth, Hank developed a more stringently logical demeanor. If anything, the modern Beast has become impersonal, seeing his allies more as assets than people.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Beta Ray Bill",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 3, resilience: 8, vigilance: 2, ego: 4, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin, reminder: "2"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage, reminder: "via Twilight Sword"),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "regular Korbinite form"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped, reminder: "as Thor"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            specialization: "Twilight Sword [Adds elemental fire effect to melee attacks.]"),
+
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty4, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Beta Ray Bill",
+                Heights = [new() { Feet = 6, Inches = 7 }],
+                Weights = [480],
+                Gender = Gender.Male,
+                Eyes = "No irises",
+                Hair = "None",
+                Size = Size.Big,
+                DistinguishingFeatures = "Bright orange skin, horse-like head",
+                Occupations = [OccupationName.Adventurer, OccupationName.Outsider],
+                Origins = [OriginName.Alien, OriginName.HighTechCybernetics, OriginName.MythicAsgardian],
+                Teams = [TeamNames.Annihilators, TeamNames.GuardiansOfTheGalaxy],
+                Base = "Mobile",
+                History =
+                [
+                    "Years ago, the demonic Surtur of Muspelheim unleashed his minions upon the planet of Korbin. Korbinite civilization was annihilated, and the few who survived fled across the cosmos.",
+                    "Korbinite scientists performed torturous experiments upon their own people, hoping to create a champion capable of fi ghting the demons. Only one subject named Bill survived the transformation, but even his newfound powers were not enough to hold back the demons.",
+                    "All hope was lost until a chance encounter with Thor Odinson led Bill into an alliance with Asgard. Impressed by Bill’s strength, Odin himself granted the Korbinite a hammer with a set of powers to match Thor’s own. Together, Bill and Thor pushed the demons back into Muspelheim.",
+                    "Much later, Bill invaded Muspelheim and defeated Surtur once and for all. He abandoned Odin’s gifts and claimed Surtur’s Twilight Sword as his own. Although he is still revered in Asgard, Bill now focuses most of his energies on caring for his people."
+                ],
+                Personality =
+                [
+                    "Beta Ray Bill’s noble and serious demeanor matches well with those of the gods of Asgard. The Asgardians accept him as one of their own—more so than his fellow Korbinites, who are largely frightened by his monstrous form. Bill can use his sword to disguise himself as a regular Korbinite, and he tends to stay in this disguise when among his own.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Bishop",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 3, vigilance: 4, ego: 4, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lucas Bishop",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [275],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Tattoo over right eye in the shape of the letter “M”",
+                Occupations = [OccupationName.Adventurer, OccupationName.Investigator],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.GreatCaptainsOfKrakoa, TeamNames.XMen, TeamNames.XSE],
+                Base = "Krakoa",
+                History =
+                [
+                    "Lucas Bishop grew up in a dark possible future (Earth-1191) driven by anti-mutant sentiments. He spent most of his childhood in a mutant concentration camp, watching a combination of poverty and disease slowly consume the lives of his loved ones.",
+                    "In Bishop’s preteen years, a bloody rebellion allowed him to escape the camp. He spent the next several years lying low, and by the time he was an adult, the law had loosened up enough to allow mutants to live freely, albeit in squalor.",
+                    "Desperate for money, Bishop joined up with the X.S.E., a police squad of mutants charged with arresting powerful mutant criminals. During the pursuit of one such criminal, he stepped through a wormhole and became trapped on Earth-616.",
+                    "In the hope of preventing his dark future from coming about, Bishop joined up with Earth-616’s X-Men. He’s been with them ever since.",
+                    "On Krakoa, Bishop was made the Captain Commander, the person in charge of Krakoa’s Great Captains and for overseeing the island-nation’s military efforts."
+                ],
+                Personality =
+                [
+                    "Bishop enjoys fighting and giving orders but not much else. While he has a reputation as a loner, he has a close and complicated relationship with at least one person: Hope Summers.",
+                    "Bishop used to believe that Hope Summers was the legendary villain responsible for making his home reality so awful. He spent ages trying to kill both her and her caretaker, Cable (Nathan Summers). Although Bishop has since seen the error of his ways and tried to make amends, his relationships with Hope and Cable remain strained."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Black Bolt",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 8, resilience: 4, vigilance: 4, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.Mute, reminder: "Cannot speak without activating sonic blasts."),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlSound,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BlazingFastFists),
+                        powerSelector.GetPower(PowerNames.Blur),
+                        powerSelector.GetPower(PowerNames.CatchBullets),
+                        powerSelector.GetPower(PowerNames.LightningActions),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Blackagar Boltagon",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [220],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.Inhuman],
+                Teams = [TeamNames.HouseOfAgon, TeamNames.UniversalInhumans],
+                Base = "Attilan",
+                History =
+                [
+                    "Blackagar Boltagon was born into the House of Agon, the Inhuman royal family. Because he was exposed to the Terrigen Mists while still in utero, his powers surpass those of most Inhumans.",
+                    "Black Bolt cannot speak normally. He has other methods of communicating, but any vocal noise he makes becomes a massive sonic blast. He was kept in a soundproof chamber for most of his youth, only being released shortly before he took the mantle of Inhuman monarch.",
+                    "Black Bolt’s primary goals have always been to preserve the Inhuman homeland and to foil those who would usurp his rule. No one has been a more regular threat to Black Bolt than his own brother, Maximus, a madman who often would rather the Inhumans be wiped out by the Kree than allow Black Bolt to stay on the throne."
+                ],
+                Personality =
+                [
+                    "While generally considered by his people to be a benevolent ruler, Black Bolt can come off as a bit aloof, especially to non-Inhumans.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Black Knights / Fenris Twins",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 2, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Hydra)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight1, reminder: "adjacent"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "adjacent"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "adjacent"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "adjacent"),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet, reminder: "adjacent"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "The Fenris Twins are two mechanically identical characters. They can move separately, but several of their abilities work only when the twins are close enough to touch. These powers bear the label “(adjacent).”"
+            ],
+            Biography = new Biography
+            {
+                RealName = "Andrea and Andreas von Strucker",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                HeightReminder = "both",
+                Weights = [],
+                WeightReminder = "110 lbs. (Andrea), 165 lbs. (Andreas)",
+                Gender = Gender.Varies,
+                GenderReminder = "Female (Andrea), Male (Andreas)",
+                Eyes = "Blue (both)",
+                Hair = "Blond (both)",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Mutant, OriginName.WeirdScience],
+                Teams = [TeamNames.HellfireTradingCompany, TeamNames.Hydra],
+                Base = "Krakoa",
+                History =
+                [
+                    "Decades ago, fascist leader Baron von Strucker forced his pregnant wife to undergo experimental treatments developed by the brilliant but evil Dr. Arnim Zola. The genomes of the twin embryos were modifi ed to include a number of unusual genes, including the X-Gene of mutant fame.",
+                    "Andrea and Andreas von Strucker displayed few symptoms of this meddling at birth, but as young adults their powers began to emerge. The twins could fl y, perform incredible feats of acrobatics, and shoot blasts of energy from their fi sts—but only while in direct contact with each other.",
+                    "Under the codename Fenris, the twins went into business for themselves as super-powered mercenaries. They have spent most of their adult lives menacing the rest of mutantkind, attacking super heroes for profi t and pleasure.",
+                    "Although the Fenris Twins were granted permission to live on Krakoa—despite the artifi cial nature of their mutant status—most other mutants do not regard them with respect. As the Black Knights of the Hellfi re Club, they act as personal bodyguards for the villainous Sebastian Shaw."
+                ],
+                Personality =
+                [
+                    "The Fenris Twins are almost comically spoiled. They grew up in the lap of luxury, their every whim attended to by a squadron of servants. From a young age, they were taught to understand that they were better than other people and to violently oppose any who gainsaid that idea.",
+                    "Like their father, both of the Fenris Twins are committed fascists and white supremacists. However, their fi rst and greatest loyalty is to money. They do terrible things not out of a commitment to an ideology but out of a desire to maintain their opulent lifestyle."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Black Panther (T’Challa)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Killmonger"),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Wakanda"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Wakanda"),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            specialization: "Electrified vibranium claws [+1 damage multiplier]",
+                            meleeDamageModifier: 1,
+                            agilityDamageModifier: 1),
+
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AlwaysReady),
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.OperationsCenter),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "T’Challa",
+                Heights = [new() { Feet = 6 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.HighTech, OriginName.Magic],
+                Teams = [TeamNames.AgentsOfWakanda, TeamNames.Avengers, TeamNames.FantasticFour, TeamNames.PantherCult, TeamNames.Ultimates],
+                Base = "Wakanda",
+                History =
+                [
+                    "As the young heir of Wakanda, T’Challa went through a grueling series of tests to prove his worthiness to become the Black Panther and lead his nation, the most technologically advanced country on the planet. At one point, he lost the powers given to him as the Black Panther by the heart-shaped herb, but he regained them by pledging himself to the panther god Bast and becoming King of the Dead, ruler of the Necropolis under Wakanda.",
+                    "Today, T’Challa not only leads Wakanda and the Avengers but also the Agents of Wakanda, which provides support for the Avengers on their vital missions. He also spends as much time as he can with his ex-wife, Storm, with whom he has renewed their romance.",
+                ],
+                Personality =
+                [
+                    "T’Challa is serious, competent and regal. He was born to his position, but knew that he would always have to work hard to attain it and keep it. He takes nothing for granted, especially his responsibilities, the greatest of which is the welfare of his people. While Wakandan to his core, he was educated in Europe and America.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Black Priestess",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 4, vigilance: 5, ego: 7, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExternalAwareness),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExternallyImmortal),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BrainDrain),
+                        powerSelector.GetPower(PowerNames.SenseSupernatural),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticBarrier),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                        powerSelector.GetPower(PowerNames.TelekineticProtection2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Selene Gallio",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Variable",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic, OriginName.MutantExternal],
+                Teams = [TeamNames.Externals, TeamNames.HellfireClub, TeamNames.QuietCouncilOfKrakoa],
+                Base = "Krakoa",
+                History =
+                [
+                    "Selene Gallio is one of the Externals, a group of naturally immortal mutants who share a mysterious psychic connection. She is a psychic vampire who sustains herself on the psionic energy of others. Any human can suffice, but telepaths taste the best.",
+                    "Few details about Gallio’s early life have been confirmed, but her presence in the historical record goes back over 15,000 years. Her first appearance in the modern era dates back to when she turned up in Brazil, posing as a priestess to manipulate the people of Nova Roma—a long-lost Roman colony—into acting as her servants.",
+                    "The New Mutants uncovered Gallio’s plot and drove her out of Brazil, leading her to develop a lasting grudge against them and the X-Men. In the years since, she’s spent most of her time working with various villainous organizations to bring the mutant heroes down.",
+                    "Gallio did declare a temporary truce with her old enemies to obtain a place on Krakoa, but after being denied a spot on the ruling Quiet Council, she called the whole thing off and summoned a giant monster onto the island-nation. Thankfully, the Krakoans put a quick stop to her efforts. Later, she did manage to join the Quiet Council, replacing Mister Sinister.",
+                ],
+                Personality =
+                [
+                    "If Gallio ever had a heart, it was buried long ago beneath centuries of ruthless murder. The modern Gallio is a creature of pure ego who cares only about herself and advancing her own position in the world. She sees other sentient beings as little more than food, but sometimes she enjoys toying with them before devouring them.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Black Tom Cassidy",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 2, vigilance: 2, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEarth,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                        powerSelector.GetPower(PowerNames.ElementalPrison),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "Krakoa"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Thomas “Tom” Samuel Eamon Cassidy",
+                Heights = [new() { Feet = 6 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.HellfireClub, TeamNames.XForce],
+                Base = "Krakoa",
+                History =
+                [
+                    "Tom Cassidy and his cousin Sean Cassidy grew up together in the Irish countryside. As boys, the two were inseparable, but as they entered their teen years, they began growing apart. They fought over women, money and anything else they could think of. Eventually, they split for good and set off on two very different paths in life.",
+                    "Under the codename of Banshee, Sean became a member of the X-Men. Tom, conversely, joined the Brotherhood of Evil Mutants as Black Tom Cassidy.",
+                    "Black Tom and Banshee spent the next several years floating around within their respective social spheres, only ever meeting up to butt heads. It wasn’t until the day of Krakoa’s founding as a nation that the pair finally agreed to set their differences aside and work together again.",
+                    "Black Tom’s powers grant him a special affinity with plant life and thus with the island of Krakoa itself. As the head of Krakoan security, he spends most of his time mentally and physically merged with Krakoa, helping the island detect intruders.",
+                ],
+                Personality =
+                [
+                    "Black Tom used to be the complete opposite of his cousin. Where Banshee was cool and collected, Black Tom was manic and chaotic. Where Banshee was responsible and kind, Black Tom was reckless and cruel.",
+                    "However, time and distance have slowly brought the two closer in line with each other. Weighed down by years of adventuring, Banshee became less of an active hero, while Black Tom became less of an active villain. The modern Black Tom is a mostly reasonable guy, content with his position on Krakoa."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Black Widow (Natasha Romanoff)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 3, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese, English, French, German, Japanese, Russian"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.UnflappablePoise),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Natasha Romanoff",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [131],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.InfinityWatch, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Trained from a young age to be a Russian special agent, Natasha Romanoff defected to the United States after clashing with the Avengers. Since then, Natasha has served as a vital ally to many of the most powerful organizations on the planet, particularly S.H.I.E.L.D. and the Avengers.",
+                    "Natasha spent much of her career as a solo mercenary, doing high-level black ops for paying clients. She tries to never take a job she believes to be immoral, but in the world of espionage, things are not always so clear-cut.",
+                ],
+                Personality =
+                [
+                    "Charming and cool-headed, Natasha’s personality makes her an excellent spy. A life of espionage has made her slow to trust others, but those closest to her consider her a good friend and an exceptional team leader.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Blade",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Monster),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Deceased),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Imageless),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Sword"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Eric Brooks",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [215],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Back tattoos, fangs",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MonstrousVampire, OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.MI13, TeamNames.MidnightSons],
+                Base = "Mobile",
+                History =
+                [
+                    "Eric Brooks’ mother was attacked by a vampire while he was still in the womb. She died, but he survived, transformed into a half vampire.",
+                    "As a dhampir, Brooks has all the strengths of a vampire, but none of their weaknesses. Aided by his powers, he underwent extensive training in swordplay and acrobatics, vowing to rid the world of the kind of monsters who killed his mother.",
+                    "Blade has teamed up with other super heroes from time to time, but he’s never lost sight of the goal which has driven him his entire life. No one poses more of a threat to the vampire world than him."
+                ],
+                Personality =
+                [
+                    "Blade is a no-nonsense operator focused on his grim mission to rid the world of the undead. He can sometimes come across as cocky, but he can be warm to his allies and friends, though he has little time to make either.",
+                ],
+                BiographySections =
+                [
+                    new()
+                    {
+                        Name = "Dhampir",
+                        Description =
+                        [
+                            "As half-human/half-vampire, Blade does not have all of the powers of vampires, nor all their traits and tags."
+                        ]
+                    }
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Blindspot (Sam Chung)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 1, vigilance: 2, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Daredevil (Matt Murdock)"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Steel pole (club)"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Samuel “Sam” Chung",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Black eyes with glowing blue irises",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.TheHand],
+                Base = "NYC",
+                History =
+                [
+                    "When Sam Chung was just a boy, he and his family emigrated from China to the United States. With a prodigious mind and a strong admiration for the super heroes of New York City, Chung spent much of his childhood working on designs for an invisibility suit.",
+                    "As soon as he was able, Chung built his suit and began to fight crime on the streets of New York’s Chinatown under the codename Blindspot. Later, the super villain Muse tore out his eyes. They were eventually replaced with mystic counterparts, but his new glowing eyes have made maintaining his secret identity difficult.",
+                ],
+                Personality =
+                [
+                    "Chung is a bit of a loner and a cynic. His mentor, Daredevil, is one of the few people on Earth he genuinely admires.",
+                    "As an undocumented immigrant, Chung displays trepidation around law-enforcement o¸ cers."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Blink (Earth-295)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 3, vigilance: 5, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Glibness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Displacement field daggers [Ranged weapons. Blink can use her Teleport Object and Teleport Other powers on any person or object she hits with these daggers.]"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.BlinkBarrage),
+                        powerSelector.GetPower(PowerNames.BlinkDefense),
+                        powerSelector.GetPower(PowerNames.Teleport2),
+                        powerSelector.GetPower(PowerNames.TeleportBlind),
+                        powerSelector.GetPower(PowerNames.TeleportObject),
+                        powerSelector.GetPower(PowerNames.TeleportOther),
+                        powerSelector.GetPower(PowerNames.TeleportTogether),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Clarice Ferguson",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "No pupils",
+                Hair = "Purple",
+                Size = Size.Average,
+                DistinguishingFeatures = "Pointed ears, bright pinkish-purple skin and hair, several prominent facial markings",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Exiles, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "Clarice Ferguson grew up in a mutant slave camp in the grim alternate future of Earth-295, a timeline known as the Age of Apocalypse. Sometime in her teenage years, her camp was liberated by her timeline’s X-Men, who allowed her to join their ranks.",
+                    "As Blink, Ferguson spent some time working with those X-Men, but just as their Age of Apocalypse was coming to an end, she was sucked through a freak wormhole into a desolate place between universes. There, an emissary of a mysterious multiversal group called the Timebreakers offered to guide her and several other displaced heroes back to their home universes, but in exchange, he wanted help repairing a number of timelines the Timebreakers had inadvertently ruined.",
+                    "Blink and the others agreed, forming the Exiles. She enjoyed their adventures together so much that she endeavored to keep the team going even after they were released from the Timebreakers’ service. The roster of the Exiles has changed a lot over the years, but to this day, Blink has consistently been their main leader."
+                ],
+                Personality =
+                [
+                    "Although Blink was a bit shy in her youth, she long ago grew into her own as a team leader. Today, she is capable and charismatic, both on and off the battlefield. She is a fearless commander, fully willing to confront even gods in the name of justice.",
+                    "Unlike some team leaders, Blink is far from cold or unemotional. She considers her teammates in the Exiles to be her best friends in the world, and they do the same."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Blob",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 2, resilience: 7, vigilance: 2, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                        powerSelector.GetPower(PowerNames.Wisdom),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.FlexibleBones1),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Frederick J. “Fred” Dukes",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [510],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "Unusually large and heavy",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.FreedomForce],
+                Base = "Krakoa",
+                History =
+                [
+                    "As with most mutants, Frederick Dukes’ powers began to manifest when he was in his early teens. Almost overnight, he grew from a spry young boy into a hulking mass of flesh and muscle. Shortly thereafter, he fled from home and joined the circus.",
+                    "Under the pseudonym of “the Blob,” Dukes gained worldwide renown as a circus performer. His strange physique drew the attention of the newly formed X-Men, who correctly deduced that he was a mutant.",
+                    "The X-Men approached Dukes and offered him membership in their organization, but uninterested in a life of heroism, he refused. To preserve their anonymity, the X-Men attacked Dukes and erased his memories of their existence.",
+                    "This memory wipe did not last long. With the help of the Brotherhood of Evil Mutants, Dukes tried and failed to take his revenge on the heroes who messed with his mind.",
+                    "Utterly defeated, Dukes returned to the circus. He spent the next several years bouncing between various jobs—and occasionally butting heads with the X-Men—before settling down in a quiet life on Krakoa.",
+                    "Dukes currently works as the head bartender at the Green Lagoon on Krakoa. He has, for the most part, let go of his resentments toward the X-Men."
+                ],
+                Personality =
+                [
+                    "In his youth, Dukes was as much of a diva as a circus performer can be. He was arrogant and gruff, with a short vocabulary and an even shorter temper.",
+                    "It took years of tribulation for Dukes to mature to where he is today. The modern Dukes is a thoughtful man and a great bartender, always willing to lend an ear or a helping hand. Many of those who live on Krakoa consider him a friend."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Blue Marvel",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 9, agility: 5, resilience: 6, vigilance: 3, ego: 4, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Community"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Neutronium"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Family"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Adam Bernard Brashear",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Educator, OccupationName.Military],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.Ultimates],
+                Base = "New York City",
+                History =
+                [
+                    "Adam Brashear already had an extensive combat career as a Marine in the Korean War when he was blasted by an experimental machine designed to create a bridge to the Negative Zone. This accident made Adam into the Blue Marvel, one of the most powerful men on Earth, but it also turned his friend Connor Sims into Anti-Man, his nemesis.",
+                    "Adam has been a major part of hero operations since the 1960s, but because of his status as an African American, his heroic deeds at the time were covered up. His identity was only revealed to the world recently, long after he had retired from adventuring to become a teacher. Now accepted by the wider world, Adam has become Blue Marvel once again.",
+                ],
+                Personality =
+                [
+                    "Despite a lifetime of discrimination weighing on his soul, Adam has always managed to be a loyal friend and a good teacher. His students consider him to be charming and personable.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Brawn (Amadeus Cho)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 3, resilience: 4, vigilance: 2, ego: 1, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Gamma Forms"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Forms"),
+                tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Amadeus Cho",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [117],
+                Gender = Gender.Male,
+                Eyes = "Black",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Green skin (while using powers)",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScienceGammaMutate],
+                Teams = [TeamNames.AgentsOfAtlas, TeamNames.Champions],
+                Base = "Mobile",
+                History =
+                [
+                    "By the time Amadeus Cho was a teenager, he was being hunted by international organizations desperate to harness his abnormal intelligence. Forced into a life on the run, Cho fell into the occasional company of another roaming hyper-intelligent scientist—Bruce Banner (the Hulk)—and the two became fast friends.",
+                    "When a radioactive meltdown threatened to turn Bruce into a nuclear bomb, Cho built a machine to transfer the excess radiation out of Bruce and into himself. The radiation imbued Cho with a sizable portion of the Hulk’s powers. For a while, Cho took up the title of Hulk himself, but in more recent days, he’s come to prefer the codename Brawn.",
+                ],
+                Personality =
+                [
+                    "Like many gamma mutates, Cho has struggled with anger issues, but compared to Bruce Banner, Cho is as cool as an ice cube. Cho’s super-intelligence is matched with an emotional immaturity that can land him in over his head in certain situations. Thanks to his Champions teammates and his brilliant sister, Maddy, Cho has begun to navigate the world more thoughtfully.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Brood",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 3, vigilance: 1, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Brood fleet)"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.HiveMind),
+                traitSelector.GetTrait(TraitNames.Infector, reminder: "Brood implantation, Queens only"),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Venomous),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.Flight1, reminder: "except for Queens"),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies (most lack individual identities)",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "typically around 8'",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "typically around 350 lbs.",
+                Gender = Gender.Female,
+                Eyes = "Yellow",
+                Hair = "None",
+                Size = Size.Big,
+                DistinguishingFeatures = "Big, locustlike brown alien with many teeth and tentacles",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.AlienBrood],
+                Teams = [TeamNames.LivingArmada],
+                Base = "Mobile",
+                History =
+                [
+                    "The first known Brood came to Earth-616 millennia ago, slipping in through a wormhole created by the death of another universe. The Kree Empire captured them and attempted to turn the insectoid creatures into living weapons for their fight against the rival Shi’ar Empire. The fleet did immense damage to the Shi’ar, but they refused to follow Kree orders. The innumerable Shi’ar ships and outposts the Brood captured spawned a new problem: the Brood Empire.",
+                    "The Brood Empire’s endless quest for power ultimately led them to Earth and its mutant heroes, the X-Men. In an attempt to create super-powered mutant Brood, a Brood Queen captured several of the X-Men and implanted embryos inside them. Although the X-Men eventually defeated the Queen and removed her embryos, the Brood armada as a whole remained a threat.",
+                    "In the years since, the Brood have made countless attempts to capture Earth and its heroes. Intervention by the new Brood king—Broo—led to a temporary armistice between the Brood and Earth, but no one knows how long this state of affairs can last.",
+                ],
+                Personality =
+                [
+                    "Brood embryos absorb the thoughts and memories of the people in whose bodies they spawn. Young Brood are driven almost entirely by instinct, while older and more experienced Brood often have minds on par with, if not greater than, humans.",
+                    "Two desires unite all Brood: to feed, and to obey their biologically designated leader. Broodlings always obey their leader, even if it costs them their lives."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Bulldozer (Wrecking Crew)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 4, resilience: 3, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Ram"),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Henry Camp",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [325],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.WreckingCrew],
+                Base = "Mobile",
+                History =
+                [
+                    "Abandoned on a trash heap when he was just 2 days old, Henry Camp grew up in an orphanage. Following a dishonorable discharge from the U.S. Army, he turned to a life of crime. After being picked up on burglary charges multiple times, he was sentenced to an extended stay on Ryker’s Island.",
+                    "In prison, Camp met Dirk Garthwaite, A.K.A. the villainous Wrecker. Along with a couple of other inmates, Camp helped Garthwaite escape from Ryker’s. In exchange, Garthwaite granted Camp and his compatriots a portion of his own super-powers. Together, they formed the super-villain group known as the Wrecking Crew, and they’ve been in each other’s orbits ever since.",
+                    "At times when Henry Camp is not available, his daughter, Marci Camp, takes his place in the Wrecking Crew as the new Bulldozer."
+                ],
+                Personality =
+                [
+                    "Henry Camp’s outwardly cool and tough demeanor conceals an inner bitterness. He harbors a burning resentment toward the government, society and the world at large, stemming from how they all failed him his entire life. It is this resentment that drives him forward in his criminal activities.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Bullseye",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 3, vigilance: 2, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Sniping"),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lester",
+                Heights = [new() { Feet = 6 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bull’s-eye scar on forehead",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.SpecialTraining, OriginName.HighTechCybernetics],
+                Teams = [TeamNames.DarkAvengers, TeamNames.FiskIndustries, TeamNames.TheHand],
+                Base = "Hell’s Kitchen, New York City",
+                History =
+                [
+                    "Beyond his first name, the world knows next to nothing about the man who became Bullseye. He trained for some period as a mercenary with the United States government, eventually resurfacing in New York as Bullseye, extortionist and killer for hire.",
+                    "Hell’s Kitchen has long been Bullseye’s base of choice, regularly putting him into conflict with Daredevil. Besides the Kingpin himself, Bullseye may be Daredevil’s most dangerous nemesis. His superhuman ability to hit any target from any angle makes him a perfect match for the swift and acrobatic Man Without Fear.",
+                ],
+                Personality =
+                [
+                    "Bullseye is a madman who enjoys killing above all else. He’s generally not the type to be reasoned with, though he has been persuaded to cooperate",
+                ]
+            }
+        },
+    ];
+}
