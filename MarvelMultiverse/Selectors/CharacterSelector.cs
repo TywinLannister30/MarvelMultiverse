@@ -5,6 +5,7 @@ using MarvelMultiverse.Models;
 namespace MarvelMultiverse.Selectors;
 
 public class CharacterSelector(
+    INarrativePowerSelector narrativePowerSelector,
     IPowerSelector powerSelector,
     ITagSelector tagSelector,
     ITraitSelector traitSelector) : ICharacterSelector
@@ -3866,6 +3867,88 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Cannonball",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 3, vigilance: 2, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Ram"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Samuel Zachery Guthrie",
+                Heights = [new() { Feet = 6 }],
+                Weights = [181],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.NewMutants, TeamNames.XForce, TeamNames.XTerminators],
+                Base = "Krakoa",
+                History =
+                [
+                    "To make ends meet for his family, young Sam Guthrie had to take a job working in the same rural coal mine that killed his father. On Guthrie’s very first day on the job, the mine collapsed, trapping him inside.",
+                    "Guthrie and every other worker in the mine that day should have died, but the panic of the collapse triggered something deep inside the boy’s genes. He grabbed hold of his friends and blasted his way out of the mine.",
+                    "This act of heroism drew the attention of Professor Charles Xavier, who correctly deduced that Guthrie was a mutant. At Xavier’s request, Guthrie became a founding member of the New Mutants, a super-team consisting entirely of teenage mutants.",
+                    "Guthrie eventually aged out of the New Mutants, at which point he became a founding member of X-Force. Since then, he has continually bounced back and forth between working with X-Force and helping to tutor the newest incarnations of the New Mutants.",
+                    "When he’s not adventuring, Guthrie spends most of his time with his wife, Izzy (A.K.A. the Smasher) and their son, Josiah. Much of that time is spent on Chandilar, throneworld of the Shi’ar Empire."
+                ],
+                Personality =
+                [
+                    "Guthrie has seen more action than most super heroes could ever hope to. He has fought in intergalactic wars, traversed alternate dimensions and acted as the leader or co-leader of several important super-teams, but he hasn’t let any of it faze him.",
+                    "Deep down, Guthrie is still a goofy teenager from Kentucky. He likes drinking beer, grilling burgers and chilling with his teammates. Of all his old colleagues, Guthrie is particularly close with Sunspot. They regularly get together on the weekends just to catch up."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Captain America (Sam Wilson)",
             Rank = 4,
             Abilities = new Abilities
@@ -4169,6 +4252,105 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Captain Britain",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 5, vigilance: 4, ego: 2, logic: 7
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.XGene),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance3),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Psychic Sword [Deals either Focus or Health damage, as Betsy chooses. Summonable.]"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticBarrier),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                        powerSelector.GetPower(PowerNames.TelekineticProtection2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.MentalPunch),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Elizabeth “Betsy” Braddock",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [155],
+                Gender = Gender.Female,
+                Eyes = "Violet",
+                Hair = "Blond, currently dyed purple",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.MagicSorcery, OriginName.Mutant],
+                Teams = [TeamNames.CaptainBritainCorps, TeamNames.Excalibur, TeamNames.KnightsOfX],
+                Base = "Krakoa",
+                History =
+                [
+                    "Not long after her twin brother, Brian, first took up the mantle of Captain Britain, Betsy Braddock began to manifest powers of her own. Her psychic abilities and excellent reflexes made Betsy an ideal stand-in for her brother and, soon enough, there were two Captain Britains protecting the United Kingdom.",
+                    "Tragically, this state of affairs did not last. Betsy was kidnapped by the otherworldly villain Mojo and brainwashed into becoming the treacherous psychic assassin Psylocke. To complicate matters further, soon after Betsy escaped Mojo’s programming, she was forced into a body-swap with an actual professional assassin named Kwannon.",
+                    "Her mind having partially merged with Kwannon’s, Betsy spent most of the next decade in a spiritual and mental confusion, unsure of her purpose in life. As Psylocke, she was both an ally and an enemy to all around her.",
+                    "Only recently did Betsy manage to regain control of her original body and resume her place as Captain Britain. With Brian having become the super hero Captain Avalon, Betsy is the sole holder of the Captain Britain title. She has taken on a vital leadership role in the defense of both Krakoa and Otherworld.",
+                ],
+                Personality =
+                [
+                    "Betsy Braddock is as much of a serious and stoic warrior as her brother, if not more so. She’s a focused commander with no patience for small talk or joking around on the battlefield.",
+                    "Outside of battle, Betsy can be charismatic and thoughtful. She’s had whirlwind romances with other heroes over the years, having most recently started a relationship with Askani (Rachel Summers)."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Captain Marvel (Carol Danvers)",
             Rank = 6,
             Abilities = new Abilities
@@ -4257,6 +4439,202 @@ public class CharacterSelector(
                     "Danvers is a strong-willed and pragmatic person who has embraced her role as a mentor to younger heroes like the new Ms. Marvel (Kamala Khan). She cares for her friends deeply and does whatever it takes to protect them and the worlds in which they live.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Cassandra Nova",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 2, vigilance: 9, ego: 9, logic: 9
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Monster),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance4),
+                        powerSelector.GetPower(PowerNames.Uncanny3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Levitation),
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticBarrier),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                        powerSelector.GetPower(PowerNames.TelekineticProtection2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BorrowSenses),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Domination),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                        powerSelector.GetPower(PowerNames.TelepathicPossession),
+                    ],
+                },
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.DNAManipulation),
+            ],
+            Biography = new Biography
+            {
+                RealName = "Cassandra Nova Xavier",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant, OriginName.MonstrousMummudrai],
+                Teams = [TeamNames.Marauders],
+                Base = "Krakoa",
+                History =
+                [
+                    "Cassandra Nova Xavier—or Cassandra Nova, as she is often called—is Professor Charles Xavier’s long-lost evil twin. She formed alongside him in the womb, and Charles—sensing her terrible nature—attempted to strangle her. A few of her still-living cells escaped the womb and fell into a nearby sewer. They spent the next several decades festering on a dirty wall, growing a full body.",
+                    "Nova finished re-forming on a bright summer morning. By that afternoon, she had destroyed the nation of Genosha and killed an estimated sixteen million mutants.",
+                    "The X-Men put an end to her genocide as quickly as they could, but the damage had been done. Nova spent much of the next several years imprisoned by the X-Men. In exchange for promises of reform, she was allowed to go free, though she remains under strict surveillance. Only now, with the activation of Krakoa’s resurrection protocols, has mutant society finally begun to recover from the damage she caused.",
+                    "Just about everyone on Krakoa distrusts or outright hates Nova. She has been allowed to claim Krakoan citizenship and even join the Marauders, but no one likes having her around. She was eventually abandoned billions of years in the past on a mission with the Marauders."
+                ],
+                Personality =
+                [
+                    "Although Nova and Professor X operate along different moral lines, Nova speaks in a similar manner to her brother. She is eloquent, straightforward and even polite. It’s just that she hates everyone.",
+                    "Xavier has dedicated his life to preserving mutantkind, while Nova has dedicated her life to annihilating it. That’s the key difference."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Chamber",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 2, vigilance: 4, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.ElementalBarrage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Mute, reminder: "Can speak psionically"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jonothon “Jono” Evan Starsmore",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [140],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Chest and lower face composed of a mysterious psionic energy",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.GenerationX, TeamNames.Legionnaires, TeamNames.Morlocks, TeamNames.NewMutants, TeamNames.NewWarriors, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Jonothon Starsmore’s X-Gene activated shortly after his eighteenth birthday. On that day, a fiery ball of pure psionic energy formed within his chest and grew until it had nowhere else to go but out. The resulting explosion annihilated most of Starsmore’s body and permanently disabled his girlfriend. He should’ve died that day, but the psionic energy refused to let him go. It became his new body, filling in the spaces it had destroyed.",
+                    "Permanently disfigured and unable to face the guilt of having hurt his girlfriend, Starsmore left home. He accepted an invitation to Charles Xavier’s School for Gifted Youngsters and subsequently became a founding member of the super-hero team Generation X.",
+                    "Generation X eventually disbanded as its members aged out of Xavier’s school, but Starsmore never stopped being an active super hero. Over the ensuing years, he has served as a member of the Morlocks, the New Warriors and even the X-Men themselves.",
+                    "On Krakoa, Starsmore split his time between acting as a member of Nightcrawler’s Legionnaires group and helping his old Generation X teammate Jubilee raise her adopted son, Shogo.",
+                ],
+                Personality =
+                [
+                    "Chamber could be an exceptionally powerful hero, but the guilt he feels over his past keeps him from using his powers to their fullest extent. The explosive psionic energy within his chest fluctuates with his emotions, and outside of the battlefield, he tries to maintain a relatively calm and simple lifestyle. He has a big and loving heart, but for obvious reasons, romantic entanglements are difficult for him.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -5163,6 +5541,96 @@ public class CharacterSelector(
                     "Despite being an intelligent and commanding leader, Scott has often struggled in personal social situations. Over the years, with the help of his mutant friends, he’s managed to overcome much of his social anxiety.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Cypher",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 2, vigilance: 3, ego: 3, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Linguist),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DetectLie),
+                        powerSelector.GetPower(PowerNames.Indecipherable),
+                        powerSelector.GetPower(PowerNames.UnderstandBodyLanguage),
+                        powerSelector.GetPower(PowerNames.UnderstandCode),
+                        powerSelector.GetPower(PowerNames.UnderstandSignLanguage),
+                        powerSelector.GetPower(PowerNames.UnderstandSpokenLanguage),
+                        powerSelector.GetPower(PowerNames.UnderstandUnusualCommunication),
+                        powerSelector.GetPower(PowerNames.UnderstandWrittenLanguage),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Douglas Aaron “Doug” Ramsey",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [150],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.NewMutants, TeamNames.QuietCouncilOfKrakoa],
+                Base = "Krakoa",
+                History =
+                [
+                    "Shadowcat (Kate Pryde) had long suspected that her childhood friend Doug Ramsey—with his uncanny knack for codes and languages—was some kind of mutant. However, for the sake of his safety, she rarely involved him in mutant business. Then the alien mutant Warlock crash-landed near Xavier’s School for Gifted Youngsters and fought the original New Mutants. To communicate with the rampaging Warlock, Pryde was forced to enlist Ramsey’s assistance.",
+                    "Ramsey and Warlock became fast friends and decided, almost simultaneously, to become members of the New Mutants, with Ramsey taking the codename Cypher. As Cypher, Ramsey proved a capable member of the team, but his time with the New Mutants was cut short when he was killed in battle, taking a bullet meant for Wolfsbane.",
+                    "Years later, the Black Priestess (Selene Gallio) resurrected Ramsey. He rejoined the New Mutants for a while, but his heart was no longer with the team. Eventually, he retreated to the edges of mutant society, only returning to the spotlight after being persuaded to assist in the foundation of Krakoa. Cypher served as the Quiet Council’s liaison with the island of Krakoa itself, until instability within the nation led the island to swallow him up, supposedly for his own protection.",
+                ],
+                Personality =
+                [
+                    "Cypher may not have flashy energy blasts, but he is more intelligent, more courageous and more empathic than more aggressive super heroes. His omni-linguistic abilities allow him to stop many fights before they even start.",
+                    "Though he has dozens of friends, Cypher is particularly close with Warlock. At times, they have merged to form a single powerful being called Douglock."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
     ];
 

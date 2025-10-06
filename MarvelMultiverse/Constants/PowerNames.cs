@@ -63,6 +63,7 @@ public static class PowerNames
     public const string DanceOfDeath = "Dance of Death";
     public const string Dazzle = "Dazzle";
     public const string DefenseStance = "Defense Stance";
+    public const string DetectLie = "Detect Lie";
     public const string DimensionalPortal = "Dimensional Portal";
     public const string DimensionalTravel = "Dimensional Travel";
     public const string DimensionalTravelOther = "Dimensional Travel Other";
@@ -147,6 +148,7 @@ public static class PowerNames
     public const string IconicWeapon = "Iconic Weapon";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
     public const string Illumination = "Illumination";
+    public const string Indecipherable = "Indecipherable";
     public const string InformationUpload = "Information Upload";
     public const string Inspiration = "Inspiration";
     public const string InstantReplay = "Instant Replay";
@@ -285,6 +287,12 @@ public static class PowerNames
     public const string Uncanny2 = "Uncanny 2";
     public const string Uncanny3 = "Uncanny 3";
     public const string Uncanny4 = "Uncanny 4";
+    public const string UnderstandBodyLanguage = "Understand Body Language";
+    public const string UnderstandCode = "Understand Code";
+    public const string UnderstandSignLanguage = "Understand Sign Language";
+    public const string UnderstandSpokenLanguage = "Understand Spoken Language";
+    public const string UnderstandUnusualCommunication = "Understand Unusual Communication";
+    public const string UnderstandWrittenLanguage = "Understand Written Language";
     public const string UnflappablePoise = "Unflappable Poise";
     public const string UnrelentingSmash = "Unrelenting Smash";
     public const string UnstoppableAssault = "Unstoppable Assault";

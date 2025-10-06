@@ -929,6 +929,23 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.DetectLie,
+            Description = "The character can tell if you’re telling the truth.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = $"{PowerNames.UnderstandBodyLanguage}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "Verbal communication the character can understand",
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "When someone communicates in an active form the character can understand—verbally, telepathically, using sign language and so on—the character can make an Ego check against the communicator’s Ego defense. On a success, the character knows if the communicator is lying. On a Fantastic success, they also know (if possible) why the communicator is lying.",
+                "This power does not allow the character to know the truth, although they may be able to figure it out by detecting lies. Also, it only works on communicators who know they are lying. If they believe what they are saying—even if it is wrong—no lie can be detected."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerNames.DimensionalPortal,
             Description = "The character opens a portal to another place.",
             PowerSets = [PowerSetNames.OmniversalTravel],
@@ -2109,6 +2126,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character illuminates one object or point in line of sight, within 50 spaces, with bright light. The character can maintain concentration on the e­ ect even if they move out of range or line of sight.",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.Indecipherable,
+            Description = "The character has a language all their own.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = $"{PowerNames.UnderstandSpokenLanguage}, {PowerNames.UnderstandUnusualCommunication}, Rank 3",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character has constructed an internal language that only they can understand. They think in this language entirely, and when they communicate with others, they are translating from that language. This effectively renders them immune to telepathic powers like Mind Reading or Mind Interrogation, as anyone trying to read their mind cannot understand this unique language.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -4073,6 +4103,93 @@ public class PowerSelector : IPowerSelector
                 "Any damage multiplier for attacks against the character’s Focus is reduced by 4.",
             ],
             FocusDamageReductionModifier = -4
+        },
+        new()
+        {
+            Name = PowerNames.UnderstandBodyLanguage,
+            Description = "The character can read how a person holds themself.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "When the character encounters a culture for the first time, they can make a Logic vs. TN 13 action check to puzzle out its body language. If they already know any other version of the culture’s language, they have an edge. On a success, they understand and can emulate the body language. On a Fantastic success, they permanently understand and can use it and never need to make a check for it again.",
+                "This covers not only any potential full-body language used by an alien species but also the body language of species that use other forms of communication. With such species, understanding their body language allows the character to understand more than the target’s words might communicate, such as whether a person is aggressive, shy, anxious, reckless and so on."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.UnderstandCode,
+            Description = "The character can figure out any kind of code.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = $"{PowerNames.UnderstandWrittenLanguage}",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "When the character encounters an unknown code for the first time, they can make a Logic vs. TN 13 action check to puzzle it out. If they already know any other version of the language the code is based on, they have an edge. On a success, they understand and can communicate in the code. On a Fantastic success, they permanently understand and can use it and never need to make a check for it again.",
+                "Digital data communication is considered a form of code, and the character can use this power to understand such data too."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.UnderstandSignLanguage,
+            Description = "The character can get what someone is signing.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "When the character encounters an unknown sign language for the first time, they can make a Logic vs. TN 13 action check to puzzle it out. If they already know any other version of the language, they have an edge. On a success, they understand and can sign in the language. On a Fantastic success, they permanently understand and can use it and never need to make a check for it again.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.UnderstandSpokenLanguage,
+            Description = "The character can get what someone is saying.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "When the character encounters an unknown spoken language for the first time, they can make a Logic vs. TN 13 action check to puzzle it out. If they already know any other version of the language, they have an edge. On a success, they understand and can speak the language. On a Fantastic success, they permanently understand and can speak it and never need to make a check for it again.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.UnderstandUnusualCommunication,
+            Description = "The character can understand any other form of communication.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = $"{PowerNames.UnderstandBodyLanguage}",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "When the character encounters an unknown form of communication for the first time—one that doesn’t depend on hearing, vision or code—they can make a Logic vs. TN 13 action check to puzzle it out. If they already know any other version of the communication, they have an edge. On a success, they understand and can use that form of communication. On a Fantastic success, they permanently understand and can use it and never need to make a check for it again.",
+                "This works with forms of communication that include other senses, like scent, touch, taste and so on."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.UnderstandUnusualCommunication,
+            Description = "The character can figure out what someone has written.",
+            PowerSets = [PowerSetNames.Translation],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "When the character encounters an unknown written language for the first time, they can make a Logic vs. TN 13 action check to puzzle it out. If they already know any other version of the language, they have an edge. On a success, they can read and write the language. On a Fantastic success, they can permanently read and write it and never need to make a check for it again.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {

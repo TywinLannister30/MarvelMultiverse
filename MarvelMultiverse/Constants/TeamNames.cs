@@ -78,6 +78,7 @@ public static class TeamNames
     public const string KreeImperium = "Kree Imperium";
     public const string LeagueOfEvilInhumans = "League of Evil Inhumans";
     public const string LegionOfMonsters = "Legion of Monsters";
+    public const string Legionnaires = "Legionnaires";
     public const string LivingArmada = "The Living Armada (Brood fleet)";
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";
     public const string Maggia = "Maggia";

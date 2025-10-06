@@ -19,6 +19,7 @@ builder.Services.AddTransient<ITagSelector, TagSelector>();
 builder.Services.AddTransient<ITraitSelector, TraitSelector>();
 
 builder.Services.AddTransient<ICharacterManager, CharacterManager>();
+builder.Services.AddTransient<INarrativePowerSelector, NarrativePowerSelector>();
 builder.Services.AddTransient<IOccupationManager, OccupationManager>();
 builder.Services.AddTransient<IOriginManager, OriginManager>();
 builder.Services.AddTransient<IPowerManager, PowerManager>();
