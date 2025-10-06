@@ -13414,6 +13414,116 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Lady Deathstrike",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 4, vigilance: 5, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.FuriousAttacks),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "with claws out"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                       
+                        powerSelector.GetPower(PowerNames.IconicWeapon, 
+                            specialization: "Adamantium nails [+1 Melee damage multiplier; ignores 1 level of DR]",
+                            meleeDamageModifier: 1,
+                            isTech: true),
+                        
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Yuriko Oyama",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [128],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Retractable adamantium nails",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.HighTechCybernetics],
+                Teams = [TeamNames.Reavers, TeamNames.SisterhoodOfMutants, TeamNames.WeaponXForce],
+                Base = "Mobile",
+                History =
+                [
+                    "In an attempt to make money on the black market, mad scientist and Japanese nationalist Kenji Oyama developed a process for safely lacing human bones with adamantium. This process was invasive, requiring the installation of cybernetic implants, but it worked, and weapons dealers from around the world took note.",
+                    "Kenji implemented his process only a few times before the super heroes of the world took him down. In his absence, his daughter Yuriko took up the cause of protecting her father’s legacy. She had her own body implanted with adamantium and set out to become a mercenary under the codename Lady Deathstrike.",
+                    "More than anyone, Yuriko hates Wolverine (Logan). She believes his adamantium implants were possible only because of research stolen from her father, and that Wolverine’s very existence spits in the face of her late father’s work.",
+                    "Yuriko’s longtime rivalry with the nigh-unkillable mutant has, at times, drawn her into conflict with the larger world of mutants. Because of that, it is not unknown for her to ally herself with mutant-hating bigots like William Stryker."
+                ],
+                Personality =
+                [
+                    "Lady Deathstrike is a grim and merciless combatant with an unflinching sense of duty. She pursues her targets relentlessly and without fail. Wolverine is one of the few people in existence to have bested her in direct combat.",
+                    "She would hardly ever admit it, but Lady Deathstrike long ago lost track of her real reasons for hating Wolverine. She continues to fight him for the same reason that she continues her work as an assassin. It’s all she knows.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Leader",
             Rank = 4,
             Abilities = new Abilities
@@ -13501,6 +13611,83 @@ public class CharacterSelector(
                     "A megalomaniacal narcissist, the Leader believes that his brilliant intellect grants him the right to rule the world. It infuriates him that a being as dim-witted as the Hulk could possibly foil his schemes.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Lockheed",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 1, vigilance: 1, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.UnusualSize, reminder: "Little"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 2, Inches = 6 }],
+                Weights = [20],
+                Gender = Gender.Male,
+                Eyes = "Yellow",
+                Hair = "None",
+                Size = Size.Little,
+                DistinguishingFeatures = "Looks like a tiny purple dragon",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.Excalibur, TeamNames.Marauders, TeamNames.SWORD, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Lockheed was born into the Flock: an interstellar society of dragon-like aliens. His childhood was as normal as any childhood can be for an alien dragon. He grew up healthy and strong, and he made a name for himself among his people as a warrior in their eternal battle against the alien Brood.",
+                    "It was a good life, but not one that Lockheed wanted. The day before he was bound to be wed, Lockheed ran into a group of captive X-Men trapped inside a Brood settlement. He helped to free them, and they allowed him to accompany them back to Earth. He has been with them ever since.",
+                    "Lockheed likes all of the X-Men, but he has a particular affinity for Kate Pryde. They accompany each other on many of their adventures, and Lockheed often is seen perching atop her shoulders or neck. Kate treats Lockheed like the greatest pet she could have, and that’s just the way he likes it.",
+                ],
+                Personality =
+                [
+                    "Lockheed can understand and speak English to a limited degree, but he prefers to spend most of his time silent. He’s protective of the X-Men, particularly Kate Pryde, but his tiny body makes it hard for him to be of much use to them in combat. He tends to skirt around the edges of battles, scorching off-guard villains and goons from afar.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -13785,6 +13972,105 @@ public class CharacterSelector(
                     "Feeling like an outsider to the Asgardian community, Loki harbors some resentment toward his brother, Thor, for his effortless ability to fit in. However, he’s willing to set everything aside in the name of a good prank. He delights in mischief above all else.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Longshot",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 3, vigilance: 5, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.MutantAssociate),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy3),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Luck,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CharmedLife),
+                        powerSelector.GetPower(PowerNames.LuckyMe),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DanceOfDeath),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Longshot",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [80],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Left eye glows when using powers; born with only eight fingers",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Exiles, TeamNames.XFactor, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "As the supreme leader of Mojoworld, the monstrous Mojo rules over a race of genetically engineered slaves that he abuses for his own amusement, forcing them into dire, life-or-death situations and filming the results for use in a series of sick and twisted TV shows. One of these slaves—a stuntman named Longshot—attempted to overthrow Mojo. As the result of a bizarre genetic experiment, Longshot had been born extremely lucky, and he came within a hair’s breadth of defeating Mojo once and for all before being mindwiped by Mojo’s lackeys.",
+                    "The amnesiac Longshot fled to Earth-616, where he joined forces with the X-Men. He began a relationship with his teammate Dazzler and even had a son with her—who would become known as Shatterstar—before once again being captured and mindwiped by Mojo’s forces.",
+                    "Eventually, the Exiles freed Longshot and invited him into their crew. After regaining most of his lost memories, he left the Exiles to join X-Factor Investigations and spend more time with Dazzler. Following the dissolution of X-Factor Investigations, Longshot all but disappeared.",
+                    "Although a close mutant associate, Longshot is not a mutant himself, and he has been minimally involved in the Krakoan era. He is, presumably, still scouring the Multiverse for a way to defeat Mojo."
+                ],
+                Personality =
+                [
+                    "Because his mind is in shambles more often than not, Longshot operates almost entirely on sheer instinct. He trusts that his uncanny luck can lead him to where he needs to be and allow him to endure any troubles that may arise along the way.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {

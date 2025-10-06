@@ -119,6 +119,7 @@ public static class TeamNames
     public const string SHIELD = "S.H.I.E.L.D.";
     public const string SinisterSix = "Sinister Six";
     public const string SinisterTwelve = "Sinister Twelve";
+    public const string SisterhoodOfMutants = "Sisterhood of Mutants";
     public const string SkeletonCrew = "Skeleton Crew";
     public const string SkrullEmpire = "Skrull Empire";
     public const string SpaceFriends = "Space Friends";
@@ -128,6 +129,7 @@ public static class TeamNames
     public const string SquadronSupreme = "Squadron Supreme";
     public const string STAKE = "S.T.A.K.E.";
     public const string StrangeAcademy = "Strange Academy";
+    public const string SWORD = "S.W.O.R.D.";
     public const string SymbioteHive = "Symbiote Hive";
     public const string TeamX = "Team X";
     public const string TerribleTrio = "Terrible Trio";
@@ -147,6 +149,7 @@ public static class TeamNames
     public const string USArmy = "U.S. Army";
     public const string USHulkOperations = "U.S. Hulk Operations";
     public const string VillainsForHire = "Villains for Hire";
+    public const string WeaponXForce = "Weapon X-Force";
     public const string WebWarriors = "Web-Warriors";
     public const string WestCoastAvengers = "West Coast Avengers";
     public const string WreckingCrew = "Wrecking Crew";
