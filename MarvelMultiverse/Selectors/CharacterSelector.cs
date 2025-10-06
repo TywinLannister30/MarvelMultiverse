@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System;
 using System.Reflection.Metadata;
 using System.Runtime.Intrinsics.X86;
 
@@ -8722,6 +8723,111 @@ public class CharacterSelector(
     [
         new()
         {
+            Name = "Gambit",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 2, vigilance: 4, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Bo staff (+1 melee damage multiplier bonus; range: reach +1)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Charged cards [These act as knives, usually thrown. Using Elemental Infusion on them costs 0 Focus. Cards function only for Gambit.]"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DanceOfDeath),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Remy Étienne LeBeau",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [179],
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Black eyes with red irises",
+                Occupations = [OccupationName.Adventurer, OccupationName.Criminal],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Excalibur, TeamNames.ThievesGuild, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "After being rejected by his biological parents, infant Remy LeBeau was adopted by members of the international criminal organization known as the Thieves’ Guild. LeBeau quickly took up the profession of his caretakers, and by the time he was a young man, he had become one of the greatest thieves on the planet.",
+                    "In the midst of one heist, LeBeau encountered the mutant hero Storm in a vulnerable position, having been de-aged into a child by agents of the Shadow King. Having once been a vulnerable child himself, LeBeau helped Storm defeat the Shadow King, and she, in return, invited him to join the X-Men.",
+                    "Although he was not as invested in mutant politics as his colleagues, LeBeau found life among the X-Men thrilling and rewarding. As Gambit, he spent years adventuring alongside the mutant heroes, all the while romancing his teammate Rogue.",
+                    "Shortly before the foundation of Krakoa, Gambit and Rogue finally got married. Although they acted as backup members of Krakoa’s Excalibur team, Rogue and Gambit have spent most of their time since their marriage focusing on each other and adventuring together across the globe."
+                ],
+                Personality =
+                [
+                    "In his younger years, Gambit was known as a smooth-talking ladies’ man. As a married man, he’s not as much of a flirt as he used to be, but he’s still a notoriously persuasive and charming individual. He speaks in a thick New Orleans accent and often peppers bits of Cajun French into his regular English speech.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Gamora",
             Rank = 5,
             Abilities = new Abilities
@@ -9524,6 +9630,104 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Greycrow",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 5, resilience: 3, vigilance: 3, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.Sniping),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "John Greycrow",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Grey",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Various cybernetic attachments",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.HighTechCybernetics, OriginName.Mutant],
+                Teams = [TeamNames.Hellions, TeamNames.Marauders],
+                Base = "Krakoa",
+                History =
+                [
+                    "Despite being an experienced combat veteran, John Greycrow was nearly unknown in the mutant community until he joined the mercenary squadron known as the Marauders. There, Greycrow forged the fledgling team into a lethal force capable of rivaling a small military and set them to work.",
+                    "On orders from Mister Sinister, Greycrow and his band tracked down the Morlocks, a society of mutant rejects living in the sewers beneath New York City. In an event known as the Mutant Massacre, Greycrow’s Marauders slaughtered nearly every Morlock.",
+                    "The X-Men tracked Greycrow down and executed him, but the damage had been done. In the coming years, his name became synonymous with the term “mass murderer.”",
+                    "Greycrow was eventually resurrected by the Krakoan government, but only so they could make him part of the new Hellions: a secret strike team of former villains. Ironically, being forced to work as a hero finally led Greycrow to regret his life as a villain.",
+                    "Greycrow knows he can never atone for his past, but now that his sentence with the Hellions has been served, he hopes to live out the rest of his days in relative peace."
+                ],
+                Personality =
+                [
+                    "Although he might appear to be nothing more than another serious, hard-talking, cigar-smoking merc, Greycrow has some deep insecurities hidden within his psyche. He became a killer not out of a love of violence, but because he believed that it was the only thing a person as worthless as him could be any good at.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Groot",
             Rank = 4,
             Abilities = new Abilities
@@ -9713,6 +9917,92 @@ public class CharacterSelector(
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Guardian",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 4, vigilance: 3, ego: 6, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "covered by suit"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy3, isTech: true),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "James MacDonald Hudson",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechCybernetics],
+                Teams = [TeamNames.AlphaFlight, TeamNames.OmegaFlight, TeamNames.RCMP],
+                Base = "Ottawa",
+                History =
+                [
+                    "Canadian patriot James Hudson got sucked into the world of super heroes while working for a multinational oil conglomerate. Hudson developed an exosuit that would allow workers to safely and easily search for oil underground. Rather than using this suit for its intended purpose, Hudson’s employers attempted to steal his designs and sell them to the American military.",
+                    "As quickly as he could, Hudson blew the whistle on his bosses and fled into the custody of the Canadian government. The government offered Hudson their complete protection, on the condition that he use his suit in the defense of Canada.",
+                    "Under the codename Guardian, Hudson worked with the government to form a super-team capable of defending Canada against any threat. He called this team Alpha Flight.",
+                    "Almost continuously since then, Hudson has been the leader of Alpha Flight. He’s had to install a number of cybernetic implants in himself over the years to keep up with the times, but his commitment to Alpha Flight—and to Canada—has never been in question.",
+                ],
+                Personality =
+                [
+                    "Guardian represents the ideals of Canada in the same way that Captain America represents the ideals of the United States. He’s soft-spoken, strong, and, above all, kind to those around him.",
+                    "Hudson’s unflinching loyalty to the Canadian government has, on occasion, led him astray, but in the end, his commitment to justice always puts him back on the right track.",
+                    "Although he is not a mutant, many of Hudson’s teammates are, and he often gets mixed up in the world of mutant politics. The mutant hero Wolverine (Logan) was among the earliest members of Alpha Flight."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
     ];
 

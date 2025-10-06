@@ -62,6 +62,7 @@ public static class TeamNames
     public const string HellLords = "Hell Lords";
     public const string HellfireClub = "Hellfire Club";
     public const string HellfireTradingCompany = "Hellfire Trading Company";
+    public const string Hellions = "Hellions";
     public const string HeroesForHire = "Heroes for Hire";
     public const string HorsemenOfApocalypse = "Horsemen of Apocalypse";
     public const string HouseOfAgon = "House of Agon";
@@ -99,6 +100,7 @@ public static class TeamNames
     public const string NovaCorps = "Nova Corps";
     public const string NYPD = "NYPD";
     public const string OlympusGroup = "Olympus Group";
+    public const string OmegaFlight = "Omega Flight";
     public const string PantherCult = "Panther Cult";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
     public const string PetAvengers = "Pet Avengers";
@@ -106,6 +108,8 @@ public static class TeamNames
     public const string ProjectGreenSpring = "Project Green Spring";
     public const string Protectors = "Protectors";
     public const string QuietCouncilOfKrakoa = "Quiet Council of Krakoa";
+    public const string RCMP = "RCMP";
+    public const string Reavers = "Reavers";
     public const string SantaRosaSheriffsDepartment = "Santa Rosa Sheriff’s Department";
     public const string SavageAvengers = "Savage Avengers";
     public const string SavageSix = "Savage Six";
@@ -114,6 +118,7 @@ public static class TeamNames
     public const string SHIELD = "S.H.I.E.L.D.";
     public const string SinisterSix = "Sinister Six";
     public const string SinisterTwelve = "Sinister Twelve";
+    public const string SkeletonCrew = "Skeleton Crew";
     public const string SkrullEmpire = "Skrull Empire";
     public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
@@ -129,11 +134,10 @@ public static class TeamNames
     public const string TheDailyBugle = "The Daily Bugle";
     public const string TheFive = "The Five";
     public const string TheHand = "The Hand";
+    public const string ThievesGuild = "Thieves' Guild";
     public const string Thunderbolts = "Thunderbolts";
     public const string TNM = "TNM";
     public const string Triads = "Triads";
-    public const string Reavers = "Reavers";
-    public const string SkeletonCrew = "Skeleton Crew";
     public const string Ultimates = "Ultimates";
     public const string Underground = "Underground";
     public const string UnitedFront = "United Front";
