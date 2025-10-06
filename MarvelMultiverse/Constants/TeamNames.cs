@@ -4,6 +4,7 @@ public static class TeamNames
 {
     public const string AberrantCrimesDivisionOfTheFBI = "Aberrant Crimes Division (ACD) of the F.B.I.";
     public const string ActionPack = "ActionPack";
+    public const string Acolytes = "Acolytes";
     public const string AgentsOfAtlas = "Agents of Atlas";
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
@@ -126,10 +127,12 @@ public static class TeamNames
     public const string TerribleTrio = "Terrible Trio";
     public const string TerrorInc = "Terror Inc.";
     public const string TheDailyBugle = "The Daily Bugle";
+    public const string TheFive = "The Five";
     public const string TheHand = "The Hand";
     public const string Thunderbolts = "Thunderbolts";
     public const string TNM = "TNM";
     public const string Triads = "Triads";
+    public const string Reavers = "Reavers";
     public const string SkeletonCrew = "Skeleton Crew";
     public const string Ultimates = "Ultimates";
     public const string Underground = "Underground";

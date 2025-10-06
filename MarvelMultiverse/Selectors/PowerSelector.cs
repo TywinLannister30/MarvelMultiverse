@@ -577,7 +577,8 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character gains an edge on any single action check each round. This does not stack with any other edges."
-            ]
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -881,6 +882,25 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes a Melee attack against the grabbed target’s Resilience defense. If it’s a success, the target takes regular damage. On a Fantastic success, the target takes double damage instead and is pinned."
             ]
+        },
+        new()
+        {
+            Name = PowerNames.CureAll,
+            Description = "The character can cure what ails you—mostly.",
+            PowerSets = [PowerSetNames.Healing],
+            Prerequsites = $"{PowerNames.HealingHands}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "Reach",
+            Cost = "15 Focus",
+            Effect =
+            [
+                "With a touch, the character can cure any temporary ailments a target suffers from. The character makes an Ego vs. TN 12 action check. On a success, the effects of the ailment end immediately. On a Fantastic success, treat the result like a recovery check, and the target gains back that much of any Health and Focus lost to the condition.",
+                "This can affect conditions including ablaze, bleeding, blinded, corroding, deafened, demoralized, paralyzed, poisoned and unconscious. If the target was demoralized, they now have 1 Focus, and if the target was unconscious, they now have 1 Health. (They can have more if the character got a Fantastic success and recovered more for them.)",
+                "Note that this only works on acute conditions and diseases, those the target has contracted recently and that would—under ideal circumstances—resolve soon, leaving them alive. It does not affect chronic or permanent diseases or serious diseases that are likely to be fatal.",
+                "For instance, it can cure temporary deafness but not permanent deafness. It can stop an allergy attack but not the allergies themselves. It can cure poison but not cancer. It has no effect against the Techno-Organic virus, the Transmode virus, the Legacy virus or other such diseases."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -1533,7 +1553,8 @@ public class PowerSelector : IPowerSelector
             [
                 "The character picks a foe in their line of sight. That foe has trouble on all action checks made for the power’s duration. There is no limit on the range between the character and the foe once the power is activated.",
                 "The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working."
-            ]
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -2016,6 +2037,22 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.HealingHands,
+            Description = "The character has a healing touch.",
+            PowerSets = [PowerSetNames.Healing],
+            Prerequsites = $"{PowerNames.LetsGo}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "Reach",
+            Cost = "10 or more Focus",
+            Effect =
+            [
+                "The character can heal a target creature with a touch. For every point of Focus the character spends, the target regains a point of Health, up to their maximum score. The character must spend at least 10 Focus to use the power. Any Health points that would have been healed beyond the target’s maximum Health are lost.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerNames.HeightenedSenses1,
             Description = "The character has superior senses.",
             PowerSets = [],
@@ -2339,7 +2376,8 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes a Melee check to touch the target. On a success, the power takes effect, and that foe has trouble on all action checks made for the power’s duration. On a Fantastic success, the target also takes standard (not doubled) Melee damage.",
                 "The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working."
-            ]
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -2355,7 +2393,8 @@ public class PowerSelector : IPowerSelector
             [
                 "The character picks up to one foe per rank in their line of sight. Those foes have trouble on all action checks made for the power’s duration. There is no limit on the range from the character to their foes once the power is activated.",
                 "The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working."
-            ]
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -2472,6 +2511,26 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.LetsGo,
+            Description = "The character can get a friend back on their feet.",
+            PowerSets = [PowerSetNames.Healing],
+            Prerequsites = "Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The target is knocked unconscious.",
+            Duration = Duration.Concentration,
+            Range = "Reach",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can eliminate the effects of a target losing all of their Health. Rather than falling unconscious, the target remains awake and mobile. They can use movement actions but not reactions or standard actions.",
+                "This does not protect a character from death. They can be killed normally, and this power cannot bring back a dead character.",
+                "Once the power takes effect, the target does not have to remain within the character’s reach. When the effect ends, if the target has 0 Health or less, they become unconscious.",
+                "If the target’s Health rises above 0 at any point, this power automatically ends."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerNames.Levitation,
             Description = "The character can hover and move.",
             PowerSets = [PowerSetNames.Telekinesis],
@@ -2507,7 +2566,8 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character gains an edge on all action checks made while this power is in effect. The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working.",
-            ]
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -2595,6 +2655,22 @@ public class PowerSelector : IPowerSelector
                 "The character can shrink enough to travel into subatomic realms. They can return to their normal size at will.",
                 "Note that this is something that most characters would rarely want to do, as it removes them entirely from their regular universe and places them in a dimension in which the rules of time and space work di­ erently. The Underspace, for example, might make a fi ne place to hide, but there’s little else of interest there."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.MicroscopicAwareness,
+            Description = "The character can detect details about the smallest things.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "1 space per rank",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can see and identify items that would normally require a microscope to detect, much less comprehend. This includes things like fingerprints, a single strand of hair and even a person’s DNA. In the case of DNA, the character can use this to identify a person and link them to close relatives with similar DNA.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -2795,6 +2871,24 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.NeverSurrender,
+            Description = "The character can help a friend rally.",
+            PowerSets = [PowerSetNames.Healing],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "Reach",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can eliminate the effects of a target losing all of their Focus. Rather than becoming demoralized, the target can function normally without having trouble on all their actions due to their lack of Focus. They cannot spend more Focus, though, and they can still be shattered.",
+                "Once the power takes effect, the target does not have to remain within the character’s reach. When the effect ends, if the target has 0 Focus or less, they become demoralized.",
+                "If the target’s Focus rises above 0 at any point, this power automatically ends.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerNames.OnYourFeet,
             Description = "The character stands their friends on their feet.",
             PowerSets = [PowerSetNames.Tactics],
@@ -2956,7 +3050,7 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.PowerSliderSerenity,
+            Name = PowerNames.PowerSlider,
             Description = "The character’s power waxes and wanes with what’s vital to them.",
             PowerSets = [PowerSetNames.PowerControl],
             Prerequsites = "Rank 3",
@@ -2967,9 +3061,15 @@ public class PowerSelector : IPowerSelector
                 "When things are going well for the character, all of their other powers are boosted. If the powers have ranges or effective areas or durations, these are doubled. If the powers affect damage multipliers, add 1 to the effects. Any effects that normally happen on a Fantastic success automatically happen on any success, not just a Fantastic one. Also, anything that would dampen their powers only brings them back to normal.",
                 "When things are going poorly for the character, all of their other powers are dampened. If the powers have ranges or effective areas or durations, these are halved. If the powers affect damage multipliers, subtract 1 from the effects. The powers can no longer enjoy Fantastic successes. Also, anything that would boost their powers only brings them back to normal.",
                 "These effects last for a single combat or—if they happen outside of combat—a single day.",
-                "Lyra’s criterion is maintaining her serenity by keeping cool. If she takes Focus damage, she must make an Ego check with the TN equal to the amount of Focus damage sustained. If she succeeds, her powers are boosted. If she fails, her powers are dampened."
+                "Here are some criteria to pick from: confidence, faith and media popularity. With the Narrator’s consent, players can come up with others.",
+                "- Confidence: If the character gets a Fantastic success on an important action check, their confidence soars, and their powers are boosted. If the character fails an important action check, their confidence falls, and their powers are dampened.",
+                "- Faith: If something the character believes as a core part of their faith is shown to be true, their faith soars and their powers are boosted. If something the character believes as a core part of their faith is shown to be doubtful, their faith falls, and their powers are dampened.",
+                "- Media Popularity: If the character’s media ratings substantially rise (more people watch their shows), their powers are boosted. If the character’s media ratings substantially fall (fewer people watch their shows), their powers are dampened.",
+                "- Serenity: The character’s criterion is maintaining their serenity by keeping cool. If they takes Focus damage, they must make an Ego check with the TN equal to the amount of Focus damage sustained. If they succeeds, their powers are boosted. If they fail, their powers are dampened.",
+                "The criteria in question may go up and down often, seeming to leave the character to the whims of fate, but ignore minor changes. Only something that feels like a special moment should cause a change.",
+                "Players may be tempted to set up their characters to constantly succeed. If this happens, Narrators should remember that they can often tip matters in the other direction. The swinging back and forth makes things more fun than keeping them always on an even keel."
             ],
-            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -3168,6 +3268,25 @@ public class PowerSelector : IPowerSelector
             [
                 "The character can make an object within reach grow or shrink. The character can resize the object as much as their own Grow or Shrink power would allow them to."
             ],
+        },
+        new()
+        {
+            Name = PowerNames.Resurrect,
+            Description = "The character can help someone defy death.",
+            PowerSets = [PowerSetNames.Healing],
+            Prerequsites = $"{PowerNames.HealingHands}, Rank 5",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "Reach",
+            Cost = "20 or more Focus",
+            Effect =
+            [
+                "The character can try to bring a target back from the dead if they do so soon after the target’s death. To attempt this, they must be able to touch the dead target’s body, and that body must be relatively intact—at least enough so that if the person came back to life they wouldn’t instantly die again.",
+                "The character makes an Ego action check vs. a TN equal to 10 plus 1 for every hour the target has been dead. For example, if the target has been dead for four hours, the TN is 14.",
+                "On a success, the target is restored to 1 Health. On a Fantastic success, the target is restored to full Health.",
+                "With any kind of success, the character using this power is then reduced to 1 Focus. On a failure, they only have to pay the minimum cost of 20 Focus."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -3818,7 +3937,7 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.SummonPortal,
             Description = "The character opens a portal between space and dimensions.",
             PowerSets = [PowerSetNames.Magic],
-            Prerequsites = "Sorcerous, Rank 4",
+            Prerequsites = $"{TagNames.Sorcerous}, Rank 4",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
             Cost = "15 Focus",
@@ -3826,6 +3945,80 @@ public class PowerSelector : IPowerSelector
             [
                 "The character opens a glowing portal in a space next to them that teleports anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. This can be between any two points in the Multiverse, as long as the character has seen the destination. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.SwapItems,
+            Description = "The character swaps objects with someone else.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.SwapPlaces}",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character swaps items they possess with the items of another person they can see within 2 spaces per the character’s rank. These items can include weapons, clothing or anything else that is on the other person but not attached to them. When the effect ends, the swapped items return to the people who had them originally.",
+                "The character can swap all of their possessions, or they can be as selective as they like. The items must generally be swapped on an equal basis, but it is possible to swap something for nothing. For instance, the character could swap what’s in their hands for what’s in the target’s hands. If they are holding nothing and the target has a pistol, they can swap the pistol for nothing.",
+                "If the person being swapped with is unwilling, the character must make an Ego check against that person’s Vigilance defense to succeed."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.SwapPlaces,
+            Description = "The character swaps places with someone else.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = "None",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Effect =
+            [
+                "The character swaps places with another person they can see within 2 spaces per the character’s rank. When the effect ends, the character and the other person swap places again.",
+                "If the person being swapped with is unwilling, the character must make an Ego check against that person’s Vigilance defense to succeed.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.SwapPowers,
+            Description = "The character swaps their powers for a target’s powers.",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = "Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Cost = "10 or more Focus",
+            Effect =
+            [
+                "The character makes an Ego attack against a target they can see within 2 spaces per the character’s rank. If the target’s powers have costs, the character must pay the highest of them, or a minimum of 10 Focus. On a success, they swap all of their non-Swap powers with the target’s powers. Both characters can now use their new powers as if they had always had them. When either character uses a swapped power, they must pay any cost for it normally as well.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.SwapStatus,
+            Description = "The character swaps status with someone else.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.SwapItems}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character swaps status with a target they can see within 2 spaces per the character’s rank. The character can swap their entire status with the target, or they can be selective about it. Statuses they can swap include:",
+                "- Lost Health",
+                "- Lost Focus",
+                "- Any condition",
+                "- Occupation",
+                "- Traits",
+                "- Tags",
+                "When swapping lost Health or Focus, the character and the target each take their maximum Health or Focus and subtract from it anything that the other person has lost at that moment. The same thing happens when the effect ends. This could potentially kill or shatter someone, so the character should be careful when doing this.",
+                "When swapping occupations, the character gains the target’s position, including their authority and their responsibilities. For instance, if the character swaps occupations with the ruler of a nation, others recognize them as being the ruler for as long as the effect continues.",
+                "When the effect ends, any alterations that have happened to either character swap back to the other. For instance, if one of the characters is killed while the other lives, that would swap when the effect ends. For this reason alone, characters should take extreme care with this power."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {

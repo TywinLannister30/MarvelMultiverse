@@ -60,6 +60,7 @@ public static class PowerNames
     public const string CoveringFire = "Covering Fire";
     public const string CrimsonBandsOfCyttorak = "Crimson Bands of Cyttorak";
     public const string CrushingGrip = "Crushing Grip";
+    public const string CureAll = "Cure-All";
     public const string DampenPower = "Dampen Power";
     public const string DanceOfDeath = "Dance of Death";
     public const string DangerSense = "Danger Sense";
@@ -140,6 +141,7 @@ public static class PowerNames
     public const string GrowingAttack = "Growing Attack";
     public const string Headshot = "Headshot";
     public const string HealingFactor = "Healing Factor";
+    public const string HealingHands = "Healing Hands";
     public const string HeightenedSenses1 = "Heightened Senses 1";
     public const string HeightenedSenses2 = "Heightened Senses 2";
     public const string HellfireChains = "Hellfire Chains";
@@ -172,6 +174,7 @@ public static class PowerNames
     public const string LeapingLeglock = "Leaping Leglock";
     public const string LeechLife = "Leech Life";
     public const string LegSweep = "Leg Sweep";
+    public const string LetsGo = "Let's Go";
     public const string Levitation = "Levitation";
     public const string LightningActions = "Lightning Actions";
     public const string LuckyMe = "Lucky Me";
@@ -181,6 +184,7 @@ public static class PowerNames
     public const string MentalPunch = "Mental Punch";
     public const string MentalShelter = "Mental Shelter";
     public const string MicrodimensionalTravel = "Microdimensional Travel";
+    public const string MicroscopicAwareness = "Microscopic Awareness";
     public const string Mighty1 = "Mighty 1";
     public const string Mighty2 = "Mighty 2";
     public const string Mighty3 = "Mighty 3";
@@ -195,6 +199,7 @@ public static class PowerNames
     public const string MultiversalPortal = "Multiversal Portal";
     public const string MultiversalTravel = "Multiversal Travel";
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
+    public const string NeverSurrender = "Never Surrender";
     public const string OnYourFeet = "On Your Feet";
     public const string OperationsCenter = "Operations Center";
     public const string Orders = "Orders";
@@ -206,7 +211,7 @@ public static class PowerNames
     public const string PhaseWalk = "Phase Walk";
     public const string PointBlankParry = "Point-Blank Parry";
     public const string PossessVehicle = "Possess Vehicle";
-    public const string PowerSliderSerenity = "Power Slider (Serenity)";
+    public const string PowerSlider = "Power Slider";
     public const string PowerfulHex = "Powerful Hex";
     public const string Precognition1 = "Precognition 1";
     public const string Precognition2 = "Precognition 2";
@@ -220,6 +225,7 @@ public static class PowerNames
     public const string RegainFocus = "Regain Focus";
     public const string ReinforcedSkeleton = "Reinforced Skeleton";
     public const string ResizeObject = "Resize Object";
+    public const string Resurrect = "Resurrect";
     public const string ReturnFire = "Return Fire";
     public const string ReverseMomentumThrow = "Reverse-Momentum Throw";
     public const string ReversePunch = "Reverse Punch";
@@ -269,6 +275,10 @@ public static class PowerNames
     public const string Supernova = "Supernova";
     public const string SuppressiveFire = "Suppressive Fire";
     public const string SummonPortal = "Summon Portal";
+    public const string SwapItems = "Swap Items";
+    public const string SwapPlaces = "Swap Places";
+    public const string SwapPowers = "Swap Powers";
+    public const string SwapStatus = "Swap Status";
     public const string TelekineticAttack = "Telekinetic Attack";
     public const string TelekineticBarrier = "Telekinetic Barrier";
     public const string TelekineticGrab = "Telekinetic Grab";
