@@ -12770,6 +12770,96 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Karma",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 2, vigilance: 3, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: $"2 ({PowerNames.Orders}, {PowerNames.TelepathicPossession})"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Dependents, reminder: "Younger siblings (Leong and Nga)"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BorrowSenses),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                        powerSelector.GetPower(PowerNames.TelepathicPossession),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Xuân Cao Manh",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [119],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bionic leg",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.NewMutants, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "When Xuân Cao Manh was just a little girl, her parents were murdered by pirates, leaving her and her three siblings in the custody of their uncle, General Nguyen Coy.",
+                    "Xuân and her twin brother, Trân, were both born with the power to psychically possess other people—a power their uncle sought to exploit for his own nefarious purposes. Xuân feared her powers and refused to go along with her uncle’s plans, but Trân—a sadist at heart—readily agreed.",
+                    "To put a stop to Trân’s crime spree, Xuân had to absorb her brother’s entire psyche. He became a permanent part of her—a dark and proactive counterpart to her own shy and patient nature.",
+                    "She took the codename Karma, and having already proven herself a hero, she was invited by Professor Charles Xavier to join his junior super-hero squad, the New Mutants. In the years since, Karma has done her best to act as a member of—and later on, advisor to—the New Mutants, but her obligations as a caretaker for her two younger siblings have kept her from being as active a member of the team as many of her cohorts."
+                ],
+                Personality =
+                [
+                    "From the moment she absorbed Trân, Xuân was doomed to have a somewhat unstable personality. Depending on the emotional states of the people she possessed, she could be perfectly fine one moment and irrationally angry the next.",
+                    "The founding of Krakoa changed everything for Xuân. For the first time in years, Trân has a body of his own, and Xuân has a mind all her own. She’s been trying to make the best of her newfound freedom by focusing on herself and her relationships, particularly that with her girlfriend, Galura."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Karnak",
             Rank = 4,
             Abilities = new Abilities
@@ -12943,6 +13033,104 @@ public class CharacterSelector(
                     "Pryde numbers among the most charming and friendly people, let alone mutants, on the planet. She has an uncanny knack for connecting with others, even those as gruff as Wolverine (Logan).",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Kid Omega",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 2, vigilance: 8, ego: 4, logic: 8
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance3),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticBarrier),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                        powerSelector.GetPower(PowerNames.TelekineticProtection2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Quintavius Quirinius “Quentin” Quire",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [129],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown, currently dyed pink",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.WestCoastAvengers, TeamNames.XForce],
+                Base = "Krakoa",
+                History =
+                [
+                    "Quentin Quire is an ambitious and talented young telepath. He joined Professor Xavier’s School for Gifted Youngsters during its first year of fully public operations as a school for mutants, and he rapidly distinguished himself as a leader within the mutant student body. Almost overnight, a cultlike following formed around him.",
+                    "Quire was not emotionally prepared for this level of success. The fame went to his head, and soon enough, he started thinking he would be a better headmaster for the school than Professor X. He and his most loyal followers attacked the Professor, declaring themselves the true masters of the institute.",
+                    "The other teachers at the school managed to put Quire’s rebellion down without much effort, but the reputation of “troublemaker” stuck with him, driving him toward further misbehavior, even years afterward. Only recently has he managed to put aside his old ways and learn a bit of humility.",
+                    "As a member of Krakoa’s X-Force, Quire played a critical role in the protection of the island-nation. The older mutants on Krakoa still regard him with suspicion, but many of the island’s younger residents consider him a figure worthy of respect and even admiration."
+                ],
+                Personality =
+                [
+                    "Despite his incredible talents, Quentin Quire is a deeply insecure person. He believes himself to be mostly worthless, and he lives in constant fear that his peers and superiors might come to see him the same way he sees himself. That’s why he’s so eager to take on leadership roles. As long as he’s in charge, people have to respect him.",
+                    "Quire has slowly learned to deal with his insecurities in healthier ways, but the feelings have never entirely left him. He’s still recovering from his breakup with Phoebe Cuckoo, of the Stepford Cuckoos."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
