@@ -3388,6 +3388,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Scatter,
+            Description = "The character warns allies to take evasive action.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.HitTheDirt}, Rank 3",
+            Action = ActionType.Reaction,
+            Trigger = "An enemy in line of sight declares an attack on nan ally within earshot.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "Any allies in earshot can be a­ffected, up to a number equal to the character’s rank. Each a­ ected ally can move away from you at half Speed and then fall prone. If this makes the ally an ineligible target for the initial attack, that attack automatically fails.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.SenseSins,
             Description = "The character can look into a person’s soul.",
             PowerSets = [PowerSetNames.Magic],

@@ -18,6 +18,7 @@ public static class TeamNames
     public const string AtlanteanRoyalFamily = "Atlantean Royal Family";
     public const string Avengers = "Avengers";
     public const string AvengersAcademy = "Avengers Academy";
+    public const string AvengersUnityDivision = "Avengers Unity Division";
     public const string BlackOrder = "Black Order";
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string CaptainBritainCorps = "Captain Britain Corps";

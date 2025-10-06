@@ -233,6 +233,7 @@ public static class PowerNames
     public const string Riposte = "Riposte";
     public const string Rubberneck = "Rubberneck";
     public const string RunOnWater = "Run on Water";
+    public const string Scatter = "Scatter";
     public const string SenseSins = "Sense Sins";
     public const string SenseSupernatural = "Sense Supernatural";
     public const string ShapeShift = "Shape-Shift";

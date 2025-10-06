@@ -5496,6 +5496,17 @@ public class CharacterSelector(
                 },
                 new CharacterPowerSet
                 {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new CharacterPowerSet
+                {
                     Name = PowerSetNames.Tactics,
                     Powers =
                     [
@@ -5507,17 +5518,6 @@ public class CharacterSelector(
                         powerSelector.GetPower(PowerNames.OnYourFeet),
                         powerSelector.GetPower(PowerNames.OperationsCenter),
                         powerSelector.GetPower(PowerNames.RallyOnMe),
-                    ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.MartialArts,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.AttackStance),
-                        powerSelector.GetPower(PowerNames.BraceForImpact),
-                        powerSelector.GetPower(PowerNames.DefenseStance),
-                        powerSelector.GetPower(PowerNames.DoThisAllDay),
                     ],
                 },
             ],
@@ -10085,6 +10085,110 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Havok",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 3, vigilance: 3, ego: 4, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.HitTheDirt),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                        powerSelector.GetPower(PowerNames.RallyOnMe),
+                        powerSelector.GetPower(PowerNames.Scatter),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Alexander “Alex” Summers",
+                Heights = [new() { Feet = 6 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.AvengersUnityDivision, TeamNames.Hellions, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "As a young boy, Alex Summers and his brother Scott were on their family’s small plane when it was attacked by an alien spacecraft. Alex got away largely uninjured, but Scott spent the next several years in a coma. The brothers were not reunited until they were well into their adult years. By that point, Alex had become a budding geophysicist, while Scott had become Cyclops, the leader of the X-Men.",
+                    "Despite his desire to live a normal life, Alex increasingly was drawn further from his studies and closer to the mutant society his brother inhabited. Soon enough, Alex displayed powers of his own—powers that mirrored those of his brother.",
+                    "Alex spent the next several years, on and off, as backup for Scott and the other X-Men. He’s fully capable of taking Scott’s place as team leader, but he prefers to spend most of his time in the background and let his brother handle the more serious threats.",
+                    "Following the founding of Krakoa, Alex agreed to take on a supervisory role with the Hellions, a group composed largely of former super villains."
+                ],
+                Personality =
+                [
+                    "Unlike his brother, Alex has never felt he was meant for super-heroics. He would like nothing more than to live a quiet life in the countryside with his loved ones, but his obligations to the world—and to his brother—have kept him from achieving that dream.",
+                    "At this point, Alex has come to accept that adventuring will be a permanent aspect of his life, but he’s not always happy about it. He’s currently in a long-term relationship with Madelyne Pryor (A.K.A. the Goblin Queen)."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Hawkeye (Clint Barton)",
             Rank = 2,
             Abilities = new Abilities
@@ -10814,6 +10918,118 @@ public class CharacterSelector(
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Hope Summers",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 7, resilience: 4, vigilance: 7, ego: 5, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy4),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FocusedStrike),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CoveringFire),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoostPowers),
+                        powerSelector.GetPower(PowerNames.BumpPower),
+                        powerSelector.GetPower(PowerNames.ClonePowers),
+                        powerSelector.GetPower(PowerNames.CopyAbility),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                        powerSelector.GetPower(PowerNames.DampenPower),
+                        powerSelector.GetPower(PowerNames.ShutDownPowers),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Hope Summers",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [106],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.TheFive, TeamNames.XForce, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "As the first mutant to be born after M-Day, Hope Summers had a target on her back from the moment she opened her eyes. Her parents were killed just days after her birth, a fate from which only the intervention of Cable spared her. Cable and Hope spent the next several years on the run, avoiding potential assassins by hiding out in different points in the timestream. By the time the pair returned to the present, Hope had grown into a mature and combat-ready teenager.",
+                    "After taking on the power of the Phoenix, Hope gave it up to help repower the planet’s mutants. Later, as part of the Five, she helped establish Krakoa’s resurrection protocols, causing Earth’s mutant population to explode.",
+                    "As the head of the Five, Hope was responsible for imbuing the spark of life into every resurrected mutant. From her seat on Krakoa’s governing Quiet Council, she represented the interests of the Five as a whole.",
+                    "Hope’s legendary status as a life-giving mutant has led many mutants to treat her with reverence. The most fanatical of her admirers believe her to be the “Mutant Messiah,” a prophesied savior of all mutantkind."
+                ],
+                Personality =
+                [
+                    "Hope may be more mature and capable than normal human teenagers, but she is still just a teenager. She is energetic, instinctively rebellious and occasionally a bit rude. She dislikes being held up to other people’s standards and finds the religious cult that has formed around her to be more annoying than flattering.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
