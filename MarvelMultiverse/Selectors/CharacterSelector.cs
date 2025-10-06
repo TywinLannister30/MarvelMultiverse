@@ -12144,6 +12144,90 @@ public class CharacterSelector(
             },
             Source = BookSource.TheCataclysmOfKang
         },
+        new()
+        {
+            Name = "Isca The Unbeaten",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 3, vigilance: 3, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Arakkii),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.CannotLose)
+            ],
+            Biography = new Biography
+            {
+                RealName = "Akihiro",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [167],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Retractable bone claws",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.AlphaFlight, TeamNames.Marauders, TeamNames.XFactor],
+                Base = "Mobile",
+                History =
+                [
+                    "After World War II, Wolverine (Logan) moved to a small village in the Japanese countryside, where he met and married a local villager named Itsu. She was on the verge of giving birth to their child when the mutant warlord Romulus ordered her assassination, which was carried out by the then-brainwashed Winter Soldier.",
+                    "Unaware that his child had survived, Wolverine left Japan, and the infant was taken in by a local couple who named him Akihiro. The couple was rich but cold, and they treated his burgeoning powers with disdain. The local kids treated him no better, bullying him with calls of “Daken,” the Japanese word for mongrel.",
+                    "In a fit of teenage rage, Akihiro killed his adoptive mother. He took on the codename Daken and fled into the custody of Romulus to begin training as an assassin. Unaware that his mentor had ordered his mother’s murder, Akihiro spent years working as a hit man for Romulus. These missions eventually brought him into contact with Wolverine, who showed his long-lost son the truth.",
+                    "Together, Akihiro and Wolverine defeated Romulus. Although Akihiro returned to assassination work for a while, Wolverine’s heroic spirit slowly rubbed off on him. He eventually took on a new codename—Fang—and joined Krakoa’s Marauders in their efforts to save mutant refugees."
+                ],
+                Personality =
+                [
+                    "Much like his father, Fang is prone to going berserk. He fights with a combination of rage and raw instinct. In his youth, he spent nearly every moment on the edge of a murderous frenzy. As he’s gotten older, he has developed a soft spot for a select few people—in particular, the other members of the Wolverine family.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
     ];
 
     private List<Character> GetAllCharactersJ() =>

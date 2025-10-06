@@ -19,6 +19,18 @@ public class NarrativePowerSelector : INarrativePowerSelector
     [
         new()
         {
+            Name = NarrativePowerNames.CannotLose,
+            Effect =
+            [
+                "The character cannot lose any challenge or contest in which they participate. This is not the same as winning, so if there is a possibility that they neither win nor lose, that satisfies the conditions of not losing.",
+                "The character must be careful about picking sides in any conflict. Their influence means the side they pick is the one most likely to prevail. However, their power may also compel them to switch sides so they don’t lose, even if that’s not how they would prefer events to transpire. This prevents the character from simply choosing a winner in any conflict.",
+                "The character cannot shut off this power, so it can sometimes feel more like a curse than a blessing."
+            ],
+            Examples = "Isca the Unbeaten",
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = NarrativePowerNames.DNAManipulation,
             Effect =
             [
