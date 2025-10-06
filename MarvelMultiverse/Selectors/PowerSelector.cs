@@ -569,6 +569,18 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.CharmedLife,
+            Description = "The character seems like they were born lucky.",
+            PowerSets = [PowerSetNames.Luck],
+            Prerequsites = "Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "The character gains an edge on any single action check each round. This does not stack with any other edges."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Cloak,
             Description = "The character makes people believe they’re not there.",
             PowerSets = [PowerSetNames.Telepathy],
@@ -898,6 +910,19 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes an Agility check and compares that against the Agility defense of every enemy within 5 spaces and in their line of sight. Each success does half the regular damage. On a Fantastic success, each enemy takes full damage instead and is bleeding.",
             ]
+        },
+        new()
+        {
+            Name = PowerNames.DangerSense,
+            Description = "The character can feel danger on the way.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Precognition1}, Rank 2",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Even if the character doesn’t get a Fantastic result on their initiative check, they get a turn during the bonus round of any combat they are in. This works even if no one else in the combat can act in the bonus round.",
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -1496,6 +1521,22 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.EvilEye,
+            Description = "The character can inflict trouble on those who cross their path.",
+            PowerSets = [PowerSetNames.Luck],
+            Prerequsites = $"{PowerNames.JinxYou}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "5 spaces per rank",
+            Cost = "5 Focus per turn",
+            Effect =
+            [
+                "The character picks a foe in their line of sight. That foe has trouble on all action checks made for the power’s duration. There is no limit on the range between the character and the foe once the power is activated.",
+                "The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working."
+            ]
+        },
+        new()
+        {
             Name = PowerNames.Exploit,
             Description = "The character finds a weak spot and exploits it.",
             PowerSets = [PowerSetNames.MeleeWeapons],
@@ -1598,6 +1639,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego check against the Agility defense of a target in their line of sight. If the attack is a success, it infl icts regular damage. On a Fantastic success, the target takes double damage and then su­ffers 5 points of damage at the end of every round until someone uses an action to put out the flames."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Flare,
+            Description = "The character generates a dazzling flare of light.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.Illumination}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character makes an Ego check and compares that against the Vigilance defense of every enemy within 5 spaces. Each beaten enemy is blinded for one turn. On a Fantastic success, the fl are infl icts regular damage too."
             ],
         },
         new()
@@ -2228,6 +2283,22 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Intuition,
+            Description = "The character has a bad feeling about this.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "When faced with a decision, the character can get a feeling about which choice would be best for them in the long run. When activating this power, the player presents the choice to the Narrator, and the Narrator tells them which choice the intuition is leading the character toward.",
+                "Characters should take care when using this power. What is best for them might not be best for the rest of the team or anyone else they care about. Also, what’s best in the long run might not be best for the character in the short run. In fact, what’s best is often up for interpretation."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerNames.Invisibility,
             Description = "The character turns as transparent as glass.",
             PowerSets = [PowerSetNames.Illusion],
@@ -2252,6 +2323,38 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego check against the target’s Ego defense. If it succeeds, the target has trouble on all actions. On a Fantastic success, the target loses their next standard action.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.JinxYou,
+            Description = "The character can hit you with a jinx.",
+            PowerSets = [PowerSetNames.Luck],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "Reach",
+            Cost = "5 Focus per turn",
+            Effect =
+            [
+                "The character makes a Melee check to touch the target. On a success, the power takes effect, and that foe has trouble on all action checks made for the power’s duration. On a Fantastic success, the target also takes standard (not doubled) Melee damage.",
+                "The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.JinxYouAll,
+            Description = "The character can jinx a whole group of foes at once.",
+            PowerSets = [PowerSetNames.Luck],
+            Prerequsites = $"{PowerNames.EvilEye}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Range = "5 spaces per rank",
+            Cost = "10 Focus per turn",
+            Effect =
+            [
+                "The character picks up to one foe per rank in their line of sight. Those foes have trouble on all action checks made for the power’s duration. There is no limit on the range from the character to their foes once the power is activated.",
+                "The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working."
             ]
         },
         new()
@@ -2390,6 +2493,20 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "Once per round, the character can use a standard action as a reaction or a reaction as a standard action. Additionally, they can turn their Marvel die to a Fantastic success when making an initiative check."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.LuckyMe,
+            Description = "Things are about to go the character’s way.",
+            PowerSets = [PowerSetNames.Luck],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus per turn",
+            Effect =
+            [
+                "The character gains an edge on all action checks made while this power is in effect. The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working.",
             ]
         },
         new()
@@ -2868,6 +2985,76 @@ public class PowerSelector : IPowerSelector
                 "The character casts a hex that allows them to use any other power that they have the rank to use, even if they would not normally meet the power’s other prerequisites. They must pay whatever the regular Focus cost is for that power, plus 5 Focus.",
                 "If the duration of the used power is permanent, it is concentration for the character instead. If the power is a numbered permanent power (like Mighty 3), the Focus cost is 5 times that number instead. (Mighty 3 would cost 15 Focus.)",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.Precognition1,
+            Description = "The character can see the near future.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Intuition}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character gains a sense of what is going to happen to a particular person, place or item within their reach—including themselves—in the next 24 hours. The further out any particular future is, the harder it is for the character to be certain about elements of that future. However, they can sense broad paths. Especially perilous or likely (or worse, both) possibilities stand out like beacons in the night.",
+                "The player can ask the Narrator a single question about the day ahead and get an honest answer based upon what the Narrator thinks is most likely to happen. The Narrator should give short and direct answers without detailed descriptions. It is perfectly fine for the answer to be cryptic and to leave the player with more questions than they started with.",
+                "These answers do not dictate what is fated to happen. They only give hints as to possible futures. The choices the players make and the chances they take have a tremendous impact upon these outcomes.",
+                "Terribly unlikely things happen all the time, which means that the character’s sense of the future is not infallible. However, they are rarely outright wrong.",
+                "This is a great power for a character the Narrator controls. They can use it to lead the players around, give them guidance and perhaps even set them up for a horrible betrayal. The characters, of course, don’t have to believe what a precognitive character tells them and might even openly defy their advice.",
+                "However, this can be an incredibly challenging power to handle as a player. The Narrator shouldn’t spoon-feed details to the player. They should answer the player’s questions in generalities when possible and not offer extra details. If the player isn’t concerned enough about something to ask about it, then it doesn’t occur to the character to consider that particular aspect of the future either.",
+                "If appropriate, the Narrator can state that the future is too uncertain to be determined at any particular moment. This often happens at climactic moments when there are too many possible futures to consider or when the ones available are equally likely to happen. The Narrator should use this option judiciously, though. If the character can’t ever effectively use their power, that’s a sure road to frustration.",
+                "The Narrator can also present the character with visions that the character didn’t ask for. These often happen when something vitally important is destined (or at least likely) to occur that can negatively affect the character or people they care about. This could be a personal crisis or a disaster that’s bound to catch the character up in it. Such visions still cost Focus. They drain the character, even if they were not requested."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.Precognition2,
+            Description = "The character can see the week ahead.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Precognition1}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character gains a sense of what is going to happen to a particular person, place or item within their reach—including themselves—in the next week. Otherwise, this power works the same as Precognition 1.",
+                "Alternatively, the character can consider the fate of something within a mile of their location (rather than within their reach) over the next 24 hours. The character simply closes their eyes and thinks about the thing in question, which must be something they already know about."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.Precognition3,
+            Description = "The character can see the month ahead.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Precognition2}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character gains a sense of what is going to happen to a particular person, place or item within their reach—including themselves—in the next month. Otherwise, this power works the same as Precognition 1.",
+                "Alternatively, the character can consider the fate of something within a mile of their location (rather than within their reach) over the next week, or something within 100 miles of their location over the next 24 hours. The character simply closes their eyes and thinks about the thing in question, which must be something they already know about."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.Precognition4,
+            Description = "The character can see a whole year ahead.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Precognition3}, Rank 5",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "The character gains a sense of what is going to happen to a particular person, place or item within their reach—including themselves—in the next year. Otherwise, this power works the same as Precognition 1.",
+                "Alternatively, the character can consider the fate of something within a mile of their location (rather than within their reach) over the next month, or something within 100 miles of their location over the next week, or something within 1,000 miles of their location over the next 24 hours. The character simply closes their eyes and thinks about the thing in question, which must be something they already know about."
+            ],
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -4179,7 +4366,7 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.UnderstandUnusualCommunication,
+            Name = PowerNames.UnderstandWrittenLanguage,
             Description = "The character can figure out what someone has written.",
             PowerSets = [PowerSetNames.Translation],
             Prerequsites = "None",

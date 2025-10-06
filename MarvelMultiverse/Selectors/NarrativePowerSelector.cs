@@ -29,5 +29,18 @@ public class NarrativePowerSelector : INarrativePowerSelector
             Examples = "Cassandra Nova",
             Source = BookSource.XMenExpansion
         },
+        new()
+        {
+            Name = NarrativePowerNames.InstantEvolution,
+            Effect =
+            [
+                "The character instantly adapts to any threats against them. They develop new powers or abilities that can protect them from the threat. However, they don’t have direct control over how this happens.",
+                "For instance, if trapped in a dark room, they develop the ability to see in the dark. If being shot at, their power might give them bulletproof skin, allow them to turn intangible or perhaps break the gun. It’s up to the Narrator how the power works in any specific situation.",
+                "The power always serves to save the character, but it doesn’t care about other people nearby, whether innocent bystanders or the character’s best friends. If a bomb is about to go off in a room, for example, this power might make the character bomb-proof or perhaps able to stop the bomb, or it might simply teleport them a safe distance away, leaving everyone else in danger.",
+                "Once the specific danger to the character is over, the extra abilities disappear, as they are no longer needed. They never linger, no matter how much the character might want them to."
+            ],
+            Examples = "Darwin",
+            Source = BookSource.XMenExpansion
+        },
     ];
 }

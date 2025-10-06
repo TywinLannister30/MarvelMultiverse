@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System.Runtime.Intrinsics.X86;
 
 namespace MarvelMultiverse.Selectors;
 
@@ -5590,7 +5591,7 @@ public class CharacterSelector(
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.Telepathy,
+                    Name = PowerSetNames.Translation,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.DetectLie),
@@ -5881,6 +5882,191 @@ public class CharacterSelector(
         },
         new()
         {
+            Name = "Darwin",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 3, vigilance: 4, ego: 3, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.HitTheDirt),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                }
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.InstantEvolution)
+            ],
+            Biography = new Biography
+            {
+                RealName = "Armando Muñoz",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [150],
+                Gender = Gender.Male,
+                Eyes = "No irises",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XFactor, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Unable to cope with their mutant son’s strange appearance, Armando Muñoz’s mother sent him off to boarding school, and his father left the family altogether. Muñoz was bullied relentlessly by his fellow students, and the adults in his life treated him little better. They endlessly studied his strange abilities and eventually began to publish papers on his powers.",
+                    "These papers brought Muñoz to the attention of Moira MacTaggert, who invited him to the Xavier Institute, where he could learn to use his powers alongside other young mutants. Muñoz was among the ill-fated first group of mutants sent to retrieve the original X-Men from Krakoa. The mission was a disaster, with most of the untested team killed and the rest blasted into orbit. Muñoz only survived by merging himself with his teammate Vulcan.",
+                    "It took years for Muñoz and Vulcan to return to Earth and separate. The experience drove Vulcan half insane, but Muñoz coped better. He rejoined the X-Men and later accepted a position with X-Factor Investigations.",
+                    "Early in the Krakoan era, Muñoz and a handful of other X-Men were trapped inside a time bubble called the Vault. Muñoz seemingly died during this incident, and a replica of him was resurrected on Krakoa. However, a later investigation revealed that his mind had survived by merging with the Vault’s computers."
+                ],
+                Personality =
+                [
+                    "Darwin can adapt to handle just about anything, but that doesn’t mean he always enjoys every situation. He’s a soft-spoken guy who would generally prefer a simple night at home to an adventure across the cosmos.",
+                    "In that way, merging with the Vault was good for him. As a digital construct, he has endless time to relax and experiment. His newer version lives on in his stead."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Dazzler",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 5, resilience: 2, vigilance: 4, ego: 7, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline3),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption, reminder: "applies only to sonic damage"),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimatedIllusion),
+                        powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.Flare),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                        powerSelector.GetPower(PowerNames.StaticIllusion),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Alison “Ali” Blaire",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Excalibur, TeamNames.SHIELD, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "During a performance at a high-school talent contest, Ali Blaire’s body began to emit dazzling lights. These lights helped Blaire not only wow her classmates but also drive off a group of rowdy bikers who attacked her school later that same night.",
+                    "The incident left such an impact on Blaire that she rededicated herself to achieving her childhood dream of becoming a successful singer. She left home and got a regular gig performing at a club under the stage name of Dazzler.",
+                    "Blaire’s fantastic, superhuman performances quickly drew the attention of mutant groups, both good and evil, who tried to recruit her into their ranks. Although she was initially uninterested in a life of adventure, her innate sense of justice and her impeccable knack for getting into tricky situations inevitably drew her into a life of super-heroics.",
+                    "Over the years, Blaire has been a valued member of both the X-Men and S.H.I.E.L.D. She’s currently put most of her regular heroics aside to focus on her music, but she still finds the time to lend a helping hand now and again. Her son, Shatterstar, and her one-time husband, Longshot, are important mutant heroes in their own rights."
+                ],
+                Personality =
+                [
+                    "Frequently hailed as the world’s greatest mutant performer, Blaire’s presence on stage is positively electric. It would be easier to count the mutants on Earth who haven’t, in some way, been charmed by her.",
+                    "However, like a lot of stars, her life offstage is often a wreck. She considers herself lucky if she can get through a night with friends without getting caught up in one adventure or another."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = "Deadpool",
             Rank = 4,
             Abilities = new Abilities
@@ -6165,6 +6351,95 @@ public class CharacterSelector(
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Destiny",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 2, vigilance: 4, ego: 2, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: $"2 ({PowerNames.Precognition4})"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.VisionIssues),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SixthSense,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DangerSense),
+                        powerSelector.GetPower(PowerNames.Intuition),
+                        powerSelector.GetPower(PowerNames.Precognition4),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Irene Adler",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [110],
+                Gender = Gender.Female,
+                Eyes = "Gray-white irises due to blindness",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.QuietCouncilOfKrakoa],
+                Base = "Krakoa",
+                History =
+                [
+                    "Born into a noble family during the late Victorian era, Irene Adler enjoyed a quiet and privileged upbringing. Then, at the age of 13, her precognitive powers suddenly activated. She spent the next thirteen months in a delirious haze, transcribing the details of every possible future she could see. The effort eventually drove her blind.",
+                    "Years later, Adler hired a detective named Raven Darkhölme (Mystique) to help make sense of her scribbled predictions. The pair hit it off and quickly became partners, first in the detective business and then, later on, in love.",
+                    "They had a child, Nightcrawler (Kurt Wagner), who tragically disappeared shortly after his birth. Decades later, they adopted a young Rogue (Anna Marie LeBeau) as their surrogate daughter.",
+                    "Determined to fight for the rights of mutantkind, Destiny, Mystique and Rogue helped found major incarnations of both the Brotherhood of Evil Mutants and Freedom Force. However, toward the end of Freedom Force’s tenure, Destiny died in battle.",
+                    "Recently, and in spite of a secret ban on the resurrection of precogs on Krakoa, Mystique tricked the Five into reviving Destiny in a younger body. She and Mystique have spent most of the period since working closely together, making up for lost time."
+                ],
+                Personality =
+                [
+                    "Destiny’s ability to predict the future grants her the confidence to tackle just about any situation—confidence that is, more often than not, justified. She has a mind for planning ahead, which makes the greatest human tacticians in the world look like children playing checkers.",
+                    "If she has a flaw, it is a penchant for being overly protective of her family. She wouldn’t hesitate to trade the lives of every last human on Earth if it increased the chances of Rogue and Mystique living a few extra years."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()
         {
@@ -6571,6 +6846,108 @@ public class CharacterSelector(
                     "Even back in his surgeon days, Stephen Strange was known for his haughty and cold personality. He has since learned several lessons in humility, and he’s developed a soft spot for his closest allies, particularly his wife, Clea.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Domino",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 6, resilience: 3, vigilance: 4, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Leverage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Luck,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CharmedLife),
+                        powerSelector.GetPower(PowerNames.EvilEye),
+                        powerSelector.GetPower(PowerNames.JinxYou),
+                        powerSelector.GetPower(PowerNames.JinxYouAll),
+                        powerSelector.GetPower(PowerNames.LuckyMe),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Neena Thurman",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [120],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black with white streak",
+                Size = Size.Average,
+                DistinguishingFeatures = "Unnaturally pale skin with a black “domino” tattoo over left eye",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XForce],
+                Base = "Krakoa",
+                History =
+                [
+                    "Tossed out of a twisted Super-Soldier program for being insufficiently powerful, Neena Thurman grew up in a stifling church orphanage without any knowledge of her background or her mutant status. A delinquent at heart, she ran away in her teenage years to make a name for herself as a mercenary.",
+                    "She spent some time working for the National Security Agency, where her uncanny ability to tip the odds in her team’s favor earned her the codename Domino. After bouncing between a few other organizations, she found true companionship for the first time as a part of the Wild Pack, a mutant mercenary group run by Cable. Domino and Cable struck up a brief romance, and though it ended poorly, she eventually agreed to join Cable in his next venture, X-Force.",
+                    "Since then, Domino has consistently been a key member of X-Force. Although she has occasionally left the team to engage in independent mercenary work, she always finds a way back. Of the original X-Force lineup, Domino was the only one still on the team in the Krakoan era. Few mutants can credibly claim to have seen as much field combat as her.",
+                ],
+                Personality =
+                [
+                    "Above all else, Domino is a thrill seeker, and her mutant luck means that she can comfortably seek thrills that would certainly kill anyone else. Her comfort zone lies somewhere between dodging bullets and jumping from an airplane without a parachute.",
+                    "Despite the insanity of her life, Domino is not a jaded and hardened mercenary like Cable. She’s lively, sociable and an ideal party guest."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
         new()  
         {
@@ -7083,6 +7460,102 @@ public class CharacterSelector(
                     "As Drax began as a moody person bent on vengeance. While he can still be dire and serious when on a mission, he has lightened up a great deal over the years and come to enjoy fi ghting for the sheer thrill of it. He has a dark, off-beat sense of humor rooted in the fact that he has only a rudimentary understanding of society, how jokes work and what most people would consider terrifying.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Dust",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 3, resilience: 2, vigilance: 3, ego: 6, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Water"),
+                traitSelector.GetTrait(TraitNames.Leverage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEarth,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BodySheet),
+                        powerSelector.GetPower(PowerNames.BodySphere),
+                        powerSelector.GetPower(PowerNames.CoilingCrush),
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Sooraya Qadir",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [136],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Champions, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "When she was just a teenager, Sooraya Qadir was taken from her home in Afghanistan and sold to a group of mercenary slavers. Thankfully, she would not have to suffer in their clutches for long.",
+                    "One night, before bed, Qadir made a wish upon a star. She prayed to be turned into a cloud so that she might float away from her life in captivity. She awoke to find that her wish had been granted and that the winds had already carried her halfway to the Afghan/Pakistani border. The mutant hero Wolverine (Logan) spotted Qadir trying to cross the border and, correctly deducing that she was a mutant, offered to take her to Charles Xavier’s School for Gifted Youngsters in America. Qadir took the deal and spent the next few years studying at Xavier’s facility, making friends and learning how to utilize her powers.",
+                    "After graduation, Qadir joined up with the teen super-hero group known as the Champions. These days, she splits her time between acting as a backup member of the Champions and helping out her old friends on Krakoa.",
+                ],
+                Personality =
+                [
+                    "Qadir is a focused combatant and a capable commander, both on and off the field of battle. She speaks clearly and loudly, drawing her teammates toward the positions where they would be the most useful. She isn’t the type to goof off or joke around.",
+                    "In accordance with Islamic tradition, Qadir wears an abaya dress with a niqab veil at almost all times. However, she observes this tradition less out of a sense of religious devotion and more out of a sense of fashion. She thinks the dress makes her look humble and distinguished."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
     ];
 

@@ -38,6 +38,7 @@ public static class PowerNames
     public const string CatchBullets = "Catch Bullets";
     public const string ChainStrikes = "Chain Strikes";
     public const string ChangeOfPlans = "Change of Plans";
+    public const string CharmedLife = "Charmed Life";
     public const string Cloak = "Cloak";
     public const string CloakGroup = "Cloak Group";
     public const string Clobber = "Clobber";
@@ -61,6 +62,7 @@ public static class PowerNames
     public const string CrushingGrip = "Crushing Grip";
     public const string DampenPower = "Dampen Power";
     public const string DanceOfDeath = "Dance of Death";
+    public const string DangerSense = "Danger Sense";
     public const string Dazzle = "Dazzle";
     public const string DefenseStance = "Defense Stance";
     public const string DetectLie = "Detect Lie";
@@ -102,6 +104,7 @@ public static class PowerNames
     public const string EnvironmentalProtection = "Environmental Protection";
     public const string ESP = "ESP";
     public const string Evasion = "Evasion";
+    public const string EvilEye = "Evil Eye";
     public const string Exploit = "Exploit";
     public const string ExtendInvisibility = "Extend Invisibility";
     public const string ExtendedReach1 = "Extended Reach 1";
@@ -110,6 +113,7 @@ public static class PowerNames
     public const string FastHands = "Fast Hands";
     public const string FastStrikes = "Fast Strikes";
     public const string FlamesOfTheFaltine = "Flames of the Faltine";
+    public const string Flare = "Flare";
     public const string FlexibleBones1 = "Flexible Bones 1";
     public const string FlexibleBones2 = "Flexible Bones 2";
     public const string FlexibleFingers = "Flexible Fingers";
@@ -153,10 +157,13 @@ public static class PowerNames
     public const string Inspiration = "Inspiration";
     public const string InstantReplay = "Instant Replay";
     public const string Integrity = "Integrity";
+    public const string Intuition = "Intuition";
     public const string Invisibility = "Invisibility";
     public const string ImagesOfIkonn = "Images of Ikonn";
     public const string Immovable = "Immovable";
     public const string Jinx = "Jinx";
+    public const string JinxYou = "Jinx You";
+    public const string JinxYouAll = "Jinx You All";
     public const string Jump1 = "Jump 1";
     public const string Jump2 = "Jump 2";
     public const string Jump3 = "Jump 3";
@@ -167,6 +174,7 @@ public static class PowerNames
     public const string LegSweep = "Leg Sweep";
     public const string Levitation = "Levitation";
     public const string LightningActions = "Lightning Actions";
+    public const string LuckyMe = "Lucky Me";
     public const string MachineTelepathy = "Machine Telepathy";
     public const string MacrodimensionalTravel = "Macrodimensional Travel";
     public const string MemoryBlip = "Memory Blip";
@@ -200,6 +208,10 @@ public static class PowerNames
     public const string PossessVehicle = "Possess Vehicle";
     public const string PowerSliderSerenity = "Power Slider (Serenity)";
     public const string PowerfulHex = "Powerful Hex";
+    public const string Precognition1 = "Precognition 1";
+    public const string Precognition2 = "Precognition 2";
+    public const string Precognition3 = "Precognition 3";
+    public const string Precognition4 = "Precognition 4";
     public const string ProbabilityManipulationHex = "Probability-Manipulation Hex";
     public const string ProtectionHex = "Protection Hex";
     public const string QuickPhase = "Quick Phase";
