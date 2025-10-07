@@ -2104,6 +2104,75 @@ public class CharactersM
             },
             Source = BookSource.TheCataclysmOfKang
         },
+           new()
+        {
+            Name = "Moira MacTaggert",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 0, resilience: 1, vigilance: 1, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Community"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.Restart)
+            ],
+            Biography = new Biography
+            {
+                RealName = "Moira Ann Kinross MacTaggert",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Educator],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Orchis, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "When she was 13 years old, Moira MacTaggert gained the mutant power of reincarnation. The moment she dies, she returns to the start of her life, with her memories of her previous lives intact. MacTaggert spent her first life blissfully unaware of her powers, but once she realized what was happening, she spent her next eight lives playing mutants and machine life-forms, like Sentinels, off each other, searching for a future where she could live in peace.",
+                    "Finally, in her tenth life, MacTaggert came up with the idea for a mutant nation on the island of Krakoa. She sought out Professor X and spent the next several years working with him, all the while manipulating events and individuals to prepare the way for Krakoa. To maintain secrecy, she eventually faked her death and went into hiding, revealing the truth to only a handful of mutant leaders.",
+                    "MacTaggert’s role in Krakoa’s foundation did not become widely known until over a year later, when Destiny and Mystique dragged her out of hiding and forcibly depowered her. Having lost faith in Krakoa’s future, Moira switched sides. She uploaded her mind to a cybernetic body and began working to destroy Krakoa instead."
+                ],
+                Personality =
+                [
+                    "The weight of so many tragic lifetimes has made Moira MacTaggert cold. She no longer cares about mutants or machines. She just wants a world where she can live without interference.",
+                    "Although she had a few romantic relationships in her tenth life, they never lasted. She learned long ago to maintain no strong attachments. Even her son, Proteus, has not seen her in some time."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
         new()
         {
             Name = "Moon Girl",

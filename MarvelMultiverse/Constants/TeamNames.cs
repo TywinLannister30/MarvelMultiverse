@@ -103,6 +103,7 @@ public static class TeamNames
     public const string NYPD = "NYPD";
     public const string OlympusGroup = "Olympus Group";
     public const string OmegaFlight = "Omega Flight";
+    public const string Orchis = "Orchis";
     public const string PantherCult = "Panther Cult";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
     public const string PetAvengers = "Pet Avengers";

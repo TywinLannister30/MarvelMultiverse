@@ -54,5 +54,19 @@ public class NarrativePowerSelector : INarrativePowerSelector
             Examples = "Darwin",
             Source = BookSource.XMenExpansion
         },
+        new()
+        {
+            Name = NarrativePowerNames.Restart,
+            Effect =
+            [
+                "When the character dies, the entire timeline restarts from the moment of their first consciousness, and they retain the memories from their previous lives. This gives them the chance to start over multiple times, although they have to live through those years in real time.",
+                "There may be a limit to the number of times the character can restart, but they might not know it. A character with precognition might be able to tell how many lives are ahead of them—or perhaps just give a range—but there’s no way to know for sure. It could be that they’ll restart their lives indefinitely, or their present life could be their last one.",
+                "There’s only so much that one person can do when facing the grand sweep of history, but even one life’s knowledge can give a character a huge advantage for improving their personal situation. It’s easy to build wealth when you know what the future brings.",
+                "This power should be used rarely, if at all. If the players go through an entire adventure only to have the timeline get reset out of the blue, they might feel like they’ve been cheated. On the other hand, if the point of an adventure is to reset a timeline to prevent a horrible thing from happening, that could transform it from a rug-pull into a moment of triumph.",
+                "The Restart power supposedly demolishes the timeline that the previous life took place in. However, that doesn’t mean the old timelines no longer exist in the Multiverse. Every time a character with this power dies and restarts, there’s a universe out there somewhere in which the character didn’t have the power—or one in which the power finally failed—and such places can be reached by those traveling the Multiverse."
+            ],
+            Examples = "Moira MacTaggert",
+            Source = BookSource.XMenExpansion
+        },
     ];
 }
