@@ -2173,7 +2173,7 @@ public class CharactersM
             },
             Source = BookSource.XMenExpansion
         },
-		   new()
+		new()
 		{
 			Name = "Mojo",
 			Rank = 4,
@@ -2208,23 +2208,56 @@ public class CharactersM
 					Name = PowerSetNames.Basic,
 					Powers =
 					[
-						powerSelector.GetPower(PowerNames.AdditionalLimbs),
+						powerSelector.GetPower(PowerNames.AdditionalLimbs, isTech: true),
 						powerSelector.GetPower(PowerNames.Uncanny2),
 					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.ElementControlEnergy,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.ElementalBlast),
+						powerSelector.GetPower(PowerNames.ElementalBurst),
+					],
+                    IsTech = true
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.Illusion,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.AnimatedIllusion),
+						powerSelector.GetPower(PowerNames.GrandIllusion),
+						powerSelector.GetPower(PowerNames.Illumination),
+						powerSelector.GetPower(PowerNames.StaticIllusion),
+					],
+					IsTech = true
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.PowerControl,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Media Popularity"),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.SpiderPowers,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.Wallcrawling),
+					],
+                    IsTech = true
 				},
 				new CharacterPowerSet
 				{
 					Name = PowerSetNames.Telekinesis,
 					Powers =
 					[
-						powerSelector.GetPower(PowerNames.Levitation),
 						powerSelector.GetPower(PowerNames.TelekineticAttack),
-						powerSelector.GetPower(PowerNames.TelekineticBarrier),
-						powerSelector.GetPower(PowerNames.TelekineticGrab),
 						powerSelector.GetPower(PowerNames.TelekineticManipulation),
-						powerSelector.GetPower(PowerNames.TelekineticProtection2),
-						powerSelector.GetPower(PowerNames.TelekineticReinforcement),
-						powerSelector.GetPower(PowerNames.TelekineticSphere),
 					],
 				},
 				new CharacterPowerSet
@@ -2232,51 +2265,40 @@ public class CharactersM
 					Name = PowerSetNames.Telepathy,
 					Powers =
 					[
-						powerSelector.GetPower(PowerNames.AstralForm),
-						powerSelector.GetPower(PowerNames.Cloak),
-						powerSelector.GetPower(PowerNames.CloakGroup),
 						powerSelector.GetPower(PowerNames.Command),
-						powerSelector.GetPower(PowerNames.Domination),
-						powerSelector.GetPower(PowerNames.EditMemory),
-						powerSelector.GetPower(PowerNames.MemoryBlip),
-						powerSelector.GetPower(PowerNames.MentalShelter),
-						powerSelector.GetPower(PowerNames.MindInterrogation),
-						powerSelector.GetPower(PowerNames.MindReading),
-						powerSelector.GetPower(PowerNames.Orders),
+						powerSelector.GetPower(PowerNames.MachineTelepathy ,isTech: true),
 						powerSelector.GetPower(PowerNames.TelepathicBlast),
 						powerSelector.GetPower(PowerNames.TelepathicLink),
-						powerSelector.GetPower(PowerNames.TelepathicNetwork),
-						powerSelector.GetPower(PowerNames.TelepathicPossession),
 					],
 				},
 			],
 			Biography = new Biography
 			{
-				RealName = "Jean Grey-Summers",
-				Heights = [new() { Feet = 5, Inches = 6 }],
-				Weights = [130],
-				Gender = Gender.Female,
-				Eyes = "Green",
-				Hair = "Red",
-				Size = Size.Average,
-				DistinguishingFeatures = "None",
-				Occupations = [OccupationName.Adventurer],
-				Origins = [OriginName.Mutant],
-				Teams = [TeamNames.XForce, TeamNames.XMen],
-				Base = "Mobile",
+				RealName = "Mojo",
+				Heights = [new() { Feet = 6, Inches = 9 }],
+				Weights = [512],
+				Gender = Gender.Male,
+				Eyes = "Yellow eyes with orange irises and black pupils",
+				Hair = "Cords resembling hair attached to head",
+				Size = Size.Big,
+				DistinguishingFeatures = "Bright yellow skin, twisted smile, spiderlike cybernetic legs, slender four-fingered hands",
+				Occupations = [OccupationName.Entertainer, OccupationName.Leader],
+				Origins = [OriginName.Alien, OriginName.HighTechCybernetics],
+				Teams = [],
+				Base = "Mojoworld",
 				History =
 				[
-					"Jean Grey’s mutant psychic abilities awakened when she was just 10 years old, after she witnessed her best friend die in a hit-and-run. With Jean traumatized and unable to control her nascent powers, her parents did the only thing they could think of. They entered her into the care of psychic professor Charles Xavier, better known as Professor X.",
-					"Not long thereafter, Xavier formed the original X-Men and installed Grey as a founding member, under the codename Marvel Girl. In the years since, Grey has become one of the most famous and powerful mutants—if not heroes—in existence. Along with the rest of the X-Men, she has fought against existential threats to the universe itself.",
-					"Additionally, Grey has hosted the Phoenix Force, an ineffable entity of light and fire older than the cosmos. Although the Phoenix Force has currently bound itself to another, Grey remains extremely powerful.",
-					"Two of Grey’s future children that she has yet to have with Cyclops (Scott Summers)—who she is in a long-term relationship with—have become X-Men on their own: Rachel Summers and X-Man (Nate Grey)."
+					"Mojo is one of a number of monstrous Spineless Ones, beings who inhabit the Mojoverse, a dimension outside regular time and space. As the supreme leader of Mojoworld, Mojo rules over a race of genetically engineered slaves. For untold years, he abused these slaves for his own amusement, forcing them into dire, life-or-death situations and filming the results for use in a series of sick and twisted TV shows.",
+					"Then Longshot, one of Mojo’s slaves, rose up and rebelled against the Spineless Ones. Faced with overwhelming opposition from Mojo and his lackeys, Longshot fled to Earth-616, where he joined forces with the X-Men.",
+					"Intrigued by the mutants and enticed by the prospect of making them into a spectacle, Mojo began to include the X-Men in his sadistic schemes. Over the years, he has captured Longshot and his mutant allies dozens of times and forced them to participate in one of his depraved television programs. Each time, they eventually found a way to escape.",
+					"Although Mojo has, at times, been temporarily deposed, he has always managed to return to power and set rebel plans back to square one."
 				],
 				Personality =
 				[
-					"Grey’s powers are limited by her ability to control her mental state. She has rarely been completely stable on a psychic level, and repeatedly acting as the host of the sentient Phoenix Force has only served to further damage her. When she is stable, though, Grey is known for her kind and caring nature. Grey’s teammates have long been a driving force in helping her to maintain her sanity, particularly Cyclops.",
+					"The term narcissist does not even begin to scratch the surface of Mojo’s self-absorbed insanity. He not only believes himself to be the center of the universe—he believes he is the only being of any value whatsoever across all of existence. He has a nasty habit of engraving his face onto other people and places, only to destroy them the moment he decides they are unworthy of his visage.",
 				]
 			},
-			Source = BookSource.TheCataclysmOfKang
+			Source = BookSource.XMenExpansion
 		},
 		new()
         {
@@ -2628,7 +2650,110 @@ public class CharactersM
                 ]
             }
         },
-        new()
+		new()
+		{
+			Name = "Multiple Man",
+			Rank = 3,
+			Abilities = new Abilities
+			(
+				melee: 3, agility: 2, resilience: 2, vigilance: 3, ego: 3, logic: 2
+			),
+			Traits =
+			[
+				traitSelector.GetTrait(TraitNames.Connections, reminder: "Police"),
+				traitSelector.GetTrait(TraitNames.Connections, reminder: "Super Heroes"),
+				traitSelector.GetTrait(TraitNames.Dealmaker),
+				traitSelector.GetTrait(TraitNames.ExtraOccupation),
+				traitSelector.GetTrait(TraitNames.Fearless),
+				traitSelector.GetTrait(TraitNames.Interrogation),
+				traitSelector.GetTrait(TraitNames.Investigation),
+				traitSelector.GetTrait(TraitNames.TechReliance),
+			],
+			Tags =
+			[
+				tagSelector.GetTag(TagNames.BlackMarketAccess),
+				tagSelector.GetTag(TagNames.EarlyBloomer),
+				tagSelector.GetTag(TagNames.Heroic),
+				tagSelector.GetTag(TagNames.Hounded),
+				tagSelector.GetTag(TagNames.Krakoan),
+				tagSelector.GetTag(TagNames.PublicIdentity),
+				tagSelector.GetTag(TagNames.XGene),
+			],
+			Powers =
+			[
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.Basic,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.Inspiration),
+						powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.MartialArts,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.AttackStance),
+						powerSelector.GetPower(PowerNames.ChainStrikes),
+						powerSelector.GetPower(PowerNames.DefenseStance),
+						powerSelector.GetPower(PowerNames.FastStrikes),
+						powerSelector.GetPower(PowerNames.GrapplingTechnique),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.MeleeWeaponsBlunt,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.FastAttacks),
+						powerSelector.GetPower(PowerNames.HitAndRun),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.RangedWeapons,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.DoubleTap),
+						powerSelector.GetPower(PowerNames.SnapShooting),
+					],
+				},
+			],
+            NarrativePowers = 
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.DuplicateSelf)
+            ],
+			Biography = new Biography
+			{
+				RealName = "Mojo",
+				Heights = [new() { Feet = 6, Inches = 9 }],
+				Weights = [512],
+				Gender = Gender.Male,
+				Eyes = "Yellow eyes with orange irises and black pupils",
+				Hair = "Cords resembling hair attached to head",
+				Size = Size.Big,
+				DistinguishingFeatures = "Bright yellow skin, twisted smile, spiderlike cybernetic legs, slender four-fingered hands",
+				Occupations = [OccupationName.Entertainer, OccupationName.Leader],
+				Origins = [OriginName.Alien, OriginName.HighTechCybernetics],
+				Teams = [],
+				Base = "Mojoworld",
+				History =
+				[
+					"Mojo is one of a number of monstrous Spineless Ones, beings who inhabit the Mojoverse, a dimension outside regular time and space. As the supreme leader of Mojoworld, Mojo rules over a race of genetically engineered slaves. For untold years, he abused these slaves for his own amusement, forcing them into dire, life-or-death situations and filming the results for use in a series of sick and twisted TV shows.",
+					"Then Longshot, one of Mojo’s slaves, rose up and rebelled against the Spineless Ones. Faced with overwhelming opposition from Mojo and his lackeys, Longshot fled to Earth-616, where he joined forces with the X-Men.",
+					"Intrigued by the mutants and enticed by the prospect of making them into a spectacle, Mojo began to include the X-Men in his sadistic schemes. Over the years, he has captured Longshot and his mutant allies dozens of times and forced them to participate in one of his depraved television programs. Each time, they eventually found a way to escape.",
+					"Although Mojo has, at times, been temporarily deposed, he has always managed to return to power and set rebel plans back to square one."
+				],
+				Personality =
+				[
+					"The term narcissist does not even begin to scratch the surface of Mojo’s self-absorbed insanity. He not only believes himself to be the center of the universe—he believes he is the only being of any value whatsoever across all of existence. He has a nasty habit of engraving his face onto other people and places, only to destroy them the moment he decides they are unworthy of his visage.",
+				]
+			},
+			Source = BookSource.XMenExpansion
+		},
+		new()
         {
             Name = "Mysterio (Quentin Beck)",
             Rank = 2,

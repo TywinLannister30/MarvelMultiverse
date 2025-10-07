@@ -10,7 +10,26 @@ public class NarrativePowerSelector : INarrativePowerSelector
         return GetAllNarrativePowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
     }
 
-    public List<NarrativePower> GetNarrativePowers()
+	public NarrativePower GetNarrativePower(string name, string specialization = null, string reminder = null)
+	{
+		var staticPower = GetAllNarrativePowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
+
+		var power = staticPower.Clone() as NarrativePower;
+
+		if (!string.IsNullOrEmpty(specialization))
+		{
+			power.Name += $": {specialization}";
+		}
+
+		if (!string.IsNullOrEmpty(reminder))
+		{
+			power.Name += $" ({reminder})";
+		}
+
+		return trait;
+	}
+
+	public List<NarrativePower> GetNarrativePowers()
     {
         return GetAllNarrativePowers();
     }
@@ -41,7 +60,27 @@ public class NarrativePowerSelector : INarrativePowerSelector
             Examples = "Cassandra Nova",
             Source = BookSource.XMenExpansion
         },
-        new()
+		new()
+		{
+			Name = NarrativePowerNames.DuplicateSelf,
+			Effect =
+			[
+				"With this power the character can make copies of themself. The duplicates are full-fledged, identical copies of the original person, including all of their current clothing. They are indistinguishable from the original, right down to the genetic level.",
+				"The number of duplicates a character can have is theoretically unlimited. As a practical matter, though, characters with this power prefer to keep track of their duplicates and don’t go to outrageous lengths with their numbers.",
+				"While duplicates generally take orders from the character, they are independent people who may balk at doing things they would find painful or distasteful. Often, a duplicate highlights an aspect of the character’s personality, for good or bad, so they may act differently than the original would.",
+				"There is no limit to the amount of time a duplicate can exist. They can operate entirely independently and can even have their own adventures throughout the Multiverse.",
+				"The character has no direct control over their duplicates. They can generally trust them to work together, help the character and execute the character’s plans, but there can be exceptions. The character and the duplicates always know who the original character is, although others may have a hard time telling them apart.",
+				"The character can absorb their duplicates back into their body. If the character or the duplicate has lost Health or Focus points, the original winds up with the average of their numbers when they absorb the duplicate. Absorbing injured duplicates can harm the character, but the converse is also true. Absorbing healthy duplicates can heal the character.",
+				"When the character absorbs a duplicate, they gain all of the duplicate’s memories. This includes any tags the duplicate may have gained on their own. In the case of conflicting tags, the character’s tags normally take precedence over the duplicate’s, although it’s up to the Narrator to determine exactly how. On top of that, the character might have to deal with the consequences of their duplicate’s actions, for good or ill.",
+				"The character cannot absorb the memories of a dead duplicate. Attempting to do so only traumatizes the character, knocking them down to 1 Focus.",
+				"The duplicates can also make duplicates, but only the original character can absorb any of the duplicates, no matter their source. Duplicates usually don’t mind being absorbed, but some rare ones may refuse to go quietly and may even harbor deep resentment against the character and wish to harm them.",
+				"Characters with this power have a trigger that activates it. When the trigger happens—and only when the trigger happens—the power automatically activates, whether they wish it to or not.",
+				"Similarly, they must define their trigger to absorb duplicates. When this trigger happens, they must absorb the affected duplicate, whether they wish to or not.",
+			],
+			Examples = "Multiple Man",
+			Source = BookSource.XMenExpansion
+		},
+		new()
         {
             Name = NarrativePowerNames.InstantEvolution,
             Effect =
