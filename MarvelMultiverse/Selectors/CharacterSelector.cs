@@ -63,7 +63,7 @@ public class CharacterSelector(
         allCharacters.AddRange(CharactersL.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersM.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersN.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
-        allCharacters.AddRange(GetAllCharactersO());
+        allCharacters.AddRange(CharactersO.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(GetAllCharactersP());
         allCharacters.AddRange(GetAllCharactersQ());
         allCharacters.AddRange(GetAllCharactersR());
@@ -74,91 +74,6 @@ public class CharacterSelector(
         allCharacters.AddRange(GetAllCharactersW());
         return allCharacters;
     }
-
-    private List<Character> GetAllCharactersO() =>
-    [
-        new()
-        {
-            Name = "Okoye",
-            Rank = 2,
-            Abilities = new Abilities
-            (
-                melee: 4, agility: 1, resilience: 2, vigilance: 1, ego: 1, logic: 1
-            ),
-            Traits =
-            [
-                traitSelector.GetTrait(TraitNames.BattleReady),
-                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Dora Milaje)"),
-                traitSelector.GetTrait(TraitNames.Determination),
-                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
-                traitSelector.GetTrait(TraitNames.Presence),
-                traitSelector.GetTrait(TraitNames.SituationalAwareness),
-                traitSelector.GetTrait(TraitNames.TechReliance),
-            ],
-            Tags =
-            [
-                tagSelector.GetTag(TagNames.Backup, reminder: "Dora Milaje"),
-                tagSelector.GetTag(TagNames.Heroic),
-                tagSelector.GetTag(TagNames.PublicIdentity),
-
-            ],
-            Powers =
-            [
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Basic,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.Inspiration),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
-                    ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.MeleeWeaponsSharp,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Exploit),
-                        powerSelector.GetPower(PowerNames.FastAttacks),
-                        powerSelector.GetPower(PowerNames.ViciousAttack),
-                    ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Tactics,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.KeepMoving),
-                    ],
-                },
-            ],
-            Biography = new Biography
-            {
-                RealName = "Okoye",
-                Heights = [new() { Feet = 5, Inches = 7 }],
-                Weights = [110],
-                Gender = Gender.Female,
-                Eyes = "Brown",
-                Hair = "Bald",
-                Size = Size.Average,
-                DistinguishingFeatures = "Wakandan tribal tattoos",
-                Occupations = [OccupationName.Military],
-                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
-                Teams = [TeamNames.DoraMilaje],
-                Base = "Wakanda",
-                History =
-                [
-                    "Renowned for her capabilities as a warrior, Okoye was personally selected by the Black Panther (T’Challa) to be the head of his personal guard: the Dora Milaje. There is no one among the Dora Milaje who the Panther trusts more than Okoye. She assists him in nearly all of his heroic exploits, and she has personally put down rebellions against his government.",
-                    "Due to her skills and her loyalty, Okoye helped found and became the director of the Agents of Wakanda, a team of heroes organized to support the Avengers during the Black Panther’s time as their leader.",
-                ],
-                Personality =
-                [
-                    "As a seasoned warrior, Okoye isn’t the type for small talk. As a bodyguard, she spends much of her time silently standing behind the Panther, looking intimidating. When battle inevitably breaks out, she focuses on communicating her orders clearly and effectively. She’s not above a rare bit of humor, but her jokes tend to be on the dry side.",
-                ]
-            }
-        },
-    ];
 
     private List<Character> GetAllCharactersP() =>
     [
@@ -5400,7 +5315,8 @@ public class CharacterSelector(
                         powerSelector.GetPower(
                             PowerNames.IconicWeapon, 
                             specialization: "Adamantium Claws [+1 Melee damage multiplier]",
-                            meleeDamageModifier: 1),
+                            meleeDamageModifier: 1,
+                            isTech: true),
 
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
                         powerSelector.GetPower(PowerNames.Uncanny1),
@@ -5490,7 +5406,8 @@ public class CharacterSelector(
                         powerSelector.GetPower(
                             PowerNames.IconicWeapon,
                             specialization: "Adamantium Claws [+1 Melee damage multiplier; ignores 1 level of DR]]",
-                            meleeDamageModifier: 1),
+                            meleeDamageModifier: 1,
+                            isTech: true),
 
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
                         powerSelector.GetPower(PowerNames.Uncanny1),
