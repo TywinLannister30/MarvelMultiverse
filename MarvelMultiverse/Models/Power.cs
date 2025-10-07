@@ -108,6 +108,8 @@ public class Power : ICloneable
     [JsonIgnore]
     public bool InitiativeEdge { get; set; }
 
+    public bool IsMagicItem { get; set; }
+
     public bool IsTech { get; set; }
 
     public string Source { get; set; }
@@ -152,6 +154,7 @@ public class Power : ICloneable
             SwimSpeedMultipliedByRank = this.SwimSpeedMultipliedByRank,
             SwinglineSpeed = this.SwinglineSpeed,
             InitiativeEdge = this.InitiativeEdge,
+            IsMagicItem = this.IsMagicItem,
             IsTech = this.IsTech,
             Source = this.Source,
         };

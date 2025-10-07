@@ -8,6 +8,7 @@ public class PowerSelector : IPowerSelector
     public Power GetPower(
         string name, 
         bool isTech = false,
+        bool isMagicItem = false,
         bool flySpeed = false,
         bool glideSpeed = false,
         bool swinglineSpeed = false,
@@ -26,6 +27,7 @@ public class PowerSelector : IPowerSelector
         if (!string.IsNullOrEmpty(reminder))
             power.Name += $" ({reminder})";
 
+        power.IsMagicItem = isMagicItem;
         power.IsTech = isTech;
 
         if (flySpeed)
@@ -3046,6 +3048,23 @@ public class PowerSelector : IPowerSelector
                 "The character takes magical control of a vehicle they are inside of or touching. Hellfire engulfs the outside of the vehicle, but it does no damage to it. Anyone that comes into contact with it, though, takes regular damage with a damage multiplier equal to the character’s rank. On a Fantastic success, it inflicts regular Health damage and regular Focus damage instead.",
                 "The character controls the vehicle by will, as long as it is within 20spaces times the character’s rank. They use their Ego for all checks to operate it, and they get an edge on all such checks.",
                 "The vehicle’s speed doubles. It can climb walls at this speed and can even make jumps at that same speed."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.Possession,
+            Description = "The character takes over someone else’s body.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = $"{TagNames.Cursed}, Rank 5",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "The character makes an Ego check with trouble against the Ego defense of a character who has no Focus left. On a success, the character takes over the target’s body completely.",
+                "The character’s Ego defense is the target number for any checks to end the possession.",
+                "If the character attempts to harm someone with the possessed body, the target gets to make an Ego check to end the possession. If the target has the Heroic tag, they get an edge on the check.",
+                "If the character attempts to harm the possessed body, the target gets an edge on the check. If they have the Heroic tag, they get a double edge."
             ],
         },
         new()

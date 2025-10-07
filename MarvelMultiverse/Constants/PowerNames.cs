@@ -211,6 +211,7 @@ public static class PowerNames
     public const string PhaseWalk = "Phase Walk";
     public const string PointBlankParry = "Point-Blank Parry";
     public const string PossessVehicle = "Possess Vehicle";
+    public const string Possession = "Possession";
     public const string PowerSlider = "Power Slider";
     public const string PowerfulHex = "Powerful Hex";
     public const string Precognition1 = "Precognition 1";

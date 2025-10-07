@@ -8,4 +8,6 @@ public class CharacterPowerSet
     public List<Power> Powers { get; set; }
 
     public bool IsTech { get; set; }
+
+    public bool IsMagicItem { get; set; }
 }
