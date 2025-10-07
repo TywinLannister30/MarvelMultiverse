@@ -2104,7 +2104,7 @@ public class CharactersM
             },
             Source = BookSource.TheCataclysmOfKang
         },
-           new()
+        new()
         {
             Name = "Moira MacTaggert",
             Rank = 1,
@@ -2173,7 +2173,112 @@ public class CharactersM
             },
             Source = BookSource.XMenExpansion
         },
-        new()
+		   new()
+		{
+			Name = "Mojo",
+			Rank = 4,
+			Abilities = new Abilities
+			(
+				melee: 2, agility: 1, resilience: 5, vigilance: 3, ego: 5, logic: 4
+			),
+			Traits =
+			[
+				traitSelector.GetTrait(TraitNames.Abrasive),
+				traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+				traitSelector.GetTrait(TraitNames.ExtraOccupation),
+				traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+				traitSelector.GetTrait(TraitNames.Famous),
+				traitSelector.GetTrait(TraitNames.Presence),
+				traitSelector.GetTrait(TraitNames.PublicSpeaking),
+				traitSelector.GetTrait(TraitNames.TechReliance),
+			],
+			Tags =
+			[
+				tagSelector.GetTag(TagNames.AlienHeritage),
+				tagSelector.GetTag(TagNames.Authority),
+				tagSelector.GetTag(TagNames.ExtremeAppearance),
+				tagSelector.GetTag(TagNames.Powerful),
+				tagSelector.GetTag(TagNames.PublicIdentity),
+				tagSelector.GetTag(TagNames.Villainous),
+			],
+			Powers =
+			[
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.Basic,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.AdditionalLimbs),
+						powerSelector.GetPower(PowerNames.Uncanny2),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.Telekinesis,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.Levitation),
+						powerSelector.GetPower(PowerNames.TelekineticAttack),
+						powerSelector.GetPower(PowerNames.TelekineticBarrier),
+						powerSelector.GetPower(PowerNames.TelekineticGrab),
+						powerSelector.GetPower(PowerNames.TelekineticManipulation),
+						powerSelector.GetPower(PowerNames.TelekineticProtection2),
+						powerSelector.GetPower(PowerNames.TelekineticReinforcement),
+						powerSelector.GetPower(PowerNames.TelekineticSphere),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.Telepathy,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.AstralForm),
+						powerSelector.GetPower(PowerNames.Cloak),
+						powerSelector.GetPower(PowerNames.CloakGroup),
+						powerSelector.GetPower(PowerNames.Command),
+						powerSelector.GetPower(PowerNames.Domination),
+						powerSelector.GetPower(PowerNames.EditMemory),
+						powerSelector.GetPower(PowerNames.MemoryBlip),
+						powerSelector.GetPower(PowerNames.MentalShelter),
+						powerSelector.GetPower(PowerNames.MindInterrogation),
+						powerSelector.GetPower(PowerNames.MindReading),
+						powerSelector.GetPower(PowerNames.Orders),
+						powerSelector.GetPower(PowerNames.TelepathicBlast),
+						powerSelector.GetPower(PowerNames.TelepathicLink),
+						powerSelector.GetPower(PowerNames.TelepathicNetwork),
+						powerSelector.GetPower(PowerNames.TelepathicPossession),
+					],
+				},
+			],
+			Biography = new Biography
+			{
+				RealName = "Jean Grey-Summers",
+				Heights = [new() { Feet = 5, Inches = 6 }],
+				Weights = [130],
+				Gender = Gender.Female,
+				Eyes = "Green",
+				Hair = "Red",
+				Size = Size.Average,
+				DistinguishingFeatures = "None",
+				Occupations = [OccupationName.Adventurer],
+				Origins = [OriginName.Mutant],
+				Teams = [TeamNames.XForce, TeamNames.XMen],
+				Base = "Mobile",
+				History =
+				[
+					"Jean Grey’s mutant psychic abilities awakened when she was just 10 years old, after she witnessed her best friend die in a hit-and-run. With Jean traumatized and unable to control her nascent powers, her parents did the only thing they could think of. They entered her into the care of psychic professor Charles Xavier, better known as Professor X.",
+					"Not long thereafter, Xavier formed the original X-Men and installed Grey as a founding member, under the codename Marvel Girl. In the years since, Grey has become one of the most famous and powerful mutants—if not heroes—in existence. Along with the rest of the X-Men, she has fought against existential threats to the universe itself.",
+					"Additionally, Grey has hosted the Phoenix Force, an ineffable entity of light and fire older than the cosmos. Although the Phoenix Force has currently bound itself to another, Grey remains extremely powerful.",
+					"Two of Grey’s future children that she has yet to have with Cyclops (Scott Summers)—who she is in a long-term relationship with—have become X-Men on their own: Rachel Summers and X-Man (Nate Grey)."
+				],
+				Personality =
+				[
+					"Grey’s powers are limited by her ability to control her mental state. She has rarely been completely stable on a psychic level, and repeatedly acting as the host of the sentient Phoenix Force has only served to further damage her. When she is stable, though, Grey is known for her kind and caring nature. Grey’s teammates have long been a driving force in helping her to maintain her sanity, particularly Cyclops.",
+				]
+			},
+			Source = BookSource.TheCataclysmOfKang
+		},
+		new()
         {
             Name = "Moon Girl",
             Rank = 2,
