@@ -1,0 +1,746 @@
+﻿using MarvelMultiverse.Constants;
+using MarvelMultiverse.Enums;
+using MarvelMultiverse.Models;
+
+namespace MarvelMultiverse.Selectors.Characters;
+
+public class CharactersP
+{
+    public static List<Character> GetAllCharacters(
+      INarrativePowerSelector narrativePowerSelector,
+      IPowerSelector powerSelector,
+      ITagSelector tagSelector,
+      ITraitSelector traitSelector) =>
+    [
+        new()
+        {
+            Name = "Paladin",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 3, vigilance: 2, ego: 3, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mysterious),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Stun gun [ranged weapon; deals electricity damage, stunning target on a Fantastic success]"),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Unknown],
+                Teams = [TeamNames.HeroesForHire, TeamNames.VillainsForHire],
+                Base = "Mobile",
+                History =
+                [
+                    "Paladin’s past is a secret to everyone except maybe the man himself, and he isn’t forthcoming with details. S.H.I.E.L.D.’s archives on Paladin date back only as far as a few years ago when, during a mission to capture the Purple Man, he fought with Daredevil. Although Paladin was already a moderately well-established mercenary by this point, no one knows for sure what jobs he had completed before facing off against the Man Without Fear.",
+                    "Although Paladin ultimately failed to capture the Purple Man, his ability to hold his own against Daredevil made him famous overnight. Job offers came pouring in, from both super heroes and super villains.",
+                    "For a while, Paladin sold his services exclusively to the highest bidder. Some days he was a hero, and other days he was a villain. He is one of the few people who can truthfully claim to have fought on both sides of the superhuman Civil War.",
+                    "As the years drew on, though, Paladin’s duplicitousness began to gnaw at his conscience. There was no single moment of reform and repentance, but slowly, he stopped accepting villainous jobs. These days, he works primarily as an independent hero for hire."
+                ],
+                Personality =
+                [
+                    "Ninety percent amoral mercenary and ten percent big-hearted softy, Paladin has a strangely charming aura. He’s had a number of romantic relationships within the super-hero community, most notably with the Wasp. Even his enemies regard him as a gentleman and a consummate professional.",
+                    "Paladin’s need to make money exists in perpetual confl ict with his conscience. He has, on several occasions, dropped well-paying assassination jobs at the last moment because he couldn’t bear to kill his target."
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
+            Name = "Patriot (Rayshaun Lucas)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 1, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Falcon (Sam Wilson)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            glideSpeed: true,
+                            specialization: "Patriot’s Shield. Grants Glide Speed equal to double his Run Speed. Also acts as a drone that can move within his line of sight and fire energy blasts with a range of 10."),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Shield2),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Rayshaun “Shaun” Lucas",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.Champions],
+                Base = "NYC",
+                History =
+                [
+                    "As a young teenager, Rayshaun Lucas was an active participant in the protests that followed the wrongful arrest of the super hero Rage. The connections he made during those protests led him further into the world of super heroes, and during the rise of Hydra’s plot to take over the USA with the help of a twisted version of Captain America (Steve Rogers), he helped provide vital intel to the resistance.",
+                    "The leaders of the resistance later rewarded Lucas for his noble efforts. Iron Man built him a hightech shield based on Lucas’ own designs, and the Falcon (Sam Wilson) took him on as a super-heroin- training. Ever since, Lucas has fought crime and injustice—often alongside the Champions— under the codename Patriot.",
+                    "Lucas is the latest hero by the name Patriot. The original was Jeffrey Mace, who became a replacement Captain America in the late 1940s. More recently was Elijah Bradley, a member of the Young Avengers, who has since given up the codename."
+                ],
+                Personality =
+                [
+                    "Lucas is young and inexperienced in battle, but he has an unfl inching sense of justice that transcends the law. He refuses to let any authority stand between him and doing the right thing.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Phoenix",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 5, vigilance: 4, ego: 8, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AuditoryIssues),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CloneMoves),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Maya Lopez",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "White handprint makeup on face",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.Mythic, OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.DaughtersOfLiberty],
+                Base = "Mobile",
+                History =
+                [
+                    "When Maya Lopez was a child, her father was gunned down by his own boss: the Kingpin (Wilson Fisk). Seeing the young girl’s potential, Fisk took her in, giving her special training and eventually tricking her into believing that Daredevil had killed her father.",
+                    "Eventually, Lopez discovered the Kingpin’s deception and turned on him. Her quest for vengeance resolved, she became a tireless fi ghter for justice around the world. Under the codename Echo, she fought to keep the streets of Hell’s Kitchen safe.",
+                    "Recently, Echo took part in a contest held by the Phoenix Force, a primordial entity of fire and instability older than the universe itself. The Phoenix Force gathered heroes from around the globe and pitted them against each other to determine who would best serve as a host for its unfathomable power.",
+                    "Echo lost her bout to the Sub-Mariner (Namor). However, the Phoenix Force admired Echo’s unflinching determination in battle and decided to take her as its host anyway. With the power of the Phoenix Force within her, Maya Lopez has quickly advanced from a neighborhood vigilante to a defender of entire worlds."
+                ],
+                Personality =
+                [
+                    "As a deaf woman and a member of the Cheyenne Nation, Lopez’s life has been full of struggles. Despite it all, she generally manages to stay upbeat. She has a particular love for the theatrical arts, having become a concert pianist and an expert dancer.",
+                    "The Phoenix Force has, at times, threatened to turn Lopez into an unstoppable berserker. However, her strong sense of right and wrong helps her keep the primordial entity under control."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Photon (Monica Rambeau)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 5, resilience: 4, vigilance: 4, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                        powerSelector.GetPower(PowerNames.Shrink1),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Monica Rambeau",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.Thunderbolts, TeamNames.Ultimates],
+                Base = "Mobile",
+                History =
+                [
+                    "Monica Rambeau was a lieutenant with the New Orleans Harbor Patrol when she stumbled upon an experimental energy weapon hidden aboard a Roxxon oil rig. In the process of destroying the weapon, her body was bathed in extradimensional energy, giving her the power to transform her body into powerful forms of electromagnetic radiation. Embracing her new abilities, Rambeau quit her job and became the new Captain Marvel. She’s since gone by a number of aliases, including Photon, Pulsar and Spectrum, but she’s recently returned to Photon.",
+                    "Rambeau has often been a part of the Avengers and has even led the team. Her powers and her leadership skills put her in high demand.",
+                ],
+                Personality =
+                [
+                    "Although generally agreeable, Rambeau has a short fuse when it comes to people messing with her. She knows her abilities make her one of the most powerful people in the universe, and she expects to be treated as such. She does not suffer condescension or discrimination from anyone.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Piledriver (Wrecking Crew)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 3, vigilance: 2, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Brian Phillip Calusky",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [310],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Giant hands",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.WreckingCrew],
+                Base = "Mobile",
+                History =
+                [
+                    "As a teenager in the countryside, Brian Calusky turned to a life of crime more out of boredom than anything else. Calusky’s initial infractions were minor, but over the course of a decade, he managed to build himself a solid rap sheet. Eventually, he was sentenced to an extended stay in the maximum-security prison on Ryker’s Island.",
+                    "It was at Ryker’s that Calusky met the super villain Wrecker. Along with a couple other inmates, Calusky helped the Wrecker escape from Ryker’s. Out of gratitude, the Wrecker granted his allies a portion of his own powers, and together, they formed the Wrecking Crew.",
+                    "Calusky has been with the super-villain group ever since. At one point, he mentored his son, Rick Calusky, who become the criminal known as Excavator."
+                ],
+                Personality =
+                [
+                    "Outside of the Wrecker himself, Piledriver might be the most unhinged member of the Wrecking Crew. He can be utterly reckless, both in a battle and outside of it. Unlike his allies, Piledriver prefers to fi ght without weapons or armor, smashing his opponents with his giant bare fists.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+          new()
+        {
+            Name = "Polaris",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 3, vigilance: 6, ego: 9, logic: 7
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Arabic, English, French, German, Hebrew, Polish, Russian, Ukrainian, Yiddish"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny4, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlIron,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalProtection4),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                        powerSelector.GetPower(PowerNames.ElementalSuffocation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Max Eisenhardt",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Auschwitz I.D. #24005 tattoo on arm",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "Max Eisenhardt, going by the name Erik Lensherr, first met Charles Xavier (who would become Professor X) while working at a psychiatric hospital for Holocaust survivors, where they recognized each other’s mutant powers and had heated debates about mutant integration into normal society. As a Holocaust survivor himself, Eisenhardt struggled to accept that humanity would ever accept mutants.",
+                    "Eisenhardt later became the villain Magneto and formed the Brotherhood of Evil Mutants in direct opposition to Xavier’s own X-Men. Eventually, Magneto put aside such methods and even led the X-Men himself for a while. He has long worked to establish a homeland for mutants, and with Krakoa, he feels that he and Charles may finally have succeeded."
+                ],
+                Personality =
+                [
+                    "Magneto has a strong sense of right and wrong. Periods of mental instability throughout his life have sometimes made him into a zealot willing to harm innocents in the pursuit of his dreams, but his righteous intentions have never wavered.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Professor X (Charles Xavier)",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 2, vigilance: 9, ego: 9, logic: 9
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Community"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance4),
+                        powerSelector.GetPower(PowerNames.Uncanny3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BorrowSenses),
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.CloakGroup),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Domination),
+                        powerSelector.GetPower(PowerNames.EditMemory),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.Fool),
+                        powerSelector.GetPower(PowerNames.GrandFool),
+                        powerSelector.GetPower(PowerNames.GrandMirage),
+                        powerSelector.GetPower(PowerNames.InformationUpload),
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.MentalShelter),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                        powerSelector.GetPower(PowerNames.TelepathicPossession),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Charles Francis Xavier",
+                Heights = [new() { Feet = 6 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Educator],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "Krakoa",
+                History =
+                [
+                    "As a mutant, Charles Xavier was gifted with powerful psychic abilities. Although he hid his own status as a mutant in his youth, Xavier decided to become an activist for mutant rights. He turned his old family mansion into a School for Gifted Youngsters and began recruiting young mutants across the globe.",
+                    "It was within this school that Xavier founded the X-Men, a team of mutant heroes dedicated to showing the world just how helpful mutants can be. He later went on to expand the school and the number of mutant hero teams. He recently helped found a mutant homeland on the living island of Krakoa.",
+                ],
+                Personality =
+                [
+                    "Xavier’s greatest flaw is paternalism. He has the well-earned right to feel pride for his accomplishments, but his belief that he knows best leads him to occasionally make decisions for other people rather than leaving them to their own devices.",
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Psylocke (Kwannon)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 2, vigilance: 2, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: $"{PowerNames.MentalPunch}"),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MentalPunch),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kwannon",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [155],
+                Gender = Gender.Female,
+                Eyes = "Purple",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Assassin],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.Marauders, TeamNames.TheHand, TeamNames.XMen],
+                Base = "Mobile",
+                History =
+                [
+                    "Kwannon was raised from birth by the shadowy Hand organization to become a super-powered assassin, but she balked at the cold-blooded murder of innocents. It wasn’t long before she turned against her handlers, slaughtering them and escaping to Japan.",
+                    "Shortly thereafter, Kwannon suffered an accident that left her comatose. While she slept, Betsy Braddock—another mutant psychic on the verge of death—swapped bodies with Kwannon. Only recently did Kwannon manage to regain control over her own body. In the short career she’s had since, she has already proven herself as a capable leader among the X-Men.",
+                ],
+                Personality =
+                [
+                    "Although the traumatic events of her past have filled Kwannon with some deep-seated anger and resentment, she retains a cool head for battle. She’s an effective tactical leader, and she’s well trained in focusing her fury at those who most deserve it.",
+                ]
+            }
+        },
+    ];
+}
