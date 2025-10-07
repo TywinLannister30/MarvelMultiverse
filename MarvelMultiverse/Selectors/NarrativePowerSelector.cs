@@ -5,28 +5,18 @@ namespace MarvelMultiverse.Selectors;
 
 public class NarrativePowerSelector : INarrativePowerSelector
 {
-    public NarrativePower GetNarrativePower(string name)
-    {
-        return GetAllNarrativePowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
-    }
-
-	public NarrativePower GetNarrativePower(string name, string specialization = null, string reminder = null)
+	public NarrativePower GetNarrativePower(string name, string reminder = null)
 	{
 		var staticPower = GetAllNarrativePowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
 
 		var power = staticPower.Clone() as NarrativePower;
-
-		if (!string.IsNullOrEmpty(specialization))
-		{
-			power.Name += $": {specialization}";
-		}
 
 		if (!string.IsNullOrEmpty(reminder))
 		{
 			power.Name += $" ({reminder})";
 		}
 
-		return trait;
+		return power;
 	}
 
 	public List<NarrativePower> GetNarrativePowers()

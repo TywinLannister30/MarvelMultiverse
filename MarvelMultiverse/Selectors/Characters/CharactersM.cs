@@ -2723,32 +2723,32 @@ public class CharactersM
 			],
             NarrativePowers = 
             [
-                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.DuplicateSelf)
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.DuplicateSelf, reminder: "Duplication trigger: Take at least 1 point of Health damage. Absorption trigger: Touch the duplicate.")
             ],
 			Biography = new Biography
 			{
-				RealName = "Mojo",
-				Heights = [new() { Feet = 6, Inches = 9 }],
-				Weights = [512],
+				RealName = "James Arthur “Jamie” Madrox",
+				Heights = [new() { Feet = 5, Inches = 11 }],
+				Weights = [155],
 				Gender = Gender.Male,
-				Eyes = "Yellow eyes with orange irises and black pupils",
-				Hair = "Cords resembling hair attached to head",
-				Size = Size.Big,
-				DistinguishingFeatures = "Bright yellow skin, twisted smile, spiderlike cybernetic legs, slender four-fingered hands",
-				Occupations = [OccupationName.Entertainer, OccupationName.Leader],
-				Origins = [OriginName.Alien, OriginName.HighTechCybernetics],
-				Teams = [],
-				Base = "Mojoworld",
+				Eyes = "Brown",
+				Hair = "Brown",
+				Size = Size.Average,
+				DistinguishingFeatures = "None",
+				Occupations = [OccupationName.Adventurer, OccupationName.Investigator],
+				Origins = [OriginName.Mutant],
+				Teams = [TeamNames.XCorp, TeamNames.XFactor, TeamNames.XMen],
+				Base = "Krakoa",
 				History =
 				[
-					"Mojo is one of a number of monstrous Spineless Ones, beings who inhabit the Mojoverse, a dimension outside regular time and space. As the supreme leader of Mojoworld, Mojo rules over a race of genetically engineered slaves. For untold years, he abused these slaves for his own amusement, forcing them into dire, life-or-death situations and filming the results for use in a series of sick and twisted TV shows.",
-					"Then Longshot, one of Mojo’s slaves, rose up and rebelled against the Spineless Ones. Faced with overwhelming opposition from Mojo and his lackeys, Longshot fled to Earth-616, where he joined forces with the X-Men.",
-					"Intrigued by the mutants and enticed by the prospect of making them into a spectacle, Mojo began to include the X-Men in his sadistic schemes. Over the years, he has captured Longshot and his mutant allies dozens of times and forced them to participate in one of his depraved television programs. Each time, they eventually found a way to escape.",
-					"Although Mojo has, at times, been temporarily deposed, he has always managed to return to power and set rebel plans back to square one."
+					"Jamie Madrox’s duplication powers activated shortly after his birth, long before he was capable enough to handle them. To keep him from duplicating endlessly, Professor X (Charles Xavier) created a power-dampening suit for the young Madrox. It began to malfunction years later, long after Madrox had grown up and forgotten its purpose. Duplicating out of control and driven into a state of temporary insanity, he terrorized the streets of New York City. In the end, it took both Professor X and the entire Fantastic Four to bring him back to his senses.",
+					"Afterward, Professor X took Jamie in and taught him to control his powers without the suit. Despite displaying some crimefighting potential, Jamie refused to formally join any super-hero team until years later, when dire circumstances forced him to become part of X-Factor.",
+					"Jamie enjoyed his time with X-Factor—enough to stick with the team through its next few incarnations, even helping found X-Factor Investigations. He fell in love with Layla Miller, one of his X-Factor teammates, and eventually retired to spend more time with her and with their son, Davey. Recently, Madrox un-retired to join X-Corp’s board of directors.",
 				],
 				Personality =
 				[
-					"The term narcissist does not even begin to scratch the surface of Mojo’s self-absorbed insanity. He not only believes himself to be the center of the universe—he believes he is the only being of any value whatsoever across all of existence. He has a nasty habit of engraving his face onto other people and places, only to destroy them the moment he decides they are unworthy of his visage.",
+					"The personalities of Madrox and his duplicates vary slightly from one another, but they all have a few things in common. They are laid-back, put-upon men with dry senses of humor and subtle manic-depressive tendencies.",
+					"Most of Madrox’s “dupes” stick close to him and to Krakoa, but over the years, a select few have chosen to live independently. Some of these duplicates even have families of their own."
 				]
 			},
 			Source = BookSource.XMenExpansion

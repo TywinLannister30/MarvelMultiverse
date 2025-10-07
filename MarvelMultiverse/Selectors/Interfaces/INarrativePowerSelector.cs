@@ -4,7 +4,7 @@ namespace MarvelMultiverse.Selectors;
 
 public interface INarrativePowerSelector
 {
-    NarrativePower GetNarrativePower(string name);
+	NarrativePower GetNarrativePower(string name, string reminder = null);
 
-    List<NarrativePower> GetNarrativePowers();
+	List<NarrativePower> GetNarrativePowers();
 }
