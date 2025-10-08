@@ -268,7 +268,8 @@ public static class PowerNames
     public const string SpiderStrike = "Spider-Strike";
     public const string SpinAndThrow = "Spin & Throw";
     public const string StaticIllusion = "Static Illusion";
-    public const string StiltSteps = "Stilt Steps";
+	public const string StealPowers = "Steal Powers";
+	public const string StiltSteps = "Stilt Steps";
     public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";

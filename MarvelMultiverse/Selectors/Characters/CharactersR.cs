@@ -471,7 +471,100 @@ public class CharactersR
                 ]
             }
         },
-        new()
+		new()
+		{
+			Name = "Rictor",
+			Rank = 4,
+			Abilities = new Abilities
+			(
+				melee: 1, agility: 4, resilience: 2, vigilance: 5, ego: 6, logic: 2
+			),
+			Traits =
+			[
+				traitSelector.GetTrait(TraitNames.CombatExpert),
+				traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+				traitSelector.GetTrait(TraitNames.Fearless),
+				traitSelector.GetTrait(TraitNames.Glibness),
+				traitSelector.GetTrait(TraitNames.IronWill),
+				traitSelector.GetTrait(TraitNames.SituationalAwareness),
+			],
+			Tags =
+			[
+				tagSelector.GetTag(TagNames.BlackMarketAccess),
+				tagSelector.GetTag(TagNames.Heroic),
+				tagSelector.GetTag(TagNames.Hounded),
+				tagSelector.GetTag(TagNames.Krakoan),
+				tagSelector.GetTag(TagNames.PublicIdentity),
+				tagSelector.GetTag(TagNames.XGene),
+			],
+			Powers =
+			[
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.Basic,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.Accuracy1),
+						powerSelector.GetPower(PowerNames.Discipline2),
+						powerSelector.GetPower(PowerNames.Inspiration),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.ElementControlSound,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.ElementalBarrage),
+						powerSelector.GetPower(PowerNames.ElementalBlast),
+						powerSelector.GetPower(PowerNames.ElementalBurst),
+						powerSelector.GetPower(PowerNames.ElementalPush),
+						powerSelector.GetPower(PowerNames.ElementalRicochet),
+						powerSelector.GetPower(PowerNames.Supernova),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.ElementControlEarth,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.ElementalBarrage),
+						powerSelector.GetPower(PowerNames.ElementalBlast),
+						powerSelector.GetPower(PowerNames.ElementalBurst),
+						powerSelector.GetPower(PowerNames.ElementalGrab),
+						powerSelector.GetPower(PowerNames.ElementalPrison),
+						powerSelector.GetPower(PowerNames.ElementalProtection2),
+						powerSelector.GetPower(PowerNames.ElementalPush),
+					],
+				},
+			],
+			Biography = new Biography
+			{
+				RealName = "Julio Esteban Richter",
+				Heights = [new() { Feet = 5, Inches = 9 }],
+				Weights = [145],
+				Gender = Gender.Male,
+				Eyes = "Brown",
+				Hair = "Brown",
+				Size = Size.Average,
+				DistinguishingFeatures = "None",
+				Occupations = [OccupationName.Adventurer],
+				Origins = [OriginName.Mutant],
+				Teams = [TeamNames.Excalibur, TeamNames.NewMutants, TeamNames.XFactor],
+				Base = "Krakoa",
+				History =
+				[
+					"Born into a Mexican cartel family, Julio Richter’s early life was marked by violence and chaos. After his father was murdered by Stryfe, Richter tried to run away from home, only to be kidnapped by the Right, an anti-mutant organization interested in his fledgling seismic powers.",
+					"X-Factor freed him from the Right’s control and subsequently gave him a place among their trainees, the X-Terminators. Among mutants for the first time in his life, Richter excelled. Under the codename Rictor, he quickly graduated into the New Mutants and, from there, into X-Force.",
+					"After losing his powers on M-Day, Rictor fell into a deep depression. To cheer him up, some of his old teammates invited him to help them form X-Factor Investigations. Shortly thereafter, Rictor came out as gay and began dating one of his teammates, Shatterstar. Once Rictor regained his powers, he and Shatterstar left X-Factor Investigations and began adventuring on their own. Following the foundation of Krakoa, the pair joined Excalibur, committing themselves to the protection of the island-nation."
+				],
+				Personality =
+				[
+					"Despite his dark past, Rictor is more laid-back than most mutant adventurers. He’s a generally cheery guy who doesn’t take himself too seriously. When referring to his teammates, he frequently uses words like “dude” and “bro.” Although he’s closer to Shatterstar than anyone else, Rictor has been around long enough for many mutants to consider him a valued friend and teammate.",
+				]
+			},
+            Source = BookSource.XMenExpansion
+		},
+		new()
         {
             Name = "Rocket Racoon",
             Rank = 4,
@@ -568,7 +661,102 @@ public class CharactersR
                 ]
             }
         },
-        new()
+		new()
+		{
+			Name = "Rogue",
+			Rank = 4,
+			Abilities = new Abilities
+			(
+				melee: 5, agility: 4, resilience: 4, vigilance: 3, ego: 3, logic: 1
+			),
+			Traits =
+			[
+				traitSelector.GetTrait(TraitNames.CombatReflexes),
+				traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+				traitSelector.GetTrait(TraitNames.Fearless),
+				traitSelector.GetTrait(TraitNames.Glibness),
+				traitSelector.GetTrait(TraitNames.Presence),
+				traitSelector.GetTrait(TraitNames.SituationalAwareness),
+			],
+			Tags =
+			[
+				tagSelector.GetTag(TagNames.BlackMarketAccess),
+				tagSelector.GetTag(TagNames.Heroic),
+				tagSelector.GetTag(TagNames.Hounded),
+				tagSelector.GetTag(TagNames.Krakoan),
+				tagSelector.GetTag(TagNames.PublicIdentity),
+				tagSelector.GetTag(TagNames.XGene),
+			],
+			Powers =
+			[
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.Basic,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.Flight2),
+						powerSelector.GetPower(PowerNames.Mighty3),
+						powerSelector.GetPower(PowerNames.Sturdy2),
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.PowerControl,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.ClonePowers),
+						powerSelector.GetPower(PowerNames.CopyPower),
+						powerSelector.GetPower(PowerNames.DampenPower),
+						powerSelector.GetPower(PowerNames.ShutDownPowers),
+						powerSelector.GetPower(PowerNames.StealPowers), //TODO
+					],
+				},
+				new CharacterPowerSet
+				{
+					Name = PowerSetNames.SuperStrength,
+					Powers =
+					[
+						powerSelector.GetPower(PowerNames.BangingHeads),
+						powerSelector.GetPower(PowerNames.Clobber),
+						powerSelector.GetPower(PowerNames.CrushingGrip),
+						powerSelector.GetPower(PowerNames.GroundShakingStomp),
+						powerSelector.GetPower(PowerNames.QuickToss),
+						powerSelector.GetPower(PowerNames.Smash),
+					],
+				},
+			],
+            PowerNotes = 
+            [
+				"In order to activate any of her Power Control powers, Rogue must first grab or hit her target. If she spends her action on this, she can still activate the power in question with a reaction."
+			],
+			Biography = new Biography
+			{
+				RealName = "Anna Marie LeBeau",
+				Heights = [new() { Feet = 5, Inches = 8 }],
+				Weights = [135],
+				Gender = Gender.Female,
+				Eyes = "Green",
+				Hair = "Brown with white streaks",
+				Size = Size.Average,
+				DistinguishingFeatures = "None",
+				Occupations = [OccupationName.Adventurer],
+				Origins = [OriginName.Mutant],
+				Teams = [TeamNames.Avengers, TeamNames.BrotherhoodOfEvilMutants, TeamNames.XMen],
+				Base = "Mobile",
+				History =
+				[
+					"Born into a cold and neglectful family, Anna Marie fled from home at a young age. She spent some time working as a thief on the banks of the Mississippi, earning herself the nickname Rogue. Eventually, Mystique and Destiny—having precognitive knowledge of Rogue’s mutant status—took her in and raised her as their daughter. When Rogue’s mutant absorption powers activated suddenly and traumatically in her early teenage years, Mystique and Destiny were prepared to comfort Rogue—and to indoctrinate her into a life of mutant terrorism.",
+					"Rogue eventually joined her adoptive mothers in the Brotherhood of Evil Mutants, but her time with the team was cut short after she accidentally absorbed the powers and psyche of Captain Marvel (Carol Danvers). On the edge of a dissociative breakdown, Rogue fled into the custody of Professor X, who helped her integrate Captain Marvel’s psyche into her own and subsequently allowed her to join the X-Men.",
+					"Rogue excelled as a hero, quickly becoming a key part of the X-Men. She began a long-term romance with her teammate Gambit, and shortly before the foundation of Krakoa, the pair finally wed. Although they served as backup members of Krakoa’s Excalibur team, Gambit and Rogue made an effort to spend most of their recent time focusing on each other."
+				],
+				Personality =
+				[
+					"Rogue’s Power Control powers cause her to absorb a bit of her target’s mind, so in the heat of battle, her personality can vary wildly. However, at her core, she’s a kind and sensitive Southern belle, albeit one with a short fuse. She speaks in a thick Southern accent, often referring to people as “sugah.”",
+				]
+			},
+			Source = BookSource.XMenExpansion
+		},
+		new()
         {
             Name = "Ronan the Accuser",
             Rank = 4,
