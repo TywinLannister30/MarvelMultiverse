@@ -708,7 +708,7 @@ public class CharactersR
 						powerSelector.GetPower(PowerNames.CopyPower),
 						powerSelector.GetPower(PowerNames.DampenPower),
 						powerSelector.GetPower(PowerNames.ShutDownPowers),
-						powerSelector.GetPower(PowerNames.StealPowers), //TODO
+						powerSelector.GetPower(PowerNames.StealPowers),
 					],
 				},
 				new CharacterPowerSet

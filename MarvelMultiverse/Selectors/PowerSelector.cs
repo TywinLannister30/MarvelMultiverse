@@ -3886,19 +3886,21 @@ public class PowerSelector : IPowerSelector
                 "The character creates a visual-only illusion anywhere in line of sight, within 50 spaces. The illusion can be of anything up to three sizes larger than the character, but it must be static. The character breaks concentration if they move beyond 50 spaces from the illusion or lose line of sight of it.",
             ]
         },
-        // TODO
 		new()
 		{
 			Name = PowerNames.StealPowers,
-			Description = "Todo",
+			Description = "The character removes all of a target’s powers and takes them for their own!",
 			PowerSets = [PowerSetNames.PowerControl],
-			Prerequsites = "TODO",
-			Action = ActionType.Standard,
+			Prerequsites = $"{PowerNames.ClonePowers}, {PowerNames.ShutDownPowers}, Rank 4",
+			Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
 			Duration = Duration.Concentration,
-			Effect =
+            Cost = "15 or more Focus",
+            Effect =
 			[
-				"TODO",
-			]
+                "The character makes an Ego attack against the grabbed target. On a success, they remove all of the target’s powers and take them for their own. They can now use those powers as if they were always theirs. If the target’s powers have costs, the character must pay the highest of them, or a minimum of 15 Focus.",
+                "When the character uses a power, they must pay any cost normally as well."
+            ]
 		},
 		new()
         {
