@@ -3886,7 +3886,21 @@ public class PowerSelector : IPowerSelector
                 "The character creates a visual-only illusion anywhere in line of sight, within 50 spaces. The illusion can be of anything up to three sizes larger than the character, but it must be static. The character breaks concentration if they move beyond 50 spaces from the illusion or lose line of sight of it.",
             ]
         },
-        new()
+        // TODO
+		new()
+		{
+			Name = PowerNames.StealPowers,
+			Description = "Todo",
+			PowerSets = [PowerSetNames.PowerControl],
+			Prerequsites = "TODO",
+			Action = ActionType.Standard,
+			Duration = Duration.Concentration,
+			Effect =
+			[
+				"TODO",
+			]
+		},
+		new()
         {
             Name = PowerNames.StiltSteps,
             Description = "The character can stretch their legs like extendable stilts.",
