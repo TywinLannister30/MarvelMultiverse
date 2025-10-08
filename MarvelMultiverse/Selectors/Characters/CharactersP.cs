@@ -460,31 +460,32 @@ public class CharactersP
             },
             Source = BookSource.TheCataclysmOfKang
         },
-          new()
+        new()
         {
             Name = "Polaris",
-            Rank = 6,
+            Rank = 4,
             Abilities = new Abilities
             (
-                melee: 2, agility: 3, resilience: 3, vigilance: 6, ego: 9, logic: 7
+                melee: 1, agility: 3, resilience: 3, vigilance: 5, ego: 6, logic: 2
             ),
             Traits =
             [
-                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
                 traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
-                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
                 traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
                 traitSelector.GetTrait(TraitNames.IronWill),
-                traitSelector.GetTrait(TraitNames.Leverage),
-                traitSelector.GetTrait(TraitNames.ScientificExpertise),
-                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Skeptical),
             ],
             Tags =
             [
                 tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.Hounded),
                 tagSelector.GetTag(TagNames.Krakoan),
-                tagSelector.GetTag(TagNames.Linguist, specialization: "Arabic, English, French, German, Hebrew, Polish, Russian, Ukrainian, Yiddish"),
                 tagSelector.GetTag(TagNames.PublicIdentity),
                 tagSelector.GetTag(TagNames.XGene),
             ],
@@ -495,11 +496,11 @@ public class CharactersP
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Brilliance2),
-                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline3),
                         powerSelector.GetPower(PowerNames.Flight2),
                         powerSelector.GetPower(PowerNames.Inspiration),
-                        powerSelector.GetPower(PowerNames.Uncanny4, isTech: true),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
                 },
                 new CharacterPowerSet
@@ -511,46 +512,39 @@ public class CharactersP
                         powerSelector.GetPower(PowerNames.ElementalBlast),
                         powerSelector.GetPower(PowerNames.ElementalBurst),
                         powerSelector.GetPower(PowerNames.ElementalGrab),
-                        powerSelector.GetPower(PowerNames.ElementalProtection4),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
                         powerSelector.GetPower(PowerNames.ElementalPush),
                         powerSelector.GetPower(PowerNames.ElementalReinforcement),
                         powerSelector.GetPower(PowerNames.ElementalSphere),
                         powerSelector.GetPower(PowerNames.ElementalSuffocation),
                     ],
                 },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Tactics,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.BattlePlan),
-                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
-                        powerSelector.GetPower(PowerNames.KeepMoving),
-                    ],
-                }
             ],
             Biography = new Biography
             {
-                RealName = "Max Eisenhardt",
-                Heights = [new() { Feet = 6, Inches = 2 }],
-                Weights = [190],
-                Gender = Gender.Male,
-                Eyes = "Blue",
-                Hair = "Black",
+                RealName = "Lorna Sally Dane",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Green",
                 Size = Size.Average,
-                DistinguishingFeatures = "Auschwitz I.D. #24005 tattoo on arm",
-                Occupations = [OccupationName.Adventurer],
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Investigator],
                 Origins = [OriginName.Mutant],
-                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.XMen],
-                Base = "Krakoa",
+                Teams = [TeamNames.XFactor, TeamNames.XMen],
+                Base = "Mobile",
                 History =
                 [
-                    "Max Eisenhardt, going by the name Erik Lensherr, first met Charles Xavier (who would become Professor X) while working at a psychiatric hospital for Holocaust survivors, where they recognized each other’s mutant powers and had heated debates about mutant integration into normal society. As a Holocaust survivor himself, Eisenhardt struggled to accept that humanity would ever accept mutants.",
-                    "Eisenhardt later became the villain Magneto and formed the Brotherhood of Evil Mutants in direct opposition to Xavier’s own X-Men. Eventually, Magneto put aside such methods and even led the X-Men himself for a while. He has long worked to establish a homeland for mutants, and with Krakoa, he feels that he and Charles may finally have succeeded."
+                    "Throughout her childhood, Lorna Dane never suspected that she was the daughter of the infamous mutant Magneto. She was raised by her aunt and uncle and had no contact with the world of super heroes until the age of 19, when she was kidnapped by Mesmero.",
+                    "Mesmero activated Dane’s latent mutant powers and attempted to turn her into a weapon he could use to conquer Earth. Thankfully, his plan was foiled by the X-Men, who, in the aftermath, invited Dane into their ranks.",
+                    "Dane took on the codename of Polaris and gradually became a regular face around X-Men headquarters. She worked hard to uncover her true parentage and to eventually reconnect with her long-lost father.",
+                    "For many years, Polaris was in a relationship with Havok (Alex Summers). Although their romance ended in a messy breakup, they managed to patch things up well enough to continue working together.",
+                    "Although she isn’t on any Krakoan councils, Polaris is a highly respected member of the mutant nation. She currently acts as a backup for both X-Factor and the X-Men."
                 ],
                 Personality =
                 [
-                    "Magneto has a strong sense of right and wrong. Periods of mental instability throughout his life have sometimes made him into a zealot willing to harm innocents in the pursuit of his dreams, but his righteous intentions have never wavered.",
+                    "Polaris has experienced more than her share of being kidnapped, brainwashed or otherwise possessed. All this suffering and confusion has worn the edges off her heroic spirit, but she still tries to help out where she can. She’s not the type to hold grudges, and despite Magneto’s abandonment of her, she’s on good terms with him. She is widely considered to be both a good friend and a skilled investigator.",
                 ]
             },
             Source = BookSource.XMenExpansion
@@ -741,6 +735,257 @@ public class CharactersP
                     "Although the traumatic events of her past have filled Kwannon with some deep-seated anger and resentment, she retains a cool head for battle. She’s an effective tactical leader, and she’s well trained in focusing her fury at those who most deserve it.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Puck",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 4, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Small),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Eugene Milton Judd",
+                Heights = [new() { Feet = 3, Inches = 6 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Bald",
+                Size = Size.Small,
+                DistinguishingFeatures = "Unusually short and buff stature, slightly deformed right ear",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicDemonic],
+                Teams = [TeamNames.AlphaFlight, TeamNames.BetaFlight, TeamNames.GammaFlight],
+                Base = "Mobile",
+                History =
+                [
+                    "Eugene Judd made a name for himself in the early twentieth century as a mercenary and a fortune hunter, specializing in the acquisition of supernatural items. Then one day, Judd uncovered a dark blade he was hired to seek that would change the course of his entire life.",
+                    "The blade contained a dark and malevolent spirit that entered Judd’s body, imbuing him with incredible strength and longevity, but at a price. He was shrunken down and filled with chronic pains that would plague him the rest of his days.",
+                    "Judd spent the next several decades in and out of jail, struggling to find work, only to eventually stumble into the same social circles as Guardian (James Hudson). Sensing potential in the mercenary, Guardian recommended Judd for Canada’s premier super-hero team, Alpha Flight. Under the codename Puck, Judd spent most of the next decade adventuring with the Alpha Flight crew, helping to protect Canada from threats around the world.",
+                    "These days, Judd and several of his old Alpha Flight comrades spend most of their time working with Gamma Flight, an experimental program dedicated to protecting the world from Gamma-radiation-related threats.",
+                ],
+                Personality =
+                [
+                    "Puck is the epitome of a classic twentieth-century, hypermasculine, hard-drinking, thrill-seeking, book-reading adventurer, in the style of Ernest Hemingway. He can do a dozen somersaults in a row while quoting the Bard, and he regularly does, just to show off.",
+                    "Although he can be a bit old-fashioned at times, Puck is a valuable and reliable friend. His teammates in Alpha Flight and Gamma Flight consider him an essential member of the crew."
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Purifier",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 0, vigilance: 1, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Purifiers)"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Mini-flamethrowers (can fire Elemental Burst (Fire))"),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.Purifiers],
+                Base = "Varies",
+                History =
+                [
+                    "As an up-and-coming U.S. Army sergeant, William Stryker’s mind broke when his wife gave birth to a mutant child. He stabbed the child and murdered his wife, then dropped out of the army to become an anti-mutant preacher. He quickly amassed a massive and puritanical following, and using his old army training, he trained a handful of his closest followers into a militia.",
+                    "Intent on cleansing the Earth of all mutant life, Stryker began referring to his militarized followers as the Purifiers. He directed them to kidnap Professor X and force him to psychically destroy every mutant on the planet. They came within a hair’s breadth of succeeding before the X-Men defeated them and sent Stryker to prison.",
+                    "Stryker attempted several times to return and rebuild the Purifiers. The X-Men beat him again and again, but every time, he came back stronger and in a less-human form. Eventually, Sabretooth tracked down Stryker in Hell and annihilated his soul, ending him once and for all.",
+                    "Stryker may be dead, but his cult lives on. Most of the remaining Purifiers have allied themselves with newer anti-mutant groups like the Homines Verendi and Orchis."
+                ],
+                Personality =
+                [
+                    "While personalities of individual Purifiers may vary, they are united in their hatred of mutantkind. They claim to believe they have been anointed—either by God or some other higher power—to cleanse the world of mutants and usher in a golden age for humanity. But most of the Purifiers know, deep down, that they are simply bigots using religion to justify heinous deeds.",
+                ]
+            },
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Pyro",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 3, ego: 4, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalPrison),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "St. John “Johnny” Allerdyce",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [150],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Black, skull-shaped face tattoo",
+                Occupations = [OccupationName.Adventurer, OccupationName.Criminal],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.Marauders],
+                Base = "Krakoa",
+                History =
+                [
+                    "As a renowned novelist, journalist and adventurer, Johnny Allerdyce scarcely felt the need to exercise his mutant powers. Then one day, Mystique approached him, promising to show him adventures unlike any he’d seen before—on the condition that he’d agree to join her terrorist group, the Brotherhood of Evil Mutants.",
+                    "Allerdyce accepted. Under the codename Pyro, he followed Mystique from the Brotherhood to Freedom Force and back to the Brotherhood again, all the while enjoying a luxurious life of crime and international intrigue.",
+                    "Pyro finally encountered an enemy he could not simply incinerate: the Legacy Virus. Terminally ill and stricken with grief, he did his best to make amends before succumbing to the disease.",
+                    "In a test of the mutant resurrection protocols, Pyro became one of the first mutants to be brought back to life on Krakoa. Outraged by the experimental nature of his revival, Pyro snuck aboard the Marauders’ flagship, fully intending to hijack the vessel, only to end up falling asleep there and getting drafted onto the team. Luckily, the lifestyle of a globe-trotting Marauder suited him well.",
+                ],
+                Personality =
+                [
+                    "Pyro is, above all other things, a thrill seeker. He became a villain because he thought it might be fun. When that got boring, he became a hero instead. One night, when he was drunk and a little depressed, he got a massive black skull tattooed on his face.",
+                    "On the whole, Pyro is a fast-talking adrenaline junkie with little respect for anyone who wouldn’t be willing to jump off a cliff with him at a moment’s notice."
+                ]
+            },
+            Source = BookSource.XMenExpansion
         },
     ];
 }

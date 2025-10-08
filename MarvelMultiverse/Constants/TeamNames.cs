@@ -20,6 +20,7 @@ public static class TeamNames
     public const string Avengers = "Avengers";
     public const string AvengersAcademy = "Avengers Academy";
     public const string AvengersUnityDivision = "Avengers Unity Division";
+    public const string BetaFlight = "Beta Flight";
     public const string BlackOrder = "Black Order";
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string CaptainBritainCorps = "Captain Britain Corps";
@@ -110,6 +111,7 @@ public static class TeamNames
     public const string PowerElite = "Power Elite";
     public const string ProjectGreenSpring = "Project Green Spring";
     public const string Protectors = "Protectors";
+    public const string Purifiers = "Purifiers";
     public const string QuietCouncilOfKrakoa = "Quiet Council of Krakoa";
     public const string RCMP = "RCMP";
     public const string Reavers = "Reavers";
