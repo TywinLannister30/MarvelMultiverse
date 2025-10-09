@@ -417,6 +417,89 @@ public class CharactersT
         },
         new()
         {
+            Name = "The Rose",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 1, vigilance: 2, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Leverage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Richard Fisk",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [185],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.FiskIndustries],
+                Base = "New York City",
+                History =
+                [
+                    "When you’re the son of Kingpin (Wilson Fisk) and Vanessa Fisk, a life of crime might seem only natural. Wilson Fisk never wanted that for his son, Richard, so he tried to keep the boy away from his criminal concerns by sending him to a Swiss boarding school. The distance only made Richard idolize his father more, and when he learned the truth about Kingpin, he went a little insane. He faked his death and used what money he had left to become the Schemer, a criminal mastermind bent on dismantling Kingpin’s empire.",
+                    "Kingpin eventually uncovered the Schemer’s true identity, and for a while, the pair reconciled. Under the codename the Rose, Richard entered into the family business, acting as his father’s on-and-off rival and successor. However, after a series of high-profile failures, Richard became sick of working alongside his father and attempted to have him assassinated. Vanessa, in retaliation, killed Richard and then herself.",
+                    "Years later, Kingpin used an ancient ritual to bring his son back to life. Richard has since returned to his old Rose persona, and though he and his father aren’t exactly close, they treat each other cordially.",
+                ],
+                Personality =
+                [
+                    "Rose is a well-spoken and pleasant man, always wearing stark white suits, a purple ski mask and thick glasses. While he is almost as good as the Kingpin at playing the organized-crime game, he lacks his father’s physical prowess and menace, and his embarrassing attempts to take over his father’s enterprise have diminished his status in the criminal underworld.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Thing",
             Rank = 5,
             Abilities = new Abilities

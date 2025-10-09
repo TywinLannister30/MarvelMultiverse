@@ -115,6 +115,91 @@ public class CharactersR
         },
         new()
         {
+            Name = "Red Goblin",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 3, vigilance: 2, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics / Anti-Venom"),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.SymbioticSpiderBlinder),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Captain Marvel (Carol Danvers)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Razorwebs),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Norman Harold “Normie” Osborn",
+                Heights = [new() { Feet = 3, Inches = 9 }],
+                Weights = [45],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Small,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.SymbioteVenom],
+                Teams = [TeamNames.AvengersAcademy],
+                Base = "New York City",
+                History =
+                [
+                    "As the son of the Green Goblin (Harry Osborn) and Misery (Liz Allan), Normie Osborn has been getting wrapped up in super-hero shenanigans since he was a toddler. Poisoned by the infl uence of his grandfather Norman, Normie wound up hating Spider-Man (Peter Parker) and everything the Web-Head stood for.",
+                    "However, after Spider-Man saved Normie from Carnage, the boy’s outlook changed. Now eager to follow in the web-slinger’s footsteps, he allowed Venom (Dylan Brock) to bond him with Rascal—a modified offshoot of the Carnage symbiote weak enough for even a little kid to keep under control.",
+                    "After helping Dylan to rescue his father, Eddie, Normie adopted the identity of the Red Goblin and quietly took to the streets to become New York City’s latest enigmatic crimefi ghting prodigy.",
+                    "Despite having been a hero for only a matter of months, Normie has become a trusted ally to many of the city’s foremost defenders, including Spider-Man himself. When he’s not spending time with his mother, Liz, or his brother, Stanley, Normie attends Avengers Academy, learning the ropes of heroism alongside other up-and-coming young heroes like Moon Girl and Escapade."
+                ],
+                Personality =
+                [
+                    "Despite all he’s been through, Normie is still just a regular kid, and like a lot of kids his age, he’s a bundle of insecurities and nervous tics. He’s not good at opening up to others, much less counting on them. Ironically, his closest friend is probably his symbiote, Rascal. Unlike most of his species, Rascal is too rambunctious and simpleminded to ever be outright evil.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Red Skull (Johann Shmidt)",
             Rank = 3,
             Abilities = new Abilities
@@ -297,6 +382,99 @@ public class CharactersR
         },
         new()
         {
+            Name = "Rek-Rap",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 4, vigilance: 2, ego: 1, logic: -1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics / Anti-Venom"),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Gullible),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.SymbioticSpiderBlinder),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 4, Inches = 10 }],
+                HeightReminder = "7'1\" as Rek-Rap",
+                Weights = [108],
+                WeightReminder = "667 lbs. as Rek-Rap",
+                Gender = Gender.Male,
+                Eyes = "Red, white as Rek-Rap",
+                Hair = "None",
+                Size = Size.Big,
+                DistinguishingFeatures = "Rek-Rap form resembles Spider-Man costume with unnaturally huge mouth and tongue",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.MagicDemonic, OriginName.SymbioteVenom],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "As part of Chasm and Madelyne Pryor’s demonic invasion of New York City, the pair kidnapped Spider-Man and took him to limbo, where they forced him to reenact twisted parodies of his own adventures. While working at a demonic version of the Daily Bugle, Parker saved the life of a pale little imp.",
+                    "Inspired, the imp took up the wall-crawler’s heroic way of life, dressing like the Web-Head and calling himself Parker-Man. He confronted Chasm’s demonic Sinister Six parody—the Insidious Six—and attempted to “audition” for the role of their opponent, but the villains sent him packing.",
+                    "Dejected, the imp sought out the assistance of an old alchemist friend, a minotaur-like creature who had recently come into possession of a small sample of an alien symbiote. The minotaur wove a ritual to bind the imp to the symbiote, transforming him into a hulking monstrosity.",
+                    "Embracing his own backwardness, the imp took on the codename of Rek-Rap and helped Parker defeat the Insidious Six. After the invasion of Earth ended, Rek-Rap followed Spider-Man back to Earth, and in the days since, he’s helped him fend off a number of other threats, including the demon Re-Po and the resurgent Green Goblin (Norman Osborn)."
+                ],
+                Personality =
+                [
+                    "Rek-Rap adores Spider-Man, but he seems to have only a vague, backward sense of who the hero is and what he does. As he “web-whangs” around the city, Rek-Rap likes to crudely narrate his own adventures, framing them as episodes of The Rek-Rap Storytime Adventure! He is, on the whole, a lovable idiot who wants nothing more than to help people, have fun and eat flies.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Ren Kimura",
             Rank = 2,
             Abilities = new Abilities
@@ -471,7 +649,89 @@ public class CharactersR
                 ]
             }
         },
-		new()
+        new()
+        {
+            Name = "Rhino",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 0, resilience: 6, vigilance: 1, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Ram"),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp, isTech: true),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Aleksei Mikhailovich Sytsevich",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [710],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.WeirdScience],
+                Teams = [TeamNames.Orchis, TeamNames.SinisterSix, TeamNames.Thunderbolts],
+                Base = "New York City",
+                History =
+                [
+                    "Russian scientists hoping to create a superpowered assassin snatched a small-time crook named Aleksei Sytsevich off the street and offered to grant him strength beyond his wildest dreams. They started by bombarding his body with gamma rays, which did grant him limited super-strength, but not enough for their purposes. To further augment his powers, they developed an armored rhino-like suit that allowed him to smash through any obstacle.",
+                    "The scientists tried sending their “Rhino” to America to steal government secrets, but after being repeatedly defeated by both Spider-Man (Peter Parker) and the Hulk, Sytsevich turned on his handlers and abandoned Russia for good. He found an apartment in New York City and reinvented himself as a superhuman mercenary for hire.",
+                    "Although the Rhino primarily works as a villain, he has occasionally teamed up with super heroes for the right cause. He has a long-running grudge against Spider-Man (Peter Parker), but he considers Spider-Man (Miles Morales) to be a decent guy, maybe even a friend.",
+                ],
+                Personality =
+                [
+                    "Despite his reputation as a reckless and destructive dimwit, the Rhino is one of the more reasonable super villains in New York City. He has family and connections, people he cares about, like his niece Tanya. He may be a criminal mercenary, but he’s not a cold-blooded killer. Stay out of his way, and he’ll stay out of yours.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
 		{
 			Name = "Rictor",
 			Rank = 4,
