@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System.Net.Sockets;
 
 namespace MarvelMultiverse.Selectors.Characters;
 
@@ -269,6 +270,109 @@ public class CharactersA
                     "Harkness is generally a warm and inviting person, although she can be a bit overzealous. She’s harshest with the students from which she expects the most. If she has one flaw, it’s her assuredness that she knows best.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Agent Anti-Venom",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 4, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics"),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.SymbioticSpiderBlinder),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Anti-Venom form"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Healing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CureAll),
+                        powerSelector.GetPower(PowerNames.HealingHands),
+                        powerSelector.GetPower(PowerNames.LetsGo),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Eugene “Flash” Thompson",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [195],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.SymbioteVenom],
+                Teams = [TeamNames.Avengers, TeamNames.GuardiansOfTheGalaxy, TeamNames.USArmy],
+                Base = "New York City",
+                History =
+                [
+                    "High school football star and bully Flash Thompson grew up without many strong role models in his life—until Spider-Man (Peter Parker) started appearing in his friendly neighborhood. Inspired by the masked marvel’s selfl ess nature, Thompson started a Spider-Man fan club and began making amends with those he had bullied in the past, including, ironically, Parker himself.",
+                    "Hoping to follow in his idol’s footsteps, Thompson joined the military after high school. He served multiple successful tours overseas, earning the rank of corporal, but his army career was cut short when his legs were blown off in combat.",
+                    "Sometime later, one of Thompson’s old military contacts invited him to take part in an experimental weapons program. Military engineers helped Thompson bond with the Venom symbiote, transforming him into a super-powered government operative, codenamed Agent Venom.",
+                    "Although Thompson leftthe military shortly thereafter, he retained the symbiote and the codename. Much later, while battling Eddie Brock for control of the symbiote, he was doused with an astrobiological serum that transformed the part of the symbiote attached to him into bright white with black markings. To go along with the new suit, Thompson changed his codename to Agent Anti-Venom, a name he retains to this day."
+                ],
+                Personality =
+                [
+                    "Flash Thompson may have been a bullying, egotistical jock in high school, but he’s become an extremely mature adult. He takes his responsibilities toward others very seriously, always looking for a chance to lend a helping hand. He and Peter Parker consider each other good friends.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -1069,6 +1173,96 @@ public class CharactersA
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Arana",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 3, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, reminder: "Captain Marvel (Carol Danvers)"),
+                tagSelector.GetTag(TagNames.Obligation, reminder: "School"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Aña “Anya” Sofía Corazón",
+                Heights = [new() { Feet = 5, Inches = 3 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.Magic, OriginName.WeirdScience],
+                Teams = [TeamNames.AvengersAcademy, TeamNames.SpiderArmy, TeamNames.SpiderSociety],
+                Base = "New York City",
+                History =
+                [
+                    "Following the death of their champion, Ezekiel Sims, the secretive Spider Society set out to locate the Spider-Totem’s new host. To their surprise, they found that Sims’ mystic powers had latched onto an ordinary 14-year-old girl named Anya Corazón.",
+                    "Corazón immediately became the target of the Society’s oldest enemies: the Sisterhood of the Wasp. The Spider Society sent their best agent, Miguel Legar, to protect Corazón, but by the time he arrived, she had been fatally injured. To save her life, he transferred a portion of his own powers to her, granting her a hard exoskeleton and limited spiderlike abilities.",
+                    "Newly empowered, Corazón set out on a mission to fight crime—first under the tutelage of the Spider Society and later under Captain Marvel (Carol Danvers). Corazón was robbed of her initial powers toward the end of her time with Captain Marvel, but she gained a whole new set of more traditional spider abilities after being exposed to an experimental Spider-Virus.",
+                    "As of late, Corazón’s duties as a super hero have taken a back seat to her duties as a college student at Empire State University, but she’s still ready and willing to help anyone in need."
+                ],
+                Personality =
+                [
+                    "Corazón’s mother died when she was 6, and her father died shortly after she became a super hero, so for the last several years, she’s had to make her own way through life, both as a hero and as a civilian. Despite it all, she maintains a positive outlook. She’s the kind of clever and sociable person who always has a good joke and a helping hand at the ready.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

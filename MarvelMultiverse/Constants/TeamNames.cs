@@ -129,6 +129,7 @@ public static class TeamNames
     public const string SkrullEmpire = "Skrull Empire";
     public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
+    public const string SpiderSociety = "Spider-Society";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string SquadronSinister = "Squadron Sinister";
     public const string SquadronSupreme = "Squadron Supreme";
