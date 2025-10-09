@@ -94,6 +94,89 @@ public class CharactersE
         },
         new()
         {
+            Name = "Electro",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 2, vigilance: 4, ego: 4, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.ElementalBarrage),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.Supernova),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Maxwell “Max” Dillon",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [165],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Auburn, shaved bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "Skin shifts from peach to gold to pitch black depending on power usage",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.EmissariesOfEvil, TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "Max Dillon grew up in a poor household without many prospects, and when he graduated from high school, the only decent-paying job he could get was working as a line technician for an electrical company. One day on the job, Dillon was simultaneously shocked by an electrical line and hit by a bolt of lightning. The currents should have killed him, but instead, they gave him the power to control electricity.",
+                    "Figuring that he could use his new powers to make a quick buck, Dillon made a costume and started robbing houses under the codename Electro. Spider-Man (Peter Parker) put an end to his crime spree, and the villain has hated the wall-crawler ever since.",
+                    "Electro has tried and failed countless times to get even with Spider-Man. He joined the Sinister Six in its earliest days. When that didn’t produce results, he started his own team. Then another. Then another.",
+                    "Despite having literally burned himself out pursuing the wall-crawler, Electro has never managed to get over his obsession with Spider- Man. He has no other real relationships in his life—no driving purpose other than to get rich and to get revenge."
+                ],
+                Personality =
+                [
+                    "Although Electro started out as little more than a common thief, years and years of defeats have slowly morphed him into something more dangerous and sadistic. He still covets cash, and for the right price, he can be reasoned with, but the opportunity to torture Spider-People is worth more to him than all the money in the world.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Elixir",
             Rank = 4,
             Abilities = new Abilities

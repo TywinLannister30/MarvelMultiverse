@@ -40,6 +40,7 @@ public static class TeamNames
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";
     public const string DoraMilaje = "Dora Milaje";
+    public const string EmissariesOfEvil = "Emissaries of Evil";
     public const string Eternals = "Eternals";
     public const string Excalibur = "Excalibur";
     public const string Exiles = "Exiles";
