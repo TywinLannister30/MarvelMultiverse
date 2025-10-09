@@ -40,6 +40,19 @@ public class NarrativePowerSelector : INarrativePowerSelector
         },
         new()
         {
+            Name = NarrativePowerNames.CorruptingTouch,
+            Effect =
+            [
+                "With a touch, the character can corrupt a person and command their utter loyalty. In combat, this requires a successful Melee attack that infl icts at least ¢ point of damage.",
+                "The clothes of a corrupted target appear to be photographic negatives of their normal colors. If the target has the Heroic tag, replace that with the Villainous tag and remove their Karma. The target is completely dominated and will follow the corrupting character’s orders.",
+                "If any order involves harming someone, the target gets to make an Ego action check vs. the corrupting character’s Ego defense to end the domination. If the target originally had the Heroic tag, they get an edge on the check. If the order would cause the target to harm themselves, they also get an edge on the check, and if they originally had the Heroic tag, they get a double edge.",
+                "If a target with the Heroic tag breaks free from this power, their Karma instantly resets to its regular amount before being dominated."
+            ],
+            Examples = "Mister Negative",
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = NarrativePowerNames.DNAManipulation,
             Effect =
             [

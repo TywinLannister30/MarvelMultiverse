@@ -64,7 +64,9 @@ public static class PowerNames
     public const string DampenPower = "Dampen Power";
     public const string DanceOfDeath = "Dance of Death";
     public const string DangerSense = "Danger Sense";
+    public const string Darkness = "Darkness";
     public const string Dazzle = "Dazzle";
+    public const string Deafen = "Deafen";
     public const string DefenseStance = "Defense Stance";
     public const string DetectLie = "Detect Lie";
     public const string DimensionalPortal = "Dimensional Portal";

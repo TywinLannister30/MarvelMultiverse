@@ -8,6 +8,7 @@ public static class TeamNames
     public const string AgentsOfAtlas = "Agents of Atlas";
     public const string AgentsOfWakanda = "Agents of Wakanda";
     public const string AIM = "A.I.M.";
+    public const string Alchemax = "Alchemax";
     public const string AlliesOfDoctorDoom = "Allies of Doctor Doom";
     public const string AlphaFlight = "Alpha Flight";
     public const string AlphaStrike = "Alpha Strike";
@@ -82,7 +83,9 @@ public static class TeamNames
     public const string Illuminati = "Illuminati";
     public const string ImperialKreeAmy = "Imperial Kree Amy";
     public const string InfinityWatch = "Infinity Watch";
+    public const string Inheritors = "Inheritors";
     public const string InhumanRoyalGuard = "Inhuman Royal Guard";
+    public const string InnerDemons = "Inner Demons";
     public const string Intelligencia = "Intelligencia";
     public const string IntergalacticCouncil = "Intergalactic Council";
     public const string KGB = "KGB";
@@ -140,6 +143,7 @@ public static class TeamNames
     public const string SkrullEmpire = "Skrull Empire";
     public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
+    public const string SpiderClan = "Spider-Clan";
     public const string SpiderSociety = "Spider-Society";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
     public const string SquadronSinister = "Squadron Sinister";

@@ -210,6 +210,202 @@ public class CharactersM
         },
         new()
         {
+            Name = "Madame Monstrosity",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 1, resilience: 5, vigilance: 3, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.UnusualSize, reminder: "Huge; reach 5"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "tail"),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Melodia Stillwell",
+                Heights = [new() { Feet = 21, Inches = 11 }],
+                HeightReminder = "formerly 5'10\"",
+                Weights = [7000],
+                WeightReminder = "formerly 161 lbs.",
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black with white streaks",
+                Size = Size.Huge,
+                SizeNotes = "formerly average",
+                DistinguishingFeatures = "Dragon-like body with fur, stripes, claws, beak, pointy tail and vestigial wings",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "In hopes of catching the eye of the High Evolutionary, mad geneticist Madame Monstrosity kidnapped dozens of people off the streets of New York City and used experimental techniques to turn them into human-animal hybrids known as Humanimals. Unfortunately for her, her greatest creation—Spider-Boy—almost immediately escaped her clutches, leaving her without proof of her supposed genius.",
+                    "Frustrated beyond all measure, Monstrosity sent her most trusted Humanimal agents to recover the boy. After years of fruitless effort, they finally managed to lure him back to her lab by kidnapping his best friend, Christina Xu.",
+                    "Spider-Boy tried to surrender to Madame Monstrosity, but his mentor, Spider-Man (Peter Parker), noticed his absence and organized an Avengers raid of the geneticist’s compound. In a desperate attempt to fight back, Monstrosity turned herself into a horrifying amalgamation of dozens of creatures, but even this form stood no chance against the combined forces of Spider-Man and the Avengers.",
+                    "Just as Monstrosity was about to be defeated, the High Evolutionary swooped in and kidnapped her. By transforming into a monster, she had finally garnered his interest—as a specimen.",
+                ],
+                Personality =
+                [
+                    "Madame Monstrosity styles herself after the mad scientists of Victorian-era sci-fi , particularly Dr. Frankenstein. Her actions may be disgusting, but her clothes, accent and vocabulary all reek of nineteenth-century high society. She is the kind of person to unironically toss the word poppycock into a sentence.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Madame Web",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 2, vigilance: 4, ego: 2, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Dependents, specialization: "Rachel Carpenter"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.VisionIssues),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SixthSense,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DangerSense),
+                        powerSelector.GetPower(PowerNames.Intuition),
+                        powerSelector.GetPower(PowerNames.Precognition3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Levitation),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Julia Eugenia Cornwall Carpenter",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [140],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic, OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.SpiderArmy, TeamNames.SpiderSociety],
+                Base = "New York City",
+                History =
+                [
+                    "As a single mom and divorcée, Julia Carpenter spent most of her life scrambling to make rent, so when an old college friend offered her a bucketload of money to participate in a short scientifi c study, Carpenter readily agreed.",
+                    "A secretive government-backed research group known only as the Commission injected her with an experimental spider-serum, granting her a slew of spider-based super-powers. Government agents thereafter pressured her into joining the technically-legal-but-still-villainous Freedom Force, but once Carpenter saw how bad the team was, she fl ed government custody and started acting as a crimefi ghter for hire. As Spider- Woman, she established herself as one of the hardest-working heroes around, assisting dozens of super heroes in making the world a safer place to live, all while caring for her young daughter.",
+                    "Carpenter was one of the only people present to witness the original Madame Web (Cassandra Webb) be mortally wounded in battle with the Kravinoff family. On the verge of death, Webb transferred her powers to Carpenter, blinding her but also granting her an extensive set of precognitive abilities. Carpenter subsequently adopted the codename of Madame Web and took the dead woman’s place as an advisor and organizer for Spider-People across the Multiverse.",
+                ],
+                Personality =
+                [
+                    "Carpenter has always been fairly stern and serious, and becoming Madame Web hasn’t loosened her up. She is a highly intelligent, experienced and all around excellent advisor, but just as with the original Madame Web, her advice often comes tinged with a bit of world-weary condescension. The only person she really opens up to is her daughter, Rachel.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Maddy Cho",
             Rank = 1,
             Abilities = new Abilities
@@ -1056,6 +1252,91 @@ public class CharactersM
         },
         new()
         {
+            Name = "Mangaverse Spider-Man",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 1, vigilance: 2, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Aunt May Reilly"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter Parker",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [120],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.Magic, OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.SpiderArmy, TeamNames.SpiderClan, TeamNames.SpiderSociety],
+                Base = "New York City (Earth-2301)",
+                History =
+                [
+                    "In Earth-2301, the traditional heroes and villains of Earth-616 have been recast into roles heavily inspired by the aesthetics and tropes of early Japanese action manga. Giant robots, acrobatic ninja, noble samurai and cybernetic hackers all live alongside one another in a near-future incarnation of New York City.",
+                    "In this Mangaverse, Peter Parker spent most of his childhood training in the ways of the Spider-Clan shinobi under his Uncle Ben. Shortly after young Parker entered high school, Ben’s long-lost son Venom returned home and—on orders from the criminal mastermind Kingpin—cut down his father. Determined to avenge his beloved teacher, Parker donned his uncle’s old mask and took to the streets as the unstoppable Spider-Man.",
+                    "Along the way to Venom’s lair, Parker was possessed by a cursed symbiotic spirit living inside an amulet. It corrupted his mind and body, nearly killing him, but in a grand gesture of guilt and remorse, Venom sacrificed himself to destroy the cursed creature and save Spider-Man. Though the curse was over, Parker would forever retain the ability to make webs, a reminder of Venom’s sacrifice.",
+                    "To pay tribute to both his cousin and his uncle, Parker vowed to keep being Spider-Man for as long as he lived. Alongside his classmate Mary Jane and his sometimes-love interest Felicia Hardy, he joined an upstart band of adventurers known as the Avengers.",
+                    "Though Spider-Man does not yet know it, Hardy has been working behind the scenes with a dark version of Nick Fury to manipulate these new Avengers toward dubious ends."
+                ],
+                Personality =
+                [
+                    "Like a lot of early manga protagonists, Earth- 2301’s Peter Parker is a duty-bound yet fun-loving goo¼ all. He’s got little in the way of social skills, but he fi ghts for a righteous cause, and he does it with a smile on his face.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Mariah Hill",
             Rank = 2,
             Abilities = new Abilities
@@ -1637,6 +1918,103 @@ public class CharactersM
         },
         new()
         {
+            Name = "Misery",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 3, vigilance: 4, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics"),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.SymbioticSpiderBlinder),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm),
+                tagSelector.GetTag(TagNames.Dependents, reminder: "Normie Osborn, Stanley Osborn"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in alternate form"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Razorwebs),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Elizabeth “Liz” Allan",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Misery form has retractable claws, fangs and sharp tendrils",
+                Occupations = [OccupationName.Tycoon],
+                Origins = [OriginName.SymbioteVenom],
+                Teams = [TeamNames.Alchemax],
+                Base = "New York City",
+                History =
+                [
+                    "Although she dated both Peter Parker and Flash Thompson in her high school years, Liz Allan wouldn’t fi nd her true love until years later, when she met Harry Osborn at a friend’s wedding. The pair had a whirlwind romance and, soon enough, they were wed. They had a child named Normie and a happy home life, but their bliss didn’t last long. Harry’s body gave out after he injected himself with a modifi ed version of his father’s Green Goblin formula, and though Allan enjoyed the married life again with a clone of her deceased husband, that clone died under similar circumstances.",
+                    "Allan took over her husband’s stake in Alchemax, and after realizing the healing potential of symbiotes, she spearheaded the company’s new research division for studying the alien creatures. During an assault on Alchemax headquarters, one of these symbiotes—a gestalt creature made from pieces of the Anti-Venom and Carnage symbiotes—broke containment and bonded with Allan.",
+                    "With the power of her symbiote, Allan now protects both her company and her family under the codename Misery. For the moment, she remains unaware of the fact that her son Normie has become a symbiote-powered hero himself, known as the Red Goblin.",
+                ],
+                Personality =
+                [
+                    "Allan spent much of her youth letting other people make her decisions for her, but her symbiote has helped her to take a more assertive stance in her life. The modern Liz Allan is a brilliant businesswoman and dedicated guardian of two kids, namely Normie and his half brother, Stanley. She’s a friendly person on good terms with just about everyone in her life, including Stanley’s mother, the Queen Cat (Lily Hollister).",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Mister Fantastic",
             Rank = 4,
             Abilities = new Abilities
@@ -1715,6 +2093,124 @@ public class CharactersM
                     "Richards’ intense and calculating nature occasionally puts him at odds with his more outwardly emotional teammates, but at heart, he is a humanitarian. He believes that science has the potential to solve all of humanity’s problems, and nothing frustrates him more than an unsolvable problem.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Mister Negative",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 2, vigilance: 4, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm),
+                tagSelector.GetTag(TagNames.Backup, reminder: "Inner Demons"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in alternate form"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Healing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CureAll),
+                        powerSelector.GetPower(PowerNames.HealingHands),
+                        powerSelector.GetPower(PowerNames.LetsGo),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                    ],
+                },
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.CorruptingTouch)
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown, but often uses alias of Martin Li",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [180],
+                Gender = Gender.Male,
+                Eyes = "Brown, white (in alternate form)",
+                Hair = "Black, white (in alternate form)",
+                Size = Size.Average,
+                DistinguishingFeatures = "Body and clothes appear photonegative (in alternate form)",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.InnerDemons, TeamNames.Triads],
+                Base = "New York City",
+                History =
+                [
+                    "Years ago, Maggia goons kidnapped dozens of people—mostly homeless teens—off the streets of New York to use as lab rats for an experimental new narcotic. Nearly everyone who took the drug died within minutes.",
+                    "Two of the survivors are well known. The drug gave Tyrone Johnson and Tandy Bowen control over the forces of dark and light, respectively, turning them into the super-hero duo of Cloak and Dagger.",
+                    "Though few knew it, there was a third survivor: an up-and-coming Triad grunt captured by rivals in the Maggia. This survivor gained control over both light and dark, powers that split his mind in twain.",
+                    "One half of him became Martin Li, a respectable philanthropist, healer and family man. The other half became Mister Negative, a super-powered Triad commander who corrupts all he touches.",
+                    "Spider-Man (Peter Parker) first encountered him as Li, the founder and head of the F.E.A.S.T. charity center where Parker’s Aunt May volunteered. However, after a long investigation, Spider-Man uncovered Li’s alter ego and revealed it to the world.",
+                    "Li has been on the run from the authorities ever since, lying low in Shanghai and popping back into New York City for major events, such as the massive gang war that recently consumed much of the city."
+                ],
+                Personality =
+                [
+                    "Mister Negative delights in corrupting others, agitating their base impulses and forcing them to confront the darkness lurking within their psyches. Martin Li, on the other hand, wants only to help people, but life as an outlaw has forced him to make a series of increasingly dire compromises with his negative half.",
+                ],
+                BiographySections =
+                [
+                    new()
+                    {
+                        Name = "Alternate Form",
+                        Description =
+                        [
+                            "Mr. Negative’s forms affect his access to his powers. He can use his Healing powers only in Martin Li form, and his Corrupting Touch power can be used only by his Mr. Negative form."
+                        ],
+                    }
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -2570,6 +3066,111 @@ public class CharactersM
         },
         new()
         {
+            Name = "Morlun",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 5, resilience: 6, vigilance: 5, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.LeechLife),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BlazingFastFists),
+                        powerSelector.GetPower(PowerNames.CatchBullets),
+                        powerSelector.GetPower(PowerNames.LightningActions),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "When Morlun uses Leech Life on an avatar of the Spider-Totem, he recovers the full amount of the damage dealt as Health. On a Fantastic success, he recovers twice that amount."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Morlun",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Vampiric appearance, with fangs and red irises",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.Inheritors, TeamNames.SpiderArmy],
+                Base = "Mobile",
+                History =
+                [
+                    "Morlun is a member of the Inheritors, a family of vampiric predators who operated out of Loomworld (Earth-001). As the avatars of the Leech Totem, they feed o\u0084 the essences of other animal totems, particularly the Spider-Totem, which they consider the most delicious.",
+                    "For untold eons, the Inheritors operated virtually uncontested, devouring the totems of countless worlds without incurring so much as a scratch. Then, one day, Morlun came to Earth-616.",
+                    "With help from a Spider-Totem avatar named Ezekiel Sims, Spider-Man (Peter Parker) just barely managed to outsmart and kill Morlun. The Inheritors tried resurrecting Morlun and sending him back to Earth-616, but again and again, Spider-Man found a way to defeat the monster.",
+                    "Frustrated and humiliated, the Inheritors went to war with Earth-616. To combat them, Spider- Man gathered a small army of Spider-Totems from across the Multiverse, kicking o\u0084 the fi rst Spider-Verse crisis.",
+                    "All of the Inheritors, save for Morlun, were defeated and turned into infants by the Spider- Army. Sometime later, they were murdered by the Wasp Totem goddess Shathra. Morlun briefl y set aside his di\u0084 erences with the Spider-Totems to help defeat Shathra, only to disappear immediately a\u0091 er. His current whereabouts are unknown.",
+                ],
+                Personality =
+                [
+                    "Morlun and his whole family have consistently modeled themselves in the image of Victorian-era vampires. Dressed in the clothes of pompous nobles, they delighted in declaring themselves the most supreme, untouchable beings in the Multiverse—the literal Inheritors of all existence. As the last surviving member of this group, Morlun is beginning to learn just how wrong his family really was.",
+                ],
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Ms. Marvel (Kamala Khan)",
             Rank = 3,
             Abilities = new Abilities
@@ -2755,11 +3356,11 @@ public class CharactersM
 		},
 		new()
         {
-            Name = "Mysterio (Quentin Beck)",
-            Rank = 2,
+            Name = "Mysterio",
+            Rank = 3,
             Abilities = new Abilities
             (
-                melee: 0, agility: 0, resilience: 1, vigilance: 2, ego: 5, logic: 2
+                melee: 1, agility: 1, resilience: 2, vigilance: 2, ego: 6, logic: 3
             ),
             Traits =
             [
@@ -2768,7 +3369,7 @@ public class CharactersM
                 traitSelector.GetTrait(TraitNames.Inventor),
                 traitSelector.GetTrait(TraitNames.Presence),
                 traitSelector.GetTrait(TraitNames.PublicSpeaking),
-                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "(2) Grand Illusion, Mirror Images"),
+                traitSelector.GetTrait(TraitNames.Sneaky),
                 traitSelector.GetTrait(TraitNames.TechReliance),
             ],
             Tags =
@@ -2784,8 +3385,19 @@ public class CharactersM
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Disguise, isTech: true),
                     ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -2793,7 +3405,10 @@ public class CharactersM
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.AnimatedIllusion),
+                        powerSelector.GetPower(PowerNames.Darkness),
                         powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.Deafen),
+                        powerSelector.GetPower(PowerNames.Flare),
                         powerSelector.GetPower(PowerNames.GrandIllusion),
                         powerSelector.GetPower(PowerNames.Illumination),
                         powerSelector.GetPower(PowerNames.MirrorImages),
@@ -2825,7 +3440,8 @@ public class CharactersM
                 [
                     "Mysterio has an undying flair for the theatrical. Rather than attacking his enemies directly, he prefers to trick them into hurting themselves, or otherwise gaslight them into insanity. Years of media coverage have only heightened his delusions of grandeur. He might be persuaded to give up crime if he could be assured that he would still be famous.",
                 ]
-            }
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
