@@ -61,6 +61,7 @@ public static class TeamNames
     public const string FutureFoundation = "Future Foundation";
     public const string GammaFlight = "Gamma Flight";
     public const string GenerationX = "Generation X";
+    public const string GoblinGang = "Goblin Gang";
     public const string GoblinNation = "Goblin Nation";
     public const string GodsOfAsgard = "Gods of Asgard";
     public const string GodsOfWakanda = "Gods of Wakanda";

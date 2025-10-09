@@ -845,6 +845,88 @@ public class CharactersN
         },
         new()
         {
+            Name = "Norman Osborn (Earth-90214)",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 1, vigilance: 1, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "hidden behind thin mask"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Norman Osborn",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [180],
+                Gender = Gender.Male,
+                Eyes = "Brown (under mask, right eye is deformed, yellow)",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Green scaly skin, usually hidden",
+                Occupations = [OccupationName.Criminal, OccupationName.Tycoon],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.GoblinGang],
+                Base = "New York City (Earth-90214)",
+                History =
+                [
+                    "Born with a rare skin condition and forced into the role of circus freak, Norman Osborn vowed that one day he would be the most powerful man in the New York City of the Noir universe. Hiding his deformity behind a sophisticated mask, he spent the next several decades rising to the top of the city’s underworld, where his complete ruthlessness and his willingness to prey on others earned him the nickname the Goblin.",
+                    "During his rise, Osborn had a number of labor organizers brutally killed, including one Ben Parker. Years later, Ben’s nephew Peter became Spider-Man and dedicated his life to Osborn’s downfall.",
+                    "Eventually, Spider-Man dredged up enough evidence of Osborn’s wrongdoing to put the man away for good. He raided the villain’s compound and, in the process, accidentally knocked Osborn’s lieutenant Sergei Kravinoff into a pit of spiders. He was just about to have his revenge on Osborn when Kravinoff escaped from the pit and—in a fit of madness—dragged Osborn into a nearby river, presumably killing them both.",
+                ],
+                Personality =
+                [
+                    "Norman Osborn is a crime boss in the style of Prohibition-era gangsters like Al Capone and Meyer Lansky. He has enough money and infl uence to maintain a thin facade of respectability in the papers, but everyone in New York knows that he’s a killer and a tyrant.",
+                    "His only genuine soft spot is his love for carnies. Most of his top men began their careers in the circus.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Northstar",
             Rank = 4,
             Abilities = new Abilities
