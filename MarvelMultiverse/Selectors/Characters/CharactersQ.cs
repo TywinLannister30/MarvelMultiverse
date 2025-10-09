@@ -112,6 +112,114 @@ public class CharactersQ
         },
         new()
         {
+            Name = "Queen Goblin",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 3, vigilance: 4, ego: 3, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "goblin form"),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in alternate form"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Pumpkin Scepter [Inflicts hellfire damage on a Fantastic success, splitting the damage equally between Health and Focus; otherwise acts as an ordinary club]"),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlHellfire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicDemonicMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.PenanceStare, reminder: "referred to as Goblin Gaze"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ashley Kafka",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [140],
+                Gender = Gender.Female,
+                Eyes = "Blue (yellow in goblin form)",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Goblin form has scaly red skin, sharp claws and teeth",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.MagicDemonic],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "Ashley Kafka a began her career as a researcher and psychologist at the Ravencroft Institute for the Criminally Insane, providing mental-health services to many enemies of Spider-Man (Peter Parker). Her methods yielded some promising results, but before she could make serious progress, she was murdered by one of her own patients: the villain Massacre.",
+                    "Years later, as part of a plan to torture Spider-Man with the faces of those he had failed to save, the Jackal (Ben Reilly) created clones of dozens of the wall-crawler’s dead friends, including two clones of Kafka a. The first fell victim to cellular degeneration and perished almost immediately, but the second was stable enough to assume Kafka a’s old life.",
+                    "This new Kafka a got a job working for the Beyond Corporation as the personal psychologist for their captive hero, Ben Reilly. She tried to help Reilly escape, but the corporation found out and imprisoned her. Hoping to make her their own captive villain, Beyond exposed Kafka a to the concentrated, liquified sins of Norman Osborn, turning her into Queen Goblin.",
+                    "Kafka a used her new powers to escape from Beyond, and shortly thereafter, she exorcised Osborn’s sins from her body. For reasons unknown, though, this did not remove her powers or her newly villainous attitude."
+                ],
+                Personality =
+                [
+                    "Kafka a spent most of her life trying to help people by stabilizing the bodies and minds of convicted villains. Since becoming Queen Goblin, her desires have inverted. All she wants now is to drive heroes like Ben Reilly and Peter Parker over the edge—to make them as unstable and violent as herself.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Quicksilver",
             Rank = 4,
             Abilities = new Abilities
