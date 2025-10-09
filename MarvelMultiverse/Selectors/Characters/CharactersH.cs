@@ -14,6 +14,186 @@ public class CharactersH
     [
         new()
         {
+            Name = "Hallow's Eve",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 2, vigilance: 4, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.MagicMasks)
+            ],
+            Biography = new Biography
+            {
+                RealName = "Elizabeth Tyne (now mainly goes by Janine Godbe)",
+                Heights = [new() { Feet = 5, Inches = 9}],
+                Weights = [145],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.BeyondCorporation, TeamNames.BloodHunters, TeamNames.ForcesOfLimbo],
+                Base = "New York City",
+                History =
+                [
+                    "After suffering years of brutal abuse at the hands of her father, Elizabeth Tyne shot him dead and fl ed to Utah. Under the pseudonym of Janine Godbe (a name she has been using ever since), she got a job as a waitress at a small-time diner and started dating a handsome drifter named Ben Reilly. Godbe revealed her dark past to Reilly, and in exchange, he revealed his own origins as a clone of Spider-Man (Peter Parker).",
+                    "Shortly thereafter, Godbe was kidnapped by another of Parker’s clones: Kaine. Reilly eventually saved her from Kaine’s clutches, but the whole incident shook her up so much that she decided to turn herself in to the police.",
+                    "Years later, as a means of obtaining leverage over Reilly, the Beyond Corporation arranged for Godbe’s early release from prison. Together, Reilly and Godbe attempted to escape Beyond’s custody, but while Godbe got away clean, Reilly was captured and robbed of his memories, turning him into Chasm.",
+                    "Despite Reilly’s unstable mind, Godbe stuck by his side. She helped him find refuge in the company of Madelyne Pryor, and in exchange, Pryor granted Godbe a mystic bag of masks, each of which imbues their wearer with unique super-powers. As the mysterious Hallows’ Eve, Godbe now spends her days adventuring alongside Reilly, helping to guide him back to his old heroic self."
+                ],
+                Personality =
+                [
+                    "Understandably, Godbe has a hard time trusting others. She would go to the end of the world and back for Reilly, but she cares little for anyone else. That said, she’s not a cruel person, and becoming Hallows’ Eve has allowed her to fi nd a place as a hero in her own right.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Hammerhead",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 4, vigilance: 3, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Ram"),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable, isTech: true),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 5, Inches = 10}],
+                Weights = [265],
+                Gender = Gender.Varies,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Unusually large, flat and tough head",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.HighTechCybernetics],
+                Teams = [TeamNames.Maggia],
+                Base = "New York City",
+                History =
+                [
+                    "One night, mad scientist Jonas Harrow stumbled upon the body of a small-time Maggia enforcer who had been shot in the head and left for dead in an alleyway beneath a poster for an Al Capone movie. Sensing an opportunity to experiment, Harrow took the dying man back to his lab and reconstructed his cranium, replacing the gangster’s skull with ultra-hard steel.",
+                    "Harrow’s subject awoke to find that he had forgotten nearly everything about himself— except for the fact that he wanted to be like Al Capone. Under the codename Hammerhead, he used his unbreakable skull to fi ght his way through to the upper echelons of the underworld. Soon enough, he became the head of his own Capone-style family.",
+                    "Hammerhead’s rapid rise through the underworld drew the attention of Spider-Man (Peter Parker). Though the hardheaded gangster was rarely the web-slinger’s foremost concern, he and Hammerhead duked it out dozens of times over the subsequent years, typically in the midst of larger gang wars.",
+                    "During one such war, Kingpin’s men riddled Hammerhead with bullets, pushing him once again to the brink of death. However, in exchange for some favors, Mister Negative not only saved Hammerhead’s life but agreed to pay for the gangster’s entire skeleton to be laced with adamantium.",
+                    "The improved Hammerhead’s prospects soared— at least, for a little while. Along with most of the old Maggia leaders, Hammerhead was deposed from power during Tombstone’s recent takeover of the New York City underworld."
+                ],
+                Personality =
+                [
+                    "Despite having been born and raised in Russia, Hammerhead fashions himself and his organization after Italian crime families. He wears a pin-striped suit and talks with a stereotypical gangster accent.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Hand Ninja",
             Rank = 1,
             Abilities = new Abilities
@@ -833,6 +1013,110 @@ public class CharactersH
         },
         new()
         {
+            Name = "Hobgoblin",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 4, resilience: 4, vigilance: 2, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pumpkin Bombs (act as frag grenades)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.OperationsCenter),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Roderick Kingsley",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [185],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Gray, formerly blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Tycoon],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "The first time that the Green Goblin (Norman Osborn) faked his death, he was unprepared. He rushed to flee the country, abandoning dozens of secret stashes of Goblin technology throughout New York City.",
+                    "A ruthless but unsuccessful fashion designer named Roderick Kingsley discovered one of these stashes and decided to use the gear to further his career. Under the codename Hobgoblin, Kingsley embarked on a series of covert attacks against his biggest competitors.",
+                    "Kingsley was careful. He employed multiple agents and body doubles, killing anyone who threatened to expose his identity. In the end, he was still unmasked and defeated by Spider-Man (Peter Parker).",
+                    "Unable to return to life as a fashion designer, Kingsley threw himself wholly into the world of super-villainy. He and Spider-Man clashed again many times in the subsequent years, sometimes directly and sometimes through proxies like Ned Leeds. Despite the wall-crawler’s best efforts, Kingsley always managed to slip away and return to fight another day.",
+                    "Many people have held the title of Hobgoblin, but Kingsley was the first and the most successful."
+                ],
+                Personality =
+                [
+                    "Roderick Kingsley may model himself after Norman Osborn, but he lacks Osborn’s mental instability. He is clever, conniving and, above all things, patient. In this way, he can often be a greater threat than Osborn himself.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Hood",
             Rank = 2,
             Abilities = new Abilities
@@ -1350,6 +1634,106 @@ public class CharactersH
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Hydro-Man",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 6, vigilance: 4, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Earth (particularly soil, dirt and dust)"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlWater,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSuffocation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpeedSwim),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Morris “Morrie” Bench",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually around 6'2\"",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "usually around 265 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.FrightfulFour, TeamNames.Maggia, TeamNames.SinisterSix],
+                Base = "Mobile",
+                History =
+                [
+                    "At the request of some local engineers, Spider-Man (Peter Parker) agreed to supervise the fi rst test of a new hydroelectric generator in the seas outside of New York City. During the test, an electrical cable snapped, and Spider-Man—in his rush to mitigate the damage—accidentally pushed smalltime sailor and ex-con Morris Bench overboard.",
+                    "The energy from the generator turned Bench into a living liquid, capable of not only becoming water, but controlling it in the same way that the Sandman controls sand. Upset about his new condition, Bench set out to get revenge on Spider-Man, tracking him across New York City before attempting to wash the spider out once and for all.",
+                    "Spider-Man literally mopped up the newly anointed Hydro-Man with nothing more than a stack of newspapers, but Bench, ever the optimist, remained undeterred. In the years since their fi rst encounter, Bench has made dozens of further attempts on the wall-crawler’s life, each more disastrous and poorly conceived than the last.",
+                    "In many ways, this quest has consumed Bench’s entire life. Although he occasionally takes regular criminal jobs to pay the bills, his only real passion is taking down Spider-Man. He lost track of his original reasons for hating the hero long ago, but he still feels an instinctual need for vengeance.",
+                ],
+                Personality =
+                [
+                    "Morrie Bench was an unscrupulous and greedy crook long before he became Hydro-Man, and gaining incredible powers certainly hasn’t helped balance him out. He is, on the whole, a dull individual driven almost entirely by his personal grievances and impulses. To call him temperamental would be a vast understatement.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

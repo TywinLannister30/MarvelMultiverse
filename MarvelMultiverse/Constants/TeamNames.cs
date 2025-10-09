@@ -23,6 +23,7 @@ public static class TeamNames
     public const string BetaFlight = "Beta Flight";
     public const string BeyondCorporation = "Beyond Corporation";
     public const string BlackOrder = "Black Order";
+    public const string BloodHunters = "Blood Hunters";
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string CaptainBritainCorps = "Captain Britain Corps";
     public const string Champions = "Champions";
@@ -52,8 +53,10 @@ public static class TeamNames
     public const string Fist = "Fist";
     public const string FiveWeaponsSociety = "Five Weapons Society";
     public const string ForceWorks = "Force Works";
+    public const string ForcesOfLimbo = "Forces of Limbo";
     public const string FreedomForce = "Freedom Force";
     public const string FriendsOfNewGermany = "Friends of New Germany";
+    public const string FrightfulFour = "Frightful Four";
     public const string FutureFoundation = "Future Foundation";
     public const string GammaFlight = "Gamma Flight";
     public const string GenerationX = "Generation X";

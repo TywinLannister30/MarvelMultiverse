@@ -85,6 +85,21 @@ public class NarrativePowerSelector : INarrativePowerSelector
         },
         new()
         {
+            Name = NarrativePowerNames.MagicMasks,
+            Effect =
+            [
+                "The character has a satchel that carries several magic masks that give the wearer the traits, tags and powers associated with that mask, both good and bad. For example, a werewolf mask transforms the character into an actual werewolf.",
+                "The character can wear only one mask at a time. Switching between them requires a standard action.",
+                "Wearing a mask usually does not change the character’s size, even if the thing they would be like is usually a different size. Powers granted by the mask ignore all prerequisites.",
+                "See p.150-151 of the SpiderVerse expansion for a list of known masks",
+                "Other masks can be summoned from the satchel as needed. These can allow the character to emulate anything the mask represents.",
+                "The character can put the masks on other people. If the character drops any masks, they can be picked up and worn by others too. The character can remove any such masks from another person with a successful Melee attack that does at least 1 point of damage—or if the wearer permits it.",
+            ],
+            Examples = "Hallows’ Eve",
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = NarrativePowerNames.Restart,
             Effect =
             [
