@@ -3313,6 +3313,21 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Razorwebs,
+            Description = "The character’s webbing can cut!",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.Webcasting}",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Range = "10 spaces",
+            Effect =
+            [
+                "The character makes an Agility attack on an enemy. If the attack is a success, the webbing does Health damage. On a Fantastic success, the attack also causes bleeding."
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = PowerNames.RegainFocus,
             Description = "The character takes a moment to fi nd their center.",
             PowerSets = [PowerSetNames.MartialArts],

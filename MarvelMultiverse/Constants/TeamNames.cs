@@ -21,6 +21,7 @@ public static class TeamNames
     public const string AvengersAcademy = "Avengers Academy";
     public const string AvengersUnityDivision = "Avengers Unity Division";
     public const string BetaFlight = "Beta Flight";
+    public const string BeyondCorporation = "Beyond Corporation";
     public const string BlackOrder = "Black Order";
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string CaptainBritainCorps = "Captain Britain Corps";
@@ -62,6 +63,7 @@ public static class TeamNames
     public const string GreatLakesAvengers = "Great Lakes Avengers";
     public const string GreatRingOfArakko = "Great Ring of Arakko";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
+    public const string HEARTClinic = "H.E.A.R.T. Clinic";
     public const string HellLords = "Hell Lords";
     public const string HellfireClub = "Hellfire Club";
     public const string HellfireTradingCompany = "Hellfire Trading Company";
@@ -88,6 +90,7 @@ public static class TeamNames
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";
     public const string Maggia = "Maggia";
     public const string Marauders = "Marauders";
+    public const string MarvelMedics = "Marvel Medics";
     public const string MastersOfEvil = "Masters of Evil";
     public const string MercsForMoney = "Mercs for Money";
     public const string MI13 = "MI13";

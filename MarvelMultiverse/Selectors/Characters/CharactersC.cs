@@ -806,6 +806,191 @@ public class CharactersC
         },
         new()
         {
+            Name = "Cardiac",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 4, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "Elemental Barrage"),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Elias “Eli” Wirtham",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [300],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.HealthCareWorker],
+                Origins = [OriginName.HighTechCybernetics],
+                Teams = [TeamNames.HEARTClinic, TeamNames.MarvelMedics],
+                Base = "New York City",
+                History =
+                [
+                    "After his brother, Joshua, died of a painful and degenerative disease with no known cure, Elias Wirtham vowed to create a world in which no one would have to suffer like that ever again. Overcoming impossible odds, he fought his way up the ranks of the medical industry—first as a surgeon, then later as an executive. He eventually acquired a company known to have done promising research on his brother’s disease, only to discover, to his horror, that the company had cured the disease decades ago but shelved the treatment due to its unprofitability.",
+                    "Completely disillusioned with the private health care industry and the law as a whole, Wirtham became a vigilante. Using his vast resources and his skills as a surgeon, he replaced his heart with an energy generator and his skin with hard cybernetic armor. Under the codename Cardiac, he set out to assassinate every white-collar criminal he could get his hands on.",
+                    "However, after many of his assassinations were foiled by Spider-Man (Peter Parker), Cardiac settled on a less lethal approach to his mission. He’s still a criminal, but he’s not a killer, and these days, he spends most of his time stealing resources from the rich and powerful to help the poor clients of his nonprofi t H.E.A.R.T. health clinic.",
+                ],
+                Personality =
+                [
+                    "Though his methods may sometimes be questionable, Cardiac’s values have always been pure. He’s a kind and handsome surgeon with a good bedside manner, and like every great hero, he is fully dedicated to the cause of protecting the weak and powerless.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Carnage",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 4, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics / Anti-Venom"),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.SymbioticSpiderBlinder),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in alternate form"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Razorwebs),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Cletus Cortland Kasady",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "Carnage form has retractable claws, fangs and an unnaturally long tongue",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.SymbioteVenom],
+                Teams = [TeamNames.SymbioteHive],
+                Base = "New York City",
+                History =
+                [
+                    "Even before he became Carnage, Cletus Kasady’s death toll was shocking. Evidence exists to suggest that before the age of 18, he had already killed his parents, his grandparents, several sets of foster parents and an entire orphanage. Later in life, he was convicted of killing and partially eating almost a dozen people, and he was sentenced to a corresponding eleven consecutive life sentences on Ryker’s Island.",
+                    "Unwilling to let prison put a damper on his killing streak, Kasady immediately attempted to murder his cellmate, not knowing that his prospective victim was, in fact, Venom (Eddie Brock). In the fi ght, the Venom symbiote gave birth to a new symbiote, which entered Kasaday's bloodstream, transforming him into the symbiotic serial killer Carnage.",
+                    "Empowered beyond his wildest dreams, Carnage set out to commit murder on a mass scale. In the end, it took the combined efforts of Spider-Man (Peter Parker) and Venom to take him down and bring the slaughter to an end.",
+                    "Carnage has escaped from prison many times since then, with each subsequent killing spree more deadly than the last. During his last major escapade, he came within inches of overrunning the entirety of New York City with an army of immortal Carnage zombiotes. Though he has since lost his godlike powers, he remains one of the most lethal and dangerous super villains on the planet."
+                ],
+                Personality =
+                [
+                    "The Carnage symbiote entered Kasady’s body when it was only an infant, so unlike with the original Venom symbiote, Carnage’s consciousness cannot be fully disentangled from Kasady’s own. They are both utterly deranged and narcissistic psychopaths who delight in the torture and slaughter of others.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Cassandra Nova",
             Rank = 6,
             Abilities = new Abilities
@@ -999,6 +1184,186 @@ public class CharactersC
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Chameleon",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 1, vigilance: 2, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in true form"),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Dmitri Nikolayevich “Anatoly” Smerdyakov",
+                Heights = [new() { IsUnknown = true }],
+                Weights = [],
+                UnknownWieght = true,
+                Gender = Gender.Male,
+                Eyes = "Varies, originally brown",
+                Hair = "Varies, originally brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Pale, nearly featureless head with glowing yellow eyes (in true form)",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.SpecialTraining, OriginName.WeirdScience],
+                Teams = [TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "Anatoly Smerdyakov grew up in the Russian countryside alongside his half brother Sergei Kravinoff, the future Kraven the Hunter. The Kravinoff patriarch considered Smerdyakov’s existence an embarrassment, so as soon as he was able, he sent the young boy off to an underground school for spies.",
+                    "Smerdyakov discovered that he had a knack for faking his appearance, so aft er graduation, he set out to become a world-renowned master of disguise. Using nothing more than simple cosmetics, he managed to sneak into a U.S. missile defense center and steal top government secrets—secrets that were saved only by the last-minute intervention of Spider-Man (Peter Parker).",
+                    "Not one to let a defeat stand, Smerdyakov developed a serum that made his body smooth and malleable, allowing him to change his appearance at will. Equipped with the ability to become anyone at any time, he embarked on a series of increasingly complex and brutal operations to make the wall-crawler’s life as miserable as possible.",
+                    "Spider-Man has, thus far, always managed to uncover the Chameleon’s treachery, but that may not hold true forever. The villain’s most recent plot involved a small army’s worth of body doubles and covert operatives, all of whom had to be rooted out before the Chameleon himself could be apprehended."
+                ],
+                Personality =
+                [
+                    "The Chameleon has gone through periods of mental instability during which he loses himself in his alternate identities, but his core self has always remained that of a cruel and conniving Victorian nobleman. When he’s between jobs, he likes to lie back, lounge in an antique chair, drink an expensive bottle of red wine and contemplate his next labyrinthine scheme.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Chasm",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 7, resilience: 3, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Integrity),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.VenomBlast),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Benjamin “Ben” Reilly",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [165],
+                Gender = Gender.Male,
+                Eyes = "Hazel",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.BeyondCorporation, TeamNames.NewWarriors, TeamNames.SpiderArmy],
+                Base = "New York City",
+                History =
+                [
+                    "Of the Jackal’s many attempts to create a perfect clone of Spider- Man (Peter Parker), Reilly is indisputably the most like the original. He’s been a crimefi ghter for almost as long as the Web- Head himself, and unlike the Jackal’s other clones, he rarely suffers from cellular degeneration or genetic defects.",
+                    "Shortly after his creation, Reilly escaped from the Jackal, assumed a new identity and fled to the far corners of the country. After spending years attempting to live a normal life in obscurity, he returned to New York City—and to the life of a super hero—after learning that Aunt May was suffering health problems.",
+                    "Under the codename Scarlet Spider, Reilly helped Spider- Man protect New York from some of the deadliest threats in its history, including attacks by other clones. For a while, he and Parker believed Reilly to be the original, but they later learned they had been fooled.",
+                    "Recently, after members of the Beyond Corporation erased most of his memories, Reilly adopted a darker attitude and a darker codename: Chasm. His girlfriend, Hallows’ Eve, has been helping him to slowly regain his senses, but it’s been a long and ongoing process."
+                ],
+                Personality =
+                [
+                    "As the Scarlet Spider, Reilly’s personality heavily resembled that of Peter Parker, albeit a tad darker. As Chasm, Reilly is a vicious and angry individual whose motives frequently border on the villainous. The infl uence of Hallows’ Eve has helped keep him sane, but it might not take much to push him into a murderous rage. He maintains a complex and frequently hostile relationship with his old partner Parker.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

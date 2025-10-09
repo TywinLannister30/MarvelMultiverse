@@ -227,6 +227,7 @@ public static class PowerNames
     public const string QuickPhase = "Quick Phase";
     public const string QuickToss = "Quick Toss";
     public const string RallyOnMe = "Rally on Me";
+    public const string Razorwebs = "Razorwebs";
     public const string RegainFocus = "Regain Focus";
     public const string ReinforcedSkeleton = "Reinforced Skeleton";
     public const string ResizeObject = "Resize Object";
