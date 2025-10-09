@@ -162,6 +162,7 @@ public static class TeamNames
     public const string TheFive = "The Five";
     public const string TheHand = "The Hand";
     public const string ThievesGuild = "Thieves' Guild";
+    public const string ThunderboltPoliceDepartment = "Thunderbolt Police Department";
     public const string Thunderbolts = "Thunderbolts";
     public const string TNM = "TNM";
     public const string Triads = "Triads";
