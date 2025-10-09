@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System;
 
 namespace MarvelMultiverse.Selectors.Characters;
 
@@ -465,6 +466,99 @@ public class CharactersB
         },
         new()
         {
+            Name = "Beetle",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 2, ego: 3, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.LegalEagle),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection, isTech: true),
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Janice Lincoln",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [135],
+                WeightReminder = "205 lbs. (in battle suit)",
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Lawyer],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.SinisterSix, TeamNames.Syndicate],
+                Base = "New York City",
+                History =
+                [
+                    "Unsatisfi ed with life as a lawyer, Janice Lincoln resolved to follow in the footsteps of her father, Tombstone, and become a super-powered criminal. In exchange for help with a legal dispute, Baron Zemo commissioned a powerful beetle-themed battle suit for Lincoln, based on the outfi t worn by the original Beetle, Abner Jenkins.",
+                    "Although Lincoln’s initial impulse was to try battling some of Baron Zemo’s enemies—primarily Captain America (Steve Rogers)—she quickly gravitated back toward her home in New York City and its foremost defender: Spider-Man (Peter Parker). After testing the waters with Boomerang’s incarnation of the Sinister Six, she formed her own organization, a Syndicate made up entirely of young, up-and-coming female villains like herself. Ironically, the Syndicate’s fi rst mission was to capture Boomerang, and while searching for the sharpshooter, Lincoln fell in love with his roommate, Randy Robertson.",
+                    "After a whirlwind romance, Lincoln was on the verge of giving up the villain life and marrying Robertson when their wedding ceremony was attacked and Randy was injured in a subsequent attack. These assaults on her loved ones led Janice to become embroiled in a gang war that drove a wedge between her and Tombstone, who would have killed her if not for the intervention of Spider-Man.",
+                ],
+                Personality =
+                [
+                    "Though Janice Lincoln identifi es as a fiercely independent and strongheaded woman, she has a nasty habit of contorting herself to conform to what she thinks other people want from her. Despite the fact that Tombstone explicitly warned her away from a criminal life, she became a super villain, in large part because she believes that’s what he secretly wants from her.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Beta Ray Bill",
             Rank = 5,
             Abilities = new Abilities
@@ -772,6 +866,116 @@ public class CharactersB
                     "While generally considered by his people to be a benevolent ruler, Black Bolt can come off as a bit aloof, especially to non-Inhumans.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Black Cat",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 2, vigilance: 4, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Luck,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EvilEye),
+                        powerSelector.GetPower(PowerNames.JinxYou),
+                        powerSelector.GetPower(PowerNames.JinxYouAll),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Felicia Sara Hardy",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [120],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Criminal],
+                Origins = [OriginName.HighTechCybernetics, OriginName.SpecialTraining],
+                Teams = [TeamNames.HeroesForHire, TeamNames.ThievesGuild, TeamNames.SecretDefenders],
+                Base = "New York City",
+                History =
+                [
+                    "Felicia Hardy’s father, Walter, might have been a legendary thief, but to her, he was never anything more than a good dad. So when a group of corrupt cops threw him in jail for a crime he didn’t actually commit, Felicia flew into a rage. She spent the rest of her youth tirelessly preparing to break her father out, training her body and mind in the ways of a master thief and even augmenting her body with a cybernetic probability generator. As a tribute to her father’s life as a cat burglar, she equipped herself with a pair of sharp claws and took on the codename Black Cat.",
+                    "When Hardy fi nally did break her father out of prison, Spider-Man (Peter Parker) tried to stop her. However, after he realized that Walter Hardy was on death’s door, Parker allowed Felicia to take her father home. He tried to apprehend her after the fact, only for her to slip away.",
+                    "This chance encounter sparked a long relationship between the cat burglar and the web-slinger. In the coming years, they became many things to each other. Sometimes, they were enemies. Sometimes, they were partners. Sometimes, they were lovers. No matter the circumstances, they were always important to each other.",
+                    "Currently, the pair are just good friends. Black Cat is an independent crimefi ghter, but she’s always willing to help out Spider-Man, and she’s even had adventures with another ex of his: Mary Jane Watson."
+                ],
+                Personality =
+                [
+                    "Black Cat is best known for the flirty, femme fatale persona she puts on whenever she’s interacting with Parker, but her playful, blasé exterior belies a deeply empathetic, if not heroic, interior. She has been a thief for the good of others just as often as she’s been a thief for herself.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -1756,6 +1960,88 @@ public class CharactersB
                     "Despite a lifetime of discrimination weighing on his soul, Adam has always managed to be a loyal friend and a good teacher. His students consider him to be charming and personable.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Boomerang",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 5, resilience: 2, vigilance: 4, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Assorted Bomberangs [ranged weapon; on a Fantastic success, user can apply an elemental effect of their choice.]"),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CoveringFire),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Frederick “Fred” Myers",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.MastersOfEvil, TeamNames.SecretEmpire, TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "Indefi nitely suspended from Major League Baseball for his part in a bribery scandal, star pitcher Fred Myers found new employment as a covert agent for a Hydra subsidiary known as the Secret Empire. The leaders of this enigmatic organization outfi tted Myers with a series of hightech prosthetics and boomerang- shaped grenades, turning him into a weaponized pitching machine.",
+                    "Myers proved to be a capable secret agent, but after his disappointing showings against the Hulk and the Defenders, the Secret Empire released him from their service. In need of a new job, he attempted to garner fame throughout the underworld by taking down Spider- Man (Peter Parker), only to be roundly and repeatedly defeated by the web-slinger.",
+                    "For the next several years, Myers bounced back and forth between mercenary organizations— some good, some bad—occasionally taking time off from work to try fi ghting Spider- Man again.",
+                    "By offering his meager assistance to the Underground during Hydra’s takeover of the United States of America, Myers eventually found the cultural cachet he needed to insert himself into the Web- Head’s life fully, fi rst as Peter Parker’s roommate, then later as Spider-Man’s crimefi ghting partner. Although Boomerang ultimately betrayed Spider-Man to earn the Kingpin’s favor, he continued to harbor real feelings of friendship for both the web-slinger and his civilian persona. In fact, just a few months later, he sacrifi ced himself to save Spider- Man from the deadly grasp of Morlun. Fortunately for him, he was able to shake that off thanks to his friend the Shocker, the Resurrection Stone and the Venom War."
+                ],
+                Personality =
+                [
+                    "Boomerang’s long and largely unsuccessful career as a mercenary forced him to reconsider his greedy and self -centered behavior. This selfrefl ection did not quite turn him into a hero—at least, not until the day of his death—but for a while, it did make him a better, more thoughtful and more ethical criminal.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
