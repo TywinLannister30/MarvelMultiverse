@@ -124,6 +124,207 @@ public class CharactersL
         },
         new()
         {
+            Name = "Lady Octopus",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 2, vigilance: 3, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, isTech: true),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Carolyn Trainer",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [140],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Six mechanical arms",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.Syndicate],
+                Base = "New York City",
+                History =
+                [
+                    "Though born the daughter of the brave geneticist and Spider-Man (Peter Parker) ally Seward Trainer, Carloyn Trainer was only ever interested in the accomplishments of her father’s old colleague Otto Octavius. She spent her entire adolescence studying under Doctor Octopus, and after he was killed by Kaine, she carried on his legacy.",
+                    "As the new Doctor Octopus, she launched a series of revenge schemes against Kaine and his genetic brothers, Peter Parker and Ben Reilly. When the schemes all failed, she settled for the next best thing: undoing Kaine’s murder of her mentor altogether. With help from a sect of Hand ninja, Trainer resurrected Octavius and returned to her job as his assistant. Having gotten a taste for the thrill of adventuring solo, though, she quickly abandoned him to become the independent mercenary Lady Octopus.",
+                    "These days, Lady Octopus primarily works with the all-female Syndicate led by the Beetle (Janice Lincoln). Though she rarely agrees with the way that Lincoln manages the team, she can’t deny that the Syndicate gets results."
+                ],
+                Personality =
+                [
+                    "Much like her mentor Octavius, Carloyn Trainer is an intelligent scientist with a huge but fragile ego. Her years of working as Doctor Octopus’ assistant did teach her some modicum of humility, but she still dislikes most of the ideas that her colleagues in the Syndicate come up with, and she is more than willing to tell them so.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Last Stand Spider-Man",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 6, resilience: 2, vigilance: 4, ego: 3, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.OutOfShape),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hunted),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgliding),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter Parker",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [182],
+                Gender = Gender.Male,
+                Eyes = "Hazel",
+                Hair = "Brown, with gray temples",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.FantasticFour, TeamNames.SpiderArmy],
+                Base = "New York City (Earth-312500)",
+                History =
+                [
+                    "At the climax of Kraven the Hunter’s self-styled “Grim Hunt,” the Kravinoff family murdered Madame Web (Cassandra Webb), the close friend and advisor of Spider-Man (Peter Parker). Driven mad with rage, Spider-Man beat Kraven half to death before taking up a spear and threatening to cut him down once and for all.",
+                    "In Earth-616, Parker pulled back from the edge of moral annihilation and let Kraven live, but in Earth-312500, he thrust his spear into the hunter’s heart.",
+                    "Unwilling to abide a murderer, Parker’s family and friends slowly abandoned him. Rather than take this as a sign of bad times ahead, Parker sank inward, doubling down on his brutal new ethos by killing most of his old villains.",
+                    "Branded a public menace, Parker spent most of the next several decades on the run from the authorities, only coming out of hiding to help the Spider-Army counter the occasional cosmiclevel threat.",
+                    "Now an old man, Parker’s been getting reckless and revisiting old haunts. The New York Police Department is preparing to take him down, and some say the wall-crawler has already made his last stand—that he was shot down by the police while visiting the graves of his aunt and uncle, and the NYPD is simply waiting for the right time to make the news public."
+                ],
+                Personality =
+                [
+                    "Worn down by age and regret, this version of Spider-Man no longer cares whether he lives or dies. He knows that the murders he committed were unjustifi able, but he can’t bring himself to surrender. All he really wants now is to go down swinging.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Leader",
             Rank = 4,
             Abilities = new Abilities
@@ -211,6 +412,121 @@ public class CharactersL
                     "A megalomaniacal narcissist, the Leader believes that his brilliant intellect grants him the right to rule the world. It infuriates him that a being as dim-witted as the Hulk could possibly foil his schemes.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Lizard",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 4, vigilance: 2, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Lizard form"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous, reminder: "in Lizard form"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "tail"),
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpeedSwim),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "reptiles"),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "Though Curt Connors may currently be separated from his Lizard half, this profile represents the pair in their classic merged state."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Curtis “Curt” Connors",
+                Heights = [new() { Feet = 5, Inches = 11 }, new() { Feet = 6, Inches = 8 }],
+                Weights = [175,550],
+                Gender = Gender.Male,
+                Eyes = "Blue, red (as Lizard)",
+                Hair = "Brown, none (as Lizard)",
+                Size = Size.Big,
+                SizeNotes = $"{Size.Average} as human",
+                DistinguishingFeatures = "Reptilelike green body with scales, tail, claws and fangs (as Lizard)",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "Having lost an arm while serving overseas in the U.S. military, Dr. Curt Connors became fascinated with the ability of certain reptiles to regrow lost limbs. Using lizard DNA, he developed a limb- restoring serum and immediately tested it on himself.",
+                    "The experimental drink did restore his arm, but it also turned him into a megalomaniacal humanoid lizard bent on transforming all of humanity into reptile-human hybrids.",
+                    "In one of the Lizard’s earliest outings, Spider-Man (Peter Parker) developed a counter-serum to transform Connors back into a human. However, the antidote was only a partial success, and in times of extreme stress, Connors often reverted to his Lizard form. Until a more permanent cure could be created, Spider-Man had to keep constant watch over Connors.",
+                    "Grateful for the protection, Connors agreed to be Spider-Man’s partner in all things scientifi c. Whenever Spider-Man has a science problem he can’t solve, he goes to Connors for help.",
+                    "After years of false starts, Connors recently managed to remove his Lizard half, turning it into a separate entity. If history is any indicator, Connors will likely return to being the Lizard someday, but for now, he and his family are safe."
+                ],
+                Personality =
+                [
+                    "When he’s in his human form, Curt Connors is a kind father, a loving husband and a generous scientist. When he’s in his Lizard form, anything goes.",
+                    "Originally, the Lizard was a lot like Connors. He was roughly human-sized and had roughly human intelligence. However, years of repeated transformations and mutations have turned him into something larger and more monstrous. Now free of Connors, the Lizard runs on little more than reptilian instinct."
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
