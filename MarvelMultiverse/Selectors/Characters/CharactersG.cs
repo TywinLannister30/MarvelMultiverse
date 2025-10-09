@@ -361,19 +361,23 @@ public class CharactersG
             ),
             Traits =
             [
-                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics / Anti-Venom"),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
                 traitSelector.GetTrait(TraitNames.FreeRunning),
-                traitSelector.GetTrait(TraitNames.Investigation),
                 traitSelector.GetTrait(TraitNames.QuickLearner),
                 traitSelector.GetTrait(TraitNames.TechReliance),
                 traitSelector.GetTrait(TraitNames.Weird),
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.Heroic),
-                tagSelector.GetTag(TagNames.Mentor, specialization: "George Stacy"),
-                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
                 tagSelector.GetTag(TagNames.PublicIdentity, reminder: "Earth-65"),
+                tagSelector.GetTag(TagNames.Radioactive),
                 tagSelector.GetTag(TagNames.SecretIdentity, reminder: "Earth-616"),
             ],
             Powers =
@@ -387,7 +391,6 @@ public class CharactersG
                         powerSelector.GetPower(PowerNames.Disguise),
                         powerSelector.GetPower(PowerNames.EnvironmentalProtection),
                         powerSelector.GetPower(PowerNames.Evasion),
-                        powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
@@ -429,21 +432,23 @@ public class CharactersG
                 Hair = "Blond",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = [OccupationName.Student],
-                Origins = [OriginName.WeirdScience],
-                Teams = [TeamNames.SpiderArmy, TeamNames.WebWarriors],
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Symbiote, OriginName.WeirdScience],
+                Teams = [TeamNames.SpiderArmy, TeamNames.SpiderSociety, TeamNames.WebWarriors],
                 Base = "New York City",
                 History =
                 [
                     "On Earth-65, teenager Gwen Stacy was bitten by a genetically engineered spider and gained spider-based powers. Soon after, she became her world’s costumed crime-fighting Spider-Woman. In an early adventure, she battled her friend Peter Parker—who had not acquired spider-powers in this universe but had turned himself into the Lizard in an attempt to become a hero like Spider-Woman—and accidentally killed him, a mistake she has been trying to make up for since.",
-                    "After being drawn into the multiversal battle of Spider-Totems against the murderous Inheritors, Stacy began traveling among worlds, particular between her own and Earth-616. After surviving the battle with the Inheritors, she took on the name Ghost-Spider. Her identity has become public in her universe, but she enjoys the anonymity she often finds in other worlds.",
-                    "At one point, Stacy lost her spider-powers, but she regained them after bonding with a sentient costume made of synthetic spiders. She also has pendant/bracelet called the Ticket to the Multiverse that allows her to move between worlds."
+                    "After being drawn into the multiversal battle of Spider-Totems against the murderous Inheritors, Stacy began traveling among worlds, particular between her own and Earth-616. After surviving the battle with the Inheritors, she took on the name Ghost-Spider. Her identity has become public in her universe, but she enjoys the anonymity she often finds in other worlds. At one point, Stacy lost her spider-powers, but she regained them after bonding with a sentient costume made of synthetic spiders. She also has pendant/bracelet called the Ticket to the Multiverse that allows her to move between worlds.",
+                    "Recently, after her own world was devastated by a mysterious disaster, Stacy moved to Earth-616 on what appears to be a more permanent basis. With the help of her Earth-616 friends, she seems to be gradually getting her life back in order."
                 ],
                 Personality =
                 [
                     "Stacy is smart and friendly, an independent free spirit who enjoys playing drums in her rock band, the Mary Janes. Growing up the daughter of police detective George Stacy helped instill a strong sense of justice in her, and she tries to live up to her own ideals every day. She doesn’t always manage it, but she’s determined to keep making the effort.",
+                    "When Ghost-Spider first bonded to her symbiotic costume, it briefly made her aggressive, feeding upon her existing anger and frustration. Though it hasn’t overtly affected her emotions since that initial incident, the suit could still come back to bite her, given the right circumstances."
                 ]
-            }
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -821,6 +826,205 @@ public class CharactersG
         },
         new()
         {
+            Name = "Green Goblin (Early Days)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 2, vigilance: 2, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Spider-Man"),
+                tagSelector.GetTag(TagNames.Headquarters),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pumpkin Bombs (act as frag grenades)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Norman Osborn",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [185],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Auburn",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Tycoon],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "From an early age, Norman Osborn had a relentless drive to succeed. Using notes stolen from his business partner, Osborn developed the Goblin formula to give himself superhuman powers. It also transformed Osborn into the Green Goblin— and set him on the road to insanity. He decided to use these powers to establish himself as the criminal leader of New York City. While doing so, he became enemies with Spider-Man (Peter Parker), who he later discovered to be his son Harry’s best friend. Although he seems to have died several times, Osborn keeps returning, apparently fated to be a constant thorn in Spider-Man’s side.",
+                    "Though Norman Osborn was recently cleansed of the darker parts of his personality and is no longer the Green Goblin, this profi le represents him in his earliest days, before he had his Goblin Glider or many of his later gadgets, back when he was still trying to establish himself in New York City’s underworld. He has some basic weapons and a fl ying broomstick, but he has yet to become the Green Goblin that everyone knows."
+                ],
+                Personality =
+                [
+                    "Osborn is a smooth operator, a wealthy, powerful and sharp schemer who is often several steps ahead of his foes. He is often cool and collected— right up until something frustrates his plans, at which point he becomes unhinged.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Green Goblin (Earth-1610)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 1, resilience: 5, vigilance: 3, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in alternate form"),
+                tagSelector.GetTag(TagNames.Headquarters),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Norman Osborn",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                HeightReminder = "7' (in Goblin form)",
+                Weights = [185],
+                WeightReminder = "1,000 lbs. (in Goblin form)",
+                Gender = Gender.Male,
+                Eyes = "Blue, red (in Goblin form)",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "Hulking green goblin form with horns, spikes and orange blood",
+                Occupations = [OccupationName.Criminal, OccupationName.Tycoon],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.UltimateSix],
+                Base = "New York City (Earth-1610)",
+                History =
+                [
+                    "With backing from S.H.I.E.L.D., Norman Osborn and his Oscorp researchers were able to accomplish Osborn’s lifelong dream: the creation of a Super-Soldier formula that could usher in the next stage in human evolution. An early version of this formula, fi ltered through the blood of an arachnid test subject, found its way into the body of Peter Parker. However, the first true human subject for the fi nished Oz formula was Osborn himself.",
+                    "The formula enhanced Osborn’s body, allowing him to take on a hulking goblin-like form at will, but it also enhanced his narcissism and delusions of godhood. The knowledge that Parker existed— that there was another person with powers like him—was too much for Osborn to handle. In a bout of rage, he butchered his own family and then set out to murder Parker.",
+                    "As Spider-Man, Parker narrowly managed to defeat Osborn and remand him into S.H.I.E.L.D. custody. After several further bouts with the wallcrawler, Norman put together a plan to leverage all the abilities of his Ultimate Six team and take out Parker once and for all. Parker ultimately won the fight, but in the process, both he and Osborn were killed.",
+                    "Many months later, the formula in their blood brought both Osborn and Parker back to life, and they resumed their old rivalry."
+                ],
+                Personality =
+                [
+                    "Osborn is obsessed with the idea of perfection, of becoming a godlike being free of human concepts like morality and justice. But as much as he would like to be, he is not entirely free of guilt. He regrets having killed his son, Harry, though with the Oz formula fl owing through Harry’s veins too, that death may not be as permanent as Osborn thinks.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Green Goblin (Norman Osborn)",
             Rank = 4,
             Abilities = new Abilities
@@ -845,8 +1049,8 @@ public class CharactersG
                 tagSelector.GetTag(TagNames.Headquarters),
                 tagSelector.GetTag(TagNames.Rich),
                 tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pumpkin Bombs (act as frag grenades)"),
                 tagSelector.GetTag(TagNames.Villainous),
-                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Pumpkin Bombs (frag grenades)"),
             ],
             Powers =
             [

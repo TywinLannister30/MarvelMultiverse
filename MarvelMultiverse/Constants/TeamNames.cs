@@ -157,6 +157,7 @@ public static class TeamNames
     public const string Thunderbolts = "Thunderbolts";
     public const string TNM = "TNM";
     public const string Triads = "Triads";
+    public const string UltimateSix = "UltimateSix";
     public const string Ultimates = "Ultimates";
     public const string Underground = "Underground";
     public const string UnitedFront = "United Front";
