@@ -119,6 +119,15 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Clone,
+            Effect =
+            [
+                "The character is a clone of another character. See the Clones section starting on p.118 in the Spiderverse expansion for more on how this may affect them."
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = TagNames.Convict,
             Effect =
             [
@@ -393,6 +402,16 @@ public class TagSelector : ITagSelector
             [
                 "The character is responsible to certain people, places or organizations who rely on them. This tag can be selected multiple times, using many different categories. These include family, school, society, sports, work and so on.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.Patron,
+            Effect =
+            [
+                "The character has a wealthy benefactor they can ask to purchase them anything within reason. The patron could be an individual, an organization or even a government. The character’s access to the resources the patron provides depends on their relationship with the patron. If they anger or embarrass their patron, they might be cut off and have to remove this tag.",
+                "This is similar to the Rich tag, but the character is relying on someone else’s wealth. One example of this happened recently when Peter Parker worked for a repentant Norman Osborn. Parker had access to Osborn’s resources while he continued to work with him."
+            ],
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

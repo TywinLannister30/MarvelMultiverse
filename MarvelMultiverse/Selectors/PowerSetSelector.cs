@@ -35,6 +35,7 @@ public class PowerSetSelector : IPowerSetSelector
                 "- Ice: Paralyzes target for one round.",
                 "- Iron: Pins target for one round.",
                 "- Sound: Deafens target for one round.",
+                "- Swarm: The target is frightened.",
                 "- Toxin: The target is poisoned.",
                 "- Water: Surprises target until the end of the next round.",
                 "The character’s power produces or locates each of these elements as necessary.",

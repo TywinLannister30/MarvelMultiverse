@@ -62,6 +62,8 @@ public static class TraitNames
     public const string Sneaky = "Sneaky";
     public const string Stranger = "Stranger";
     public const string SurprisingPower = "Surprising Power";
+    public const string Suspicious = "Suspicious";
+    public const string SymbioticSpiderBlinder = "Symbiotic Spider-Blinder";
     public const string TechReliance = "Tech Reliance";
     public const string UnusualSize = "Unusual Size";
     public const string Venomous = "Venomous";

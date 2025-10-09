@@ -430,6 +430,29 @@ public class OriginSelector : IOriginSelector
         },
         new()
         {
+            Name = OriginName.SymbioteKnull,
+            Description =
+            [
+                "The character has bonded with one of the Klyntar, a race of alien symbiotes created by the alien god Knull and which has long been under his influence—unlike the Venom symbiote and its offspring. When a character bonds with such a symbiote, they go up one rank and gain the listed powers, which must be picked for the powers that the rank gives.",
+            ],
+            Examples = "Anathema: Lightning/Anti-Venom, Berserker",
+            Powers = $"{PowerNames.Disguise}, {PowerNames.EnvironmentalProtection}, {PowerNames.HealingFactor}, {PowerNames.Mighty1}",
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = OriginName.SymbioteVenom,
+            Description =
+            [
+                "The character has bonded with a symbiote that is either the Venom symbiote or descended from it. When a character bonds with such a symbiote, they go up two ranks and gain the listed traits and powers, which must be picked for the powers that the ranks give.",
+            ],
+            Examples = "Carnage, Venom (Eddie Brock), Shriek.",
+            Traits = $"{TraitNames.Anathema}: Extreme Heat / Extreme Sonics / Anti-Venom, {TraitNames.Berserker}, {TraitNames.SymbioticSpiderBlinder}",
+            Powers = $"{PowerNames.Disguise}, {PowerNames.EnvironmentalProtection}, {PowerNames.HealingFactor}, {PowerNames.Mighty1}, {PowerNames.Webcasting}, {PowerNames.Wallcrawling}",
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = OriginName.Unknown,
             Description =
             [

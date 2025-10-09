@@ -535,6 +535,25 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
+            Name = TraitNames.Suspicious,
+            Effect =
+            [
+                "The character is naturally suspicious of people who are hiding something. When someone with a secret identity makes a Logic check to try to convince the character that they’re mistaken about the secret identity, the character gives them trouble.",
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = TraitNames.SymbioticSpiderBlinder,
+            Effect =
+            [
+                "While the character is bonded to a symbiote, they cannot be detected by the Spider-Sense of any character who was previously bonded to the same symbiote. This effect is passed on to the symbiote’s offspring as well.",
+                "The reason is that Spider-Sense detects the previously bonded symbiote as part of itself and thus not a threat. As such, the affected character does not gain an edge on Vigilance checks to perceive danger from such a symbiote. Nor do such symbiotes have trouble on Agility checks against the character’s Vigilance defense."
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = TraitNames.TechReliance,
             Effect =
             [

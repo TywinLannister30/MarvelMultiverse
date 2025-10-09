@@ -12,6 +12,7 @@ public static class TagNames
     public const string Backup = "Backup";
     public const string BlackMarketAccess = "Black Market Access";
     public const string Chaotic = "Chaotic";
+    public const string Clone = "Clone";
     public const string Convict = "Convict";
     public const string Cursed = "Cursed";
     public const string Deceased = "Deceased";
@@ -41,6 +42,7 @@ public static class TagNames
     public const string Mute = "Mute";
     public const string Mysterious = "Mysterious";
     public const string Obligation = "Obligation";
+    public const string Patron = "Patron";
     public const string Poor = "Poor";
     public const string Powerful = "Powerful";
     public const string PublicIdentity = "Public Identity";

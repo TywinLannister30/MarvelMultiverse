@@ -35,6 +35,8 @@ public static class OriginName
     public const string SpecialTraining = "Special Training";
     public const string SpiritOfVengeance = "Spirit of Vengeance";
     public const string Symbiote = "Symbiote";
+    public const string SymbioteKnull = "Symbiote: Knull";
+    public const string SymbioteVenom = "Symbiote: Venom";
     public const string Unknown = "Unknown";
     public const string WeirdScience = "Weird Science";
     public const string WeirdScienceGammaMutate = "Weird Science: Gamma Mutate";
