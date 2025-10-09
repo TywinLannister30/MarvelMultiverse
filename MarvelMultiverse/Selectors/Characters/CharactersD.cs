@@ -2022,7 +2022,7 @@ public class CharactersD
                 ]
             }
         },
-            new()
+        new()
         {
             Name = "Ducktor Doom",
             Rank = 4,
