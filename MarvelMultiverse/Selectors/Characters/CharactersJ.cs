@@ -85,6 +85,93 @@ public class CharactersJ
         },
         new()
         {
+            Name = "Jackal",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 2, vigilance: 3, ego: 1, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Jackal form"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Miles Warren",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Gray, none (as Jackal)",
+                Size = Size.Average,
+                DistinguishingFeatures = "Green, goblin-like appearance with retractable claws and fangs (as Jackal)",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "Once a promising young bioengineer held in top regard by no less an authority than the High Evolutionary, Miles Warren fell into disgrace after a genetically modifi ed jackal of his own design killed most of his family.",
+                    "Unable to procure another job, Warren fell back into the safety net of so many failed scientists: higher education. Working as a biochemistry professor at New York’s Empire State University, he became increasingly obsessed with student Gwen Stacy, to the point that after she died, he attempted to clone both her and her boyfriend, Peter Parker. Only after the fact did he realize that Parker was Spider-Man.",
+                    "Sensing an opportunity to create incredible havoc and get revenge on one of the men he held responsible for Stacy’s death, Warren created several more clones of Parker. In the guise of the Jackal, he tormented Parker and his doubles with an increasingly complex series of mind games, deliberately manipulating them into harming and even killing one another.",
+                    "Though Spider-Man and his clones eventually managed to unravel Warren’s initial treachery, the scientist’s mind games never really ended. After imbuing himself with the ability to assume a Jackal-like alternate form, he began creating clones of himself to torment the wall-crawler. At any given moment, a dozen or more clones of the Jackal, each believing himself to be the original, may be plotting to ruin the lives of Peter Parker and his allies.",
+                ],
+                Personality =
+                [
+                    "The Jackal is a chaos lover and sadist. It’s not enough for him to simply torture someone, though he’s certainly not above the act. Lacking any solid identity of his own, he feels a desperate need to make his victims question their own identities.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Jean Grey",
             Rank = 6,
             Abilities = new Abilities
