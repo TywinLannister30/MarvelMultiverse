@@ -571,6 +571,128 @@ public class CharactersK
         },
         new()
         {
+            Name = "Kindred",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 5, vigilance: 5, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Monster),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in true form"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Healing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CureAll),
+                        powerSelector.GetPower(PowerNames.HealingHands),
+                        powerSelector.GetPower(PowerNames.LetsGo),
+                        powerSelector.GetPower(PowerNames.Resurrect),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicDemonicMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Possession),
+                        powerSelector.GetPower(PowerNames.SenseSins),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Gabriel and Sarah Stacy",
+                Heights = [new() { Feet = 6 }, new() { Feet = 5, Inches = 6 }],
+                HeightReminder = "Gabriel / Sarah",
+                Weights = [180, 125],
+                WeightReminder = "Gabriel / Sarah",
+                Gender = Gender.Varies,
+                GenderReminder = "Male (Gabriel), female (Sarah)",
+                Eyes = "Brown (Gabriel), blue (Sarah)",
+                Hair = "Auburn (Gabriel), blond (Sarah)",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicDemonic, OriginName.WeirdScience],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "Shortly before his death, the Green Goblin (Harry Osborn) launched two separate long-term schemes that would toy with the mind of Spider-Man (Peter Parker) for years to come. The fi rst of these projects involved a simple pair of Life-Model Decoys made to look like Parker’s parents. The second was far more complicated.",
+                    "Using DNA samples harvested from Gwen Stacy and Norman Osborn, Harry created a pair of unique, rapidly aging clones named Gabriel and Sarah Stacy, who closely resembled Norman and Gwen, respectively. He then brainwashed not only the clones, but also Norman and Mary Jane Watson, into believing that Gabriel and Sarah were Norman and Gwen’s illicit children.",
+                    "Acting on the orders of an A.I. construct of Harry, the twins set out to torment Spider-Man, torturing him with the idea that Gwen had cheated on him with his worst enemy. Spider-Man eventually uncovered the truth behind the scheme, and shortly thereaft er, the twins died of old age.",
+                    "In an attempt to break Spider-Man’s will, Mephisto resurrected the pair and imbued them with magical abilities. Acting in tandem as the demonic Kindred, Gabriel and Sarah blasted Parker with visions of those he couldn’t save, driving him to the brink of insanity. Thankfully, Parker managed to keep his mind together long enough for Mephisto to lose faith in his agents and send them back to the underworld."
+                ],
+                Personality =
+                [
+                    "Gabriel and Sarah are angry and irrational individuals driven by resentment. They resent Harry for creating them. They resent Norman for how he raised Harry. Most of all, they resent Peter Parker for, as they see it, driving Harry and Norman to insanity in the fi rst place.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Kingpin (Wilson Fisk)",
             Rank = 3,
             Abilities = new Abilities
@@ -649,6 +771,93 @@ public class CharactersK
                     "Fisk can be charming and savvy, but he is also a schemer who is usually in control of most things around him. He’s used to being the boss and having his people leap to obey him. When his plans are thwarted though, he can become murderously violent.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Kingpin (Earth-65)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 2, vigilance: 1, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.LegalEagle),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Cane Sword (acts as a regular sword)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.VisionIssues),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Matthew “Matt” Murdock",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [165],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Lawyer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.TheHand],
+                Base = "New York City (Earth-65)",
+                History =
+                [
+                    "The history of Earth-65’s Matt Murdock almost exactly mirrors that of his Earth-616 counterpart until midway through his adolescence, when members of the Hand killed his mentor, Stick, and forcibly enlisted him into their ranks. As Murdock grew older, the Hand began to fear his strange abilities and eventually they sent him away to live in New York. Trained to seek power at all costs, Murdock worked his way into becoming the right-hand man of Kingpin (Wilson Fisk), and after Fisk was sent to prison, Murdock took over the crime lord’s organization, becoming the new Kingpin.",
+                    "Though he had achieved supremacy over the criminal underworld, Murdock had no idea what to do with his power—until he saw Ghost-Spider. Inspired by her unfl inching heroic spirit, he became obsessed with corrupting her. With all the resources of the underworld behind him, he launched a vast campaign of torment, blackmail and extortion against the wall-crawler.",
+                    "When Murdock’s plans failed to yield results, he grew increasingly unhinged. Eventually, he chose to burn his organization to the ground, betraying both the Maggia and the Hand. The Hand tried to kill him, but their ninja stood no chance against Murdock. Ultimately, it took the combined efforts of Ghost-Spider and her band of friends to bring him down and send him to a high-security S.H.I.E.L.D. prison."
+                ],
+                Personality =
+                [
+                    "Sharp, arrogant, violent and manipulative, Matt Murdock makes for a good lawyer and an even better mobster. He hates himself for becoming everything he stood against in his youth, but heroes would have a better chance of cutting him physically before they could cut through the facade he puts up to hide his shame.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -743,7 +952,7 @@ public class CharactersK
                 Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.Magic],
                 Teams = [TeamNames.SinisterSix],
-                Base = "Savage Landy",
+                Base = "Savage Land",
                 History =
                 [
                     "Born into a family of disgraced Russian nobles, Sergei Kravinoff was raised to believe that he was inherently better than the common man and that he needed to prove it. He spent years traveling across Africa, making a name for himself as an amazing big-game hunter. On his travels, he discovered an enchanted potion that granted him superhuman strength and vitality.",
@@ -754,6 +963,227 @@ public class CharactersK
                     "Kraven is arrogant and bombastic, but he is also determined to prove himself to be the greatest hunter who ever lived. He allows nothing— including his family—to stand between himself and that goal.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Kraven the Hunter (Ana Kravinoff)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 2, vigilance: 3, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Anastasia Tatiana “Ana” Kravinoff",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [120],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Inhuman, OriginName.Magic],
+                Teams = [TeamNames.Syndicate],
+                Base = "New York City",
+                History =
+                [
+                    "As the youngest progeny of the original Kraven the Hunter (Sergei Kravinoff), Ana Kravinoff grew up hardly knowing her father. Nonetheless, her mother, Sasha, raised her to revere their deceased patriarch and to despise his enemies, particularly Spider-Man (Peter Parker).",
+                    "The moment that Ana was old enough to fi ght, Sasha sent her off to New York City to kill the Web- Head. This “first hunt” ended in failure, but ever undeterred, Ana and her mother spent the next several years coming up with plans to ensure the web-slinger’s downfall, eventually spearheading a scheme to resurrect Sergei himself.",
+                    "The Kravinoffs were thrilled to see their patriarch in the fl esh once again, but Sergei—unable to believe that such weak people were his successors—killed off most of the family, sparing only Ana, due to her potential. However, in time he became disillusioned with Ana as well and decided to make dozens of clones of himself fi ght to the death to earn a place as his true successor.",
+                    "Disgusted by her father’s actions, Ana abandoned him and sought employment as a mercenary. She currently spends most of her time working with the all-female Syndicate led by the Beetle (Janice Lincoln)."
+                ],
+                Personality =
+                [
+                    "In many ways, Ana Kravinoff is still fi guring herself out. She continues to use her father’s codename, but she no longer cares much for him or the Kravinoff name. Her only surviving family member is her father’s clone successor, and she hates him almost as much as she hates Spider-Man.",
+                    "Ana maintains a bit of the old Kravinoff aristocratic superiority, but unlike her former family members, she is open to other points of view."
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Kraven the Hunter (Last Son of Kraven)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 3, vigilance: 3, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Spear (+1 Melee damage multiplier bonus; range: reach +1)"),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "None",
+                Heights = [new() { Feet = 6 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic, OriginName.WeirdScience],
+                Teams = [TeamNames.SinisterSix, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "Having finally bested his longtime rival Spider- Man (Peter Parker), Sergei Kravinoff shot himself, content that the legend of his Last Hunt would live long past his death. However, his wife and daughter could not let sleeping dogs lie, and after years of searching out the right rituals, they resurrected their patriarch. Disgusted by his own return, Kravinoff disowned his family and retired to the Savage Land where, with the help of the High Evolutionary, he created and raised 87 clones of himself, training them to follow in his footsteps.",
+                    "Eventually, the most brutal of these clones killed all his brethren, earning him the title of Kraven’s Last Son. In the guise of Spider-Man, Kravinoff attacked his Last Son, baiting the clone into beating him to death. As a reward for the clone’s victory, Kravinoff left behind a note naming his Last Son as his one true heir.",
+                    "As the new Kraven the Hunter, this clone—who refers to the original as his father—has worked tirelessly to hunt down Spider-Man and his wall-crawling allies. Though he may lack his father’s depth of experience, he is just as vicious and clever as the old Kraven, if not more so."
+                ],
+                Personality =
+                [
+                    "Just like his father, this new Kraven is arrogant and bombastic, but he is also determined to prove himself to be the greatest hunter who ever lived. He cares for little else, and he regards the rest of Kraven’s family, particularly Kraven’s daughter, Ana Kravinoff —who also uses the Kraven the Hunter title—as mere pretenders to the throne.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
     ];
 }
