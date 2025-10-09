@@ -83,6 +83,11 @@ public class Character
             Abilities.Melee.Defence -= 2;
             Abilities.Agility.Defence -= 2;
         }
+        if (Biography.Size == Size.Gigantic)
+        {
+            Abilities.Melee.Defence -= 3;
+            Abilities.Agility.Defence -= 3;
+        }
     }
 
     public void SetHealth()
@@ -146,6 +151,8 @@ public class Character
             baseSpeed /= 4;
         if (Biography.Size == Size.Huge)
             baseSpeed *= 5;
+        if (Biography.Size == Size.Gigantic)
+            baseSpeed *= 20;
 
         Speed = new Speeds
         {
@@ -204,12 +211,10 @@ public class Character
         Abilities.Logic.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.LogicDamageModifier));
 
         if (Biography.Size == Size.Little)
-        {
             Abilities.Melee.DamageModifier -= 2;
-        }
         if (Biography.Size == Size.Huge)
-        {
             Abilities.Melee.DamageModifier += 2;
-        }
+        if (Biography.Size == Size.Gigantic)
+            Abilities.Melee.DamageModifier += 3;
     }
 }

@@ -165,5 +165,6 @@ public static class TeamNames
     public const string XSE = "X.S.E.";
     public const string XStatix = "X-Statix";
     public const string XTerminators = "X-Terminators";
+    public const string Yakuza = "Yakuza";
     public const string YoungAvengers = "Young Avengers";
 }

@@ -399,7 +399,7 @@ public class TraitSelector : ITraitSelector
         },
         new()
         {
-            Name = TraitNames.TechReliance,
+            Name = TraitNames.MagicItemReliance,
             Effect =
             [
                 "The character relies on a magically empowered item for some or all of their powers. When they take Health damage that would render them unconscious, they can instead choose to lose all of their magic-item–related powers and remain conscious with 1 point of Health left.",

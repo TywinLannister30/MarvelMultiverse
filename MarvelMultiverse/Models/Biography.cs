@@ -28,6 +28,8 @@ public class Biography
 
     public Size Size { get; set; }
 
+    public string SizeNotes { get; set; }
+
     public string DistinguishingFeatures { get; set; }
 
     public List<string> Occupations { get; set; }

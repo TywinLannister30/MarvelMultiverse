@@ -212,6 +212,10 @@ public static class PowerNames
     public const string PointBlankParry = "Point-Blank Parry";
     public const string PossessVehicle = "Possess Vehicle";
     public const string Possession = "Possession";
+    public const string Postcognition1 = "Postcognition1";
+    public const string Postcognition2 = "Postcognition2";
+    public const string Postcognition3 = "Postcognition3";
+    public const string Postcognition4 = "Postcognition4";
     public const string PowerSlider = "Power Slider";
     public const string PowerfulHex = "Powerful Hex";
     public const string Precognition1 = "Precognition 1";

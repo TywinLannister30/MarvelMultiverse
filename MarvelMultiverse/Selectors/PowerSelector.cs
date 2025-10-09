@@ -3069,6 +3069,70 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Postcognition1,
+            Description = "The character knows what just happened.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = "Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can sense what happened to a particular person, place or item within their reach—including themselves—in the past six hours.",
+                "If using the power to analyze a person, they sense the events from the person’s point of view, using that person’s senses. If the person is unconscious, dead or otherwise senseless at any point during that time, the character cannot sense anything at those points either.",
+                "If using the power to analyze a place, the character can sense everything that happened in that place over that period of time, using their own senses. It seems to the character as if they are standing in their current location and position.",
+                "If using the power to analyze an item, the character senses how the item was affected or used over that period of time, no matter where it was located or how it moved. They can sense things as if the item had their senses.",
+                "The character can fast-forward and rewind through the period of time and stop at interesting parts, allowing them to play out in real time."
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.Postcognition2,
+            Description = "The character knows what happened in the past day.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Postcognition1}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character can sense what happened to a particular person, place or item within their reach—including themselves—in the past 24 hours. Otherwise, this power works the same as Postcognition 1.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.Postcognition3,
+            Description = "The character knows what happened in the past year.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Postcognition2}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character can sense what happened to a particular person, place or item within their reach—including themselves—in any 24-hour period in the past year. Otherwise, this power works the same as Postcognition 1.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.Postcognition4,
+            Description = "The character knows what happened in the past century.",
+            PowerSets = [PowerSetNames.SixthSense],
+            Prerequsites = $"{PowerNames.Postcognition3}, Rank 5",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "20 Focus",
+            Effect =
+            [
+                "The character can sense what happened to a particular person, place or item within their reach—including themselves—in any week-long period in the past century. Otherwise, this power works the same as Postcognition 1.",
+            ],
+            Source = BookSource.XMenExpansion
+        },
+        new()
+        {
             Name = PowerNames.PowerSlider,
             Description = "The character’s power waxes and wanes with what’s vital to them.",
             PowerSets = [PowerSetNames.PowerControl],
