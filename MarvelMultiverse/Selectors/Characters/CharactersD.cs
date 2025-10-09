@@ -1,6 +1,7 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System;
 
 namespace MarvelMultiverse.Selectors.Characters;
 
@@ -1013,11 +1014,11 @@ public class CharactersD
         },
         new()
         {
-            Name = "Doctor Octopus (Otto Octavius)",
+            Name = "Doctor Octopus",
             Rank = 4,
             Abilities = new Abilities
             (
-                melee: 4, agility: 3, resilience: 3, vigilance: 2, ego: 4, logic: 5
+                melee: 4, agility: 4, resilience: 3, vigilance: 3, ego: 0, logic: 6
             ),
             Traits =
             [
@@ -1044,7 +1045,8 @@ public class CharactersD
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.AdditionalLimbs, isTech: true),
-                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Ocktoid Tentacles [These semiautonomous drones have a psychic link with Octavius. He can see through them and pilot them by remote. While under remote control, they use Octavius’ stats and take his place in the initiative order. If Octavius is rendered unconscious, the tentacles automatically stop fighting and attempt to transport him to safety.]", isTech: true),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
                     ],
@@ -1074,8 +1076,8 @@ public class CharactersD
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.BangingHeads),
-                        powerSelector.GetPower(PowerNames.CrushingGrip),
                         powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
                         powerSelector.GetPower(PowerNames.Jump1),
                         powerSelector.GetPower(PowerNames.QuickToss),
                     ],
@@ -1083,10 +1085,11 @@ public class CharactersD
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.Telepathy,
+                    Name = PowerSetNames.Tactics,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
                     ],
                 },
             ],
@@ -1099,7 +1102,7 @@ public class CharactersD
                 Eyes = "Brown",
                 Hair = "Brown",
                 Size = Size.Average,
-                DistinguishingFeatures = "Four mechanical arms",
+                DistinguishingFeatures = "Four biomechanical Ocktoid tentacles",
                 Occupations = [OccupationName.Scientist],
                 Origins = [OriginName.HighTech, OriginName.WeirdScience],
                 Teams = [TeamNames.MastersOfEvil, TeamNames.SinisterSix],
@@ -1113,7 +1116,102 @@ public class CharactersD
                 [
                     "Doctor Octopus is a Grade-A narcissist. He considers his scientific endeavors to be of the greatest importance to humanity, and he is not above robbing, hurting and even killing others in the pursuit of his research.",
                 ]
-            }
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Doctor Octopus (Earth-90214)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 1, resilience: 1, vigilance: 1, ego: 0, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.MobilityIssues),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, isTech: true),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Otto Octavius",
+                Heights = [new() { Feet = 3, Inches = 10 }],
+                Weights = [89],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Four mechanical arms",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.FriendsOfNewGermany],
+                Base = "Ellis Island, New York City (Earth-90214)",
+                History =
+                [
+                    "Though he was born without the use of his legs, the Noir Universe’s Otto Octavius never struggled a day in his life. He grew up in South Africa in the era before apartheid, in a household where enslaved native people were forced to wait on him hand and foot.",
+                    "Unwilling to acknowledge his family’s exploitation of the native people, Octavius instead became obsessed with proving that his servants were worthless lesser beings that he could “improve” with science.",
+                    "With the backing of the Nazi-associated Friends of New Germany, he moved to New York City and began carrying out a series of brutal experiments on members of the city’s Black population, using his mechanical arms to administer gruesome, forced lobotomies.",
+                    "Spider-Man uncovered the scheme while investigating the head of the Friends of New Germany’s organized crime unit: the Crime Master. Realizing that he had been caught, Octavius attempted to get on Spider-Man’s good side by murdering the Crime Master, but the wall-crawler apprehended him nonetheless.",
+                    "Octavius leveraged the last of his resources to escape to Germany, but to his surprise, the Nazi government wasn’t willing to hire a disabled man. Undeterred, Octavius eventually reappeared in New York, determined to brainwash the city’s people against Spider-Man, only for the Web-Head to thwart him once again. He was last seen going down in a flaming zeppelin as he tried to flee the United States."
+                ],
+                Personality =
+                [
+                    "Octavius is a Nazi and a fascist through and through, but of late, his ideological goals have taken a back seat to his vendetta against Spider-Man. The wall-crawler embarrassed him, and that is the one thing that Octavius absolutely cannot stand.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -1542,6 +1640,94 @@ public class CharactersD
         },
         new()
         {
+            Name = "Doppelganger",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 4, vigilance: 2, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Mute, reminder: "speaks in growls"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Razorwebs),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "None",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "No irises",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Monster resembling Spider-Man, sharp teeth and six arms with three fingers each",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.CultOfKnull, TeamNames.SpiderArmy],
+                Base = "Mobile",
+                History =
+                [
+                    "The Doppelganger was one of a number of monstrous duplicates created by Magus to weaken Earth’s super heroes in advance of his invasion of the planet during the first Infinity War. Although these doubles were killed during the initial stages of the invasion, the duplicate of Spider-Man was resurrected by the web-slinger’s demonic rival, the Demogoblin.",
+                    "Spider-Man again made quick work of the vicious Doppelganger, and Demogoblin was disappointed enough in the creature’s performance to let it go free. The monster next appeared in the care of Carnage, and although they were temporarily separated several times in the subsequent years, the Doppelganger has remained in the murderous symbiote’s orbit ever since. It escaped from an illicit Alchemax laboratory but was last seen in custody in Ravencroft.",
+                ],
+                Personality =
+                [
+                    "It’s hard to say if the Doppelganger has much of a personality. Its mind is barely more advanced than that of a vicious dog. It can hardly think, let alone speak. It operates entirely on instinct, killing anything it perceives as a threat. Like a dog, it can, to a certain extent, be trained—a fact that many villains have taken advantage of to turn the creature into an instrument of mass slaughter.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Dora Milaje Warrior",
             Rank = 2,
             Abilities = new Abilities
@@ -1835,6 +2021,108 @@ public class CharactersD
                     "As Drax began as a moody person bent on vengeance. While he can still be dire and serious when on a mission, he has lightened up a great deal over the years and come to enjoy fi ghting for the sheer thrill of it. He has a dark, off-beat sense of humor rooted in the fact that he has only a rudimentary understanding of society, how jokes work and what most people would consider terrifying.",
                 ]
             }
+        },
+            new()
+        {
+            Name = "Ducktor Doom",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 4, vigilance: 3, ego: 7, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 3, Inches = 9 }],
+                Weights = [76],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Unknown, likely none",
+                Size = Size.Small,
+                DistinguishingFeatures = "Anthropomorphic duck clad in iron suit and mask",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.MagicSorcery],
+                Teams = [TeamNames.SwinesterSix],
+                Base = "Doom Island (Earth-8311)",
+                History =
+                [
+                    "As the monarch of the isolated nation of Quackveria, Ducktor Doom began his super-villain career by terrorizing the heroic team known as the Fantastic Fur. However, after dozens of attacks, the heroes got so sick of Doom’s antics that they strapped him to an antigravity pod and shot him into the stratosphere.",
+                    "Doom drifted around the Earth for a while before eventually touching down on an island near Australia. Taking a liking to the environment, he used his advanced weaponry to conquer the native Kangaroo people and turn the patch of land into his new base: Doom Island.",
+                    "Hoping to make money by exploiting the Kangaroos’ love for music, Doom built a giant magnet to drag planes out of the sky, kidnapping hundreds of potential musicians. One of these planes happened to contain an investigative team from the Daily Beagle led by Spider-Ham (Peter Porker), who used his incredible Spider-Powers to put a permanent end to Doom’s music career.",
+                    "Ever since that day, Doom has been bent on getting revenge on the Ham-Head. He’s tried attacking the hero with giant vegetable mutants. He’s tried imprisoning the pig in a trap-fi lled castle. He’s even tried working with a team of villains: the Swinester Six. None of his attempts have succeeded thus far, but the iron duck is never one to let a grudge lie—or a hero thrive."
+                ],
+                Personality =
+                [
+                    "Like his Earth-616 counterpart, Ducktor Doom is a megalomaniacal narcissist with dreams of conquering the world. However, the Ducktor is not quite as smart as his core-reality counterpart. His harebrained schemes are easily foiled by the likes of Mooster Fantastic, though he can still pose a considerable challenge to heroes like Spider-Ham.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

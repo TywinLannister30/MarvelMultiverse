@@ -30,6 +30,7 @@ public static class TeamNames
     public const string Chaste = "Chaste";
     public const string CIA = "C.I.A.";
     public const string CouncilOfKangs = "Council of Kangs";
+    public const string CultOfKnull = "Cult of Knull";
     public const string DakotaNorthInvestigations = "Dakota North Investigations";
     public const string DarkAvengers = "Dark Avengers";
     public const string DarkCouncil = "Dark Council";
@@ -51,6 +52,7 @@ public static class TeamNames
     public const string FiveWeaponsSociety = "Five Weapons Society";
     public const string ForceWorks = "Force Works";
     public const string FreedomForce = "Freedom Force";
+    public const string FriendsOfNewGermany = "Friends of New Germany";
     public const string FutureFoundation = "Future Foundation";
     public const string GammaFlight = "Gamma Flight";
     public const string GenerationX = "Generation X";
@@ -140,6 +142,7 @@ public static class TeamNames
     public const string SquadronSupreme = "Squadron Supreme";
     public const string STAKE = "S.T.A.K.E.";
     public const string StrangeAcademy = "Strange Academy";
+    public const string SwinesterSix = "Swinester Six";
     public const string SWORD = "S.W.O.R.D.";
     public const string SymbioteHive = "Symbiote Hive";
     public const string Syndicate = "Syndicate";
