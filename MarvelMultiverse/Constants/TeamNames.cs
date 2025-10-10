@@ -26,6 +26,7 @@ public static class TeamNames
     public const string BlackOrder = "Black Order";
     public const string BloodHunters = "Blood Hunters";
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
+    public const string CapeKillers = "Cape Killers";
     public const string CaptainBritainCorps = "Captain Britain Corps";
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
@@ -161,6 +162,7 @@ public static class TeamNames
     public const string TheDailyBugle = "The Daily Bugle";
     public const string TheFive = "The Five";
     public const string TheHand = "The Hand";
+    public const string TheHive = "The Hive";
     public const string ThievesGuild = "Thieves' Guild";
     public const string ThunderboltPoliceDepartment = "Thunderbolt Police Department";
     public const string Thunderbolts = "Thunderbolts";

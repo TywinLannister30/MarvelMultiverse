@@ -107,6 +107,113 @@ public class CharactersS
         },
         new()
         {
+            Name = "Sandman",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 1, resilience: 3, vigilance: 6, ego: 4, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Water"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEarth,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CoilingCrush),
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow3),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "Flight 1 represents Sandman’s ability to turn into a whirlwind of sand and float through the air."
+            ],
+            Biography = new Biography
+            {
+                RealName = "William “Flint Marko” Baker",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually around 6'1\"",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "usually around 450 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Varies,
+                SizeNotes = "usually average",
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.FrightfulFour, TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "Born William Baker, the future Sandman picked up the nickname of Flint Marko later in life—“Flint” because he’s built like a rock, and “Marko” because he’s determined to make a mark on the world.",
+                    "Unfortunately, for most of Marko’s life, that mark has been exclusively negative. Expelled from high school for his uncontrollable temper, he spent the early years of his adulthood as a two-bit thief, landing himself an extended prison sentence.",
+                    "Marko eventually escaped prison by crawling through a condemned tunnel system, inadvertently exposing himself to illicit radioactive waste that granted him the power to control—and even become—sand.",
+                    "Believing himself to be untouchable, Marko embarked on a crime spree, robbing banks and terrorizing random people until Spider-Man (Peter Parker), in one of his earliest outings, came to the rescue by literally vacuuming Marko up.",
+                    "Marko spent a long time trying to have his revenge on Spider-Man, but after many, many defeats, he got tired of being a villain and tried his hand at joining a few super-hero teams.",
+                    "In the years since, he’s bounced back and forth between dozens of different super-teams, some of them heroic, many of them villainous."
+                ],
+                Personality =
+                [
+                    "Marko is a world-weary romantic whose villainous tendencies tear him up inside. Sometimes, this internal division manifests in subtle ways. Other times, it presents as something closer to a full-blown dissociative identity disorder, with “Flint Marko” being his evil half and “William Baker” being his true self.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Sasquatch",
             Rank = 4,
             Abilities = new Abilities
@@ -197,6 +304,95 @@ public class CharactersS
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Scarlet Spider",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 7, resilience: 4, vigilance: 3, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgliding),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kaine Parker",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Massive scars across entire body, particularly the face",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.NewWarriors, TeamNames.SpiderArmy, TeamNames.SpiderSociety],
+                Base = "Mobile",
+                History =
+                [
+                    "When the Jackal (Miles Warren) set out to create a clone of Spider-Man (Peter Parker), it took him some time to iron out the kinks in his process. His first semi-successful attempt became Kaine Parker, an ultra-strong and disfigured version of Peter Parker.",
+                    "Driven half to madness by the pain of gradual cellular degeneration, Kaine became everything he despised. A combination of self-hatred and love for the original Peter Parker eventually led Kaine to try to eliminate Peter’s other clones, particularly the Scarlet Spider (Ben Reilly).",
+                    "Although Peter managed to talk Kaine out of killing Reilly, he could not convince the man to give up life as a criminal, and they clashed many times in the subsequent years. Their rivalry ended only after Kaine inadvertently discovered that the cure for a Spider-Virus that temporarily gave most of New York City super-powers could also cure his degenerative condition.",
+                    "In full control of his faculties for the first time in his life, Kaine renounced his villainous ways and adopted the iconography of the man he once set out to kill, becoming the new Scarlet Spider.",
+                    "With Ben Reilly recently having been corrupted into the amnesiac Chasm, Kaine is the only Scarlet Spider right now, though he is actively working to restore Reilly to his former state."
+                ],
+                Personality =
+                [
+                    "Kaine used to be a much darker, angrier person, but as the years have worn on, he’s reverted to a personality similar to that of the original Peter Parker. In some ways, he now has a brighter outlook on life than Peter. Kaine has none of Peter’s life obligations, and he can be the Scarlet Spider 24/7 without having to worry about anyone needing him elsewhere.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -305,6 +501,111 @@ public class CharactersS
         },
         new()
         {
+            Name = "Scorpion",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 3, vigilance: 4, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "tail", isTech: true),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "MacDonald “Mac” Gargan",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [220],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown, usually shaved bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Investigator],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.WeirdScience],
+                Teams = [TeamNames.CapeKillers, TeamNames.SinisterSix, TeamNames.Thunderbolts],
+                Base = "New York City",
+                History =
+                [
+                    "Determined to put his money where his mouth was, J. Jonah Jameson hired a small-time private investigator named Mac Gargan to take down Spider- Man (Peter Parker) and paid thousands of dollars for the man to receive an experimental treatment involving scorpion DNA. This treatment not only gave Gargan the proportional speed and strength of a scorpion, it also granted him perfect psychic control over a powerful mechanical tail. The overwhelming rush of becoming the Scorpion went straight to Gargan’s head, and he quickly abandoned the job he was hired for to embark on a crime spree across New York City, until he was eventually arrested by Spider-Man.",
+                    "After several defeats at the hands of the wallcrawler, Gargan’s delusions of grandeur began to wear o¦ . He went back to being a freelance investigator and mercenary—fi rst for entirely criminal outfi ts like A.I.M. and then, as time went on, for increasingly legitimate organizations like the Thunderbolts and S.H.I.E.L.D.",
+                    "Until recently, he was a key part of New York City’s “Cape Killer” crackdown on unauthorized super-hero activity. Now that the program has been disbanded, it’s anyone’s guess as to what the Scorpion might do next.",
+                ],
+                Personality =
+                [
+                    "Although he has gone through periods of mental instability, the Scorpion is widely considered to be one of the more reasonable people in Spider-Man’s villain repertoire. He may have a long-running grudge against both the Web-Head and J. Jonah Jameson, but he doesn’t let his darker emotions run his life. He does what he does primarily for the money and secondarily for fun, with revenge being a distant third priority.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Sebastian Shaw",
             Rank = 4,
             Abilities = new Abilities
@@ -405,6 +706,116 @@ public class CharactersS
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Selim",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 3, vigilance: 3, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.Linguist),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.VenomBlast),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Selim",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [158],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [],
+                Base = "Brooklyn, New York City",
+                History =
+                [
+                                        "As part of his plans to cause as much pain as possible for Spider-Man (Miles Morales), the villain Ultimatum hired an enigmatic artifi cial being known as the Assessor to capture, torture and clone the wall-crawler. Though the Assessor succeeded at the first two parts, he was not a particularly good cloner. Most of his creations degenerated into cellular goop within minutes. One survived for a few hours, just long enough to disintegrate while fighting Spider-Man.",
+                    "Only three of the Assessor’s many clones were stable enough to survive more than a day. The strongest and smartest of these clones, Selim, led his brothers Shift and Mindspinner on a quest to escape the Assessor and find a cure for their degeneration.",
+                    "However, Selim’s murderous tactics gradually turned his brothers against him, and after he kidnapped Spider-Man’s little sister, Billie, they teamed up to take him down. Ultimately, Mindspinner and Selim killed each other, leaving Shift as the only surviving clone.",
+                    "The Selim of Earth-9375 defeated his world’s Spider-Man and conquered New York City, declaring himself Emperor Selim."
+                ],
+                Personality =
+                [
+                    "Miles Morales is no slouch in the intellect department, but Selim’s cold expertise puts him to shame. His ruthless cunning, complete amorality and stunning combat expertise would make him a tough opponent for any wall-crawling hero.",
+                    "Despite his degenerative problems, Selim considers himself the perfect specimen, and he says his self-chosen name, in Arabic, means undamaged. (It also happens to spell Miles backward.)"
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -785,6 +1196,124 @@ public class CharactersS
         },
         new()
         {
+            Name = "Shathra",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 7, vigilance: 6, ego: 4, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.HiveMind, reminder: "Leader of the Great Hive"),
+                traitSelector.GetTrait(TraitNames.Infector, reminder: "Spider-Wasp Venom"),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlSwarm,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow4),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "wasps"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Shathra",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [120],
+                Gender = Gender.Female,
+                Eyes = "Brown, glowing white (in corrupted form)",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Corrupted form is uniformly black with claws, wings, antennae and fangs",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.MagicSorcery, OriginName.Mythic],
+                Teams = [TeamNames.TheHive],
+                Base = "Astral Plane",
+                History =
+                [
+                    "Long ago, when existence was still young, the elder goddesses Gaea and Oshtur tasked their daughters Shathra and Neith with deciding the shape of the coming Multiverse. Envisioning a place of hierarchy and order, Shathra proposed the Great Nest: a collection of tightly connected universes with their own universe, Earth-001, as the central authority. Neith, in turn, designed the Great Web of Life and Destiny as a critique of her sister’s creation: a network of equal universes where each supports the other.",
+                    "Gaea and Oshtur supported Neith’s vision, and though Shathra tried to pretend that the snub didn’t bother her, her rage and envy slowly consumed her, turning her into a shadow of her former self. Over the subsequent eons, Neith’s Great Web of Life and Destiny grew into the Web of Life and Destiny, and Earth-001 became Loomworld, the place where the web was spun.",
+                    "Meanwhile, Shathra’s shadow roamed aimlessly across the Multiverse, instinctively destroying pieces of her sister’s Web. Eventually, her journey brought her to Earth-616, where Spider-Man (Peter Parker), Ezekiel Sims and, later, Kaine, banished her into the depths of the Web.",
+                    "Years later, while investigating the Web of Life and Destiny’s origins, Spiderling inadvertently summoned Shathra back into Earth-001. Shathra used her powers to erase a large chunk of the Web and corrupt much of the Spider-Army, but the remaining members managed to defeat her, cleansing both her and the heroes she had corrupted, turning them back to normal."
+                ],
+                Personality =
+                [
+                    "Shathra is normally an intelligent if prideful goddess, no different from many of the gods of Asgard or Olympus. However, her corrupted form is borderline animalistic. Consumed entirely by her desire to sow chaos and death throughout the Web of Life and Destiny, she speaks in the hissing voice of a Spider-Wasp, the arachnid’s natural enemy.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Shatterstar",
             Rank = 5,
             Abilities = new Abilities
@@ -1139,6 +1668,193 @@ public class CharactersS
                     "Agents of S.H.I.E.L.D. tend to be combat-hardened soldiers with a strong sense of justice. While this makes them effective fighters, their training sometimes makes them too unwilling to question orders.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Shift",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 3, resilience: 4, vigilance: 2, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 8 (due to Big)"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones1)
+                    ]
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Shift",
+                Heights = [new() { Feet = 7, Inches = 2 }],
+                Weights = [598],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Big,
+                DistinguishingFeatures = "Massive, morphable and heavily scarred body",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [],
+                Base = "Brooklyn, New York City",
+                History =
+                [
+                    "As part of his plans to cause as much pain as possible for Spider-Man (Miles Morales), the villain Ultimatum hired an enigmatic artifi cial being known as the Assessor to capture, torture and clone the wall-crawler. Though the Assessor succeeded at the first two parts, he was not a particularly good cloner. Most of his creations degenerated into cellular goop within minutes. One survived for a few hours, just long enough to disintegrate while fighting Spider-Man.",
+                    "Only three of the Assessor’s many clones were stable enough to survive more than a day. The strongest and smartest of these clones, Selim, led his brothers Shift and Mindspinner on a quest to escape the Assessor and find a cure for their degeneration.",
+                    "However, Selim’s murderous tactics gradually turned his brothers against him, and after he kidnapped Spider-Man’s little sister, Billie, they teamed up to take him down. Ultimately, Mindspinner and Selim killed each other, leaving Shift as the only surviving clone.",
+                    "In the immediate aftermath, Billie gave Shift a cold that, by some miracle, cured his degeneration. After a few adventures together, Spider-Man invited Shiftto formally join the Morales household."
+                ],
+                Personality =
+                [
+                    "Shift’s weird, morphable body keeps him from easily manipulating his own vocal cords. For most of his life, he could only get out the occasional grunt or gurgle. However, Spider-Man’s friend Ms. Marvel (Kamala Khan) began working with Shift to train his vocal muscles, and he can now speak in short, rough sentences. Even with his broken speech, it’s easy to tell that he has a sense of humor and camaraderie similar to Spider-Man’s own.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Shocker",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 5, resilience: 3, vigilance: 3, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.ElementalBarrage),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlAir,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion)
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Herman Schultz",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Engineer],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.SinisterSix, TeamNames.Thunderbolts],
+                Base = "New York City",
+                History =
+                [
+                    "Second-story man Herman Schultz never had any skill for cracking safes, but during a long stint in prison, he discovered that he had an incredible talent for electrical engineering. Using the tools in the jail workshop, he tried to create a vibrational device capable of countering any safe’s tumblers.",
+                    "Although Schultz failed to build a universal safe-cracker, he succeeded in constructing a vibro-shock generator capable of blasting through walls. Spying an opportunity at freedom, he fit his new generator into a pair of gauntlets, wove himself a recoil-negating suit and blasted his way out of prison.",
+                    "As the Shocker, Schultz embarked on a crime spree, blasting through dozens of banks. He was eventually stopped by Spider-Man (Peter Parker), but his ability to battle the wall-crawler to a near draw made him a hot topic throughout the underworld.",
+                    "Over the years, the Shocker garnered work with dozens of mercenary groups—mostly criminal outfi ts like the Maggia, but also semi-legitimate organizations like the Thunderbolts. He worked for the Hobgoblin (Roderick Kingsley) during the gang war that recently consumed much of New York City, but when the Hobgoblin began losing ground to his rivals, the Shocker joined the rest of the crew in turning on their boss and fleeing for the hills."
+                ],
+                Personality =
+                [
+                    "A lifetime of failure has given the Shocker deep insecurities. He couldn’t hack it as a regular guy—or as a regular criminal—so he clings desperately to the limited success he’s achieved as a super villain. So much as suggest that he might not be the brilliant mastermind he thinks he is, and the Shocker fl ies into a violent rage.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

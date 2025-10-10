@@ -335,9 +335,12 @@ public class TraitSelector : ITraitSelector
             [
                 "The character can infect a target with a disease, which must be chosen along with the trait. Examples include:",
                 "- Brood implantation",
+                "- Carrion Virus",
+                "- Spider-Wasp Venom",
                 "- Techno-Organic virus",
                 "- Transmode virus",
-                "See the infected condition for details about how infection works, the Infections and Possessions section for the effects of the above diseases."
+                "See the infected condition for details about how infection works, the Infections and Possessions section for the effects of the above diseases.",
+                "See the Clones section (page p118 Spiderverse) for the effects of the Carrion Virus, and the Spider-Wasp Venom section (page p125 Spiderverse) for the effects of Spider-Wasp Venom."
             ],
             Source = BookSource.XMenExpansion
         },

@@ -16,6 +16,7 @@ public class PowerSetNames
     public const string ElementControlIce = "Element Control (Ice)";
     public const string ElementControlIron = "Element Control (Iron)";
     public const string ElementControlSound = "Element Control (Sound)";
+    public const string ElementControlSwarm = "Element Control (Swarm)";
     public const string ElementControlToxin = "Element Control (Toxin)";
     public const string ElementControlWater = "Element Control (Water)";
     public const string Healing = "Healing";
