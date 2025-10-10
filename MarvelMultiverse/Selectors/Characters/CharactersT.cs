@@ -223,6 +223,101 @@ public class CharactersT
         },
         new()
         {
+            Name = "Teresa Parker",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 4, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Teresa Elizabeth Parker",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.CIA, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Teresa Parker is the younger sister of Spider-Man (Peter Parker) and the daughter of deceased undercover C.I.A. agents Richard and Mary Parker. Having grown increasingly paranoid after Peter was born, Richard and Mary chose to keep Teresa’s birth a secret from everyone, even Peter. She survived the plane crash that claimed her parents’ lives and was put up for adoption shortly thereafter, unaware that she had a brother.",
+                    "Teresa spent much of her adolescence investigating her origins, discovering the truth only after she was recruited by her parents’ former employers: the C.I.A. In her new job, she discovered a plot by Kingpin (Wilson Fisk) to restore his criminal enterprise that involved kidnapping Peter Parker. While looking into Peter and his parents, Teresa found long-buried documents proving she was his sister. She revealed herself to Peter, and together, they foiled the Kingpin’s plot.",
+                    "Having fulfi lled her life’s mission, Teresa left the C.I.A. to take a position with S.H.I.E.L.D. She knows Peter’s secret identity and has fought alongside Spider-Man a number of times since, and while her parentage has occasionally been called into question, the pair have come to accept each other as siblings."
+                ],
+                Personality =
+                [
+                    "Being a C.I.A. spy means that Teresa is all about the cloak-and-dagger lifestyle, but she nonetheless has a similar moral compass to Peter, and she tries her best to use her skills responsibly. She still holds a lot of anger over her parents’ deaths, but she never lets her emotional hang-ups get in the way of doing the right thing. She’s smart, and her extensive combat training makes her a formidable opponent.",
+                ],
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Terror",
             Rank = 3,
             Abilities = new Abilities
@@ -958,6 +1053,89 @@ public class CharactersT
         },
         new()
         {
+            Name = "Tinkerer",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 2, resilience: 0, vigilance: 2, ego: 1, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Phineas Mason",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Gray",
+                Hair = "Gray, mostly bald, formerly brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Engineer],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.MastersOfEvil],
+                Base = "New York City",
+                History =
+                [
+                    "Annoyed by the audacity and showmanship of the vigilantes he saw on the news, small-time repair technician Phineas Mason vowed to become a different kind of villain—a quieter, more thoughtful counterpoint to the flashy world of super-heroics. With the help of Mysterio (Quentin Beck), he used his technical expertise to create an underground spy ring, disguising his listening devices as ordinary electronics and his criminal clients as aliens looking to colonize the planet Earth.",
+                    "In one of his earliest outings as an adventurer, Spider-Man (Peter Parker) shattered Mason’s spy ring. However, for years afterward, Parker remained convinced that Mason and his goons had actually been aliens, giving the Tinkerer ample opportunity to rebuild. By the time Mason next appeared in public, he had firmly established himself as one of the top gadget makers and weapon suppliers in the underworld.",
+                    "Over the years, the Tinkerer has provided vital technical support to dozens of villains, including the Beetle (Abner Jenkins), the Scorpion and even the Kingpin. Although he occasionally dons a battle suit or equips himself with other gizmos and enters the fray directly, his real passion is facilitating the villainy of others."
+                ],
+                Personality =
+                [
+                    "Although technically an engineer, the Tinkerer behaves like a classic mad scientist. His motives are petty, and his social skills are nonexistent. To him, morality is a foreign concept. He cares only about doing good work—and showing up anyone foolish enough to doubt his technical prowess.",
+                ],
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Titania",
             Rank = 2,
             Abilities = new Abilities
@@ -1135,6 +1313,102 @@ public class CharactersT
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Tombstone",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 3, vigilance: 2, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Alonzo Thompson “Lonnie” Lincoln",
+                Heights = [new() { Feet = 6, Inches = 7 }],
+                Weights = [460],
+                Gender = Gender.Male,
+                Eyes = "Gray",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "Hard, gray skin, partially severed nose, teeth filed down into fangs",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Maggia, TeamNames.SinisterSix],
+                Base = "New York City",
+                History =
+                [
+                    "In high school, future Daily Bugle editor Robbie Robertson was threatened by an older kid named Lonnie Lincoln into dropping a story that made Lincoln look bad. Robertson vowed to never again bow down to that kind of pressure, and a few decades later, he had the chance to prove his resolve.",
+                    "Now a mid-level Maggia enforcer operating under the codename of Tombstone, Lincoln tried to pressure Robertson into dropping a story that was inconvenient for his employers. When Robertson refused, Tombstone broke his back and beat him within an inch of his life.",
+                    "Mad for revenge, Robertson tracked Tombstone to his hideout, shot him and shoved him into a freezer, not knowing it also contained an experimental chemical reagent that would make Tombstone as tough and strong as his namesake. With his new super-powers, Tombstone rapidly rose in the ranks of the criminal underworld to become the head of his own Harlem-based family.",
+                    "The two men eventually declared a truce after Robertson discovered that his son Randy was secretly dating Tombstone’s daughter, the Beetle (Janice Lincoln). The prospective in-laws both pitched in to throw a wedding for their children, only for the ceremony to be derailed by a Maggia assassination attempt on Tombstone, kicking o¦ a citywide gang war. With help from Spider-Man (Peter Parker), Tombstone ultimately managed to defeat Madame Masque, the instigator of the attack at the wedding—and became the uncontested leader of New York City’s underworld."
+                ],
+                Personality =
+                [
+                    "Tombstone has a soft, raspy voice that pairs well with his quiet brand of evil. Unlike many other super villains, he is not a serial killer or a madman. He is a classic mastermind of organized crime, more concerned with protecting his business interests than with notions of right or wrong.",
+                ],
+            },
+            Source = BookSource.SpiderverseExpansion
         },
     ];
 }
