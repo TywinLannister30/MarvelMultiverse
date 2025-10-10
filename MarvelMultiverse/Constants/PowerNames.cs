@@ -232,6 +232,7 @@ public static class PowerNames
     public const string Razorwebs = "Razorwebs";
     public const string RegainFocus = "Regain Focus";
     public const string ReinforcedSkeleton = "Reinforced Skeleton";
+    public const string Repulse = "Repulse";
     public const string ResizeObject = "Resize Object";
     public const string Resurrect = "Resurrect";
     public const string ReturnFire = "Return Fire";
@@ -276,7 +277,8 @@ public static class PowerNames
     public const string SpinAndThrow = "Spin & Throw";
     public const string StaticIllusion = "Static Illusion";
 	public const string StealPowers = "Steal Powers";
-	public const string StiltSteps = "Stilt Steps";
+    public const string StickAround = "Stick Around";
+    public const string StiltSteps = "Stilt Steps";
     public const string StoppingPower = "Stopping Power";
     public const string Sturdy1 = "Sturdy 1";
     public const string Sturdy2 = "Sturdy 2";
@@ -330,7 +332,10 @@ public static class PowerNames
     public const string UnstoppableAssault = "Unstoppable Assault";
     public const string UntouchablePosition = "Untouchable Position";
     public const string VaporsOfValtorr = "Vapors of Valtorr";
+    public const string VenomBash = "Venom Bash";
     public const string VenomBlast = "Venom Blast";
+    public const string VenomBurst = "Venom Burst";
+    public const string VenomSword = "Venom Sword";
     public const string ViciousAttack = "Vicious Attack";
     public const string Wallcrawling = "Wallcrawling";
     public const string WeaponsBlazing = "Weapons Blazing";

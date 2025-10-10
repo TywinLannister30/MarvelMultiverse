@@ -97,6 +97,7 @@ public static class TeamNames
     public const string LeagueOfEvilInhumans = "League of Evil Inhumans";
     public const string LegionOfMonsters = "Legion of Monsters";
     public const string Legionnaires = "Legionnaires";
+    public const string LethalLegion = "Lethal Legion";
     public const string LivingArmada = "The Living Armada (Brood fleet)";
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";
     public const string Maggia = "Maggia";
@@ -176,6 +177,7 @@ public static class TeamNames
     public const string USAirForce = "U.S. Air Force";
     public const string USArmy = "U.S. Army";
     public const string USHulkOperations = "U.S. Hulk Operations";
+    public const string VenomverseResistanceMovement = "Venomverse Resistance Movement";
     public const string VillainsForHire = "Villains for Hire";
     public const string WeaponXForce = "Weapon X-Force";
     public const string WebWarriors = "Web-Warriors";

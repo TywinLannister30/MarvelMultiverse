@@ -6,4 +6,5 @@ public static class Gender
     public const string Female = "Female";
     public const string Varies = "Varies";
     public const string Nonbinary = "Nonbinary";
+    public const string None = "None";
 }

@@ -3384,6 +3384,25 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Repulse,
+            Description = "The character can force things away.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.StickAround}, Rank 3",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "Someone attacks the character.",
+            Duration = Duration.Instant,
+            Range = "1 space",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character can force something touching them—or nearly touching them—away in the same way that the Stick Around power allows them to stick things together. A character attempting to avoid being repelled must make a non-combat Melee vs. TN 16 action check. If they succeed, they can act normally. In terms of the size of something being repelled and how far it can be repelled, this works just like if the character was throwing it.",
+                "The use of the power is limited only by the character’s creativity. Examples include shoving away an attacker, propelling themself extra far with a jump, keeping something—or someone—hovering in the air and so on.",
+                "If used to cause something to hover, the maximum altitude this li­fts the target is 1 space. If used to increase a jump, this adds ¢ space to the character’s Jump Speed for each rank."
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = PowerNames.ResizeObject,
             Description = "The character can change the size of an object within reach.",
             PowerSets = [PowerSetNames.Resize],
@@ -4010,7 +4029,25 @@ public class PowerSelector : IPowerSelector
                 "When the character uses a power, they must pay any cost normally as well."
             ]
 		},
-		new()
+        new()
+        {
+            Name = PowerNames.StickAround,
+            Description = "The character can make things stick together.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.Wallcrawling}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "Someone attempts to move—or to move another character—within the power’s range.",
+            Duration = Duration.Concentration,
+            Range = "1 space per rank",
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character can cause two things to be stuck to each other, in the same way that the Wallcrawling power allows a character to stick to surfaces. Breaking this connection requires a non-combat Melee vs. TN 16 action check, although the character can intentionally end it at any time.",
+                "The use of the power is limited only by the character’s creativity. Examples include sticking a person to a floor so they can’t move or be taken away, sticking a door closed, sticking something to the character’s back so they can keep their hands free and so on.",
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
         {
             Name = PowerNames.StiltSteps,
             Description = "The character can stretch their legs like extendable stilts.",
@@ -4812,6 +4849,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.VenomBash,
+            Description = "The character charges up their fist for a bioelectric punch.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes a bare-handed Melee attack. If the attack is a success, it does Health damage. On a Fantastic success, it does double damage, and if the target takes at least ¢ point of Health damage, they are also stunned for one round.",
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = PowerNames.VenomBlast,
             Description = "The character unleashes a bioelectric shock.",
             PowerSets = [PowerSetNames.SpiderPowers],
@@ -4823,6 +4874,38 @@ public class PowerSelector : IPowerSelector
             [
                 "The character makes a ranged attack. If the attack is a success, it does regular damage. On a Fantastic success, the attack does double damage, and if the target su­ffers any actual damage, they are also stunned for one round.",
             ],
+        },
+        new()
+        {
+            Name = PowerNames.VenomBurst,
+            Description = "The character lets loose a massive bioelectric charge.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.VenomBash}, Rank 3",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character pounds the ground, arcing bioelectricity all around. Make a single Melee check and compare it to the Melee defense scores of any foes within 5 spaces of the character. On a success, affected targets are knocked prone. On a Fantastic success, they also take half Health damage.",
+            ],
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = PowerNames.VenomSword,
+            Description = "The character can create a sword of bioelectricity.",
+            PowerSets = [PowerSetNames.SpiderPowers],
+            Prerequsites = $"{PowerNames.VenomBlast}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character or an ally within reach is attacked.",
+            Duration = Duration.Concentration,
+            Cost = "5 Focus per round",
+            Effect =
+            [
+                "The character can create a sword from their own bioelectricity and wield it in combat. It can be used against any target within reach, and it adds +2 to the character’s Melee damage multiplier for attacks made with it. On a Fantastic success, the attack does double damage, and if the target suffers any actual damage, they are also stunned for one round.",
+                "This does not stack with other such bonuses.",
+            ],
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

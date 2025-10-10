@@ -1957,6 +1957,120 @@ public class CharactersS
         },
         new()
         {
+            Name = "Silence",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 5, resilience: 3, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics"),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance, reminder: "Hell-Mark"),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SymbioticSpiderBlinder),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Agent Anti-Venom"),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Hell-Mark [Grants Elemental Burst (Hellfire). Also allows Silence to create dimensional portals exclusively to and from Hell. She must still pay the regular Dimensional Portal power cost of 15 Focus.]", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlHellfire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsMagicItem = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Healing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HealingHands),
+                        powerSelector.GetPower(PowerNames.LetsGo),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Andrea “Andi” Benton",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [140],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black, usually dyed purple",
+                Size = Size.Average,
+                DistinguishingFeatures = "Red and white Silence form has claws, no visible mouth",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicDemonic, OriginName.SymbioteVenom],
+                Teams = [TeamNames.VenomverseResistanceMovement],
+                Base = "New York City",
+                History =
+                [
+                    "When Flash Thompson was Agent Venom, he briefl y took a job coaching gym at a high school. While there, he befriended a bullied teen named Andi Benton. Benton and her father lived in an apartment just upstairs from Thompson, and when an agent of Thompson’s nemesis Jack O’Lantern— masquerading as the villain—attacked, they were caught in the crossfire.",
+                    "The attacker killed Benton’s father and was about to kill her too when Thompson transferred a piece of his symbiote to her. This piece happened to contain the enchanted Hell-Mark that Thompson had previously taken from Mephisto, and it imbued her with the powers of both a demon lord and a symbiote.",
+                    "As the unstable but heroic Mania, Benton became Thompson’s new partner, helping him to battle the likes of Jack O’Lantern and Carnage. Sometime later, Venom’s enemy Lee Price ambushed Benton and stole the Mania symbiote, turning himself into Maniac. Thompson defeated Maniac, but in the process, he effectively destroyed the Mania symbiote.",
+                    "Benton eventually regained her symbiote powers by convincing the Scream symbiote to break its connection with Carnage’s hive mind, but Scream soon returned to Carnage’s side. However, with help from Alchemax scientists, Benton used Thompson’s new Anti-Venom symbiote to turn some of Scream’s remnants into a new symbiote named Silence. Fully repowered, she resumed her old partnership with Thompson."
+                ],
+                Personality =
+                [
+                    "Benton may dress goth and act like she doesn’t care, but her hard exterior belies a heart that is profoundly compassionate and caring. She frequently prioritizes the safety and well-being of others over her own and is, at the moment, both a resident and a volunteer at the F.E.A.S.T. homeless shelter.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Silk",
             Rank = 4,
             Abilities = new Abilities
@@ -1995,6 +2109,16 @@ public class CharactersS
                 },
                 new CharacterPowerSet
                 {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
                     [
@@ -2011,16 +2135,6 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.Webtrapping),
                     ],
                 },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.MeleeWeaponsSharp,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.FastAttacks),
-                        powerSelector.GetPower(PowerNames.HitAndRun),
-                        powerSelector.GetPower(PowerNames.ViciousAttack),
-                    ],
-                },
             ],
             Biography = new Biography
             {
@@ -2034,18 +2148,20 @@ public class CharactersS
                 DistinguishingFeatures = "None",
                 Occupations = [OccupationName.Journalist],
                 Origins = [OriginName.WeirdScience],
-                Teams = [TeamNames.AgentsOfAtlas, TeamNames.SpiderArmy],
+                Teams = [TeamNames.AgentsOfAtlas, TeamNames.SpiderArmy, TeamNames.SpiderSociety],
                 Base = "New York City",
                 History =
                 [
                     "As a teenager, Cindy Moon was bitten by the exact same radioactive spider that gave Spider-Man (Peter Parker) his powers. Her own powers proved a powerful lure for the multiversal predator Morlun, so she was locked away in a bunker for her own safety for thirteen years. After learning of Moon’s existence, Parker freed her from her bunker, unintentionally launching Morlun’s hunt for her once again.",
                     "Morlun and his family of hero hunters have since been defeated, and Moon has been reunited with her family. Today, she works as a reporter for J. Jonah Jameson’s new outlet, Threats and Menaces, and helps save the world as the spiderpowered hero Silk.",
+                    "Silk has truly come into her own as a hero. She wound up being the most important hero in the battle against Shathra and has taken on a leadership role in the new Spider-Society. She considers fellow female wall-crawlers Araña and Madame Web to be her best friends."
                 ],
                 Personality =
                 [
                     "A decade of nearly complete isolation gave Moon no small amount of social anxiety. Although she’s made great strides in the last few years, she still has some trouble socializing, particularly with people she doesn’t know well. Despite her fears, Moon’s unwavering heroic spirit allows her to push forward in her adventures.",
                 ]
-            }
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
@@ -2256,6 +2372,181 @@ public class CharactersS
         },
         new()
         {
+            Name = "Silvermane",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Silvio Manfredi",
+                Heights = [new() { Feet = 7 }],
+                Weights = [440],
+                Gender = Gender.Male,
+                Eyes = "Gray",
+                Hair = "None",
+                Size = Size.Big,
+                DistinguishingFeatures = "Cybernetic body",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.HighTechCybernetics],
+                Teams = [TeamNames.Hydra, TeamNames.Maggia],
+                Base = "New York City",
+                History =
+                [
+                    "As the decades-long head of one of the most powerful Maggia families on the East Coast, Silvio Manfredi had more experience dealing with crimefi ghters—both super and non-super—than almost anybody else on the planet. He was so vital—not just to the operations of his family, but to all organized crime—that his people set out to ensure that he would never die. They went on a mission to obtain an elixir of eternal life, and after that failed, they put into place another, less mystical contingency plan.",
+                    "When Manfredi was eventually struck down by Cloak and Dagger, his people took him apart and put him back together in a top-of-the-line cybernetic body. Now more robot than man, Manfredi was stolen and reprogrammed into a mindless killing machine by his greatest rival: the Kingpin. Although he later regained his senses, this brief absence allowed for the Kingpin to conquer much of Manfredi’s territory, cementing his place as an all-encompassing leader of organized crime.",
+                    "Though their power continues to diminish, Silvermane and the Manfredi family have managed to linger. They had a chance at regaining some of their lost glory during the gang war that recently overtook most of New York City, but along with the rest of the old-timers, Silvermane ultimately lost the confl ict to Tombstone’s faction."
+                ],
+                Personality =
+                [
+                    "Silvermane is an irritable—verging on unhinged—old man with little patience for dealing with anyone other than himself. His children, Joseph Manfredi and Saya Ishii, have both become respectable Maggia leaders in their own right, but Silvermane couldn’t care less. He would rather reminisce about his glory days than spend time with them—or anyone else, for that matter.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Sin-Eater",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 3, vigilance: 2, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Sin-Eating Shotgun [Applies the effects of Penance Stare on a Fantastic success; otherwise acts as a normal shotgun]"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Stanley “Stan” Carter",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [237],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown with gray temples",
+                Size = Size.Average,
+                DistinguishingFeatures = "Half-decayed, zombified appearance",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.Magic, OriginName.WeirdScience],
+                Teams = [TeamNames.NYPD, TeamNames.SHIELD],
+                Base = "New York City",
+                History =
+                [
+                    "Once an ordinary if slightly overzealous S.H.I.E.L.D. agent, Stan Carter’s life changed forever when he volunteered as a test subject for a new Super-Soldier Serum. The drug—a heavily modifi ed variant of the hallucinogenic compound PCP—succeeded in granting Carter a limited form of super-strength, but it also made him mentally unstable, sometimes even violent. Ultimately, S.H.I.E.L.D. higher-ups were forced to scrap the project and fire Carter.",
+                    "In the aftermath, Carter got a new job working for the New York Police Department, where he became increasingly paranoid. When he found out that his partner was secretly pushing drugs for the mob, his mind broke. In a dissociative fugue state, he killed his partner and adopted the identity of Sin-Eater.",
+                    "Donning a hastily constructed disguise, Carter embarked on a campaign of terror across New York City, killing every corrupt priest, politician and cop he could get his hands on—including, most infamously, NYPD Captain Jean DeWolff.",
+                    "Spider-Man (Peter Parker) eventually managed to capture Carter. Shortly thereafter, the Sin-Eater was shot down by the NYPD while attempting to escape prison.",
+                    "Years later, Carter was resurrected by the demonic Kindred and given the power to literally devour sins, which he used to suck the evil out of several major villains, including the Green Goblin. The current whereabouts of this partially zombifi ed Sin-Eater remain unknown."
+                ],
+                Personality =
+                [
+                    "Stan Carter sees himself as the ultimate good guy: a holy warrior sent by God to cleanse the world of all corruption. In truth, he is nothing more than a run-of-the-mill serial killer, and somewhere deep inside, he knows it. His mad zealotry exists as a shield to protect himself from having to consider the consequences of his actions.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Siryn",
             Rank = 3,
             Abilities = new Abilities
@@ -2423,6 +2714,111 @@ public class CharactersS
         },
         new()
         {
+            Name = "Sleeper",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 4, resilience: 3, vigilance: 5, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics / Anti-Venom"),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.SymbioticSpiderBlinder),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.ShapeShift),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimatedIllusion),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                        powerSelector.GetPower(PowerNames.StaticIllusion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Sleeper",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually around 9\"",
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.None,
+                GenderReminder = "it/its",
+                Eyes = "Red",
+                Hair = "None",
+                Size = Size.Varies,
+                SizeNotes = "usually Small",
+                DistinguishingFeatures = "Shape-shifting symbiote with black-and-yellow features, usually takes the form of a cat",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.SymbioteVenom],
+                Teams = [],
+                Base = "Mobile",
+                History =
+                [
+                    "The symbiote known as Sleeper was spawned from Venom in Alchemax labs. When the Kree warrior Tel-Kar—the Venom symbiote’s fi rst host—stole the Venom symbiote from Eddie Brock, Sleeper bonded with Brock to pursue the thief. Eventually, Sleeper bonded with Tel-Kar instead and destroyed the Kree’s mind.",
+                    "Using Tel-Kar as a mindless host, Sleeper traveled the universe until it reached Klyntar. When it realized that Knull was working his way loose, Sleeper returned to Earth to warn Brock. Sleeper tried to bond with Brock’s son, Dylan, to protect him, but the boy’s innate symbiote powers prevented it.",
+                    "Instead of finding a new host, Sleeper took the form of a cat and moved in with Eddie and Dylan. For a while, Sleeper bonded with Hank Hensley, a friend of Flash Thompson. Hensley has no memory of serving as a symbiote’s host.",
+                    "After Brock defeated Knull and took his place as the King in Black, Dylan bonded with Venom, and Sleeper, in turn, became Dylan’s companion in his fight against Brock’s chaotic reign."
+                ],
+                Personality =
+                [
+                    "Sleeper’s feline form suits it perfectly. Like a cat, Sleeper is sneaky, thoughtful and often solitary. The symbiote is fi ercely protective of those it cares for and totally indifferent toward everyone else. Stay out of its way, and it will stay out of yours, but get too close, and you might get scratched.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Snowbird",
             Rank = 4,
             Abilities = new Abilities
@@ -2523,18 +2919,752 @@ public class CharactersS
         },
         new()
         {
-            Name = "Spider-Man (Miles Morales)",
+            Name = "SP//dr",
             Rank = 3,
             Abilities = new Abilities
             (
-                melee: 3, agility: 5, resilience: 3, vigilance: 2, ego: 1, logic: 1
+                melee: 5, agility: 4, resilience: 3, vigilance: 2, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Uncle Ben"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.VenomBlast),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "SP//dr’s co-pilot “Spider”"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peni Parker",
+                Heights = [new() { Feet = 4, Inches = 9 }],
+                HeightReminder = "9' in battle suit",
+                Weights = [105, 900],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Big,
+                SizeNotes = "Average when not in suit",
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.WeirdScience],
+                Teams = [TeamNames.SpiderArmy],
+                Base = "New York City (Earth-14512)",
+                History =
+                [
+                    "In the futuristic world of Earth-14512, high-tech criminals run wild, terrorizing millions. To combat the scourge, a government-backed scientist named Richard Parker developed a mechanical suit capable of combating nearly any opponent. To help handle the mental load of piloting the suit, Parker bonded himself to a genetically modified, hyperintelligent, psychic spider.",
+                    "For a while, Parker and his arachnid partner protected the world under the codename of SP//dr. But when Parker died under mysterious circumstances, responsibility for piloting the SP//dr suit fell to the only other person capable of bonding with its spider pilot: Parker’s 9-year-old daughter, Peni.",
+                    "Under the tutelage of her Uncle Ben, Peni spent the next several years training to pilot her father’s suit. By the time she was 14, government authorities considered her experienced enough to begin using the suit on a regular basis.",
+                    "These days, Peni splits her time between her school duties and protecting New York City in the SP//dr suit. This has made it hard for her to make friends at school, but she’s made plenty of compatriots in the multiversal Spider-Army. She’s gone on dozens of adventures with the Spider-Verse defenders—almost as many as she’s had on her own."
+                ],
+                Personality =
+                [
+                    "Peni Parker is a brave, if occasionally shy, teenage girl whose main concerns are having fun and being accepted by her peers. Piloting SP//dr can sometimes be a burden, but her strong sense of justice refuses to let her give up. Her Uncle Ben is her favorite person in the world.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Speed Demon",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 2, vigilance: 3, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.LightningActions),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BlazingFastFists),
+                        powerSelector.GetPower(PowerNames.Blur),
+                        powerSelector.GetPower(PowerNames.CatchBullets),
+                        powerSelector.GetPower(PowerNames.LightningActions),
+                        powerSelector.GetPower(PowerNames.RunOnWater),
+                        powerSelector.GetPower(PowerNames.SpeedBlast),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "James Sanders",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Blond",
+                Size = Size.Average,
+                SizeNotes = "Average when not in suit",
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.LethalLegion, TeamNames.SinisterSix, TeamNames.SquadronSinister, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "James Sanders was once an ordinary chemist, fine in fortune and body but lacking in fulfillment and purpose. So when the Grandmaster approached him, offering a life of thrills and excitement, Sanders didn’t hesitate. He worked with the mysterious alien to synthesize a superspeed serum, and he subsequently became a member of the Grandmaster’s Squadron Sinister under the codename Whizzer.",
+                    "Though the squadron was defeated and depowered by the Avengers, Sanders refused to let go of his new life of adventure. He created an improved version of his serum and shed the Whizzer persona, rebranding himself as the nefarious Speed Demon. In this new guise, Sanders embarked on a series of crime sprees, robbing department stores and banks and fighting off their defenders—including, most notably, Spider-Man (Peter Parker).",
+                    "Sanders’ super-speed makes him a very formidable foe, and in the years following his rebranding, he became a regular recruit for a variety of super-villain teams. These days, when he isn’t planning heists or acting as a member of Hank Pym’s Lethal Legion, he spends most of his time bouncing between prisons, low-level robberies and superhuman fighting tournaments.",
+                ],
+                Personality =
+                [
+                    "Sanders is unstable—not in the violent manner most super villains exhibit, but emotionally. He has little in the way of a social filter, and he often lets his emotions get the better of his judgment, to the detriment and disapproval of his teammates. Sanders isn’t particularly evil—he doesn’t enjoy killing—but he has found the super-villain life suits him nicely and has no intentions of giving it up anytime soon.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Spider-Boy",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 2, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "when angry"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Spider-Man (Peter Parker)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Evasion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SixthSense,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Intuition),
+                        powerSelector.GetPower(PowerNames.Precognition1, reminder: "limited to held items"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "arachnids"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Bailey Briggs",
+                Heights = [new() { Feet = 4, Inches = 11 }],
+                Weights = [64],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Small,
+                DistinguishingFeatures = "Retractable fangs and spider eyes",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.SpiderArmy, TeamNames.SpiderSociety],
+                Base = "New York City",
+                History =
+                [
+                    "A few years ago, Bailey Briggs, his mother, Tabitha, and numerous other people were kidnapped by the mad scientist Madame Monstrosity. The victims of these kidnappings had their DNA spliced with various animals, turning them into hybrid creatures called Humanimals.",
+                    "Most of the Humanimals lost a portion of their humanity in the process, but Bailey somehow kept his mind completely intact and gained a slew of Spider-Powers to boot. He escaped Madame Monstrosity and fell into the custody of Spider-Man (Peter Parker), who made the boy his sidekick.",
+                    "Sometime later, Spider-Boy was erased from the interdimensional Web of Life and Destiny that connects the entire Spider-Verse. All evidence of his existence, including everyone’s memories of him, was wiped away. When the Web of Life and Destiny was eventually restored, Spider-Boy came back, but still no one remembered him. Spider-Boy spent most of his time since his return trying to reconnect with his mentor and idol, Spider-Man. Sadly, Parker’s complete amnesia regarding the boy has made this an arduous process.",
+                    "During that time, Bailey stayed at the F.E.A.S.T. homeless shelter, under the supervision of Parker’s Aunt May. One of the older girls at the shelter, Christina Xu, is his closest confi dante and his only real non-super-powered friend.",
+                    "But that all changed after Spider-Boy pushed the Spider-Society to help him. With Spider-Man’s help, Spider-Boy was restored, and three years of memories of his existence was restored to the world. Bailey was reunited with his mother and has started back in school."
+                ],
+                Personality =
+                [
+                    "Bailey Briggs is a sweet but deeply insecure kid. The experiment that gave him his powers also gave him fangs and six spiderlike eyes. He’s learned to suppress these features, but in moments of anger or excitement, they can reassert themselves. When they do, he feels—not entirely inaccurately — that people perceive him as a monster.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Spidercide",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 6, resilience: 3, vigilance: 3, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.ShapeShift),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 8 (due to Big)"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.SlipFree)
+                    ]
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "None",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Male,
+                Eyes = "Hazel",
+                Hair = "Brown",
+                Size = Size.Big,
+                DistinguishingFeatures = "Shape-shifting clone of Peter Parker",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "A clone created by the Jackal (Miles Warren), Spidercide originally believed himself to be the real Peter Parker. Possessing all of Spider-Man’s abilities, Spidercide had also been given the power to control his physical form at the molecular level. Warren programmed him to kill Parker and his friends when the proper trigger occurred.",
+                    "Spidercide could shift his mass, density and shape at will, making him a deadly match for Spider-Man. At the time, the Jackal considered Spidercide to be his ultimate achievement. However, Spidercide eventually got sick of taking the Jackal’s orders, and the pair turned on each other.",
+                    "Spidercide still hates Parker and his other clones, but he might despise the Jackal more. Recently, the Jackal captured Spidercide and forced him to help torment Parker with spine-tingling illusions. Not one to be forced into anything, Spidercide helped Parker escape the Jackal’s trap and send the villain back to prison.",
+                ],
+                Personality =
+                [
+                    "Spidercide is a cold-blooded killer. He and the Jackal killed hundreds of people together, and after they separated, Spidercide continued to occasionally kill innocent civilians. That said, he is not a completely unreasonable psychopath. He speaks with precise diction and is clear about what he wants at all times. It just so happens that the thing he wants most is to bathe in Spider-Man’s blood.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Spider-Girl",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 7, resilience: 3, vigilance: 4, ego: 3, logic: 1
             ),
             Traits =
             [
                 traitSelector.GetTrait(TraitNames.CombatReflexes),
                 traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
                 traitSelector.GetTrait(TraitNames.QuickLearner),
-                traitSelector.GetTrait(TraitNames.SurprisingPower),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Darkdevil"),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Spider-Man (Peter Parker)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Repulse),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.StickAround),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgliding),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "May “Mayday” Parker",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [119],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD, TeamNames.SpiderSociety],
+                Base = "New York City (Earth-982)",
+                History =
+                [
+                    "In Earth-982, Spider-Man (Peter Parker) lost his leg in a fight that also claimed the life of the Green Goblin (Harry Osborn). Unable—and, more importantly, unwilling—to continue as a crimefi ghter, Parker settled down with Mary Jane Watson and had a daughter, May.",
+                    "May was a rambunctious kid, creating trouble often enough that her parents nicknamed her “Mayday,” but compared to what came later, the first stages of her life were relatively uneventful. At right around the age that Peter first got his powers, Mayday began manifesting a similar set of abilities.",
+                    "Having had the importance of responsibility drilled into her head by her parents all her life, Mayday knew she had to put her powers to good use. First in secret—then later with tentative parental approval—she adopted her father’s iconography and set out to protect New York City as the amazing Spider-Girl.",
+                    "Although she’s been doing the job for only a few years, Mayday has already made a major splash not only in her home universe but throughout the entire Spider-Verse. A determined go-getter, she juggles her duties as a local hero with her duties as a member of the Spider-Society and with her job as a babysitter for her little brother, Benjy, who is just beginning to come into powers of his own."
+                ],
+                Personality =
+                [
+                    "Although she’s not above the occasional bout of righteous anger, Mayday Parker is a more hopeful person than her father. Unlike many of the heroes around her, she genuinely believes in the power of reform and restorative justice. She would rather turn her enemies into friends than beat them up, though she recognizes that the latter is often unavoidable.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Spider-Ham",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 7, resilience: 6, vigilance: 3, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Sources"),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Pundit),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "May Porker"),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.ExtendedReach1),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.Rubberneck),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter Porker",
+                Heights = [new() { Feet = 3, Inches = 8 }],
+                Weights = [95],
+                Gender = Gender.Male,
+                Eyes = "Black",
+                Hair = "Brown",
+                Size = Size.Small,
+                DistinguishingFeatures = "Anthropomorphic pig",
+                Occupations = [OccupationName.Journalist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.SpiderSociety],
+                Base = "New Yolk City (Earth-8311)",
+                History =
+                [
+                    "One day, in the strange anthropomorphic animal dimension of Earth-8311, mad scientist May Porker gave herself a critical dose of radiation while trying to create a nuclear-powered hair dryer. Stumbling around in an irradiated stupor, she discovered a down-on-his-luck spider named Peter, who had been secretly squatting in her basement. Mistaking him for some sort of snack, May bit Peter, transforming him into a pig with the proportional speed and strength of a spider.",
+                    "The event gave May severe memory damage, and in the aftermath, she believed that Peter had always been her nephew. Too worried for her health to shock her with the truth, Peter allowed May to adopt him and began living in her house full-time.",
+                    "Out of love for his adoptive aunt, Peter decided to use his newfound powers for the greater good of all animalkind. Under the codename Spider-Ham, he defends his world—and others—from villainous anthropomorphic threats like Ducktor Doom and the Green Gobbler.",
+                ],
+                Personality =
+                [
+                    "Peter Porker makes a lot of jokes, to the point that many people, even in his own universe, consider him to be nothing more than a joke, and an obnoxious one at that. But he suffers just as much as any other Spider-Person, if not more so.",
+                    "Porker’s friends and colleagues in the Spider- Society are the only people with real sympathy for him, and even they consider his existence strange. To them, his odd homeworld where no one can ever die or even really change sounds like some kind of cosmic gag."
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Spider-Man (Earth-1610)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 2, vigilance: 2, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter Parker",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [140],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.SpiderSociety, TeamNames.Ultimates],
+                Base = "New York City (Earth-1610)",
+                History =
+                [
+                    "While the history of Earth-1610’s Peter Parker broadly resembles that of Earth-616’s Parker in his teenage years, the devil lies in the details. Rather than being bitten by a radioactive spider, Earth-1610’s Parker was bitten by an Oscorp spider that had previously been a test subject for Norman Osborn’s Oz formula. Parker later lost his Uncle Ben—in much the same way as his Earth- 616 counterpart—but in this world, his girlfriend Mary Jane Watson was already there to help comfort him through the loss.",
+                    "As Spider-Man, Parker protected his friendly neighborhood from dozens of deadly threats, including, frequently, Osborn himself. A little over a year after their adventures began, Parker and Osborn had one fi nal battle, a fi ght that killed them both. In the wall-crawler’s absence, another young hero named Miles Morales took up the title—and the responsibilities—of Spider-Man.",
+                    "Sometime later, the Oz formula flowing in Parker and Osborn’s veins brought them both back to life. Morales was moved to Earth-616, and life in Earth-1610 mostly returned to the status quo. Now an adult, Parker spends most of his time helping the Ultimates protect New York City from monsters like Venom and the Green Goblin."
+                ],
+                Personality =
+                [
+                    "During his first year of adventuring, Parker was all but constantly underslept, overworked and stressed out of his teenage mind. Now that he’s had a few years to settle into his webs, he’s leveled out a bit, but his life as Spider-Man is still a major strain on his personal health and his social relationships.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Spider-Man (Earth-6160)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 3, vigilance: 4, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Sources"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Pundit),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Dependents, specialization: "Richard and May Parker"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise, isTech: true),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderSense),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter Parker",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [178],
+                Gender = Gender.Male,
+                Eyes = "Hazel",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Journalist],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.WeirdScience],
+                Teams = [],
+                Base = "New York City (Earth-6160)",
+                History =
+                [
+                    "Determined to create a world without heroes, the megalomaniacal Maker (Reed Richards) of Earth-1610 went to Earth-6160, a universe much like that of Earth-616 but decades in the past. The first thing he did after arriving on the planet was go to a certain laboratory and prevent a certain radioactive spider from biting a certain teenager.",
+                    "So, Peter Parker never became Spider-Man and, by extension, his uncle Ben Parker never died. Instead, Peter got to live the quiet, domestic life that his counterpart in Earth-616 has always dreamed of. He got to marry Mary Jane Watson and have two kids: Richard and May. He got to become a successful journalist at the Daily Bugle, studying the craft under the trifecta of J. Jonah Jameson, Robbie Robertson and Ben Parker.",
+                    "But the Maker’s reign couldn’t last forever, and eventually, a resistance movement formed to oppose him. As part of this movement, Iron Lad (Tony Stark) sent Peter Parker a package containing three things: a video message explaining the situation, a radioactive spider and an experimental picotech battle suit.",
+                    "After careful consideration, Parker put the suit on and let the spider bite him. Initially in secret and then later, with family approval, he took to the streets as Spider-Man.",
+                    "In the months since, he’s been working with his partner, the Green Goblin (Harry Osborn), to take down New York’s secret ruler: the Kingpin."
+                ],
+                Personality =
+                [
+                    "This version of Spider-Man may be older than his Earth-616 counterpart, but he’s still a rookie hero, just beginning to come to grips with his new powers. Parker started out a fairly laid-back family man, but that may change as he learns just how dangerous life as Spider-Man can be.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Spider-Man (Miles Morales)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 7, resilience: 3, vigilance: 4, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Honest),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
                 traitSelector.GetTrait(TraitNames.Weird),
             ],
             Tags =
@@ -2553,7 +3683,16 @@ public class CharactersS
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Invisibility),
                     ],
                 },
                 new CharacterPowerSet
@@ -2565,20 +3704,15 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.SpiderDodge),
                         powerSelector.GetPower(PowerNames.SpiderSense),
                         powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.VenomBash),
                         powerSelector.GetPower(PowerNames.VenomBlast),
+                        powerSelector.GetPower(PowerNames.VenomBurst),
+                        powerSelector.GetPower(PowerNames.VenomSword),
                         powerSelector.GetPower(PowerNames.Wallcrawling),
                         powerSelector.GetPower(PowerNames.Webcasting),
                         powerSelector.GetPower(PowerNames.Webgrabbing),
                         powerSelector.GetPower(PowerNames.Webslinging),
                         powerSelector.GetPower(PowerNames.Webtrapping),
-                    ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Illusion,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Invisibility),
                     ],
                 },
             ],
@@ -2594,19 +3728,21 @@ public class CharactersS
                 DistinguishingFeatures = "None",
                 Occupations = [OccupationName.Student],
                 Origins = [OriginName.WeirdScience],
-                Teams = [TeamNames.Champions, TeamNames.SpiderArmy],
-                Base = "New York City",
+                Teams = [TeamNames.Champions, TeamNames.SpiderSociety],
+                Base = "Brooklyn, New York City",
                 History =
                 [
-                    "Born in an alternate universe (Earth-1610), high-school student Miles Morales was bitten by a genetically modifi ed spider that granted him amazing spiderlike abilities. After witnessing the death of his universe’s Spider-Man (Peter Parker), Morales decided to take on the hero’s mantle and become the new Spider-Man.",
-                    "When Morales’ universe was destroyed, he managed to escape to the main Marvel Universe (Earth- 616), and the Molecule Man integrated Morales’ past life and family into his new home, restoring some of them to life. Today, Morales attends the Brooklyn Visions Academy and adventures alongside the original Spider-Man, the Order of the Web (a team of Spider-Man-related heroes) and the Champions (a team of teenaged heroes), as well as establishing himself as a hero all his own.",
+                    "Born in an alternate universe (Earth-1610), high-school student Miles Morales was bitten by a genetically modified spider that granted him amazing spiderlike abilities. After witnessing the death of his universe’s Spider-Man (Peter Parker), Morales decided to take on the hero’s mantle and become the new Spider-Man.",
+                    "When Morales’ universe was destroyed, he managed to escape to the main Marvel Universe (Earth-616), and the Molecule Man integrated Morales’ past life and family into his new home, restoring some of them to life. Today, Morales attends the Brooklyn Visions Academy and adventures alongside the original Spider-Man, the Order of the Web (a team of Spider-Man-related heroes) and the Champions (a team of teenaged heroes), as well as establishing himself as a hero all his own.",
+                    "Morales’ family is aware of his vigilante activities and do their best to support him in his heroic efforts. That includes taking in his genetic clone, Shift, who intermittently acts as Morales’ adventuring partner."
                 ],
                 Personality =
                 [
-                    "Morales is an excellent student and a loyal friend. He remembers little of his old life on Earth-1610, but he is dedicated to making the most of his second chances on Earth-616 with his family. He looks up to Peter Parker as a mentor, but at the same time, he is determined to carve out his own path and become his own kind of hero.",
+                    "Morales is an excellent student and a loyal friend. He remembers little of his old life on Earth-1610, but he is dedicated to making the most of his second chances on Earth-616 with his family. He looks up to Peter Parker as a mentor, but at the same time, he is determined to carve out his own path and become his own kind of hero. Though he’s not exactly a social butterfly, Morales has a number of close friends, including his old pal Ganke Lee, his girlfriend Starling (Tiana Toomes) and former Champions teammate Ms. Marvel (Kamala Khan).",
                 ]
-            }
-        },
+            },
+            Source = BookSource.SpiderverseExpansion
+        }, 
         new()
         {
             Name = "Spider-Man (Peter Parker)",
