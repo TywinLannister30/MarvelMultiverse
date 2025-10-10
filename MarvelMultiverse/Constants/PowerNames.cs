@@ -200,6 +200,7 @@ public static class PowerNames
     public const string MolecularDestabilization = "Molecular Destabilization";
     public const string MultiversalPortal = "Multiversal Portal";
     public const string MultiversalTravel = "Multiversal Travel";
+    public const string MultiversalTravelOther = "Multiversal Travel Other";
     public const string MultiversalTravelTogether = "Multiversal Travel Together";
     public const string NeverSurrender = "Never Surrender";
     public const string OnYourFeet = "On Your Feet";
@@ -311,6 +312,8 @@ public static class PowerNames
     public const string TeleportObject = "Teleport Object";
     public const string TeleportOther = "Teleport Other";
     public const string TeleportTogether = "Teleport Together";
+    public const string Teleportal = "Teleportal";
+    public const string Telespot = "Telespot";
     public const string Thunder = "Thunder";
     public const string TimeOut = "Time Out";
     public const string TimePortal = "Time Portal";

@@ -51,6 +51,7 @@ public static class TeamNames
     public const string FantasticFour = "Fantastic Four";
     public const string FearlessDefenders = "Fearless Defenders";
     public const string FBI = "F.B.I.";
+    public const string FiftyStateInitiative = "50-State Initiative";
     public const string FiskIndustries = "Fisk Industries";
     public const string Fist = "Fist";
     public const string FiveWeaponsSociety = "Five Weapons Society";
@@ -72,6 +73,7 @@ public static class TeamNames
     public const string GreatLakesAvengers = "Great Lakes Avengers";
     public const string GreatRingOfArakko = "Great Ring of Arakko";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
+    public const string HatefulHexad = "Hateful Hexad";
     public const string HEARTClinic = "H.E.A.R.T. Clinic";
     public const string HellLords = "Hell Lords";
     public const string HellfireClub = "Hellfire Club";
@@ -99,6 +101,7 @@ public static class TeamNames
     public const string Legionnaires = "Legionnaires";
     public const string LethalLegion = "Lethal Legion";
     public const string LivingArmada = "The Living Armada (Brood fleet)";
+    public const string Loners = "Loners";
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";
     public const string Maggia = "Maggia";
     public const string Marauders = "Marauders";
@@ -121,6 +124,7 @@ public static class TeamNames
     public const string OmegaFlight = "Omega Flight";
     public const string Orchis = "Orchis";
     public const string PantherCult = "Panther Cult";
+    public const string ParkerIndustries = "Parker Industries";
     public const string PatsyWalkerTempAgency = "Patsy Walker Temp Agency";
     public const string PetAvengers = "Pet Avengers";
     public const string PowerElite = "Power Elite";
@@ -146,6 +150,7 @@ public static class TeamNames
     public const string SkrullEmpire = "Skrull Empire";
     public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
+    public const string SpiderBand = "Spider-Band";
     public const string SpiderClan = "Spider-Clan";
     public const string SpiderSociety = "Spider-Society";
     public const string SpiritsOfVengeance = "Spirits of Vengeance";
@@ -164,6 +169,7 @@ public static class TeamNames
     public const string TheFive = "The Five";
     public const string TheHand = "The Hand";
     public const string TheHive = "The Hive";
+    public const string TheSpiderSlayerSeries = "The Spider-Slayer Series";
     public const string ThievesGuild = "Thieves' Guild";
     public const string ThunderboltPoliceDepartment = "Thunderbolt Police Department";
     public const string Thunderbolts = "Thunderbolts";
@@ -192,4 +198,5 @@ public static class TeamNames
     public const string XTerminators = "X-Terminators";
     public const string Yakuza = "Yakuza";
     public const string YoungAvengers = "Young Avengers";
+    public const string YoungUltimates = "Young Ultimates";
 }

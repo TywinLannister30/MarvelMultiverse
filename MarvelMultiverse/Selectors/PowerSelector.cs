@@ -2887,7 +2887,7 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.MultiversalTravelTogether,
+            Name = PowerNames.MultiversalTravelOther,
             Description = "The character sends someone to another universe.",
             PowerSets = [PowerSetNames.OmniversalTravel],
             Prerequsites = $"{PowerNames.MultiversalTravel}, Rank 4",
@@ -2898,6 +2898,22 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character makes an Ego check against the Vigilance of a target they have grabbed. If the check is successful, the character can send the target to another universe. The target can be sent to any location in that universe that the character has been to before. Otherwise, the target arrives at the closest available corresponding space in the other universe.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.MultiversalTravelTogether,
+            Description = "The character brings someone with them to another universe.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.MultiversalTravel}, Rank 3",
+            Action = $"{ActionType.Standard}, {ActionType.Movement} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character moves to a di­fferent universe, taking any person they are touching with them. If the target does not wish to come along, the character must grab them first.",
+                "When they move to the other universe, they can arrive in any place they’ve been to before. Otherwise, they arrive at the closest available corresponding space in the other universe."
             ],
         },
         new()
@@ -4537,6 +4553,39 @@ public class PowerSelector : IPowerSelector
                 "The character teleports, taking any person they are touching with them, into clear spaces they can see or have been to, up to 10 times their rank in spaces away. Outside of combat, they can teleport up to 100 times their rank in spaces away.",
                 "If the target does not wish to be teleported, the character must grab them first."
             ]
+        },
+        new()
+        {
+            Name = PowerNames.Teleportal,
+            Description = "The character opens a portal to another place.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Teleport1}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character opens a glowing portal in a space next to them that teleports anything that enters it between that space and its destination, which forms a matched glowing portal in the other place. The other end of the portal must be in a clear space the character can see or has been to, up to 10 times their rank in spaces away. Outside of combat, they can teleport up to 1,000 times their rank in spaces away. Anything can move through the portal in either direction until it is closed, which the character can do at will.",
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Telespot,
+            Description = "The character can create small teleportals.",
+            PowerSets = [PowerSetNames.Teleportation],
+            Prerequsites = $"{PowerNames.Teleport1}, Rank 2",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is attacked.",
+            Duration = Duration.Instant,
+            Range = "10 spaces per rank",
+            Cost = "5 Focus",
+            Effect =
+            [
+                "As a standard action, the character can deploy small teleportals through which they can attack or otherwise affect items within ¢¦ times their rank in spaces using the same action.",
+                "As a reaction, they can deploy a small teleportal against a physical attack, defl ecting it away or redirecting it to another target. They can harmlessly defl ect any such attack automatically that isn’t a Fantastic success.",
+                "Redirecting an attack to another target requires the character to make an Agility check against the new target’s Agility defense. On a success, use the original attack’s damage against the new target. On a Fantastic success, double the damage. On a failure, the original attack hits the character instead."
+            ],
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {
