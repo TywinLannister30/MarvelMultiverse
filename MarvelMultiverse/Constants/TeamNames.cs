@@ -137,6 +137,7 @@ public static class TeamNames
     public const string QuietCouncilOfKrakoa = "Quiet Council of Krakoa";
     public const string RCMP = "RCMP";
     public const string Reavers = "Reavers";
+    public const string Roxxon = "Roxxon";
     public const string SantaRosaSheriffsDepartment = "Santa Rosa Sheriff’s Department";
     public const string SavageAvengers = "Savage Avengers";
     public const string SavageSix = "Savage Six";
@@ -194,6 +195,7 @@ public static class TeamNames
     public const string WeaponXForce = "Weapon X-Force";
     public const string WebWarriors = "Web-Warriors";
     public const string WestCoastAvengers = "West Coast Avengers";
+    public const string WinterGuard = "Winter Guard";
     public const string WreckingCrew = "Wrecking Crew";
     public const string XCorp = "X-Corp";
     public const string XMen = "X-Men";

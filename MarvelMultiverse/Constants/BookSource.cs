@@ -11,5 +11,6 @@ public class BookSource
     public const string EnterHydra = "Enter Hydra";
     public const string FantasticFourFromTheDepths = "Fantastic Four from the Depths";
     public const string TheCataclysmOfKang = "The Cataclysm of Kang";
+    public const string QuickStartWithThunderboltsAdventure = "Quick Start with Thunderbolts Adventure";
     public const string RevengeOfTheSuperSkrull = "Revenge of the Super Skrull";
 }

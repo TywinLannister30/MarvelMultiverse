@@ -204,5 +204,100 @@ public class CharactersU
                 ]
             }
         },
+        new()
+        {
+            Name = "U.S. Agent",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 3, vigilance: 3, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "U.S.Agent’s shield (grants user one extra level of the power Shield)"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.RicoShield),
+                        powerSelector.GetPower(PowerNames.Shield1, reminder: "Shield 2, with Iconic Weapon"),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "John F. Walker",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [270],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Thunderbolts, TeamNames.WestCoastAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "As a military brat, John Walker grew up dreaming of following in the footsteps of his father, Caleb, and his late brother, Mike, by becoming a heroic soldier. Ultimately, he opted to serve his country in a different way. As an adult, he agreed to undergo an experimental private procedure known as the Power Broker process, which granted him powers comparable to those of Captain America (Steve Rogers). With his new abilities, Walker took on the codename Super-Patriot and challenged Rogers to a showdown, claiming that Rogers was a fossil incapable of defending real American values.",
+                    "Though Walker lost the bout, when Rogers later gave up being Captain America, the government remembered Walker holding his own against the old fighter and nominated him as the Captain’s replacement. However, Walker found that the title Captain America ill-suited him, and he eventually turned on his bosses to help Rogers root out the government corruption that had forced him to abandon the Stars and Stripes in the first place.",
+                    "Ashamed of his own complicity in the government’s corruption, Walker considered retirement, but Rogers encouraged him to keep on as a hero under a new codename— U.S.Agent. Since then, the U.S.Agent has worked with everyone from the Thunderbolts to the Avengers."
+                ],
+                Personality =
+                [
+                    "In his early days, Walker came off as a bit of a patriotic extremist—in no small part because the Red Skull exploited his loyalty to the government to push him into taking on dubious assignments. However, in the years since, he’s shown himself to be a much more empathetic and thoughtful figure, more similar to Steve Rogers than not. He despises fascists, particularly the Red Skull, who not only manipulated him, but also ordered the killing of his parents.",
+                ]
+            },
+            Source = BookSource.QuickStartWithThunderboltsAdventure
+        },
     ];
 }

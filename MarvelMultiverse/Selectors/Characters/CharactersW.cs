@@ -669,6 +669,100 @@ public class CharactersW
         },
         new()
         {
+            Name = "White Widow",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 3, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Leverage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Clone),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Widow’s Bite (ranged weapon; on a Fantastic success, stuns target for one round)"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Yelena Belova",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.AIM, TeamNames.SHIELD, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "Much to her own dismay, Yelena Belova’s life has run in eerie parallel to that of the famous superspy Natasha Romanoff. Both were raised by the Russian government as part of the punishing and secretive Red Room training program. Both acted as government spies under the codename Black Widow before eventually defecting to the United States. Both went on to work together at S.H.I.E.L.D., where they took part in an operation that required them to temporarily switch identities.",
+                    "However, that last job sent Belova into an identity crisis so deep that she abandoned government work entirely and took a new job with A.I.M., whose scientists turned her into a living weapon called a Super-Adaptoid. Unfortunately, these same scientists proved less capable at keeping track of Belova in the field, and not long after her transformation, they mistakenly shot her dead.",
+                    "The Red Room later created several weaponized, amnesiac clones of Belova to hunt down Romanoff, and though Romanoff killed most of these clones, she managed to restore the original Belova’s memories to one. Profoundly grateful for a second chance at life, this new Belova took on the codename White Widow and returned to working with Romanoff. These days, both Black Widow and White Widow often work with the Winter Soldier as part of his new incarnation of the Thunderbolts."
+                ],
+                Personality =
+                [
+                    "Much like Black Widow, White Widow is a coolheaded and charismatic spy capable of talking her way through the toughest situations. However, perhaps on account of her less tumultuous career, White Widow is a bit more easygoing and trusting than her darker counterpart.",
+                ]
+            },
+            Source = BookSource.QuickStartWithThunderboltsAdventure
+        },
+        new()
+        {
             Name = "Wild Child",
             Rank = 3,
             Abilities = new Abilities

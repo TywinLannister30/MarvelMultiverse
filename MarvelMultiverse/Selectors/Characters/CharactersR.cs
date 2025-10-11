@@ -200,6 +200,101 @@ public class CharactersR
         },
         new()
         {
+            Name = "Red Guardian",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Red boomerangs (act as pistol)"),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Red Guardian’s shield (grants user one extra level of the power Shield)"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.SpinAndThrow),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.Shield1, reminder: "Shield 2, with Iconic Weapon"),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                        powerSelector.GetPower(PowerNames.ShieldWall),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Alexei Andreovitch Shostakov",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [220],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.Thunderbolts, TeamNames.WinterGuard],
+                Base = "Avengers Mountain",
+                History =
+                [
+                    "Already a decorated war hero and test pilot, Alexei Shostakov seemed like a natural choice to replace the original Red Guardian after the Russian government had the old warrior killed for insubordination. Indeed, Shostakov initially was the perfect candidate, loyal to a fault, willing even to abandon his wife, Natasha Romanoff (later known as the Black Widow), in the pursuit of becoming Russia’s answer to Captain America (Steve Rogers).",
+                    "When he finally met Captain America, though, things went wrong. Shostakov was strong, but his foe was stronger. Captain America was on the verge of defeating the Red Guardian when one of Shostakov’s superiors stabbed the First Avenger in the back. Unwilling to accept such a dishonorable victory, Shostakov defied his superiors and saved Captain America’s life, seemingly at the cost of his own.",
+                    "Some years later, Shostakov briefly resurfaced as the third person to take on the identity of Ronin—after Maya Lopez (also known as Echo) and Hawkeye (Clint Barton)—before being arrested by S.H.I.E.L.D. The Russian government arranged for Shostakov to be broken out of prison and subsequently recruited him into their super-hero team, the Winter Guard. However, after discovering that fascists had infiltrated the Russian command structure, Shostakov once again abandoned his commitment to the government. He’s since joined his former Winter Guard teammate White Widow in helping the Winter Soldier’s new incarnation of the Thunderbolts root out the Red Skull and his allies once and for all."
+                ],
+                Personality =
+                [
+                    "Shostakov is a burly, bearded man and a hard drinker. Look beneath his exterior, though, and there’s a kind and principled warrior, every bit as committed to the well-being of the Russian people as Captain America is to Americans.",
+                ]
+            },
+            Source = BookSource.QuickStartWithThunderboltsAdventure
+        },
+        new()
+        {
             Name = "Red Skull (Johann Shmidt)",
             Rank = 3,
             Abilities = new Abilities

@@ -578,8 +578,8 @@ public class CharactersE
                 tagSelector.GetTag(TagNames.PublicIdentity),
                 tagSelector.GetTag(TagNames.Sorcerous),
                 tagSelector.GetTag(TagNames.Supernatural),
-                tagSelector.GetTag(TagNames.Worshipped),
                 tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.Worshipped),
             ],
             Powers =
             [
@@ -605,10 +605,17 @@ public class CharactersE
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.MagicSorcery,
+                    Name = PowerSetNames.Magic,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.AstralForm),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
                         powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
                         powerSelector.GetPower(PowerNames.ImagesOfIkonn),
                         powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
@@ -760,6 +767,99 @@ public class CharactersE
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Executioner",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 2, resilience: 7, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Battle-ax (acts as a sword)"),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Skurge",
+                Heights = [new() { Feet = 7, Inches = 2 }],
+                Weights = [1100],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black, usually shaved",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.AsgardiansOfTheGalaxy, TeamNames.MastersOfEvil, TeamNames.Roxxon],
+                Base = "Asgard",
+                History =
+                [
+                    "A fierce but lonely Asgardian warrior, Skurge the Executioner proved all too easy for the Enchantress to manipulate. Without her casting so much as a simple charm, he vowed to obey her every word. He assisted her in countless schemes to ensnare Thor Odinson, even while knowing that the Thunder God was the one she truly loved. He followed her into becoming part of the Masters of Evil and, from there, into dozens of disastrous fights with the Avengers. He followed her into exile, into war and even to the brink of death.",
+                    "After years of such abuse, Skurge gradually began to take sojourns from the Enchantress. He never stopped loving her—even now, he would do anything for her—but he did start going on adventures of his own.",
+                    "On one of those adventures, he sacrificed himself to save Thor from the assembled forces of Hel and to preserve the safety of Asgard. Then, after escaping Valhalla, he once again gave his life for the greater good, protecting Earth during the War of the Realms.",
+                    "Though Skurge has since returned to the Enchantress’ nefarious service, the people of Asgard, particularly Thor, still respect him as a warrior and a man."
+                ],
+                Personality =
+                [
+                    "Deep down, Skurge is a soft-spoken and noble warrior. Under normal circumstances, he would never attack an unarmed opponent or harm another Asgardian—at least not without serious provocation. However, he’s willing to put his principles aside to prove his undying love for the Enchantress. He knows that she may never truly love him, yet he believes that to defy her would be to deny his own heart.",
+                ]
+            },
+            Source = BookSource.QuickStartWithThunderboltsAdventure
         },
         new()
         {
