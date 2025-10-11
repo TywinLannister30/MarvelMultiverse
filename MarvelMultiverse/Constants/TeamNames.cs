@@ -152,6 +152,7 @@ public static class TeamNames
     public const string SisterhoodOfMutants = "Sisterhood of Mutants";
     public const string SkeletonCrew = "Skeleton Crew";
     public const string SkrullEmpire = "Skrull Empire";
+    public const string SkrullKillKrew = "Skrull Kill Krew";
     public const string SpaceFriends = "Space Friends";
     public const string SpiderArmy = "Spider-Army";
     public const string SpiderBand = "Spider-Band";

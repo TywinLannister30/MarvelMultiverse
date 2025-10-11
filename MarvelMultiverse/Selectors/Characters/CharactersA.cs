@@ -1,7 +1,6 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using System.Net.Sockets;
 
 namespace MarvelMultiverse.Selectors.Characters;
 

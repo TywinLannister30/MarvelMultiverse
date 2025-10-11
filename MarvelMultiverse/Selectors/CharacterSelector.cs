@@ -47,6 +47,7 @@ public class CharacterSelector(
     private List<Character> GetAllCharacters()
     {
         var allCharacters = new List<Character>();
+        allCharacters.AddRange(Characters0To9.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersA.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersB.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersC.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
