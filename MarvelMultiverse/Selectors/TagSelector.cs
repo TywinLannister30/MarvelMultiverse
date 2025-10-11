@@ -49,6 +49,15 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.Allspeak,
+            Effect =
+            [
+                "The character can communicate verbally with anyone else. They can understand any spoken language, and when they speak, everyone who hears them believes them to be speaking in the listener’s native tongue."
+            ],
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = TagNames.AlternateForm,
             Effect =
             [
@@ -342,6 +351,15 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.MediaAwareness,
+            Effect =
+            [
+                "The character is aware (or simply believes) that they are actually a character in some kind of consumable media, like a book, comic, movie, cartoon, video game or even a tabletop game. They understand the tropes of that medium and can comment on it and address the consumers of that media. However, they often keep such comments to themselves, as doing so makes them seem insane to those around them who do not have this tag."
+            ],
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = TagNames.MentalHealthConditions,
             Effect =
             [
@@ -486,6 +504,17 @@ public class TagSelector : ITagSelector
         },
         new()
         {
+            Name = TagNames.SignatureItem,
+            Effect =
+            [
+                "This is a broader form of the Signature Weapon tag.",
+                "The character is known for owning and using a specific kind of item. This can be a weapon (like Hawkeye’s bow or Elektra’s sai), a vehicle (like the motorcycle of Ghost Rider [Johnny Blaze]) or anything else.",
+                "This tag can be taken more than once, but each time must be with a different item."
+            ],
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = TagNames.SignatureWeapon,
             Effect =
             [
@@ -544,6 +573,17 @@ public class TagSelector : ITagSelector
             [
                 "The character is worshipped by others as a god.",
             ],
+        },
+        new()
+        {
+            Name = TagNames.Worthy,
+            Effect =
+            [
+                "The character is deemed worthy of using a particular iconic item. The criteria for being worthy of a particular item is imbued in it by its creator, and it’s always up to the Narrator to determine if a character is actually worthy at any given moment.",
+                "When taking this tag, the character should also name the iconic item to which it applies. For example, Worthy (Mjolnir).",
+                "Characters who have yet to encounter a particular iconic item might not have this tag when they do, but that doesn’t mean they’re not worthy of using it. It’s up to the Narrator to judge if the character meets the criteria for worthiness. If so, the character then gains this tag for that item."
+            ],
+            Source = BookSource.AvengersExpansion
         },
         new()
         {

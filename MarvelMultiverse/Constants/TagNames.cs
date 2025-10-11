@@ -4,6 +4,7 @@ public static class TagNames
 {
     public const string AI = "A.I.";
     public const string AlienHeritage = "Alien Heritage";
+    public const string Allspeak = "Allspeak";
     public const string AlternateForm = "Alternate Form";
     public const string Arakkii = "Arakkii";
     public const string Amphibious = "Amphibious";
@@ -35,6 +36,7 @@ public static class TagNames
     public const string Linguist = "Linguist";
     public const string LunarTransformation = "Lunar Transformation";
     public const string MahdWyry = "Mahd Wy’ry";
+    public const string MediaAwareness = "Media Awareness";
     public const string MentalHealthConditions = "Mental Health Conditions";
     public const string Mentor = "Mentor";
     public const string MobilityIssues = "Mobility Issues";
@@ -50,6 +52,7 @@ public static class TagNames
     public const string Rich = "Rich";
     public const string SecretIdentity = "Secret Identity";
     public const string SecondaryMutation = "Secondary Mutation";
+    public const string SignatureItem = "Signature Item";
     public const string SignatureWeapon = "Signature Weapon";
     public const string Sorcerous = "Sorcerous";
     public const string Streetwise = "Streetwise";
@@ -57,6 +60,7 @@ public static class TagNames
     public const string Villainous = "Villainous";
     public const string VisionIssues = "Vision Issues";
     public const string Worshipped = "Worshipped";
+    public const string Worthy = "Worthy";
     public const string XGene = "X-Gene";
     public const string Young = "Young";
 }

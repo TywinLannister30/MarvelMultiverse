@@ -4,6 +4,7 @@ public class BookSource
 {
     public const string Core = "Core Rulebook";
 
+    public const string AvengersExpansion = "Avengers Expansion";
     public const string SpiderverseExpansion = "Spiderverse Expansion";
     public const string XMenExpansion = "X-Men Expansion";
 
