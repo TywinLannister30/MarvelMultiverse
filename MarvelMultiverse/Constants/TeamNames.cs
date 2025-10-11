@@ -170,6 +170,7 @@ public static class TeamNames
     public const string TheHand = "The Hand";
     public const string TheHive = "The Hive";
     public const string TheSpiderSlayerSeries = "The Spider-Slayer Series";
+    public const string TheVermin = "The Vermin";
     public const string ThievesGuild = "Thieves' Guild";
     public const string ThunderboltPoliceDepartment = "Thunderbolt Police Department";
     public const string Thunderbolts = "Thunderbolts";
