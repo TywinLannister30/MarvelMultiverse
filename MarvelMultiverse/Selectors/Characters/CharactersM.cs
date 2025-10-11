@@ -1163,6 +1163,7 @@ public class CharactersM
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.AlternateForm, reminder: "Mist"),
                 tagSelector.GetTag(TagNames.ExtremeAppearance),
                 tagSelector.GetTag(TagNames.PublicIdentity),
@@ -3081,6 +3082,7 @@ public class CharactersM
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.Poor),
                 tagSelector.GetTag(TagNames.PublicIdentity),

@@ -203,6 +203,7 @@ public class CharactersP
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.AuditoryIssues),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.PublicIdentity),

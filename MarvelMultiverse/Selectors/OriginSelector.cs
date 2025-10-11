@@ -364,7 +364,7 @@ public class OriginSelector : IOriginSelector
                 "The character is a creature or person of myth and legend. While they may appear human, they are something else.",
             ],
             Examples = "Angela (Aldrif Odinsdottir), Fairies, Malekith.",
-            Tags= $"{TagNames.Supernatural}.",
+            Tags= $"{TagNames.Allspeak}, {TagNames.Supernatural}.",
             SuggestedOccupation = OccupationName.Outsider
         },
         new()
@@ -376,7 +376,7 @@ public class OriginSelector : IOriginSelector
                 "The character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Asgard. They should choose something that they are the god of."
             ],
             Examples = "Hela, Heimdall, Loki, Sif, Thor (Odinson).",
-            Tags= $"{TagNames.Supernatural}, {TagNames.Worshipped}.",
+            Tags= $"{TagNames.Allspeak}, {TagNames.Supernatural}, {TagNames.Worshipped}.",
             Traits = $"{TraitNames.EnhancedPhysique}, {TraitNames.GodHeritage}.",
         },
         new()
@@ -388,7 +388,7 @@ public class OriginSelector : IOriginSelector
                 "The character can be one of the many gods who have been named throughout history, or they can be one of the lesserknown gods of Olympus. They should choose something that they are the god of."
             ],
             Examples = "Ares, Athena, Hercules, Zeus.",
-            Tags= $"{TagNames.Supernatural}, {TagNames.Worshipped}.",
+            Tags= $"{TagNames.Allspeak}, {TagNames.Supernatural}, {TagNames.Worshipped}.",
             Traits = $"{TraitNames.EnhancedPhysique}, {TraitNames.GodHeritage}.",
         },
         new()

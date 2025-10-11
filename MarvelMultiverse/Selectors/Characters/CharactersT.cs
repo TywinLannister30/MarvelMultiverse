@@ -801,6 +801,7 @@ public class CharactersT
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.Enemy, specialization: "Gorr the God Butcher"),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.SecretIdentity),
@@ -900,6 +901,7 @@ public class CharactersT
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.Authority),
                 tagSelector.GetTag(TagNames.Enemy, specialization: "Gorr the God Butcher"),
                 tagSelector.GetTag(TagNames.Heroic),
@@ -1080,6 +1082,7 @@ public class CharactersT
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.AlternateForm, reminder: "Tigra form"),
                 tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in alternate form"),

@@ -1216,6 +1216,7 @@ public class CharactersS
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.PublicIdentity),
                 tagSelector.GetTag(TagNames.Sorcerous),
                 tagSelector.GetTag(TagNames.Supernatural),
@@ -2836,6 +2837,7 @@ public class CharactersS
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.PublicIdentity),

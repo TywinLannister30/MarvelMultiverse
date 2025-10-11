@@ -805,6 +805,7 @@ public class CharactersL
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.PublicIdentity),
                 tagSelector.GetTag(TagNames.Sorcerous),
                 tagSelector.GetTag(TagNames.Supernatural),

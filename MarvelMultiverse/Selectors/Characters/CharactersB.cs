@@ -746,6 +746,7 @@ public class CharactersB
             Tags =
             [
                 tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.AlternateForm, reminder: "regular Korbinite form"),
                 tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.ExtremeAppearance),

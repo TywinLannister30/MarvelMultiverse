@@ -561,6 +561,7 @@ public class CharactersH
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.Authority),
                 tagSelector.GetTag(TagNames.Cursed),
                 tagSelector.GetTag(TagNames.ExtremeAppearance),
