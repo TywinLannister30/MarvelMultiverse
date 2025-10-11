@@ -1367,6 +1367,88 @@ public class CharactersC
         },
         new()
         {
+            Name = "Children of Lost Tarnax",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 1, vigilance: 1, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in natural form"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "when disguised"),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.ShapeShift),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones1),
+                        powerSelector.GetPower(PowerNames.FlexibleFingers),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "Green-skinned aliens with shape-shifting powers",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.AlienSkrull],
+                Teams = [TeamNames.ChildrenOfLostTarnax],
+                Base = "Varies",
+                History =
+                [
+                    "The aliens commonly known as Skrulls are actually the Deviant variant of their race, created by visiting Celestials in ancient times. Their amazing powers to assume any guise allowed them to drive both the original Skrulls and the Eternal variant Skrulls long extinct.",
+                    "Over the past ten million years, the Skrull Empire has spread its influence throughout the galaxy— first as traders and then as invaders—conquering hundreds of planets, including the entire Andromeda Galaxy. After Galactus devoured their homeworld, they were scattered among the stars, but they recently allied with their ancient enemies—the Kree—under the leadership of Emperor Dorrek VIII, also known as the Earth hero Hulkling. These renegade Skrulls reject this half-breed emperor, calling themselves the Children of Lost Tarnax.",
+                ],
+                Personality =
+                [
+                    "The Children of Lost Tarnax are, perhaps surprisingly, even more xenophobic and jingoistic than their contemporaries in the Kree-Skrull Alliance. Few of them would hesitate to give their lives for the cause. While these particular Skrulls are not as powerful as their commanders, they have been raised to believe they are the greatest, most worthy race of people in the universe.",
+                ]
+            },
+            Source = BookSource.RevengeOfTheSuperSkrull
+        },
+        new()
+        {
             Name = "Claire Dixon",
             Rank = 1,
             Abilities = new Abilities

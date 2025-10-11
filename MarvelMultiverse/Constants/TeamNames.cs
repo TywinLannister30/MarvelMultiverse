@@ -21,6 +21,7 @@ public static class TeamNames
     public const string Avengers = "Avengers";
     public const string AvengersAcademy = "Avengers Academy";
     public const string AvengersUnityDivision = "Avengers Unity Division";
+    public const string BankRobberyGang = "Bank robbery gang";
     public const string BetaFlight = "Beta Flight";
     public const string BeyondCorporation = "Beyond Corporation";
     public const string BlackOrder = "Black Order";
@@ -31,6 +32,7 @@ public static class TeamNames
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
     public const string Chaste = "Chaste";
+    public const string ChildrenOfLostTarnax = "Children of Lost Tarnax";
     public const string CIA = "C.I.A.";
     public const string CouncilOfKangs = "Council of Kangs";
     public const string CultOfKnull = "Cult of Knull";
@@ -96,6 +98,7 @@ public static class TeamNames
     public const string KnightsOfX = "Knights of X";
     public const string KreeEmpire = "Kree Empire";
     public const string KreeImperium = "Kree Imperium";
+    public const string KreeSkrullAlliance = "Kree-Skrull Alliance";
     public const string LeagueOfEvilInhumans = "League of Evil Inhumans";
     public const string LegionOfMonsters = "Legion of Monsters";
     public const string Legionnaires = "Legionnaires";

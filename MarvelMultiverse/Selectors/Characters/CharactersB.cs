@@ -15,6 +15,71 @@ public class CharactersB
     [
         new()
         {
+            Name = "Bank Robber",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 1, vigilance: 1, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Evasion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlForce,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Varies",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Varies,
+                Eyes = "Varies",
+                Hair = "Varies",
+                Size = Size.Average,
+                DistinguishingFeatures = "Varies",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.BankRobberyGang],
+                Base = "Varies",
+                History =
+                [
+                    "This group of criminals desperately needed cash, so they decided to rob a bank.",
+                ],
+                Personality =
+                [
+                    "This group of bank robbers lucked into finding a cache of super-tech weapons that were intended for delivery to an A.I.M. base. They decided to use these new super guns to rob a bank. They’re ultimately cowards, looking for a quick buck. They would rather go to jail than face down superhumans for too long. That said, they are desperate, and they think their new guns will allow them to get away with just about anything.",
+                ]
+            },
+            Source = BookSource.RevengeOfTheSuperSkrull
+        },
+        new()
+        {
             Name = "Banshee",
             Rank = 3,
             Abilities = new Abilities

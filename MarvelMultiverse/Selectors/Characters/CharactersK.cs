@@ -861,6 +861,115 @@ public class CharactersK
         },
         new()
         {
+            Name = "Kl'rt, the Super-Skrull",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 3, resilience: 3, vigilance: 3, ego: 6, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Kree-Skrull Alliance)"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in natural form"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Emperor Hulkling"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "when disguised"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.ShapeShift),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = $"{PowerSetNames.ElementControl} Fire / Force",
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendInvisibility),
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                        powerSelector.GetPower(PowerNames.StiltSteps),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kl’rt",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually 6’8”",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "usually 625 lbs.",
+                Gender = Gender.Varies,
+                Eyes = "Yellow (Varies)",
+                Hair = "None (Varies)",
+                Size = Size.Average,
+                DistinguishingFeatures = "Green-skinned alien with shape-shifting powers, in addition to other powers.",
+                Occupations = [OccupationName.Military, OccupationName.Spy],
+                Origins = [OriginName.AlienSkrull],
+                Teams = [TeamNames.KreeSkrullAlliance, $"{TeamNames.ChildrenOfLostTarnax} (infiltration)"],
+                Base = "Abandoned Safehouse",
+                History =
+                [
+                    "Kl’rt is an experienced soldier of the Skrull Empire. He was imbued with super powers by the Skrull Emperor Dorrek in a plot to gain revenge against the Fantastic Four, and dubbed the “Super-Skrull.” While he would occasionally have the upper hand in these conflicts, he was regularly defeated by the team. He fell out of favor with the government and was exiled, becoming a free agent and often having an on-again, off-again relationship with both the inhabitants of Earth and his home race. Eventually, after the Skrull Empire had crumbled into factions, he joined the group devoted to seeking an heir to Emperor Dorrek VIII — Hulkling. The Super- Skrull revealed the truth of Hulkling’s origin and his own role in killing Hulkling’s “mother.” As punishment, Kl’rt was forbidden from taking another life and relegated to diplomatic duty.",
+                ],
+                Personality =
+                [
+                    "Kl’rt is arrogant, often considering himself to be the most powerful warrior of his kind, and possibly the entire galaxy. He is also extremely loyal to the ideals of the Skrull empire, even when his race has repeatedly turned their backs on him. He has grown to loathe the superhumans of Earth due to his repeated defeats, but his recent punishment by his emperor is forcing him to re-evaluate this hatred. He isn’t adverse to tricking humans into doing his dirty work for him, however.",
+                ]
+            },
+            Source = BookSource.RevengeOfTheSuperSkrull
+        },
+        new()
+        {
             Name = "Kraven the Hunter",
             Rank = 3,
             Abilities = new Abilities
