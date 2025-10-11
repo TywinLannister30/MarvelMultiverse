@@ -2019,7 +2019,7 @@ public class CharactersM
             Rank = 4,
             Abilities = new Abilities
             (
-                melee: 2, agility: 4, resilience: 4, vigilance: 2, ego: 2, logic: 7
+                melee: 3, agility: 4, resilience: 3, vigilance: 2, ego: 2, logic: 7
             ),
             Traits =
             [
@@ -2092,7 +2092,8 @@ public class CharactersM
                 [
                     "Richards’ intense and calculating nature occasionally puts him at odds with his more outwardly emotional teammates, but at heart, he is a humanitarian. He believes that science has the potential to solve all of humanity’s problems, and nothing frustrates him more than an unsolvable problem.",
                 ]
-            }
+            },
+            Source = BookSource.FantasticFourFromTheDepths
         },
         new()
         {
@@ -2796,7 +2797,98 @@ public class CharactersM
 			},
 			Source = BookSource.XMenExpansion
 		},
-		new()
+        new()
+        {
+            Name = "Mole Man",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 0, resilience: 2, vigilance: 5, ego: -3, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.OutOfShape),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Subterranea"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.VisionIssues),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Staff (Mole Man’s staff acts as a remote control for the many Deviant technologies available to him in his Subterranean lair, as long as they have been prepared ahead of time.)"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "Not all H.E.R.B.I.E. units are equipped with weapons. Such non-security units can fly but are otherwise no more powerful than an average civilian (see that profile in the Core Rulebook)."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Harvey Elder",
+                Heights = [new() { Feet = 4, Inches = 10 }],
+                Weights = [165],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Gray",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [],
+                Base = "Subterranea",
+                History =
+                [
+                    "Despite his genius, Harvey Elder was shunned by society for his homely appearance. Desperate to find his place in the world, he searched far and wide, following rumors of an underground civilization that would accept him. He eventually stumbled upon Monster Island and explored the caverns beneath until finally discovering a tunnel into Subterranea. Despite being caught in an earthquake and blinded by the mystic Valley of Diamonds, he found abandoned Deviant technology and used it to lead many monsters and the underground race of Moloids.",
+                    "Carving out his own domain, Elder became obsessed with getting revenge on the surface world, but the Fantastic Four thwarted his first attempts. Over the years, other Subterranean leaders like Tyrannus have threatened Elder’s dominance. The Mole Man now stands in an uneasy truce with the surface world he resents, but he is all too willing to attack any who endanger his world.",
+                ],
+                Personality =
+                [
+                    "Harvey Elder is deeply insecure about his looks and his stature and tries to make up for it with the power he now possesses. While this makes him angry and even unhinged most of the time, he can be kind and even helpful to those who others would deem monstrous— including the many giant beasts he lives with underground.",
+                ]
+            },
+            Source = BookSource.FantasticFourFromTheDepths
+        },
+        new()
         {
             Name = "Moon Girl",
             Rank = 2,

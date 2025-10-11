@@ -604,8 +604,8 @@ public class CharactersT
             Traits =
             [
                 traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
-                traitSelector.GetTrait(TraitNames.CombatExpert),
                 traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Famous),
                 traitSelector.GetTrait(TraitNames.Fearless),
                 traitSelector.GetTrait(TraitNames.IronWill),
                 traitSelector.GetTrait(TraitNames.Piloting),
@@ -676,7 +676,8 @@ public class CharactersT
                 [
                     "Ben can be gruff and combative and does not take slights against himself or his friends lightly. Years of living in the public eye have allowed him to reach some level of peace with his appearance, but it’s still a sore spot. When determined, Grimm will never quit, even when it seems as though he has reached the limit of his strength.",
                 ]
-            }
+            },
+            Source = BookSource.FantasticFourFromTheDepths
         },
         new()
         {
@@ -1409,6 +1410,107 @@ public class CharactersT
                 ],
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Tricephalous",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 4, vigilance: 6, ego: 4, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Clueless),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Monster),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.UnusualSize, specialization: "Huge"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Subterranea"),
+                tagSelector.GetTag(TagNames.Mysterious),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.GroupFlight),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Tricephalous",
+                Heights = [new() { Feet = 24 }],
+                Weights = [],
+                WeightReminder = "13 tons",
+                Gender = Gender.Unknown,
+                Eyes = "Orange",
+                Hair = "None",
+                Size = Size.Huge,
+                DistinguishingFeatures = "Three-headed green beast",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Monstrous],
+                Teams = [],
+                Base = "Subterranea",
+                History =
+                [
+                    "Members of the Deviant race created huge mutates to aid them in their battles against the Eternals. When this plot was discovered, the mutates were abandoned on Monster Island and the tunnels below. They were later found and now serve the Mole Man.",
+                    "Tricephalous is a three-headed winged reptilian Deviant mutate. One of Mole Man’s leading defenders, Tricephalous has battled his master’s foes numerous times, including the Fantastic Four on their first adventure.",
+                ],
+                Personality =
+                [
+                    "Tricephalous acts as a defender and steed for the Mole Man. There appears to be more than one member of its race in Subterranea and Monster Island, as similar looking multiheaded monsters have been seen in the Mole Man’s territories.",
+                ]
+            },
+            Source = BookSource.FantasticFourFromTheDepths
         },
     ];
 }

@@ -536,6 +536,102 @@ public class CharactersG
         },
         new()
         {
+            Name = "Giganto",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 6, resilience: 7, vigilance: 6, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Clueless),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Monster),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.UnusualSize, specialization: "Gigantic"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Subterranea"),
+                tagSelector.GetTag(TagNames.Mute),
+                tagSelector.GetTag(TagNames.Mysterious),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Giganto",
+                Heights = [new() { Feet = 45 }],
+                Weights = [],
+                WeightReminder = "40 tons",
+                Gender = Gender.Male,
+                Eyes = "White",
+                Hair = "None",
+                Size = Size.Gigantic,
+                DistinguishingFeatures = "Giant, scaly bipedal monster",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Monstrous],
+                Teams = [],
+                Base = "Subterranea",
+                History =
+                [
+                    "Members of the Deviant race created huge mutates to aid them in their battles against the Eternals. When their plot was discovered, the mutates were abandoned on Monster Island and the tunnels below. They were later found and now serve the Mole Man. Giganto, one of the largest of these mutates, became Mole Man’s greatest defender and weapon.",
+                    "A large, powerful, semi-reptilian creature that can burrow through the earth with ease, Giganto was used by Mole Man in one of his first attacks on the surface world, undermining power plants and even cities. He and the Mole Man were defeated by the Fantastic Four in their first adventure.",
+                ],
+                Personality =
+                [
+                    "Giganto is basically a wild animal that has a certain amount of affection for and subservience to the Mole Man. He has a similar looking female mate, and the two were present during a scheme to control the Inorganic Technotroid, though the artificial being was “born” within the hands of Giganto’s mate, thus imprinting her as its “mother.”",
+                ]
+            },
+            Source = BookSource.FantasticFourFromTheDepths
+        },
+        new()
+        {
             Name = "Gorgon",
             Rank = 4,
             Abilities = new Abilities

@@ -9,6 +9,7 @@ public class BookSource
 
     public const string DeadpoolRolePlaysTheMarvelUniverse = "Deadpool Role Plays the Marvel Universe";
     public const string EnterHydra = "Enter Hydra";
+    public const string FantasticFourFromTheDepths = "Fantastic Four from the Depths";
     public const string TheCataclysmOfKang = "The Cataclysm of Kang";
     public const string RevengeOfTheSuperSkrull = "Revenge of the Super Skrull";
 }

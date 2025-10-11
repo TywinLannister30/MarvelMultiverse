@@ -287,13 +287,13 @@ public class CharactersI
             Rank = 4,
             Abilities = new Abilities
             (
-                melee: 2, agility: 2, resilience: 2, vigilance: 5, ego: 6, logic: 3
+                melee: 2, agility: 2, resilience: 2, vigilance: 4, ego: 6, logic: 4
             ),
             Traits =
             [
                 traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Famous),
                 traitSelector.GetTrait(TraitNames.Fearless),
-                traitSelector.GetTrait(TraitNames.IronWill),
                 traitSelector.GetTrait(TraitNames.Presence),
                 traitSelector.GetTrait(TraitNames.SituationalAwareness),
                 traitSelector.GetTrait(TraitNames.Sneaky),
@@ -369,7 +369,8 @@ public class CharactersI
                 [
                     "Coolheaded and compassionate, the Invisible Woman helps to balance out the more hotheaded and intense members of the Fantastic Four. However, she only lets the others push her so far before she emphasizes clear boundaries.",
                 ]
-            }
+            },
+            Source = BookSource.FantasticFourFromTheDepths
         },
         new()
         {

@@ -1415,26 +1415,26 @@ public class CharactersH
             Rank = 4,
             Abilities = new Abilities
             (
-                melee: 2, agility: 4, resilience: 3, vigilance: 4, ego: 5, logic: 2
+                melee: 2, agility: 4, resilience: 3, vigilance: 4, ego: 4, logic: 3
             ),
             Traits =
             [
                 traitSelector.GetTrait(TraitNames.Beguiling),
-                traitSelector.GetTrait(TraitNames.CombatReflexes),
                 traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Famous),
                 traitSelector.GetTrait(TraitNames.Fearless),
-                traitSelector.GetTrait(TraitNames.Gearhead),
                 traitSelector.GetTrait(TraitNames.Piloting),
                 traitSelector.GetTrait(TraitNames.Weird),
             ],
             Tags =
             [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Flame form"),
                 tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.Enemy, specialization: "Doctor Doom"),
-                tagSelector.GetTag(TagNames.PublicIdentity),
                 tagSelector.GetTag(TagNames.Headquarters, specialization: "4 Yancy Street"),
                 tagSelector.GetTag(TagNames.Heroic),
-                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Fire"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
             ],
             Powers =
             [
@@ -1446,6 +1446,7 @@ public class CharactersH
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption, reminder: "Only work with fire"),
                         powerSelector.GetPower(PowerNames.Flight2),
                     ],
                 },
@@ -1491,7 +1492,8 @@ public class CharactersH
                 [
                     "While good at heart, Johnny Storm has always been a natural hothead. It doesn’t help that as the youngest member of the Fantastic Four, he has a hard time being taken seriously by his fellow adventurers. Part of that might arise from the fact that he delights in teasing and playing pranks on his older and grumpier teammate, the Thing.",
                 ]
-            }
+            },
+            Source = BookSource.FantasticFourFromTheDepths
         },
         new()
         {
