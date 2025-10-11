@@ -365,7 +365,7 @@ public class CharactersF
                 Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.HighTechBattleSuit],
                 Teams = [TeamNames.ActionPack, TeamNames.SpaceFriends],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "Vincent Patilio was a penniless inventor who thought he could make a quick buck by building a super-suit that would allow him to make a quick escape from any heist. Donning a frog-themed costume, Vincent Patilio made his debut upon the world stage as the villain Leap-Frog.",

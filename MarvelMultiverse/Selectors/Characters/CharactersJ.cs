@@ -67,7 +67,7 @@ public class CharactersJ
                 Occupations = [OccupationName.Journalist],
                 Origins = [OriginName.SpecialTraining],
                 Teams = [TeamNames.TheDailyBugle, TeamNames.TNM],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "Determined to make the world a better place, J. Jonah Jameson spent his childhood studying the art of journalism. As a mere high school student, he wriggled his way into a position as a junior reporter with the Daily Bugle. Jameson’s stellar reporting on civil rights issues, alongside his thrilling exposés on organized crime, rocketed him to the top of the paper’s lineup.",

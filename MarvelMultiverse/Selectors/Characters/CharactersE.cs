@@ -355,7 +355,7 @@ public class CharactersE
                 Occupations = [OccupationName.Criminal, OccupationName.Scientist],
                 Origins = [OriginName.HighTech],
                 Teams = [TeamNames.MastersOfEvil],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "For attempting to smuggle atomic secrets out of his own government-backed laboratory, Elihas Starr was fi red from his job and became a pariah in the scientifi c community. Unfortunately for humanity, this served only to drive Starr further down the criminal path.",

@@ -824,7 +824,7 @@ public class CharactersH
                 Occupations = [OccupationName.Educator, OccupationName.Scientist],
                 Origins = [OriginName.HighTechAndroid],
                 Teams = [TeamNames.FantasticFour],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "The fi rst prototype H.E.R.B.I.E. was created by Mister Fantastic (Reed Richards) of the Fantastic Four to aid in the search for Galactus and to act as his personal laboratory assistant. HERBIE was designed to be smart, helpful and generally cheerful. Incredibly, he actually turned out to be all those things.",

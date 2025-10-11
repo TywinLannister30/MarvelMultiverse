@@ -1817,7 +1817,7 @@ public class CharactersM
                 Occupations = [],
                 Origins = [],
                 Teams = ["Howard T. Duck Private Investigations, Uncle Ben Foundation"],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "May Parker’s early life was, for the most part, unremarkable. She was born into a poor and religious family that placed a high value on decency and responsibility. As an adult, she began dating a carnival barker named Ben Parker.",

@@ -1049,7 +1049,7 @@ public class CharactersA
                 Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.Mutant],
                 Teams = [TeamNames.NextMutants],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "Reed Fox was one of the queer and transgender mutants who answered the call to join the Super Trans support group at the Matt Baker Community Center in Queens.",

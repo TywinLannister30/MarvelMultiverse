@@ -1908,7 +1908,7 @@ public class CharactersB
                 Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.HighTech, OriginName.SpecialTraining],
                 Teams = [TeamNames.TheHand],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "When Sam Chung was just a boy, he and his family emigrated from China to the United States. With a prodigious mind and a strong admiration for the super heroes of New York City, Chung spent much of his childhood working on designs for an invisibility suit.",

@@ -166,7 +166,7 @@ public class CharactersP
                 Occupations = [OccupationName.Student],
                 Origins = [OriginName.HighTech, OriginName.SpecialTraining],
                 Teams = [TeamNames.Champions],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "As a young teenager, Rayshaun Lucas was an active participant in the protests that followed the wrongful arrest of the super hero Rage. The connections he made during those protests led him further into the world of super heroes, and during the rise of Hydra’s plot to take over the USA with the help of a twisted version of Captain America (Steve Rogers), he helped provide vital intel to the resistance.",

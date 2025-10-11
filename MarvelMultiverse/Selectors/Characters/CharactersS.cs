@@ -5020,7 +5020,7 @@ public class CharactersS
                     "When Jessica Drew was just a child, she contracted an acute case of radiation poisoning. Her father—a top geneticist and nuclear researcher—searched desperately for a cure to his daughter’s condition. Hoping to grant her the increased radiation immunity enjoyed by many insects, he injected her with an irradiated form of spider DNA.",
                     "The treatment saved Drew’s life but forced her into a coma that lasted more than a decade. By the time she awoke, her parents were long gone.",
                     "Lost and alone, Drew briefly stumbled into the care of Hydra agents who attempted to make her into a spider-themed superspy named Spider-Woman. Drew quickly turned on her handlers, but she kept the Spider-Woman costume.",
-                    "As Spider-Woman, Drew spent the next several years traveling across Europe and the United States, occasionally allying herself with S.H.I.E.L.D. and other heroic organizations. Eventually, she settled down in NYC and decided to start a family on her own. When she’s not adventuring, she spends much of her time caring for her son, Gerry.",
+                    "As Spider-Woman, Drew spent the next several years traveling across Europe and the United States, occasionally allying herself with S.H.I.E.L.D. and other heroic organizations. Eventually, she settled down in New York City and decided to start a family on her own. When she’s not adventuring, she spends much of her time caring for her son, Gerry.",
                     "During a recent Spider-Verse crisis, Drew was briefly erased from existence when she was stabbed with the Totem Dagger. This also annihilated everyone else’s memories of her son, and in the resulting confusion, Hydra kidnapped Gerry, then forcibly aged and brainwashed him into becoming the adult super villain Green Mamba. Now Drew is on a mission to defeat Hydra and save her son by any means necessary."
                 ],
                 Personality =
@@ -5299,7 +5299,7 @@ public class CharactersS
                 History =
                 [
                     "Born with the proportionate speed and strength of a squirrel, Doreen Green has been fi ghting super villains since she was 14. In less than a decade, Squirrel Girl has personally prevented worldwide disaster at the hands of villains as powerful as Thanos and Galactus. Squirrel Girl’s exploits have never made her famous, in no small part because people in the media tend to fi nd her squirrel powers a little silly. While Green can communicate with all sorts of squirrels, she has a special bond with one she named Tippy-Toe, who has fought crime by her side for the longest.",
-                    "More recently, Green has enrolled in the computer science program at Empire State University. Despite her collegiate studies, Green still fi nds the time to help protect the people of NYC.",
+                    "More recently, Green has enrolled in the computer science program at Empire State University. Despite her collegiate studies, Green still fi nds the time to help protect the people of New York City.",
                 ],
                 Personality =
                 [
@@ -5776,7 +5776,7 @@ public class CharactersS
                 Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.Magic, OriginName.SpecialTraining],
                 Teams = [TeamNames.Chaste, TeamNames.Fist],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "Born both blind and penniless, Stick took up martial arts at a young age to survive. He found that he had a natural talent for fi ghting, and soon enough he had drawn the attention and mentorship of the mystic martial arts master Yao (A.K.A. the Ancient One). The next several decades of Stick’s life were spent in the shadows, during which he became the leader of the Chaste, an elite organization of ninjas created to counter the insidious clan of the Hand.",

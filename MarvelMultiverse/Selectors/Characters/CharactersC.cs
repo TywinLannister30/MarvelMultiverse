@@ -395,7 +395,7 @@ public class CharactersC
                 Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.HighTech, OriginName.WeirdScience],
                 Teams = [TeamNames.Avengers, TeamNames.SHIELD],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "Sam Wilson grew up as an orphan in Harlem. As an adult, he was determined to give back to the community that raised him. He was helping out as a social worker when a fateful encounter with the Red Skull and a Cosmic Cube granted him super-strength and the ability to communicate with birds.",
@@ -1788,7 +1788,7 @@ public class CharactersC
                 Occupations = [OccupationName.LawEnforcer],
                 Origins = [OriginName.SpecialTraining],
                 Teams = [TeamNames.Fist, TeamNames.NYPD],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "Cole North was once a revered detective in the Chicago Police Department. Then, for reasons unknown, he took a transfer to the New York Police Department. His fi rst task in New York was to investigate a murder supposedly committed by Daredevil (Matt Murdock).",
@@ -1866,7 +1866,7 @@ public class CharactersC
                 Occupations = [OccupationName.Investigator],
                 Origins = [OriginName.SpecialTraining],
                 Teams = [TeamNames.HeroesForHire, TeamNames.DaughtersOfTheDragon],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "With her mother dead and her father busy, Colleen Wing grew up in the custody of her grandfather: Kenji Ozawa, the head of the Japanese Secret Service. As a combat veteran, Ozawa was eager to tutor Wing in the art of sword fi ghting, training her to be a world-class expert with the katana.",

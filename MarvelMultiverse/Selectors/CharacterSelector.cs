@@ -70,6 +70,7 @@ public class CharacterSelector(
         allCharacters.AddRange(CharactersU.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersV.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersW.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
+        allCharacters.AddRange(CharactersZ.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         return allCharacters;
     }
 }

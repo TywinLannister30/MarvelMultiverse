@@ -706,7 +706,7 @@ public class CharactersN
                 Occupations = [OccupationName.Tycoon],
                 Origins = [OriginName.HighTech, OriginName.WeirdScience],
                 Teams = [TeamNames.Avengers, TeamNames.Defenders, TeamNames.SquadronSinister],
-                Base = "NYC",
+                Base = "New York City",
                 History =
                 [
                     "Kyle Richmond was once just a scrawny, spoiled college kid who believed that his family’s wealth could get him out of any jam. Then he got into a drunk driving accident that lefthim badly injured and—worse yet—confi ned his girlfriend to a wheelchair. Racked with guilt, Richmond dropped out of school and spent the next few years wandering around the United States, looking for something that could bring meaning back into his life.",
