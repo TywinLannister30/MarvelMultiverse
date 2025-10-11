@@ -535,6 +535,106 @@ public class CharactersN
         },
         new()
         {
+            Name = "Nightcrawler (X-Men '97)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 2, vigilance: 3, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "English, German, Japanese, Russian, Spanish"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AlwaysReady),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.BlinkBarrage),
+                        powerSelector.GetPower(PowerNames.BlinkDefense),
+                        powerSelector.GetPower(PowerNames.Teleport1),
+                        powerSelector.GetPower(PowerNames.TeleportObject),
+                        powerSelector.GetPower(PowerNames.TeleportTogether),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kurt Wagner",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [161],
+                Gender = Gender.Male,
+                Eyes = "Yellow",
+                Hair = "Blue",
+                Size = Size.Average,
+                DistinguishingFeatures = "Mutant with demonic appearance",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "Abandoned by his shape-shifter mother Mystique at birth, the mutant later known as Nightcrawler was adopted and raised in the Wagner Circus, where he was given the name Kurt Wagner and became its star attraction. Despite his onstage fame, Nightcrawler was an outcast off stage due to his appearance, and his anger drove him to leave the Circus and fi nd peace in religion. His devotion led him to the Swiss Alps, where he joined a monastery that judged him on the strength of his character rather than his appearance. After being attacked by townspeople who assumed he was a demon, Nightcrawler drew the attention of vacationing X-Men Rogue, Gambit and Wolverine, allying with them to uncover the true culprit behind the attacking mob: the monastery’s own Brother Reinhart. When Mystique was later willingly used to lure the unknowing Nightcrawler into a trap set by his anti-mutant half brother Graydon Creed, Nightcrawler sought the X-Men’s assistance. Learning that Mystique was his mother and Rogue his adopted sister, Nightcrawler ultimately forgave Mystique for his earlier abandonment. When the island of Genosha was later restructured as a mutant haven, Nightcrawler joined the Genoshan council as part of their outreach to mutant communities of faith and he was present during a massive Sentinel attack, risking his life to help rescue innocent mutants. After Gambit died in the attack, Nightcrawler delivered the eulogy at his funeral and subsequently joined the X-Men, helping the grieving Rogue and aiding them against the living Sentinel Bastion’s cyborg Prime Sentinels.",
+                ],
+                Personality =
+                [
+                    "A devoted man of faith, Nightcrawler always looks at life from the perspective of love and caring. Friendly and easily approachable, Nightcrawler is fi ercely loyal to his friends and family, genuinely caring about their well-being and often playing the role of listener, dispensing advice gained from his unique life experiences.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Nighthawk (Kyle Richmond)",
             Rank = 3,
             Abilities = new Abilities

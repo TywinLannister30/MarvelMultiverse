@@ -5886,6 +5886,100 @@ public class CharactersS
         },
         new()
         {
+            Name = "Storm (X-Men '97)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 4, resilience: 4, vigilance: 4, ego: 6, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline3),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.GroupFlight),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.WeatherControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ControlFog),
+                        powerSelector.GetPower(PowerNames.ControlWeather4),
+                        powerSelector.GetPower(PowerNames.Thunder),
+                        powerSelector.GetPower(PowerNames.WeatherChill),
+                        powerSelector.GetPower(PowerNames.WeatherWarm),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ororo Munroe",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [145],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "Her eyes turn white when using her powers",
+                Occupations = [OccupationName.Adventurer, OccupationName.Leader],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "The weather-controlling mutant Ororo Munroe, alias Storm, was born in the shadow of Mount Kilimanjaro. As a child, she was once buried alive, leading to a lifelong case of claustrophobia. In her home village, she assisted in the birth of a baby, Mjnari; she subsequently considered him to be like a son to her. She fi rst met Professor X during an encounter with the evil psychic the Shadow King; she subsequently joined him and his X-Men in America, becoming one of the team’s most powerful members. When Jean Grey and Cyclops were captured by the Morlocks, a subterranean group of mutant outcasts, Storm challenged their leader, Callisto, to a duel. Winning, she became the Morlocks’ leader, although she later passed that responsibility back to Callisto. The Shadow King, craving vengeance on her, lured her back home by possessing Mjnari, but Storm was able to defeat him once more. Later, she traveled to the alien world Polemachus to quell the storms that raged there and was briefly betrothed to the planet’s king, Arkon, but left when she realized he was a cruel tyrant. Recently, during a battle with the X-Cutioner, Storm was blasted with a hightech weapon that suppressed her mutant powers. She left the X-Men on a quest for self-discovery, linking up with the mutant inventor Forge along the way. She battled the demonic Adversary and regained her powers, returning to the X-Men to aid them in their battle against Bastion and his Prime Sentinels.",
+                ],
+                Personality =
+                [
+                    "Storm is supremely empathetic and a valued friend and teammate to her fellow X-Men. In battle, Storm is bombastic, her proclamations eliciting as much fear from her adversaries as her ability to summon the elements. Even when denied the use of her powers, she is a capable and crafty fighter.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Sub-Mariner (Namor)",
             Rank = 4,
             Abilities = new Abilities
@@ -6200,6 +6294,85 @@ public class CharactersS
                     "Sunspot is a strong conversationalist and orator. He has a talent for relating to others, making him an effective team manager. Bobby rarely turns his nose up at an opportunity for a good joke or a bit of fun.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Sunspot (X-Men '97)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 2, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "when using powers"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Roberto “Bobby” Da Costa",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [170],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Body cloaked in darkness (when powers are active)",
+                Occupations = [OccupationName.Tycoon],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "Born into family fortune, Roberto Da Costa manifested solar-powered mutant abilities and attempted to hide his powers from his family. Roberto’s parents deduced his nature after he accidentally burned four of their homes but pretended not to know. Roberto was eventually captured by the anti-mutant Friends of Humanity (FoH) before being rescued by the X-Men and questioned about the FoH’s Sentinel technology. Roberto befriended the X-Men’s Jubilee before departing. He continued to visit and soon became involved in battles against a mind-controlled Jean Grey clone and the extradimensional Mojo, who projected Roberto and Jubilee into a digital world where Roberto nearly perished. Roberto and Jubilee began dating, and Roberto was convinced to reveal his mutant nature to his mother. Roberto and Jubilee were later attacked by Da Costa’s butler, who had been transformed into a cyborg Prime Sentinel. Evading more Prime Sentinels, Roberto and Jubilee returned to Roberto’s mother, but she remanded them to the Sentinels, concerned more about bad publicity than her son’s safety. Escaping when Magneto unleashed a worldwide electromagnetic pulse, Roberto and Jubilee were rescued from the FoH by Storm and Forge. The increasingly cynical Roberto soon joined Magneto and reluctantly battled Jubilee when the X-Men infi ltrated Magneto’s Asteroid M base. Denouncing Magneto a\u001f er witnessing him nearly kill the X-Man Wolverine, Roberto, now calling himself Sunspot, saved Jubilee from Asteroid M when it was shot down by the U.S. government.",
+                ],
+                Personality =
+                [
+                    "Slightly self-centered due to his privileged upbringing, the fun-loving and outwardly confident Sunspot often doesn’t seem to grasp the gravity of situations. Despite his sometimes cynical and skeptical demeanor, he is secretly unsure of himself and his powers, having spent much time hiding his true nature.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
         },
         new()
         {

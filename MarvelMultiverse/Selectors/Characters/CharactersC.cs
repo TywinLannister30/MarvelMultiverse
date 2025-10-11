@@ -2355,6 +2355,104 @@ public class CharactersC
         },
         new()
         {
+            Name = "Cyclops (X-Men '97)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 2, vigilance: 3, ego: 6, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Community"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese, English, Russian"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                        powerSelector.GetPower(PowerNames.OperationsCenter),
+                        powerSelector.GetPower(PowerNames.RallyOnMe),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Scott Summers",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [195],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Ruby-quartz visor",
+                Occupations = [OccupationName.Educator],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "Scott Summers grew up in an orphanage. When he discovered his mutant ability–the power to emit blasts of energy from his eyes–he was taken in by Professor X and fitted with ruby-quartz glasses to control it. As Cyclops, he was part of Xavier’s first team of X-Men and remained their field leader throughout his tenure with the team. He fell in love with teammate Jean Grey, and the two eventually married. Their relationship was tested again and again by Jean’s mutual but unactedupon attraction to their teammate Wolverine; by the Phoenix, the cosmic force that granted Jean enormous power but corrupted her, leading her to die and be reborn; and by the twisted Mister Sinister, who wanted to experiment on them. During this period of turmoil, however, Scott learned that his long-thought-dead father had survived as the space-faring buccaneer Corsair. He also encountered the enigmatic Havok, leader of the government mutant task force X-Factor; their powers inexplicably canceled each other out. Eventually, he and Jean had a child, Nathan; however, much to his horror, he learned that Jean had been replaced by a Sinister-grown clone. Upon the real Jean’s return, the clone’s programming activated, and she turned Nathan over to Sinister, who infected him with a technoorganic virus. With modern science unable to cure the infant, Scott faced the agonizing decision of sending him to Bishop’s future timeline to be treated. Meanwhile, Cyclops was torn between the real Jean and the clone, who dubbed herself Madelyne Pryor, until the latter was killed by Sentinels. He also learned the mysterious mercenary Cable was really a grown-up Nathan.",
+                ],
+                Personality =
+                [
+                    "Cyclops is a stalwart believer in Xavier’s dream, and an accomplished leader. He is unfailingly courageous, and a tactical genius. He can sometimes be too unyielding in his beliefs.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Cypher",
             Rank = 3,
             Abilities = new Abilities

@@ -531,6 +531,104 @@ public class CharactersB
         },
         new()
         {
+            Name = "Beast (X-Men '97)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 4, resilience: 2, vigilance: 2, ego: 2, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Henry Philip “Hank” McCoy",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [402],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Covered with blue fur",
+                Size = Size.Big,
+                DistinguishingFeatures = "Pointed teeth and ears, claws, blue fur",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "Hank McCoy, alias the Beast, was one of the first mutants Professor X assembled to form the X-Men. Initially, he merely had enlarged hands and feet to go with his enhanced strength and agility, but eventually, his mutation progressed, giving him a blue-furred, bestial appearance. While many of his teammates have since come and gone, the Beast remains a stalwart with the team, and is the X-Men’s resident scientist. Shortly after Jubilee joined the team, he was captured during a raid on a Sentinel factory and imprisoned for a time. After the X-Men saved Senator Robert Kelly from assassination by the rogue Sentinels, he was released with a full pardon and became an important public advocate for mutant rights. He briefly romanced a patient of his, Carly Crocker, despite opposition from her bigoted father. She was subsequently kidnapped by the anti-mutant hate group the Friends of Humanity; although an enraged Hank saved her, he ended their relationship before she could be endangered again. Recently, he began developing a relationship with Trish Tilby, but they drifted apart after she conducted a hostile interview with his teammate Cyclops; he later had to battle her when Bastion transformed her into a cybernetic Prime Sentinel.",
+                ],
+                Personality =
+                [
+                    "Despite his fearsome appearance, the Beast is a gentle soul. He is a brilliant scientist in a number of different disciplines and maintains the X-Men’s advanced technology, including the Danger Room and the Blackbird jet. He is also extremely well-read and frequently peppers his speech with quotes from classical literature. He prefers to fi nd nonviolent solutions to the X-Men’s problems; however, when he is called upon to fight, he does so with ferocity. He is a true believer in Xavier’s dream and is beloved by his teammates.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Beetle",
             Rank = 3,
             Abilities = new Abilities
@@ -831,6 +929,100 @@ public class CharactersB
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Bishop (X-Men '97)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 3, vigilance: 4, ego: 4, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lucas Bishop",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [275],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Tattoo over right eye in the shape of the letter “M”",
+                Occupations = [OccupationName.Adventurer, OccupationName.Investigator],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "Varies",
+                History =
+                [
+                    "In Lucas Bishop’s timeline, Sentinels have ravaged humans and mutants alike by the year 2055. Despite being a mutant himself with the power to absorb energy, Bishop worked as a bounty hunter for the Sentinels, hunting down renegade mutants. However, when the Sentinels turned on him, he defected and joined a band of mutant rebels inspired by the legendary X-Men. The rebels sent him to the past to prevent Gambit from betraying the X-Men and assassinating Senator Robert Kelly, leading to a worldwide war on mutants. Once he arrived in the past, he eventually learned the real assassin was the shape-shifting Mystique disguised as Gambit; even though Kelly was saved, Bishop returned to find his future unchanged. Now occasionally joined by his sister, Shard, he made subsequent jaunts to the past to prevent the Friends of Humanity from releasing a deadly plague, to stop Trevor Fitzroy from assassinating Charles Xavier before he could form the X-Men and to defeat Apocalypse before he could remake reality in his own image. Later, he returned to the present for some time to adventure with the X-Men. When Mister Sinister infected Cyclops’ infant son, Nathan, with a Techno-Organic virus, Bishop returned to his future with the boy, hoping that a cure could be found. Sometime later, after the X-Men disappeared following a battle with Bastion, Bishop returned to the present and joined forces with Forge to hunt the time-lost mutants down.",
+                ],
+                Personality =
+                [
+                    "Bishop is a harsh man from a harsh time. He is a battle-hardened, experienced warrior. Although he was initially self-centered enough to side against mutantkind, he was eventually swayed to fight for what’s right. Inspired by the legendary X-Men of the past, Bishop fi ghts valiantly for mutantkind, knowing all too well what horrors could be unleashed if they fail.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
         },
         new()
         {

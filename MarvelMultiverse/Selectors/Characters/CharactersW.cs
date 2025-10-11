@@ -1210,6 +1210,108 @@ public class CharactersW
         },
         new()
         {
+            Name = "Wolverine (X-Men '97)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 6, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Sabretooth"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+
+                        powerSelector.GetPower(
+                            PowerNames.IconicWeapon,
+                            specialization: "Adamantium Claws [+1 Melee damage multiplier; ignores 1 level of DR]]",
+                            meleeDamageModifier: 1,
+                            isTech: true),
+
+                        powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "James Howlett (a.k.a. Logan)",
+                Heights = [new() { Feet = 5, Inches = 3 }],
+                Weights = [195],
+                WeightReminder = "300 lbs. with adamantium",
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Retractable adamantium claws, muttonchops",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechCybernetics, OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "The origins, past and full name of the Canadian mutant named Logan, alias Wolverine, are unknown. Thanks to his mutant healing factor, he is extremely long-lived; he was first known to be active during World War II, when he aided Captain America in battling the Red Skull. Decades later, he was subjected to experimentation by the Weapon X program that bonded adamantium with his skeleton and gave him retractable metal claws, as well as modifying his memories; another Weapon X test subject, Sabretooth, would become his lifelong rival. He eventually escaped from Weapon X, resulting in the death of its chief scientist, Kenji Oyama. Oyama’s daughter and Logan’s ex-lover Yuriko Oyama would later stalk Logan as the adamantium-clawed Lady Deathstrike. Mac and Heather Hudson took in the fugitive Logan; he would later join Mac in the Canadian super-team Alpha Flight before leaving to join the X-Men. Although his solitary nature kept most of his teammates at a distance, he did befriend the eccentric Morph and was enraged when he was seemingly killed by Sentinels. He has continued to serve as a stalwart X-Man, mentoring new X-Men member Jubilee and helping the revived Morph rejoin the team. Recently, the X-Men’s archenemy Magneto tore the adamantium out of Wolverine’s body.",
+                ],
+                Personality =
+                [
+                    "A loner by nature, Wolverine often chooses to operate solo. His advanced age has given him years of experience, and he is an unmatched fi ghter and tracker. In battle, he often lapses into a feral rage, making him a danger to friend and foe alike. Nevertheless, his attitude toward his fellow X-Men has softened over time, and he has become a valued teammate. He has feelings for Jean Grey; combined with his natural distrust of authority, this often puts him at odds with X-Men leader Cyclops.",
+                ],
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Wong",
             Rank = 4,
             Abilities = new Abilities

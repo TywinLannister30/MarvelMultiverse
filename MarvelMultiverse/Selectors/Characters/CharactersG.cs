@@ -119,6 +119,107 @@ public class CharactersG
         },
         new()
         {
+            Name = "Gambit (X-Men '97)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 6, resilience: 2, vigilance: 3, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Bo staff (+1 melee damage multiplier bonus; range: reach +1)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Charged cards [These act as knives, usually thrown. Using Elemental Infusion on them costs 0 Focus. Cards function only for Gambit.]"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DanceOfDeath),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Remy Étienne LeBeau",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [179],
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Black eyes with red irises",
+                Occupations = [OccupationName.Adventurer, OccupationName.Criminal],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "The roguish Cajun thief Remy LeBeau, alias Gambit, hails from the bayous of Louisiana. He and his family are members of the Thieves Guild, an ancient organization locked in an eternal rivalry with the Assassins Guild; both guilds vie for the favor of the powerful X-Ternal. Unlike his brethren in the Thieves Guild, LeBeau is a mutant, with the ability to charge any object he touches with energy, turning it into a dangerous explosive; he carries packs of playing cards to use as throwing weapons. He was betrothed to the Assassins Guild’s Bella Donna Boudreaux, but left her and the guild wars behind to join the X-Men. There, he pursued a romance with fellow Southerner Rogue; the attraction was mutual, but her mutant power left her unable to have physical contact with others, complicating their relationship. His past came back to haunt him when he had to journey back to Louisiana to save his brother, Bobby, which was part of Boudreaux’s plot to trap Gambit into marriage; with Rogue’s help, he saved Bobby, but vowed never to return. Recently, his and Rogue’s relationship was complicated by the arrival of Magneto as the X-Men’s new leader. Magneto had a past relationship with Rogue, and his control over the electromagnetic spectrum allowed the two of them to touch. The two reconnected, leaving Gambit feeling leftout. Subsequently, LeBeau was in Genosha when it was attacked by Sentinels under Bastion’s control; LeBeau sacrifi ced himself to save Rogue and the attack’s other survivors.",
+                ],
+                Personality =
+                [
+                    "Gambit is a charming, arrogant scoundrel who cares more about his friends than he lets on. He initially kept his distance from his teammates, but has gradually come to trust them and is a loyal member of the X-Men. He occasionally refers to himself in the third person.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Gamora",
             Rank = 5,
             Abilities = new Abilities

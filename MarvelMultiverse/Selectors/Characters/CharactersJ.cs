@@ -277,6 +277,101 @@ public class CharactersJ
         },
         new()
         {
+            Name = "Jean Grey (X-Men '97)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 3, vigilance: 5, ego: 7, logic: 7
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Levitation),
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticBarrier),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                        powerSelector.GetPower(PowerNames.TelekineticProtection2),
+                        powerSelector.GetPower(PowerNames.TelekineticReinforcement),
+                        powerSelector.GetPower(PowerNames.TelekineticSphere),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Cloak),
+                        powerSelector.GetPower(PowerNames.EditMemory),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.MentalPunch),
+                        powerSelector.GetPower(PowerNames.MentalShelter),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jean Grey-Summers",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "One of Professor X’s first X-Men, the mutant telepath Jean Grey shared a lengthy romance with teammate Scott Summers. Although their relationship was troubled by Jean’s attraction to Wolverine, Jean and Scott were eventually married. The obsessive geneticist Mister Sinister captured Jean briefly during her honeymoon. Jean’s life would change dramatically during a mission to outer space. During a difficult re-entry into Earth’s atmosphere, the cosmic Phoenix Force occupied Jean’s body, giving her immense power and saving her life. Shortly afterward, Mastermind and the Hellfi re Club tried to mind-control her; she eventually broke free, but the Phoenix’s evil side had been unleashed, transforming Jean into the Dark Phoenix. She went on a rampage before Jean reasserted control and seemingly destroyed herself to avoid harming her friends and her world. Jean survived, however, and the X-Men all sacrifi ced part of their life force to the Phoenix to return her to life. At some point, Jean was abducted by Sinister and replaced with a clone; unaware of her true nature, the clone believed she was the real Jean, and gave birth to Scott’s child, Nathan. Jean escaped from Sinister’s clutches and returned to the X-Men; the clone struck off on her own as “Madelyne Pryor,” while Nathan was sent to the future with Bishop to recover from Sinister’s experiments. Scott and Jean are attempting to pick up the pieces amid a worldwide war on mutantkind.",
+                ],
+                Personality =
+                [
+                    "Jean is the emotional center of the X-Men and is a calming influence on her teammates; however, her placid exterior conceals her strong will. She maintains enormous discipline to keep her psychic powers in check.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Jessica Jones",
             Rank = 3,
             Abilities = new Abilities
@@ -449,6 +544,96 @@ public class CharactersJ
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Jubilee (X-Men '97)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 3, ego: 5, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.Flare),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jubilation Lee",
+                Heights = [new() { Feet = 5, Inches = 5 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "Jubilation Lee, alias Jubilee, was a normal, albeit rebellious, teenager until her mutant explosiveenergy- generating powers developed. Her foster parents alerted the authorities, who then sent the robotic Sentinels to apprehend her at her favorite hangout, the local mall. Jubilee was saved by the X-Men and was soon brought into their fold, becoming the newest member of the mutant hero team. The team helped her to master her powers and explore her mutant nature; she came to see the team as the family she never had, especially the otherwise-gruff Canadian mutant Wolverine. She has grown and matured during her tenure with the team; she successfully prevented the immortal mutant despot Apocalypse from using her as his new host body and handled herself admirably when she had to keep a group of children calm during a cave-in below the Xavier Mansion. Recently, she has connected with the X-Men’s newest recruit, the teenage Brazilian mutant Sunspot, and a romance between the two has blossomed. The duo was sucked into a virtualreality video game by the interdimensional media mogul Mojo, where Jubilee met Abscissa, an aged virtual-reality duplicate of herself who helped the two of them escape. Unfortunately, her nascent romance with Sunspot was cut short when he joined Rogue in defecting to Magneto’s side in his upcoming war on humanity. The two would-be lovers subsequently battled on Magneto’s Asteroid M.",
+                ],
+                Personality =
+                [
+                    "Jubilee is energetic, fun-loving and eager to learn more about her growing mutant powers. As a teenager, she is immature and a tad selfcentered, and sometimes fails to grasp the gravity of the X-Men’s mission. Despite her age and inexperience, she refuses to be underestimated or excluded from “grown-up” X-Men operations. She is very close to her X-Men teammates, especially her mentor Wolverine.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
         },
         new()
         {

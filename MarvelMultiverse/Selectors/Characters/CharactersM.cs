@@ -960,6 +960,99 @@ public class CharactersM
         },
         new()
         {
+            Name = "Magneto (X-Men '97)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 3, vigilance: 5, ego: 8, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Arabic, English, French, German, Hebrew, Polish, Russian, Ukrainian, Yiddish"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlIron,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalProtection4),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Erik Lehnsherr",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Auschwitz I.D. #24005 tattoo on arm",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.BrotherhoodOfEvilMutants, TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "Erik Magnus Lehnsherr became embittered with humanity after losing his family during the Holocaust. After the war, Magnus befriended fellow mutant Charles Xavier, but Charles’ philosophy of peaceful coexistence between mutants and humans confl icted with his desire for mutant domination. Magnus married, but after he used his mutant powers to control magnetism violently, his wife, Magda, fled.",
+                    "As Magneto, he gathered fellow mutants and began violent acts of terrorism against humanity. In the Antarctic Savage Land jungle, Magneto created a race of super-powered Mutates and became briefl y involved romantically with the mutant Rogue, struggling to control her powers. Magneto wore a special helmet to protect himself from Xavier’s psychic powers. Magneto’s forces clashed with Xavier’s X-Men team, as Magneto attempted to provoke world war with nuclear weapons but was opposed by giant Sentinel robots. Magneto and the X-Men joined forces to defeat the Sentinel-creating Master Mold.",
+                    "Inviting all mutants to join him on the orbiting Asteroid M, Magneto’s dream to live completely independent of humanity failed after he was betrayed by false follower Fabian Cortez. When Xavier was seemingly killed, Magneto inherited leadership of the X-Men and was soon invited to lead the mutant island of Genosha. The living Sentinel Bastion launched a devastating attack on Genosha and captured Magneto. Escaping, Magneto would attack Bastion’s army with a global electromagnetic pulse that endangered humanity.",
+                    "In the battle between Magneto, the Sentinels and the X-Men, Magneto pulled out Wolverine’s adamantium skeleton and Xavier damaged Magneto’s psyche. Xavier has pledged to repair the damage."
+                ],
+                Personality =
+                [
+                    "Magneto’s charisma is as powerful as his magnetic prowess. A stoic, inspirational leader, Magneto easily gathers followers despite his extremely cynical beliefs. Though respectful of Xavier, he travels his own path.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
+        {
             Name = "Magnitron",
             Rank = 4,
             Abilities = new Abilities

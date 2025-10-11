@@ -1111,7 +1111,100 @@ public class CharactersR
 			},
 			Source = BookSource.XMenExpansion
 		},
-		new()
+        new()
+        {
+            Name = "Rogue (X-Men '97)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 4, resilience: 4, vigilance: 3, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ClonePowers),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                        powerSelector.GetPower(PowerNames.DampenPower),
+                        powerSelector.GetPower(PowerNames.ShutDownPowers),
+                        powerSelector.GetPower(PowerNames.StealPowers),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "In order to activate any of her Power Control powers, Rogue must first grab or hit her target. If she spends her action on this, she can still activate the power in question with a reaction."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Anna Marie",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Brown with white streaks",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.XMen],
+                Base = "X-Mansion",
+                History =
+                [
+                    "A mutant with the power to absorb memories and super-powers upon touch, Rogue was disowned by her father after her first kiss put her boyfriend Cody into a coma. Shape-shifting mutant Mystique adopted the runaway Rogue. To help her control her powers, Mystique took Rogue to train under Magneto in the Savage Land. Magneto discovered he could touch Rogue, and the two became romantically involved for a time. As a part of Mystique’s Brotherhood of Mutants, Rogue performed illegal activities and permanently absorbed the strength, invulnerability and fl ying powers of Ms. Marvel (Carol Danvers), leaving Danvers comatose. As Danvers’ persona battled to control Rogue’s mind, Rogue fl ed to psychic mutant Charles Xavier for help. Finding peace after Xavier blocked Rogue’s memories, Rogue joined Xavier’s X-Men, having many heroic adventures.",
+                    "She developed feelings for her flirtatious teammate Gambit, often infuriated knowing her powers prevented them from touching. Hoping to remove her mutant abilities, Rogue traveled to Scotland where Mystique posed as a mutant cure’s administrator. The ancient mutant Apocalypse secretly orchestrated the “treatment” to build a team. With Apocalypse thwarted, Rogue returned home, powers intact.",
+                    "Rogue discovered Nightcrawler is Mystique’s son, making him like a brother. Cody returned, manipulated by aliens, but Rogue and the X-Men repelled the invasion. Invited by Magneto to co-lead Genosha, Rogue rejected Magneto for Gambit. But Gambit was killed and Genosha massacred by giant Sentinels. Heartbroken, Rogue joined Magneto in battling Bastion and the human-Sentinel hybrids responsible for the genocide."
+                ],
+                Personality =
+                [
+                    "With her distinctive striped hair, known for making playful, sometimes flirty, Southern metaphors, Rogue is a fiery and passionate woman. Though quick to protect those she loves, she can be emotionally distant knowing the dangers of her touch. This has often left her lonely, tending toward individualism.",
+                ]
+            },
+            Source = BookSource.XMen97Characters
+        },
+        new()
         {
             Name = "Ronan the Accuser",
             Rank = 4,

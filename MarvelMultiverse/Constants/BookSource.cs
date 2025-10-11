@@ -13,4 +13,5 @@ public class BookSource
     public const string TheCataclysmOfKang = "The Cataclysm of Kang";
     public const string QuickStartWithThunderboltsAdventure = "Quick Start with Thunderbolts Adventure";
     public const string RevengeOfTheSuperSkrull = "Revenge of the Super Skrull";
+    public const string XMen97Characters = "X-Men '97 Characters";
 }
