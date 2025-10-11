@@ -505,6 +505,93 @@ public class CharactersW
         },
         new()
         {
+            Name = "White Rabbit",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 2, vigilance: 2, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup, reminder: "the Menagerie"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Mini Carrot Missiles (acts as a rifle)"),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Lorina Dodson",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.TheMenagerie, TeamNames.Syndicate, TeamNames.Tombstonesgang],
+                Base = "New York City",
+                History =
+                [
+                    "Lorina Dodson was born into money and grew up wanting for nothing. Finding her life to be a horrible bore, she took refuge in the family library and became particularly fond of Alice in Wonderland. In her early twenties, her parents married her off to a rich older man, but after finding married life to be just as dull, she murdered her husband and used his money to finance a new life of crime, thrills and intrigue.",
+                    "As the gadget-laden White Rabbit, Dodson attempted to rob a fast-food restaurant, and in the process, she nearly killed local defender Frog- Man. Spider-Man (Peter Parker) arrived at the last minute to save Frog-Man’s life, and together, they took the White Rabbit down.",
+                    "In return, Dodson developed a lifelong grudge against both Spider-Man and Frog-Man. In the subsequent years, she and her gang of Alice in Wonderland-styled goons made dozens of vain attempts to defeat the wall-crawler and his amphibian friend.",
+                    "Dodson dislikes being subordinate to others, but after so many defeats, she has learned to occasionally swallow her pride and work with other villains outside of her own gang. These days, she spends most of her time helping the all-female Syndicate led by the Beetle (Janice Lincoln) establish itself as a powerhouse in New York’s underworld."
+                ],
+                Personality =
+                [
+                    "Though often treated as a laughingstock by New Yorkers and super villains alike, White Rabbit should not be taken lightly. Her villainy is pure and unbridled. She has no need for money. She robs and maims simply for the love of the game. Though not typically prone to killing, she would break her best friend’s legs in a heartbeat if she thought she could get a thrill out of it.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "White Tiger (Ava Ayala)",
             Rank = 2,
             Abilities = new Abilities
@@ -1117,6 +1204,83 @@ public class CharactersW
                     "Wong and Strange couldn’t be more different as people. Strange is generally sharp and sometimes abrasive to those around him, rarely cracking jokes. Wong, conversely, is a charming and humble man who has an easy time empathizing with the struggles of others.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Wraith (Earth-1048)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 1, vigilance: 2, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Police"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Whip (acts as spear)"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Yuriko “Yuri” Watanabe",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.NYPD],
+                Base = "New York City (Earth-1048)",
+                History =
+                [
+                    "Yuri Watanabe always had somewhat nontraditional views on law enforcement. For years, she was a secret contact within the New York police force for Spider-Man (Peter Parker), quietly feeding the vigilante information on jobs that were too tough for the cops to handle. But after half her unit was massacred by Hammerhead’s Maggia goons, she went completely rogue. She shot Hammerhead in the head, nearly killing him, and resigned her commission. Rebranding herself as the private mercenary Wraith, Watanabe took to the streets, determined to take out the rest of the Maggia.",
+                    "In the days since, Wraith has enacted a campaign of mass murder across the city’s underworld. Her old friend Spider-Man has been trying his best to apprehend her, but to no avail.",
+                    "Currently, Wraith has set her sights on the Flame (Cletus Kasady)—the enigmatic leader of a pyromaniac doomsday cult. Spider-Man’s efforts to prevent Wraith from assassinating the man have had the unfortunate side effect of allowing the cult leader to steal a piece of the Venom symbiote from Oscorp. Kasady may be lying low for the moment, but when he returns, carnage is sure to follow in his wake.",
+                ],
+                Personality =
+                [
+                    "Watanabe is a grim person with a soft spot for her friends—including, despite it all, Spider-Man. But she has absolutely no sympathy for anyone else. Her only goal in life now is to take down killers, and she refuses to let anyone get in her way, not even her friends.",
+                ]
+            },
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

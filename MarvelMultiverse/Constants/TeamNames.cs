@@ -169,12 +169,14 @@ public static class TeamNames
     public const string TheFive = "The Five";
     public const string TheHand = "The Hand";
     public const string TheHive = "The Hive";
+    public const string TheMenagerie = "The Menagerie";
     public const string TheSpiderSlayerSeries = "The Spider-Slayer Series";
     public const string TheVermin = "The Vermin";
     public const string ThievesGuild = "Thieves' Guild";
     public const string ThunderboltPoliceDepartment = "Thunderbolt Police Department";
     public const string Thunderbolts = "Thunderbolts";
     public const string TNM = "TNM";
+    public const string Tombstonesgang = "Tombstone's gang";
     public const string Triads = "Triads";
     public const string UltimateSix = "UltimateSix";
     public const string Ultimates = "Ultimates";
