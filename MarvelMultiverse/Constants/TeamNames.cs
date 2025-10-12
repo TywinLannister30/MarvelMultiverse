@@ -30,6 +30,7 @@ public static class TeamNames
     public const string BrotherhoodOfEvilMutants = "Brotherhood of Evil Mutants";
     public const string CapeKillers = "Cape Killers";
     public const string CaptainBritainCorps = "Captain Britain Corps";
+    public const string CaptainsNetwork = "Captains Network";
     public const string Champions = "Champions";
     public const string ChampionsOfLosAngeles = "Champions of Los Angeles";
     public const string Chaste = "Chaste";

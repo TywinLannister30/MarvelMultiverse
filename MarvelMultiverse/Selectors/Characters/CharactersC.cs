@@ -7,6 +7,7 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersC
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
@@ -313,6 +314,131 @@ public class CharactersC
         },
         new()
         {
+            Name = "Captain America (Bucky Barnes)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 6, resilience: 3, vigilance: 4, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin, reminder: "2"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Mandarin), English, German, Japanese, Russian"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Captain America’s shield"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AlwaysReady),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.HurledShieldBlock),
+                        powerSelector.GetPower(PowerNames.RicoShield),
+                        powerSelector.GetPower(PowerNames.Shield2, reminder: "Shield 3 with Iconic Item"),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Captain America’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Requires: Shield 1 power"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "James Buchanan “Bucky” Barnes",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [260],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bionic left arm",
+                Occupations = [OccupationName.Adventurer, OccupationName.Spy],
+                Origins = [OriginName.HighTechCybernetics, OriginName.SpecialTraining, OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.KGB, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Toward the end of World War II, the aerial explosion that sent Captain America (Steve Rogers) into the north Atlantic where he froze into a block of ice seemingly killed his sidekick, the young Bucky (Bucky Barnes). He was captured by Soviet scientists, who replaced a missing arm with a bionic prosthetic and brainwashed him to become a Russian assassin codenamed the Winter Soldier, after which he was kept in suspended animation for decades, only released to kill and then returned to sleep again.",
+                    "Cap eventually discovered who the Winter Soldier was and successfully undid Bucky’s brainwashing. During a period when Rogers was believed to be dead, Bucky took up the shield and replaced him as Captain America.",
+                    "Bucky eventually gave up the title and returned to his regular globe-trotting activities, first as the Winter Soldier and then, most recently, as the Revolution. This profile, however, represents Bucky during the period when he was Captain America, when he was doing everything he could to live up to the legacy of his old mentor."
+                ],
+                Personality =
+                [
+                    "Bucky is a deadly serious and world-weary vet. The remorse he feels for his time as an assassin weighs on him every day.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Captain America (Sam Wilson)",
             Rank = 4,
             Abilities = new Abilities
@@ -345,12 +471,7 @@ public class CharactersC
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Captain America’s shield [+1 damage multiplier. Grants the user one extra level of the power Shield (up to Shield 4).]",
-                            meleeDamageModifier: 1,
-                            agilityDamageModifier: 1),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Captain America’s shield"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Flight2, isTech: true),
                         powerSelector.GetPower(PowerNames.Mighty1),
@@ -381,6 +502,28 @@ public class CharactersC
                         powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "birds"),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Captain America’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Requires: Shield 1 power"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
             ],
             Biography = new Biography
             {
@@ -444,12 +587,7 @@ public class CharactersC
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Captain America’s shield [+1 Melee and Agility Damage multiplier. Grants the user one extra level of the power Shield (up to Shield 4), which they can use without paying the additional level’s Focus cost.]",
-                            meleeDamageModifier: 1,
-                            agilityDamageModifier: 1),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Captain America’s shield"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
@@ -466,7 +604,7 @@ public class CharactersC
                         powerSelector.GetPower(PowerNames.HurledShieldDeflection),
                         powerSelector.GetPower(PowerNames.Immovable),
                         powerSelector.GetPower(PowerNames.RicoShield),
-                        powerSelector.GetPower(PowerNames.Shield3),
+                        powerSelector.GetPower(PowerNames.Shield3, reminder: "(Shield 4 with Iconic Item)"),
                         powerSelector.GetPower(PowerNames.ShieldBash),
                         powerSelector.GetPower(PowerNames.ShieldDeflection),
                         powerSelector.GetPower(PowerNames.ShieldWall),
@@ -481,6 +619,28 @@ public class CharactersC
                         powerSelector.GetPower(PowerNames.CombatSupport),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Captain America’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Requires: Shield 1 power"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
             ],
             Biography = new Biography
             {
@@ -506,6 +666,330 @@ public class CharactersC
                     "Rogers is serious about helping people out, and he’s a natural leader, both in and out of combat. He knows that when he’s in his costume and carrying his shield he represents everything that is great about the land and people he loves so much.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Captain America (Early Days)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 3, resilience: 3, vigilance: 2, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Hydra"),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Red Skull"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Triangular shield (acts as a standard shield)"),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Shield1),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                        powerSelector.GetPower(PowerNames.ShieldWall),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Steve Rogers",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [240],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.USArmy],
+                Base = "Camp Lehigh, Virginia",
+                History =
+                [
+                    "At the dawn of World War II, scrawny Steve Rogers was rejected by the U.S. Army as unfit for service, but Dr. Abraham Erskine saw something in him and selected him for the first human trials for his Super-Soldier Serum. A Nazi sympathizer assassinated Erskine during the procedure, but not before Rogers was improved to the peak of human physical ability. As Captain America, Rogers fought Nazis on the front lines in Europe, alongside his sidekick Bucky Barnes—right up until 1945 when they were presumed killed while stopping a plot by the evil Baron Zemo.",
+                    "Decades later, the newly formed Avengers found Rogers frozen in a block of ice and revived him, allowing him to return to the field. However, this profile represents Rogers long before he was frozen, even before the United States entered World War II. This is Rogers in his earliest days, back when he and Bucky were just a couple of low-rank grunts, secretly performing covert military operations in their off-hours.",
+                ],
+                Personality =
+                [
+                    "Rogers is serious about helping people out, and he’s a natural leader, both in and out of combat. He knows that when he’s in his costume and carrying his shield he represents everything that is great about the land and people he loves so much.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Captain America (Earth-1610)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 4, vigilance: 3, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Hydra"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Captain America’s shield"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.HurledShieldBlock),
+                        powerSelector.GetPower(PowerNames.RicoShield),
+                        powerSelector.GetPower(PowerNames.Shield3, reminder: "(Shield 4 with Iconic Item)"),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Captain America’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Requires: Shield 1 power"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Steven “Steve” Rogers",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [250],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Ultimates],
+                Base = "Mobile (Earth-1610)",
+                History =
+                [
+                    "The life of Earth-1610’s Captain America largely resembles that of his Earth-616 counterpart, right up until the end of World War II. Rogers fell into the icy water while disarming an experimental missile created by a Nazi named Herr Kleiser, who was actually an alien Chitauri.",
+                    "Decades later, Rogers was fished out of the ice by agents of S.H.I.E.L.D. who immediately drafted him into their new super-team program: the Ultimates. His unrelenting ruthlessness as a combatant quickly propelled him to become the team’s field leader, and he led the Ultimates on a mission that successfully wiped out Kleiser and his plot for the shape-changing Chitauri to take over the world.",
+                    "Since then, Rogers has faithfully and consistently served as the linchpin of both the Ultimates and the United States itself. He even served as the president of the country during a brief period when it seemed like the nation might once again descend into a civil war, though he stepped down as soon as the crisis ended."
+                ],
+                Personality =
+                [
+                    "While Earth-1610’s Steve Rogers has a lot in common with his Earth-616 counterpart, he lacks the latter man’s idealism. He’s an old-fashioned soldier and a die-hard patriot, but he’s not as concerned about the symbolism of his role. Rogers’ determination to win and to never give up drives him hard.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Captain America of the Railways",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 4, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AuditoryIssues, reminder: "partially deaf in right ear"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Avengers Academy"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Captain Marvel (Carol Danvers)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.Poor),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Young),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Captain America of the Railways’ Shield"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.RicoShield),
+                        powerSelector.GetPower(PowerNames.Shield2, reminder: "(Shield 3 with Iconic Item)"),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Captain America of the Railways’ Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Aaron Fischer",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [150],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Student],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.AvengersAcademy, TeamNames.CaptainsNetwork],
+                Base = "Avengers Academy",
+                History =
+                [
+                    "Life at home was never great for Aaron Fischer growing up as an openly gay teen in an isolated community, and after cancer took his mother, things only got worse. One day, he decided he’d had enough of his father’s beatings and hit the rails, living out of boxcars and drifting wherever the tracks took him.",
+                    "As time passed and Fischer witnessed more and more of the hardships that come with rough living, he gradually came to see the rails as his home and himself as their protector. Inspired by his childhood hero—Captain America—Fischer fashioned a shield and a costume and became the Captain America of the Railways, champion of those with nowhere else to go. Soon after that, he met both of the main Captains America—Steve Rogers and Sam Wilson—and helped them expose a string of vagrant kidnappings by the Roxxon Energy Corporation.",
+                    "Later, while investigating a similar string of crimes committed by Alchemax, Fischer stumbled into a trap set by the ringleaders of the conspiracy. The corporation had been testing a deadly new Super-Soldier treatment on the local unhoused population. It forced this treatment onto Fischer, hoping to kill him, but for some reason, the treatment actually worked on him. With his new energy powers, Fischer dismantled the facility and freed the remaining victims.",
+                    "These days, Fischer spends most of his time at the new Avengers Academy, learning how to be a better hero alongside his crush, Kid Juggernaut."
+                ],
+                Personality =
+                [
+                    "In regular interpersonal situations, Fischer can be awkward and shy, but that all disappears the second he sees someone in need. He has an unflinching commitment to helping others, particularly the poor and disenfranchised. His first priority is always the protection of others, and as such, he never uses his energy powers to blast others, only to shield them.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1962,6 +2446,342 @@ public class CharactersC
                     "For a long time, Colossus was known for letting his passion get the best of him in the heat of battle, turning him into a nigh-unstoppable metal berserker. In recent years he has adopted a softer and more sympathetic attitude. For those he loves, his heart is as big as his anger is strong.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Contessa Valentina Allegra de Fontaine",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 3, ego: 4, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Unknown",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black, with white streak",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.HighTechAndroid, OriginName.SpecialTraining],
+                Teams = [TeamNames.Hydra, TeamNames.SHIELD, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "After her parents were killed in a senseless bombing, the Contessa Valentina Allegra de Fontaine joined S.H.I.E.L.D. and dedicated the rest of her life to preventing similar tragedies. Or at least, that was the cover story. In truth, both Fontaine and her supposed parents were agents of an ancient Russian spy cell called Leviathan, and she only joined S.H.I.E.L.D. to ensure that the organization never laid hands on any of Leviathan’s world-shattering technology.",
+                    "Fontaine spent years with S.H.I.E.L.D. and became not only one of its best agents but also the on-and-off lover of its director, Nick Fury Sr. She was even named director herself during a brief period when Fury was thought to be dead. She developed a real affection for S.H.I.E.L.D., but when Hydra uncovered Leviathan technology, she felt that she had no choice but to defect and become the new Madame Hydra.",
+                    "Fury refused to accept this, and with the help of his best agents, he defeated Hydra and dismantled Leviathan. Adrift for the first time in her life, Fontaine disappeared.",
+                    "Recently, a Life-Model Decoy of Fontaine joined the new incarnation of the Thunderbolts led by the Revolution (Bucky Barnes). This is the version represented in this profile."
+                ],
+                Personality =
+                [
+                    "Fontaine is an expert spy and tactical manipulator, but deep beneath her conniving exterior lies a soul that really cares about people. That’s part of what makes her such a good actor. She has the mental fortitude to betray whoever she needs to betray, even when she doesn’t really want to.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Count Nefaria",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 5, vigilance: 8, ego: 5, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Adamantium"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BrainDrain, reminder: "limited to targets with Elemental Control [Energy] powers"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Luchino Nefaria",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Leader],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.LethalLegion, TeamNames.Maggia],
+                Base = "Los Angeles",
+                History =
+                [
+                    "As Europe’s wealthiest nobleman and the leader of the Maggia crime syndicate, Luchino Nefaria detests anyone he cannot control, especially those who dare to work against him. By continually interfering with the Maggia, the Avengers gradually became his most hated enemies.",
+                    "Nefaria moved to America and attempted to turn the United States government against the Avengers, but his plans ultimately failed to disband the team. He decided to take a new approach and created his own Lethal Legion to fight the Avengers directly. The heroes initially defeated the Legion with little trouble, but unbeknownst to them, Nefaria had employed a former Nazi scientist named Kenneth Sturdy to analyze, magnify and re-create their powers. Sturdy used the data from the Avengers’ first fight with the Legion to make Nefaria into a super villain with powers rivaling those of all the Avengers combined.",
+                    "Though the heroes narrowly managed to defeat the empowered Nefaria and his Lethal Legion, he has not given up on his plans to destroy them. His daughter, Madame Masque (Whitney Frost), has also proven a worthy foe to many of the Avengers.",
+                ],
+                Personality =
+                [
+                    "Although Nefaria is capable of going toe-to-toe with the likes of Thor, a fistfight is unbecoming of the count. He prefers to use less direct methods when possible. A ruthless, egomaniacal businessman and crime boss, Nefaria wants his legacy to be the destruction of the Avengers. His outward veneer of respectability and civility is a farce, a means to better enrich himself, and he believes that deep down, everyone is just like him.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Corvus Glaive",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 1, resilience: 3, vigilance: 4, ego: 4, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Thanos’ army)"),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Corvus Glaive’s Glaive", isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.HitTheDirt),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                        powerSelector.GetPower(PowerNames.OperationsCenter),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Corvus Glaive’s Glaive",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Unkillable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach + 1, Melee Damage Multiplier bonus: +2."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 2,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Corvus Glaive",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [144],
+                Gender = Gender.Male,
+                Eyes = "Black (glow orange when using powers)",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Pale appearance with dark glowing eyes and pointed ears",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.BlackOrder],
+                Base = "Mobile",
+                History =
+                [
+                    "Corvus Glaive and his wife, Proxima Midnight, were among Thanos’ earliest followers, and to this day, they remain among his most beloved subjects. They were the first to join the Mad Titan’s coveted inner circle—his Black Order—and it is they who have kept the Order running, even in the Titan’s absence.",
+                    "Little is known of Glaive’s early life or what happened to engender within him such fanatical devotion to one of the greatest monsters in the cosmos, but a fanatic he remains nonetheless. Not only has Glaive killed untold billions in the name of Thanos, he has—on multiple occasions—given his own life in pursuit of the Mad Titan’s goals.",
+                    "In fact, Glaive is still recovering from his last death, having been annihilated by Thor for attempting to kidnap the Asgardian pantheon’s youngest member, Laussa Odinsdottir.",
+                ],
+                Personality =
+                [
+                    "Glaive is a ruthless and hyperintelligent schemer. Often considered to be the real brains behind the Mad Titan’s operations, Glaive has long been responsible for maintaining the logistical end of Thanos’ many conquests.",
+                    "It is Glaive who collects the taxes necessary to keep the Mad Titan’s armies on their endless warpath, and it is he who draws up the plans for each battle along the way. He delights in these tasks and in the bloodshed that they offer."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
