@@ -1,13 +1,13 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using System;
 
 namespace MarvelMultiverse.Selectors.Characters;
 
 public class CharactersD
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
@@ -816,6 +816,123 @@ public class CharactersD
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Destroyer",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 4, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Destroyer’s Energy Baton", isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.PointBlankParry),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Destroyer’s Energy Baton",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Neganite),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplier bonus: +1"),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Sharon Carter",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [135],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer, OccupationName.Spy],
+                Origins = [OriginName.HighTech, OriginName.SpecialTraining],
+                Teams = [TeamNames.SHIELD, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "Inspired by her aunt Peggy’s old war stories, Sharon Carter signed up to protect the world with S.H.I.E.L.D. Not long after that, she began working alongside Peggy’s old comrade in arms and romantic partner, Captain America (Steve Rogers).",
+                    "In time, Carter and Rogers began a romance of their own, though because of their duties, the relationship played out in fits and spurts, when it played out at all. At times, life and circumstance have even conspired to push them into direct conflict—like after the first superhuman civil war, when Carter was brainwashed into killing Rogers, or during the reign of the Secret Empire, when Rogers seemingly became an agent of Hydra. But somehow, they have always managed to repair their relationship and pick up where they left off.",
+                    "Carter is one of the few S.H.I.E.L.D. operatives who can attest to having saved as many people as Steve Rogers himself, and for a brief period before it dissolved, she was even the head of the organization.",
+                    "After her old friend the Destroyer (Roger Aubrey) was killed in battle, Carter decided to honor him by taking up his codename. As the new Destroyer, she currently spends most of her time fighting villainy around the globe with the Thunderbolts."
+                ],
+                Personality =
+                [
+                    "Much like Rogers, Sharon Carter is a coolheaded and determined operative. She has high ideals, and she isn’t afraid to fight for them. In fact, she suspects that she’s fated to do just that for the rest of her life.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
