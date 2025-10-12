@@ -128,6 +128,17 @@ public class NarrativePowerSelector : INarrativePowerSelector
         },
         new()
         {
+            Name = NarrativePowerNames.RealityManipulation,
+            Effect =
+            [
+                "The character has the power to alter reality as they see fit, up to and including destroying the entire universe. They cannot affect the past or alter a person’s soul, but they can use their power to edit memories to make people think that the past was different. They could also create a distinct new version of a reality, although the original version would remain intact in its own universe.\r\n\r\n",
+                "Otherwise, the only limits on this power are the imagination of its user and their ability to express it in a coherent way. In most cases, characters with this power prefer to make small changes so as to avoid any unforeseen consequences.\r\n\r\n",
+            ],
+            Examples = "Gwenpool, Kobik, Molecule Man, Beyonders",
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = NarrativePowerNames.Restart,
             Effect =
             [

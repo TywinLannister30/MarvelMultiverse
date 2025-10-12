@@ -78,6 +78,7 @@ public static class TeamNames
     public const string GreatLakesAvengers = "Great Lakes Avengers";
     public const string GreatRingOfArakko = "Great Ring of Arakko";
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
+    public const string GwenHive = "GwenHive";
     public const string HatefulHexad = "Hateful Hexad";
     public const string HEARTClinic = "H.E.A.R.T. Clinic";
     public const string HellLords = "Hell Lords";
@@ -119,6 +120,7 @@ public static class TeamNames
     public const string MidnightMission = "Midnight Mission";
     public const string MidnightSons = "Midnight Sons";
     public const string MightyAvengers = "Mighty Avengers";
+    public const string MODOK = "M.O.D.O.K.";
     public const string Morlocks = "Morlocks";
     public const string MultiversalAvengers = "Multiversal Avengers";
     public const string NewAvengers = "New Avengers";

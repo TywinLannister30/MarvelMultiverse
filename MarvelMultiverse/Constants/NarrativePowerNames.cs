@@ -9,5 +9,6 @@ public static class NarrativePowerNames
 	public const string DuplicateSelf = "Duplicate Self";
 	public const string InstantEvolution = "Instant Evolution";
     public const string MagicMasks = "Magic Masks";
+    public const string RealityManipulation = "Reality Manipulation";
     public const string Restart = "Restart";
 }

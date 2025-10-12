@@ -3447,6 +3447,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.ResizeOther,
+            Description = "The character can resize someone they are touching.",
+            PowerSets = [PowerSetNames.Resize],
+            Prerequsites = $"{PowerNames.Grow2} or {PowerNames.Shrink2}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Duration = Duration.Permanent,
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character can resize any person (and their clothing) they are touching. The character can resize the object as much as their own Grow or Shrink power would allow them to. If the target does not wish to be resized, the character must grab them first."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Resurrect,
             Description = "The character can help someone defy death.",
             PowerSets = [PowerSetNames.Healing],

@@ -236,6 +236,7 @@ public static class PowerNames
     public const string ReinforcedSkeleton = "Reinforced Skeleton";
     public const string Repulse = "Repulse";
     public const string ResizeObject = "Resize Object";
+    public const string ResizeOther = "Resize Other";
     public const string Resurrect = "Resurrect";
     public const string ReturnFire = "Return Fire";
     public const string ReverseMomentumThrow = "Reverse-Momentum Throw";

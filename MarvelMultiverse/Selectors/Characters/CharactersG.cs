@@ -7,6 +7,7 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersG
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
@@ -335,6 +336,105 @@ public class CharactersG
         },
         new()
         {
+            Name = "Ghost Rider (Johnny Blaze)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 5, resilience: 5, vigilance: 4, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Johnny Blaze"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Cursed),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Form"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlHellfire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicDemonicMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HellfireChains),
+                        powerSelector.GetPower(PowerNames.PenanceStare),
+                        powerSelector.GetPower(PowerNames.PossessVehicle),
+                        powerSelector.GetPower(PowerNames.SenseSins),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Johnathon “Johnny” Blaze",
+                Heights = [new() { Feet = 5, Inches = 10 }, new() { Feet = 6, Inches = 2 }],
+                Weights = [180,220],
+                Gender = Gender.Male,
+                Eyes = "Blue/none ",
+                Hair = "Blond/none",
+                Size = Size.Average,
+                DistinguishingFeatures = "Flaming skull for a head when transformed.",
+                Occupations = [OccupationName.Adventurer, OccupationName.Engineer],
+                Origins = [OriginName.SpiritOfVengeance],
+                Teams = [TeamNames.SavageAvengers, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "To cure his adoptive father Crash Simpson’s terminal illness, Johnny Blaze summoned Mephisto and made him an offer: save Simpson’s life in exchange for Blaze’s eternal servitude. Mephisto agreed, but as with all deals with the devil, there was a catch. Mere days later, not knowing that he had been cured, Simpson decided to go out in a blaze of glory and died attempting to perform a nearly impossible motorcycle stunt.",
+                    "Blaze, unfortunately, still had to hold up his end of the bargain. Mephisto imbued his new servant with an ancient Spirit of Vengeance named Zarathos, turning him into the brimstone daredevil known as Ghost Rider. Unable to fully control his dangerous new form, Blaze abandoned his remaining loved ones and began a lonely life on the road, traveling aimlessly from town to town and meting out justice to every criminal and demon foolish enough to cross his path.",
+                    "Over the years, Blaze’s travels have taken him just about everywhere. He’s fought alongside the likes of the Avengers and seen the sun rise in distant dimensions. On one adventure, he even managed to depose Mephisto and install himself as the King of Hell.",
+                    "Blaze has been depowered, repowered, killed and resurrected, and he’s reigned in Hell and served in Heaven. But no matter what happens to him, he always returns to the status quo: just him and Zarathos riding into the unknown."
+                ],
+                Personality =
+                [
+                    "For many years, Blaze and Zarathos resented each other. Blaze wanted to live a normal life, while the spirit wanted to wreak vengeance everywhere. Eventually, they reached something of an equilibrium. Blaze has resigned himself to the life of a Ghost Rider, and Zarathos holds back his thirst for vengeance when Blaze asks.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Ghost Rider (Robbie Reyes)",
             Rank = 5,
             Abilities = new Abilities
@@ -350,7 +450,8 @@ public class CharactersG
                 traitSelector.GetTrait(TraitNames.Interrogation),
                 traitSelector.GetTrait(TraitNames.Inventor),
                 traitSelector.GetTrait(TraitNames.Piloting),
-                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "2 (Partial Phase, Phase Self)"),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.PartialPhase),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.PhaseSelf),            
             ],
             Tags =
             [
@@ -386,7 +487,6 @@ public class CharactersG
                         powerSelector.GetPower(PowerNames.ElementalInfusion),
                         powerSelector.GetPower(PowerNames.ElementalProtection3),
                     ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -550,6 +650,108 @@ public class CharactersG
                 ]
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Giant-Man",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 2, resilience: 3, vigilance: 4, ego: 2, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow4),
+                        powerSelector.GetPower(PowerNames.GrowingAttack),
+                        powerSelector.GetPower(PowerNames.MacrodimensionalTravel),
+                        powerSelector.GetPower(PowerNames.MicrodimensionalTravel),
+                        powerSelector.GetPower(PowerNames.ResizeObject),
+                        powerSelector.GetPower(PowerNames.ResizeOther),
+                        powerSelector.GetPower(PowerNames.Shrink4),
+                        powerSelector.GetPower(PowerNames.ShrinkingDodge),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "insects"),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Henry Jonathan “Hank” Pym",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually 6'",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "usually 185 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTechPymParticles],
+                Teams = [TeamNames.Avengers],
+                Base = "Avengers Mansion",
+                History =
+                [
+                    "A brilliant young scientist, Hank Pym lost his first wife, Maria, when she was gunned down by members of the Hungarian secret police. Determined to create a world free of senseless violence, he vowed to use his scientific prowess for the betterment of all humanity.",
+                    "Pym’s first major discovery came in the form of Pym Particles, a mysterious substance that allows any who touch it to grow and shrink at will. Armed with these powers, Pym and his eventual second wife, the Wasp (Janet Van Dyne), became founding members of the heroic Avengers.",
+                    "Later on in life, a combination of stress and exposure to unstable Pym Particles sent Pym into a nervous breakdown, during which he struck the Wasp and became the first member of the Avengers to be formally removed from the team. The pair subsequently divorced. Though Pym’s mind eventually recovered, his past acts continued to haunt him, despite his struggles to redeem himself.",
+                    "Pym has gone by a number of titles over the years—Ant-Man, Yellowjacket, Goliath and even Wasp—but this profile represents him during his halcyon days, back when he was simply Giant-Man."
+                ],
+                Personality =
+                [
+                    "Pym’s blind ambition often drives him to create things the world would be better off without, including, most famously, the super villain Ultron. He’s spent countless hours trying to unmake the evil robot, but more often than not, his proposed solutions have only created more problems.",
+                    "In his best moments, Pym is a thoughtful inventor and a fearless hero. But in his worst, he can end up putting himself, and the people around him, in real danger."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1695,6 +1897,98 @@ public class CharactersG
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Gwenpool",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.MediaAwareness),
+                tagSelector.GetTag(TagNames.Mysterious),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DanceOfDeath),
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.RealityManipulation)
+            ],
+            Biography = new Biography
+            {
+                RealName = "Gwendolyn “Gwen” Poole",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond, with dyed pink tips",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Unknown],
+                Teams = [TeamNames.GwenHive, TeamNames.MODOK, TeamNames.WestCoastAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "Gwendolyn Poole grew up in a world much like our own, in which the heroes and villains of Earth-616 exist only as fictional characters. As a high-school dropout with few prospects in life, she spent her days holed up in her room, reading hundreds of comics, all the while wishing that she could be a Marvel character herself.",
+                    "Then, somehow, it happened. Poole was sucked onto the real Earth-616, where she immediately threw on a costume and began working her way up the ranks of the underworld as the unbelievable Gwenpool.",,
+                    "Poole’s awareness of Marvel tropes allowed her to quickly propel herself into a position of power, but success brought her no satisfaction. Eventually, she sought out her brother, Teddy, who tried to return them to their homeworld, but only stranded them in a similar-looking comic book dimension.",
+                    "Through sheer willpower, Poole pierced the veil of this false world and gained the ability to traverse the spaces between panels and rewrite the reality of comic books themselves. Shocked by the implications of her new powers, Poole returned to Earth-616 and rededicated herself to the life of a hero. Since then, she’s worked with the West Coast Avengers, the X-Men and even other versions of herself."
+                ],
+                Personality =
+                [
+                    "In her early days, Gwenpool was violent at best and outright murderous at worst. It took a long time for her to begin thinking of the denizens of Earth-616 as real people rather than fictional fodder.",
+                    "However, she’s since learned the error of her ways, and the super-hero community now knows her for what she is: an excitable nerd with a good heart. Though she loves romance stories, Poole personally identifies as asexual and aromantic."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
     ];
 }
