@@ -7,6 +7,7 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersH
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
@@ -374,26 +375,29 @@ public class CharactersH
         new()
         {
             Name = "Hawkeye (Clint Barton)",
-            Rank = 2,
+            Rank = 3,
             Abilities = new Abilities
             (
-                melee: 2, agility: 4, resilience: 1, vigilance: 2, ego: 0, logic: 1
+                melee: 2, agility: 6, resilience: 2, vigilance: 3, ego: 1, logic: 1
             ),
             Traits =
             [
                 traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
                 traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
                 traitSelector.GetTrait(TraitNames.Famous),
                 traitSelector.GetTrait(TraitNames.Fearless),
                 traitSelector.GetTrait(TraitNames.Presence),
                 traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.TechReliance),
             ],
             Tags =
             [
                 tagSelector.GetTag(TagNames.AuditoryIssues),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.PublicIdentity),
-                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Bow and arrow"),
                 tagSelector.GetTag(TagNames.Streetwise),
             ],
             Powers =
@@ -403,7 +407,8 @@ public class CharactersH
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Accuracy3),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Hawkeye’s Trick Quiver", isTech: true),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
@@ -422,10 +427,30 @@ public class CharactersH
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.DoubleTap),
-                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
                         powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Hawkeye’s Trick Quiver",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Toolkit),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "Each arrow the character shoots can have a different elemental effect of their choice."),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 1,
+                }
             ],
             Biography = new Biography
             {
@@ -437,20 +462,113 @@ public class CharactersH
                 Hair = "Blond",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = [OccupationName.Entertainer],
+                Occupations = [OccupationName.Adventurer, OccupationName.Entertainer],
                 Origins = [OriginName.SpecialTraining],
                 Teams = [TeamNames.Avengers, TeamNames.Thunderbolts],
                 Base = "Brooklyn, New York City",
                 History =
                 [
-                    "After his parents were killed in a tragic car accident, Clint Barton ran away to join the circus. Naturally talented, he quickly made a name as Hawkeye, one of the premier archers. Barton might have stayed a performer into his old age if a chance encounter hadn’t brought Iron Man to his circus. Inspired by Iron Man’s exploits, Barton created a costume and began fi ghting crime as Hawkeye.",
-                    "While Barton sometimes operates solo, he’s best known for his work with the Avengers. After years of such adventures, Barton trained and mentored Kate Bishop into becoming a second Hawkeye.",
+                    "After his parents were killed in a tragic car accident, Clint Barton ran away to join the circus. Naturally talented, he quickly made a name as Hawkeye, one of the premier archers. Barton might have stayed a performer into his old age if a chance encounter hadn’t brought Iron Man to his circus. Inspired by the hero’s exploits, Barton created a costume and began fighting crime as Hawkeye.",
+                    "Although Barton sometimes operates solo, he’s best known for his work with the Avengers. After years of such adventures, he trained and mentored Kate Bishop, the second Hawkeye.",
+                    "This profile represents the original sharpshooting Avenger at the height of his powers, fully decked out with a quiver of trick arrows."
                 ],
                 Personality =
                 [
-                    "Clint Barton is well aware that his lack of super-powers places the upper limits of his abilities well below those of most super heroes. He sometimes puts on an arrogant attitude to cover his insecurities. Barton is sometimes led astray by his passions, but his conscience always brings him back to the fi ght for justice.",
+                    "Clint Barton is well aware that his lack of super-powers places the upper limits of his abilities well below those of most super heroes. He sometimes puts on an arrogant attitude to cover his insecurities. Barton can be led astray by his passions, but his conscience always brings him back to the fight for justice.",
                 ]
-            }
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Hawkeye (Earth-1610)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 2, vigilance: 4, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Bow and arrow (acts as pistol)"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2, isTech: true),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1, isTech: true),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.Headshot),
+                        powerSelector.GetPower(PowerNames.SlowMotionShootDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Clint Barton",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.HighTechCybernetics, OriginName.SpecialTraining],
+                Teams = [TeamNames.SHIELD, TeamNames.Ultimates],
+                Base = "Mobile (Earth-1610)",
+                History =
+                [
+                    "At some point in his youth, Clint Barton got involved in a government Super-Soldier Program that gave him cybernetic eyes capable of perceiving targets from miles away. Though the implants were an unadulterated success, the program decided to cut Barton loose and move on to other attempts.",
+                    "In need of new employment, Barton used his enhanced eyes to become a world-renowned Olympic archer. Then, at the height of his fame, a mysterious incident landed him on death row for murder.",
+                    "To avoid execution, Barton joined S.H.I.E.L.D., where he became partners with the former Russian spy Black Widow (Natasha Romanov). The pair worked together for years and eventually joined S.H.I.E.L.D.’s super-team, the Ultimates.",
+                    "Unfortunately for Hawkeye, Black Widow’s true loyalties were to her homeland. In an attempt to dismantle the Ultimates from within, she attacked Hawkeye in his home and framed the assault on Captain America. Barton narrowly made it out of the encounter alive, but his wife, Laura, and their three young children—Callum, Lewis and Nicole—were all killed.",
+                    "Hawkeye later tracked Black Widow down and shot her dead, but revenge brought him no solace. He spent the next several months taking on increasingly dangerous and reckless assignments, hoping he’d get himself killed. Eventually, enough time passed for Hawkeye to return to his usual duties and even to accept a new Black Widow (Monica Chang) as part of the Ultimates, but the loss of his family still haunts him every second of the day."
+                ],
+                Personality =
+                [
+                    "Though not entirely humorless, Clint Barton is a far darker person than his freewheeling Earth-616 counterpart. He’s fought in multiple wars, and he’s a master of black ops.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
