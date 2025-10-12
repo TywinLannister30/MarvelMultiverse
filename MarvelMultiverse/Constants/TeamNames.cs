@@ -105,6 +105,7 @@ public static class TeamNames
     public const string LegionOfMonsters = "Legion of Monsters";
     public const string Legionnaires = "Legionnaires";
     public const string LethalLegion = "Lethal Legion";
+    public const string Liberators = "Liberators";
     public const string LivingArmada = "The Living Armada (Brood fleet)";
     public const string Loners = "Loners";
     public const string LordsOfTheSplinterRealms = "Lords of the Splinter Realms";

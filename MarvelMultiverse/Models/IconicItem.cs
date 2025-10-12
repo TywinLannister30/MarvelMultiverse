@@ -4,6 +4,13 @@ namespace MarvelMultiverse.Models;
 
 public class IconicItem
 {
+    public IconicItem()
+    {
+        GrantedPowerReminders = [];
+    }
+
+    public bool IsBattlesuit { get; set; }
+
     public string Name { get; set; }
 
     public List<IconicItemPower> Powers { get; set; }

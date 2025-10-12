@@ -1321,21 +1321,21 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.Telepathy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.AnimalCommunication, specialization: "Ants"),
-                    ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
                     Name = PowerSetNames.Resize,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ResizeObject),
                         powerSelector.GetPower(PowerNames.Shrink4),
                         powerSelector.GetPower(PowerNames.ShrinkingDodge),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, specialization: "Ants"),
                     ],
                     IsTech = true
                 },

@@ -1,13 +1,13 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
-using System;
 
 namespace MarvelMultiverse.Selectors.Characters;
 
 public class CharactersB
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
@@ -1027,6 +1027,104 @@ public class CharactersB
         },
         new()
         {
+            Name = "Black Ant",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 4, vigilance: 3, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                        powerSelector.GetPower(PowerNames.ResizeObject),
+                        powerSelector.GetPower(PowerNames.Shrink4),
+                        powerSelector.GetPower(PowerNames.ShrinkingDodge),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, specialization: "bugs"),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Eric O’Grady",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "normally 5'9\"",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "normally 168 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechAndroid, OriginName.HighTechPymParticles],
+                Teams = [TeamNames.LethalLegion, TeamNames.SecretAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "During a brief period when the second Ant-Man (Scott Lang) was thought dead, S.H.I.E.L.D. hired the original Ant-Man (Hank Pym) to create a new version of the hero. The organization planned to hold tryouts among their top members to pick a new Ant-Man based on their performance, but before S.H.I.E.L.D. could make a decision, an unscrupulous low-level agent named Eric O’Grady stole Pym’s Ant-Man suit and ran off, dreaming of evading the law while achieving fame and fortune as an independent adventurer. He ultimately failed on both counts, though after he was captured and brought back home, S.H.I.E.L.D. decided to let him keep being Ant-Man.",
+                    "During a mission with the Secret Avengers, O’Grady was killed by a race of evil androids known as the Descendants and secretly replaced with a robotic replica. Going under the codename Black Ant, this evil version of O’Grady attempted to wipe out the Avengers, but before he could, Valkyrie (Brunnhilde) uncovered the deception and destroyed him.",
+                    "Black Ant was later rebuilt by the Mad Thinker and briefly enlisted into the Hood’s Illuminati before being betrayed by his own team and once again destroyed. He later reappeared in the employ of Taskmaster, working as a mercenary."
+                ],
+                Personality =
+                [
+                    "Even when he was a human, Black Ant was a creature of greed and opportunism driven primarily by his hedonistic impulses. He struggles with his existence as a Life-Model Decoy and grows increasingly disillusioned with his lot in life every time his body is rebuilt.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Black Bolt",
             Rank = 5,
             Abilities = new Abilities
@@ -1237,6 +1335,221 @@ public class CharactersB
         },
         new()
         {
+            Name = "Black Dwarf",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 1, resilience: 6, vigilance: 4, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Thanos’ army)"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureItem, specialization: "Ax (acts as sword)"),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Black Dwarf",
+                Heights = [new() { Feet = 7, Inches = 3 }],
+                Weights = [669],
+                Gender = Gender.Male,
+                Eyes = "Yellow",
+                Hair = "None (brown tendrils on head resemble hair)",
+                Size = Size.Big,
+                DistinguishingFeatures = "Bright yellow eyes, scaly skin, spiked fists, sharpened teeth, tendrils for hair",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.BlackOrder],
+                Base = "Mobile",
+                History =
+                [
+                    "Despite being the largest and angriest member of Thanos’ Black Order, Black Dwarf may have the worst track record of all the Titan’s generals. During Thanos’ last invasion of Earth, Dwarf led a costly and ultimately pointless campaign into Wakanda. In an attempt to make up for his mistakes, Dwarf tried to take on the Avengers all on his own. He was almost immediately killed.",
+                    "Months later, Dwarf was resurrected, long after Thanos himself had perished. With nowhere else to go, Dwarf returned to the company of his old comrades in the Black Order.",
+                    "These days, the Order works as mass killers for hire. They take any job that pays and at least piques their interest."
+                ],
+                Personality =
+                [
+                    "Black Dwarf cares little for what may be technically correct on a tactical level. If the other members of the Black Order are scalpels, Dwarf is a hammer. He overwhelms his enemies with raw strength, attacking with reckless and joyful abandon.",
+                    "Although he may have a short temper, Dwarf is not, as many have assumed him to be, stupid. Like all of Thanos’ former generals, he speaks in a sophisticated and formal manner and maintains a subtle air of superiority at all times."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Black Knight",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 2, resilience: 3, vigilance: 4, ego: 2, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Ebony Blade"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+             IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Ebony Blade\r\n",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.BoltsOfBalthakk),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DispelSpell),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.PowerSlider} (Blood Curse)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SenseSupernatural),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ShieldOfTheSeraphim),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Unkillable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus: +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Blood Curse: If the user gets a Fantastic success on an attack with this weapon and causes bleeding, their powers are boosted. However, they also gain the Bloodthirsty trait. If they kill someone while Bloodthirsty, they lose their Heroic tag."),
+                        powerSelector.GetPower(PowerNames.SenseSupernatural),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Menacing",
+                        "Unkillable power usable only by descendants of King Arthur"
+                    ],
+                    PowerValue = 7,
+                    MeleeDamageModifier = 2,
+                    IsMagicItem = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Dane Whitman",
+                Heights = [new() { Feet =6 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.MagicSorcery],
+                Teams = [TeamNames.Avengers, TeamNames.Defenders, TeamNames.SavageAvengers],
+                Base = "Garrett Castle",
+                History =
+                [
+                    "Centuries ago, the great wizard Merlin, having either forged or found the cursed Ebony Blade (stories differ), gifted the weapon to the one man he trusted to wield it: the loyal Sir Percival. True to his word, Percival faithfully executed the will of King Arthur as the brutal but noble Black Knight.",
+                    "When Percival died, he passed the blade down to his descendants, and they onto theirs, and so on into the modern era, when it passed into the hands of the unscrupulous Nathan Garrett.",
+                    "Though the blade rejected Garrett, he nonetheless took on the title of Black Knight and set out to seek fame and fortune with the Masters of Evil. Shortly thereafter, he sustained fatal injuries battling Iron Man (Tony Stark) and, having seen the error of his ways, used his final hours to transfer all his possessions to his nephew: a humble scientist named Dane Whitman. Determined to redeem his family’s name, Whitman took up the Ebony Blade and, in the guise of his uncle, infiltrated the Masters of Evil and destroyed it from within, earning himself a place of honor among the Avengers.",
+                    "Since then, Whitman’s adventures have taken him to strange places all across time and space, leaving him little opportunity for a personal life. However, he recently reconnected with his long-lost daughter, Jackie Chopra, and he now shares with her the title of Black Knight."
+                ],
+                Personality =
+                [
+                    "Though his noble heart forces him to continue onward, Whitman does not actually like being the Black Knight. The burden of wielding the Ebony Blade, which constantly pushes him to commit terrible violence, causes him endless stress. To help keep himself levelheaded, he often speaks in an affected medieval accent.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Black Knights / Fenris Twins",
             Rank = 3,
             Abilities = new Abilities
@@ -1336,31 +1649,35 @@ public class CharactersB
         },
         new()
         {
-            Name = "Black Panther (T’Challa)",
-            Rank = 4,
+            Name = "Black Panther (Shuri)",
+            Rank = 5,
             Abilities = new Abilities
             (
-                melee: 7, agility: 4, resilience: 3, vigilance: 3, ego: 2, logic: 1
+                melee: 7, agility: 4, resilience: 3, vigilance: 4, ego: 2, logic: 5
             ),
             Traits =
             [
                 traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
                 traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
-                traitSelector.GetTrait(TraitNames.Famous),
-                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Inventor),
                 traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
                 traitSelector.GetTrait(TraitNames.TechReliance),
             ],
             Tags =
             [
                 tagSelector.GetTag(TagNames.Authority),
-                tagSelector.GetTag(TagNames.Enemy, specialization: "Killmonger"),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.Headquarters, specialization: "Wakanda"),
                 tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
                 tagSelector.GetTag(TagNames.Obligation, specialization: "Wakanda"),
                 tagSelector.GetTag(TagNames.Powerful),
                 tagSelector.GetTag(TagNames.PublicIdentity),
-                tagSelector.GetTag(TagNames.Rich),
                 tagSelector.GetTag(TagNames.Supernatural),
             ],
             Powers =
@@ -1370,14 +1687,9 @@ public class CharactersB
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
                         powerSelector.GetPower(PowerNames.HeightenedSenses1),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Electrified vibranium claws [+1 damage multiplier]",
-                            meleeDamageModifier: 1,
-                            agilityDamageModifier: 1),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Black Panther’s Claws", isTech: true),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
                         powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
@@ -1391,10 +1703,145 @@ public class CharactersB
                         powerSelector.GetPower(PowerNames.AlwaysReady),
                         powerSelector.GetPower(PowerNames.AttackStance),
                         powerSelector.GetPower(PowerNames.BraceForImpact),
-                        powerSelector.GetPower(PowerNames.ChainStrikes),
                         powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
                         powerSelector.GetPower(PowerNames.DoThisAllDay),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                        powerSelector.GetPower(PowerNames.OperationsCenter),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Black Panther’s Claws",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AntiMetal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Shuri",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [127],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader, OccupationName.Scientist],
+                Origins = [OriginName.HighTech, OriginName.Magic],
+                Teams = [TeamNames.PantherCult],
+                Base = "Wakanda",
+                History =
+                [
+                    "As the lone daughter of the Wakandan royal family, Shuri was narrowly defeated by her brother, T’Challa, in a contest to determine the next Wakandan regent, the Black Panther. Although she had long dreamed of becoming the Panther, Shuri did not let her envy consume her. Instead, she set out to make a name for herself in her own right.",
+                    "Shuri’s brilliant mind and natural combat skills make her a fighter on par with T’Challa. In times of national upheaval, she has temporarily accepted the title of Black Panther, but more often, she works as an advocate for the Wakandan people under her own name—and to great success. This profile, however, represents Shuri during periods when she has taken on the mantle of the Panther and the responsibility of defending her country in battle.",
+                ],
+                Personality =
+                [
+                    "Shuri sometimes resents the disproportionate amount of attention and power given to her brother, but her love for him and the Wakandan people outweighs all that. Eloquent, personable and incredibly sharp, she has proven herself an excellent leader.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Black Panther (T’Challa)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 4, resilience: 3, vigilance: 4, ego: 2, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Killmonger"),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Wakanda"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "Wakanda"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Black Panther’s Claws", isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AlwaysReady),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
                         powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 },
                 new CharacterPowerSet
@@ -1410,6 +1857,25 @@ public class CharactersB
                     ],
                 },
             ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Black Panther’s Claws",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AntiMetal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    IsTech = true
+                }
+            ],
             Biography = new Biography
             {
                 RealName = "T’Challa",
@@ -1420,20 +1886,22 @@ public class CharactersB
                 Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
-                Occupations = [OccupationName.Leader],
+                Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.HighTech, OriginName.Magic],
                 Teams = [TeamNames.AgentsOfWakanda, TeamNames.Avengers, TeamNames.FantasticFour, TeamNames.PantherCult, TeamNames.Ultimates],
-                Base = "Wakanda",
+                Base = "Impossible City",
                 History =
                 [
                     "As the young heir of Wakanda, T’Challa went through a grueling series of tests to prove his worthiness to become the Black Panther and lead his nation, the most technologically advanced country on the planet. At one point, he lost the powers given to him as the Black Panther by the heart-shaped herb, but he regained them by pledging himself to the panther god Bast and becoming King of the Dead, ruler of the Necropolis under Wakanda.",
-                    "Today, T’Challa not only leads Wakanda and the Avengers but also the Agents of Wakanda, which provides support for the Avengers on their vital missions. He also spends as much time as he can with his ex-wife, Storm, with whom he has renewed their romance.",
+                    "In the years since his ascension to the throne, T’Challa has served as an astoundingly effective leader, not only for Wakanda but also for international super-teams like the Avengers. After introducing democracy to Wakanda in the form of a parliament that he oversaw as king, T’Challa suffered a series of public embarrassments and a brief spat with the Avengers that led to the parliament ousting T’Challa and abolishing the throne.",
+                    "Though T’Challa is still a member of the Avengers, he’s been going on long away missions as of late, so as to avoid any awkward confrontations with his teammate and ex-wife, Storm."
                 ],
                 Personality =
                 [
-                    "T’Challa is serious, competent and regal. He was born to his position, but knew that he would always have to work hard to attain it and keep it. He takes nothing for granted, especially his responsibilities, the greatest of which is the welfare of his people. While Wakandan to his core, he was educated in Europe and America.",
+                    "T’Challa is serious, competent and regal. He takes nothing for granted, especially his responsibilities, the greatest of which is the welfare of his people. He has an unrivaled mind for tactics and can hold his own in a contest of wits with the smartest people on the planet.",
                 ]
-            }
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1549,6 +2017,111 @@ public class CharactersB
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Black Swan",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 4, vigilance: 6, ego: 3, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "English, various alien languages"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Yabbat Ummon Turru",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [145],
+                Gender = Gender.Female,
+                Eyes = "Blue (glow red when using powers)",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "Unnaturally pale skin",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.BlackOrder],
+                Base = "Mobile",
+                History =
+                [
+                    "Yabbat Tarru was raised as the youngest princess of a strict and oppressive royal family on an alternate Earth where the stars never shine and the last vestiges of intelligent life in the universe have fled underground. As grim as her reality was, it took a significant turn for the worse when an army of interdimensional warriors known as Black Swans slaughtered all the people of her planet.",
+                    "The leader of the invading army—secretly Doctor Doom—spared her from death, but only so that she too could one day become a Black Swan. The final remnants of Tarru’s world were swallowed up by an incursion, so with nowhere else to go, she assented to Doom’s demands and entered into his service.",
+                    "Many years later, when Doom finally turned his army on Earth-616, Tarru took the opportunity to abandon him for another warlord: Thanos. Proving herself in battle against Doom, she quickly earned a position within the Mad Titan’s inner circle—the Black Order—and though Thanos was killed shortly after she joined the organization, she stuck with the Black Order for a time."
+                ],
+                Personality =
+                [
+                    "Unlike the rest of the Black Order, Swan is not wholly committed to Thanos or to his mission of mass murder. Her particular brand of evil emerges more from a place of nihilistic sorrow than bloodthirstiness. She seeks power because she believes it is the only way to protect herself from an uncaring and merciless universe.",
+                    "Swan may maintain the self-superior air of an otherworldly princess, but her every word is tinged with insecurity and quiet melancholy. If any member of the Black Order can be reasoned with, it is her."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1690,8 +2263,8 @@ public class CharactersB
                     Name = PowerSetNames.RangedWeapons,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Sniping),
                         powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
@@ -1729,6 +2302,262 @@ public class CharactersB
                     "Charming and cool-headed, Natasha’s personality makes her an excellent spy. A life of espionage has made her slow to trust others, but those closest to her consider her a good friend and an exceptional team leader.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Black Widow (with Symbiote)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 3, vigilance: 3, ego: 4, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Anathema, specialization: "Extreme Heat / Extreme Sonics"),
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese, English, French, German, Japanese, Russian"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Widow’s Bite", isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Widow’s Bite",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "These blasts can count as either Electricity attacks or Force attacks."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 1,
+                    AgilityDamageModifier = 1,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Natasha Romanoff",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [131],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.SpecialTraining, OriginName.Symbiote],
+                Teams = [TeamNames.Avengers, TeamNames.InfinityWatch, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Trained from a young age to be a Russian special agent, Natasha Romanoff defected to the United States after clashing with the Avengers. Since then, Natasha has served as a vital ally to many of the most powerful organizations on the planet, particularly S.H.I.E.L.D. and the Avengers.",
+                    "Natasha spent much of her career as a solo mercenary, doing high-level black ops for paying clients. She tries to never take a job she believes to be immoral, but in the world of espionage, things are not always so clear-cut.",
+                    "Recently, while investigating the corporate conglomerate Alchemax, Romanoff encountered an offshoot of the Venom symbiote named Sliver and willingly bonded with it, making the creature her new partner in crime. Though Sliver later disappeared while helping her defeat other Alchemax experimental symbiotes, this profile represents Romanoff and Sliver when they were together, at the height of their powers."
+                ],
+                Personality =
+                [
+                    "Charming and cool-headed, Natasha’s personality makes her an excellent spy. A life of espionage has made her slow to trust others, but those closest to her consider her a good friend and an exceptional team leader.",
+                    "Her partner, Sliver, is soft-spoken and cooperative—unusually so for a symbiote. It’s a young organism with a lot to learn, and it looks up to Romanoff as an almost mother-like figure."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Black Widow (Earth-1610)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 3, vigilance: 3, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Black Widow’s Battle Suit",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn",
+                    ],
+                    PowerValue = 6,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Natasha Romanoff",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Green",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.SpecialTraining],
+                Teams = [TeamNames.Liberators, TeamNames.Ultimates],
+                Base = "Mobile",
+                History =
+                [
+                    "On Earth-1610, Natasha Romanov pretended to defect from Russia as part of a ploy to infiltrate S.H.I.E.L.D. and take down the organization from within. While working for S.H.I.E.L.D., she became partners with Hawkeye (Clint Barton).",
+                    "At first, S.H.I.E.L.D. seemed impossible for Black Widow to destroy, but then came the Ultimates and, with them, chaos. Although initially enlisted as a backup member for the super-team, Romanov eventually wriggled her way onto the main roster, seduced Iron Man (Tony Stark) and convinced him to build her a battle suit. In the meantime, she funneled intel to an underground group of anti-imperialist terrorists called the Liberators.",
+                    "In advance of a massive Liberator attack, Romanov helped turn the Ultimates against one another by murdering Hawkeye’s family and framing Captain America. When the Liberators’ coordinated assault launched, she tried to kill Iron Man too, but Stark managed to turn the tables and incapacitate her. The authorities arrested her and took her to a local hospital, where Hawkeye shot her down in cold blood.",
+                    "Romanov has seemingly been dead for years now, but this profile represents her at the height of her powers, armed with a top-of-the-line battle suit."
+                ],
+                Personality =
+                [
+                    "Romanov is a die-hard Russian patriot who despises the United States and romanticizes the Soviet Union. She would do anything to restore her home country to what she perceives as its former glory.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -2477,6 +3306,75 @@ public class CharactersB
                 ]
             },
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = "Bruce Banner",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 0, resilience: 0, vigilance: 1, ego: 0, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "gamma forms"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Abomination"),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Leader"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "gamma forms"),
+                tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Robert Bruce Banner",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [128],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScienceGammaMutate],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD, TeamNames.USHulkOperations],
+                Base = "Mobile",
+                History =
+                [
+                    "Bruce Banner was just a mild-mannered nuclear physicist until the day he stepped out onto a bomb-testing range to save a young man (Rick Jones) who had wandered onto the site. Jones escaped unharmed, but the bomb blasted Banner with gamma rays. The radiation should have killed him, but instead, he gained the ability to transform into the Hulk—an unstoppable monster brought out by the scientist’s own rage.",
+                    "Highly powerful and just as unstable, the Hulk has been involved in more major international incidents than just about any super-powered person in existence. Some people consider him a hero. Others consider him a threat worth waging war over."
+                ],
+                Personality =
+                [
+                    "Banner suffers from dissociative identity disorder. Depending on the circumstances, he can manifest any one of a half dozen separate personalities, each with their own corresponding Hulk transformation. Banner’s default personality is cool, collected and deeply empathetic. The rest are all over the map. Some are impressively cunning, while others are more like angry children.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
