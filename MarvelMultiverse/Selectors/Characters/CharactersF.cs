@@ -7,11 +7,204 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersF
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
         ITraitSelector traitSelector) =>
     [
+        new()
+        {
+            Name = "Falcon (Joaquin Torres)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 2, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Captain America (Sam Wilson)"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "known to allies"),
+                tagSelector.GetTag(TagNames.Young),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection, isTech: true),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "Redwing"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Joaquin Torres",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [160],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Human/falcon hybrid with wings and talons",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Champions],
+                Base = "Mobile",
+                History =
+                [
+                    "As an immigrant, Joaquin Torres considered it his duty to make the deadly passage across the U.S. southern border desert easier for those who came after him. He stuck his neck out to deliver food and water to people in desperate need, and in exchange for his troubles, both he and the people he was trying to help were kidnapped by the Sons of the Serpent and turned into human-animal hybrids.",
+                    "Torres’ DNA was spliced with that of Redwing, the pet falcon of Captain America (Sam Wilson). Wilson himself later liberated the Serpent compound, and in time, all the subjects of the experiments reverted to their original forms—except for Torres.",
+                    "Wilson took Torres on as his apprentice, and Torres in turn adopted Wilson’s old codename, the Falcon. Together, the pair discovered that Redwing had been carrying a weakened form of the virus that causes vampirism, and that the virus was preventing Torres from returning to normal.",
+                    "Driven by a desire to help others, Torres kept on as Wilson’s apprentice and even joined the Champions in their fight against the Secret Empire. Later, while preventing a terrorist attack, Torres was dosed with poison that activated the weakened form of the vampirism virus he’d inherited. This made him more powerful and volatile until he reluctantly accepted treatment from Wakandan scientists. With his mutations under control, Falcon is now Wilson’s permanent partner."
+                ],
+                Personality =
+                [
+                    "Despite the darkness that he’s faced with every day, Falcon always manages to stay positive. In fact, he’s overjoyed to have been given a chance to push back against the evil he sees in the world. He and Wilson have similarly dry senses of humor, and their rapport as partners is unmatched.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Falcon (Sam Wilson)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 5, resilience: 3, vigilance: 3, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.FocusedStrike),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "Redwing"),
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, reminder: "birds"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Samuel Thomas “Sam” Wilson",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [240],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTech, OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD],
+                Base = "New York City",
+                History =
+                [
+                    "Sam Wilson grew up as an orphan in Harlem. As an adult, he was determined to give back to the community that raised him. He was helping out as a social worker when a fateful encounter with the Red Skull and a Cosmic Cube granted him super-strength and the ability to communicate with birds.",
+                    "Shortly thereafter, Wilson ran into Steve Rogers— the original Captain America. Wilson and Rogers became fast friends, and together, they defeated the Red Skull. Subsequently, Rogers and Wilson became crimefi ghting partners: Captain America and the Falcon.",
+                    "Wilson gradually developed a prowess in battle to rival Rogers’ own. At times when Rogers has been unwilling or unable to take up the mantle of Captain America, Wilson has taken his place. Nowadays, both Wilson and Rogers go by the codename of Captain America.",
+                    "This profile represents Wilson before he donned the Stars and Stripes, back when he was known as the Falcon."
+                ],
+                Personality =
+                [
+                    "Even more so than Rogers, Wilson’s defi ning trait is his love for the downtrodden. His one goal in life is to use his powers for the protection of the weak and the oppressed.",
+                    "Although Wilson is generally a serious man, he has a soft spot for those closest to him, particularly his avian companion Redwing."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
         new()
         {
             Name = "Fang",
