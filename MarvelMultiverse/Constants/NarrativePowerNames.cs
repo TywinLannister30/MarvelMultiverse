@@ -2,6 +2,7 @@
 
 public static class NarrativePowerNames
 {
+    public const string Absorption = "Absorption";
     public const string CannotLose = "Cannot Lose";
     public const string CorruptingTouch = "Corrupting Touch";
     public const string DNAManipulation = "DNA Manipulation";

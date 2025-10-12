@@ -2,6 +2,7 @@
 
 public static class TeamNames
 {
+    public const string ANext = "A-Next";
     public const string AberrantCrimesDivisionOfTheFBI = "Aberrant Crimes Division (ACD) of the F.B.I.";
     public const string ActionPack = "ActionPack";
     public const string Acolytes = "Acolytes";
@@ -45,6 +46,7 @@ public static class TeamNames
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";
     public const string DoraMilaje = "Dora Milaje";
+    public const string DreamTeam = "Dream Team";
     public const string EmissariesOfEvil = "Emissaries of Evil";
     public const string Eternals = "Eternals";
     public const string Excalibur = "Excalibur";
@@ -116,6 +118,7 @@ public static class TeamNames
     public const string MidnightSons = "Midnight Sons";
     public const string MightyAvengers = "Mighty Avengers";
     public const string Morlocks = "Morlocks";
+    public const string MultiversalAvengers = "Multiversal Avengers";
     public const string NewAvengers = "New Avengers";
     public const string NewMutants = "New Mutants";
     public const string NewWarriors = "New Warriors";
@@ -150,6 +153,7 @@ public static class TeamNames
     public const string SinisterSix = "Sinister Six";
     public const string SinisterTwelve = "Sinister Twelve";
     public const string SisterhoodOfMutants = "Sisterhood of Mutants";
+    public const string SkarkaWarriorTribe = "Skarka Warrior Tribe";
     public const string SkeletonCrew = "Skeleton Crew";
     public const string SkrullEmpire = "Skrull Empire";
     public const string SkrullKillKrew = "Skrull Kill Krew";
@@ -178,6 +182,7 @@ public static class TeamNames
     public const string TheSpiderSlayerSeries = "The Spider-Slayer Series";
     public const string TheVermin = "The Vermin";
     public const string ThievesGuild = "Thieves' Guild";
+    public const string ThorCorps = "Thor Corps";
     public const string ThunderboltPoliceDepartment = "Thunderbolt Police Department";
     public const string Thunderbolts = "Thunderbolts";
     public const string TNM = "TNM";

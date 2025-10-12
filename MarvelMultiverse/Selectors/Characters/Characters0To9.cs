@@ -7,6 +7,7 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class Characters0To9
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
@@ -96,7 +97,8 @@ public class Characters0To9
                 [
                     "3-D Man is as quick with a joke as he is on his feet. Perpetually underestimated, he has a talent for foresight and strategy, making him immensely capable both on the battlefield and in the war room.",
                 ]
-            }
+            },
+            Source = BookSource.AvengersExpansion
         },
     ];
 }

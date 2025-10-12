@@ -2213,6 +2213,17 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.IconicItem,
+            PowerSets = [],
+            Prerequsites = "None",
+            Duration = Duration.Permanent,
+            Effect =
+            [
+                "Iconic items are amazing tools that amplify or add to a character’s powers, and they can come in many forms. The most common one—as seen in the Core Rulebook and in many profiles—is the iconic weapon.",
+            ]
+        },
+        new()
+        {
             Name = PowerNames.IconicWeapon,
             PowerSets = [],
             Prerequsites = "None",

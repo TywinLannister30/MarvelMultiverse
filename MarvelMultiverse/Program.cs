@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<ICharacterSelector, CharacterSelector>();
+builder.Services.AddTransient<IIconicItemPowerSelector, IconicItemPowerSelector>();
 builder.Services.AddTransient<IOccupationSelector, OccupationSelector>();
 builder.Services.AddTransient<IOriginSelector, OriginSelector>();
 builder.Services.AddTransient<IPowerSelector, PowerSelector>();

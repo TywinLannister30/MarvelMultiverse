@@ -153,6 +153,7 @@ public static class PowerNames
     public const string HurledShieldBash = "Hurled Shield Bash";
     public const string HurledShieldBlock = "Hurled Shield Block";
     public const string HurledShieldDeflection = "Hurled Shield Deflection";
+    public const string IconicItem = "Iconic Item";
     public const string IconicWeapon = "Iconic Weapon";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
     public const string Illumination = "Illumination";

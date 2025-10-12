@@ -31,6 +31,8 @@ public class Character
 
     public List<string> PowerNotes { get; set; }
 
+    public List<IconicItem> IconicItems { get; set; }
+
     public Biography Biography { get; set; }
 
     public string Source { get; set; }
@@ -169,7 +171,7 @@ public class Character
         if (Powers.Any(x => x.Powers.Any(p => p.ClimbSpeedEqualToBaseSpeed)))
             Speed.Climb = baseSpeed;
 
-        if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)))
+        if (Powers.Any(x => x.Powers.Any(p => p.FlySpeed)) || IconicItems?.Any(i => i.Powers.Any(p => p.FlySpeed)) == true)
             Speed.Flight = flightBaseSpeed * Rank;
 
         if (Powers.Any(x => x.Powers.Any(p => p.GlideSpeed)))
@@ -189,7 +191,7 @@ public class Character
         if (Powers.Any(x => x.Powers.Any(p => p.SwimSpeedMultipliedByRank)))
             Speed.Swim = Speed.Swim * Rank;
 
-        if (Powers.Any(x => x.Powers.Any(p => p.SwinglineSpeed)))
+        if (Powers.Any(x => x.Powers.Any(p => p.SwinglineSpeed)) || IconicItems?.Any(i => i.Powers.Any(p => p.SwinglineSpeed)) == true)
             Speed.Swingline = baseSpeed * 3;
     }
 
@@ -209,6 +211,12 @@ public class Character
         Abilities.Agility.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.AgilityDamageModifier));
         Abilities.Ego.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.EgoDamageModifier));
         Abilities.Logic.DamageModifier = Rank + Powers.Sum(x => x.Powers.Sum(p => p.LogicDamageModifier));
+
+        if (IconicItems != null && IconicItems.Count > 0)
+        {
+            Abilities.Melee.DamageModifier += IconicItems.Sum(i => i.MeleeDamageModifier);
+            Abilities.Agility.DamageModifier += IconicItems.Sum(i => i.AgilityDamageModifier);
+        }
 
         if (Biography.Size == Size.Little)
             Abilities.Melee.DamageModifier -= 2;

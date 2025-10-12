@@ -7,6 +7,7 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersA
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
@@ -165,6 +166,133 @@ public class CharactersA
                     "As the Abomination, Blonsky is highly intelligent and coherent, much unlike the Hulk often is. He’s also a self-assured egomaniac who is abusive even to those closest to him. He desires the death of the Hulk so that he can prove his physical and mental superiority. Blonsky is rarely reasonable, except on the rare occasion when he has to deal with someone clearly more powerful than himself.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Absorbing Man",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 1, resilience: 6, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "when using powers"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Ball & Chain", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsBlunt,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = $"{PowerSetNames.PowerControl} (Limited to Touched Objects)",
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ClonePowers),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            NarrativePowers =
+            [
+                narrativePowerSelector.GetNarrativePower(NarrativePowerNames.Absorption)
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Absorbing Man’s Ball & Chain",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReturnsWhenThrown),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach +1/10, Melee/Agility Damage Multiplier bonus: +1/+1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Use: Must use the same effect options as the Absorbing Man."
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1,
+                    IsMagicItem = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Carl “Crusher” Creel",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [270],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.AstonishingAvengers, TeamNames.GammaFlight, TeamNames.MastersOfEvil],
+                Base = "New York City",
+                History =
+                [
+                    "As a low-level boxer and mob enforcer already saddled with a lengthy prison sentence, Crusher Creel’s fate seemed set, and nobody expected much from him. Nobody except Loki.",
+                    "Hoping to use Creel as a tool against Thor Odinson, the Trickster God slipped an enchanted serum into Creel’s food, which granted him the ability to absorb the physical properties of anything he touched. Creel immediately turned himself into steel and smashed out of the joint, conveniently putting him right in Thor’s path.",
+                    "Creel overpowered the Thunder God and nearly killed him, but on the verge of defeat, Thor opened an underground pocket of helium and tricked Creel into absorbing its properties, literally turning the Absorbing Man into thin air.",
+                    "Creel later reincorporated and made further attempts to menace Thor—and Thor’s allies, like the Avengers—but these bouts almost always ended in the same way as his debut: with him accidentally defeating himself.",
+                    "Eventually, Creel gave up on becoming a big-name solo villain and took a job with the Masters of Evil, where he fell in love with and married his teammate Titania. The pair settled down for a little while before returning to the field as independent mercenaries for hire. They try to keep their home and professional lives separate, but their career choices don’t make it easy."
+                ],
+                Personality =
+                [
+                    "Despite his imposing appearance, Crusher Creel is a simple man of little ambition. He has kept on as a criminal mercenary because it’s the thing he’s best at and because he believes the authorities would never cut him any breaks. He’d be perfectly happy spending a quiet, middle-class life at home with Titania, but they both know that’s not really in the cards.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -535,6 +663,146 @@ public class CharactersA
         },
         new()
         {
+            Name = "All-Father Thor",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 4, resilience: 8, vigilance: 4, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Gorr the God Butcher"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+                tagSelector.GetTag(TagNames.Worthy, reminder: "Mjolnir"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Mjolnir", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Need (represents the All-Power)"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.WeatherControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ControlFog),
+                        powerSelector.GetPower(PowerNames.ControlWeather4),
+                        powerSelector.GetPower(PowerNames.Thunder),
+                        powerSelector.GetPower(PowerNames.WeatherChill),
+                        powerSelector.GetPower(PowerNames.WeatherWarm),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new()
+                {
+                    Name = "Mjolnir",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AsgardianTransformation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.SummonPortal)
+                    ],
+                    Restrictions =
+                    [
+                        $"Can only be used by someone with the {TagNames.Worthy} tag.",
+                        "Carried",
+                        "Flashy",
+                    ],
+                    PowerValue = 22,
+                    PowerValueReminder = "2 for Thor, since he already has most of the powers granted",
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Thor Odinson",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [640],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader, OccupationName.Outsider],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.Avengers, TeamNames.GodsOfAsgard, TeamNames.ThorCorps],
+                Base = "Asgard",
+                History =
+                [
+                    "As the son of Odin—ruler of the Asgardian gods—Thor was destined for greatness. Raised alongside his adopted brother, Loki—the God of Mischief—Thor had many adventures as a youth. When Odin realized Thor needed to learn humility, he erased Thor’s memories and sent him to Earth as medical student Donald Blake. After learning his lesson, the God of Thunder recovered his powers and memories and served both Asgard and Earth as Thor.",
+                    "Following Thor’s victory over Malekith in the War of the Realms and Odin’s death, the Thunder God became the new All-Father of Asgard. Despite his status as Asgard’s ruler, Thor still prefers to spend most of his time as an active hero.",
+                    "These days, the All-Father’s primary concern has been preparing for the coming of the Utgard gods—ancient deities who predate the Asgardians themselves. Against these unfathomably powerful creatures, even the All-Power may fail."
+                ],
+                Personality =
+                [
+                    "Thor can be grim when faced with his responsibilities, but he feels most himself when given something he can strike with his enchanted hammer, Mjolnir—preferably a worthy foe. There is little he enjoys more than a drink with his compatriots after a well-fought battle. Despite all his time on Earth—and in America—he still speaks with an Asgardian accent and often in an old-fashioned way.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Alpha Primitive",
             Rank = 1,
             Abilities = new Abilities
@@ -714,6 +982,118 @@ public class CharactersA
                     "Despite the traumatic events she experienced as a child, America remains a deeply empathetic and passionate crimefi ghter. As one of the most powerful young heroes in the world, she’s proven herself as an effective team leader.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "American Dream",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 4, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Avengers Mansion"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "known to allies"),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Mini-Shield Discs (ranged weapon; acts as pistol)"),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Captain America (Earth-9907)’s Shield"),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HurledShieldBash),
+                        powerSelector.GetPower(PowerNames.HurledShieldBlock),
+                        powerSelector.GetPower(PowerNames.RicoShield),
+                        powerSelector.GetPower(PowerNames.Shield2, reminder: "Shield 3 with Iconic Item"),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Captain America (Earth-9907)’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Requires: Shield 1 power"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Shannon Carter",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [163],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.SpecialTraining, OriginName.WeirdScience],
+                Teams = [TeamNames.ANext, TeamNames.DreamTeam],
+                Base = "New York City (Earth-982)",
+                History =
+                [
+                    "After her parents died in a car wreck, Shannon Carter was taken in by her father’s cousin, Peggy Carter. As a retired secret agent, Peggy regaled her new ward with tales of her days adventuring with Captain America (Steve Rogers), tales that eventually inspired Shannon to start combat training.",
+                    "With Peggy’s help, Shannon obtained a job as a tour guide at Avengers Mansion, and from there, she worked her way into the ranks of the newest incarnation of the Avengers, colloquially known as A-Next. With the team’s help, she later discovered that the original Captain America (Steve Rogers) of her world—who was long thought dead—was actually trapped in an alternate dimension overrun by Hydra (Earth-9907). Shannon helped Rogers return home, and along the way, she wound up gaining the shield of that world’s deceased Captain America.",
+                    "Rogers went on to assist A-Next and mentor Shannon in advanced combat techniques, but time had taken its toll on the man. He was neither as strong nor as fast as he used to be. Soon enough, he fell in battle while helping the team defend the world from Loki, leaving American Dream as the last bearer of the Stars and Stripes on Earth-982.",
+                    "But rest assured—if anyone can live up to Rogers’ legacy, it’s Shannon Carter."
+                ],
+                Personality =
+                [
+                    "Though American Dream may lack Captain America’s wealth of experience, she could easily match him in a contest of sheer determination and moral conviction. She’s also a brilliant and charismatic leader, not to mention a good friend. She has a particularly strong relationship with her team’s frequent ally, the amazing Spider-Girl (Mayday Parker).",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1265,6 +1645,229 @@ public class CharactersA
         },
         new()
         {
+            Name = "Ares",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 3, resilience: 4, vigilance: 4, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.StoppingPower),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.CombatSupport),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OperationsCenter),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ares",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [500],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "Mohawk",
+                Occupations = [OccupationName.Military, OccupationName.Outsider],
+                Origins = [OriginName.MythicOlympian],
+                Teams = [TeamNames.DarkAvengers, TeamNames.MightyAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "As the  god of war, Ares has had a hand in humanity’s conflicts for as long as the species has existed. Although he visited Earth to intervene in existing wars and foment new ones, he rarely spent extended periods on the planet—until the modern era, when his son Phobos was born.\r\n\r\n",
+                    "Weary of war and eager to see more of the human world, Ares moved to Earth with his son and took on the guise of a humble carpenter named John Aaron. For the first decade of his life, Phobos thought he was nothing more than a poor kid named Alex Aaron. But eventually, Olympus came calling for Ares’ assistance, and Phobos learned the truth.\r\n\r\n",
+                    "Though the pair kept trying to maintain their peaceful life on Earth, circumstances continued to pull them back into the sphere of gods and heroes. After the first superhuman civil war, Ares joined the Avengers, while Phobos was pressed into the Secret Warriors. Ares stayed with the team after the Iron Patriot (Norman Osborn) took it over. When he realized that Osborn had been lying to him, he attacked Osborn—who had the Sentry tear Ares in half. Shortly thereafter, Phobos died at the hands of Gorgon (Tomi Shishido), and father and son reunited in Elysium.\r\n\r\n",
+                    "The Collector later pulled Ares out of the  afterlife, and without his son to keep him grounded, the god of war redoubled his efforts to foment bloodshed on Earth. However, before he could start any major wars, Ares was sent to rejoin his son in Elysium by the Punisher (Frank Castle) but has since returned to Earth.\r\n\r\n"
+                ],
+                Personality =
+                [
+                    "Ares may be a bloodthirsty god of war, but he is not a mindless berserker. Outside the heat of battle, he can be a brilliant tactician and a levelheaded negotiator. The only thing he can’t accept, no matter the circumstances, is defeat.\r\n\r\n",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Arkon",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 4, resilience: 5, vigilance: 4, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Arkon’s Lightning Bolts", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Arkon’s Lightning Bolts",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Electricity)"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Electricity")
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy"
+                    ],
+                    PowerValue = 1,
+                    AgilityDamageModifier = 1,
+                    IsMagicItem = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Arkon",
+                Heights = [new() { Feet = 6 }],
+                Weights = [400],
+                Gender = Gender.Male,
+                Eyes = "Brown ",
+                Hair = "Brown ",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Leader, OccupationName.Outsider],
+                Origins = [OriginName.Alien],
+                Teams = [],
+                Base = "Weirdworld",
+                History =
+                [
+                    "A naturally fearsome fighter, Arkon is the ruler of Polemachus, an alien planet trapped in a mysterious extradimensional realm. As the magnificent Imperion, he single-handedly united the warring tribes, creating a paradise in which their innumerable warriors could fight and drink to their hearts’ content.",
+                    "Then disaster struck. The glowing planetary rings that gave Polemachus heat and light spontaneously began to dim, plunging the world into freezing darkness. Its people were on the verge of extinction when nuclear radiation from Earth slipped the dimensional barriers and injected new warmth into Polemachus.",
+                    "Arkon decided to ensure his people’s permanent preservation by going to Earth and detonating a much larger nuke. Using a combination of science and magic, he and his followers traveled to Earth and created a bomb capable of destroying the entire planet. The Avengers tried their best to stop the detonation, but Arkon handily beat them back. Complete global destruction was averted only by the quick thinking of Iron Man, who used his technological expertise to restore Polemachus’ rings and convince the warlord to return home.",
+                    "After the Multiverse was destroyed and revived as the Eighth Cosmos, Arkon found himself stranded on Weirdworld. He continues to search for lost Polemachus.",
+                ],
+                Personality =
+                [
+                    "Arkon is fiercely protective of Polemachus and would gladly destroy a galaxy to ensure the safety of his people. An itinerant warrior, he revels in battle and treats anyone too weak to fight as a lesser being hardly worthy of his notice.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Armored Hydra Agent",
             Rank = 4,
             Abilities = new Abilities
@@ -1555,6 +2158,107 @@ public class CharactersA
         },
         new()
         {
+            Name = "Attuma",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 2, resilience: 4, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.BreatheDifferent),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Amphibious),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpeedSwim),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Attuma",
+                Heights = [new() { Feet = 6, Inches = 10 }],
+                Weights = [430],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Atlantean with blue skin, gills, pointed ears",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.Atlantean],
+                Teams = [TeamNames.SkarkaWarriorTribe],
+                Base = "Attumacht Trench, Atlantic Ocean",
+                History =
+                [
+                    "An undersea king whose power is nearly unrivaled, Attuma is the leader of a tribe of Homo mermanus called the Skarka. Exiled from Atlantis millennia ago—cut off from the more civilized aspects of undersea life—they became a violent and nomadic people who had to survive through raiding and pillaging nearby tribes.",
+                    "Believing himself to be the rightful ruler of Atlantis, Attuma has led many a siege against the undersea nation but was thwarted by Namor and his surface-dweller friends. Bitter about their interference, he has made many attempts to invade the surface world or otherwise make it inhospitable to humans, only to be foiled on that front as well.",
+                    "Attuma and Namor remain the bitterest of enemies, but despite this, they are capable of putting aside their differences and working together when Atlantis is threatened. Unfortunately, they don’t always succeed.",
+                    "Over the years, Attuma has been invader, protector and king of Atlantis, but the city now lies in ruin and the old ways have been abandoned. Once again, he leads the Skarka through the deepest sea trenches as they fight to survive."
+                ],
+                Personality =
+                [
+                    "Attuma was born to battle, and it shows. A strong believer in might makes right, he is well suited to lead the Skarka and is determined to do whatever it takes for them to survive. No alliance, no battle and no act is too unthinkable in the name of protecting his people and himself.",
+                    "Attuma is a chosen one, a king and a liberator to his people. His way of life is one of violence, but as a nearly unparalleled undersea warrior, that suits him fine. Although he is familiar with the sting of defeat, the despot has yet to dull his ego or ambitions."
+                ],
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Aurora",
             Rank = 4,
             Abilities = new Abilities
@@ -1657,6 +2361,127 @@ public class CharactersA
         },
         new()
         {
+            Name = "Avenger Prime",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 7, vigilance: 4, ego: 8, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.ShapeShift),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Loki Laufeyson",
+                Heights = [new() { Feet = 6, Inches = 4}],
+                Weights = [525],
+                Gender = Gender.Varies,
+                Eyes = "Green",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.MultiversalAvengers],
+                Base = "God Quarry",
+                History =
+                [
+                    "On Earth-18201, Mjolnir deemed Thor worthy only of death and tossed him into the sun. With Odin brokenhearted, Loki became All-Father, but this triumph brought him little joy. To figure out why, he turned to other versions of himself across the Multiverse, but all the Lokis he found were cruel villains who inspired the creation of heroic teams like the Avengers.",
+                    "Determined to avoid such a fate, Loki prevented the Avengers of his reality from assembling. He soon wound up fighting the things the Avengers would have faced—at the ultimate cost of every other life in his universe. Filled with despair, he threw himself into the sun.",
+                    "Life, however, was not done with Loki, and the trickster awoke to find himself in the God Quarry. Taking his miraculous deliverance as a sign from the cosmos, Loki adopted the codename Avenger Prime and dedicated himself to bettering the Multiverse. To that end, he assembled the Multiversal Avengers, the mightiest group of heroes in all existence. They’ve already prevented the destruction of reality at least once, and if Avenger Prime has anything to say about it, they will fight to preserve the Multiverse for many years to come."
+                ],
+                Personality =
+                [
+                    "Though this version of Loki still has a certain penchant for the theatrical, he is a far more serious person than his Earth-616 counterpart. Avenger Prime is laser focused on his goal of protecting the Multiverse and rarely ever jokes or gloats, save during the odd moment of victory.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Average Citizen",
             Rank = 1,
             Abilities = new Abilities
@@ -1687,7 +2512,7 @@ public class CharactersA
                 ],
                 Personality =
                 [
-                    "This profi le is for an average, unpowered human. It can be used in a pinch for many characters, but it can also be tailored to suit particular characters with just a few adjustments.",
+                    "This profile is for an average, unpowered human. It can be used in a pinch for many characters, but it can also be tailored to suit particular characters with just a few adjustments.",
                 ]
             }
         },

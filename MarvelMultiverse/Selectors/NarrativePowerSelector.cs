@@ -28,6 +28,21 @@ public class NarrativePowerSelector : INarrativePowerSelector
     [
         new()
         {
+            Name = NarrativePowerNames.Absorption,
+            Effect =
+            [
+                "The character can absorb the properties of anything that they touch and transform their body—and what they are wearing and carrying—into living versions of the same substance. This includes any form of matter or energy. Doing so requires a standard action or reaction.",
+                "The change to the character lasts as long as the character wishes to maintain it and can even persist if they lose concentration or consciousness.",
+                "The powers this transformation grants the character depend on the properties of the material they have touched. If they absorb any of the elements that work with Elemental Control powers, they get to use the special effects granted by that element when they get a Fantastic success on any of their Melee or Agility attacks.",
+                "Outside of that, it’s up to the Narrator to rule what sorts of powers the character can absorb from the things around them.",
+                "For example, if the Absorbing Man touches adamantium, he can ignore 1 level of Health Damage Reduction with his attacks and he would gain Health Damage Reduction –4 himself, making him nearly indestructible. He’d also look like he was made entirely of the silvery metal, which would give him the Extreme Appearance tag.",
+                "If he absorbed the properties of glass, he would become transparent, giving him an edge when hiding or sneaking. However, he’d also become more fragile, so attacks against him would add +2 to their Health damage multiplier."
+            ],
+            Examples = "Absorbing Man",
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = NarrativePowerNames.CannotLose,
             Effect =
             [
