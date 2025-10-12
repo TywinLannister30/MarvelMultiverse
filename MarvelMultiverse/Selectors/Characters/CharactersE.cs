@@ -7,11 +7,116 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersE
 {
     public static List<Character> GetAllCharacters(
+        IIconicItemPowerSelector iconicItemPowerSelector,
         INarrativePowerSelector narrativePowerSelector,
         IPowerSelector powerSelector,
         ITagSelector tagSelector,
         ITraitSelector traitSelector) =>
     [
+        new()
+        {
+            Name = "Ebony Maw",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 3, vigilance: 5, ego: 5, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Thanos’ army)"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance3),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.Teleport2),
+                        powerSelector.GetPower(PowerNames.TeleportTogether),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ebony Maw",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [204],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Gray",
+                Size = Size.Average,
+                DistinguishingFeatures = "Pale skin, pointed ears, no nose",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.BlackOrder],
+                Base = "Mobile",
+                History =
+                [
+                    "Loyalty is a foreign concept to Ebony Maw. Even in his youth, he followed Thanos not out of a sense of loyalty, but because he believed he could eventually overthrow the Mad Titan and claim Thanos’ vast empire as his own.",
+                    "Though Maw’s initial plan to subvert Thanos ultimately failed, the Titan was impressed enough with Maw’s brilliant mind that he chose not only to keep the schemer around but to make Maw a founding member of his new inner circle: the Black Order. Maw never stopped trying to usurp Thanos, but his attempts always failed. In the spaces between his bouts of treason, he orchestrated many of the Mad Titan’s greatest triumphs.",
+                    "After the fall of Thanos’ dark empire, Maw and his Black Order colleagues became mercenaries for hire, doing wet work for the galaxy’s nastiest criminals. Though the Titan’s absence has somewhat tempered Maw’s unrelenting ambition, he’s not above a bit of betrayal when it suits him."
+                ],
+                Personality =
+                [
+                    "Whether through psychic suggestion or simple rhetoric, Maw is always looking to manipulate people toward his own ends. His persuasive powers can make him an invaluable ally, but only if kept on a tight leash. The moment he sees an opportunity to seize power for himself, he is sure to take it.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
         new()
         {
             Name = "Echo",
@@ -775,7 +880,7 @@ public class CharactersE
             Rank = 4,
             Abilities = new Abilities
             (
-                melee: 7, agility: 2, resilience: 7, vigilance: 3, ego: 1, logic: 1
+                melee: 7, agility: 2, resilience: 6, vigilance: 3, ego: 1, logic: 1
             ),
             Traits =
             [
@@ -783,17 +888,18 @@ public class CharactersE
                 traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
                 traitSelector.GetTrait(TraitNames.CombatExpert),
                 traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Determination),
                 traitSelector.GetTrait(TraitNames.EnhancedPhysique),
                 traitSelector.GetTrait(TraitNames.Fearless),
                 traitSelector.GetTrait(TraitNames.FreshEyes),
                 traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
                 traitSelector.GetTrait(TraitNames.Stranger),
             ],
             Tags =
             [
                 tagSelector.GetTag(TagNames.Allspeak),
                 tagSelector.GetTag(TagNames.PublicIdentity),
-                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Battle-ax (acts as a sword)"),
                 tagSelector.GetTag(TagNames.Supernatural),
                 tagSelector.GetTag(TagNames.Worshipped),
             ],
@@ -805,6 +911,7 @@ public class CharactersE
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Bloodaxe", isMagicItem: true),
                         powerSelector.GetPower(PowerNames.Mighty4),
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
@@ -816,10 +923,7 @@ public class CharactersE
                     [
                         powerSelector.GetPower(PowerNames.Exploit),
                         powerSelector.GetPower(PowerNames.FastAttacks),
-                        powerSelector.GetPower(PowerNames.FocusedFury),
                         powerSelector.GetPower(PowerNames.FuriousAttacks),
-                        powerSelector.GetPower(PowerNames.Riposte),
-                        powerSelector.GetPower(PowerNames.UnstoppableAssault),
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
@@ -834,6 +938,31 @@ public class CharactersE
                         powerSelector.GetPower(PowerNames.Jump1),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Bloodaxe",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Godkiller),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.PowerSlider} (Bloodied)"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/unlimited, Melee/Agility Damage Multiplier bonus: +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Bloodied: If the user gets a Fantastic success on an attack with this weapon and causes bleeding, their powers are boosted. If they are knocked unconscious by a foe in battle, they die.")
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                    ],
+                    PowerValue = 2,
+                    MeleeDamageModifier = 2,
+                }
             ],
             Biography = new Biography
             {
@@ -861,7 +990,7 @@ public class CharactersE
                     "Deep down, Skurge is a soft-spoken and noble warrior. Under normal circumstances, he would never attack an unarmed opponent or harm another Asgardian—at least not without serious provocation. However, he’s willing to put his principles aside to prove his undying love for the Enchantress. He knows that she may never truly love him, yet he believes that to defy her would be to deny his own heart.",
                 ]
             },
-            Source = BookSource.QuickStartWithThunderboltsAdventure
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
