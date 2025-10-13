@@ -7,11 +7,118 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersQ
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
+        new()
+        {
+            Name = "Quake",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 2, vigilance: 4, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.InhumanGenes),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEarth,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlSound,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Daisy Louise Johnson (adopted as Cory Sutter)",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [115],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.LawEnforcer],
+                Origins = [OriginName.Inhuman, OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Decades ago, the mad geneticist Mister Hyde (Calvin Zabo) unknowingly sired a daughter with a small-time prostitute of Inhuman descent named Jennifer Johnson. The child, Daisy, was immediately put up for adoption and ultimately grew up into a relatively normal, albeit delinquent, kid.",
+                    "Late in Daisy’s teenage years, something inside her mutated Inhuman DNA suddenly and explosively activated, granting her the power to create massive seismic disturbances with little more than a thought. Unable to control her powers, she was soon taken into custody by Nick Fury Sr. of S.H.I.E.L.D., who offered to turn her into one of his top agents.",
+                    "For a while, Johnson faithfully served S.H.I.E.L.D. as Fury’s right hand, but eventually, both she and Fury were pushed out of the organization by Maria Hill. Left adrift, Johnson signed on with the Avengers under the codename Quake. She spent the next several years bouncing around various Avengers groups, S.H.I.E.L.D. and independent black-ops squads organized by Fury himself.",
+                    "When Captain America (Steve Rogers) was put in charge of national security—taking over from Norman Osborn, who had dismantled S.H.I.E.L.D.—Rogers appointed Quake to head the organization’s rebuilding efforts, briefly making her both the director of S.H.I.E.L.D. and an active Avenger. Maria Hill later staged a coup and threw Johnson out of the agency again, but she was soon allowed to return to the field as a regular agent. After S.H.I.E.L.D. was once again dissolved, Johnson dropped out of sight, and her whereabouts remain unknown."
+                ],
+                Personality =
+                [
+                    "Quake may have spent most of her adult life working for S.H.I.E.L.D., but she’s never had any particular affection for the organization itself. Her loyalties lie, first and foremost, with her teammates and colleagues, particularly Nick Fury Sr.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
         new()
         {
             Name = "Quasar",
