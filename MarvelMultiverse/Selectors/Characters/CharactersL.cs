@@ -7,6 +7,7 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersL
 {
     public static List<Character> GetAllCharacters(
+       IIconicItemPowerSelector iconicItemPowerSelector,
        INarrativePowerSelector narrativePowerSelector,
        IPowerSelector powerSelector,
        ITagSelector tagSelector,

@@ -7,6 +7,7 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersM
 {
     public static List<Character> GetAllCharacters(
+       IIconicItemPowerSelector iconicItemPowerSelector,
        INarrativePowerSelector narrativePowerSelector,
        IPowerSelector powerSelector,
        ITagSelector tagSelector,
@@ -601,6 +602,99 @@ public class CharactersM
         },
         new()
         {
+            Name = "Maestro",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 9, agility: 2, resilience: 8, vigilance: 5, ego: 3, logic: 7
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Bruce Banner"),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Anger),
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Robert Bruce Banner",
+                Heights = [new() { Feet = 7, Inches = 6 }],
+                Weights = [1150],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Gray",
+                Size = Size.Big,
+                DistinguishingFeatures = "Large green Hulk form",
+                Occupations = [OccupationName.Leader],
+                Origins = [OriginName.WeirdScienceGammaMutate],
+                Teams = [],
+                Base = "Mobile (Earth-9200)",
+                History =
+                [
+                    "On Earth-9200, the modern era ended in a nuclear holocaust that wiped out nearly every human and superhuman on the planet. The Hulk (Bruce Banner), however, was far enough away from the center of the destruction to actually benefit from the excess gamma radiation.",
+                    "This supercharged version of the Hulk used his powers to take over the last surviving human city—Dystopia—and install himself as its supreme dictator or Maestro. For decades, he ruled uncontested over the people of Dystopia, living in tyrannical opulence, until a resistance group led by an elderly Rick Jones summoned the Hulk of Earth-616 from out of the timestream.",
+                    "This younger Hulk—in his Professor Hulk form—helped the resistance launch a massive assault on the Maestro’s compound. Even then, their combined strength failed to match the Maestro’s own. Ultimately, the Hulk only defeated the Maestro by sending him back in time, to the center of the nuclear explosion that first created them both.",
+                    "Though the Maestro later re-formed on Earth-616, the experience had weakened him enough for the Hulk to quickly dispatch him. Officially speaking, the Maestro has been dead for years now. Of course, gamma mutates have a way of coming back at unexpected moments."
+                ],
+                Personality =
+                [
+                    "The Maestro is a greedy despot who cares nothing for the rights of others, but he is not an incoherent madman. He is intelligent, eloquent, manipulative and cunning, perhaps more so than the Hulk of Earth-616 has ever been.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Maggia Tough",
             Rank = 1,
             Abilities = new Abilities
@@ -1145,6 +1239,105 @@ public class CharactersM
         },
         new()
         {
+            Name = "Mainframe",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 3, vigilance: 3, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Avengers Mansion"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "known to allies"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                    IsTech = true,
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                    ],
+                    IsTech = true,
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Mainframe",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [325],
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Sentient suit of yellow and black Iron Man armor",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.ANext],
+                Base = "New York City (Earth-982)",
+                History =
+                [
+                    "Before retiring from the hero business, the Iron Man (Tony Stark) of Earth-982 used his own brain patterns to create a weaponized android—called Mainframe—capable of taking his place in the field, should the need ever arise. To ensure that the droid’s A.I. could never be permanently destroyed, Stark placed dozens of droid bodies in an orbital satellite, backups into which the sentient program could upload itself at a moment’s notice.",
+                    "Years passed without incident, but eventually, one of the Mainframe droid bodies was called into combat to help a group of young heroes foil a villainous scheme cooked up by Loki. After the fight, the droid and his young allies formed a new incarnation of the Avengers, colloquially referred to as A-Next.",
+                    "Though Mainframe initially posed as a human in a suit, his teammates caught on to his true nature after one of his robotic bodies was torn apart in combat. Mainframe later destroyed most of his backup bodies while fighting Galactus, but despite his brush with mortality, he remains a dedicated and respected member of A-Next."
+                ],
+                Personality =
+                [
+                    "Perhaps because his brain is patterned off that of a much older man, Mainframe stands out from the other members of A-Next. He is a far sterner and more cynical individual than his teammates, though working with them has gradually softened his metal demeanor. He shares the responsibility of leading A-Next with American Dream.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Malekith",
             Rank = 4,
             Abilities = new Abilities
@@ -1511,6 +1704,109 @@ public class CharactersM
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Marvel Boy",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 3, vigilance: 3, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                    ],
+                    IsTech = true,
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Noh-Varr",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [165],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Outsider],
+                Origins = [OriginName.AlienKree, OriginName.WeirdScience],
+                Teams = [TeamNames.GuardiansOfTheGalaxy, TeamNames.WestCoastAvengers, TeamNames.YoungAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "Noh-Varr grew up in an alternate dimension where the Kree became almost incomprehensibly advanced. As a lowly ensign aboard the intergalactic vessel Marvel, he and his crewmates got lost in the Multiverse after sustaining heavy injuries in battle with cosmic gods. While trying to return home, they accidentally sent themselves to Earth-616, where their vessel was shot down by Midas, an ultra-wealthy madman looking to harvest the ship’s cosmic energy drive.",
+                    "As the sole survivor of the crash, Noh-Varr vowed to avenge his teammates. With a few simple pieces of Kree tech, he took down both Midas and half of New York, before S.H.I.E.L.D. managed to capture him. After escaping jail, Noh-Varr’s first instinct was to destroy humanity and turn Earth into the center of a new Kree Empire, but the contemporary Kree leadership convinced him that he would be better off protecting the planet and making humans into allies. Believing that the Dark Avengers were a heroic team, Noh-Varr briefly joined their ranks, but left once he discovered the group’s secretly evil nature.",
+                    "Since then, Noh-Varr has served in critical roles on many of Earth’s super-teams. He played a particularly large part in the second incarnation of the Young Avengers, where he helped his teammates Wiccan and Hulkling not only save Earth but forge a lasting peace between the Kree and Skrull empires. These days Noh-Varr spends most of his time adventuring across the universe with the Guardians of the Galaxy."
+                ],
+                Personality =
+                [
+                    "Noh-Varr lives his life like a twentieth-century rock star: fast and loud. He has a nasty tendency to fall in love with his teammates, only to quickly grow bored of them and move on. In his relatively short time in this dimension, he has dated no fewer than six people, including Hawkeye (Kate Bishop), Moonstone and Hercules.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1930,6 +2226,169 @@ public class CharactersM
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Melinda May",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 1, vigilance: 2, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Investigation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ReturnFire),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.Sniping),
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Melinda May",
+                Heights = [new() { Feet = 5, Inches = 4 }],
+                Weights = [125],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.LawEnforcer],
+                Origins = [OriginName.SpecialTraining],
+                Teams = [TeamNames.FBI, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "As a skilled combatant and strategist, Melinda May was one of the best agents S.H.I.E.L.D. ever had. She came to be known as “The Cavalry.” In the years immediately prior to the organization’s dissolution, she worked closely with S.H.I.E.L.D. legends like Maria Hill and Phil Coulson, providing invaluable assistance to super-teams like the Avengers.",
+                    "Despite having no super-powers, May helped to save the world countless times. Although she was left more than a little adrift when S.H.I.E.L.D. fell apart, she eventually took a position with the F.B.I.—but the Bureau isn’t nearly as exciting. Ironically, her position with Stark Unlimited’s board of directors has provided her with far more thrills lately than her actual law-enforcement job.",
+                ],
+                Personality =
+                [
+                    "May is a woman of few words. She rarely talks about her personal life and has never discussed her past or her combat record with any of her colleagues. She gets in, she does the job and she gets out. A pure professional.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Mettle",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 1, resilience: 3, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Ken Mack"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Mettle form"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Captain Marvel (Carol Danvers)"),
+                tagSelector.GetTag(TagNames.Mysterious),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brawling),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ken Mack",
+                Heights = [new() { Feet = 6, Inches = 2 }, new() { Feet = 6, Inches = 3 }],
+                Weights = [206,468],
+                Gender = Gender.Male,
+                Eyes = "Brown/red",
+                Hair = "Black/none",
+                Size = Size.Big,
+                DistinguishingFeatures = "Red iridium alternate form",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.Unknown],
+                Teams = [TeamNames.AvengersAcademy],
+                Base = "Avengers Academy",
+                History =
+                [
+                    "Ken Mack was just a regular Hawaiian teenager until the day he took a speeding surfboard to the head. The blow should have killed him, but instead it peeled the skin off his face to reveal a layer of hard red iridium just beneath the surface.",
+                    "As part of a plan to foment the next generation of super villains, the Green Goblin (Norman Osborn) captured Mack—along with several other young people with burgeoning powers—and subjected them to brutal experiments. Mack’s treatment was perhaps the worst, with Osborn painstakingly stripping the remainder of his skin from his body, leaving him in his iridium form.",
+                    "The Avengers later freed the super-powered teens from Osborn’s clutches and, hoping to ensure that they would never become villains, enrolled the kids in a new training program: Avengers Academy.",
+                    "As Mettle, not only did Mack prove himself to be one of the most valuable and genuinely heroic members of the freshman class, but he also earned the love and affection of his teammate, Hazmat. Unfortunately, their relationship was cut short when most of the class was kidnapped by Arcade and forced to fight one another to the death.",
+                    "Because Mettle refused to abide by the rules of this death game, Arcade seemingly annihilated him—while actually selling him off as food to the psychic vampire Emplate. This ordeal somehow restored Mettle’s skin, allowing him to freely transform into his human form and back. Years later, the students of the second Avengers Academy rescued him from Emplate and Carol made him a new resident advisor for the class, conveniently returning him to Hazmat’s side."
+                ],
+                Personality =
+                [
+                    "All Mack ever wanted was to chill on the beach and live the good life, but fate forced him down another path. Thankfully, his big heart makes him a natural hero.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -3162,6 +3621,113 @@ public class CharactersM
         },
         new()
         {
+            Name = "Moonstone",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 3, vigilance: 4, ego: 4, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.Flare),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Phasing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.PhaseOther),
+                        powerSelector.GetPower(PowerNames.PhaseSelf),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Karla Sofen",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [130],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Big,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.HealthCareWorker],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.LethalLegion, TeamNames.MastersOfEvil, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "As the former psychiatric assistant to the sinister Doctor Faustus (Johann Fennhoff), Karla Sofen has spent much of her life working in mental health institutions. While outwardly a fairly successful psychiatrist, Sofen was a deeply power-hungry person who secretly tormented her patients for her benefit and amusement.",
+                    "Adrift following the imprisonment of her former mentor, Sofen sought power of her own. To that end, she maneuvered her way into working with the super villain Moonstone (Lloyd Bloch), whom she tormented into giving up the strange cosmic stone that granted him his powers. Taking the stone for herself, Sofen became the new Moonstone.",
+                    "Sofen has served on several super-villain teams throughout her career under several different identities, often mimicking Carol Danvers. Sofen notably took the mantle of Captain Marvel for Norman Osborn’s Dark Avengers and has served with several iterations of the Thunderbolts.",
+                ],
+                Personality =
+                [
+                    "Although Sofen has from time to time been on the right side of the law, she is seldom known to have been on the right side of history. A sociopath and expert manipulator, she is a deeply amoral person who craves power and is as fearsome with her words as her fists. You can’t trust anything that comes out of her mouth, but you can always bet on her to betray you when it serves her agenda.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Morbius",
             Rank = 3,
             Abilities = new Abilities
@@ -3355,6 +3921,99 @@ public class CharactersM
                 ],
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Ms. Marvel (Early Days)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 3, vigilance: 3, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Audience),
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Sources"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Pundit),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Magnitron (Yon-Rogg)"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Arabic, English, Russian"),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Captain Mar-Vell"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "known to allies"),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SuppressiveFire),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Carol Danvers",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [145],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Journalist, OccupationName.Military],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.Avengers, TeamNames.USAirForce],
+                Base = "New York City",
+                History =
+                [
+                    "While serving as a pilot for the U.S. Air Force and NASA, Carol Danvers became involved with Captain Mar-Vell, a super-powered visitor from the Kree Empire, and was caught in an explosion that she thought gave her super-powers too. She later discovered that the blast activated the Kree DNA that she was unaware she’d inherited from her mother.",
+                    "Danvers soon joined the Avengers, but left the team after temporarily losing her powers to Rogue. She later rejoined, and since then, she has served as the team’s leader throughout many of its most turbulent periods.",
+                    "Over the years, Danvers has struggled with fluctuating power levels, alcoholism, low self-confidence and identity crises of all kinds. After using the names Binary, Warbird and Ms. Marvel, Danvers finally settled into the identity of Captain Marvel, a name she took to honor her old mentor Mar-Vell, who had died of cancer.",
+                    "This profile represents Danvers in the earliest days of her adventures, when Mar-Vell was still alive and she was known as Ms. Marvel. Back then, a combination of inexperience and partially inactive DNA left her capable of accessing only a meager fraction of her true powers. At the time, she spent her nights exploring her new abilities, and her days working under J. Jonah Jameson as a journalist for the Daily Bugle spin-off project Woman Magazine ."
+                ],
+                Personality =
+                [
+                    "In the future, Danvers will be not only a strong-willed and pragmatic leader, but a mentor to younger heroes like the new Ms. Marvel (Kamala Khan) and the students of Avengers Academy. However, right now, she’s just a rookie hero, still struggling to come to terms with her abilities. She cares for her friends deeply, but she’s not always sure how to protect them, or even protect herself.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
