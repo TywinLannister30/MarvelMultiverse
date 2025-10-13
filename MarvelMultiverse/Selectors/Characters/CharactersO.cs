@@ -7,11 +7,141 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersO
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
+        new()
+        {
+            Name = "Odin",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 4, resilience: 6, vigilance: 9, ego: 1, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoostPowers),
+                        powerSelector.GetPower(PowerNames.BumpPower),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Need (represents the All-Power)"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                        powerSelector.GetPower(PowerNames.OnYourFeet),
+                        powerSelector.GetPower(PowerNames.RallyOnMe),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalBond, reminder: "ravens Huginn and Muninn"),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Odin Borson",
+                Heights = [new() { Feet = 6, Inches = 9 }],
+                Weights = [650],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Gray",
+                Size = Size.Big,
+                DistinguishingFeatures = "Missing right eye, covered with eyepatch",
+                Occupations = [OccupationName.Leader, OccupationName.Outsider],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.AvengersOneMillionBC],
+                Base = "Valhalla",
+                History =
+                [
+                    "Odin claims that, in his youth, he and his godly brothers defeated the massive frost giant Ymir and that from Ymir’s body they fashioned all the ten realms, including the realm of the gods: Asgard. Some time later, one brother—Cul—turned on his siblings, and to beat him, Odin sacrificed his right eye to the world tree, Yggdrasil, which granted him vast wisdom. Following Cul’s defeat, Odin’s remaining brothers allowed him to claim the title of All-Father and to wield the associated All-Power, making him the ruler and patriarch over all the gods.",
+                    "Over the subsequent millennia, Odin embarked on countless escapades. He rode with the Avengers of 1,000,000 B.C. on their missions to protect Earth from its earliest threats, and he had several children, such as the hero Thor and his adopted brother, Loki.",
+                    "For untold eons, Odin stood as the uncontested leader of Asgard. Recently, however, a mysterious cosmic entity known as the God of Hammers possessed Thor’s hammer and nearly laid waste to all of Asgard. To defeat the entity, Odin willingly passed on into Valhalla and relinquished the All-Power to Thor. Though Thor is now officially the All-Father, he still consults his father for advice."
+                ],
+                Personality =
+                [
+                    "Though death has taught him some degree of humility, Odin was notorious throughout his life for being a cold and stubborn ruler. He was an intelligent and benevolent king, but he hated to explain himself and often expected blind obedience from his subjects, even his children.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
         new()
         {
             Name = "Old Man Logan (Earth-21923)",

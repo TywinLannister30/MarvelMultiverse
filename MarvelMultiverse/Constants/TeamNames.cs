@@ -22,6 +22,7 @@ public static class TeamNames
     public const string Avengers = "Avengers";
     public const string AvengersAcademy = "Avengers Academy";
     public const string AvengersUnityDivision = "Avengers Unity Division";
+    public const string AvengersOneMillionBC = "Avengers (1,000,000 B.C.)";
     public const string BankRobberyGang = "Bank robbery gang";
     public const string BetaFlight = "Beta Flight";
     public const string BeyondCorporation = "Beyond Corporation";
