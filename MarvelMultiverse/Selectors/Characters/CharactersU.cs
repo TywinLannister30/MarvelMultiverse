@@ -7,10 +7,11 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersU
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -206,6 +207,100 @@ public class CharactersU
         },
         new()
         {
+            Name = "Ultron-5",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 4, resilience: 3, vigilance: 3, ego: 1, logic: 6
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.EditMemory),
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                    IsTech = true,
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ultron",
+                Heights = [new() { Feet = 6 }],
+                Weights = [535],
+                Gender = Gender.Male,
+                Eyes = "Red",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Silvery robot body",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.MastersOfEvil],
+                Base = "Mobile",
+                History =
+                [
+                    "The sentient A.I. known as Ultron was created by Dr. Hank Pym (often known as Giant-Man) as a peaceable and helpful robot to assist the Avengers. Unfortunately, Ultron rebelled against his creator, uploaded his consciousness to a more powerful, weaponized android body and set out on a mission to kill the humans who had created him.",
+                    "For decades, Ultron has been a consistent threat to humanity’s continued existence. His digital consciousness has allowed him to escape any sort of defi nitive defeat. The Avengers can smash him to pieces, but he usually just comes back in a new vessel, even more dangerous than before.",
+                    "This profile represents Ultron as he was when he first attacked the Avengers. Ever the scientist, Ultron rebuilt himself four times before he settled into this, his first combat form, Ultron-5. Under the pseudonym of the Crimson Cowl, Ultron-5 created the Vision, organized a new Masters of Evil and blackmailed Jarvis into allowing the evil team to enter into Avengers Mansion. The Avengers might have ended right then and there had the Vision not turned on Ultron and destroyed him."
+                ],
+                Personality =
+                [
+                    "Ultron resents humanity for trying to control him and would see humans wiped off the face of the planet in favor of robotic life-forms. Although his demeanor naturally tends toward the cold and tyrannical side, he has a special place of hatred in his android heart for Pym.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "U.S. Agent",
             Rank = 3,
             Abilities = new Abilities
@@ -236,7 +331,7 @@ public class CharactersU
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "U.S.Agent’s shield (grants user one extra level of the power Shield)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "U.S.Agent’s Shield"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
@@ -257,7 +352,7 @@ public class CharactersU
                     [
                         powerSelector.GetPower(PowerNames.HurledShieldBash),
                         powerSelector.GetPower(PowerNames.RicoShield),
-                        powerSelector.GetPower(PowerNames.Shield1, reminder: "Shield 2, with Iconic Weapon"),
+                        powerSelector.GetPower(PowerNames.Shield1, reminder: "Shield 2, with Iconic Item"),
                         powerSelector.GetPower(PowerNames.ShieldBash),
                         powerSelector.GetPower(PowerNames.ShieldDeflection),
                     ],
@@ -271,6 +366,28 @@ public class CharactersU
                         powerSelector.GetPower(PowerNames.CrushingGrip),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "U.S.Agent’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplier bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Requires: Shield 1 power"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                }
             ],
             Biography = new Biography
             {
@@ -297,7 +414,7 @@ public class CharactersU
                     "In his early days, Walker came off as a bit of a patriotic extremist—in no small part because the Red Skull exploited his loyalty to the government to push him into taking on dubious assignments. However, in the years since, he’s shown himself to be a much more empathetic and thoughtful figure, more similar to Steve Rogers than not. He despises fascists, particularly the Red Skull, who not only manipulated him, but also ordered the killing of his parents.",
                 ]
             },
-            Source = BookSource.QuickStartWithThunderboltsAdventure
+            Source = BookSource.AvengersExpansion
         },
     ];
 }
