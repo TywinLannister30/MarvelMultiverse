@@ -7,11 +7,110 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersR
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
+        new()
+        {
+            Name = "Radioactive Man",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 1, resilience: 4, vigilance: 6, ego: 4, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "can be temporarily suppressed"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Dazzle),
+                        powerSelector.GetPower(PowerNames.Flare),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Chen Lu",
+                Heights = [new() { Feet = 6, Inches = 6 }],
+                Weights = [290],
+                Gender = Gender.Male,
+                Eyes = "Brown, white when glowing",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Often glows green",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.LethalLegion, TeamNames.MastersOfEvil, TeamNames.Thunderbolts],
+                Base = "Beijing",
+                History =
+                [
+                    "Chinese scientist Chen Lu was tasked with finding a way to defend China from the rising threat of superhumans. Experimenting with radiation, Chen managed to give himself powers, turning himself into the Radioactive Man.",
+                    "In his debut, the Radioactive Man came to blows with Thor Odinson during a skirmish on the border of China and was roundly defeated. The humiliation spawned a deep hatred for the Thunder God within Chen, and he has made many attempts to destroy Thor since.",
+                    "A founding member of the original Masters of Evil and one of the Avengers’ oldest foes, Chen spent many years working as a villain for hire, often for his native government. At one point, China even lent him to the U.S.-based Thunderbolts. Unfortunately, his status as a walking, talking bomb makes him a considerable hazard to those around him, and he often makes people uneasy.",
+                    "In recent days, Chen has taken a job with Roxxon, where he’s working with several other villains to bring down Thor once and for all."
+                ],
+                Personality =
+                [
+                    "Chen has a certain swagger, as befits someone who intentionally created their own super-powers. A brilliant scientist in his own right and a beloved hero to his people, Chen is a devout patriot who detests anyone the Chinese government proclaims an enemy.",
+                    "Although Chen’s green skin and innate radiation often put those around him on edge, he tries to keep a sense of humor. He revels in the destructive capabilities of his powers and often is caught smiling in battle."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
         new()
         {
             Name = "Rama-Tut",
@@ -292,6 +391,123 @@ public class CharactersR
                 ]
             },
             Source = BookSource.QuickStartWithThunderboltsAdventure
+        },
+        new()
+        {
+            Name = "Red Hulk",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 9, agility: 3, resilience: 9, vigilance: 4, ego: 3, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (U.S. Air Force)"),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "“Thunderbolt” Ross"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Red Hulk form"),
+                tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Anger),
+                        powerSelector.GetPower(PowerNames.EnergyAbsorption, reminder: "limited to incorporeal forms of damage: energy, radiation, cosmic rays, etc."),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlFire,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.FocusFire),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Thaddeus E. “Thunderbolt” Ross",
+                Heights = [new() { Feet = 6, Inches = 1 }, new() { Feet = 7 }],
+                Weights = [245,1200],
+                Gender = Gender.Male,
+                Eyes = "Blue/yellow",
+                Hair = "White, formerly brown/black",
+                Size = Size.Big,
+                SizeNotes = "Average as Ross",
+                DistinguishingFeatures = "Red Hulk form with orange blood and dark fingernails",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.WeirdScienceGammaMutate],
+                Teams = [TeamNames.Avengers, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "As the head of the army base where Bruce Banner first became the Hulk, General Thaddeus Ross made it his mission in life to take the green monstrosity down at any cost. Of course, that mission proved impossible, and as the years dragged on, the cost only rose. In his relentless pursuit of the Hulk, the general lost his military commission, his dignity and even his relationship with his daughter Betty who—despite everything—still loved Banner.",
+                    "At the end of his rope, Ross made a fateful decision. If he could not beat the Hulk as a man, maybe he could beat him as a monster. With the help of several of the Hulk’s greatest enemies, Ross stole and absorbed a portion of Banner’s gamma power, transforming himself into the Red Hulk.",
+                    "Even with power comparable to Banner’s own, though, Ross simply couldn’t keep the Hulk down. Gradually, he came to regret his transformation, and in an effort to redeem himself, he began working with many of the Hulk’s own super-teams, including the Avengers. For a while, he even led his own incarnation of the Thunderbolts.",
+                    "Though the Red Hulk’s appearances in the field have been sporadic as of late, he remains dedicated to making the world a safer place—by any means necessary."
+                ],
+                Personality =
+                [
+                    "He’s no longer an official member of the U.S. Air Force, but Ross is still a military man through and through. He is a proud patriot with unwavering respect for the chain of command, a man who treats every super-hero mission like a tactical military strike, never beginning a fight without multiple plans and backup plans in place.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
