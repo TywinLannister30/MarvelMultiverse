@@ -20,6 +20,8 @@ public class IconicItem
 
     public List<string> Restrictions { get; set; }
 
+    public List<Tag> Tags { get; set; }
+
     public int PowerValue { get; set; }
 
     public string PowerValueReminder { get; set; }

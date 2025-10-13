@@ -7,11 +7,12 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersK
 {
     public static List<Character> GetAllCharacters(
+       IIconicItemPowerSelector iconicItemPowerSelector,
        INarrativePowerSelector narrativePowerSelector,
        IPowerSelector powerSelector,
        ITagSelector tagSelector,
        ITraitSelector traitSelector) =>
-    [
+   [
         new()
         {
             Name = "Kang the Conqueror",
@@ -380,6 +381,121 @@ public class CharactersK
                     "Pryde numbers among the most charming and friendly people, let alone mutants, on the planet. She has an uncanny knack for connecting with others, even those as gruff as Wolverine (Logan).",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Kid Juggernaut",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 1, resilience: 5, vigilance: 2, ego: 3, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2; Kid Juggernaut form only"),
+                traitSelector.GetTrait(TraitNames.Clueless),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Justin Jin"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Avengers Academy"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Captain Marvel (Carol Danvers)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Shard of the Crimson Gem of Cyttorak", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Shard of the Crimson Gem of Cyttorak",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty3),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Large"
+                    ],
+                    Tags =
+                    [
+                        tagSelector.GetTag(TagNames.AlternateForm),
+                    ],
+                    PowerValue = 3,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Joon-Sung “Justin” Jin",
+                Heights = [new() { Feet = 6, Inches = 8 }],
+                Weights = [225,475],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Big,
+                SizeNotes = "Average as Joon-Sung “Justin” Jin",
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Student],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.AvengersAcademy],
+                Base = "Avengers Academy",
+                History =
+                [
+                    "The Crimson Gem of Cyttorak and the title of Juggernaut were once held by a Korean farmer named Moon-Ho Jin who—on orders from the demon Cyttorak—helped Japanese imperialists invade his homeland. However, when the time came to raze his own village, Jin hesitated. Outraged, Cyttorak summoned Cain Marko, who killed Moon-Ho and claimed the gem as his own, becoming the new Juggernaut.",
+                    "Moon-Ho’s son Jung-Woo recovered a shard of the gem, but out of shame for his father’s legacy, he kept the existence of the shard secret. He later married a woman named Hae-Ran with whom he had a son named Joon-Sung. For a few years, they lived happily together, but in time, the parents grew apart and divorced. In Jung-Woo’s absence, Hae-Ran and Joon-Sung moved to Vancouver, where they started a café.",
+                    "Years later, Cyttorak directed a mage named Malphegor to kill Jung-Woo and take possession of the shard. Though the wizard succeeded in the former task, he failed in the latter. As his final act, Jung-Woo sent the shard to his teenage son, who promptly absorbed its powers and defeated his father’s killer.",
+                    "Cyttorak pushed Joon-Sung to kill Malphegor, but the boy resisted the demon’s dark influence. Calling himself Kid Juggernaut, he vowed that, from that day forward, he would be the hero that his grandfather had never been.",
+                    "These days, Kid Juggernaut spends most of his time at the new Avengers Academy, learning the basics of hero work alongside his classmate and crush, Aaron Fischer."
+                ],
+                Personality =
+                [
+                    "Justin Jin is as kind as he is strong, and as gentle as he is unstoppable. He can, at times, be a bit inattentive to his surroundings, but he’s such a good guy that no one begrudges him for it.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -967,6 +1083,93 @@ public class CharactersK
                 ]
             },
             Source = BookSource.RevengeOfTheSuperSkrull
+        },
+        new()
+        {
+            Name = "Klaw",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 5, vigilance: 6, ego: 0, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weakness, specialization: "Vibranium"),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlSound,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalPrison),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                        powerSelector.GetPower(PowerNames.Supernova),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Ulysses S. Klaw",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Red, formerly brown",
+                Hair = "None, formerly black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Unique sonic construct with red and purple body",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.FrightfulFour, TeamNames.MastersOfEvil],
+                Base = "Mobile",
+                History =
+                [
+                    "Gifted scientist Ulysses Klaw created a revolutionary machine capable of converting sound waves into real physical constructs. All the machine needed was authentic Wakandan vibranium, and as the son of a Nazi, Klaw had no problem with simply invading Wakanda and taking it. He would have succeeded, too, had the Black Panther (T’Chaka) not sacrificed himself to ward off the invading army.",
+                    "Years later, Klaw returned, backed by sonic constructs of his own design, and attempted to take over the country again, only to face overwhelming resistance from the new Black Panther (T’Challa) and the Fantastic Four. He tried to turn the tide back in his favor by transforming himself into a being of pure sound, but Wakanda’s defenders sent him packing anyway.",
+                    "Klaw has tried and failed to conquer Wakanda since then, but to fund his operations he’s had to take on more and more work with other villainous organizations. He still dreams of looting and dismantling the African nation, but now he does so in between his regular stints with the Frightful Four and the Masters of Evil.",
+                ],
+                Personality =
+                [
+                    "Klaw is a vengeful, narcissistic madman who cares nothing for the rights of other people, particularly people of color. He would love nothing more than to establish himself as a petty tyrant over all of Africa. Fortunately, he is not nearly smart or powerful enough to have ever come close.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
