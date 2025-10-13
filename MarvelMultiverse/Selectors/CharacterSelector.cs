@@ -68,7 +68,7 @@ public class CharacterSelector(
         allCharacters.AddRange(CharactersQ.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersR.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersS.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
-        allCharacters.AddRange(CharactersT.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
+        allCharacters.AddRange(CharactersT.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersU.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersV.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersW.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));

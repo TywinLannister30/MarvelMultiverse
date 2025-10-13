@@ -662,7 +662,7 @@ public class CharactersI
             [
                 tagSelector.GetTag(TagNames.Enemy, specialization: "Mandarin"),
                 tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
-                tagSelector.GetTag(TagNames.Headquarters),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Impossible City"),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.LabAccess),
                 tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Mandarin), English, French, Japanese, Russian, Korean, Urdu"),
@@ -729,7 +729,7 @@ public class CharactersI
                 Weights = [225],
                 Gender = Gender.Male,
                 Eyes = "Blue",
-                Hair = "Black, short",
+                Hair = "Black",
                 Size = Size.Average,
                 DistinguishingFeatures = "Van Dyke beard",
                 Occupations = [OccupationName.Engineer, OccupationName.Tycoon],

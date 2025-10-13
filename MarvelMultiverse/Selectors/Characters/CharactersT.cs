@@ -7,10 +7,11 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersT
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -223,6 +224,113 @@ public class CharactersT
         },
         new()
         {
+            Name = "Teen Immortus",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 2, vigilance: 4, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Teen Immortus’ Armor",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Accuracy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection2} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Salvation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TimeTravel),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TimeTravelTogether),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.TimeTravel),
+                        powerSelector.GetPower(PowerNames.TimeTravelTogether),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn",
+                    ],
+                    PowerValue = 11,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nathaniel Richards",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [158],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.AvengersAcademy, TeamNames.YoungAvengers],
+                Base = "Avengers Academy",
+                History =
+                [
+                    "In an attempt to save himself some pain and suffering, Kang the Conqueror traveled back in time to his teenage years and killed his schoolyard bullies. Kang offered to give his younger self ultimate power, but the teenage Nathaniel Richards, terrified by Kang’s ruthlessness, stole the conqueror’s time-altering technology and fled to the twenty-first century, where he took on the codename Iron Lad and helped establish the Young Avengers.",
+                    "Kang attempted to draw his younger self back to his side, but despite the conqueror’s best efforts, Iron Lad managed to defy fate and stick with the hero team. However, after his crush Stature (Cassie Lang) died defending the team from Doctor Doom, Richards became disillusioned and abandoned the Young Avengers to travel the timestream on his own.",
+                    "Sometime later, Iron Lad fell in battle while helping Doctor Doom’s son Kristoff Vernard prevent an alternate version of Vernard from using a rogue shard of the M’kraan Crystal to take over the Multiverse. Thankfully, the crystal showed mercy on Iron Lad and dumped him, fully healed, into the extradimensional space where Avengers Academy sits. After rechristening himself Immortus, the reborn Richards began serving as the chaplain of the school’s mysterious chapel, the Midnight Expanse.",
+                ],
+                Personality =
+                [
+                    "Immortus has some things in common with Kang the Conqueror. They’re both ambitious and capable men, equal parts intelligent and ego driven. However, Immortus’ experiences with the Young Avengers have taught him a level of empathy and care that Kang utterly lacks.",
+                    "Above all things, Immortus is determined never to become a killer like Kang. He would rather throw himself into an intergalactic prison than go down that road."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Teresa Parker",
             Rank = 3,
             Abilities = new Abilities
@@ -315,6 +423,92 @@ public class CharactersT
                 ],
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Terminus",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 3, resilience: 8, vigilance: 7, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.UnusualSize, specialization: "Gigantic"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.UnrelentingSmash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Terminus",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "normally 150'",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "normally 94,000 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Green",
+                Size = Size.Gigantic,
+                DistinguishingFeatures = "Massive alien creature with wrinkly yellow skin and powerful armor",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.Alien],
+                Teams = [],
+                Base = "Mobile",
+                History =
+                [
+                    "Created by a mysterious alien species known as the Terminex shortly before their extinction at the hands of the Celestials, the Termini are biological machines designed for revenge. Programmed to kill any planet that the Celestials ever spared, each Terminus begins life as an amalgamation of self-replicating robotic microbes. By consuming vast swaths of inorganic matter, the microbes gradually grow in size and combine to form larger organisms. This process has several stages, with a single massive creature being the fourth and—generally—final stage. Two fully developed Termini can combine to form an even larger Ulterminus, but this phenomenon has been documented only once.",
+                    "Though the Avengers did their best to stop him, a Terminus nearly destroyed Earth on its first visit. The world was spared only by the quick thinking of Thor, who launched the entire creature into space. Cut off from the fuel of the planet, Terminus turned in on itself and vanished. It stumbled through several dimensions before finally managing to return to Earth, only to be soundly defeated again and—briefly—turned into a suit of armor by the High Evolutionary.",
+                    "Recently, the returned Terminus tried to steal an artificial black hole generator to feed its increasing power requirements. It was defeated by the Avengers and presumed destroyed when the generator exploded, but if history is any indicator, it will no doubt regrow and return someday."
+                ],
+                Personality =
+                [
+                    "Terminus has the focus of a single-minded conqueror. Its mind is simple and considers others only in terms of how they can be destroyed. Ultimately, it desires nothing less than the eradication of all life in the universe. Although Termini are capable of self-reproducing and may refer to each other familiarly, they feel no true affection and typically view each other as rivals.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -880,6 +1074,126 @@ public class CharactersT
         },
         new()
         {
+            Name = "Thor (Earth-1610)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 3, resilience: 6, vigilance: 3, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Mjolnir (Earth-1610)", isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new()
+                {
+                    Name = "Mjolnir (Earth-1610)",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ControlWeather4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Thunder),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.WeatherChill),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.WeatherWarm),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/5, Melee/Agility Damage Multiplier bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ControlWeather4),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                        powerSelector.GetPower(PowerNames.Thunder),
+                        powerSelector.GetPower(PowerNames.WeatherChill),
+                        powerSelector.GetPower(PowerNames.WeatherWarm),
+                    ],
+                    Restrictions =
+                    [
+                        $"Requires: {TraitNames.EnhancedPhysique} trait and {PowerNames.Mighty2} power",
+                        "Carried",
+                        "Flashy",
+                    ],
+                    PowerValue = 11,
+                    MeleeDamageModifier = 1,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Thor Odinson",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [285],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.HealthCareWorker],
+                Origins = [OriginName.HighTech, OriginName.MythicAsgardian],
+                Teams = [TeamNames.Ultimates],
+                Base = "Mobile (Earth-1610)",
+                History =
+                [
+                    "The life of Earth-1610’s Thor largely resembles that of his Earth-616 counterpart, up until midway through World War II when Loki, in the guise of Baron Zemo, led a joint invasion force of Nazis and frost giants into Asgard, successfully ushering in Ragnarok and destroying the Asgardian gods.",
+                    "Although the gods were dead, their spirits lived on, and eventually, they found new life on Earth. Thor was reincarnated as Thorlief Golmen, a humble nurse who, through a series of strange coincidences, was selected as the primary test subject for a series of experimental high-tech weapons modeled after his own former equipment. As the experiments went on, Golmen slowly regained his memories of his previous life and began to identify as Thor once again.",
+                    "Most of the people around Thor thought that he had gone insane, a perception that Loki quietly worked to encourage. However, despite his apparent mental issues, Thor was too powerful a force to be denied, and S.H.I.E.L.D. eventually convinced him to join the Ultimates.",
+                    "Despite some initial disagreements—spurred into full-blown fights by Loki—Thor eventually managed to earn the trust of his teammates and prove that Asgard was real. Since then, he’s consistently shown himself to be among the most righteous and self-sacrificial heroes on the team, if not the planet."
+                ],
+                Personality =
+                [
+                    "Thor’s unflinching sense of justice often puts him at odds with his morally gray teammates. He sees S.H.I.E.L.D. as an imperial organization that exists only to perpetuate a miserable and unequal status quo. He’s stuck by the Ultimates because they save lives, but he’d abandon the team in a heartbeat if he thought they were acting exclusively to forward the interests of the powers that be.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Thunderball (Wrecking Crew)",
             Rank = 3,
             Abilities = new Abilities
@@ -963,6 +1277,105 @@ public class CharactersT
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Thunderstrike (Earth-982)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Avengers Mansion"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Thor Odinson"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "Though Kevin Masterson draws his codename from his father’s mace, he does not actually wield it. Its magic lives on within him, but it no longer exists as a physical weapon."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Kevin “Kev” Masterson",
+                Heights = [new() { Feet = 5, Inches = 6 }, new() { Feet = 6, Inches = 6 }],
+                Weights = [140,640],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Student],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.ANext],
+                Base = "New York City (Earth-982)",
+                History =
+                [
+                    "Eric Masterson was a humble architect who, through a series of coincidences and mishaps, became deeply entangled in the ongoing adventures of Thor (Odinson). He eventually earned the right to carry the enchanted mace Thunderstrike and to fight alongside the gods of Asgard as one of their most treasured allies.",
+                    "Sadly, Masterson fell in battle soon after obtaining Thunderstrike. Though the mace was attuned to him and could not be wielded by any other, he nonetheless asked that the weapon be passed down to his son, Kevin, once the boy came of age.",
+                    "On Earth-982, years passed, and eventually, the day came for the mace to exit the Avengers’ vault and enter Kevin’s hands. Having just moved from California to attend art school in New York, the laid-back teen was all too happy to swing by Avengers Mansion and pick up his father’s old mace.",
+                    "Believing that he could use the weapon’s magic for his own nefarious ends, Loki sent rock trolls to steal it. In response, Jarvis sent out the first Avengers distress call in almost a decade and assembled a ragtag group of heroes to retrieve the mace.",
+                    "Loki’s forces nearly defeated the team, but despite having no powers, Kevin managed to charge past the trolls and into the trickster’s ritual circle, where he took hold of his father’s mace, foiling the god’s scheme and absorbing the weapon and its powers.",
+                    "Afterward, Kevin and his new allies formed a new incarnation of the Avengers, colloquially known as A-Next. To this day, as the new Thunderstrike, Kevin remains one of the team’s most loyal and dedicated members."
+                ],
+                Personality =
+                [
+                    "Kevin Masterson is a focused and well-rounded individual who often serves as the straight man for his teammates’ wacky antics. When the other Avengers get out of line or, worse yet, too in line, he helps balance them out.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1413,6 +1826,155 @@ public class CharactersT
                 ],
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Tony Stark",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 0, resilience: 1, vigilance: 1, ego: 5, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Mandarin"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Impossible City"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Mandarin), English, French, Japanese, Russian, Korean, Urdu"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Anthony “Tony” Stark",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [225],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Van Dyke beard",
+                Occupations = [OccupationName.Engineer, OccupationName.Tycoon],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.Avengers, TeamNames.GuardiansOfTheGalaxy, TeamNames.SHIELD],
+                Base = "New York City",
+                History =
+                [
+                    "Tony Stark is the adopted son of Maria Stark and weapons manufacturer Howard Stark, founder of Stark Enterprises. He inherited the business when his parents were killed in a car crash, and he transformed it into a global conglomerate worth billions. During an overseas weapons demonstration, a terrorist attack caused an explosion that lodged shrapnel near Stark’s heart. After being captured by the terrorists, instead of producing a weapon for them, he built a suit of powered armor in which he escaped.",
+                    "After returning home, Stark improved his armor and pretended that Iron Man was his personal bodyguard. He decided to use his powers and his amazing fortune for good by co-founding and then funding the Avengers."
+                ],
+                Personality =
+                [
+                    "Stark is one of the smartest, wealthiest and most famous people on Earth, something that can make him both arrogant and sarcastic. He’s all too aware of his shortcomings and tries to temper his sharp tongue, especially around his longtime friends, to whom he is extremely loyal.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Trapster",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 3, resilience: 2, vigilance: 2, ego: 0, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.Webgrabbing),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.Webtrapping),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webslinging),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Peter “Pete” Petruski",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [160],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTech],
+                Teams = [TeamNames.FrightfulFour, TeamNames.SinisterSix],
+                Base = "Mobile",
+                History =
+                [
+                    "A gifted inventor, Peter Petruski hit the jackpot when he created a new and advanced form of superglue. However, rather than sell this invention, he turned it toward his real passion: becoming a super villain.",
+                    "Under the codename Paste-Pot Pete, Petruski armed himself with a glue gun and laid waste to a local bank. Emboldened, he then set out to rob the U.S. military of an experimental new missile, only to be foiled at the last moment by the Human Torch (Johnny Storm).",
+                    "Determined to get even, Petruski built a slew of weapons, changed his codename to Trapster and joined three other super villains to form an anti-Fantastic Four team called the Frightful Four.",
+                    "The villainous group menaced the Fantastic Four dozens of times over the subsequent years, but as their defeats piled up, members of the team began to filter in and out. Petruski continues to be one of the Frightful Four’s most consistent and loyal members, but in recent years, even he has taken extended absences to pursue a career as a private mercenary.",
+                    "To Petruski’s credit, his solo endeavors have been just as storied. He’s fought with everyone from the Avengers to the Masters of Evil, and has a particularly long history with Deadpool, with whom he has worked both for and against."
+                ],
+                Personality =
+                [
+                    "The world at large thinks of the Trapster as a joke. Heroes and villains alike continue to mockingly refer to him as Paste-Pot Pete to the point that he has occasionally attempted, albeit unsuccessfully, to reclaim the name. Despite all the ridicule, Petruski has never let his ego get in the way of his duties as a mercenary, and those who know him well regard him as a skilled professional.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
