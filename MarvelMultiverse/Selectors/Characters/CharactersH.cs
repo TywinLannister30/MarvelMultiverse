@@ -960,6 +960,216 @@ public class CharactersH
         },
         new()
         {
+            Name = "Hercules",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 7, vigilance: 2, ego: 4, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.SpinAndThrow),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Hercules Panhellenios",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [325],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Outsider],
+                Origins = [OriginName.MythicOlympian],
+                Teams = [TeamNames.Avengers, TeamNames.GuardiansOfTheGalaxy],
+                Base = "Mobile",
+                History =
+                [
+                    "As the illegitimate son of the Greek god Zeus and the Thebian princess Alcmena, Hercules’ early life was filled with trials and tribulations. Shunned by Zeus and under constant attack from the thunder god’s wife, Hera, his every day was a fight for survival. However, after Hercules completed twelve legendary labors, Zeus finally acknowledged his son and inducted the demigod into the Greek pantheon.",
+                    "Having achieved his dreams, Hercules seldom returned to the mortal world—at least, not until the modern era, when the Enchantress brainwashed him into attacking the Avengers. Though Hercules eventually freed himself from her thrall and joined the Avengers in defeating her, Zeus nonetheless decided to punish his son by temporarily banishing him to Earth.",
+                    "Eager for new adventures, Hercules took up with the Avengers and became one of the team’s most valued and beloved members. Though Zeus eventually allowed him access to Olympus again, Hercules returned to the Avengers on and off throughout the subsequent years.",
+                    "Not long ago, the goddess Nyx destroyed Olympus and brought its inhabitants back to life as dark versions of themselves. As one of the only uncorrupted Olympians, Hercules joined the Guardians of the Galaxy in destroying this evil Olympus. He’s since returned to join the Avengers once again."
+                ],
+                Personality =
+                [
+                    "Hercules’ blustering playboy persona is born more out of feelings of inadequacy than a genuine desire to sleep around, though he did do plenty of that in his younger years. His more recent relationships have been driven more by a desire for genuine companionship, such as his current partnership with his teammate, Marvel Boy.",
+                    "On the whole, the champion of Olympus is a courageous and empathetic man, and though he’s had a bit of a rivalry with Thor over the years, the two gods are more alike than different.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "High Evolutionary",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 4, vigilance: 5, ego: 1, logic: 7
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance3),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Levitation),
+                        powerSelector.GetPower(PowerNames.TelekineticAttack),
+                        powerSelector.GetPower(PowerNames.TelekineticGrab),
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "High Evolutionary’s Armor",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.Accuracy1}"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection2} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    Restrictions =
+                    [
+                        "Menacing",
+                        "Worn",
+                    ],
+                    PowerValue = 8,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Herbert Edgar Wyndham",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [200],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTechBattleSuit, OriginName.WeirdScience],
+                Teams = [],
+                Base = "Counter-Earth",
+                History =
+                [
+                    "Herbert Wyndham’s genetics work was so far ahead of its time that his colleagues ostracized him from the world of respectable science, forcing him to take up residence in a remote research compound on Wundagore Mountain. Wyndham spent decades working tirelessly in his lab, engaging in all sorts of terrifying experiments, until—with some help from the Jackal (Miles Warren)—he finally arrived at his masterpiece: a treatment capable of artificially advancing the stature and intelligence of any creature.",
+                    "Aided by a high-tech super-suit, Wyndham created the New Men: a race of intelligent humanoids fashioned from ordinary animals. Though many of these New Men later turned on him, Wyndham kept on with his experiments, going so far as to create an entire planetoid—Counter-Earth—just to contain his myriad creations.",
+                    "Wyndham has modified his own genetic code several times, and his desire to spread his genetic treatments to the rest of humanity—whether they want it or not—has frequently brought him into conflict with super-teams like the Avengers. That said, he has often been an ally to the heroes of Earth and has played key roles in the development of multiple super heroes, including Adam Warlock and Spider-Woman (Jessica Drew).",
+                ],
+                Personality =
+                [
+                    "Herbert Wyndham’s brilliance is matched only by his ego. He believes that his research is the most important development in the history of humanity, if not the universe, and he’s not about to let trifling things like ethics and safety guidelines get in the way of his work.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Hit Monkey",
             Rank = 3,
             Abilities = new Abilities
@@ -1440,19 +1650,18 @@ public class CharactersH
         },
         new()
         {
-            Name = "Hulk (Bruce Banner)",
-            Rank = 6,
+            Name = "Hulk (Professor Hulk)",
+            Rank = 5,
             Abilities = new Abilities
             (
-                melee: 9, agility: 3, resilience: 9, vigilance: 4, ego: 2, logic: 8
+                melee: 7, agility: 3, resilience: 6, vigilance: 3, ego: 2, logic: 8
             ),
             Traits =
             [
                 traitSelector.GetTrait(TraitNames.BattleReady),
-                traitSelector.GetTrait(TraitNames.Berserker),
                 traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
                 traitSelector.GetTrait(TraitNames.EnduringConstitution),
-                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
                 traitSelector.GetTrait(TraitNames.Inventor),
                 traitSelector.GetTrait(TraitNames.Loner),
                 traitSelector.GetTrait(TraitNames.ScientificExpertise),
@@ -1460,11 +1669,12 @@ public class CharactersH
             ],
             Tags =
             [
-                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Gamma Forms"),
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Bruce Banner"),
                 tagSelector.GetTag(TagNames.Enemy, specialization: "Abomination"),
                 tagSelector.GetTag(TagNames.Enemy, specialization: "Leader"),
-                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Forms"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "as Professor Hulk"),
                 tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
                 tagSelector.GetTag(TagNames.LabAccess),
                 tagSelector.GetTag(TagNames.PublicIdentity),
@@ -1477,12 +1687,103 @@ public class CharactersH
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Anger),
                         powerSelector.GetPower(PowerNames.Brilliance2),
                         powerSelector.GetPower(PowerNames.HealingFactor),
-                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Mighty3),
                         powerSelector.GetPower(PowerNames.Sturdy3),
                         powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump3),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Robert Bruce Banner",
+                Heights = [new() { Feet = 7, Inches = 6 }],
+                Weights = [1150],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "Green",
+                Size = Size.Big,
+                DistinguishingFeatures = "Large green Hulk form",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScienceGammaMutate],
+                Teams = [TeamNames.Avengers, TeamNames.SHIELD],
+                Base = "Mobile",
+                History =
+                [
+                    "Bruce Banner was just a mild-mannered nuclear physicist until the day he stepped out onto a bomb-testing range to save a young man (Rick Jones) who had wandered onto the site. Jones escaped unharmed, but the bomb blasted Banner with gamma rays. The radiation should have killed him, but instead, he gained the ability to transform into the Hulk—an unstoppable monster brought out by the scientist’s own rage.",
+                    "Highly powerful and just as unstable, the Hulk has been involved in more major international incidents than just about any super-powered person in existence. Some people consider him a hero. Others consider him a threat worth waging war over."
+                ],
+                Personality =
+                [
+                    "Banner suffers from dissociative identity disorder. Depending on the circumstances, he can manifest any one of a half dozen separate personalities, each with their own corresponding Hulk transformation. Banner’s default personality is cool, collected and deeply empathetic. The rest are all over the map. Some are impressively cunning, while others are more like angry children.",
+                    "The Hulk has, for brief periods, managed to make peace with the disparate personalities warring inside his body and emerge as a single, stable person with the intelligence of Banner and most of the Hulk’s regular strength. This profile represents this uniquely balanced form, often referred to as Professor Hulk."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Hulk (Savage)",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 9, agility: 6, resilience: 9, vigilance: 6, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Clueless),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Bruce Banner"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Abomination"),
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Leader"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "as Savage Hulk"),
+                tagSelector.GetTag(TagNames.GreenDoor),
+                tagSelector.GetTag(TagNames.Immunity, specialization: "Gamma Radiation"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Radioactive),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Anger),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                        powerSelector.GetPower(PowerNames.Uncanny3),
                     ],
                 },
                 new CharacterPowerSet
@@ -1506,14 +1807,16 @@ public class CharactersH
             {
                 RealName = "Robert Bruce Banner",
                 Heights = [new() { IsVariable = true }],
+                HeightReminder = "7' to 8' (depending on Anger levels)",
                 Weights = [],
                 VariableWieght = true,
+                WeightReminder = "1,000 to 1,400 lbs. (depending on Anger levels)",
                 Gender = Gender.Male,
-                Eyes = "Varies",
-                Hair = "Varies",
+                Eyes = "Green",
+                Hair = "Green",
                 Size = Size.Big,
-                DistinguishingFeatures = "Several distinct Hulk forms.",
-                Occupations = [OccupationName.Scientist],
+                DistinguishingFeatures = "Massive green body",
+                Occupations = [OccupationName.Adventurer],
                 Origins = [OriginName.WeirdScienceGammaMutate],
                 Teams = [TeamNames.Avengers, TeamNames.SHIELD, TeamNames.USHulkOperations],
                 Base = "Mobile",
@@ -1525,8 +1828,111 @@ public class CharactersH
                 Personality =
                 [
                     "Banner suffers from dissociative identity disorder. Depending on the circumstances, he can manifest any one of a half dozen separate personalities, each with their own corresponding Hulk transformation. Banner’s default personality is cool, collected and deeply empathetic. The rest are all over the map. Some are impressively cunning, while others are more like angry children.",
+                    "This Hulk, commonly referred to as the Savage Hulk or Child Hulk, is the one that most people know best, the one with the intelligence and emotional regulation ability of a toddler. If left alone or treated with a kind and gentle hand, this Hulk can be sweet and friendly. But make him angry, and he’ll fly into the sort of violent tantrum that tears worlds apart."
                 ]
-            }
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Hulkling",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 3, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage, reminder: "2"),
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in true form"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Powerful),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.ShapeShift),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.CoilingCrush),
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.FlexibleFingers),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.Rubberneck),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                        powerSelector.GetPower(PowerNames.StiltSteps),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Theodore “Teddy” Kaplan-Altman (sometimes addressed as Emperor Dorrek-Vell)",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "usually around 6'",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "usually around 170 lbs.",
+                Gender = Gender.Male,
+                Eyes = "Varies, usually blue",
+                Hair = "Varies, usually blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Battle form usually has green skin",
+                Occupations = [OccupationName.Adventurer, OccupationName.Leader],
+                Origins = [OriginName.AlienKree, OriginName.AlienSkrull],
+                Teams = [TeamNames.YoungAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "During the original Kree/Skrull war, the Kree captain Mar-Vell was captured by the opposing forces and imprisoned in the royal palace, where he secretly sired a son with the Skrull princess Anelle. Fearing for the child’s life, the parents quietly ushered the boy away to Earth, leaving him in the hands of Anelle’s loyal servant Antalya.",
+                    "Both Mar-Vell and Anelle died shortly thereafter, but Antalya took on the pseudonym of Mary-Jo Altman and raised the boy as Teddy Altman.",
+                    "In Teddy’s teenage years, his alien biology caused him to develop powers, though he had no idea of their source. However, he was a huge fan of the Hulk (Bruce Banner), so he took on the codename Hulkling and joined his magically gifted boyfriend Wiccan in forming the Young Avengers.",
+                    "Both the Kree and the Skrull governments sent agents who killed Antalya and attempted to force Hulkling into joining one of their empires, though once it became clear that he had the Avengers’ protection, both sides agreed to temporarily relinquish their claims on the boy.",
+                    "Much later, Hulkling married Wiccan and joined the new Kree/ Skrull Alliance. He repelled their ancient rivals, the Cotati, and was crowned the Alliance’s ruler."
+                ],
+                Personality =
+                [
+                    "Equal parts sweet, sensitive and strong, Hulkling is the ideal ruler, not to mention husband.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
