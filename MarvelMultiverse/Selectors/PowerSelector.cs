@@ -4646,6 +4646,36 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.TimeOutBubble,
+            Description = "The character and allies step out of time.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.TimeOut}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character or an ally is attacked.",
+            Duration = $"{Duration.OneRound} per rank",
+            Cost = "15 Focus per round",
+            Effect =
+            [
+                "The character creates a time bubble that affects themselves and any chosen allies within 1 space per rank. Within the bubble, the character and those allies can act normally while everyone else seems to be frozen in place. The character can choose to activate the power for the maximum duration or choose to stop at any time. However long, they must pay the Focus cost for each round.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TimeOutTag,
+            Description = "The character freezes a person or thing in time.",
+            PowerSets = [PowerSetNames.OmniversalTravel],
+            Prerequsites = $"{PowerNames.TimeOut}, Rank 4",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character or an ally is attacked.",
+            Duration = $"{Duration.OneRound} per rank",
+            Cost = "15 Focus per round",
+            Effect =
+            [
+                "The character freezes time for one person or thing within their reach. Everything and everyone else can act normally. If the target does not wish to be frozen, the character must grab them first. The character can choose to activate the power for the maximum duration or choose to stop at any time. However long, they must pay the Focus cost for each round.",
+            ],
+        },
+        new()
+        {
             Name = PowerNames.TimePortal,
             Description = "The character opens a portal in time.",
             PowerSets = [PowerSetNames.OmniversalTravel],

@@ -318,6 +318,8 @@ public static class PowerNames
     public const string Telespot = "Telespot";
     public const string Thunder = "Thunder";
     public const string TimeOut = "Time Out";
+    public const string TimeOutBubble = "Time-Out Bubble";
+    public const string TimeOutTag = "Time-Out Tag";
     public const string TimePortal = "Time Portal";
     public const string TimeTravel = "Time Travel";
     public const string TimeTravelOther = "Time Travel Other";

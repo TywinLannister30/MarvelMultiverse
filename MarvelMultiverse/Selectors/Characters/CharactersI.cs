@@ -7,10 +7,11 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersI
 {
     public static List<Character> GetAllCharacters(
-       INarrativePowerSelector narrativePowerSelector,
-       IPowerSelector powerSelector,
-       ITagSelector tagSelector,
-       ITraitSelector traitSelector) =>
+        IIconicItemPowerSelector iconicItemPowerSelector,
+        INarrativePowerSelector narrativePowerSelector,
+        IPowerSelector powerSelector,
+        ITagSelector tagSelector,
+        ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -197,6 +198,101 @@ public class CharactersI
                     "The Eternals are typically withdrawn and private people, slow to interfere with human affairs. Among them, Ikaris is known for being unusually personable. He has had human friends and even lovers. His codename serves as a tribute to his long deceased half-human son, Ikaris.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Immortus",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 2, resilience: 3, vigilance: 6, ego: 5, logic: 8
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance3),
+                        powerSelector.GetPower(PowerNames.Discipline2, isTech: true),
+                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.OmniversalTravelTime,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.InstantReplay),
+                        powerSelector.GetPower(PowerNames.TimeOut),
+                        powerSelector.GetPower(PowerNames.TimeOutBubble),
+                        powerSelector.GetPower(PowerNames.TimeOutTag),
+                        powerSelector.GetPower(PowerNames.TimePortal),
+                        powerSelector.GetPower(PowerNames.TimeTravel),
+                        powerSelector.GetPower(PowerNames.TimeTravelOther),
+                        powerSelector.GetPower(PowerNames.TimeTravelTogether),
+                    ],
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nathaniel Richards",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [230],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown, with graying temples",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.HighTech],
+                Teams = [],
+                Base = "Mobile",
+                History =
+                [
+                    "After spending several prosperous decades as Kang the Conqueror, Nathaniel Richards grew weary of his empire and began to regret the murderous deeds he had committed in his youth. Ultimately, he abandoned his empire and traveled back in time to assist the Avengers in thwarting the machinations of his past self, and in the process, he inadvertently split off his own destiny into a separate timeline, that of Earth-6311.",
+                    "Afterward, Richards retired to the timeless dimension of Limbo, where, with the help of the mysterious Time-Keepers, he began working to untangle the temporal disturbances caused by his past selves. He has intervened in Earth’s development countless times, across millennia, using subterfuge and subtle manipulations to push the timeline into what he sees as a more optimal direction.",
+                    "Though Immortus has been known to slip back into his old ways on occasion, he has, more often than not, been a great ally to the Avengers, particularly in their ongoing battle with Kang. The man has died a thousand deaths, but being so hopelessly entangled in time, a true death for Immortus seems almost unthinkable.",
+                ],
+                Personality =
+                [
+                    "A mildly reformed tyrant, Richards has spent his life oscillating between being a friend and a foe to the Avengers. Wherever he stands on any given day is anybody’s guess. Even his closest allies regard him as a master of manipulation and illusion who ought never to be fully trusted.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -583,26 +679,48 @@ public class CharactersI
                         powerSelector.GetPower(PowerNames.Brilliance2),
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.EnvironmentalProtection, isTech: true),
-                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
-                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new IconicItem
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    IsBattlesuit = true,
+                    Name = "Iron Man’s Armor",
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage),
-                        powerSelector.GetPower(PowerNames.ElementalBarrier),
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
                     ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn",
+                    ],
+                    PowerValue = 10,
                     IsTech = true
-                },
+                }
             ],
             Biography = new Biography
             {
@@ -628,6 +746,363 @@ public class CharactersI
                     "Stark is one of the smartest, wealthiest and most famous people on Earth, something that can make him both arrogant and sarcastic. He’s all too aware of his shortcomings and tries to temper his sharp tongue, especially around his longtime friends, to whom he is extremely loyal.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Iron Man (Hulkbuster Armor)",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 8, agility: 2, resilience: 9, vigilance: 4, ego: 5, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Mandarin"),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Impossible City"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Mandarin), English, French, Japanese, Russian, Korean, Urdu"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Hulkbuster Armor",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.Clobber}"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.CrushingGrip}"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Immovable),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Salvation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Smash),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy4),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                    Restrictions =
+                    [
+                        "Large",
+                        "Worn",
+                    ],
+                    PowerValue = 20,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Anthony “Tony” Stark",
+                Heights = [new() { Feet = 6, Inches = 1 }, new() { Feet = 11 }],
+                Weights = [225, 1800],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Big,
+                DistinguishingFeatures = "Van Dyke beard; massive armored red and yellow battle suit",
+                Occupations = [OccupationName.Engineer, OccupationName.Tycoon],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.Avengers, TeamNames.GuardiansOfTheGalaxy, TeamNames.SHIELD],
+                Base = "New York City",
+                History =
+                [
+                    "Tony Stark is the adopted son of Maria Stark and weapons manufacturer Howard Stark, founder of Stark Enterprises. He inherited the business when his parents were killed in a car crash, and he transformed it into a global conglomerate worth billions. During an overseas weapons demonstration, a terrorist attack caused an explosion that lodged shrapnel near Stark’s heart. After being captured by the terrorists, instead of producing a weapon for them, he built a suit of powered armor in which he escaped.",
+                    "After returning home, Stark improved his armor and pretended that Iron Man was his personal bodyguard. He decided to use his powers and his amazing fortune for good by co-founding and then funding the Avengers.",
+                    "Since then, Stark has built dozens of other sets of armor, including a number of iterations of this suit: the Hulkbuster. As the name suggests, the Hulkbuster was designed to counter and subdue the Hulk (Bruce Banner) when he goes berserk. It’s one of the most powerful suits Stark has ever created, though due to its bulky nature, he prefers to use it only on special occasions."
+                ],
+                Personality =
+                [
+                    "Stark is one of the smartest, wealthiest and most famous people on Earth, something that can make him both arrogant and sarcastic. He’s all too aware of his shortcomings and tries to temper his sharp tongue, especially around his longtime friends, to whom he is extremely loyal.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Iron Man (Mysterium Armor)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 6, vigilance: 4, ego: 5, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Enemy, specialization: "Mandarin"),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Impossible City"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Mandarin), English, French, Japanese, Russian, Korean, Urdu"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Iron Man’s Mysterium Armor",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.Accuracy1}"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalRicochet} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Mysterium),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Salvation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy3),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.Supernova} (Energy)"),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                        powerSelector.GetPower(PowerNames.Supernova, reminder: "Energy"),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn",
+                    ],
+                    PowerValue = 17,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Anthony “Tony” Stark",
+                Heights = [new() { Feet = 6, Inches = 1 }, new() { Feet = 6, Inches = 6 }],
+                Weights = [225, 340],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Big,
+                DistinguishingFeatures = "Van Dyke beard; armored gray and red battle suit",
+                Occupations = [OccupationName.Engineer, OccupationName.Tycoon],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.Avengers, TeamNames.GuardiansOfTheGalaxy, TeamNames.SHIELD],
+                Base = "New York City",
+                History =
+                [
+                    "Tony Stark is the adopted son of Maria Stark and weapons manufacturer Howard Stark, founder of Stark Enterprises. He inherited the business when his parents were killed in a car crash, and he transformed it into a global conglomerate worth billions. During an overseas weapons demonstration, a terrorist attack caused an explosion that lodged shrapnel near Stark’s heart. After being captured by the terrorists, instead of producing a weapon for them, he built a suit of powered armor in which he escaped.",
+                    "After returning home, Stark improved his armor and pretended that Iron Man was his personal bodyguard. He decided to use his powers and his amazing fortune for good by co-founding and then funding the Avengers.",
+                    "Since then, Stark has built dozens of other sets of armor, including this one: the Mysterium Armor. This suit is one of the most advanced and powerful devices that Stark has ever made. Created from mysterium—an unbreakable metal forged in the heart of all creation—this suit is not only nearly indestructible but immune to all forms of magic. Stark, with his strong distrust of magic, wears it whenever it seems necessary."
+                ],
+                Personality =
+                [
+                    "Stark is one of the smartest, wealthiest and most famous people on Earth, something that can make him both arrogant and sarcastic. He’s all too aware of his shortcomings and tries to temper his sharp tongue, especially around his longtime friends, to whom he is extremely loyal.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Iron Man (Earth-1610)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 3, vigilance: 3, ego: 3, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Rich),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Iron Man’s Armor (Earth-1610)",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.Accuracy1}"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPrison} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection1} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Invisibility),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.MachineTelepathy),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalPrison, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn",
+                    ],
+                    PowerValue = 13,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Antonio “Tony” Stark",
+                Heights = [new() { Feet = 6, Inches = 1 }, new() { Feet = 7 }],
+                Weights = [225,2000],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Van Dyke beard",
+                Occupations = [OccupationName.Engineer, OccupationName.Tycoon],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.Ultimates],
+                Base = "Mobile (Earth-1610)",
+                History =
+                [
+                    "To slow the progression of his terminal brain tumor, industrialist Tony Stark developed a unique cancer treatment that used a combination of nanotechnology and powered exoskeleton parts. Though Stark initially intended this treatment to be used for medical purposes only, he changed his mind after he and his business colleagues were taken hostage by a revolutionary terrorist cell in Guatemala.  ",
+                    "Stark used his prototype tech to defeat the terrorists, and he then took an extended break from public life to refine his initial designs into a full-fledged battle suit. Rebranding himself as the invincible Iron Man, Stark pledged to use whatever life he had left to make the world a safer place.  ",
+                    "Though Stark later managed to cure his own cancer, his mission remains unchanged. These days, he spends most of his time in the company of his Ultimates teammates. He helped found the team, and he has single-handedly kept it funded and afloat during the brief periods when it lost S.H.I.E.L.D.’s backing.  "
+                ],
+                Personality =
+                [
+                    "Though he has a heroic heart, the Tony Stark of Earth-1610 is even more of an arrogant, womanizing, hyperintelligent playboy than his Earth-616 counterpart. He tries to temper his more self-destructive impulses, especially around his friends, but his drive to make the most of every day often pushes him to make reckless decisions.  ",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
