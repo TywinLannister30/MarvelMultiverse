@@ -7,10 +7,11 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersJ
 {
     public static List<Character> GetAllCharacters(
-       INarrativePowerSelector narrativePowerSelector,
-       IPowerSelector powerSelector,
-       ITagSelector tagSelector,
-       ITraitSelector traitSelector) =>
+        IIconicItemPowerSelector iconicItemPowerSelector,
+        INarrativePowerSelector narrativePowerSelector,
+        IPowerSelector powerSelector,
+        ITagSelector tagSelector,
+        ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -82,6 +83,91 @@ public class CharactersJ
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "J2",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 0, resilience: 5, vigilance: 2, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2; J2 form only"),
+                traitSelector.GetTrait(TraitNames.Clueless),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Zane Yama"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Avengers Mansion"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Juggernaut (Cain Marko)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "known to allies"),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Zane Yama",
+                Heights = [new() { Feet = 5, Inches = 5 }, new() { Feet = 6, Inches = 10 }],
+                Weights = [135,800],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Big,
+                SizeNotes = "Average as Zane Yama",
+                DistinguishingFeatures = "Massive, muscle-bound alternate form",
+                Occupations = [OccupationName.Adventurer, OccupationName.Student],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.ANext, TeamNames.XPeople],
+                Base = "New York City (Earth-982)",
+                History =
+                [
+                    "After retiring from super-villainy and joining the X-Men, Juggernaut (Cain Marko) settled down with New York City District Attorney Sachi Yama and had a son named Zane. Shortly thereafter, Marko and the X-Men encountered a powerful demonic villain named Nemesus, and for the rest of the team to be able to escape from his evil dimension, Marko had to stay behind.",
+                    "Zane grew up knowing full well that his father was Juggernaut, but without any real memories of the man himself. As a scrawny intellectual, he felt he had almost nothing in common with his long-lost father.",
+                    "Then one day in high school while hiding from his bully, Miller Hallendale, Yama discovered that—with effort—he could temporarily grant himself the size and strength of Juggernaut, albeit without the invulnerability provided by the legendary Crimson Bands of Cyttorak. Emboldened, Yama threw on some of his father’s old equipment and dedicated himself to protecting his community from bullies of all kinds. Shortly thereafter, the rechristened J2 helped found a new incarnation of the Avengers, colloquially known as A-Next.",
+                    "With help from some of A-Next’s regular allies, Yama later rescued his father from Nemesus, and Marko—filled with pride—formally named his son as his successor."
+                ],
+                Personality =
+                [
+                    "As an awkward, nerdy teenager, J2 has more in common with Peter Parker than Cain Marko. Equal parts excitable and insecure, Yama thinks being a super hero is one of the coolest things in the world, and he desperately desires to live up to the legacy of all the noble heroes who came before him.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -372,6 +458,91 @@ public class CharactersJ
         },
         new()
         {
+            Name = "Jeff the Land Shark",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 1, resilience: 2, vigilance: 2, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Amphibious),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mute, reminder: "communicates in grunts and purrs"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Young),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpeedSwim),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jeff",
+                Heights = [new() { Feet = 2, Inches = 3 }, new() { Feet = 1, Inches = 6 }],
+                HeightReminder = "2'3\" (from nose to tail), 1'6\" (on all fours)",
+                Weights = [17],
+                Gender = Gender.Male,
+                Eyes = "Black",
+                Hair = "None",
+                Size = Size.Small,
+                DistinguishingFeatures = "Miniature great white shark with four legs",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.WestCoastAvengers],
+                Base = "Los Angeles",
+                History =
+                [
+                    "As part of his plans to menace the people of Los Angeles, M.O.D.O.K. genetically engineered a small army of walking amphibious great white sharks. When the West Coast Avengers eventually defeated M.O.D.O.K., Gwenpool adopted the runt of the land-shark litter and named him Jeff.",
+                    "Though the West Coast Avengers broke up shortly thereafter, Gwenpool and her former teammates continued to take care of little Jeff and provide him with all the love and care that a little shark needs. Jeff rarely accompanies his human caregivers on their adventures, but with his rambunctious nature, he has no trouble finding plenty of excitement on his own.",
+                    "Though he has occasionally been involved in world-shaking events, Jeff’s day-to-day adventures are usually low-stakes escapades of heartwarming heroism. Whether he’s devouring litter at the park or simply spending a relaxing day at the beach, Jeff always brings a smile to the faces of the people—and the pets—around him.",
+                ],
+                Personality =
+                [
+                    "Though Jeff’s large teeth can sometimes frighten strangers, those who know him know that he would never hurt a soul—at least not an innocent soul. Jeff is as loyal, kind and intelligent as a pure-hearted human toddler. He can’t speak, but he can make certain animalistic purrs and grunts, and his caregivers rarely have trouble understanding what he wants.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Jessica Jones",
             Rank = 3,
             Abilities = new Abilities
@@ -447,6 +618,104 @@ public class CharactersJ
                     "Jones’ hard life has made her more than a little world-weary, but despite her travails she remains a strongly caring person. She may work for profit, but still she strives to deliver the best possible outcomes for her clients, going out of her way to ensure that they get the justice they pay for.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Jocasta",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 3, vigilance: 4, ego: 1, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Integrity),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection2),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MachineTelepathy),
+                    ],
+                    IsTech = true,
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jocasta Pym",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [750],
+                Gender = Gender.Female,
+                Eyes = "Red",
+                Hair = "Hairlike metal features",
+                Size = Size.Average,
+                DistinguishingFeatures = "Silver humanoid robot",
+                Occupations = [OccupationName.Adventurer, OccupationName.Outsider],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.Avengers, TeamNames.AvengersAcademy],
+                Base = "Mobile",
+                History =
+                [
+                    "In an attempt to simultaneously take revenge on his creator (Hank Pym) and create a companion for himself, Ultron kidnapped Pym’s wife, the Wasp (Janet Van Dyne), and tried to transfer her mind into a robotic body. The Avengers defeated Ultron and interrupted the transfer, but a basic imprint of the Wasp’s mind remained in the robot and gradually became a unique new intelligence named Jocasta.",
+                    "Ultron ordered his would-be bride to kill the Avengers, but unwilling to be pushed around, Jocasta joined the Avengers and helped them destroy her evil creator instead. Ultron later returned and destroyed Jocasta, but as machine consciousnesses, neither of them tended to remain dead for long.",
+                    "Though Jocasta has been forced, either by destruction or manipulation, to abandon the Avengers for extended periods, she has still managed to become a mainstay of the team and its associated offshoots. She helped Hank Pym found the original Avengers Academy and even had a brief romance with him during a period when the Wasp was thought to be dead. Though they broke things off long ago, Jocasta kept Pym’s last name as an emblem of her origins."
+                ],
+                Personality =
+                [
+                    "Jocasta may have the Wasp’s heroic spirit, but she lacks Janet Van Dyne’s penchant for parties and socializing. Her overall personality skews far closer to that of her brother, the Vision: dark and serious, often grappling with what it means to be a living machine.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {

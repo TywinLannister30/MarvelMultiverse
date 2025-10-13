@@ -211,6 +211,7 @@ public static class TeamNames
     public const string XMen = "X-Men";
     public const string XFactor = "X-Factor";
     public const string XForce = "X-Force";
+    public const string XPeople = "X-People";
     public const string XSE = "X.S.E.";
     public const string XStatix = "X-Statix";
     public const string XTerminators = "X-Terminators";
