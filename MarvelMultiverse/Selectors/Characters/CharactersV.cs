@@ -7,10 +7,11 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersV
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -650,6 +651,220 @@ public class CharactersV
                     "The Vision can seem distant, even aloof, but he cares deeply for his family and his friends. Anyone who hurts his loved ones is sure to suffer deeply at the hands of his unstoppable wrath.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Vision (Jonas)",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 3, ego: 0, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Phasing,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DisruptElectronics),
+                        powerSelector.GetPower(PowerNames.DisruptNerves),
+                        powerSelector.GetPower(PowerNames.DisruptPerson),
+                        powerSelector.GetPower(PowerNames.PartialPhase),
+                        powerSelector.GetPower(PowerNames.PhaseSelf),
+                    ],
+                    IsTech = true,
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jonas",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [210],
+                Gender = Gender.Male,
+                Eyes = "Gold",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Bright red synthezoid skin",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.YoungAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "When the Scarlet Witch’s suppressed memories of her children re-emerged, her reality-altering powers went berserk, creating fluctuations that rocked the entire universe. One of these fluctuations killed the Vision. The other Avengers left his body in the wreckage of Avengers Mansion, where Iron Lad (Nathaniel Richards) later discovered it. He used parts of the Vision to craft a unique new A.I.—later named Jonas—who helped him put together the Young Avengers.",
+                    "When Iron Lad later abandoned the team, he left his battle suit behind. The A.I. took over the suit and fashioned it into an autonomous android body, allowing him to take Iron Lad’s place on the team.",
+                    "Declaring himself the new Vision, and later taking the name Jonas, the A.I. faithfully followed the Young Avengers through their next several adventures. Sadly, his time with the team was cut short when Iron Lad returned and destroyed the Vision in a fit of rage.",
+                    "The original Vision returned to life soon after that, and for the next several years, nobody made any attempt to revive Jonas. Recently, however, a remorseful Iron Lad salvaged the Jonas A.I. and implanted it into his new Teen Immortus battle suit, effectively bringing him back to life. Jonas is once again without a body of his own, but this profile represents him as he was during his stint with the Young Avengers."
+                ],
+                Personality =
+                [
+                    "Though Jonas shares many of the original Vision’s heroic and caring qualities, he is even more coldly aloof and calculating than his predecessor. He rarely acts as a tactical leader, but he has a strong penchant for tactical games, particularly chess.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Void",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 8, resilience: 4, vigilance: 8, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Bob Reynolds"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, reminder: "The Sentry"),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.ShapeShift),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimatedIllusion),
+                        powerSelector.GetPower(PowerNames.Darkness),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                        powerSelector.GetPower(PowerNames.MirrorImages),
+                        powerSelector.GetPower(PowerNames.StaticIllusion),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BodySheet),
+                        powerSelector.GetPower(PowerNames.BounceBack),
+                        powerSelector.GetPower(PowerNames.CoilingCrush),
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
+                        powerSelector.GetPower(PowerNames.FlexibleBones2),
+                        powerSelector.GetPower(PowerNames.ReversePunch),
+                        powerSelector.GetPower(PowerNames.SlipFree),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Sentry’s Confidence Inverted"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "When killed or shattered, the Void becomes Bob (use the Average Civilian profile from the Core Rulebook), with 1 Health and 1 Focus. Bob can become the Sentry again when restored to full Health and Focus."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Void",
+                Heights = [new() { IsVariable = true},],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.None,
+                Eyes = "Varies",
+                Hair = "None",
+                Size = Size.Varies,
+                DistinguishingFeatures = "Shape-shifting mass of darkness and despair",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [],
+                Base = "Mobile",
+                History =
+                [
+                    "In college, Bob Reynolds began to hear voices. Over time, they pushed him into drug abuse in an attempt to self-medicate. Looking for a new high, Reynolds broke into a local lab and drank a vial containing an experimental serum, granting himself incredible super-powers.",
+                    "In response, Reynolds’ mind formed two new personalities. The more positive, hopeful side of his psyche became the super hero known as the Sentry, and his negative and self-destructive impulses formed into a dark cosmic entity called the Void.",
+                    "The threat of the Void is so great that the Sentry has, at times, either deliberately depowered himself or willingly merged with the evil creature to keep it contained.",
+                    "Recently, the Void merged with the symbiote king Knull, and together, they finally managed to kill the Sentry. Venom (Dylan Brock) seemingly destroyed both Knull and the Void shortly thereafter. However, the Sentry’s powers have since reconsolidated in Solarus (Mallory Gibbs).",
+                    "This profile represents the Void back when the Sentry was a member of the Avengers."
+                ],
+                Personality =
+                [
+                    "The Void is the yang to the Sentry’s yin, the abyssal reflection of his shining light. Though the Void often chooses to appear human, it is a force of pure chaos and destruction with no true shape. It can look like a serial killer one moment and a dark cloud on the horizon the next.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {

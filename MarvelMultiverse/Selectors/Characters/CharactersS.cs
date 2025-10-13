@@ -1053,7 +1053,7 @@ public class CharactersS
                 tagSelector.GetTag(TagNames.Enemy, reminder: "The Void"),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.MentalHealthConditions),
-                tagSelector.GetTag(TagNames.SecondaryMutation, reminder: "known to allies"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "known to allies"),
             ],
             Powers =
             [
