@@ -7,10 +7,11 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersP
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -99,6 +100,101 @@ public class CharactersP
                 ]
             },
             Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
+            Name = "Patriot",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 1, resilience: 2, vigilance: 3, ego: 3, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Patriot’s shield (acts as a regular shield)"),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ShieldBearer,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BraceForImpact),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.Shield1),
+                        powerSelector.GetPower(PowerNames.ShieldBash),
+                        powerSelector.GetPower(PowerNames.ShieldDeflection),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.HitTheDirt),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Elijah “Eli” Bradley",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [206],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.YoungAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "In an attempt to re-create the Super-Soldier Serum that gave Captain America (Steve Rogers) his powers, the U.S. government subjected hundreds of Black soldiers to brutal experiments. Only one man—Isaiah Bradley—survived these experiments, and he immediately took the title of Captain America for himself and ran off to fight in World War II. Rather than reward Bradley for his heroism, the government imprisoned him for insubordination and struck his name from the history books.",
+                    "Decades later, Bradley’s grandson Elijah learned of his grandfather’s legacy, and despite having no powers of his own, he became determined to live up to the legacy of the first Black Captain America. By using Mutant Growth Hormone, Elijah managed to simulate super-strength well enough to become not only a founding member, but the leader of the Young Avengers. His ruse was only discovered after he took a nearly lethal blow in battle, but thankfully, his grandfather stepped in at the last moment and gave him a life-saving blood transfusion, granting Elijah the powers he had wanted all along.",
+                    "However, the shame for using MGH stuck with Patriot, and after a particularly devastating battle with Doctor Doom, he retired from the world of super heroes altogether. Elijah now spends most of his time doing quiet activist work, though other heroes like the new Patriot (Rayshaun Lucas) have occasionally convinced him to return to the field for a good cause."
+                ],
+                Personality =
+                [
+                    "Equal parts commanding and intelligent, Bradley makes for an excellent team leader. His abilities are tempered only by his own insecurities and the incessant pressure he puts on himself to be a perfect hero.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -849,6 +945,131 @@ public class CharactersP
                 ]
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Proxima Midnight",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 5, resilience: 6, vigilance: 5, ego: 3, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Thanos’ army)"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Proxima Midnight’s Spear", isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Proxima Midnight’s Spear",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalGrab} (Energy)"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach + 1/10, Melee/Agility Damage Multiplier bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalGrab, reminder: "Energy"),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Large",
+                    ],
+                    PowerValue = 3,
+                    MeleeDamageModifier = 1,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Proxima Midnight",
+                Heights = [new() { Feet = 6, Inches = 5 }],
+                Weights = [190],
+                Gender = Gender.Female,
+                Eyes = "White",
+                Hair = "Blue",
+                Size = Size.Average,
+                DistinguishingFeatures = "No irises, blue skin and hair",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.BlackOrder],
+                Base = "Mobile",
+                History =
+                [
+                    "Proxima Midnight and her husband, Corvus Glaive, were among Thanos’ earliest followers, and to this day, they remain among his most beloved subjects. They were the first to join the Mad Titan’s coveted inner circle—his Black Order—and it is they who have kept the Order running, even in the Titan’s absence.",
+                    "Midnight serves as the proverbial tip of the Black Order’s spear. She is their battlefield commander and, more often than not, their functional leader. Her blade has tasted the blood of uncountable innocents, and her armies have sucked the life from entire planets.",
+                    "Corvus Glaive is a masterful tactician, but his abilities in combat are limited. It would be nigh impossible for him, or Thanos, to execute their galaxy-conquering schemes without Midnight to lead the troops in battle.",
+                    "Following Glaive’s recent resurrection, Midnight rebuilt the Black Order into a group of rogue mass murderers for hire, but the team has since returned to Thanos’ service."
+                ],
+                Personality =
+                [
+                    "Proxima Midnight is a military general through and through. Her speech is curt and formal, and when she moves in combat, she moves without mercy, slicing through her opponents with mathematical precision. As much as she enjoys battle, her face rarely wears any other expression than a scowl.",
+                    "Despite her hard exterior, Midnight does have a soft spot for her husband. She has, at times, considered giving up the Black Order and settling down with Glaive."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {

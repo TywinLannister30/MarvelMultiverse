@@ -61,10 +61,10 @@ public class CharacterSelector(
         allCharacters.AddRange(CharactersJ.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersK.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersL.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
-        allCharacters.AddRange(CharactersM.GetAllCharacters(iconicItemPowerSelector,narrativePowerSelector, powerSelector, tagSelector, traitSelector));
+        allCharacters.AddRange(CharactersM.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersN.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
-        allCharacters.AddRange(CharactersO.GetAllCharacters(iconicItemPowerSelector,narrativePowerSelector, powerSelector, tagSelector, traitSelector));
-        allCharacters.AddRange(CharactersP.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
+        allCharacters.AddRange(CharactersO.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
+        allCharacters.AddRange(CharactersP.GetAllCharacters(iconicItemPowerSelector, narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersQ.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersR.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
         allCharacters.AddRange(CharactersS.GetAllCharacters(narrativePowerSelector, powerSelector, tagSelector, traitSelector));
