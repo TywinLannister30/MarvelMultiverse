@@ -108,6 +108,7 @@ public static class TeamNames
     public const string LegionOfMonsters = "Legion of Monsters";
     public const string Legionnaires = "Legionnaires";
     public const string LethalLegion = "Lethal Legion";
+    public const string LegionOfTheUnliving = "Legion of the Unliving";
     public const string Liberators = "Liberators";
     public const string LivingArmada = "The Living Armada (Brood fleet)";
     public const string Loners = "Loners";
@@ -203,6 +204,7 @@ public static class TeamNames
     public const string USHulkOperations = "U.S. Hulk Operations";
     public const string VenomverseResistanceMovement = "Venomverse Resistance Movement";
     public const string VillainsForHire = "Villains for Hire";
+    public const string WarAvengers = "War Avengers";
     public const string WeaponXForce = "Weapon X-Force";
     public const string WebWarriors = "Web-Warriors";
     public const string WestCoastAvengers = "West Coast Avengers";
@@ -219,4 +221,5 @@ public static class TeamNames
     public const string Yakuza = "Yakuza";
     public const string YoungAvengers = "Young Avengers";
     public const string YoungUltimates = "Young Ultimates";
+    public const string Zodiac = "Zodiac";
 }

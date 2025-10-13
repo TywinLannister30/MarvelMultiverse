@@ -1,16 +1,18 @@
 ﻿using MarvelMultiverse.Constants;
 using MarvelMultiverse.Enums;
 using MarvelMultiverse.Models;
+using System.Reflection.PortableExecutable;
 
 namespace MarvelMultiverse.Selectors.Characters;
 
 public class CharactersS
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -501,6 +503,118 @@ public class CharactersS
         },
         new()
         {
+            Name = "Scorpio",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 3, vigilance: 5, ego: 0, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "The Zodiac Key"),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.RangedWeapons,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                        powerSelector.GetPower(PowerNames.WeaponsBlazing),
+                    ],
+                    IsTech = true
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "The Zodiac Key",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection1} (Energy)"),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1, reminder: "Energy"),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 4,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jacob “Jake” Fury",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [185],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.HighTechAndroid],
+                Teams = [TeamNames.Hydra, TeamNames.Zodiac],
+                Base = "Mobile",
+                History =
+                [
+                    "The younger brother of superspy Nick Fury Sr., Jake Fury is a World War II vet, Hell’s Kitchen native and seasoned secret agent.",
+                    "Following the war, Jake became a spymaster, and in 1961, he and Nick joined the Great Wheel of Zodiac. The original Zodiac was an anti-imperialist group composed of the best spymasters on the planet, who sought to protect the world from dangerous lost technology. During one mission, Jake imprinted himself on an ancient automaton, inadvertently creating the first Life-Model Decoy (LMD). In service to their own plans, the Fury brothers decided to keep the LMD a secret. Shortly afterward, the Zodiac collapsed, and Jake went underground, with his LMD taking his place in public.",
+                    "Unfortunately, Jake’s LMD was not a perfect copy. The LMD grew to hate the brothers and society at large and sought to destroy both. Using a weapon called the Zodiac Key and backed by a super-villain team modeled after the original Zodiac, the LMD launched several failed campaigns against his brother under the codename Scorpio, before eventually killing himself.",
+                    "Now believed dead, the actual Jake remained undercover, eventually taking the place of a high-level Hydra agent known as the Kraken. Together, Jake and Nick orchestrated a war between Hydra and the secret Soviet spy group known as Leviathan that crippled both organizations.",
+                    "This profile represents the Scorpio LMD at the height of its powers."
+                ],
+                Personality =
+                [
+                    "Whether his objective requires threatening a nun, pulling an old man off life support or brutally killing an enemy, Fury does the job without complaint. Brash and boastful, he can be just as hard-nosed and ruthless as his brother.",
+                    "The Scorpio LMD is much the same as the real Jake Fury but with an added layer of instability and recklessness."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Scorpion",
             Rank = 4,
             Abilities = new Abilities
@@ -915,6 +1029,238 @@ public class CharactersS
         },
         new()
         {
+            Name = "Sentry",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 9, agility: 5, resilience: 8, vigilance: 3, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Bob Reynolds"),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Enemy, reminder: "The Void"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.SecondaryMutation, reminder: "known to allies"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Illumination),
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BumpPower),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Confidence"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.MemoryBlip),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "When killed, the Sentry becomes Bob (use the Average Civilian profile in the Core Rulebook), with 1 Health and 1 Focus. Bob can become the Sentry again when restored to full Health and Focus. When shattered, the Sentry becomes the Void, at full Health and Focus."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Robert “Bob” Reynolds",
+                Heights = [new() { Feet = 6 }, new() { Feet = 6, Inches = 2 }],
+                Weights = [194,200],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.DarkAvengers, TeamNames.MightyAvengers, TeamNames.NewAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "In college, Bob Reynolds began to hear voices. Over time, they pushed him into drug abuse in an attempt to self-medicate. Looking for a new high, Reynolds broke into a local lab and drank a vial containing an experimental serum, granting himself incredible super-powers.",
+                    "As the Sentry, Reynolds’ powers are nearly unsurpassed, making him the last line of defense for Earth. However, due to his mental instability, he is also closely monitored by all manner of government agencies and the super-powered community. His greatest enemy is the Void—the manifestation of his own self-destructive impulses. The Sentry and the Void are two sides of the same coin, and at times, they have both separately and simultaneously controlled Reynolds’ body.",
+                    "After being killed in battle by Knull, Reynolds took his place in Valhalla, and the Sentry’s power was split up among several people. It eventually consolidated in Solarus (Mallory Gibbs). This profile represents the Sentry when he was a member in good standing of the Avengers.",
+                ],
+                Personality =
+                [
+                    "Reynolds’ mental health burdens are more numerous and heavy than any one man—even with godlike abilities—could be expected to handle on his own. His friends help him manage, but unfortunately, his reliance on them makes his friends an easy target for manipulation by those looking to use the Sentry’s powers for their own ends.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Sersi",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 4, resilience: 4, vigilance: 5, ego: 6, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Dealmaker),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.EternallyImmortal),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.MahdWyry),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.GroupFlight),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.GrandMirage),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Teleportation,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.Teleport2),
+                        powerSelector.GetPower(PowerNames.TeleportTogether),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Sersi",
+                Heights = [new() { Feet = 5, Inches = 9 }],
+                Weights = [140],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Eternal],
+                Teams = [TeamNames.Avengers, TeamNames.Eternals, TeamNames.NewAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "Long ago, mysterious cosmic beings known as Celestials visited Earth and experimented on the planet’s proto-humans, transforming them into Deviants—unstable humanoids who inevitably degenerated into grotesque monsters. To curb this threat, the Celestials also created Eternals, a race of immortal superhumans genetically programmed to kill degenerated Deviants.",
+                    "The Eternals have dealt with the ennui of their unusually long existences in different ways. For most of Sersi’s existence, she kept her spirits up by hosting massive galas and indulging in all manner of debauchery to distract her from the slow march of time—and from her discovery that, every time an Eternal dies, Earth restores them by taking the life of a mortal.",
+                    "Sersi only became involved in world affairs after two other Avengers-associated Eternals—Starfox and Gilgamesh—brought the super-team to one of her parties. Sersi made friends with the team’s leaders, and after Gilgamesh was injured in battle, they invited her in as his replacement.",
+                    "Though Sersi proved to be a strong Avenger, she eventually abandoned the team and returned to the Eternals. The Avengers later allied with the Eternals to fight the Progenitor: a rogue Celestial bent on ushering in Judgment Day. Moments before Earth was to be wiped out, Sersi broadcast the truth behind the Eternals’ immortality to the entire planet. As a reward for this show of selflessness, the Progenitor spared Earth but permanently destroyed Sersi.",
+                ],
+                Personality =
+                [
+                    "Hedonistic and self-absorbed by nature, it took countless centuries for Sersi to begin thinking about how to better the world rather than just how to distract herself from its horrors. Her final sacrifice proves that anyone can change, even Eternals.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Shadow King",
             Rank = 5,
             Abilities = new Abilities
@@ -1193,6 +1539,128 @@ public class CharactersS
                     "Shang-Chi is a loyal friend and a determined leader who works hard to refute his father’s criminal legacy. He regularly resists the temptations of power and respects the rule of law. Despite this, he tries to maintain a light and friendly demeanor.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Shang-Chi (with the Ten Rings)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 7, agility: 5, resilience: 4, vigilance: 5, ego: 2, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Espionage"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Cantonese, Mandarin and other dialects), English"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "The Ten Rings", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.FocusedStrike),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                        powerSelector.GetPower(PowerNames.LeapingLeglock),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                        powerSelector.GetPower(PowerNames.RegainFocus),
+                        powerSelector.GetPower(PowerNames.ReverseMomentumThrow),
+                        powerSelector.GetPower(PowerNames.SpinAndThrow),
+                        powerSelector.GetPower(PowerNames.UnflappablePoise),
+                        powerSelector.GetPower(PowerNames.UntouchablePosition),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "The Ten Rings",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.CrimsonBandsOfCyttorak),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReturnsWhenThrown),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10 spaces, Melee/Agility Damage Multiplier bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 5,
+                    MeleeDamageModifier = 1,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Zheng Shang-Chi",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [175],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Spy],
+                Origins = [OriginName.Magic, OriginName.SpecialTraining],
+                Teams = [TeamNames.AgentsOfAtlas, TeamNames.Avengers, TeamNames.FiveWeaponsSociety, TeamNames.HeroesForHire, TeamNames.Protectors],
+                Base = "Chinatown, New York City",
+                History =
+                [
+                    "As the son of the criminal mastermind Zheng Zu, Shang-Chi—who believed his father to be a good man—was trained from an early age to become the ultimate martial artist. When sent on a mission to assassinate one of his father’s enemies, he learned the truth and vowed to destroy his father’s criminal empire instead.",
+                    "After Zheng Zu’s death, Shang-Chi inherited his father’s position as the Supreme Commander of the Five Weapons Society. He also learned that his mother—Jiang Li—hailed from the pocket dimension Ta Lo, and that her father—Chieftain Xin—wanted to destroy Shang-Chi’s entire family and take possession of the mystical Ten Rings.",
+                    "Thankfully, with some help from his mother, Shang-Chi managed to defeat Xin and harness the power of the Ten Rings for himself. In the years since, Shang-Chi has either given up or lost the rings many times, but this profile represents him at the height of his powers, armed with all Ten Rings."
+                ],
+                Personality =
+                [
+                    "Shang-Chi is a loyal friend and a determined leader who has worked hard to refute his father’s criminal legacy. He regularly wrestles with the temptations of power, and it is only his determination not to follow in his father’s footsteps that has kept him from being corrupted by items like the Ten Rings.",
+                    "Despite all his troubles, Shang-Chi has always managed to maintain a light and friendly demeanor."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1859,6 +2327,119 @@ public class CharactersS
         },
         new()
         {
+            Name = "Shroud",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 5, resilience: 3, vigilance: 3, ego: 2, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FreeRunning),
+                traitSelector.GetTrait(TraitNames.LegalEagle),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.VisionIssues, reminder: "blind; “sees” with ESP"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab)
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Illusion,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Darkness),
+                        powerSelector.GetPower(PowerNames.Illumination),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ESP),
+                    ],
+                },
+            ],
+            PowerNotes =
+            [
+                "Shroud draws his Elemental Control (Energy) powers from the Darkforce dimension, so his blasts and bursts appear dark in color."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Maximillian Quincy Coleridge",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [220],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Facial scar in shape of Kali",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Magic],
+                Teams = [TeamNames.HeroesForHire, TeamNames.SecretAvengers],
+                Base = "New York City",
+                History =
+                [
+                    "As a child, Maximillian Coleridge was forced to watch helplessly as his parents were gunned down by a mugger. Resolving to fight crime for the rest of his life, Coleridge took to studying criminology and martial arts. Having heard rumors of the Cult of Kali’s mastery of darkness and other strange abilities, he traveled to Nepal and sought them out. The cult trained him, taught him to worship their goddess and branded his face, blinding him.",
+                    "When Coleridge recovered, he discovered he no longer needed his eyes to see and could access the Darkforce, granting him super-powers. He adopted the codename Shroud and, following a failed attempt to kill Doctor Doom, he took up residence in Los Angeles, pretending to be a villain. He briefly led a team called the Night Shift, composed of super villains he tricked into performing heroic acts, until he was eventually ousted.",
+                    "After a brief stint in New York with Misty Knight’s Heroes for Hire, Shroud fell into a depression and moved to San Francisco. Acting increasingly reckless, he attacked Daredevil (Matt Murdock) when the hero moved to San Francisco, but Shroud eventually helped him bring down the criminal empire of Kingpin (Wilson Fisk).",
+                    "Searching for purpose, Coleridge briefly attempted to take the mantle of Moon Knight following Marc Spector’s death, but Spector soon returned. Coleridge, in turn, went back to being Shroud."
+                ],
+                Personality =
+                [
+                    "Since the death of his parents, Coleridge has dedicated his life to fighting crime, and his mission has taken a toll on him. A once-lively man, Coleridge has grown more bitter and erratic over the years, deploying increasingly violent and sadistic methods against criminals. He tends to drift between various super-villain and super-hero teams, working with whomever he thinks can help him further his mission at any given moment.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Shuri",
             Rank = 4,
             Abilities = new Abilities
@@ -1955,6 +2536,115 @@ public class CharactersS
                     "Shuri sometimes resents the disproportionate amount of attention and power given to her brother, but her love for him and the Wakandan people outweighs all that. Eloquent, personable and incredibly sharp, she has proven herself an excellent leader.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Sif",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 2, resilience: 4, vigilance: 7, ego: 4, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.GodHeritage),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Stranger),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Allspeak),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Worshipped),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Hofund", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.Wisdom),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new()
+                {
+                    Name = "Hofund",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Sif",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [425],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Black, formerly blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Outsider],
+                Origins = [OriginName.MythicAsgardian],
+                Teams = [TeamNames.WarAvengers],
+                Base = "Asgard",
+                History =
+                [
+                    "Sif and Thor grew up alongside each other, and they have been lovers on and off since they became adults. However, while Thor loves Sif, he also loves Earth, and Sif’s first priorities have always been their home: Asgard.",
+                    "For many years, Sif indulged Thor in his long sojourns away from Asgard, allowing him to go off and have whatever dalliances he pleased on Earth, then returning to her role as his stalwart lover and ally as soon as he returned. But after years of going back and forth in their relationship, the pair began to grow apart. Sif started to go on her own adventures and even take other lovers—most notably Beta Ray Bill.",
+                    "Eventually, Thor and Sif both agreed that they would be better off remaining friends. Soon after that, Sif’s brother Heimdall was killed by Bullseye, and Sif found a new role for herself in Asgard, filling her brother’s shoes by acting as the guardian of the Rainbow Bridge."
+                ],
+                Personality =
+                [
+                    "Sif is a proud warrior woman, every bit as stalwart and noble as any of the heroic souls who walk Valhalla’s halls. She could probably take Thor’s place on the Avengers if necessary, but she prefers a somewhat quieter life.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -3013,6 +3703,89 @@ public class CharactersS
                 ]
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Speed",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 5, resilience: 2, vigilance: 3, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.LightningActions),
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.MolecularDestabilization),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Evasion),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BlazingFastFists),
+                        powerSelector.GetPower(PowerNames.Blur),
+                        powerSelector.GetPower(PowerNames.CatchBullets),
+                        powerSelector.GetPower(PowerNames.LightningActions),
+                        powerSelector.GetPower(PowerNames.MolecularDestabilization),
+                        powerSelector.GetPower(PowerNames.RunOnWater),
+                        powerSelector.GetPower(PowerNames.SpeedBlast),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Thomas “Tommy” Shepherd",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [155],
+                Gender = Gender.Male,
+                Eyes = "Green",
+                Hair = "White",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.YoungAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "Unable to conceive children naturally with her husband (the Vision), the Scarlet Witch unconsciously stole two fragments of Mephisto’s demonic essence and transmogrified them into living children: a pair of twins named William and Thomas Maximoff. Some time later, Mephisto discovered the theft and had the children killed, but despite his best efforts, their souls continued to elude his grasp. Eventually, they were sent back in time and reincarnated as William Kaplan and Thomas Shepherd.",
+                    "As part of a happy, well-off family, Kaplan had a relatively easy time coming to terms with his powers, becoming the hero known as Wiccan, and helping to form the Young Avengers. Shepherd, on the other hand, struggled and spent his early teens lashing out at others.",
+                    "As part of one of their first missions, the Young Avengers freed Shepherd from a juvenile detention center for super-powered teens. After realizing that they looked nearly identical, it didn’t take long for Shepherd and Kaplan to piece together their origins.",
+                    "For a while, the boys worked together to protect the world with the Young Avengers. However, Kaplan eventually left the team to elope with Hulkling and join him in overseeing the new Kree/Skrull Alliance. Shepherd similarly ran off to Krakoa with his boyfriend Prodigy, but the pair lost track of each other during the island-nation’s fall."
+                ],
+                Personality =
+                [
+                    "Compared to his sensitive and insecure brother, Speed often comes across as an unfeeling and overconfident problem child. But for all his tough-guy bluster, Shepherd does care about people, particularly his teammates. He just has trouble opening up to others, even his friends.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -5431,6 +6204,108 @@ public class CharactersS
         },
         new()
         {
+            Name = "Starfox",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 3, vigilance: 5, ego: 7, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.IronWill),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.EternallyImmortal),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.MahdWyry),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.GroupFlight),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.TelekineticManipulation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.GrandMirage),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Eros",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [190],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Red",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.Eternal],
+                Teams = [TeamNames.Avengers, TeamNames.Eternals],
+                Base = "Mobile",
+                History =
+                [
+                    "The Celestials never intended for there to be more than one hundred Eternals, and they intentionally locked off the system of rebirth from all Eternal progeny. In defiance, two Eternals—A’Lars and Sui-San—sought to give birth to new Eternals. Their first attempt, Thanos, was a disastrous failure. Their second was Eros.",
+                    "Eros was a true Eternal and in almost every way his older brother’s opposite—as obsessed with spreading love and joy as Thanos was with spreading death. He fought alongside the Avengers in their quest to defeat Thanos, and he later joined the team under the codename Starfox. Though his time with the Avengers was short-lived, he served the organization faithfully and even helped introduce other Eternals like Sersi into their ranks.",
+                    "Starfox eventually left the Avengers to explore the universe and reconnect with his extended family, but he has continued to come to the team’s aid during times of major crisis—especially when those crises involve Thanos.",
+                ],
+                Personality =
+                [
+                    "Starfox numbers among the most flamboyant, eccentric and relentlessly cheery people in the known galaxy. When he’s not actively adventuring, he spends his time partying hard and hitting on anything that moves. Though he’d be loath to violate anyone’s boundaries, he is determined to spread love and peace everywhere he goes.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Starling",
             Rank = 3,
             Abilities = new Abilities
@@ -5792,6 +6667,104 @@ public class CharactersS
                 ]
             },
             Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
+            Name = "Stinger",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 3, ego: 3, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Skeptical),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Ant-Man (Scott Lang)"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.SecretIdentity, reminder: "known to allies"),
+                tagSelector.GetTag(TagNames.Young),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow2),
+                        powerSelector.GetPower(PowerNames.ResizeObject),
+                        powerSelector.GetPower(PowerNames.Shrink4),
+                        powerSelector.GetPower(PowerNames.ShrinkingDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AnimalCommunication, specialization: "insects"),
+                    ],
+                    IsTech = true
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Cassandra “Cassie” Lang",
+                Heights = [new() { IsVariable = true }],
+                HeightReminder = "normally 5'4\"",
+                Weights = [],
+                VariableWieght = true,
+                WeightReminder = "normally 106 lbs.",
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.HighTechPymParticles],
+                Teams = [TeamNames.YoungAvengers],
+                Base = "New York City",
+                History =
+                [
+                    "Cassie Lang was born with a rare heart defect, and to treat it, her father, Scott, stole Hank Pym’s Ant-Man technology. Pym could have had Scott imprisoned, but out of admiration for the man’s noble cause, Pym ultimately allowed Scott to keep the tech and become the new Ant-Man.",
+                    "Cassie grew up admiring her father’s heroism and secretly took small doses of Pym Particles throughout her youth, just in case she was ever called into battle. However, she never seriously considered donning an Ant-Man suit herself—at least not until Scott was seemingly killed by the explosion of the undead corpse of his radioactive teammate, Jack of Hearts.",
+                    "Determined to carry on in her father’s stead, Cassie threw on Scott’s old suit and joined the Young Avengers as Stature. Her teammate, Iron Lad, developed a crush on her, and in an attempt to win her love, he helped the team travel back in time and rescue Scott. Unfortunately, Cassie couldn’t enjoy her father’s return, as she was killed by Doctor Doom immediately thereafter.",
+                    "Years later, during a brief period of remorse, Doom brought Cassie back to life. She quickly returned to adventuring under a new title—Stinger—and to keep her safe, Scott reluctantly took her on as his apprentice."
+                ],
+                Personality =
+                [
+                    "Cassie Lang loves and admires her father, but she’s also a somewhat insecure young woman looking for acceptance among her peers, and that often makes his presence embarrassing. She’s happy to work with him on his adventures, but she’s adamant about keeping him far away from her social life.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -6378,6 +7351,104 @@ public class CharactersS
         },
         new()
         {
+            Name = "Supergiant",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 3, resilience: 3, vigilance: 6, ego: 4, logic: 8
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlienHeritage),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance4),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Levitation),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telepathy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.BorrowSenses),
+                        powerSelector.GetPower(PowerNames.Command),
+                        powerSelector.GetPower(PowerNames.Domination),
+                        powerSelector.GetPower(PowerNames.ESP),
+                        powerSelector.GetPower(PowerNames.GrandMirage),
+                        powerSelector.GetPower(PowerNames.InformationUpload),
+                        powerSelector.GetPower(PowerNames.MentalShelter),
+                        powerSelector.GetPower(PowerNames.MindInterrogation),
+                        powerSelector.GetPower(PowerNames.MindReading),
+                        powerSelector.GetPower(PowerNames.Mirage),
+                        powerSelector.GetPower(PowerNames.Orders),
+                        powerSelector.GetPower(PowerNames.TelepathicBlast),
+                        powerSelector.GetPower(PowerNames.TelepathicLink),
+                        powerSelector.GetPower(PowerNames.TelepathicNetwork),
+                        powerSelector.GetPower(PowerNames.TelepathicPossession),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Supergiant",
+                Heights = [new() { Feet = 6, Inches = 3 }],
+                Weights = [215],
+                Gender = Gender.Female,
+                Eyes = "Yellow",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Blue skin with black markings, angular facial features, no visible ears",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.Alien],
+                Teams = [TeamNames.BlackOrder],
+                Base = "Mobile",
+                History =
+                [
+                    "Supergiant claims to have first met Thanos in her childhood, back when she was living in an orphanage for severely traumatized children. After witnessing the Mad Titan expertly butcher one of his own children, Supergiant begged him to grant her the honor of a similar death. Thanos agreed, on the condition that she help him kill all his other children first.",
+                    "For a time, Supergiant served Thanos faithfully as a member of the Black Order, but after many frustrating years of waiting patiently for death, she decided to take matters into her own hands. During Thanos’ first invasion of Earth, she stole the codes to a powerful antimatter bomb and set it to blow, hoping to kill Thanos, his son Thane and herself all at once.",
+                    "Thankfully, the Inhuman dog Lockjaw managed to teleport both her and the bomb to an uninhabited area at the last second, ensuring that she would be the only casualty of the blast.",
+                    "Sadly, death refused to take Supergiant, and she soon returned to life, first as a psychic ghost and later in a physical body. Alive again, she rejoined the Black Order and returned to Thanos’ service."
+                ],
+                Personality =
+                [
+                    "Though some other members of the Black Order have limited psychic abilities, Supergiant is the team’s dedicated psychic soldier. Described at times as a “psychic leech,” she is capable of not only manipulating her opponents’ minds, but consuming and replacing them entirely.",
+                    "However, unlike many psychics, Supergiant is not particularly willful or egotistical. She speaks softly, with a wistfulness that betrays her longing for oblivion. At times, she acts less like her own person and more like a psychic extension of Thanos."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Superior Spider-Man",
             Rank = 4,
             Abilities = new Abilities
@@ -6566,6 +7637,117 @@ public class CharactersS
                 ]
             },
             Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Swordsman",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 4, resilience: 2, vigilance: 3, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.MagicItemReliance),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Swordsman’s Sword", isMagicItem: true),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new()
+                {
+                    Name = "Swordsman’s Sword",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.BoltsOfBalthakk),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.FlamesOfTheFaltine),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.MistsOfMorpheus),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus: +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.MistsOfMorpheus)
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 3,
+                    MeleeDamageModifier = 2,
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jacques Duquesne",
+                Heights = [new() { Feet = 6, Inches = 4 }],
+                Weights = [250],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Entertainer],
+                Origins = [OriginName.Magic, OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.LegionOfTheUnliving, TeamNames.LethalLegion],
+                Base = "Mobile",
+                History =
+                [
+                    "Jacques Duquesne mentored Hawkeye (Clint Barton) back when Clint worked at a circus with his older brother, Barney. The old weapons expert taught Clint everything he ever needed to know about combat, and Clint idolized him—until he caught Duquesne stealing money from the circus to pay off his gambling debts.",
+                    "The pair fought, and Duquesne disappeared. The Swordsman spent the next several years traveling the world—working as a thief and a sword for hire—before eventually returning to the United States and attempting to weasel his way into his old ward’s new group: the Avengers.",
+                    "The team quickly uncovered the Swordsman’s impure intentions and kicked him out, but after fighting with the Avengers a few more times, Duquesne fell in love with an alien bartender named Mantis and realized that he actually did want to turn over a new leaf. With Mantis’ support, he joined the Avengers for real and helped them protect the world from the likes of the Mandarin and the Enchantress. Sadly, his time with the team was cut short when he died protecting Mantis from Kang.",
+                    "Though the Swordsman has been resurrected a couple of times since, these returns have been short-lived. Not long after the Swordsman’s original death, an elder of the alien Cotati possessed his body and claimed his memories, becoming a plant-based version of the man."
+                ],
+                Personality =
+                [
+                    "Though certainly selfish and self-destructive, the Swordsman was never a complete monster, even at the height of his villainous activities. The fact that he looked out for the Barton brothers as boys shows that he always had a decent heart buried somewhere beneath his swaggering, devil-may-care exterior.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
