@@ -1216,12 +1216,7 @@ public class CharactersA
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Brilliance1),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Valkyrie spear [+1 Melee damage multiplier; range is reach +1]",
-                            meleeDamageModifier: 1),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Valkyrie Spear"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
@@ -1243,6 +1238,30 @@ public class CharactersA
                         powerSelector.GetPower(PowerNames.BattlePlan),
                         powerSelector.GetPower(PowerNames.KeepMoving),
                     ],
+                }
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Valkyrie Spear",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach +1/Unlimited, Damage Multiplier Bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst, specialization: "Energy")
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Large"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
                 }
             ],
             Biography = new Biography

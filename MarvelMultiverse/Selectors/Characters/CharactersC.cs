@@ -1933,6 +1933,99 @@ public class CharactersC
         },
         new()
         {
+            Name = "Chondu the Mystic",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 1, resilience: 2, vigilance: 4, ego: 6, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.Small, reminder: "when not using body"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.Villainous),
+
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.MistsOfMorpheus),
+                        powerSelector.GetPower(PowerNames.MistsOfMunnopor),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.VaporsOfValtorr),
+                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Telekinesis,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.GroupLevitation),
+                        powerSelector.GetPower(PowerNames.Levitation),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Harvey Schlemerman",
+                Heights = [new() { IsVariable = true }],
+                Weights = [],
+                VariableWieght = true,
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Bald",
+                Size = Size.Small,
+                SizeNotes = "usually",
+                DistinguishingFeatures = "He’s a floating head in a jar",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicSorcery],
+                Teams = [TeamNames.Headmen],
+                Base = "New York City",
+                History =
+                [
+                    "After discovering that he had a knack for the mystical arts, Harvey Schlemerman attempted to make a name for himself in entertainment as the magician Chondu. Despite the fact that he employed real magic, the viewing public largely deemed him a two-bit charlatan.",
+                    "Determined to become famous at any cost, Schlemerman turned to a life of crime. He joined up with the Headmen, who attempted to infiltrate their enemies—the Defenders—by implanting Schlemerman’s mind into Nighthawk’s body. Thankfully, Schlemerman was quickly caught by the Defenders, and his mind was forced into the body of a passing deer.",
+                    "When Schlemerman eventually made it back to the Headmen’s headquarters, he was horrified to discover that his teammate Gorilla-Man had cut his head from his body and grafted it onto a monstrous, chimera-like creature.",
+                    "Despite this betrayal, Schlemerman stayed with the Headmen for a while, transferring his head from one hideous body to another as the situation required. Although he recently retired from super-villainy, Schlemerman could still be called back into the ranks of the Headmen—for the right price."
+                ],
+                Personality =
+                [
+                    "Chondu desires two things: money and respect. If he has both, he is a happy and quiet intellectual. When he has neither, he becomes murderously furious.",
+                    "Like many practitioners of the mystic arts, Chondu has a huge ego. The quickest way to make him mad is to mock his skills as a sorcerer."
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Claire Dixon",
             Rank = 1,
             Abilities = new Abilities

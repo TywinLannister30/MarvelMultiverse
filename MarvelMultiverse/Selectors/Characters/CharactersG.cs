@@ -1225,6 +1225,95 @@ public class CharactersG
         },
         new()
         {
+            Name = "Gorilla-Man",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 2, resilience: 3, vigilance: 2, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Big, specialization: "Reach 2"),
+                traitSelector.GetTrait(TraitNames.Clinician),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.FirstAid),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.Jump2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.Smash),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Arthur Nagan",
+                Heights = [new() { Feet = 6, Inches = 7}],
+                Weights = [603],
+                Gender = Gender.Male,
+                Eyes = "Gray",
+                Hair = "Black",
+                Size = Size.Big,
+                DistinguishingFeatures = "Body of a large gorilla",
+                Occupations = [OccupationName.HealthCareWorker, OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Headmen],
+                Base = "New York City",
+                History =
+                [
+                    "Arthur Nagan was once a surgeon and leading researcher in the budding field of human-animal transplantation. He made headlines around the world when he successfully transplanted a gorilla heart into a human body.",
+                    "Not long after, Nagan showed up to work with his head grafted onto the body of a gorilla. He initially claimed that apes had come to him with the idea for the full-body transplant and that they had gone so far as to assist him with the surgery, but later in life, he testified that the apes had actually forced the transplant upon him as revenge for harvesting their organs.",
+                    "In any case, Nagan was fired from his research position. To continue his twisted experiments, Gorilla-Man, along with Shrunken Bones and Chondu, founded the Headmen, a group of super villains dedicated to researching—and destroying— heroes everywhere.",
+                    "Over the years, Nagan and his Headmen have clashed with dozens of different super heroes and teams, most commonly the Defenders. Despite being defeated time and time again, Nagan has never given up hope that one day the world will see him for the genius he is."
+                ],
+                Personality =
+                [
+                    "Gorilla-Man is a mad scientist of the highest and most classical order. He is obsessed with bringing his utterly nonsensical scientific ideas to life, if only so he can rub them in the face of every scientist—and super hero—who ever doubted him. His wild experiments know no morality or sanity, and he would dissect the bodies of his own teammates if the notion amused him.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Green Goblin (Early Days)",
             Rank = 3,
             Abilities = new Abilities
@@ -1978,7 +2067,7 @@ public class CharactersG
                 History =
                 [
                     "Gwendolyn Poole grew up in a world much like our own, in which the heroes and villains of Earth-616 exist only as fictional characters. As a high-school dropout with few prospects in life, she spent her days holed up in her room, reading hundreds of comics, all the while wishing that she could be a Marvel character herself.",
-                    "Then, somehow, it happened. Poole was sucked onto the real Earth-616, where she immediately threw on a costume and began working her way up the ranks of the underworld as the unbelievable Gwenpool.",,
+                    "Then, somehow, it happened. Poole was sucked onto the real Earth-616, where she immediately threw on a costume and began working her way up the ranks of the underworld as the unbelievable Gwenpool.",
                     "Poole’s awareness of Marvel tropes allowed her to quickly propel herself into a position of power, but success brought her no satisfaction. Eventually, she sought out her brother, Teddy, who tried to return them to their homeworld, but only stranded them in a similar-looking comic book dimension.",
                     "Through sheer willpower, Poole pierced the veil of this false world and gained the ability to traverse the spaces between panels and rewrite the reality of comic books themselves. Shocked by the implications of her new powers, Poole returned to Earth-616 and rededicated herself to the life of a hero. Since then, she’s worked with the West Coast Avengers, the X-Men and even other versions of herself."
                 ],

@@ -1517,5 +1517,106 @@ public class CharactersR
                 ]
             }
         },
+        new()
+        {
+            Name = "Ruby Thursday",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 3, resilience: 2, vigilance: 3, ego: 1, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in true form"),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "Tentacles"),
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Head orb [extrudes a mass of morphing red tentacles that can act as melee weapons or webs]"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Plasticity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10; only applies to tentacles"),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SpiderPowers,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Thursday Rubinstein",
+                Heights = [new() { Feet = 5, Inches = 6 }],
+                Weights = [140],
+                Gender = Gender.Female,
+                Eyes = "None visible",
+                Hair = "None",
+                Size = Size.Average,
+                DistinguishingFeatures = "Large red orb in place of head",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Headmen],
+                Base = "New York City",
+                History =
+                [
+                    "Ruby Thursday was once a leading scientist in the field of organic circuitry, right up until her head was replaced with a bright red orb of morph-able electronics, from which she can extend prehensile tentacles. She can even alter it to appear human, and she can separate it from her body without harm.",
+                    "She fell in with a group of similarly disgruntled and disfigured scientists: the villainous Headmen. Although she was a late addition to the team, she quickly distinguished herself as one of the organization’s toughest and most capable members.",
+                    "Unlike her teammates, Ruby Thursday has occasionally managed to make a career for herself as an independent mercenary. Her powerful red tentacles have allowed her to successfully hold her ground against the likes of Romulus and even She-Hulk. If the Headmen ever entirely fell apart, most of its members might return to civilian life, but Ruby and her villainy would endure.",
+                ],
+                Personality =
+                [
+                    "Ruby is as stoic and enigmatic as the orb that forms her head. She speaks succinctly and infrequently, preferring to let her tentacles do the talking.",
+                    "Like all the Headmen, Ruby is driven by two things: money and a burning desire to show up those fools who laughed at her work."
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
     ];
 }

@@ -331,5 +331,116 @@ public class CharactersO
                 ]
             }
         },
+        new()
+        {
+            Name = "Osiris (Robot)",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 4, resilience: 3, vigilance: 5, ego: 9, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Kang’s Army)"),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.CrimsonBandsOfCyttorak),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                        powerSelector.GetPower(PowerNames.Uncanny4),
+                        powerSelector.GetPower(PowerNames.Wisdom),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SenseSupernatural),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
+                        powerSelector.GetPower(PowerNames.MistsOfMorpheus),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.VaporsOfValtorr),
+                        powerSelector.GetPower(PowerNames.WindsOfWatoomb),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                    ],
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Osiris",
+                Heights = [new() { Feet = 6 }],
+                Weights = [400],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Green skin, pharaonic nemes headdress",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechAndroid, OriginName.MagicSorcery],
+                Teams = [TeamNames.KangsArmy],
+                Base = "Kang’s Time Ship",
+                History =
+                [
+                    "Despite his general distaste for collaborative efforts, Kang swallowed his pride and worked closely with native Egyptian sorcerers to ensure that the robots guarding his precious Time Ship could counter any conceivable threat. As a result of this collaboration, Isis and Osiris number among the most powerful of all of Kang’s creations and may, in fact, be more powerful than the Conqueror himself.",
+                    "To keep the robot from standing out in the Egyptian landscape, Isis and Osiris were created in the image of the ancient Egyptian gods of the same names.",
+                    "Like his wife, Isis, Osiris served many roles in the pantheon of ancient Egypt, but he remains best known as a god of death. It was his responsibility to pass judgment on the souls of the dead.",
+                    "The mythological Osiris could be merciful. Kang’s Osiris cannot. The robotic Osiris automatically judges all who are not Kang as being worthy only of death. Any who attempt to enter the Time Ship without Kang’s permission are met with the full force of the robot’s fury."
+                ],
+                Personality =
+                [
+                    "Despite their incredible powers, Isis and Osiris are barely sentient. The A.I. that powers them prioritizes brutality and efficiency above all else. They obey Kang’s orders without question, and they protect Kang’s Time Ship at any cost, but they rarely do much else. They spend most of their time lying completely still on the paws of Kang’s sphinx, keeping watch for any potential intruders.",
+                    "Isis and Osiris barely speak and cannot be negotiated with. They listen only to Kang or—rather— anyone who they perceive as being Kang."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
     ];
 }

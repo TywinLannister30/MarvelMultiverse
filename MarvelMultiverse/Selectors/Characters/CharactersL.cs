@@ -15,6 +15,98 @@ public class CharactersL
     [
         new()
         {
+            Name = "Lady Deadpool",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 5, agility: 4, resilience: 4, vigilance: 3, ego: 3, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.MediaAwareness),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Katana"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.CounterstrikeTechnique),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.FlyingDoubleKick),
+                        powerSelector.GetPower(PowerNames.FocusedStrike),
+                        powerSelector.GetPower(PowerNames.LegSweep),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Wanda Wilson",
+                Heights = [new() { Feet = 6 }],
+                Weights = [169],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.DeadpoolCorps],
+                Base = "Mobile",
+                History =
+                [
+                    "In the fascist America of Earth-3010, Wanda Wilson, her reality’s Deadpool, was a disfigured, semiretired mercenary brought back into action by a rebel militia formed to topple America’s totalitarian government. Wanda fought numerous battles on the rebels’ behalf, earning her the enmity of the government’s Super-Soldier General America. Wade Wilson, Wanda’s male Earth-616 counterpart, recruited her into the Deadpool Corps, a cadre of multiversal Deadpool variants formed by the Elders of the Universe to confront the Awareness, a pre-Big Bang being capable of absorbing the consciousness of sentient beings on a planetary scale. After ending the Awareness’ rampage in a battle that saw the Corps exposed to their greatest fears and Wanda having her physical appearance restored, the Corps remained together as spacefaring mercenaries, though Wanda often clashed with Wade over methods and values despite sharing his penchant for mayhem. After being sent back to Earth-3010 by the Elders, Wanda and the Corps reunited to face an army of Deadpools amassed by the Deadpool of Earth- 12101 to eradicate every Deadpool in existence. Wanda sacrificed herself by crashing the Corps’ spacecraft, the Bea Arthur, into a Deadpool-Galactus variant serving Deadpool-12101, but she was later resurrected by the reality-manipulating Killville.",
+                ],
+                Personality =
+                [
+                    "Like many of her multiversal counterparts, Lady Deadpool is unafraid to dish out lethal violence and often speaks in endless strings of jocular pop-culture references that simultaneously distract foes and frustrates allies. Among the Deadpool Corps, Wanda shares the other members’ penchant for mayhem but is a shrewder figure who often acts as the voice of reason among the team, particularly against Deadpool-616 whose schemes often fail to account for negative consequences. Wanda nevertheless sufferes a severe need for belonging that makes her susceptible to joining causes beyond her own self-interest.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Lady Deathstrike",
             Rank = 4,
             Abilities = new Abilities

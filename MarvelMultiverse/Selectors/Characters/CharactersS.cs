@@ -2439,6 +2439,90 @@ public class CharactersS
         },
         new()
         {
+            Name = "Shrunken Bones",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 0, agility: 0, resilience: 1, vigilance: 2, ego: 3, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Energy blaster [grants Elemental Burst (Energy)]"),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.ChangeOfPlans),
+                        powerSelector.GetPower(PowerNames.HitTheDirt),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Jerold “Jerry” Morgan",
+                Heights = [new() { Feet = 5, Inches = 7 }],
+                Weights = [180],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Bald",
+                Size = Size.Average,
+                DistinguishingFeatures = "More skin than bones",
+                Occupations = [OccupationName.Scientist],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Headmen],
+                Base = "New York City",
+                History =
+                [
+                    "An ambitious young scientist, Jerry Morgan spent most of his professional life attempting to create a gas capable of shrinking people down to microscopic size. In the end, he succeeded, but only in part. He permanently shrank his own bones. Morgan might still have had a chance to capitalize on his breakthrough, but just a few months later, Dr. Henry Pym discovered Pym Particles, making all of Morgan’s research obsolete.",
+                    "His life’s work now useless, Morgan vowed to take revenge on Pym and all who called themselves heroes. With the help of several other disgruntled researchers, Morgan, along with Gorilla-Man and Chondu, founded the Headmen, a team made up entirely of superbly scientific super villains.",
+                    "In the ensuing years, Morgan and the Headmen faced off against countless heroes, including Spider-Man and even Pym himself. However, no heroes have frustrated the group’s efforts more than the intrepid Defenders.",
+                ],
+                Personality =
+                [
+                    "By far, the most physically infirm of the Headmen, Shrunken Bones tries to avoid direct conflict with enemies. He keeps to the sidelines, doing what he can to support and inspire his teammates. Away from the field of battle, he spends most of his free time acting as a laboratory assistant for his friend and team leader, Gorilla-Man.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Shuri",
             Rank = 4,
             Abilities = new Abilities

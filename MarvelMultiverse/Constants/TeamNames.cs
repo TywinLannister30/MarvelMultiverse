@@ -45,6 +45,7 @@ public static class TeamNames
     public const string DarkElves = "Dark Elves";
     public const string DaughtersOfLiberty = "Daughters of Liberty";
     public const string DaughtersOfTheDragon = "Daughters of the Dragon";
+    public const string DeadpoolCorps = "Deadpool Corps";
     public const string DepartmentOfTheUncanny = "Department of the Uncanny";
     public const string Defenders = "Defenders";
     public const string DoraMilaje = "Dora Milaje";
@@ -69,6 +70,7 @@ public static class TeamNames
     public const string FutureFoundation = "Future Foundation";
     public const string GammaFlight = "Gamma Flight";
     public const string GenerationX = "Generation X";
+    public const string GIRL = "G.I.R.L.";
     public const string GoblinGang = "Goblin Gang";
     public const string GoblinNation = "Goblin Nation";
     public const string GodsOfAsgard = "Gods of Asgard";
@@ -81,6 +83,7 @@ public static class TeamNames
     public const string GuardiansOfTheGalaxy = "Guardians of the Galaxy";
     public const string GwenHive = "GwenHive";
     public const string HatefulHexad = "Hateful Hexad";
+    public const string Headmen = "Headmen";
     public const string HEARTClinic = "H.E.A.R.T. Clinic";
     public const string HellLords = "Hell Lords";
     public const string HellfireClub = "Hellfire Club";
@@ -99,6 +102,7 @@ public static class TeamNames
     public const string InnerDemons = "Inner Demons";
     public const string Intelligencia = "Intelligencia";
     public const string IntergalacticCouncil = "Intergalactic Council";
+    public const string KangsArmy = "Kang's Army";
     public const string KGB = "KGB";
     public const string KnightsOfX = "Knights of X";
     public const string KreeEmpire = "Kree Empire";

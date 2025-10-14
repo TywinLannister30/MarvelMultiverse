@@ -7,10 +7,11 @@ namespace MarvelMultiverse.Selectors.Characters;
 public class CharactersW
 {
     public static List<Character> GetAllCharacters(
-      INarrativePowerSelector narrativePowerSelector,
-      IPowerSelector powerSelector,
-      ITagSelector tagSelector,
-      ITraitSelector traitSelector) =>
+       IIconicItemPowerSelector iconicItemPowerSelector,
+       INarrativePowerSelector narrativePowerSelector,
+       IPowerSelector powerSelector,
+       ITagSelector tagSelector,
+       ITraitSelector traitSelector) =>
     [
         new()
         {
@@ -505,6 +506,339 @@ public class CharactersW
         },
         new()
         {
+            Name = "Wasp (Nadia Van Dyne)",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 4, resilience: 3, vigilance: 3, ego: 3, logic: 5
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Determination),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.ScientificExpertise),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.Linguist, specialization: "Chinese (Mandarin), English, French, Italian, Japanese, Russian, Spanish"),
+                tagSelector.GetTag(TagNames.MentalHealthConditions),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance2),
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlElectricity,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DefenseStance),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Resize,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Grow1),
+                        powerSelector.GetPower(PowerNames.ResizeObject),
+                        powerSelector.GetPower(PowerNames.ResizeOther),
+                        powerSelector.GetPower(PowerNames.Shrink3),
+                        powerSelector.GetPower(PowerNames.ShrinkingDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Nadia Van Dyne",
+                Heights = [new() { Feet = 5, Inches = 2 }],
+                Weights = [100],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Varies,
+                SizeNotes = "normally average",
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Scientist],
+                Origins = [OriginName.HighTechPymParticles, OriginName.SpecialTraining],
+                Teams = [TeamNames.Avengers, TeamNames.Champions, TeamNames.GIRL],
+                Base = "Mobile",
+                History =
+                [
+                    "When Hank Pym’s first wife, Maria Trovaya, was killed by Hungarian secret police, he assumed that the daughter she was carrying—Nadia—had died as well. In reality, Trovaya was kept alive just long enough to give birth so they could enroll her infant into their Red Room spy-training program.",
+                    "Nadia’s handlers tried to turn her into a shrinking superspy, but they made the mistake of telling her about her origins. As soon as she was old enough to effectively use Pym Particles, she turned on her superiors and fled back to the United States.",
+                    "Hank Pym was, at the time, thought to be dead, so Nadia sought out his old partner, the Wasp (Janet Van Dyne). Van Dyne generously adopted the wayward girl, and Nadia in turn became her new mother’s apprentice, taking on both her last name and her codename.",
+                    "In just a few short years, the new Wasp has distinguished herself as one of the most capable and inventive young heroes on the planet. She’s played key roles with both the Avengers and the Champions, though these days she spends most of her time working with G.I.R.L.—an all-female research group of her own creation."
+                ],
+                Personality =
+                [
+                    "The Wasp has a bit of both Janet Van Dyne and Hank Pym in her. She’s a natural leader and a loyal friend. She’s also a relentlessly dedicated scientist, perhaps even more so than her father, given that she is entirely uninterested in sex and romance.",
+                    "Unfortunately, in addition to her father’s mind, the Wasp also inherited his mental health issues and suffers from bouts of bipolar disorder."
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Whiplash",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 3, vigilance: 3, ego: 1, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.LabAccess),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Brilliance1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.SlowMotionDodge),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FuriousAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.Riposte),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Whiplash’s Armor",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.IconicItem} (Whiplash’s Energy Whips)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Whiplash’s Energy Whips"),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Menacing",
+                        "Worn",
+                    ],
+                    PowerValue = 4,
+                    IsTech = true
+                },
+                new IconicItem
+                {
+                    Name = "Whiplash’s Energy Whips",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "These energy whips can count as either Energy attacks or Sharp attacks."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach+1, Melee Damage Multiplier bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Anton Igorevich Vanko",
+                Heights = [new() { Feet = 6 }],
+                Weights = [235],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Dyed green, originally black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Several prosthetic fingers on right hand",
+                Occupations = [OccupationName.Engineer],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [TeamNames.MastersOfEvil, TeamNames.Thunderbolts],
+                Base = "Mobile",
+                History =
+                [
+                    "A brilliant young engineer, Anton Vanko saw his Russian village destroyed and his father murdered at the hands of a man in an Iron Man suit. Seeking revenge, Anton built his own battle suit from leftover pieces of Stark technology and set out to kill Iron Man. He chose to do so under the codename Whiplash, which a number of Iron Man’s other foes had adopted in the past.",
+                    "Tony Stark eventually proved that the Iron Man who attacked Vanko’s village was an impostor, but this did little to satiate the hatred in Vanko’s heart. He still blames Stark for building the Iron Man technology in the first place and continues to thirst for vengeance.",
+                    "Vanko has spent most of the last several years either in prison or working for one of a number of for-hire mercenary groups, like the Thunderbolts.",
+                ],
+                Personality =
+                [
+                    "The destruction of his childhood home permanently traumatized Whiplash. He can remain cool and collected most of the time, but the slightest mention of Tony Stark or Stark Industries sends him into an uncontrollable rage. The flailing energy whips he uses in battle mirror his own erratic behavior.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Whirlwind",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 6, resilience: 2, vigilance: 4, ego: 0, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Villains"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Convict),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+                tagSelector.GetTag(TagNames.Villainous),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlAir,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalGrab),
+                        powerSelector.GetPower(PowerNames.ElementalPrison),
+                        powerSelector.GetPower(PowerNames.ElementalProtection1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperSpeed,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SpeedBlast),
+                        powerSelector.GetPower(PowerNames.SpeedRun2),
+                    ],
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "David “Dave” Cannon",
+                Heights = [new() { Feet = 6, Inches = 1 }],
+                Weights = [220],
+                Gender = Gender.Male,
+                Eyes = "Blue",
+                Hair = "Brown",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer, OccupationName.Criminal],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.LethalLegion, TeamNames.MastersOfEvil],
+                Base = "New York City",
+                History =
+                [
+                    "David Cannon has been a selfish bully since he was a teenager, and his attitude certainly didn’t improve after he developed mutant powers of super-speed. He could have used his abilities to become a world-renowned athlete or a beloved hero. Instead, he chose to spend his days robbing banks as the Human Top.",
+                    "Cannon’s criminal activities ultimately drew the attention of Giant-Man (Hank Pym) and the Wasp (Janet Van Dyne), and though it took them a few tries, they successfully brought the Human Top to justice. Determined to have his revenge, Cannon created two new identities for himself. First, he dropped the Human Top title and rebranded himself as Whirlwind. Then he weaseled his way into a job as the Wasp’s limo driver under the pseudonym Charles Matthews.",
+                    "This allowed Cannon to spy on her and her allies in the Avengers throughout the day, then come back and exploit what he had learned to attack them at night. It even allowed him to open the doors of Avengers Mansion to villains like the Masters of Evil.",
+                    "Though Giant-Man and the Wasp eventually figured out their driver’s true identity, that has not stopped Cannon from trying to attack them at their weakest moments, or from employing similarly deceitful tactics against their allies."
+                ],
+                Personality =
+                [
+                    "Whirlwind is an entitled bully perpetually fixated on everything and everyone that he can’t have. At certain points, he became so violently obsessed with the Wasp that he deluded himself into believing he loved her. She, on the other hand, considers him a ridiculous stalker and a minor annoyance at best.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "White Rabbit",
             Rank = 2,
             Abilities = new Abilities
@@ -683,6 +1017,7 @@ public class CharactersW
                 traitSelector.GetTrait(TraitNames.FreeRunning),
                 traitSelector.GetTrait(TraitNames.Glibness),
                 traitSelector.GetTrait(TraitNames.Leverage),
+                traitSelector.GetTrait(TraitNames.TechReliance),
             ],
             Tags =
             [
@@ -699,7 +1034,7 @@ public class CharactersW
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Widow’s Bite (ranged weapon; on a Fantastic success, stuns target for one round)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Widow’s Bite", isTech: true),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
@@ -734,6 +1069,25 @@ public class CharactersW
                     ],
                 },
             ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Widow’s Bite",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "These blasts can count as either electricity attacks or force attacks."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 1,
+                    AgilityDamageModifier = 1,
+                    IsTech = true
+                }
+            ],
             Biography = new Biography
             {
                 RealName = "Yelena Belova",
@@ -759,7 +1113,110 @@ public class CharactersW
                     "Much like Black Widow, White Widow is a coolheaded and charismatic spy capable of talking her way through the toughest situations. However, perhaps on account of her less tumultuous career, White Widow is a bit more easygoing and trusting than her darker counterpart.",
                 ]
             },
-            Source = BookSource.QuickStartWithThunderboltsAdventure
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
+            Name = "Wiccan",
+            Rank = 4,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 4, resilience: 2, vigilance: 6, ego: 4, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.FontOfInformation),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Chaotic),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Sorcerous),
+                tagSelector.GetTag(TagNames.Supernatural),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline1),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.GroupFlight),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Magic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AstralForm),
+                        powerSelector.GetPower(PowerNames.SenseSupernatural),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicChaosMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HexBolt),
+                        powerSelector.GetPower(PowerNames.Jinx),
+                        powerSelector.GetPower(PowerNames.PowerfulHex),
+                        powerSelector.GetPower(PowerNames.ProtectionHex),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicSorcery,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
+                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
+                        powerSelector.GetPower(PowerNames.DispelSpell),
+                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
+                        powerSelector.GetPower(PowerNames.IcyTendrilsOfIkthalon),
+                        powerSelector.GetPower(PowerNames.ImagesOfIkonn),
+                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "William “Billy” Kaplan-Altman",
+                Heights = [new() { Feet = 5, Inches = 8 }],
+                Weights = [155],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.MagicChaosMagic, OriginName.Mutant],
+                Teams = [TeamNames.YoungAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "Unable to conceive children naturally with her android husband (the Vision), the Scarlet Witch unconsciously stole fragments of Mephisto’s demonic essence and transmogrified them into twin boys. Mephisto discovered the theft and had the children killed. Despite his efforts, their souls eluded his grasp and were reincarnated as William Kaplan and Thomas Shepherd.",
+                    "Years later, the magic Kaplan inherited from his original mother emerged. Determined to use his powers for good, Kaplan took the codename Wiccan and joined his boyfriend, Hulkling, and a handful of other young heroes in forming the Young Avengers. On one mission, the team freed Shepherd from a juvenile detention center for super-powered teens. After realizing they looked nearly identical, Shepherd and Kaplan pieced together their origins. For a while, Kaplan and Shepherd worked together. However, Kaplan recently left to elope with Hulkling and join him in overseeing the new Kree/Skrull Empire.",
+                    "Prophecy predicts that Wiccan will transform into a being called the Demiurge and forever change the nature of magic. Kaplan has no idea if that day will ever come, but he has felt the Demiurge’s influence in his own time."
+                ],
+                Personality =
+                [
+                    "In times of peace, Wiccan struggles to summon the willpower necessary to wield his powers. But when the people he cares about are in danger, there’s not a force in the Multiverse that can stop him. As an insecure and big-hearted Avengers fanboy, he takes the task of living up to the team’s legacy very seriously.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {
@@ -1309,6 +1766,107 @@ public class CharactersW
                 ],
             },
             Source = BookSource.XMen97Characters
+        },
+        new()
+        {
+            Name = "Wonder Man",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 6, agility: 3, resilience: 5, vigilance: 4, ego: 5, logic: 2
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Glibness),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Presence),
+                traitSelector.GetTrait(TraitNames.PublicSpeaking),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Mighty3),
+                        powerSelector.GetPower(PowerNames.Sturdy3),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalForm),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                        powerSelector.GetPower(PowerNames.ElementalSphere),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.SuperStrength,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.Immovable),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Simon Williams",
+                Heights = [new() { Feet = 6, Inches = 2 }],
+                Weights = [380],
+                Gender = Gender.Male,
+                Eyes = "Red void, usually disguised as gray",
+                Hair = "Gray, usually dyed black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Entertainer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.Avengers, TeamNames.MastersOfEvil, TeamNames.WestCoastAvengers],
+                Base = "Mobile",
+                History =
+                [
+                    "Desperate to save the engineering firm his father built, Simon Williams turned to financial crimes, which quickly landed him in court. Baron Zemo and the Masters of Evil bailed him out and offered him a chance at revenge against the much more successful Tony Stark.",
+                    "Zemo subjected Williams to an experimental treatment that made him super-strong but would eventually destroy him. If he wanted to live, Williams would have to do the evil team’s bidding forever. Rebelling, the newly christened Wonder Man joined the Avengers and helped take down the Masters of Evil instead.",
+                    "Williams seemingly died, but the raging forces inside his body rebuilt him into a being of pure energy. When he finally came back to life, he pursued Hollywood stardom. However, making it as an actor proved harder than Williams expected, and he returned to the Avengers on their new West Coast team.",
+                    "After working with several more super-teams, Williams turned on the Avengers again, declaring them ineffectual as saviors. But after a brief fight and a much longer period of self-reflection, he apologized for his actions and dedicated himself to a life of pacificism. Though he no longer fights villains directly, Williams still does disaster response work with the Avengers’ backup squadron."
+                ],
+                Personality =
+                [
+                    "Williams is an easygoing playboy who loves luxuriating in attention and sipping boat drinks by the beach. However, his relaxed lifestyle in no way indicates thoughtlessness or selfishness. He’s a kind and gentle man, with a penchant for philosophy.",
+                ]
+            },
+            Source = BookSource.AvengersExpansion
         },
         new()
         {

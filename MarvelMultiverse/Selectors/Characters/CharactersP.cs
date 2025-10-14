@@ -948,6 +948,109 @@ public class CharactersP
         },
         new()
         {
+            Name = "Prowler (Hobie Brown)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 1, resilience: 1, vigilance: 2, ego: 1, logic: 3
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+                traitSelector.GetTrait(TraitNames.ExtraOccupation),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Inventor),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in battle suit"),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Prowler's Battlesuit",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.FastAttacks),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ViciousAttack),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.WhirlingFrenzy),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 7,
+                    IsTech = true
+                }
+            ],
+            PowerNotes =
+            [
+                "Hobie Brown later develops a more powerful battle suit and adopts a new codename: Hornet. This profile represents Brown before that transformation."
+            ],
+            Biography = new Biography
+            {
+                RealName = "Hobart “Hobie” Brown",
+                Heights = [new() { Feet = 5, Inches = 11 }],
+                Weights = [180],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Criminal, OccupationName.Engineer],
+                Origins = [OriginName.HighTechBattleSuit],
+                Teams = [],
+                Base = "New York City",
+                History =
+                [
+                    "Hobie Brown had a brilliant mind for inventions, but since he was from a poor family with no prospects, investors refused to take him seriously. Eventually, he was forced to get a job as a window washer just to put food on the table.",
+                    "To make the job easier on himself, Brown developed custom equipment that would allow him to crawl up walls and blast cleaning liquid straight out of his hands. These inventions were decades ahead of their time, but Brown’s bosses considered them little more than an annoyance.",
+                    "For Brown, this was the last straw. He made some modifications to his cleaning equipment and attempted to embark on a life of crime as the fearsome Prowler. However, before he could actually steal anything, Brown was defeated by Spider-Man (Peter Parker).",
+                    "Spider-Man took pity on Brown and agreed to let him go, with the understanding that Brown would walk a more righteous path. From that day forward, Hobie dedicated himself to making NYC a better place.",
+                    "Since then, Brown has made a name for himself as a super hero in his own right. He frequently works with Spider-Man, having even stood in for the infamous wall-crawler on a few occasions."
+                ],
+                Personality =
+                [
+                    "Hobie Brown is, fundamentally, a good guy. He disdains unnecessary violence, and although he can fi ght when he feels it’s unavoidable, Brown’s ideal super-hero patrol is one without any combat at all. He’s at his happiest when he is simply helping the people in his community get through the day.",
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
+        new()
+        {
             Name = "Proxima Midnight",
             Rank = 5,
             Abilities = new Abilities

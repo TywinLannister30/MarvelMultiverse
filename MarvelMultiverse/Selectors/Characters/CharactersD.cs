@@ -463,6 +463,7 @@ public class CharactersD
             [
                 tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.MediaAwareness),
                 tagSelector.GetTag(TagNames.PublicIdentity),
                 tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Katana"),
             ],
@@ -556,6 +557,7 @@ public class CharactersD
                 tagSelector.GetTag(TagNames.AI),
                 tagSelector.GetTag(TagNames.BlackMarketAccess),
                 tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.MediaAwareness),
                 tagSelector.GetTag(TagNames.PublicIdentity),
                 tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Giant swords"),
             ],
@@ -1436,6 +1438,93 @@ public class CharactersD
                     "Even back in his surgeon days, Stephen Strange was known for his haughty and cold personality. He has since learned several lessons in humility, and he’s developed a soft spot for his closest allies, particularly his wife, Clea.",
                 ]
             }
+        },
+        new()
+        {
+            Name = "Dogpool",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 5, resilience: 2, vigilance: 4, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Bloodthirsty),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Mute),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.CombatTrickery),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                        powerSelector.GetPower(PowerNames.GrapplingTechnique),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Wade Wilson",
+                Heights = [new() { Inches = 20 }],
+                Weights = [50],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown (fur)",
+                Size = Size.Small,
+                DistinguishingFeatures = "Small dog with protruding eyes and mangy fur",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.DeadpoolCorps],
+                Base = "Mobile",
+                History =
+                [
+                    "On Earth-103173, “bad dog” Wilson was acquired by Babelline Cosmetics’ Mascara X Project to test experimental regenerative makeup. Horribly mutated but gaining a regenerative healing factor during chemical testing, Wilson was thought dead and tossed into a dumpster, later reviving to search for food and shelter. Met with harshness due to his ragged appearance, the suicidal Wilson ultimately leaped into the path of an oncoming car. His instantaneous recovery was witnessed by a traveling circus. Wilson was welcomed and quickly became the circus’ star attraction: the death-defying Deadpool! The dog’s success soon attracted Mascara X, who created the adamantium-laced canine Wolverine to retaliate against Deadpool following a failed attempt to recover their former test subject. Moments after defeating Wolverine, Deadpool was instead recruited into the multiversal Deadpool Corps by Earth-616’s Deadpool, who had been tasked with stopping the mind-devouring alien Awareness. During the Corps’ search for the Awareness, Wilson, now dubbed Dogpool to differentiate him from his teammates, was accidentally left behind on an alien planet. Hitching rides through space, Dogpool returned just in time to rescue his teammates from the Votives, beings whose mind had been absorbed by the Awareness. Following the Awareness’ subsequent death, Dogpool remained with the Deadpool Corps, at one point battling and depowering a cartoonlike reality’s Sunny the Sentry Dog and inadvertently unleashing the malevolent Void Mutt. When the Evil Deadpool Corps began hunting down Deadpool counterparts, Dogpool sacrificed himself to save Earth-616’s Deadpool from an anti-regeneration ray. Dogpool was later resurrected by the reality-manipulating Killville.",
+                ],
+                Personality =
+                [
+                    "While often found either sleeping or scratching himself, Dogpool is fiercely loyal and loving of his friends and teammates. Unlike other Deadpool counterparts, Dogpool rarely uses weapons, preferring instead to use his teeth or head in battle.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
         },
         new()
         {

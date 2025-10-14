@@ -1268,5 +1268,115 @@ public class CharactersI
             },
             Source = BookSource.XMenExpansion
         },
+        new()
+        {
+            Name = "Isis (Robot)",
+            Rank = 6,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 6, resilience: 4, vigilance: 5, ego: 8, logic: 4
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatReflexes),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Military (Kang’s Army)"),
+                traitSelector.GetTrait(TraitNames.EideticMemory),
+                traitSelector.GetTrait(TraitNames.EnduringConstitution),
+                traitSelector.GetTrait(TraitNames.ExtraordinaryOrigin),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: PowerNames.DampenPower),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AI),
+                tagSelector.GetTag(TagNames.Chaotic),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.Supernatural),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy2),
+                        powerSelector.GetPower(PowerNames.Discipline2),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                        powerSelector.GetPower(PowerNames.Uncanny4),
+                        powerSelector.GetPower(PowerNames.Wisdom),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.ElementControlEnergy,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage),
+                        powerSelector.GetPower(PowerNames.ElementalBlast),
+                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.ElementalReinforcement),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MagicChaosMagic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ProbabilityManipulationHex),
+                    ],
+                    IsTech = true
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.PowerControl,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.CopyAbility),
+                        powerSelector.GetPower(PowerNames.CopyPower),
+                        powerSelector.GetPower(PowerNames.DampenPower),
+                    ],
+                    IsTech = true
+                }
+            ],
+            Biography = new Biography
+            {
+                RealName = "Isis",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [350],
+                Gender = Gender.Female,
+                Eyes = "Brown",
+                Hair = "Black",
+                Size = Size.Average,
+                DistinguishingFeatures = "Unusually pale skin, complex ancient Egyptian headdress",
+                Occupations = [OccupationName.Military],
+                Origins = [OriginName.HighTechAndroid, OriginName.MagicChaosMagic],
+                Teams = [TeamNames.KangsArmy],
+                Base = "Kang’s Time Ship",
+                History =
+                [
+                    "Despite his general distaste for collaborative efforts, Kang swallowed his pride and worked closely with native Egyptian sorcerers to ensure that the robots guarding his precious Time Ship could counter any conceivable threat. As a result of this collaboration, Isis and Osiris number among the most powerful of all of Kang’s creations and may, in fact, be more powerful than the Conqueror himself.",
+                    "To keep the robot from standing out in the Egyptian landscape, Isis and Osiris were created in the image of the ancient Egyptian gods of the same names.",
+                    "The mythological Isis was worshipped in many different ways across many different periods of Egyptian history, but like her husband, Osiris, she remains most famous for her role as a goddess of death. It was her responsibility to lead the souls of the deceased mortals into the underworld where they would await divine judgment at the hands of Osiris.",
+                    "Kang’s Isis is not really a goddess of death, though her enemies may consider her as such. She will rain down death upon any who dare to enter Kang’s Time Ship, and for all but the most powerful of beings, this death will be swidft as any god has ever dealt."
+                ],
+                Personality =
+                [
+                    "Despite their incredible powers, Isis and Osiris are barely sentient. The A.I. that powers them prioritizes brutality and efficiency above all else. They obey Kang’s orders without question, and they protect Kang’s Time Ship at any cost, but they rarely do much else. They spend most of their time lying completely still on the paws of Kang’s sphinx, keeping watch for any potential intruders.",
+                    "Isis and Osiris barely speak and cannot be negotiated with. They listen only to Kang or—rather— anyone who they perceive as being Kang."
+                ]
+            },
+            Source = BookSource.TheCataclysmOfKang
+        },
     ];
 }

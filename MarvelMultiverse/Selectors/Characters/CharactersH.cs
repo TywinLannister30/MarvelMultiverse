@@ -656,6 +656,98 @@ public class CharactersH
         },
         new()
         {
+            Name = "Headpool",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 4, vigilance: 2, ego: 2, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Berserker),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.MediaAwareness),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.DoThisAllDay),
+                        powerSelector.GetPower(PowerNames.Exploit),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Tactics,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.KeepMoving),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Wade Wilson",
+                Heights = [new() { Inches = 11 }],
+                Weights = [10],
+                Gender = Gender.Male,
+                Eyes = "White",
+                Hair = "None",
+                Size = Size.Small,
+                DistinguishingFeatures = "Decaying skull in a Deadpool mask",
+                Occupations = [OccupationName.Adventurer],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.DeadpoolCorps],
+                Base = "Mobile",
+                History =
+                [
+                    "The Wade Wilson of Earth-2149, Deadpool had a similar history to his Earth-616 counterpart until his Earth was infested with a zombie virus, transforming most of its inhabitants into the cannibalistic living dead. Deadpool succumbed to the virus himself, which robbed him of his healing factor. He was transported to Earth-616 via the Nexus of All Realities and fought the super-hero team the Command; during the battle, his body was destroyed, leaving him an undead head, later dubbed “Headpool.” He was imprisoned by the reality-monitoring organization A.R.M.O.R. but escaped with mystical zombie Simon Garth. He found that losing his body had cured his insatiable hunger for flesh. After nearly unleashing a worldwide zombie plague, Headpool was set adrift in a rowboat and washed up in the Savage Land, where Earth-616’s Deadpool found him. After a multiversal adventure with Deadpool, Headpool ended up in mad scientist Dr. Killcraven’s lab. Headpool talked one of Killcraven’s henchmen into equipping him with a mechanical skullcap with a miniature helicopter blade, allowing him to move through flight. Deadpool-616 then recruited him into the Deadpool Corps, a team of Deadpool variants that was sponsored by the Elders of the Universe and meant to protect the Multiverse. Instead, however, the Deadpool Corps became a spacefaring crew of mercenaries; eventually, the disappointed Elders sent them back to their home dimensions. Later, Headpool was microwaved to death by an agent of the Evil Deadpool Corps but was later resurrected by the reality-manipulating Killville.",
+                ],
+                Personality =
+                [
+                    "Headpool has the same mordant sense of humor and flippant attitude as his Earth-616 counterpart; due to the zombie virus and the loss of his body, however, he is even more unhinged and prone to nonsensical rambling.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Hela",
             Rank = 6,
             Abilities = new Abilities

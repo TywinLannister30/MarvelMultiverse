@@ -597,6 +597,93 @@ public class CharactersK
         },
         new()
         {
+            Name = "Kidpool",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 4, agility: 3, resilience: 3, vigilance: 3, ego: 1, logic: 1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Abrasive),
+                traitSelector.GetTrait(TraitNames.Loner),
+                traitSelector.GetTrait(TraitNames.QuickLearner),
+                traitSelector.GetTrait(TraitNames.Small),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.MediaAwareness),
+                tagSelector.GetTag(TagNames.Mentor, specialization: "Deadpool of Earth-616"),
+                tagSelector.GetTag(TagNames.Obligation, specialization: "School"),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Laser Swords"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Uncanny1),
+                        powerSelector.GetPower(PowerNames.Wisecracker),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MartialArts,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.AttackStance),
+                        powerSelector.GetPower(PowerNames.ChainStrikes),
+                        powerSelector.GetPower(PowerNames.FastStrikes),
+                    ],
+                },
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.MeleeWeaponsSharp,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Exploit),
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.FocusedFury),
+                        powerSelector.GetPower(PowerNames.HitAndRun),
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Wade Wilson",
+                Heights = [new() { Feet = 4, Inches = 5 }],
+                Weights = [90],
+                Gender = Gender.Male,
+                Eyes = "Brown",
+                Hair = "Brown",
+                Size = Size.Small,
+                DistinguishingFeatures = "None",
+                Occupations = [OccupationName.Student],
+                Origins = [OriginName.WeirdScience],
+                Teams = [TeamNames.DeadpoolCorps],
+                Base = "Mobile",
+                History =
+                [
+                    "A resident of Earth-10330, obnoxious preteen Wade Wilson was the least popular student at the Xavier Orphanage for Troubled Boys. While in Danger Room detention with Scott Summers, Wilson convinced Summers to break out and used two energy swords he stole from the Danger Room to ruin a school dance for everyone. Moments before he was to be expelled, Earth-616’s Deadpool arrived to recruit him into the multiversal Deadpool Corps alongside several variants of himself. Nicknamed “Tito” and later “Kidpool,” he joined the Corps in battling the sentience-devouring Awareness at the behest of the Elders of the Universe and continued to serve alongside them as they became a spacefaring mercenary crew, becoming embroiled in a struggle over the resource-rich planet Kagan 7 between its natives and the rapacious Omega Confederation. Kidpool struck out on his own with Dogpool; at one point, while attempting to impress a group of children, he stole the experimental military mecha suit Jet Falchion, resulting in enormous property damage. Eventually, the disappointed Elders sent the Deadpool Corps, including Kidpool, back to their home universes. Later, Lady Deadpool reassembled the Corps when they were threatened by the Evil Deadpool Corps, a multiversal coalition of Deadpools dedicated to killing all other Deadpools. While the Corps sought Earth-616’s Deadpool, one of the Evil Deadpools killed Dogpool; the Corps then returned to their base to find all their teammates had been slaughtered. Kidpool accidentally triggered one of their booby-trapped corpses; welcoming the chance to be reunited with Dogpool, he was killed in the ensuing explosion. He was later resurrected by the reality-manipulating Killville.",
+                ],
+                Personality =
+                [
+                    "Kidpool is impulsive and belligerent. However, he has managed to find a surrogate family in the Deadpool Corps, forming an especially strong bond with the canine Dogpool.",
+                ]
+            },
+            Source = BookSource.DeadpoolRolePlaysTheMarvelUniverse
+        },
+        new()
+        {
             Name = "Killmonger",
             Rank = 4,
             Abilities = new Abilities
