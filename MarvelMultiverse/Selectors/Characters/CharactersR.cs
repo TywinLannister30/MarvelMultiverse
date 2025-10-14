@@ -1029,7 +1029,6 @@ public class CharactersR
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Mighty3),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
                 new CharacterPowerSet
@@ -1040,13 +1039,36 @@ public class CharactersR
                         powerSelector.GetPower(PowerNames.BangingHeads),
                         powerSelector.GetPower(PowerNames.Clobber),
                         powerSelector.GetPower(PowerNames.CrushingGrip),
-                        powerSelector.GetPower(PowerNames.GroundShakingStomp, isTech: true),
                         powerSelector.GetPower(PowerNames.Immovable),
                         powerSelector.GetPower(PowerNames.Jump1),
                         powerSelector.GetPower(PowerNames.QuickToss),
                         powerSelector.GetPower(PowerNames.Smash),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Rhino's Battle Suit",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.GroundShakingStomp),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 3,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {

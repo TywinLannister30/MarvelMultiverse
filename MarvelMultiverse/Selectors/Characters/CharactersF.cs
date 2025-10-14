@@ -519,31 +519,38 @@ public class CharactersF
             [
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.Basic,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Sturdy1),
-                    ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
                     Name = PowerSetNames.MeleeWeaponsBlunt,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.HitAndRun),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new()
                 {
-                    Name = PowerSetNames.SpiderPowers,
+                    Name = "Frog Man's Battle Suit",
+                    IsBattlesuit = true,
                     Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                    ],
+                    GrantedPowerReminders =
                     [
                         powerSelector.GetPower(PowerNames.Jump1),
                         powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 3,
                     IsTech = true
-                },
+                }
             ],
             Biography = new Biography
             {

@@ -924,19 +924,7 @@ public class CharactersP
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.CombatTrickery),
-                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlEnergy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                        powerSelector.GetPower(PowerNames.ElementalInfusion),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -949,16 +937,38 @@ public class CharactersP
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new IconicItem
                 {
-                    Name = PowerSetNames.SpiderPowers,
+                    IsBattlesuit = true,
+                    Name = "Prowler's Battle Suit",
                     Powers =
                     [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalInfusion} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalInfusion, reminder: "Energy"),
                         powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
                         powerSelector.GetPower(PowerNames.Wallcrawling),
                     ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 7,
                     IsTech = true
-                },
+                }
             ],
             Biography = new Biography
             {

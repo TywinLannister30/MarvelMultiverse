@@ -1868,24 +1868,7 @@ public class CharactersM
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Brilliance1),
                         powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.Disguise, isTech: true),
-                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
-                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlEnergy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage),
-                        powerSelector.GetPower(PowerNames.ElementalBarrier),
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                        powerSelector.GetPower(PowerNames.ElementalPush),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -1904,6 +1887,44 @@ public class CharactersM
                         powerSelector.GetPower(PowerNames.MachineTelepathy),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Master of the World's Battle Suit",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Disguise),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 11,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {
@@ -3029,19 +3050,8 @@ public class CharactersM
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Brilliance2),
-                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlEnergy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -3065,6 +3075,32 @@ public class CharactersM
                         powerSelector.GetPower(PowerNames.Orders),
                         powerSelector.GetPower(PowerNames.TelepathicLink),
                     ],
+                }
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "M.O.D.O.K.'s Battle Suit",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 3,
+                    IsTech = true
                 }
             ],
             Biography = new Biography

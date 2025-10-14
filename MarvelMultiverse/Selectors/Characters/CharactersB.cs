@@ -664,23 +664,8 @@ public class CharactersB
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Brilliance1),
                         powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.EnvironmentalProtection, isTech: true),
-                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
                         powerSelector.GetPower(PowerNames.Inspiration),
-                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlEnergy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                        powerSelector.GetPower(PowerNames.ElementalPush),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -691,6 +676,40 @@ public class CharactersB
                         powerSelector.GetPower(PowerNames.ChangeOfPlans),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new()
+                {
+                    Name = "Beetle's Battle Suit",
+                    IsBattlesuit = true,
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 7,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {
@@ -709,7 +728,7 @@ public class CharactersB
                 Base = "New York City",
                 History =
                 [
-                    "Unsatisfi ed with life as a lawyer, Janice Lincoln resolved to follow in the footsteps of her father, Tombstone, and become a super-powered criminal. In exchange for help with a legal dispute, Baron Zemo commissioned a powerful beetle-themed battle suit for Lincoln, based on the outfi t worn by the original Beetle, Abner Jenkins.",
+                    "Unsatisfied with life as a lawyer, Janice Lincoln resolved to follow in the footsteps of her father, Tombstone, and become a super-powered criminal. In exchange for help with a legal dispute, Baron Zemo commissioned a powerful beetle-themed battle suit for Lincoln, based on the outfi t worn by the original Beetle, Abner Jenkins.",
                     "Although Lincoln’s initial impulse was to try battling some of Baron Zemo’s enemies—primarily Captain America (Steve Rogers)—she quickly gravitated back toward her home in New York City and its foremost defender: Spider-Man (Peter Parker). After testing the waters with Boomerang’s incarnation of the Sinister Six, she formed her own organization, a Syndicate made up entirely of young, up-and-coming female villains like herself. Ironically, the Syndicate’s fi rst mission was to capture Boomerang, and while searching for the sharpshooter, Lincoln fell in love with his roommate, Randy Robertson.",
                     "After a whirlwind romance, Lincoln was on the verge of giving up the villain life and marrying Robertson when their wedding ceremony was attacked and Randy was injured in a subsequent attack. These assaults on her loved ones led Janice to become embroiled in a gang war that drove a wedge between her and Tombstone, who would have killed her if not for the intervention of Spider-Man.",
                 ],

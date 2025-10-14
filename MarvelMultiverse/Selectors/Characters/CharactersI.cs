@@ -1139,24 +1139,45 @@ public class CharactersI
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Brilliance2),
                         powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.EnvironmentalProtection, isTech: true),
-                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
-                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new IconicItem
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    IsBattlesuit = true,
+                    Name = "Ironheart’s Armor",
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.ElementalBarrier),
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
                     ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn",
+                    ],
+                    PowerValue = 10,
                     IsTech = true
-                },
+                }
             ],
             Biography = new Biography
             {

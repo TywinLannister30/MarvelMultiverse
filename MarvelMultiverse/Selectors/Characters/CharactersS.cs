@@ -648,47 +648,56 @@ public class CharactersS
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "tail", isTech: true),
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.Evasion),
                         powerSelector.GetPower(PowerNames.Inspiration),
-                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new IconicItem
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    IsBattlesuit = true,
+                    Name = "Sccorpion's Battle Suit",
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage),
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.AdditionalLimbs} (tail)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Clobber),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.CrushingGrip),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Smash),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
                     ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.SpiderPowers,
-                    Powers =
+                    GrantedPowerReminders =
                     [
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.SpiderDodge),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
-                    ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.SuperStrength,
-                    Powers =
-                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "tail"),
                         powerSelector.GetPower(PowerNames.Clobber),
                         powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Mighty1),
                         powerSelector.GetPower(PowerNames.Smash),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
                     ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 14,
                     IsTech = true
-                },
+                }
             ],
             Biography = new Biography
             {
@@ -3775,39 +3784,54 @@ public class CharactersS
             [
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.Basic,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Flight1),
-                        powerSelector.GetPower(PowerNames.Mighty2),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
-                    ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.SpiderPowers,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.SpiderDodge),
-                        powerSelector.GetPower(PowerNames.SpiderStrike),
-                        powerSelector.GetPower(PowerNames.VenomBlast),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
-                        powerSelector.GetPower(PowerNames.Webcasting),
-                        powerSelector.GetPower(PowerNames.Webgrabbing),
-                        powerSelector.GetPower(PowerNames.Webtrapping),
-                    ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
                     Name = PowerSetNames.SpiderPowers,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.AnimalBond, reminder: "SP//dr’s co-pilot “Spider”"),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "SP//dr's Battle Suit",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderStrike),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.VenomBlast),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webcasting),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webgrabbing),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webtrapping),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Flight1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.SpiderStrike),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        powerSelector.GetPower(PowerNames.VenomBlast),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        powerSelector.GetPower(PowerNames.Webcasting),
+                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        powerSelector.GetPower(PowerNames.Webtrapping),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 12,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {
@@ -4500,20 +4524,9 @@ public class CharactersS
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Disguise, isTech: true),
                         powerSelector.GetPower(PowerNames.Evasion),
                         powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Illusion,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.Invisibility),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -4530,6 +4543,32 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.Webslinging),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "Spider-Man (Earth-6160)'s Battle Suit",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Disguise),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Invisibility),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Disguise),
+                        powerSelector.GetPower(PowerNames.Invisibility),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 3,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {

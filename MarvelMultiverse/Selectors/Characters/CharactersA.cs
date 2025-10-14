@@ -1948,20 +1948,7 @@ public class CharactersA
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
-                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlEnergy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -1979,6 +1966,36 @@ public class CharactersA
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new()
+                {
+                    Name = "Armored Hydra Agent's Battle Suit",
+                    IsBattlesuit = true,
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Worn",
+                    ],
+                    PowerValue = 7,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {
