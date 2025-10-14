@@ -919,7 +919,6 @@ public class CharactersJ
                 traitSelector.GetTrait(TraitNames.Big, reminder: "Reach 2"),
                 traitSelector.GetTrait(TraitNames.Connections, specialization: "Super Heroes"),
                 traitSelector.GetTrait(TraitNames.Fearless),
-                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: "Sturdy 4"),
             ],
             Tags =
             [
@@ -935,10 +934,8 @@ public class CharactersJ
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.HealingFactor),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Crimson Gem of Cyttorak [Any attack which deals less than 30 points of damage to the user of the Crimson Gem is instantly negated.]"),
-                        powerSelector.GetPower(PowerNames.Mighty4),
-                        powerSelector.GetPower(PowerNames.Sturdy4),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Crimson Gem of Cyttorak"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Juggernaut's Helmet"),
                     ],
                 },
                 new CharacterPowerSet
@@ -946,7 +943,6 @@ public class CharactersJ
                     Name = PowerSetNames.SuperStrength,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.BangingHeads),
                         powerSelector.GetPower(PowerNames.Clobber),
                         powerSelector.GetPower(PowerNames.CrushingGrip),
                         powerSelector.GetPower(PowerNames.GroundShakingStomp),
@@ -955,6 +951,52 @@ public class CharactersJ
                         powerSelector.GetPower(PowerNames.Smash),
                         powerSelector.GetPower(PowerNames.UnrelentingSmash),
                     ],
+                }
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Crimson Gem of Cyttorak",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ElementalProtection3),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy4),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalProtection3),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Large",
+                    ],
+                    PowerValue = 10,
+                },
+                new IconicItem
+                {
+                    Name = "Juggernaut's Helmet",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Uncanny4),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Uncanny4),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn",
+                    ],
+                    PowerValue = 2,
+                    PowerValueReminder = "Juggernaut already has Uncanny 1, so for him, the Power Value is 1.",
                 }
             ],
             Biography = new Biography

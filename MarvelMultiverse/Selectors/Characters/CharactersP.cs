@@ -44,7 +44,7 @@ public class CharactersP
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Accuracy2),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Stun gun [ranged weapon; deals electricity damage, stunning target on a Fantastic success]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Stun Gun"),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
@@ -72,6 +72,26 @@ public class CharactersP
                     ],
                 },
             ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Stun Gun",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, stuns the target rather than causing bleeding."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Only usable by Paladin",
+                    ],
+                    PowerValue = 1,
+                    AgilityDamageModifier = 1,
+                    IsTech = true
+                },
+            ],
             Biography = new Biography
             {
                 RealName = "Unknown",
@@ -83,7 +103,7 @@ public class CharactersP
                 Size = Size.Average,
                 DistinguishingFeatures = "None",
                 Occupations = [OccupationName.Adventurer],
-                Origins = [OriginName.Unknown],
+                Origins = [OriginName.HighTech],
                 Teams = [TeamNames.HeroesForHire, TeamNames.VillainsForHire],
                 Base = "Mobile",
                 History =
@@ -228,10 +248,7 @@ public class CharactersP
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            glideSpeed: true,
-                            specialization: "Patriot’s Shield. Grants Glide Speed equal to double his Run Speed. Also acts as a drone that can move within his line of sight and fire energy blasts with a range of 10."),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Patriot’s Shield", isTech: true),
                     ],
                 },
                 new CharacterPowerSet
@@ -247,6 +264,32 @@ public class CharactersP
                         powerSelector.GetPower(PowerNames.ShieldBash),
                         powerSelector.GetPower(PowerNames.ShieldDeflection),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Patriot’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Glider),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.PsychicLink),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        $"Requires: {PowerNames.Shield1} power",
+                    ],
+                    PowerValue = 1,
+                    IsTech = true
                 },
             ],
             Biography = new Biography
@@ -1143,6 +1186,7 @@ public class CharactersP
                     ],
                     PowerValue = 3,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography

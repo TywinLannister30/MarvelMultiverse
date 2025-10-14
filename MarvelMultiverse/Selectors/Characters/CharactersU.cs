@@ -387,6 +387,7 @@ public class CharactersU
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography

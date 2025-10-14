@@ -764,14 +764,8 @@ public class CharactersB
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Discipline2),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Twilight Sword [Adds elemental fire effect to melee attacks.]"),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Twilight Sword"),
                         powerSelector.GetPower(PowerNames.Inspiration),
-                        powerSelector.GetPower(PowerNames.Mighty4, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
                 },
                 new CharacterPowerSet
@@ -802,6 +796,35 @@ public class CharactersB
                     ],
                     IsTech = true
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Twilight Sword",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AsgardianTransformation),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, the Twilight Sword can count as a fire attack rather than a sharp attack."),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2)
+                    ],
+                    Restrictions =
+                    [
+                        "Can only be used by the worthy.",
+                        "Carried"
+                    ],
+                    PowerValue = 7,
+                    PowerValueReminder = "Beta Ray Bill already has Mighty 2 and Sturdy 2, so for him, the Power Value is 3.",
+                    MeleeDamageModifier = 2,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {
@@ -2787,7 +2810,7 @@ public class CharactersB
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Accuracy2),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Displacement field daggers [Ranged weapons. Blink can use her Teleport Object and Teleport Other powers on any person or object she hits with these daggers.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Blink’s Displacement-Field Daggers"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
@@ -2823,6 +2846,32 @@ public class CharactersB
                         powerSelector.GetPower(PowerNames.TeleportOther),
                         powerSelector.GetPower(PowerNames.TeleportTogether),
                     ],
+                }
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Blink’s Displacement-Field Daggers",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Constructable),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportObject),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportOther),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/5, Melee/Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.TeleportObject),
+                        powerSelector.GetPower(PowerNames.TeleportOther),
+                    ],
+                    Restrictions =
+                    [
+                        "Does no actual damage",
+                        $"May use {PowerNames.TeleportObject} or {PowerNames.TeleportOther} hit with the Dagger."
+                    ],
+                    PowerValue = 3,
+                    PowerValueReminder = "Blink already has Teleport Object and Teleport Other, so for her, the Power Value is 1.",
                 }
             ],
             Biography = new Biography
@@ -3082,7 +3131,7 @@ public class CharactersB
                         powerSelector.GetPower(PowerNames.Accuracy2),
                         powerSelector.GetPower(PowerNames.Evasion),
                         powerSelector.GetPower(PowerNames.Flight1, isTech: true),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Assorted Bomberangs [ranged weapon; on a Fantastic success, user can apply an elemental effect of their choice.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Boomerang’s Boomerangs"),
                         powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
                 },
@@ -3101,6 +3150,27 @@ public class CharactersB
                         powerSelector.GetPower(PowerNames.SuppressiveFire),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Boomerang’s Boomerangs",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReturnsWhenThrown),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "Each boomerang the character throws can have a different elemental effect of their choice."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {

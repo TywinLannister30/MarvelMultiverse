@@ -542,7 +542,7 @@ public class CharactersT
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.HealingFactor),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Head spikes [can extrude green spikes from his head that can be broken off and used as knives]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Head Spikes [can extrude green spikes from his head that can be broken off and used as knives]"),
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
                 },
@@ -912,40 +912,60 @@ public class CharactersT
                     [
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.Discipline2),
-                        powerSelector.GetPower(PowerNames.Flight2),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Mjolnir [+1 Melee and Agility damage multiplier. Returns to thrower. Can only be wielded by the worthy.]",
-                            meleeDamageModifier: 1,
-                            agilityDamageModifier: 1),
-
-                        powerSelector.GetPower(PowerNames.Mighty4),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Mjolnir"),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new IconicItem
                 {
-                    Name = PowerSetNames.ElementControlElectricity,
+                    Name = "Mjolnir",
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage),
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                        powerSelector.GetPower(PowerNames.ElementalPush),
-                        powerSelector.GetPower(PowerNames.ElementalRicochet),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AsgardianTransformation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ControlFog),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ControlWeather4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Discipline1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalRicochet} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Thunder),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/Unlimited, Melee/Agility Damage Multiplier Bonus: +1."),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.WeatherControl,
-                    Powers =
+                    GrantedPowerReminders =
                     [
                         powerSelector.GetPower(PowerNames.ControlFog),
                         powerSelector.GetPower(PowerNames.ControlWeather4),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
                         powerSelector.GetPower(PowerNames.Thunder),
                     ],
-                },
+                    Restrictions =
+                    [
+                        "Can only be used by the worthy.",
+                        "Carried",
+                        "Flashy",
+                    ],
+                    PowerValue = 22,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -1012,28 +1032,7 @@ public class CharactersT
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.Flight2),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Mjolnir [+1 Melee and Agility damage multiplier. Returns to thrower. Can only be wielded by the worthy.]",
-                            meleeDamageModifier: 1,
-                            agilityDamageModifier: 1),
-
-                        powerSelector.GetPower(PowerNames.Mighty4),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
-                    ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlElectricity,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage),
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                        powerSelector.GetPower(PowerNames.ElementalPush),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Mjolnir"),
                     ],
                 },
                 new CharacterPowerSet
@@ -1041,12 +1040,61 @@ public class CharactersT
                     Name = PowerSetNames.WeatherControl,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.ControlWeather4),
-                        powerSelector.GetPower(PowerNames.Thunder),
                         powerSelector.GetPower(PowerNames.WeatherChill),
                         powerSelector.GetPower(PowerNames.WeatherWarm),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Mjolnir",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AsgardianTransformation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ControlFog),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ControlWeather4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Discipline1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalRicochet} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Thunder),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/Unlimited, Melee/Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ControlFog),
+                        powerSelector.GetPower(PowerNames.ControlWeather4),
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.ElementalRicochet, reminder: "Electricity"),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.SummonPortal),
+                        powerSelector.GetPower(PowerNames.Thunder),
+                    ],
+                    Restrictions =
+                    [
+                        "Can only be used by the worthy.",
+                        "Carried",
+                        "Flashy",
+                    ],
+                    PowerValue = 22,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -1161,6 +1209,7 @@ public class CharactersT
                     ],
                     PowerValue = 11,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1,
                     IsTech = true
                 }
             ],
@@ -1224,7 +1273,7 @@ public class CharactersT
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Brilliance2),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Thunderball and chain [Throwable club. Automatically returns to thrower.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Thunderball and Chain"),
                         powerSelector.GetPower(PowerNames.Mighty1),
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
@@ -1250,6 +1299,25 @@ public class CharactersT
                         powerSelector.GetPower(PowerNames.QuickToss),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new()
+                {
+                    Name = "Thunderball and Chain",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReturnsWhenThrown),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 5, Melee/Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {

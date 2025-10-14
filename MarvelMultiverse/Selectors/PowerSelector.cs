@@ -9,13 +9,8 @@ public class PowerSelector : IPowerSelector
         string name, 
         bool isTech = false,
         bool isMagicItem = false,
-        bool flySpeed = false,
-        bool glideSpeed = false,
-        bool swinglineSpeed = false,
         string specialization = null, 
-        string reminder = null,
-        int? meleeDamageModifier = null, 
-        int? agilityDamageModifier = null)
+        string reminder = null)
     {
         var staticPower = GetAllPowers().First(x => x.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
 
@@ -29,21 +24,6 @@ public class PowerSelector : IPowerSelector
 
         power.IsMagicItem = isMagicItem;
         power.IsTech = isTech;
-
-        if (flySpeed)
-            power.FlySpeed = true;
-
-        if (glideSpeed)
-            power.GlideSpeed = true;
-
-        if (swinglineSpeed)
-            power.SwinglineSpeed = true;
-
-        if (meleeDamageModifier.HasValue)
-            power.MeleeDamageModifier += meleeDamageModifier.Value;
-
-        if (agilityDamageModifier.HasValue)
-            power.AgilityDamageModifier += agilityDamageModifier.Value;
 
         return power;
     }

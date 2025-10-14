@@ -1065,6 +1065,7 @@ public class CharactersA
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography
@@ -1129,7 +1130,7 @@ public class CharactersA
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Techno-organic wings [when in Archangel form, can fire feathery flechettes (treat like a submachine gun) and can act as a protective barrier (20 points to shatter)]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Angel’s Techno-Organic Wings"),
                         powerSelector.GetPower(PowerNames.Evasion),
                         powerSelector.GetPower(PowerNames.Flight2),
                         powerSelector.GetPower(PowerNames.Mighty1),
@@ -1155,6 +1156,33 @@ public class CharactersA
                         powerSelector.GetPower(PowerNames.SuppressiveFire),
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
+                }
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Angel’s Techno-Organic Wings",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection2} (Iron)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalProtection2, specialization: "Iron"),
+                        powerSelector.GetPower(PowerNames.Flight2)
+                    ],
+                    Restrictions =
+                    [
+                        "Large",
+                        "Menacing"
+                    ],
+                    PowerValue = 3,
+                    PowerValueReminder = "Angel already has Flight 2, so for him, the Power Value is 1.",
+                    AgilityDamageModifier = 1,
+                    IsMagicItem = true
                 }
             ],
             Biography = new Biography

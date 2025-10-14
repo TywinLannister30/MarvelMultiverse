@@ -962,6 +962,7 @@ public class CharactersE
                     ],
                     PowerValue = 2,
                     MeleeDamageModifier = 2,
+                    AgilityDamageModifier = 2
                 }
             ],
             Biography = new Biography

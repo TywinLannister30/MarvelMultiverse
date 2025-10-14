@@ -798,8 +798,7 @@ public class CharactersM
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.Discipline2),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "The Soulsword [Summonable. Provides a +4 Ego damage multiplier, but only against extra-dimensional creatures.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "The Soulsword"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Sturdy2),
                         powerSelector.GetPower(PowerNames.Uncanny2),
@@ -845,6 +844,31 @@ public class CharactersM
                         powerSelector.GetPower(PowerNames.TimeTravel),
                         powerSelector.GetPower(PowerNames.TimeTravelTogether),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "The Soulsword",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Discipline4),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Discipline4),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Discipline power only works against magical creatures."
+                    ],
+                    PowerValue = 3,
+                    MeleeDamageModifier = 2,
                 },
             ],
             Biography = new Biography
@@ -3381,7 +3405,7 @@ public class CharactersM
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.HeightenedSenses2),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Staff (Mole Man’s staff acts as a remote control for the many Deviant technologies available to him in his Subterranean lair, as long as they have been prepared ahead of time.)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Staff (Mole Man’s staff acts as a remote control for the many Deviant technologies available to him in his Subterranean lair, as long as they have been prepared ahead of time.)"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
@@ -3410,10 +3434,6 @@ public class CharactersM
                         powerSelector.GetPower(PowerNames.KeepMoving),
                     ],
                 },
-            ],
-            PowerNotes =
-            [
-                "Not all H.E.R.B.I.E. units are equipped with weapons. Such non-security units can fly but are otherwise no more powerful than an average civilian (see that profile in the Core Rulebook)."
             ],
             Biography = new Biography
             {

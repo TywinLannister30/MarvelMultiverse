@@ -139,12 +139,7 @@ public class CharactersL
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Brawling),
-
-                        powerSelector.GetPower(PowerNames.IconicWeapon,
-                            specialization: "Adamantium nails [+1 Melee damage multiplier; ignores 1 level of DR]",
-                            meleeDamageModifier: 1,
-                            isTech: true),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Adamantium Nails", isTech: true),
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
                     ],
                 },
@@ -183,6 +178,25 @@ public class CharactersL
                     [
                         powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
                     ],
+                    IsTech = true
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Adamantium Nails",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Adamantium),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Menacing",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
                     IsTech = true
                 },
             ],

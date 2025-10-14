@@ -253,7 +253,7 @@ public class CharactersQ
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Flight2, isTech: true),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Pumpkin Scepter [Inflicts hellfire damage on a Fantastic success, splitting the damage equally between Health and Focus; otherwise acts as an ordinary club]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Pumpkin Scepter"),
                         powerSelector.GetPower(PowerNames.Mighty2),
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
@@ -295,6 +295,24 @@ public class CharactersQ
                         powerSelector.GetPower(PowerNames.CrushingGrip),
                         powerSelector.GetPower(PowerNames.QuickToss),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Pumpkin Scepter",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, inflicts hellfire damage, split between Health and Focus."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
                 },
             ],
             Biography = new Biography

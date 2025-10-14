@@ -146,20 +146,9 @@ public class CharactersN
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Flight1, isMagicItem: true),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Scell [The wielder of this mystic sword must pay the Focus costs of their powers with their Health instead.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Scell"),
                         powerSelector.GetPower(PowerNames.Inspiration),
-                        powerSelector.GetPower(PowerNames.Mighty2, isMagicItem: true),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isMagicItem: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Magic,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.LeechLife),
-                    ],
-                    IsMagicItem = true
                 },
                 new CharacterPowerSet
                 {
@@ -173,17 +162,41 @@ public class CharactersN
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new IconicItem
                 {
-                    Name = PowerSetNames.Teleportation,
+                    Name = "Scell",
                     Powers =
                     [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Blink),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.LeechLife),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Teleport2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportTogether),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee/Agility Damage Multiplier Bonus: +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
                         powerSelector.GetPower(PowerNames.Blink),
+                        powerSelector.GetPower(PowerNames.LeechLife),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
                         powerSelector.GetPower(PowerNames.Teleport2),
                         powerSelector.GetPower(PowerNames.TeleportTogether),
                     ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Sacrifice",
+                    ],
+                    PowerValue = 9,
+                    MeleeDamageModifier = 2,
+                    AgilityDamageModifier = 2,
                     IsMagicItem = true
-                },
+                }
             ],
             Biography = new Biography
             {
@@ -421,11 +434,32 @@ public class CharactersN
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Iron Man's gloves (Elemental Burst: Energy)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Night Nurse’s Gauntlet"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Integrity),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Night Nurse’s Gauntlet",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                }
             ],
             Biography = new Biography
             {

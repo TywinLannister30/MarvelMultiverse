@@ -47,7 +47,7 @@ public class CharactersD
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Accuracy2),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Light daggers [act as regular ranged weapons, but inflict Focus damage rather than Health damage]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Lightforce Daggers"),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                     ],
                 },
@@ -68,6 +68,27 @@ public class CharactersD
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Lightforce Daggers",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Constructable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.DamageSwitch),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/5, Melee/Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Requires: Ego 2 or more",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -210,12 +231,7 @@ public class CharactersD
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.HeightenedSenses2),
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Daredevil’s Billy Club. Adds +1 damage multiplier and grants the swingline movement mode, with a speed equal to triple his Run Speed. The Billy Club can be thrown and instantly retrieved. The range of the Billy Club and the reach of the swingline is equal to its Swingline Speed: 15 spaces.",
-                            swinglineSpeed: true,
-                            meleeDamageModifier: 1,
-                            agilityDamageModifier: 1),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Daredevil’s Billy Club"),
                     ],
                 },
                 new CharacterPowerSet
@@ -230,6 +246,27 @@ public class CharactersD
                         powerSelector.GetPower(PowerNames.LegSweep),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Daredevil’s Billy Club",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReturnsWhenThrown),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Swingline),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 15 spaces, Melee/Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -855,7 +892,7 @@ public class CharactersD
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Destroyer’s Energy Baton", isTech: true),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Destroyer’s Energy Baton", isTech: true),
                         powerSelector.GetPower(PowerNames.Sturdy1, isTech: true),
                     ],
                 },
@@ -906,6 +943,8 @@ public class CharactersD
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1,
+                    IsTech = true
                 }
             ],
             Biography = new Biography
@@ -1163,44 +1202,10 @@ public class CharactersD
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.AdditionalLimbs, isTech: true),
                         powerSelector.GetPower(PowerNames.Brilliance1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Ocktoid Tentacles [These semiautonomous drones have a psychic link with Octavius. He can see through them and pilot them by remote. While under remote control, they use Octavius’ stats and take his place in the initiative order. If Octavius is rendered unconscious, the tentacles automatically stop fighting and attempt to transport him to safety.]", isTech: true),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Ocktoid Tentacles", isTech: true),
                         powerSelector.GetPower(PowerNames.Inspiration),
-                        powerSelector.GetPower(PowerNames.Mighty2, isTech: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Plasticity,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
-                    ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.SpiderPowers,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.SpiderDodge),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
-                    ],
-                    IsTech = true
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.SuperStrength,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.BangingHeads),
-                        powerSelector.GetPower(PowerNames.Clobber),
-                        powerSelector.GetPower(PowerNames.CrushingGrip),
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.QuickToss),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -1211,6 +1216,47 @@ public class CharactersD
                         powerSelector.GetPower(PowerNames.ChangeOfPlans),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Ocktoid Tentacles",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.AdditionalLimbs),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.BangingHeads),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Clobber),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.CrushingGrip),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ExtendedReach1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.PsychicLink),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.QuickToss),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Salvation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs),
+                        powerSelector.GetPower(PowerNames.BangingHeads),
+                        powerSelector.GetPower(PowerNames.Clobber),
+                        powerSelector.GetPower(PowerNames.CrushingGrip),
+                        powerSelector.GetPower(PowerNames.ExtendedReach1, reminder: "Reach 4"),
+                        powerSelector.GetPower(PowerNames.Jump1),
+                        powerSelector.GetPower(PowerNames.Mighty2),
+                        powerSelector.GetPower(PowerNames.QuickToss),
+                        powerSelector.GetPower(PowerNames.SpiderDodge),
+                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                    ],
+                    PowerValue = 12,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {

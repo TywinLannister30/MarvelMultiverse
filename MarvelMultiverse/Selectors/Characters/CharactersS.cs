@@ -1631,6 +1631,7 @@ public class CharactersS
                     ],
                     PowerValue = 5,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography
@@ -2771,18 +2772,9 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.EnvironmentalProtection),
                         powerSelector.GetPower(PowerNames.HealingFactor),
                         powerSelector.GetPower(PowerNames.HeightenedSenses1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Hell-Mark [Grants Elemental Burst (Hellfire). Also allows Silence to create dimensional portals exclusively to and from Hell. She must still pay the regular Dimensional Portal power cost of 15 Focus.]", isMagicItem: true),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Hell-Mark", isMagicItem: true),
                         powerSelector.GetPower(PowerNames.Mighty1),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlHellfire,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                    ],
-                    IsMagicItem = true
                 },
                 new CharacterPowerSet
                 {
@@ -2814,6 +2806,29 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.Webslinging),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Hell-Mark ",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Hellfire)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DimensionalPortal),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Hellfire"),
+                        powerSelector.GetPower(PowerNames.DimensionalPortal),
+                    ],
+                    Restrictions =
+                    [
+                        "Dimension Portal only goes to and from Hell.",
+                    ],
+                    PowerValue = 1,
+                    IsMagicItem = true
+                }
             ],
             Biography = new Biography
             {
@@ -3085,10 +3100,7 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.HealingFactor),
                         powerSelector.GetPower(PowerNames.HeightenedSenses2),
 
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            flySpeed: true,
-                            specialization: "Cosmic surfoard [Summonable by Silver Surfer. Grants Flight 2.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Cosmic Surfoard"),
 
                         powerSelector.GetPower(PowerNames.Mighty2),
                         powerSelector.GetPower(PowerNames.Sturdy4),
@@ -3114,6 +3126,28 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.PowerfulHex, reminder: "represents his Power Cosmic"),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Cosmic Surfoard",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2)
+                    ],
+                    Restrictions =
+                    [
+                        "Driven",
+                        "Flashy"
+                    ],
+                    PowerValue = 1,
+                }
             ],
             Biography = new Biography
             {
@@ -3274,7 +3308,7 @@ public class CharactersS
                     [
                         powerSelector.GetPower(PowerNames.Accuracy2),
                         powerSelector.GetPower(PowerNames.CombatTrickery),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Sin-Eating Shotgun [Applies the effects of Penance Stare on a Fantastic success; otherwise acts as a normal shotgun]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Sin-Eating Shotgun"),
                     ],
                 },
                 new CharacterPowerSet
@@ -3289,6 +3323,24 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Sin-Eating Shotgun",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, affects the target with the power Penance Stare rather than causing bleeding."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 6 spaces, Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -6204,22 +6256,11 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.EnvironmentalProtection, reminder: "space helmet", isTech: true),
                         powerSelector.GetPower(PowerNames.HealingFactor),
                         powerSelector.GetPower(PowerNames.HeightenedSenses1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Element Gun [Can pick elemental effect from air, earth, fire, water, or energy; returns when summoned]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Element Gun", isTech: true),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Sturdy1),
                         powerSelector.GetPower(PowerNames.Wisecracker),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControl,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Element Gun"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Element Gun"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Element Gun"),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -6257,6 +6298,33 @@ public class CharactersS
                         powerSelector.GetPower(PowerNames.CombatSupport),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Element Gun",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "Can pick the Elemental Control power special effect from air (knock prone), earth (halve speed), fire (set ablaze), water (surprise) or energy (blind)."),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Air, Earth, Fire, Water or Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Air, Earth, Fire, Water or Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Air, Earth, Fire, Water or Energy)"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Air, Earth, Fire, Water or Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Air, Earth, Fire, Water or Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Air, Earth, Fire, Water or Energy"),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 4,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {

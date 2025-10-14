@@ -51,7 +51,7 @@ public class CharactersG
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Charged cards [These act as knives, usually thrown. Using Elemental Infusion on them costs 0 Focus. Cards function only for Gambit.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Charged cards"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                         powerSelector.GetPower(PowerNames.Sturdy1),
@@ -89,6 +89,25 @@ public class CharactersG
                         powerSelector.GetPower(PowerNames.ChangeOfPlans),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Charged cards",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus, reminder: $"For {PowerNames.ElementalInfusion}"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 5 spaces, Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -155,7 +174,7 @@ public class CharactersG
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Discipline1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Charged cards [These act as knives, usually thrown. Using Elemental Infusion on them costs 0 Focus. Cards function only for Gambit.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Charged cards"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.SlowMotionDodge),
                         powerSelector.GetPower(PowerNames.Sturdy1),
@@ -193,6 +212,25 @@ public class CharactersG
                         powerSelector.GetPower(PowerNames.ChangeOfPlans),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Charged cards",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus, reminder: $"For {PowerNames.ElementalInfusion}"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 5 spaces, Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -1159,12 +1197,7 @@ public class CharactersG
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
-                        powerSelector.GetPower(PowerNames.Flight2),
-                        powerSelector.GetPower(PowerNames.HealingFactor),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "All-Black the Necrosword [without All-Black, Gorr is powerless]"),
-                        powerSelector.GetPower(PowerNames.Mighty4),
-                        powerSelector.GetPower(PowerNames.Sturdy4),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "All-Black the Necrosword"),
                     ],
                 },
                 new CharacterPowerSet
@@ -1195,6 +1228,37 @@ public class CharactersG
                         powerSelector.GetPower(PowerNames.UnrelentingSmash),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "All-Black the Necrosword",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy4),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +2."),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                        powerSelector.GetPower(PowerNames.Mighty4),
+                        powerSelector.GetPower(PowerNames.Sturdy4),
+                    ],
+                    Restrictions =
+                    [
+                        "Menacing",
+                        "Carried",
+                    ],
+                    PowerValue = 11,
+                    MeleeDamageModifier = 2,
+                }
             ],
             Biography = new Biography
             {

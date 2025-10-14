@@ -45,11 +45,7 @@ public class CharactersZ
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon, 
-                            specialization: "Pizza slice [+1 Melee multiplier; If struck by pizza, target is disgusted for remainder of combat and has trouble on all rolls]",
-                            meleeDamageModifier: 1),
-
+                        powerSelector.GetPower(PowerNames.IconicItem,  specialization: "Pizza Slice"),
                         powerSelector.GetPower(PowerNames.EnvironmentalProtection),
                         powerSelector.GetPower(PowerNames.Evasion),
                         powerSelector.GetPower(PowerNames.HeightenedSenses2),
@@ -98,6 +94,24 @@ public class CharactersZ
                     [
                         powerSelector.GetPower(PowerNames.Blink),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Pizza Slice",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "If struck by pizza, target is disgusted for remainder of combat and has trouble on all rolls"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        $"Carried",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
                 },
             ],
             Biography = new Biography

@@ -996,7 +996,7 @@ public class CharactersH
                     [
                         powerSelector.GetPower(PowerNames.Accuracy1),
                         powerSelector.GetPower(PowerNames.Flight1),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Opti-Blaster (works like a regular pistol, but blinds the target on a Fantastic success)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Opti-Blaster"),
                         powerSelector.GetPower(PowerNames.Sturdy1),
                     ],
                     IsTech = true
@@ -1018,6 +1018,24 @@ public class CharactersH
             PowerNotes =
             [
                 "Not all H.E.R.B.I.E. units are equipped with weapons. Such non-security units can fly but are otherwise no more powerful than an average civilian (see that profile in the Core Rulebook)."
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Opti-Blaster",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, blinds the target rather than causing bleeding."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                    ],
+                    PowerValue = 1,
+                    AgilityDamageModifier = 1,
+                }
             ],
             Biography = new Biography
             {

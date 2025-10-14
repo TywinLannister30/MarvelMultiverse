@@ -241,7 +241,7 @@ public class CharactersK
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Karnak’s hands (act as melee weapons)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Karnak’s Hands"),
                         powerSelector.GetPower(PowerNames.Mighty2),
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
@@ -273,6 +273,25 @@ public class CharactersK
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                     ],
                 }
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Karnak’s Hands",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, causes bleeding."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Damage Multiplier Bonus +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Menacing",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
+                },
             ],
             Biography = new Biography
             {

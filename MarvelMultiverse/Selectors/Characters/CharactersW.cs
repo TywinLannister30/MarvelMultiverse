@@ -1511,13 +1511,7 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.HealingFactor),
                         powerSelector.GetPower(PowerNames.HeightenedSenses1),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Adamantium Claws [+1 Melee damage multiplier]",
-                            meleeDamageModifier: 1,
-                            isTech: true),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Adamantium Claws", isTech: true),
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
@@ -1535,6 +1529,25 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Adamantium Claws",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Adamantium),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        $"Characters with {PowerNames.HealingFactor} only",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    IsTech = true
                 },
             ],
             Biography = new Biography
@@ -1602,13 +1615,7 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.HealingFactor),
                         powerSelector.GetPower(PowerNames.HeightenedSenses1),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Adamantium Claws [+1 Melee damage multiplier; ignores 1 level of DR]]",
-                            meleeDamageModifier: 1,
-                            isTech: true),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Adamantium Claws", isTech: true),
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
@@ -1637,6 +1644,25 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Adamantium Claws",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Adamantium),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        $"Characters with {PowerNames.HealingFactor} only",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    IsTech = true
                 },
             ],
             Biography = new Biography
@@ -1704,13 +1730,7 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.CombatTrickery),
                         powerSelector.GetPower(PowerNames.HealingFactor),
                         powerSelector.GetPower(PowerNames.HeightenedSenses1),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            specialization: "Adamantium Claws [+1 Melee damage multiplier; ignores 1 level of DR]]",
-                            meleeDamageModifier: 1,
-                            isTech: true),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Adamantium Claws", isTech: true),
                         powerSelector.GetPower(PowerNames.ReinforcedSkeleton, isTech: true),
                         powerSelector.GetPower(PowerNames.Uncanny1),
                     ],
@@ -1739,6 +1759,25 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.ViciousAttack),
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Adamantium Claws",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Adamantium),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        $"Characters with {PowerNames.HealingFactor} only",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    IsTech = true
                 },
             ],
             Biography = new Biography
@@ -2066,7 +2105,7 @@ public class CharactersW
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Magic crowbar [Throwable club. Automatically returns to thrower.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Magic Crowbar"),
                         powerSelector.GetPower(PowerNames.Mighty2),
                         powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
@@ -2092,6 +2131,25 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.Immovable),
                         powerSelector.GetPower(PowerNames.Smash),
                     ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Magic Crowbar",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReturnsWhenThrown),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10 spaces, Melee/Agility Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        $"Characters with {PowerNames.HealingFactor} only",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1,
                 },
             ],
             Biography = new Biography

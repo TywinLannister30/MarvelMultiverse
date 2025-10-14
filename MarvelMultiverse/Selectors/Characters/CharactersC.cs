@@ -408,6 +408,7 @@ public class CharactersC
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography
@@ -523,6 +524,7 @@ public class CharactersC
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography
@@ -640,6 +642,7 @@ public class CharactersC
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography
@@ -847,6 +850,7 @@ public class CharactersC
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography
@@ -961,6 +965,7 @@ public class CharactersC
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
+                    AgilityDamageModifier = 1
                 }
             ],
             Biography = new Biography
@@ -1137,7 +1142,7 @@ public class CharactersC
                     [
                         powerSelector.GetPower(PowerNames.Brilliance3),
                         powerSelector.GetPower(PowerNames.Flight2),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Psychic Sword [Deals either Focus or Health damage, as Betsy chooses. Summonable.]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Betsy Braddock’s Psychic Sword"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty1),
                         powerSelector.GetPower(PowerNames.Sturdy3),
@@ -1167,6 +1172,26 @@ public class CharactersC
                         powerSelector.GetPower(PowerNames.TelepathicLink),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Betsy Braddock’s Psychic Sword",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Constructable),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.DamageSwitch),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +2."),
+                    ],
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Requires: Logic 2 or more"
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 2
+                }
             ],
             Biography = new Biography
             {
@@ -2243,7 +2268,7 @@ public class CharactersC
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "The Cloak (Can imprison grabbed opponents in the Darkforce dimension, during which time Cloak automatically makes a free Ego attack against them on his turn each round. To escape, imprisoned creatures must succeed on an Ego check against Cloak’s Ego defense.)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Cloak’s Cloak"),
                     ],
                 },
                 new CharacterPowerSet
@@ -2268,6 +2293,27 @@ public class CharactersC
                         powerSelector.GetPower(PowerNames.TeleportTogether),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Cloak’s Cloak",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.DarkforceAttack),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DimensionalTravelOther),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.DimensionalTravelOther)
+                    ],
+                    Restrictions =
+                    [
+                        "Large",
+                    ],
+                    PowerValue = 1,
+                }
             ],
             Biography = new Biography
             {
@@ -2917,12 +2963,7 @@ public class CharactersC
                         powerSelector.GetPower(PowerNames.Accuracy2),
                         powerSelector.GetPower(PowerNames.Discipline2),
                         powerSelector.GetPower(PowerNames.EnvironmentalProtection),
-
-                        powerSelector.GetPower(
-                            PowerNames.IconicWeapon,
-                            flySpeed: true,
-                            specialization: "Crimson surfoard [Summonable by Crimson Surfer. Grants Flight 2.]"),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Cosmic Surfoard"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                         powerSelector.GetPower(PowerNames.Mighty2),
                         powerSelector.GetPower(PowerNames.Sturdy2),
@@ -2968,6 +3009,28 @@ public class CharactersC
             PowerNotes =
             [
                 "The Crimson Surfer’s powers are not identical to those of the Silver Surfer and are, in fact, weaker. This is because Kang the Devourer does not trust Shmidt with that much power and so gave him less of it."
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Cosmic Surfoard",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight2)
+                    ],
+                    Restrictions =
+                    [
+                        "Driven",
+                        "Flashy"
+                    ],
+                    PowerValue = 1,
+                }
             ],
             Biography = new Biography
             {

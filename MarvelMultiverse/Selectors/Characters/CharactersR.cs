@@ -329,7 +329,7 @@ public class CharactersR
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Red Guardian’s shield (grants user one extra level of the power Shield)"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Red Guardian’s Shield"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
@@ -364,6 +364,25 @@ public class CharactersR
                         powerSelector.GetPower(PowerNames.KeepMoving),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Red Guardian’s Shield",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Flashy",
+                        "Requires: Shield 1 power"
+                    ],
+                    PowerValue = 1
+                }
             ],
             Biography = new Biography
             {
@@ -814,11 +833,7 @@ public class CharactersR
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.CombatTrickery),
-
-                        powerSelector.GetPower(PowerNames.IconicWeapon,
-                            specialization: "Razor arms [hands act as melee weapons; +1 Melee damage multiplier]",
-                            meleeDamageModifier: 1),
-
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Razor Arms"),
                         powerSelector.GetPower(PowerNames.Inspiration),
                     ],
                 },
@@ -840,6 +855,24 @@ public class CharactersR
                         powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10"),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Razor Arms",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, causes bleeding."),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Awkward",
+                    ],
+                    PowerValue = 1,
+                    MeleeDamageModifier = 1
+                }
             ],
             Biography = new Biography
             {
@@ -1548,10 +1581,9 @@ public class CharactersR
                     Name = PowerSetNames.Basic,
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "Tentacles"),
                         powerSelector.GetPower(PowerNames.Brilliance1),
                         powerSelector.GetPower(PowerNames.Disguise),
-                        powerSelector.GetPower(PowerNames.IconicWeapon, specialization: "Head orb [extrudes a mass of morphing red tentacles that can act as melee weapons or webs]"),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Head Orb"),
                     ],
                 },
                 new CharacterPowerSet
@@ -1572,23 +1604,33 @@ public class CharactersR
                         powerSelector.GetPower(PowerNames.WhirlingFrenzy),
                     ],
                 },
-                new CharacterPowerSet
+            ],
+            IconicItems =
+            [
+                new IconicItem
                 {
-                    Name = PowerSetNames.Plasticity,
+                    Name = "Head Orb",
                     Powers =
                     [
-                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10; only applies to tentacles"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.AdditionalLimbs} (Tentacles)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ExtendedReach2} (Reach 10; only applies to tentacles)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webcasting),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webgrabbing),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.SpiderPowers,
-                    Powers =
+                    GrantedPowerReminders =
                     [
+                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "Tentacles"),
+                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10; only applies to tentacles"),
                         powerSelector.GetPower(PowerNames.Webcasting),
                         powerSelector.GetPower(PowerNames.Webgrabbing),
                     ],
-                },
+                    Restrictions =
+                    [
+                        "Flashy",
+                        "Worn"
+                    ],
+                    PowerValue = 4,
+                }
             ],
             Biography = new Biography
             {
