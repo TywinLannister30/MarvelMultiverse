@@ -48,20 +48,7 @@ public class CharactersW
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Accuracy2),
-                        powerSelector.GetPower(PowerNames.Flight2, isTech: true),
-                        powerSelector.GetPower(PowerNames.Mighty1, isTech: true),
-                        powerSelector.GetPower(PowerNames.Sturdy2, isTech: true),
                     ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.ElementControlEnergy,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast),
-                        powerSelector.GetPower(PowerNames.ElementalBurst),
-                    ],
-                    IsTech = true
                 },
                 new CharacterPowerSet
                 {
@@ -79,6 +66,39 @@ public class CharactersW
                         powerSelector.GetPower(PowerNames.WeaponsBlazing),
                     ],
                 },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    IsBattlesuit = true,
+                    Name = "War Machine's Armor",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Salvation),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
+                    ],
+                    GrantedPowerReminders =
+                    [
+                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        powerSelector.GetPower(PowerNames.Flight2),
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                    ],
+                    Restrictions =
+                    [
+                        "Menacing",
+                        "Worn",
+                    ],
+                    PowerValue = 9,
+                    IsTech = true
+                }
             ],
             Biography = new Biography
             {
