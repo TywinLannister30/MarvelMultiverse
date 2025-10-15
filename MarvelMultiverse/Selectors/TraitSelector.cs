@@ -139,7 +139,7 @@ public class TraitSelector : ITraitSelector
             Name = TraitNames.CombatReflexes,
             Effect =
             [
-                " The character can react quickly in combat. This grants them one additional reaction each round.",
+                "The character can react quickly in combat. This grants them one additional reaction each round.",
             ],
         },
         new()
