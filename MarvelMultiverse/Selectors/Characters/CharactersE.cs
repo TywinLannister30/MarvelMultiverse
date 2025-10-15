@@ -550,7 +550,7 @@ public class CharactersE
         },
         new()
         {
-            Name = "Emma Frost",
+            Name = "Emma Frost (Human Form)",
             Rank = 5,
             Abilities = new Abilities
             (
@@ -569,7 +569,6 @@ public class CharactersE
             Tags =
             [
                 tagSelector.GetTag(TagNames.AlternateForm, reminder: "Crystalline Form"),
-                tagSelector.GetTag(TagNames.ExtremeAppearance, reminder: "in Alternate Form"),
                 tagSelector.GetTag(TagNames.Heroic),
                 tagSelector.GetTag(TagNames.Hounded),
                 tagSelector.GetTag(TagNames.Krakoan),
@@ -584,8 +583,6 @@ public class CharactersE
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.Brilliance1),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
                         powerSelector.GetPower(PowerNames.Uncanny2),
                     ],
                 },
@@ -642,18 +639,72 @@ public class CharactersE
                 Personality =
                 [
                     "As a wealthy heiress, Emma Frost was taught from birth to be proud, spoiled and petty. Over the course of decades, she has managed to become a bit more considerate and self-aware, but the attitudes she picked up in her youth frequently overwhelm her better nature.",
-                ],
-                BiographySections =
+                ]
+            }
+        },
+        new()
+        {
+            Name = "Emma Frost (Crystalline Form)",
+            Rank = 5,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 4, vigilance: 6, ego: 4, logic: 8
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Beguiling),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Celebrities"),
+                traitSelector.GetTrait(TraitNames.Famous),
+                traitSelector.GetTrait(TraitNames.Gearhead),
+                traitSelector.GetTrait(TraitNames.Piloting),
+                traitSelector.GetTrait(TraitNames.Presence),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.AlternateForm, reminder: "Human Form"),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+                tagSelector.GetTag(TagNames.Heroic),
+                tagSelector.GetTag(TagNames.Hounded),
+                tagSelector.GetTag(TagNames.Krakoan),
+                tagSelector.GetTag(TagNames.Rich),
+                tagSelector.GetTag(TagNames.XGene),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Mighty1),
+                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        powerSelector.GetPower(PowerNames.Uncanny2),
+                    ],
+                },
+            ],
+            Biography = new Biography
+            {
+                RealName = "Emma Frost",
+                Heights = [new() { Feet = 5, Inches = 10 }],
+                Weights = [144],
+                Gender = Gender.Female,
+                Eyes = "Blue",
+                Hair = "Dyed blond",
+                Size = Size.Average,
+                DistinguishingFeatures = "Looks like crystal",
+                Occupations = [OccupationName.Tycoon],
+                Origins = [OriginName.Mutant],
+                Teams = [TeamNames.HellfireClub, TeamNames.XMen],
+                Base = "Krakoa",
+                History =
                 [
-                    new()
-                    {
-                        Name = "Alternate Form",
-                        Description =
-                        [
-                            "Frost underwent a secondary mutation that allows her to transform into crystalline form. This grants her the Mighty 1 and Sturdy 2 powers. She cannot use her Brilliance 1, Telepathy and Power Control powers when in that form. She can use her Uncanny 2 power in either form.",
-                            "Numbers before a slash are for her regular human form, and numbers after a slash are for her crystalline form."
-                        ]
-                    }
+                    "The mutant daughter of a wealthy family, Emma Frost was born with psychic powers rivaling those of Professor X himself. Later in life, she would further obtain the ability to transform herself into a powerful crystalline form.",
+                    "As a young woman, Emma rejected multiple invitations to join the X-Men, only revealing herself to the world as a mutant after encountering Sebastian Shaw, the Black King of the villainous Hellfire Club. Frost became his White Queen, and together, they fought the X-Men. After defeating the Black King, the X-Men persuaded Emma to leave the Hellfire Club behind. Since then, Emma Frost has often been on the side of good, only occasionally falling back into old ways.",
+                ],
+                Personality =
+                [
+                    "As a wealthy heiress, Emma Frost was taught from birth to be proud, spoiled and petty. Over the course of decades, she has managed to become a bit more considerate and self-aware, but the attitudes she picked up in her youth frequently overwhelm her better nature.",
                 ]
             }
         },
