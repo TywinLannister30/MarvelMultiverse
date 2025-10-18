@@ -5057,7 +5057,8 @@ public class PowerSelector : IPowerSelector
             Range = "10 spaces",
             Effect =
             [
-                "The character makes a ranged attack on an enemy. If the attack is a success, the web paralyzes the enemy. On a Fantastic success, the enemy is also pinned. Breaking free from webbing requires a Melee check (target number 20)."
+                "The character makes a ranged attack on an enemy. If the attack is a success, the web paralyzes the enemy. On a Fantastic success, the enemy is also pinned. Breaking free from webbing requires a Melee check (target number 16).",
+                "A character can use additional actions—either standard actions or reactions—to reinforce their webbing. Each time they do so, the TN to destroy it increases by +2, to a maximum of 22. If a target is already webbed, the TN to web it again is 10."
             ],
         },
         new()
@@ -5085,7 +5086,8 @@ public class PowerSelector : IPowerSelector
             Cost = "5 Focus",
             Effect =
             [
-                "The character makes a ranged attack on an enemy. If the attack is a success, the character grabs the target with a web. On a Fantastic success, the target can also be pinned. Breaking free from webbing requires a Melee check (target number 20)."
+                "The character makes a ranged attack on an enemy. If the attack is a success, the character grabs the target with a web. On a Fantastic success, the target can also be pinned. Breaking free from webbing requires a Melee check (target number 16).",
+                "A character can use additional actions—either standard actions or reactions—to reinforce their webbing. Each time they do so, the TN to destroy it increases by +2, to a maximum of 22. If a target is already webbed, the TN to web it again is 10."
             ],
         },
         new()
@@ -5112,7 +5114,8 @@ public class PowerSelector : IPowerSelector
             Cost = "10 Focus",
             Effect =
             [
-                "The character fills up to 5 spaces with sticky webs, and the a­ ected spaces are considered difficult terrain. Any creature that starts its turn in or moves into an a­ffected space must make an Agility check (target number 20) or be paralyzed by the webbing. Breaking free from webbing requires a Melee check (target number 20)."
+                "The character fills up to 5 spaces with sticky webs, and the a­ ected spaces are considered difficult terrain. Any creature that starts its turn in or moves into an a­ffected space must make an Agility check (target number 20) or be paralyzed by the webbing. Breaking free from webbing requires a Melee check (target number 16).",
+                "A character can use additional actions—either standard actions or reactions—to reinforce their webbing. Each time they do so, the TN to destroy it increases by +2, to a maximum of 22. If a target is already webbed, the TN to web it again is 10."
             ],
         },
         new()
