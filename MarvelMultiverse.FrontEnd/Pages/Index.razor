@@ -1,0 +1,529 @@
+﻿@page "/"
+@using MarvelMultiverse.Models
+@inject MarvelMultiverse.FrontEnd.Services.MarvelApiClient MarvelApiClient
+
+<h1 class="text-center mb-4">Marvel Multiverse Character Search</h1>
+
+<div class="text-center">
+    <input @bind="searchName" placeholder="Enter character name..." class="form-control w-50 mx-auto mb-2" />
+    <button class="btn btn-primary" @onclick="SearchCharacter">Search</button>
+</div>
+
+@if (loading)
+{
+    <p class="text-center mt-3">Loading...</p>
+}
+else if (errorMessage is not null)
+{
+    <p class="text-danger text-center mt-3">@errorMessage</p>
+}
+else if (character != null)
+{
+    <div class="container mt-4 p-4 border border-dark bg-light" style="max-width: 900px; font-family: 'Arial Black', sans-serif;">
+        
+        @* --- 1. NAME AT TOP --- *@
+        <div class="text-uppercase text-white bg-dark text-center p-1 border border-dark mb-3" style="font-size: 1.5rem; letter-spacing: 2px;">
+            @character.Name
+        </div>
+
+        @* --- 2. TOP SECTION: IMAGE (left) & STATS (right) --- *@
+        <div class="row no-gutters mb-4">
+            
+            @* 2a. Image (Top Left) *@
+            <div class="col-md-5">
+                @if (!string.IsNullOrEmpty(character.ImageUrl))
+                {
+                    <img src="@character.ImageUrl" class="img-fluid border border-dark" alt="@character.Name" style="max-height: 400px; width: 100%; object-fit: cover; border-width: 3px !important;" />
+                }
+            </div>
+
+            @* 2b. Rank, Karma, Health, Focus (Top Right) *@
+            <div class="col-md-7 ps-4">
+                <div class="d-flex justify-content-between mb-2">
+                    @* {{-- Rank --}} *@
+                    <div class="text-center border border-dark p-2 bg-danger text-white" style="width: 24%; border-width: 3px !important;">
+                        <div style="font-size: 0.7rem;">RANK</div>
+                        <div style="font-size: 2rem;">@character.Rank</div>
+                    </div>
+
+                    @* {{-- Karma --}} *@
+                    <div class="text-center border border-dark p-2 bg-secondary text-white" style="width: 24%; border-width: 3px !important;">
+                        <div style="font-size: 0.7rem;">KARMA</div>
+                        <div style="font-size: 2rem;">@character.Karma</div>
+                    </div>
+
+                    @* Health & Damage Reduction *@
+                    <div class="d-flex flex-column border border-dark p-1 bg-success text-white" style="width: 24%; border-width: 3px !important;">
+                        @* {{-- Health Value (Top, larger) --}} *@
+                        <div class="text-center">
+                            <div style="font-size: 0.7rem;">HEALTH</div>
+                            <div style="font-size: 1.5rem; line-height: 1;">@character.Health.Value</div>
+                        </div>
+
+                        @* {{-- Damage Reduction Value (Bottom, smaller box) --}} *@
+                        <div class="text-center border border-dark bg-dark text-white p-1 mt-auto" style="border-width: 2px !important;">
+                            <div style="font-size: 0.5rem; line-height: 1;">DAMAGE REDUCTION</div>
+                            @* {{-- Assuming DamageReduction is available on the Health object or Character object --}} *@
+                            <div style="font-size: 1.2rem; line-height: 1;">@character.Health.DamageReduction</div>
+                        </div>
+                    </div>
+
+                    @* Focus & Damage Reduction *@
+                    <div class="d-flex flex-column border border-dark p-1 bg-warning text-dark" style="width: 24%; border-width: 3px !important;">
+                        @* {{-- Focus Value (Top, larger) --}} *@
+                        <div class="text-center">
+                            <div style="font-size: 0.7rem;">FOCUS</div>
+                            <div style="font-size: 1.5rem; line-height: 1;">@character.Focus.Value</div>
+                        </div>
+
+                        @* {{-- Damage Reduction Value (Bottom, smaller box) --}} *@
+                        <div class="text-center border border-dark bg-dark text-white p-1 mt-auto" style="border-width: 2px !important;">
+                            <div style="font-size: 0.5rem; line-height: 1;">DAMAGE REDUCTION</div>
+                            @* {{-- Reusing the same DamageReduction value as it's typically a single value --}} *@
+                            <div style="font-size: 1.2rem; line-height: 1;">@character.Focus.DamageReduction</div>
+                        </div>
+                    </div>
+                </div>
+
+                @* Abilities and Defense Scores (Updated to four columns) *@
+                <div class="row no-gutters border border-dark p-2 mb-2" style="border-width: 3px !important;">
+                    <div class="col-12">
+                        @* HEADER ROW: Updated to four columns (col-3 each) *@
+                        <div class="row text-center text-uppercase fw-bold mb-1" style="font-size: 0.8rem;">
+                            <div class="col-3" style="text-align: left; padding-left: 10px;">ABILITY</div>
+                            <div class="col-3">SCORE</div>
+                            <div class="col-3">DEFENSE</div>
+                            <div class="col-3">NON-COMBAT CHECK</div>
+                        </div>
+
+                        @* DATA ROWS *@
+                        @foreach (var ability in new[] {
+                                        new { Name = "MELEE", Score = character.Abilities.Melee.Score, Defence = character.Abilities.Melee.Defence, NonCombatCheck = character.Abilities.Melee.NonCombatCheck },
+                                        new { Name = "AGILITY", Score = character.Abilities.Agility.Score, Defence = character.Abilities.Agility.Defence, NonCombatCheck = character.Abilities.Agility.NonCombatCheck },
+                                        new { Name = "RESILIENCE", Score = character.Abilities.Resilience.Score, Defence = character.Abilities.Resilience.Defence, NonCombatCheck = character.Abilities.Resilience.NonCombatCheck },
+                                        new { Name = "VIGILANCE", Score = character.Abilities.Vigilance.Score, Defence = character.Abilities.Vigilance.Defence, NonCombatCheck = character.Abilities.Vigilance.NonCombatCheck },
+                                        new { Name = "EGO", Score = character.Abilities.Ego.Score, Defence = character.Abilities.Ego.Defence, NonCombatCheck = character.Abilities.Ego.NonCombatCheck },
+                                        new { Name = "LOGIC", Score = character.Abilities.Logic.Score, Defence = character.Abilities.Logic.Defence, NonCombatCheck = character.Abilities.Logic.NonCombatCheck }
+                                        })
+                        {
+                            <div class="row d-flex align-items-center my-1 p-1 border-bottom">
+
+                                @* 1. ABILITY NAME (Left-aligned) *@
+                                <div class="col-3 fw-bold" style="font-size: 0.7rem; text-align: left; padding-left: 10px;">@ability.Name</div>
+
+                                @* 2. SCORE (New column, dark badge) *@
+                                <div class="col-3 text-center">
+                                    <span class="badge bg-dark rounded-pill" style="font-size: 1rem;">@ability.Score</span>
+                                </div>
+
+                                @* 3. DEFENSE (Existing column, centered) *@
+                                <div class="col-3 text-center">
+                                    <span class="badge bg-dark rounded-pill" style="font-size: 1rem;">@ability.Defence</span>
+                                </div>
+
+                                @* 4. NON-COMBAT CHECK (Existing column, centered) *@
+                                <div class="col-3 text-center">
+                                    <span class="badge bg-dark rounded-pill" style="font-size: 1rem;">+@ability.NonCombatCheck</span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* --- 3. MIDDLE SECTION: TRAITS/TAGS (left) & SPEED/DAMAGE (right) --- *@
+        <div class="row no-gutters mb-4">
+
+            @* --- 3a. Traits and Tags (Middle Left) --- *@
+            <div class="col-md-6 pe-3">
+                <div class="border border-dark p-2" style="border-width: 3px !important; min-height: 100%;">
+                    <h5 class="text-uppercase text-center text-danger">Traits & Tags</h5>
+
+                    <div class="row">
+                        @* --- TRAITS COLUMN (Final, Visual Distinction Fix) --- *@
+                        <div class="col-6">
+                            <h6 class="fw-bold text-uppercase mt-1 mb-1 text-danger" style="font-size: 0.8rem;">Traits</h6>
+                            <div style="font-size: 0.8rem;">
+                                @if (character?.Traits != null)
+                                {
+                                    @foreach (var trait in character.Traits)
+                                    {
+                                        <div class="mb-1">
+                                            @{
+                                                string name = trait.Name;
+                                                int splitIndex = -1;
+
+                                                int colonIndex = name.IndexOf(':');
+                                                int bracketIndex = name.IndexOf('(');
+
+                                                // Determine if the "Tech Reliance" image should be shown
+                                                bool showTechImage = name.IndexOf("Tech Reliance", StringComparison.OrdinalIgnoreCase) >= 0;
+
+                                                if (colonIndex != -1 && (bracketIndex == -1 || colonIndex < bracketIndex))
+                                                {
+                                                    splitIndex = colonIndex + 1;
+                                                }
+                                                else if (bracketIndex != -1)
+                                                {
+                                                    splitIndex = bracketIndex;
+                                                }
+
+                                                if (splitIndex > 0 && splitIndex < name.Length)
+                                                {
+                                                    // Part 1: Trait Name
+                                                    <span>@name.Substring(0, splitIndex)</span>
+
+                                                    // Part 2: Description (Distinguished by color/size)
+                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                }
+                                                else
+                                                {
+                                                    // No valid separator found: Display the entire item.
+                                                    <span>@name</span>
+                                                }
+                                            }
+
+                                            @if (showTechImage)
+                                            {
+                                                <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.25rem;" />
+                                            }
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="mb-1">No traits listed.</div>
+                                }
+                            </div>
+                        </div>
+
+                        @* --- TAGS COLUMN (Final, Visual Distinction Fix) --- *@
+                        <div class="col-6">
+                            <h6 class="fw-bold text-uppercase mt-1 mb-1 text-danger" style="font-size: 0.8rem;">Tags</h6>
+                            <div style="font-size: 0.8rem;">
+                                @if (character?.Tags != null)
+                                {
+                                    @foreach (var tag in character.Tags)
+                                    {
+                                        <div class="mb-1">
+                                            @{
+                                                string name = tag.Name;
+                                                int splitIndex = -1;
+
+                                                int colonIndex = name.IndexOf(':');
+                                                int bracketIndex = name.IndexOf('(');
+
+                                                if (colonIndex != -1 && (bracketIndex == -1 || colonIndex < bracketIndex))
+                                                {
+                                                    splitIndex = colonIndex + 1;
+                                                }
+                                                else if (bracketIndex != -1)
+                                                {
+                                                    splitIndex = bracketIndex;
+                                                }
+
+                                                if (splitIndex > 0 && splitIndex < name.Length)
+                                                {
+                                                    // Part 1: Tag Name (Use default bold/forced weight)
+                                                    <span>@name.Substring(0, splitIndex)</span>
+
+                                                    // Part 2: Description (Distinguished by lighter color and smaller size)
+                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                }
+                                                else
+                                                {
+                                                    // No valid separator found: Display the entire item.
+                                                    <span>@name</span>
+                                                }
+                                            }
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="mb-1">No tags listed.</div>
+                                }
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            @* --- 3b. NEW SECTION: SPEED & DAMAGE (Middle Right) --- *@
+            <div class="col-md-6 ps-3">
+                <div class="d-flex flex-column h-100">
+
+                    @* Speed Box (Unchanged) *@
+                    <div class="border border-dark p-2 mb-3" style="border-width: 3px !important;">
+                        <h5 class="text-uppercase text-center text-danger">SPEED</h5>
+
+                        <div class="row">
+                            <div class="col-6" style="font-size: 0.8rem;">
+                                <span class="fw-bold">Run:</span> @character.Speed.Run
+                                <br /><span class="fw-bold">Climb:</span> @character.Speed.Climb
+                                <br /><span class="fw-bold">Swim:</span> @character.Speed.Swim
+                                <br /><span class="fw-bold">Jump:</span> @character.Speed.Jump
+                                @* --- Conditional Flight Speed --- *@
+                                @if (character.Speed.Flight > 0)
+                                {
+                                    <br /><span class="fw-bold">Flight: </span> @character.Speed.Flight
+                                }
+                                @* --- END NEW --- *@
+                            </div>
+                            <div class="col-6 text-center border-start border-dark ps-2">
+                                <div style="font-size: 0.7rem;">INITIATIVE MODIFIER</div>
+                                <div style="font-size: 2rem;">@character.Initiative.AsString()</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @* Damage Box (Final Alignment Fix) *@
+                    <div class="border border-dark p-2 flex-grow-1" style="border-width: 3px !important;">
+                        <h5 class="text-uppercase text-center text-danger">DAMAGE</h5>
+
+                        @{
+                            // Retaining the corrected logic from before
+                            var damageAbilities = new[]
+                            {
+                                        new { Name = "Melee", Ability = character.Abilities.Melee, TypeLetter = "M" },
+                                        new { Name = "Agility", Ability = character.Abilities.Agility, TypeLetter = "M" },
+                                        new { Name = "Ego", Ability = character.Abilities.Ego, TypeLetter = "M" },
+                                        new { Name = "Logic", Ability = character.Abilities.Logic, TypeLetter = "M" }
+                                        };
+                        }
+
+                        @if (character?.Abilities != null)
+                        {
+                            <div class="list-unstyled" style="font-size: 0.8rem;">
+                                @foreach (var source in damageAbilities)
+                                {
+                                    <div class="d-flex mb-1 align-items-center">
+
+                                        @* Column 1: Name (FIXED WIDTH ensures M× starts at the same point) *@
+                                        <span class="fw-bold text-nowrap" style="width: 4.5rem;">@source.Name:</span>
+
+                                        @* Column 2: Multiplier (Starts aligned, minimal gap after) *@
+                                        <span class="text-nowrap me-2">
+                                            @source.TypeLetter&times;@source.Ability.DamageModifier
+                                        </span>
+
+                                        @* Column 3: Score (No right-alignment, just minimal space) *@
+                                        <span class="fw-bold text-nowrap">
+                                            +@source.Ability.Score
+                                        </span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            @* Fallback using the final structure *@
+                            <div class="list-unstyled" style="font-size: 0.8rem;">
+                                <div class="d-flex mb-1 align-items-center">
+                                    <span class="fw-bold text-nowrap" style="width: 4.5rem;">Melee:</span>
+                                    <span class="text-nowrap me-2">M&times;?</span>
+                                    <span class="fw-bold text-nowrap">+?</span>
+                                </div>
+                                @* ... (Add fallbacks for other lines if needed) ... *@
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* --- 4. POWERS (Up to 3 Columns) --- *@
+        <div class="border border-dark p-2 mb-4" style="border-width: 3px !important;">
+            <h5 class="text-uppercase text-center text-danger mb-3">Powers</h5>
+
+            @if (character?.Powers != null && character.Powers.Any())
+            {
+                <div class="row">
+                    @* {{-- Determine the column size based on the number of power sets (up to 3 columns max) --}} *@
+                    @{
+                        int totalPowerSets = character.Powers.Count;
+                        int columns = Math.Min(totalPowerSets, 3);
+                        int colSize = 12 / columns; // 1, 2, or 3 columns
+                    }
+
+                    @foreach (var powerSet in character.Powers)
+                    {
+                        <div class="col-md-@colSize mb-3">
+                            <div class="d-flex align-items-center mb-1">
+                                <h6 class="fw-bold text-uppercase text-danger mb-0" style="font-size: 0.8rem;">
+                                    @powerSet.Name
+                                </h6>
+
+                                @if (powerSet.IsTech)
+                                {
+                                    <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                }
+                            </div>
+
+                            @* {{-- Display the list of powers as a simple list (no bullets for compactness) --}} *@
+                            <ul class="list-unstyled" style="font-size: 0.8rem;">
+                                @if (powerSet.Powers != null)
+                                {
+                                    @foreach (var power in powerSet.Powers)
+                                    {
+                                        <li>@power.Name</li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <p class="text-center" style="font-size: 0.8rem;">No powers listed for this character.</p>
+            }
+        </div>
+
+        @* --- 5. BIOGRAPHY SECTION (UPDATED TO THREE COLUMNS) --- *@
+        <div class="border border-dark p-2" style="border-width: 3px !important;">
+            <h5 class="text-uppercase text-center text-danger">Biography</h5>
+
+            <div class="row">
+
+                @* {{-- COLUMN 1: Real Name and Physical Details (col-4) --}} *@
+                <div class="col-md-4 pe-3 border-end border-dark">
+                    <h6 class="fw-bold text-uppercase mt-1 mb-1 text-danger" style="font-size: 0.8rem;">Details</h6>
+
+                    @* Real Name *@
+                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">
+                        <span class="fw-bold">REAL NAME:</span> @character.Biography.RealName
+                    </p>
+
+                    @* Physical and Team Details *@
+                    <ul class="list-unstyled" style="font-size: 0.75rem;">
+                        @if (character.Biography.Heights != null && character.Biography.Heights.Any())
+                        {
+                            // C# block to format and join the list of Height objects
+                            {
+                                // 1. Call GetString() on each Height object to get its formatted string
+                                var heightStrings = character.Biography.Heights.Select(h => h.GetString());
+
+                                // 2. Join the formatted strings back together with a comma and space
+                                string heightString = string.Join(", ", heightStrings);
+
+                                <li><span class="fw-bold">Height:</span> @heightString</li>
+                            }
+                        }
+                        @if (character.Biography.Weights is IEnumerable<int> weightList && weightList.Any())
+                        {
+                            // C# block to format and join the list of integers
+                            {
+                                var formattedWeights = weightList.Select(w => w.ToString() + " lbs.");
+                                string weightString = string.Join(", ", formattedWeights);
+
+                                <li><span class="fw-bold">Weight:</span> @weightString</li>
+                            }
+                        } 
+                        @if (!string.IsNullOrEmpty(character.Biography.Gender))
+                        {
+                            <li><span class="fw-bold">Gender:</span> @character.Biography.Gender</li>
+                        }
+                        @if (!string.IsNullOrEmpty(character.Biography.Eyes))
+                        {
+                            <li><span class="fw-bold">Eyes:</span> @character.Biography.Eyes</li>
+                        }
+                        @if (!string.IsNullOrEmpty(character.Biography.Hair))
+                        {
+                            <li><span class="fw-bold">Hair:</span> @character.Biography.Hair</li>
+                        }
+                        @if (character.Biography.Size != null)
+                        {
+                            <li><span class="fw-bold">Size:</span> @character.Biography.Size.ToString()</li>
+                        }
+                        @if (character?.Biography?.Occupations is IEnumerable<string> occupationsList && occupationsList.Any())
+                        {
+                            // Join the list of strings into a single comma-separated string
+                            string occupationsString = string.Join(", ", occupationsList);
+                            <li><span class="fw-bold">Occupations:</span> @occupationsString</li>
+                        }
+                        @if (character?.Biography?.Origins is IEnumerable<string> originsList && originsList.Any())
+                        {
+                            // Join the list of strings into a single comma-separated string
+                            string originsString = string.Join(", ", originsList);
+                            <li><span class="fw-bold">Origins:</span> @originsString</li>
+                        }
+                        @if (character?.Biography?.Teams is IEnumerable<string> teamsList && teamsList.Any())
+                        {
+                            // Join the list of strings into a single comma-separated string
+                            string teamsString = string.Join(", ", teamsList);
+                            <li><span class="fw-bold">Teams:</span> @teamsString</li>
+                        }
+                        @if (!string.IsNullOrEmpty(character.Biography.Base))
+                        {
+                            <li><span class="fw-bold">Base:</span> @character.Biography.Base</li>
+                        }
+                        @if (!string.IsNullOrEmpty(character.Biography.DistinguishingFeatures))
+                        {
+                            <li><span class="fw-bold">Features:</span> @character.Biography.DistinguishingFeatures</li>
+                        }
+                    </ul>
+                </div>
+
+                @* {{-- COLUMN 2: History (col-4) --}} *@
+                <div class="col-md-4 px-3 border-end border-dark">
+                    <h6 class="fw-bold text-uppercase mt-1 mb-1 text-danger" style="font-size: 0.8rem;">History</h6>
+                    @if (character.Biography.History != null)
+                    {
+                        @foreach (var historyParagraph in character.Biography.History)
+                        {
+                            <p style="font-size: 0.75rem; text-align: justify; margin-bottom: 0.5rem;">@historyParagraph</p>
+                        }
+                    }
+                </div>
+
+                @* {{-- COLUMN 3: Personality (col-4) --}} *@
+                <div class="col-md-4 ps-3">
+                    <h6 class="fw-bold text-uppercase mt-1 mb-1 text-danger" style="font-size: 0.8rem;">Personality</h6>
+                    @if (character.Biography.Personality != null)
+                    {
+                        @foreach (var personalityParagraph in character.Biography.Personality)
+                        {
+                            <p style="font-size: 0.75rem; text-align: justify; margin-bottom: 0.5rem;">@personalityParagraph</p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+@code {
+    private string searchName = "";
+    private MarvelMultiverse.Models.Character? character;
+    private bool loading = false;
+    private string? errorMessage;
+
+    private async Task SearchCharacter()
+    {
+        Console.WriteLine($"Search clicked for: {searchName}");
+        errorMessage = null;
+        if (string.IsNullOrWhiteSpace(searchName))
+        {
+            errorMessage = "Please enter a name.";
+            return;
+        }
+
+        try
+        {
+            loading = true;
+            character = await MarvelApiClient.GetCharacterAsync(searchName);
+            if (character == null)
+            {
+                errorMessage = "Character not found or error calling API.";
+            }
+        }
+        finally
+        {
+            loading = false;
+            StateHasChanged();
+        }
+    }
+}

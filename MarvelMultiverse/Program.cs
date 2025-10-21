@@ -28,6 +28,14 @@ builder.Services.AddTransient<IPowerSetManager, PowerSetManager>();
 builder.Services.AddTransient<ITagManager, TagManager>();
 builder.Services.AddTransient<ITraitManager, TraitManager>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalBlazor", policy =>
+        policy.WithOrigins("https://localhost:5001", "https://localhost:7186", "http://localhost:5042/") // your frontend ports
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
 
 var app = builder.Build();
 
@@ -37,6 +45,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowLocalBlazor");
 
 app.UseHttpsRedirection();
 

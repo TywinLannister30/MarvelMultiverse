@@ -43,6 +43,7 @@ public class CharacterSelector(
         character.SetSpeed();
         character.SetNonCombatCheckModifiers();
         character.SetDamageModifiers();
+        character.SetImageUrl();
     }
 
     private List<Character> GetAllCharacters()

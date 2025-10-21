@@ -35,6 +35,8 @@ public class Character
 
     public Biography Biography { get; set; }
 
+    public string ImageUrl { get; set; }
+
     public string Source { get; set; }
 
     public Character()
@@ -328,5 +330,10 @@ public class Character
             Abilities.Melee.DamageModifier += 2;
         if (Biography.Size == Size.Gigantic)
             Abilities.Melee.DamageModifier += 3;
+    }
+
+    public void SetImageUrl()
+    {
+        ImageUrl = $"/images/characters/{Name}.jpg";
     }
 }

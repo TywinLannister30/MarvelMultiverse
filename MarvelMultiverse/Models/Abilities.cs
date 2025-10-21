@@ -2,6 +2,8 @@
 
 public class Abilities
 {
+    public Abilities() { } // Required for deserialization
+
     public Abilities(int melee, int agility, int resilience, int vigilance, int ego, int logic)
     {
         Melee = new Ability { Score = melee };
