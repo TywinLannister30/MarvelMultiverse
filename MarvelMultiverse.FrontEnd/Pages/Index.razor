@@ -264,12 +264,20 @@ else if (character != null)
                                 <br /><span class="fw-bold">Climb:</span> @character.Speed.Climb
                                 <br /><span class="fw-bold">Swim:</span> @character.Speed.Swim
                                 <br /><span class="fw-bold">Jump:</span> @character.Speed.Jump
-                                @* --- Conditional Flight Speed --- *@
                                 @if (character.Speed.Flight > 0)
                                 {
-                                    <br /><span class="fw-bold">Flight: </span> @character.Speed.Flight
+                                    <br />
+                                    <span class="fw-bold">Flight: </span>
+ 
+                                    @character.Speed.Flight
                                 }
-                                @* --- END NEW --- *@
+                                @if (character.Speed.Swingline > 0)
+                                {
+                                    <br />
+                                    <span class="fw-bold">Swingline: </span>
+ 
+                                    @character.Speed.Swingline
+                                }
                             </div>
                             <div class="col-6 text-center border-start border-dark ps-2">
                                 <div style="font-size: 0.7rem;">INITIATIVE MODIFIER</div>
@@ -305,7 +313,8 @@ else if (character != null)
 
                                         @* Column 2: Multiplier (Starts aligned, minimal gap after) *@
                                         <span class="text-nowrap me-2">
-                                            @source.TypeLetter&times;@source.Ability.DamageModifier
+                                            <img src="images/Marvel.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                            &times;@source.Ability.DamageModifier
                                         </span>
 
                                         @* Column 3: Score (No right-alignment, just minimal space) *@
@@ -333,10 +342,11 @@ else if (character != null)
             </div>
         </div>
 
-        @* --- 4. POWERS (Up to 3 Columns) --- *@
+        @* --- 4. POWERS & ICONIC ITEMS --- *@
         <div class="border border-dark p-2 mb-4" style="border-width: 3px !important;">
-            <h5 class="text-uppercase text-center text-danger mb-3">Powers</h5>
+            <h5 class="text-uppercase text-center text-danger mb-3">Powers & Items</h5>
 
+            @* --- Display POWERS --- *@
             @if (character?.Powers != null && character.Powers.Any())
             {
                 <div class="row">
@@ -344,7 +354,7 @@ else if (character != null)
                     @{
                         int totalPowerSets = character.Powers.Count;
                         int columns = Math.Min(totalPowerSets, 3);
-                        int colSize = 12 / columns; // 1, 2, or 3 columns
+                        int colSize = 12 / columns;
                     }
 
                     @foreach (var powerSet in character.Powers)
@@ -361,13 +371,18 @@ else if (character != null)
                                 }
                             </div>
 
-                            @* {{-- Display the list of powers as a simple list (no bullets for compactness) --}} *@
                             <ul class="list-unstyled" style="font-size: 0.8rem;">
                                 @if (powerSet.Powers != null)
                                 {
                                     @foreach (var power in powerSet.Powers)
                                     {
-                                        <li>@power.Name</li>
+                                        <li>
+                                            @power.Name
+                                            @if (power.IsTech)
+                                            {
+                                                <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.25rem;" />
+                                            }
+                                        </li>
                                     }
                                 }
                             </ul>
@@ -375,9 +390,56 @@ else if (character != null)
                     }
                 </div>
             }
-            else
+
+            @* --- Display ICONIC ITEMS (NEW SECTION) --- *@
+            @if (character?.IconicItems != null && character.IconicItems.Any())
             {
-                <p class="text-center" style="font-size: 0.8rem;">No powers listed for this character.</p>
+                <hr class="my-2 border-dark" /> @* Visual separator between Powers and Items *@
+                <h6 class="text-uppercase text-danger text-center mb-3">Iconic Items</h6>
+
+                <div class="row">
+                    @{
+                        int totalItemSets = character.IconicItems.Count;
+                        int itemColumns = Math.Min(totalItemSets, 3);
+                        int itemColSize = 12 / itemColumns;
+                    }
+
+                    @foreach (var item in character.IconicItems)
+                    {
+                        <div class="col-md-@itemColSize mb-3">
+                            <div class="d-flex align-items-center mb-1">
+                                <h6 class="fw-bold text-uppercase text-danger mb-0" style="font-size: 0.8rem;">
+                                    @item.Name @* Displaying the item name as the red header *@
+                                </h6>
+
+                                @* Optional: Show Tech Image for Iconic Item Header *@
+                                @if (item.IsTech)
+                                {
+                                    <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                }
+                            </div>
+
+                            @* Display the list of powers granted by the item *@
+                            @if (item.Powers != null && item.Powers.Any())
+                            {
+                                <ul class="list-unstyled" style="font-size: 0.8rem;">
+                                    @foreach (var power in item.Powers)
+                                    {
+                                        <li>
+                                            @power.Name
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+
+            @* --- Fallback for Entire Section --- *@
+            @if ((character?.Powers == null || !character.Powers.Any()) && (character?.IconicItems == null || !character.IconicItems.Any()))
+            {
+                <p class="text-center" style="font-size: 0.8rem;">No powers or iconic items listed for this character.</p>
             }
         </div>
 
@@ -393,7 +455,7 @@ else if (character != null)
 
                     @* Real Name *@
                     <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">
-                        <span class="fw-bold">REAL NAME:</span> @character.Biography.RealName
+                        <span class="fw-bold">Real Name:</span>  <span class="text-secondary" style="font-size: 0.8rem;">@character.Biography.RealName</span>
                     </p>
 
                     @* Physical and Team Details *@
@@ -406,9 +468,9 @@ else if (character != null)
                                 var heightStrings = character.Biography.Heights.Select(h => h.GetString());
 
                                 // 2. Join the formatted strings back together with a comma and space
-                                string heightString = string.Join(", ", heightStrings);
+                                string heightString = string.Join("/ ", heightStrings);
 
-                                <li><span class="fw-bold">Height:</span> @heightString</li>
+                                <li><span class="fw-bold">Height:</span> <span class="text-secondary">@heightString</span></li>
                             }
                         }
                         @if (character.Biography.Weights is IEnumerable<int> weightList && weightList.Any())
@@ -416,52 +478,52 @@ else if (character != null)
                             // C# block to format and join the list of integers
                             {
                                 var formattedWeights = weightList.Select(w => w.ToString() + " lbs.");
-                                string weightString = string.Join(", ", formattedWeights);
+                                string weightString = string.Join("/ ", formattedWeights);
 
-                                <li><span class="fw-bold">Weight:</span> @weightString</li>
+                                <li><span class="fw-bold">Weight:</span> <span class="text-secondary">@weightString</span></li>
                             }
                         } 
                         @if (!string.IsNullOrEmpty(character.Biography.Gender))
                         {
-                            <li><span class="fw-bold">Gender:</span> @character.Biography.Gender</li>
+                            <li><span class="fw-bold">Gender:</span> <span class="text-secondary">@character.Biography.Gender</span></li>
                         }
                         @if (!string.IsNullOrEmpty(character.Biography.Eyes))
                         {
-                            <li><span class="fw-bold">Eyes:</span> @character.Biography.Eyes</li>
+                            <li><span class="fw-bold">Eyes:</span> <span class="text-secondary">@character.Biography.Eyes</span></li>
                         }
                         @if (!string.IsNullOrEmpty(character.Biography.Hair))
                         {
-                            <li><span class="fw-bold">Hair:</span> @character.Biography.Hair</li>
+                            <li><span class="fw-bold">Hair:</span> <span class="text-secondary">@character.Biography.Hair</span></li>
                         }
                         @if (character.Biography.Size != null)
                         {
-                            <li><span class="fw-bold">Size:</span> @character.Biography.Size.ToString()</li>
+                            <li><span class="fw-bold">Size:</span> <span class="text-secondary">@character.Biography.Size.ToString()</span></li>
                         }
                         @if (character?.Biography?.Occupations is IEnumerable<string> occupationsList && occupationsList.Any())
                         {
                             // Join the list of strings into a single comma-separated string
                             string occupationsString = string.Join(", ", occupationsList);
-                            <li><span class="fw-bold">Occupations:</span> @occupationsString</li>
+                            <li><span class="fw-bold">Occupations:</span> <span class="text-secondary">@occupationsString</span></li>
                         }
                         @if (character?.Biography?.Origins is IEnumerable<string> originsList && originsList.Any())
                         {
                             // Join the list of strings into a single comma-separated string
                             string originsString = string.Join(", ", originsList);
-                            <li><span class="fw-bold">Origins:</span> @originsString</li>
+                            <li><span class="fw-bold">Origins:</span> <span class="text-secondary">@originsString</span></li>
                         }
                         @if (character?.Biography?.Teams is IEnumerable<string> teamsList && teamsList.Any())
                         {
                             // Join the list of strings into a single comma-separated string
                             string teamsString = string.Join(", ", teamsList);
-                            <li><span class="fw-bold">Teams:</span> @teamsString</li>
+                            <li><span class="fw-bold">Teams:</span> <span class="text-secondary">@teamsString</span></li>
                         }
                         @if (!string.IsNullOrEmpty(character.Biography.Base))
                         {
-                            <li><span class="fw-bold">Base:</span> @character.Biography.Base</li>
+                            <li><span class="fw-bold">Base:</span> <span class="text-secondary">@character.Biography.Base</span></li>
                         }
                         @if (!string.IsNullOrEmpty(character.Biography.DistinguishingFeatures))
                         {
-                            <li><span class="fw-bold">Features:</span> @character.Biography.DistinguishingFeatures</li>
+                            <li><span class="fw-bold">Features:</span> <span class="text-secondary">@character.Biography.DistinguishingFeatures</span></li>
                         }
                     </ul>
                 </div>
@@ -489,6 +551,33 @@ else if (character != null)
                         }
                     }
                 </div>
+
+                @if (character?.Biography?.BiographySections != null && character.Biography.BiographySections.Any())
+                {
+                    <hr class="my-2 border-dark" /> @* Visual separator *@
+
+                    @foreach (var bioSection in character.Biography.BiographySections)
+                    {
+                        @* Use full width (col-12) for the new section *@
+                        <div class="row">
+                            <div class="col-12 mt-2">
+                                @* Red title style matching History/Personality *@
+                                <h6 class="text-uppercase fw-bold text-danger mb-1" style="font-size: 0.9rem;">
+                                    @bioSection.Name
+                                </h6>
+
+                                @* Display description paragraphs *@
+                                @if (bioSection.Description != null)
+                                {
+                                    @foreach (var descriptionParagraph in bioSection.Description)
+                                    {
+                                        <p style="font-size: 0.75rem; text-align: justify; margin-bottom: 0.5rem;">@descriptionParagraph</p>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+                }
             </div>
         </div>
 

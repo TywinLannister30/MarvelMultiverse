@@ -606,7 +606,7 @@ public class CharactersC
                         powerSelector.GetPower(PowerNames.HurledShieldDeflection),
                         powerSelector.GetPower(PowerNames.Immovable),
                         powerSelector.GetPower(PowerNames.RicoShield),
-                        powerSelector.GetPower(PowerNames.Shield3, reminder: "(Shield 4 with Iconic Item)"),
+                        powerSelector.GetPower(PowerNames.Shield3, reminder: "Shield 4 with Iconic Item"),
                         powerSelector.GetPower(PowerNames.ShieldBash),
                         powerSelector.GetPower(PowerNames.ShieldDeflection),
                         powerSelector.GetPower(PowerNames.ShieldWall),

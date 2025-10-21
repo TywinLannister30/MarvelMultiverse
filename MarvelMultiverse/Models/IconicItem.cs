@@ -15,7 +15,6 @@ public class IconicItem
 
     public List<IconicItemPower> Powers { get; set; }
 
-
     public List<Power> GrantedPowerReminders { get; set; }
 
     public List<string> Restrictions { get; set; }
