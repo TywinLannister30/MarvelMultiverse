@@ -376,13 +376,43 @@ else if (character != null)
                                 {
                                     @foreach (var power in powerSet.Powers)
                                     {
-                                        <li>
-                                            @power.Name
+                                        <div class="mb-1">
+                                            @{
+                                                string name = power.Name;
+                                                int splitIndex = -1;
+
+                                                int colonIndex = name.IndexOf(':');
+                                                int bracketIndex = name.IndexOf('(');
+
+                                                if (colonIndex != -1 && (bracketIndex == -1 || colonIndex < bracketIndex))
+                                                {
+                                                    splitIndex = colonIndex + 1;
+                                                }
+                                                else if (bracketIndex != -1)
+                                                {
+                                                    splitIndex = bracketIndex;
+                                                }
+
+                                                if (splitIndex > 0 && splitIndex < name.Length)
+                                                {
+                                                    // Part 1: Trait Name
+                                                    <span>@name.Substring(0, splitIndex)</span>
+
+                                                    // Part 2: Description (Distinguished by color/size)
+                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                }
+                                                else
+                                                {
+                                                    // No valid separator found: Display the entire item.
+                                                    <span>@name</span>
+                                                }
+                                            }
+
                                             @if (power.IsTech)
                                             {
                                                 <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.25rem;" />
                                             }
-                                        </li>
+                                        </div>
                                     }
                                 }
                             </ul>
@@ -425,9 +455,38 @@ else if (character != null)
                                 <ul class="list-unstyled" style="font-size: 0.8rem;">
                                     @foreach (var power in item.Powers)
                                     {
-                                        <li>
-                                            @power.Name
-                                        </li>
+                                        <div class="mb-1">
+                                            @{
+                                                string name = power.Name;
+                                                int splitIndex = -1;
+
+                                                int colonIndex = name.IndexOf(':');
+                                                int bracketIndex = name.IndexOf('(');
+
+                                                if (colonIndex != -1 && (bracketIndex == -1 || colonIndex < bracketIndex))
+                                                {
+                                                    splitIndex = colonIndex + 1;
+                                                }
+                                                else if (bracketIndex != -1)
+                                                {
+                                                    splitIndex = bracketIndex;
+                                                }
+
+                                                if (splitIndex > 0 && splitIndex < name.Length)
+                                                {
+                                                    // Part 1: Trait Name
+                                                    <span>@name.Substring(0, splitIndex)</span>
+
+                                                    // Part 2: Description (Distinguished by color/size)
+                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                }
+                                                else
+                                                {
+                                                    // No valid separator found: Display the entire item.
+                                                    <span>@name</span>
+                                                }
+                                            }
+                                        </div>
                                     }
                                 </ul>
                             }
