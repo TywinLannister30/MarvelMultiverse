@@ -546,24 +546,6 @@ public class CharactersG
                         powerSelector.GetPower(PowerNames.PhaseSelf),
                     ],
                 },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.SuperSpeed,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.SpeedRun1),
-                    ],
-                },
-                new CharacterPowerSet
-                {
-                    Name = PowerSetNames.Tactics,
-                    Powers =
-                    [
-                        powerSelector.GetPower(PowerNames.BattlePlan),
-                        powerSelector.GetPower(PowerNames.FocusFire),
-                        powerSelector.GetPower(PowerNames.KeepMoving),
-                    ],
-                },
             ],
             Biography = new Biography
             {

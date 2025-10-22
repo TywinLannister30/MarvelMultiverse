@@ -19,5 +19,18 @@ namespace MarvelMultiverse.FrontEnd.Services
                 return null;
             }
         }
+
+        public async Task<List<string>?> GetCharacterNamesAsync()
+        {
+            try
+            {
+                return await _http.GetFromJsonAsync<List<string>>($"/api/v1/character/name");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"MarvelApiClient error: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

@@ -10,8 +10,4 @@
     <ProjectReference Include="..\MarvelMultiverse\MarvelMultiverse.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\images\characters\" />
-  </ItemGroup>
-
 </Project>

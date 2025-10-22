@@ -14,6 +14,12 @@ public class CharacterController(ICharacterManager characterManager) : Controlle
         return Ok(characterManager.GetAll());
     }
 
+    [HttpGet("name")]
+    public ActionResult<List<Character>> GetAllNames()
+    {
+        return Ok(characterManager.GetAllNames());
+    }
+
     [HttpGet("{name}")]
     public ActionResult<Character> GetSingle(string name)
     {

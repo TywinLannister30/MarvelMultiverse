@@ -4,9 +4,27 @@
 
 <h1 class="text-center mb-4">Marvel Multiverse Character Search</h1>
 
-<div class="text-center">
-    <input @bind="searchName" placeholder="Enter character name..." class="form-control w-50 mx-auto mb-2" />
+<div class="search-container position-relative">
+    <input type="text"
+           class="form-control"
+           placeholder="3-D Man"
+           value="@SearchTerm"
+           @oninput="@((e) => HandleSearchInput(e.Value.ToString()))" />
     <button class="btn btn-primary" @onclick="SearchCharacter">Search</button>
+
+    @* --- Autocomplete Dropdown --- *@
+    @if (SuggestedNames.Any())
+    {
+        <ul class="list-group position-absolute w-100 shadow" style="z-index: 1000; cursor: pointer;">
+            @foreach (var name in SuggestedNames)
+            {
+                <li class="list-group-item list-group-item-action" @onclick="@(() => SelectSuggestion(name))">
+                    @name
+                </li>
+            }
+        </ul>
+    }
+    @* ----------------------------- *@
 </div>
 
 @if (loading)
@@ -24,6 +42,11 @@ else if (character != null)
         @* --- 1. NAME AT TOP --- *@
         <div class="text-uppercase text-white bg-dark text-center p-1 border border-dark mb-3" style="font-size: 1.5rem; letter-spacing: 2px;">
             @character.Name
+        </div>
+
+        @* --- 1. NAME AT TOP --- *@
+        <div class="text-center p-1" style="font-size: 1rem;">
+            @character.Source
         </div>
 
         @* --- 2. TOP SECTION: IMAGE (left) & STATS (right) --- *@
@@ -270,6 +293,20 @@ else if (character != null)
                                     <span class="fw-bold">Flight: </span>
  
                                     @character.Speed.Flight
+                                }
+                                @if (character.Speed.Glide > 0)
+                                {
+                                    <br />
+                                    <span class="fw-bold">Glide: </span>
+
+                                    @character.Speed.Glide
+                                }
+                                @if (character.Speed.Levitation > 0)
+                                {
+                                    <br />
+                                    <span class="fw-bold">Levitation: </span>
+
+                                    @character.Speed.Levitation
                                 }
                                 @if (character.Speed.Swingline > 0)
                                 {
@@ -644,16 +681,56 @@ else if (character != null)
 }
 
 @code {
+
     private string searchName = "";
     private MarvelMultiverse.Models.Character? character;
     private bool loading = false;
     private string? errorMessage;
 
-    private async Task SearchCharacter()
+    private List<string> AllCharacterNames = new();
+    private List<string> SuggestedNames = new();
+    private string SearchTerm { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine($"Search clicked for: {searchName}");
+        try
+        {
+            // Make the API call to get all names when the form loads
+            AllCharacterNames = await MarvelApiClient.GetCharacterNamesAsync();
+            // Initialize suggestions with no results
+            SuggestedNames = new List<string>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching character names: {ex.Message}");
+        }
+    }
+
+    private void HandleSearchInput(string newValue)
+    {
+        SearchTerm = newValue;
+        if (string.IsNullOrWhiteSpace(SearchTerm))
+        {
+            SuggestedNames = new List<string>(); // Clear suggestions if input is empty
+        }
+        else
+        {
+            // Filter the full list based on the user's input (case-insensitive)
+            SuggestedNames = AllCharacterNames
+                .Where(name => name.IndexOf(SearchTerm, StringComparison.OrdinalIgnoreCase) >= 0)
+                .OrderBy(name => name)
+                .Take(10) // Limit to 10 suggestions for performance/UI
+                .ToList();
+        }
+    }
+
+    private async Task SelectSuggestion(string selectedName)
+    {
+        SearchTerm = selectedName;
+        SuggestedNames = new List<string>(); 
+
         errorMessage = null;
-        if (string.IsNullOrWhiteSpace(searchName))
+        if (string.IsNullOrWhiteSpace(selectedName))
         {
             errorMessage = "Please enter a name.";
             return;
@@ -662,7 +739,7 @@ else if (character != null)
         try
         {
             loading = true;
-            character = await MarvelApiClient.GetCharacterAsync(searchName);
+            character = await MarvelApiClient.GetCharacterAsync(selectedName);
             if (character == null)
             {
                 errorMessage = "Character not found or error calling API.";
@@ -674,4 +751,9 @@ else if (character != null)
             StateHasChanged();
         }
     }
+
+    private async Task SearchCharacter()
+    {
+        await SelectSuggestion(SearchTerm);
+    }  
 }

@@ -10,6 +10,11 @@ public class CharacterManager(ICharacterSelector characterSelector) : ICharacter
         return characterSelector.GetCharacters();
     }
 
+    public List<string> GetAllNames()
+    {
+        return [.. characterSelector.GetCharacters().Select(x => x.Name)];
+    }
+
     public Character Get(string name)
     {
         return characterSelector.GetCharacter(name);
