@@ -161,6 +161,33 @@ public class CharactersB
         },
         new()
         {
+            Name = "Barbarian",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 1, vigilance: 1, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Sword"),
+            ],
+            Tags = [],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.ViciousAttack),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Baron Mordo",
             Rank = 5,
             Abilities = new Abilities

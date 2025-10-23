@@ -35,6 +35,8 @@ public class Character
 
     public Biography Biography { get; set; }
 
+    public bool IsHenchman { get; set; }
+
     public string ImageUrl { get; set; }
 
     public string Source { get; set; }
@@ -102,17 +104,17 @@ public class Character
                 Abilities.Logic.Defence = logicDefence;
         }
 
-        if (Biography.Size == Size.Little)
+        if (Biography?.Size == Size.Little)
         {
             Abilities.Melee.Defence += 2;
             Abilities.Agility.Defence += 2;
         }
-        if (Biography.Size == Size.Huge)
+        if (Biography?.Size == Size.Huge)
         {
             Abilities.Melee.Defence -= 2;
             Abilities.Agility.Defence -= 2;
         }
-        if (Biography.Size == Size.Gigantic)
+        if (Biography?.Size == Size.Gigantic)
         {
             Abilities.Melee.Defence -= 3;
             Abilities.Agility.Defence -= 3;
@@ -194,11 +196,11 @@ public class Character
 
         var flightBaseSpeed = baseSpeed;
 
-        if (Biography.Size == Size.Little)
+        if (Biography?.Size == Size.Little)
             baseSpeed /= 4;
-        if (Biography.Size == Size.Huge)
+        if (Biography?.Size == Size.Huge)
             baseSpeed *= 5;
-        if (Biography.Size == Size.Gigantic)
+        if (Biography?.Size == Size.Gigantic)
             baseSpeed *= 20;
 
         Speed = new Speeds
@@ -327,11 +329,11 @@ public class Character
             Abilities.Logic.DamageModifier += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.LogicDamageModifier));
         }
 
-        if (Biography.Size == Size.Little)
+        if (Biography?.Size == Size.Little)
             Abilities.Melee.DamageModifier -= 2;
-        if (Biography.Size == Size.Huge)
+        if (Biography?.Size == Size.Huge)
             Abilities.Melee.DamageModifier += 2;
-        if (Biography.Size == Size.Gigantic)
+        if (Biography?.Size == Size.Gigantic)
             Abilities.Melee.DamageModifier += 3;
     }
 

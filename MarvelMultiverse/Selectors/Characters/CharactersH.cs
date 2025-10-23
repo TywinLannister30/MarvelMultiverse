@@ -2181,6 +2181,39 @@ public class CharactersH
         },
         new()
         {
+            Name = "Hydra Officer (Henchman)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 2, vigilance: 2, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.SecretIdentity),
+                tagSelector.GetTag(TagNames.Villainous),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.BattlePlan),
+                        powerSelector.GetPower(PowerNames.Inspiration),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Hydra Officer",
             Rank = 2,
             Abilities = new Abilities

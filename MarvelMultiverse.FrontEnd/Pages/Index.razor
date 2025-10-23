@@ -692,6 +692,8 @@ else if (character != null)
             }
         </div>
 
+        @if (character.Biography != null)
+        {
         @* --- 5. BIOGRAPHY SECTION (UPDATED TO THREE COLUMNS) --- *@
         <div class="border border-dark p-2" style="border-width: 3px !important;">
             <h5 class="text-uppercase text-center text-danger">Biography</h5>
@@ -704,12 +706,12 @@ else if (character != null)
 
                     @* Real Name *@
                     <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">
-                        <span class="fw-bold">Real Name:</span>  <span class="text-secondary" style="font-size: 0.8rem;">@character.Biography.RealName</span>
+                        <span class="fw-bold">Real Name:</span>  <span class="text-secondary" style="font-size: 0.8rem;">@character.Biography?.RealName ?? "N/A"</span>
                     </p>
 
                     @* Physical and Team Details *@
                     <ul class="list-unstyled" style="font-size: 0.75rem;">
-                        @if (character.Biography.Heights != null && character.Biography.Heights.Any())
+                        @if (character.Biography != null && character.Biography.Heights != null && character.Biography.Heights.Any())
                         {
                             {
                                 var heightStrings = character.Biography.Heights.Select(h => h.GetString());
@@ -725,7 +727,7 @@ else if (character != null)
                                 <li><span class="fw-bold">Height:</span> <span class="text-secondary">@heightString</span></li>
                             }
                         }
-                        @if (character.Biography.Weights is IEnumerable<int> weightList && weightList.Any())
+                        @if (character.Biography != null && character.Biography.Weights is IEnumerable<int> weightList && weightList.Any())
                         {
                             {
                                 var formattedWeights = weightList.Select(w => w.ToString() + " lbs.");
@@ -737,15 +739,15 @@ else if (character != null)
                         else
                         {
                             string weightString = "";
-                            if (character.Biography.UnknownWieght)
+                            if (character.Biography != null && character.Biography.UnknownWieght)
                             {
                                 weightString = "Unknown";   
                             }
-                            if (character.Biography.VariableWieght)
+                            if (character.Biography != null && character.Biography.VariableWieght)
                             {
                                 weightString = "Varies";   
                             }
-                            if (!string.IsNullOrEmpty(character.Biography.WeightReminder))
+                            if (character.Biography != null && !string.IsNullOrEmpty(character.Biography.WeightReminder))
                             {
                                 weightString += ", ";
                                 weightString += character.Biography.WeightReminder;
@@ -753,7 +755,7 @@ else if (character != null)
 
                             <li><span class="fw-bold">Weight:</span> <span class="text-secondary">@weightString</span></li>
                         }
-                        @if (!string.IsNullOrEmpty(character.Biography.Gender))
+                        @if (character.Biography != null && !string.IsNullOrEmpty(character.Biography.Gender))
                         {
                             string genderString = character.Biography.Gender;
 
@@ -764,41 +766,41 @@ else if (character != null)
                             }
                             <li><span class="fw-bold">Gender:</span> <span class="text-secondary">@genderString</span></li>
                         }
-                        @if (!string.IsNullOrEmpty(character.Biography.Eyes))
+                        @if (character.Biography != null && !string.IsNullOrEmpty(character.Biography.Eyes))
                         {
                             <li><span class="fw-bold">Eyes:</span> <span class="text-secondary">@character.Biography.Eyes</span></li>
                         }
-                        @if (!string.IsNullOrEmpty(character.Biography.Hair))
+                        @if (character.Biography != null && !string.IsNullOrEmpty(character.Biography.Hair))
                         {
                             <li><span class="fw-bold">Hair:</span> <span class="text-secondary">@character.Biography.Hair</span></li>
                         }
-                        @if (character.Biography.Size != null)
+                        @if (character.Biography != null && character.Biography.Size != null)
                         {
                             <li><span class="fw-bold">Size:</span> <span class="text-secondary">@character.Biography.Size.ToString()</span></li>
                         }
-                        @if (character?.Biography?.Occupations is IEnumerable<string> occupationsList && occupationsList.Any())
+                        @if (character.Biography != null && character?.Biography?.Occupations is IEnumerable<string> occupationsList && occupationsList.Any())
                         {
                             // Join the list of strings into a single comma-separated string
                             string occupationsString = string.Join(", ", occupationsList);
                             <li><span class="fw-bold">Occupations:</span> <span class="text-secondary">@occupationsString</span></li>
                         }
-                        @if (character?.Biography?.Origins is IEnumerable<string> originsList && originsList.Any())
+                        @if (character.Biography != null && character.Biography != null && character?.Biography?.Origins is IEnumerable<string> originsList && originsList.Any())
                         {
                             // Join the list of strings into a single comma-separated string
                             string originsString = string.Join(", ", originsList);
                             <li><span class="fw-bold">Origins:</span> <span class="text-secondary">@originsString</span></li>
                         }
-                        @if (character?.Biography?.Teams is IEnumerable<string> teamsList && teamsList.Any())
+                        @if (character.Biography != null && character?.Biography?.Teams is IEnumerable<string> teamsList && teamsList.Any())
                         {
                             // Join the list of strings into a single comma-separated string
                             string teamsString = string.Join(", ", teamsList);
                             <li><span class="fw-bold">Teams:</span> <span class="text-secondary">@teamsString</span></li>
                         }
-                        @if (!string.IsNullOrEmpty(character.Biography.Base))
+                        @if (character.Biography != null && !string.IsNullOrEmpty(character.Biography.Base))
                         {
                             <li><span class="fw-bold">Base:</span> <span class="text-secondary">@character.Biography.Base</span></li>
                         }
-                        @if (!string.IsNullOrEmpty(character.Biography.DistinguishingFeatures))
+                        @if (character.Biography != null && !string.IsNullOrEmpty(character.Biography.DistinguishingFeatures))
                         {
                             <li><span class="fw-bold">Features:</span> <span class="text-secondary">@character.Biography.DistinguishingFeatures</span></li>
                         }
@@ -808,7 +810,7 @@ else if (character != null)
                 @* {{-- COLUMN 2: History (col-4) --}} *@
                 <div class="col-md-4 px-3 border-end border-dark">
                     <h6 class="fw-bold text-uppercase mt-1 mb-1 text-danger" style="font-size: 0.8rem;">History</h6>
-                    @if (character.Biography.History != null)
+                    @if (character.Biography != null && character.Biography.History != null)
                     {
                         @foreach (var historyParagraph in character.Biography.History)
                         {
@@ -820,7 +822,7 @@ else if (character != null)
                 @* {{-- COLUMN 3: Personality (col-4) --}} *@
                 <div class="col-md-4 ps-3">
                     <h6 class="fw-bold text-uppercase mt-1 mb-1 text-danger" style="font-size: 0.8rem;">Personality</h6>
-                    @if (character.Biography.Personality != null)
+                    @if (character.Biography != null && character.Biography.Personality != null)
                     {
                         @foreach (var personalityParagraph in character.Biography.Personality)
                         {
@@ -829,7 +831,7 @@ else if (character != null)
                     }
                 </div>
 
-                @if (character?.Biography?.BiographySections != null && character.Biography.BiographySections.Any())
+                @if (character.Biography != null && character?.Biography?.BiographySections != null && character.Biography.BiographySections.Any())
                 {
                     <hr class="my-2 border-dark" /> @* Visual separator *@
 
@@ -857,6 +859,7 @@ else if (character != null)
                 }
             </div>
         </div>
+    }
 
     </div>
     @* --- UNIVERSAL DETAIL SIDE PANEL (TAG, TRAIT, or POWER) --- *@

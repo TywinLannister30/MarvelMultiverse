@@ -2196,6 +2196,43 @@ public class CharactersA
         },
         new()
         {
+            Name = "Atlantean Warrior",
+            Rank = 3,
+            Abilities = new Abilities
+            (
+                melee: 3, agility: 3, resilience: 3, vigilance: 3, ego: 3, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BreatheDifferent),
+                traitSelector.GetTrait(TraitNames.CombatExpert),
+                traitSelector.GetTrait(TraitNames.Fearless),
+                traitSelector.GetTrait(TraitNames.EnhancedPhysique),
+                traitSelector.GetTrait(TraitNames.SignatureAttack, specialization: "Trident (treat as spear)"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Amphibious),
+                tagSelector.GetTag(TagNames.ExtremeAppearance),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses1),
+                        powerSelector.GetPower(PowerNames.SpeedSwim),
+                        powerSelector.GetPower(PowerNames.Sturdy1),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Attuma",
             Rank = 4,
             Abilities = new Abilities
