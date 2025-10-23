@@ -3477,6 +3477,42 @@ public class CharactersM
         },
         new()
         {
+            Name = "Moloids (Group)",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 5, vigilance: 2, ego: 0, logic: -1
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Clueless),
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Outsiders"),
+                traitSelector.GetTrait(TraitNames.FreshEyes),
+                traitSelector.GetTrait(TraitNames.Sneaky),
+                traitSelector.GetTrait(TraitNames.Stranger),
+                traitSelector.GetTrait(TraitNames.Weird),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Headquarters, specialization: "Subterranea"),
+                tagSelector.GetTag(TagNames.VisionIssues),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.HeightenedSenses2),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.AvengersExpansion
+        },
+        new()
+        {
             Name = "Moon Girl",
             Rank = 2,
             Abilities = new Abilities
