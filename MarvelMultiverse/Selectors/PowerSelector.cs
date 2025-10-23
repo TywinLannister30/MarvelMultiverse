@@ -1298,7 +1298,7 @@ public class PowerSelector : IPowerSelector
             Range = "10 Spaces",
             Effect =
             [
-                "The character makes a ranged attack against an enemy in line of sight. If the attack is a success, it infl icts regular damage. On a Fantastic success, the enemy takes double damage instead and the elemental type’s special effect.",
+                "The character makes a ranged attack against an enemy in line of sight. If the attack is a success, it inflicts regular damage. On a Fantastic success, the enemy takes double damage instead and the elemental type’s special effect.",
             ],
         },
         new()
@@ -4082,7 +4082,7 @@ public class PowerSelector : IPowerSelector
             Effect =
             [
                 "The character’s Run Speed doubles, as does their Climb Speed.",
-            ]
+            ],
         },
         new()
         {

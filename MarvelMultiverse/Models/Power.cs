@@ -99,6 +99,7 @@ public class Power : ICloneable
     [JsonIgnore]
     public bool RunSpeedMultipliedByRank { get; set; }
 
+
     [JsonIgnore]
     public bool SwimSpeedMultipliedByRank { get; set; }
 
