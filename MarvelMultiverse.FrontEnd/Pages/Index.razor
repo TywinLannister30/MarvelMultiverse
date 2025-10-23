@@ -182,6 +182,7 @@ else if (character != null)
 
                                                 // Determine if the "Tech Reliance" image should be shown
                                                 bool showTechImage = name.IndexOf("Tech Reliance", StringComparison.OrdinalIgnoreCase) >= 0;
+                                                bool showMagicItemImage = name.IndexOf("Magic Item Reliance", StringComparison.OrdinalIgnoreCase) >= 0;
 
                                                 if (colonIndex != -1 && (bracketIndex == -1 || colonIndex < bracketIndex))
                                                 {
@@ -219,6 +220,10 @@ else if (character != null)
                                             @if (showTechImage)
                                             {
                                                 <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.25rem;" />
+                                            }
+                                            @if (showMagicItemImage)
+                                            {
+                                                <img src="images/MagicItem.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.25rem;" />
                                             }
                                         </div>
                                     }
@@ -424,6 +429,10 @@ else if (character != null)
                                 {
                                     <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
                                 }
+                                @if (powerSet.IsMagicItem)
+                                {
+                                    <img src="images/MagicItem.png" alt="Magic Item" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                }
                             </div>
 
                             <ul class="list-unstyled" style="font-size: 0.8rem;">
@@ -458,6 +467,15 @@ else if (character != null)
                                                         <span class="text-secondary">&diams;</span> @name.Substring(0, splitIndex)
                                                         <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
                                                     </span>
+
+                                                    @if (power.IsTech)
+                                                    {
+                                                        <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                                    }
+                                                    @if (power.IsMagicItem)
+                                                    {
+                                                        <img src="images/MagicItem.png" alt="Magic Item" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                                    }
                                                 }
                                                 else
                                                 {
@@ -469,6 +487,15 @@ else if (character != null)
 
                                                         <span class="text-secondary">&diams;</span> @power.Name
                                                     </span>
+
+                                                    @if (power.IsTech)
+                                                    {
+                                                        <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                                    }
+                                                    @if (power.IsMagicItem)
+                                                    {
+                                                        <img src="images/MagicItem.png" alt="Magic Item" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                                    }
                                                 }
                                             }
 
@@ -476,6 +503,36 @@ else if (character != null)
                                     }
                                 }
                             </ul>
+                        </div>
+                    }
+                </div>
+            }
+
+            @if (character?.NarrativePowers != null && character.NarrativePowers.Any())
+            {
+                <hr class="my-2 border-dark" /> @* Visual separator between Powers and Items *@
+                <h6 class="text-uppercase text-danger text-center mb-3">Narrative Powers</h6>
+
+                <div class="row">
+                    @{
+                        int totalItemSets = character.NarrativePowers.Count;
+                        int itemColumns = Math.Min(totalItemSets, 3);
+                        int itemColSize = 12 / itemColumns;
+                    }
+
+                    @foreach (var item in character.NarrativePowers)
+                    {
+                        <div class="col-md-@itemColSize mb-3">
+                            <div class="d-flex align-items-center mb-1">
+                                <h6 class="fw-bold text-uppercase text-danger mb-0" style="font-size: 0.8rem;">
+                                    @item.Name @* Displaying the item name as the red header *@
+                                </h6>
+                            </div>
+
+                            @foreach (var paragraph in item.Effect)
+                            {
+                                <p style="font-size: 0.75rem; text-align: justify; margin-bottom: 0.5rem;">@paragraph</p>
+                            }
                         </div>
                     }
                 </div>
@@ -502,10 +559,13 @@ else if (character != null)
                                     @item.Name @* Displaying the item name as the red header *@
                                 </h6>
 
-                                @* Optional: Show Tech Image for Iconic Item Header *@
                                 @if (item.IsTech)
                                 {
                                     <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
+                                }
+                                @if (item.IsMagicItem)
+                                {
+                                    <img src="images/MagicItem.png" alt="Magic Item" style="height: 1em; vertical-align: middle; margin-left: 0.5rem;" />
                                 }
                             </div>
 
@@ -615,6 +675,14 @@ else if (character != null)
                         </div>
                     }
                 </div>
+            }
+
+            @if (character?.PowerNotes != null && character.PowerNotes.Any())
+            {
+                @foreach (var note in character.PowerNotes)
+                {
+                    <p style="font-size: 0.75rem; text-align: justify; margin-bottom: 0.5rem;">@note</p>
+                }
             }
 
             @* --- Fallback for Entire Section --- *@

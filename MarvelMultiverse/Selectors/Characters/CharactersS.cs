@@ -2674,7 +2674,8 @@ public class CharactersS
                     ],
                     PowerValue = 1,
                     MeleeDamageModifier = 1,
-                    AgilityDamageModifier = 1
+                    AgilityDamageModifier = 1,
+                    IsMagicItem = true
                 }
             ],
             Biography = new Biography
@@ -7833,6 +7834,7 @@ public class CharactersS
                     ],
                     PowerValue = 3,
                     MeleeDamageModifier = 2,
+                    IsMagicItem = true
                 }
             ],
             Biography = new Biography
