@@ -15,7 +15,7 @@ public class CharactersH
     [
         new()
         {
-            Name = "Hallow's Eve",
+            Name = "Hallows' Eve",
             Rank = 3,
             Abilities = new Abilities
             (
