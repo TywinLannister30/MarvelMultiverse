@@ -534,15 +534,9 @@ public class CharactersF
                     IsBattlesuit = true,
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.SpiderDodge),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1, powerSelector.GetPower(PowerNames.Jump1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge, powerSelector.GetPower(PowerNames.SpiderDodge)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
                     ],
                     Restrictions =
                     [

@@ -561,19 +561,11 @@ public class CharactersS
                     Name = "The Zodiac Key",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection1} (Energy)"),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalProtection1, reminder: "Energy"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrage, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrier, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection1} (Energy)", powerSelector.GetPower(PowerNames.ElementalProtection1, reminder : "Energy")),
                     ],
                     Restrictions =
                     [
@@ -662,34 +654,18 @@ public class CharactersS
                     Name = "Sccorpion's Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.AdditionalLimbs} (tail)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Clobber),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.CrushingGrip),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Smash),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "tail"),
-                        powerSelector.GetPower(PowerNames.Clobber),
-                        powerSelector.GetPower(PowerNames.CrushingGrip),
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Smash),
-                        powerSelector.GetPower(PowerNames.SpiderDodge),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.AdditionalLimbs} (tail)", powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder : "tail")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Clobber, powerSelector.GetPower(PowerNames.Clobber)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.CrushingGrip, powerSelector.GetPower(PowerNames.CrushingGrip)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrage, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1, powerSelector.GetPower(PowerNames.Jump1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Smash, powerSelector.GetPower(PowerNames.Smash)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge, powerSelector.GetPower(PowerNames.SpiderDodge)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling, powerSelector.GetPower(PowerNames.Wallcrawling)),
                     ],
                     Restrictions =
                     [
@@ -1620,19 +1596,12 @@ public class CharactersS
                     Name = "The Ten Rings",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.CrimsonBandsOfCyttorak),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.CrimsonBandsOfCyttorak, powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "tail")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1, powerSelector.GetPower(PowerNames.Flight1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReturnsWhenThrown),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal, powerSelector.GetPower(PowerNames.SummonPortal)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10 spaces, Melee/Agility Damage Multiplier bonus: +1."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.CrimsonBandsOfCyttorak),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Flight1),
-                        powerSelector.GetPower(PowerNames.SummonPortal),
                     ],
                     Restrictions =
                     [
@@ -2696,12 +2665,8 @@ public class CharactersS
                     Name = "Hofund",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal, powerSelector.GetPower(PowerNames.SummonPortal)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.SummonPortal),
                     ],
                     Restrictions =
                     [
@@ -2823,13 +2788,8 @@ public class CharactersS
                     Name = "Hell-Mark ",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Hellfire)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DimensionalPortal),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Hellfire"),
-                        powerSelector.GetPower(PowerNames.DimensionalPortal),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Hellfire)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Hellfire")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DimensionalPortal, powerSelector.GetPower(PowerNames.DimensionalPortal)),
                     ],
                     Restrictions =
                     [
@@ -3143,12 +3103,8 @@ public class CharactersS
                     Name = "Cosmic Surfoard",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2, powerSelector.GetPower(PowerNames.Flight2)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Flight2)
                     ],
                     Restrictions =
                     [
@@ -3799,31 +3755,17 @@ public class CharactersS
                     Name = "SP//dr's Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderStrike),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.VenomBlast),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webcasting),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webgrabbing),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webtrapping),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.Flight1),
-                        powerSelector.GetPower(PowerNames.Mighty2),
-                        powerSelector.GetPower(PowerNames.SpiderDodge),
-                        powerSelector.GetPower(PowerNames.SpiderStrike),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
-                        powerSelector.GetPower(PowerNames.VenomBlast),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
-                        powerSelector.GetPower(PowerNames.Webcasting),
-                        powerSelector.GetPower(PowerNames.Webgrabbing),
-                        powerSelector.GetPower(PowerNames.Webtrapping),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1, powerSelector.GetPower(PowerNames.Jump1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1, powerSelector.GetPower(PowerNames.Flight1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2, powerSelector.GetPower(PowerNames.Mighty2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderDodge, powerSelector.GetPower(PowerNames.SpiderDodge)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SpiderStrike, powerSelector.GetPower(PowerNames.SpiderStrike)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.VenomBlast, powerSelector.GetPower(PowerNames.VenomBlast)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling, powerSelector.GetPower(PowerNames.Wallcrawling)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webcasting, powerSelector.GetPower(PowerNames.Webcasting)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webgrabbing, powerSelector.GetPower(PowerNames.Webgrabbing)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webtrapping, powerSelector.GetPower(PowerNames.Webtrapping)),
                     ],
                     Restrictions =
                     [
@@ -4552,15 +4494,9 @@ public class CharactersS
                     Name = "Spider-Man (Earth-6160)'s Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Disguise),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Invisibility),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Disguise),
-                        powerSelector.GetPower(PowerNames.Invisibility),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Disguise, powerSelector.GetPower(PowerNames.Disguise)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Invisibility, powerSelector.GetPower(PowerNames.Invisibility)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
                     ],
                     Restrictions =
                     [
@@ -6346,16 +6282,10 @@ public class CharactersS
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "Can pick the Elemental Control power special effect from air (knock prone), earth (halve speed), fire (set ablaze), water (surprise) or energy (blind)."),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Air, Earth, Fire, Water or Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Air, Earth, Fire, Water or Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Air, Earth, Fire, Water or Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Air, Earth, Fire, Water or Energy)", powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Air, Earth, Fire, Water or Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Air, Earth, Fire, Water or Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Air, Earth, Fire, Water or Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Air, Earth, Fire, Water or Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Air, Earth, Fire, Water or Energy")),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Air, Earth, Fire, Water or Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Air, Earth, Fire, Water or Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Air, Earth, Fire, Water or Energy"),
                     ],
                     Restrictions =
                     [
@@ -7892,16 +7822,10 @@ public class CharactersS
                     Name = "Swordsman’s Sword",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.BoltsOfBalthakk),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.FlamesOfTheFaltine),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.MistsOfMorpheus),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.BoltsOfBalthakk, powerSelector.GetPower(PowerNames.BoltsOfBalthakk)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.FlamesOfTheFaltine, powerSelector.GetPower(PowerNames.FlamesOfTheFaltine)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.MistsOfMorpheus, powerSelector.GetPower(PowerNames.MistsOfMorpheus)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus: +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
-                        powerSelector.GetPower(PowerNames.FlamesOfTheFaltine),
-                        powerSelector.GetPower(PowerNames.MistsOfMorpheus)
                     ],
                     Restrictions =
                     [

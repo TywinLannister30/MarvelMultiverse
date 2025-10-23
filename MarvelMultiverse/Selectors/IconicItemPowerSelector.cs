@@ -24,7 +24,7 @@ public class IconicItemPowerSelector : IIconicItemPowerSelector
         return GetAllIconicItemPowers();
     }
 
-    public IconicItemPower GetPowersAsIconicItemPower(string name)
+    public IconicItemPower GetPowersAsIconicItemPower(string name, Power power)
     {
         return new()
         {
@@ -33,6 +33,7 @@ public class IconicItemPowerSelector : IIconicItemPowerSelector
             [
                 $"The wielder can use the {name} power."
             ],
+            Power = power,
             Source = BookSource.AvengersExpansion
         };
     }

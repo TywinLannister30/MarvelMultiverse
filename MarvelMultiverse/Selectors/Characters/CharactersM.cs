@@ -853,13 +853,9 @@ public class CharactersM
                     Name = "The Soulsword",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Discipline4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Discipline4, powerSelector.GetPower(PowerNames.Discipline4)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Discipline4),
                     ],
                     Restrictions =
                     [
@@ -1896,27 +1892,15 @@ public class CharactersM
                     Name = "Master of the World's Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Disguise),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Disguise),
-                        powerSelector.GetPower(PowerNames.Flight1),
-                        powerSelector.GetPower(PowerNames.Mighty2),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrier, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)", powerSelector.GetPower(PowerNames.ElementalPush, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Disguise, powerSelector.GetPower(PowerNames.Disguise)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1, powerSelector.GetPower(PowerNames.Flight1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2, powerSelector.GetPower(PowerNames.Mighty2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
                     ],
                     Restrictions =
                     [
@@ -3085,15 +3069,9 @@ public class CharactersM
                     Name = "M.O.D.O.K.'s Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Flight1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1, powerSelector.GetPower(PowerNames.Flight1)),
                     ],
                     Restrictions =
                     [

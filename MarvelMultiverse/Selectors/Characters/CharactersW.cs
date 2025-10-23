@@ -75,21 +75,13 @@ public class CharactersW
                     Name = "War Machine's Armor",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2, powerSelector.GetPower(PowerNames.Flight2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Salvation),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Flight2),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                     Restrictions =
                     [
@@ -695,18 +687,11 @@ public class CharactersW
                     Name = "Whiplash’s Armor",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.IconicItem} (Whiplash’s Energy Whips)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1, powerSelector.GetPower(PowerNames.Flight1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.IconicItem} (Whiplash’s Energy Whips)", powerSelector.GetPower(PowerNames.IconicItem, reminder : "Whiplash’s Energy Whips")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Flight1),
-                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Whiplash’s Energy Whips"),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
                     ],
                     Restrictions =
                     [

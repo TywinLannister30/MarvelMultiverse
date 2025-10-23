@@ -170,27 +170,18 @@ public class CharactersN
                     Name = "Scell",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Blink),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.LeechLife),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Teleport2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportTogether),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Blink, powerSelector.GetPower(PowerNames.Blink)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.LeechLife, powerSelector.GetPower(PowerNames.LeechLife)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2, powerSelector.GetPower(PowerNames.Mighty2)),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Sacrifice),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Teleport2, powerSelector.GetPower(PowerNames.Teleport2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportTogether, powerSelector.GetPower(PowerNames.TeleportTogether)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee/Agility Damage Multiplier Bonus: +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Blink),
-                        powerSelector.GetPower(PowerNames.LeechLife),
-                        powerSelector.GetPower(PowerNames.Mighty2),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
-                        powerSelector.GetPower(PowerNames.Teleport2),
-                        powerSelector.GetPower(PowerNames.TeleportTogether),
                     ],
                     Restrictions =
                     [
                         "Carried",
-                        "Sacrifice",
                     ],
                     PowerValue = 9,
                     MeleeDamageModifier = 2,
@@ -447,12 +438,8 @@ public class CharactersN
                     Name = "Night Nurse’s Gauntlet",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
                     ],
                     Restrictions =
                     [

@@ -753,14 +753,10 @@ public class CharactersA
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AsgardianTransformation),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SummonPortal, powerSelector.GetPower(PowerNames.SummonPortal)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.SummonPortal)
                     ],
                     Restrictions =
                     [
@@ -1053,7 +1049,7 @@ public class CharactersA
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
                     ],
@@ -1165,14 +1161,9 @@ public class CharactersA
                     Name = "Angel’s Techno-Organic Wings",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection2} (Iron)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection2} (Iron)", powerSelector.GetPower(PowerNames.ElementalProtection2, specialization: "Iron")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2, powerSelector.GetPower(PowerNames.Flight2)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier Bonus: +1."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalProtection2, specialization: "Iron"),
-                        powerSelector.GetPower(PowerNames.Flight2)
                     ],
                     Restrictions =
                     [
@@ -1275,13 +1266,9 @@ public class CharactersA
                     Name = "Valkyrie Spear",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, specialization: "Energy")),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach +1/Unlimited, Damage Multiplier Bonus: +1."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst, specialization: "Energy")
                     ],
                     Restrictions =
                     [
@@ -1866,14 +1853,9 @@ public class CharactersA
                     Name = "Arkon’s Lightning Bolts",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Electricity)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Electricity)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Electricity)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Electricity")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Electricity)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Electricity")),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10 spaces, Agility Damage Multiplier bonus: +1."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Electricity"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Electricity")
                     ],
                     Restrictions =
                     [
@@ -1975,19 +1957,11 @@ public class CharactersA
                     IsBattlesuit = true,
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Flight2),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2, powerSelector.GetPower(PowerNames.Flight2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
                     ],
                     Restrictions =
                     [

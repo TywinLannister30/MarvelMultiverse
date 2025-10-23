@@ -20,6 +20,8 @@ public class IconicItemPower : ICloneable
     [JsonIgnore]
     public bool SwinglineSpeed { get; set; }
 
+    public Power Power { get; set; }
+
     public string Source { get; set; }
 
 	public object Clone()
@@ -30,7 +32,8 @@ public class IconicItemPower : ICloneable
 			Effect = [.. this.Effect],
 			FlySpeed = this.FlySpeed,
             SwinglineSpeed = this.SwinglineSpeed,
-			Source = this.Source
+            Power = this.Power,
+            Source = this.Source
 		};
 	}
 }

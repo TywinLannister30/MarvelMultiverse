@@ -1220,27 +1220,15 @@ public class CharactersH
                     Name = "High Evolutionary’s Armor",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.Accuracy1}"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection2} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Accuracy1),
-                        powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalProtection2, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
-                        powerSelector.GetPower(PowerNames.HealingFactor),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Accuracy1, powerSelector.GetPower(PowerNames.Accuracy1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrier} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrier, reminder: "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalProtection2} (Energy)", powerSelector.GetPower(PowerNames.ElementalProtection2, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection, powerSelector.GetPower(PowerNames.EnvironmentalProtection)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor, powerSelector.GetPower(PowerNames.HealingFactor)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
                     ],
                     Restrictions =
                     [

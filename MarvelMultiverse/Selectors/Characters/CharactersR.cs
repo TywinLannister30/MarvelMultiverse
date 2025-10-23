@@ -372,7 +372,7 @@ public class CharactersR
                     Name = "Red Guardian’s Shield",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
                     ],
                     Restrictions =
@@ -1054,13 +1054,8 @@ public class CharactersR
                     Name = "Rhino's Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.GroundShakingStomp),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.GroundShakingStomp),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.GroundShakingStomp, powerSelector.GetPower(PowerNames.GroundShakingStomp)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
                     ],
                     Restrictions =
                     [
@@ -1634,17 +1629,10 @@ public class CharactersR
                     Name = "Head Orb",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.AdditionalLimbs} (Tentacles)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ExtendedReach2} (Reach 10; only applies to tentacles)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webcasting),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webgrabbing),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder: "Tentacles"),
-                        powerSelector.GetPower(PowerNames.ExtendedReach2, reminder: "Reach 10; only applies to tentacles"),
-                        powerSelector.GetPower(PowerNames.Webcasting),
-                        powerSelector.GetPower(PowerNames.Webgrabbing),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.AdditionalLimbs} (Tentacles)", powerSelector.GetPower(PowerNames.AdditionalLimbs, reminder : "Tentacles")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ExtendedReach2} (Reach 10; only applies to tentacles)", powerSelector.GetPower(PowerNames.ExtendedReach2, reminder : "Reach 10; only applies to tentacles")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webcasting, powerSelector.GetPower(PowerNames.Webcasting)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Webgrabbing, powerSelector.GetPower(PowerNames.Webgrabbing)),
                     ],
                     Restrictions =
                     [

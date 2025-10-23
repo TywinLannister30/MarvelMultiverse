@@ -32,5 +32,19 @@ namespace MarvelMultiverse.FrontEnd.Services
                 return null;
             }
         }
+
+        public async Task<List<Tag>?> GetAllTagsAsync()
+        {
+            try
+            {
+                var tags = await _http.GetFromJsonAsync<List<Tag>>($"/api/v1/tag");
+                return tags;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"MarvelApiClient error: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

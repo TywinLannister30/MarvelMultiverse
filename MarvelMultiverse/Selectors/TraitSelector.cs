@@ -561,7 +561,7 @@ public class TraitSelector : ITraitSelector
             Effect =
             [
                 "The character relies on technology for powers. When they take damage that would render them unconscious, they can instead choose to lose all of their technology-related powers and remain conscious with 1 point of Health remaining.",
-                "Assuming the character has access to parts and tools, lost powers can be repaired aœ er a battle"
+                "Assuming the character has access to parts and tools, lost powers can be repaired after a battle"
             ],
         },
         new()

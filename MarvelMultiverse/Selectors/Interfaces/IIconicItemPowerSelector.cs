@@ -8,5 +8,5 @@ public interface IIconicItemPowerSelector
 
 	List<IconicItemPower> GetIconicItemPowers();
 
-	IconicItemPower GetPowersAsIconicItemPower(string name);
+	IconicItemPower GetPowersAsIconicItemPower(string name, Power power);
 }

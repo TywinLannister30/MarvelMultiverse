@@ -998,13 +998,9 @@ public class CharactersE
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Godkiller),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.PowerSlider} (Bloodied)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.PowerSlider} (Bloodied)", powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Bloodied: If the user gets a Fantastic success on an attack with this weapon and causes bleeding, their powers are boosted. If they are knocked unconscious by a foe in battle, they die.")),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Uru),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/unlimited, Melee/Agility Damage Multiplier bonus: +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Bloodied: If the user gets a Fantastic success on an attack with this weapon and causes bleeding, their powers are boosted. If they are knocked unconscious by a foe in battle, they die.")
                     ],
                     Restrictions =
                     [

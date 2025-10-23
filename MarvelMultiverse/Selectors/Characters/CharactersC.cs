@@ -396,7 +396,7 @@ public class CharactersC
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
                     ],
@@ -512,7 +512,7 @@ public class CharactersC
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
                     ],
@@ -630,7 +630,7 @@ public class CharactersC
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
                     ],
@@ -838,7 +838,7 @@ public class CharactersC
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.ReducedFocus),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
                     ],
@@ -954,7 +954,7 @@ public class CharactersC
                     Name = "Captain America of the Railways’ Shield",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Stackable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/10, Melee/Agility Damage Multiplierbonus: +1."),
                     ],
@@ -2302,11 +2302,7 @@ public class CharactersC
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.DarkforceAttack),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DimensionalTravelOther),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.DimensionalTravelOther)
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DimensionalTravelOther, powerSelector.GetPower(PowerNames.DimensionalTravelOther)),
                     ],
                     Restrictions =
                     [
@@ -3017,12 +3013,8 @@ public class CharactersC
                     Name = "Cosmic Surfoard",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2, powerSelector.GetPower(PowerNames.Flight2)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Flight2)
                     ],
                     Restrictions =
                     [

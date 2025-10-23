@@ -685,23 +685,13 @@ public class CharactersB
                     IsBattlesuit = true,
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalPush, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
-                        powerSelector.GetPower(PowerNames.Flight1),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalPush} (Energy)", powerSelector.GetPower(PowerNames.ElementalPush, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection, powerSelector.GetPower(PowerNames.EnvironmentalProtection)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight1, powerSelector.GetPower(PowerNames.Flight1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)   ),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
                     ],
                     Restrictions =
                     [
@@ -825,14 +815,9 @@ public class CharactersB
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.AsgardianTransformation),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "On a Fantastic success, the Twilight Sword can count as a fire attack rather than a sharp attack."),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4, powerSelector.GetPower(PowerNames.Mighty4)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Mighty4),
-                        powerSelector.GetPower(PowerNames.Sturdy2)
                     ],
                     Restrictions =
                     [
@@ -1532,24 +1517,15 @@ public class CharactersB
                     Name = "Ebony Blade\r\n",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.BoltsOfBalthakk),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DispelSpell),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.PowerSlider} (Blood Curse)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SenseSupernatural),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ShieldOfTheSeraphim),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.BoltsOfBalthakk, powerSelector.GetPower(PowerNames.BoltsOfBalthakk)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.DispelSpell, powerSelector.GetPower(PowerNames.DispelSpell)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2, powerSelector.GetPower(PowerNames.Mighty2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.PowerSlider} (Blood Curse)", powerSelector.GetPower(PowerNames.PowerSlider, reminder : "Blood Curse")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.SenseSupernatural, powerSelector.GetPower(PowerNames.SenseSupernatural)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ShieldOfTheSeraphim, powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Summonable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Unkillable),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier bonus: +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.BoltsOfBalthakk),
-                        powerSelector.GetPower(PowerNames.DispelSpell),
-                        powerSelector.GetPower(PowerNames.Mighty2),
-                        powerSelector.GetPower(PowerNames.PowerSlider, reminder: "Blood Curse: If the user gets a Fantastic success on an attack with this weapon and causes bleeding, their powers are boosted. However, they also gain the Bloodthirsty trait. If they kill someone while Bloodthirsty, they lose their Heroic tag."),
-                        powerSelector.GetPower(PowerNames.SenseSupernatural),
-                        powerSelector.GetPower(PowerNames.ShieldOfTheSeraphim),
                     ],
                     Restrictions =
                     [
@@ -2546,23 +2522,13 @@ public class CharactersB
                     Name = "Black Widow’s Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Flight2),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrage, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2, powerSelector.GetPower(PowerNames.Flight2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling, powerSelector.GetPower(PowerNames.Wallcrawling)),
                     ],
                     Restrictions =
                     [
@@ -2875,14 +2841,9 @@ public class CharactersB
                     Powers =
                     [
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Constructable),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportObject),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportOther),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportObject, powerSelector.GetPower(PowerNames.TeleportObject)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.TeleportOther, powerSelector.GetPower(PowerNames.TeleportOther)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach/5, Melee/Agility Damage Multiplier Bonus: +1."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.TeleportObject),
-                        powerSelector.GetPower(PowerNames.TeleportOther),
                     ],
                     Restrictions =
                     [

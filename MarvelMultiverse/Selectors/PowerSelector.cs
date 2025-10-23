@@ -1195,7 +1195,7 @@ public class PowerSelector : IPowerSelector
             Cost = "5 or more Focus",
             Effect =
             [
-                "The character heals Ž points of Health for every point of Focus they spend.",
+                "The character heals 2 points of Health for every point of Focus they spend.",
             ]
         },
         new()
@@ -1254,7 +1254,7 @@ public class PowerSelector : IPowerSelector
             Cost = "15 Focus",
             Effect =
             [
-                "The character designates a space within their line of sight. The attack can a­ ect every enemy within 10 spaces of that. The character makes a single Ego check and compares it to each target’s Resilience defense. A­ ected enemies take half regular damage. On a Fantastic success, they take full regular damage and the elemental type’s special e­ffect.",
+                "The character designates a space within their line of sight. The attack can a­ffect every enemy within 10 spaces of that. The character makes a single Ego check and compares it to each target’s Resilience defense. A­ffected enemies take half regular damage. On a Fantastic success, they take full regular damage and the elemental type’s special e­ffect.",
             ],
         },
         new()

@@ -1218,20 +1218,12 @@ public class CharactersG
                     Name = "All-Black the Necrosword",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.EnvironmentalProtection, powerSelector.GetPower(PowerNames.EnvironmentalProtection)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Flight2, powerSelector.GetPower(PowerNames.Flight2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor, powerSelector.GetPower(PowerNames.HealingFactor)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4, powerSelector.GetPower(PowerNames.Mighty4)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy4, powerSelector.GetPower(PowerNames.Sturdy4)),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach, Melee Damage Multiplier Bonus: +2."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.EnvironmentalProtection),
-                        powerSelector.GetPower(PowerNames.Flight2),
-                        powerSelector.GetPower(PowerNames.HealingFactor),
-                        powerSelector.GetPower(PowerNames.Mighty4),
-                        powerSelector.GetPower(PowerNames.Sturdy4),
                     ],
                     Restrictions =
                     [

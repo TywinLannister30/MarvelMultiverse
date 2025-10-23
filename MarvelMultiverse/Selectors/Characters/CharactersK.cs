@@ -466,13 +466,8 @@ public class CharactersK
                     Name = "Shard of the Crimson Gem of Cyttorak",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty3),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Mighty3),
-                        powerSelector.GetPower(PowerNames.Sturdy2),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty3, powerSelector.GetPower(PowerNames.Mighty3)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy2, powerSelector.GetPower(PowerNames.Sturdy2)),
                     ],
                     Restrictions =
                     [

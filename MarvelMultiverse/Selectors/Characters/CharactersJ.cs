@@ -960,17 +960,10 @@ public class CharactersJ
                     Name = "Crimson Gem of Cyttorak",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ElementalProtection3),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy4),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalProtection3),
-                        powerSelector.GetPower(PowerNames.HealingFactor),
-                        powerSelector.GetPower(PowerNames.Mighty4),
-                        powerSelector.GetPower(PowerNames.Sturdy4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ElementalProtection3, powerSelector.GetPower(PowerNames.ElementalProtection3)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.HealingFactor, powerSelector.GetPower(PowerNames.HealingFactor)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty4, powerSelector.GetPower(PowerNames.Mighty4)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy4, powerSelector.GetPower(PowerNames.Sturdy4)),
                     ],
                     Restrictions =
                     [
@@ -984,11 +977,7 @@ public class CharactersJ
                     Name = "Juggernaut's Helmet",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Uncanny4),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.Uncanny4),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Uncanny4, powerSelector.GetPower(PowerNames.Uncanny4)),
                     ],
                     Restrictions =
                     [

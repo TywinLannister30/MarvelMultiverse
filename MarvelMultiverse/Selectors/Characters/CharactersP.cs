@@ -273,14 +273,10 @@ public class CharactersP
                     Name = "Patriot’s Shield",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Glider),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.PsychicLink),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Shield1, powerSelector.GetPower(PowerNames.Shield1)   ),
                     ],
                     Restrictions =
                     [
@@ -946,21 +942,12 @@ public class CharactersP
                     Name = "Prowler's Battle Suit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalInfusion} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalInfusion, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.Mighty2),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalInfusion} (Energy)", powerSelector.GetPower(PowerNames.ElementalInfusion, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1, powerSelector.GetPower(PowerNames.Jump1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty2, powerSelector.GetPower(PowerNames.Mighty2)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling, powerSelector.GetPower(PowerNames.Wallcrawling)),
                     ],
                     Restrictions =
                     [
@@ -1043,23 +1030,13 @@ public class CharactersP
                     Name = "Prowler's Battlesuit",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.FastAttacks),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ViciousAttack),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.WhirlingFrenzy),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.FastAttacks),
-                        powerSelector.GetPower(PowerNames.Jump1),
-                        powerSelector.GetPower(PowerNames.Mighty1),
-                        powerSelector.GetPower(PowerNames.Sturdy1),
-                        powerSelector.GetPower(PowerNames.ViciousAttack),
-                        powerSelector.GetPower(PowerNames.Wallcrawling),
-                        powerSelector.GetPower(PowerNames.WhirlingFrenzy),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.FastAttacks, powerSelector.GetPower(PowerNames.FastAttacks)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Jump1, powerSelector.GetPower(PowerNames.Jump1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Mighty1, powerSelector.GetPower(PowerNames.Mighty1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Sturdy1, powerSelector.GetPower(PowerNames.Sturdy1)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.ViciousAttack, powerSelector.GetPower(PowerNames.ViciousAttack)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.Wallcrawling, powerSelector.GetPower(PowerNames.Wallcrawling)),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower(PowerNames.WhirlingFrenzy, powerSelector.GetPower(PowerNames.WhirlingFrenzy)),
                     ],
                     Restrictions =
                     [
@@ -1176,18 +1153,11 @@ public class CharactersP
                     Name = "Proxima Midnight’s Spear",
                     Powers =
                     [
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)"),
-                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalGrab} (Energy)"),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBarrage} (Energy)", powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBlast} (Energy)", powerSelector.GetPower(PowerNames.ElementalBlast, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalBurst} (Energy)", powerSelector.GetPower(PowerNames.ElementalBurst, reminder : "Energy")),
+                        iconicItemPowerSelector.GetPowersAsIconicItemPower($"{PowerNames.ElementalGrab} (Energy)", powerSelector.GetPower(PowerNames.ElementalGrab, reminder : "Energy")),
                         iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: Reach + 1/10, Melee/Agility Damage Multiplier bonus: +1."),
-                    ],
-                    GrantedPowerReminders =
-                    [
-                        powerSelector.GetPower(PowerNames.ElementalBarrage, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalBurst, reminder: "Energy"),
-                        powerSelector.GetPower(PowerNames.ElementalGrab, reminder: "Energy"),
                     ],
                     Restrictions =
                     [

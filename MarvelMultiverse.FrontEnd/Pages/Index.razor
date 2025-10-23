@@ -194,16 +194,25 @@ else if (character != null)
 
                                                 if (splitIndex > 0 && splitIndex < name.Length)
                                                 {
-                                                    // Part 1: Trait Name
-                                                    <span>@name.Substring(0, splitIndex)</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandleTraitClick(trait))"
+                                                          style="cursor: pointer;">
 
-                                                    // Part 2: Description (Distinguished by color/size)
-                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                        <span class="text-secondary">&diams;</span> @name.Substring(0, splitIndex)
+                                                        <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                    </span>
                                                 }
                                                 else
                                                 {
                                                     // No valid separator found: Display the entire item.
-                                                    <span>@name</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandleTraitClick(trait))"
+                                                          style="cursor: pointer;">
+
+                                                        <span class="text-secondary">&diams;</span> @trait.Name
+                                                    </span>
                                                 }
                                             }
 
@@ -248,16 +257,25 @@ else if (character != null)
 
                                                 if (splitIndex > 0 && splitIndex < name.Length)
                                                 {
-                                                    // Part 1: Tag Name (Use default bold/forced weight)
-                                                    <span>@name.Substring(0, splitIndex)</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandleTagClick(tag))"
+                                                          style="cursor: pointer;">
 
-                                                    // Part 2: Description (Distinguished by lighter color and smaller size)
-                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                        <span class="text-secondary">&diams;</span> @name.Substring(0, splitIndex)
+                                                        <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                    </span>
                                                 }
                                                 else
                                                 {
                                                     // No valid separator found: Display the entire item.
-                                                    <span>@name</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandleTagClick(tag))"
+                                                          style="cursor: pointer;">
+
+                                                        <span class="text-secondary">&diams;</span> @tag.Name
+                                                    </span>
                                                 }
                                             }
                                         </div>
@@ -432,23 +450,28 @@ else if (character != null)
 
                                                 if (splitIndex > 0 && splitIndex < name.Length)
                                                 {
-                                                    // Part 1: Trait Name
-                                                    <span>@name.Substring(0, splitIndex)</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandlePowerClick(power))"
+                                                          style="cursor: pointer;">
 
-                                                    // Part 2: Description (Distinguished by color/size)
-                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                        <span class="text-secondary">&diams;</span> @name.Substring(0, splitIndex)
+                                                        <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                    </span>
                                                 }
                                                 else
                                                 {
                                                     // No valid separator found: Display the entire item.
-                                                    <span>@name</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandlePowerClick(power))"
+                                                          style="cursor: pointer;">
+
+                                                        <span class="text-secondary">&diams;</span> @power.Name
+                                                    </span>
                                                 }
                                             }
 
-                                            @if (power.IsTech)
-                                            {
-                                                <img src="images/TechReliance.png" alt="Tech Reliance" style="height: 1em; vertical-align: middle; margin-left: 0.25rem;" />
-                                            }
                                         </div>
                                     }
                                 }
@@ -492,13 +515,20 @@ else if (character != null)
                                 <ul class="list-unstyled" style="font-size: 0.8rem;">
                                     @foreach (var power in item.Powers)
                                     {
-                                        <div class="mb-1">
-                                            @{
-                                                string name = power.Name;
-                                                int splitIndex = -1;
+                                        string name = "";
+                                        int splitIndex = -1;
+                                        int colonIndex = -1;
+                                        int bracketIndex = -1;
 
-                                                int colonIndex = name.IndexOf(':');
-                                                int bracketIndex = name.IndexOf('(');
+                                        if (power.Power != null)
+                                        {
+                                            <div class="mb-1">
+                                            @{
+                                                name = power.Power.Name;
+                                                splitIndex = -1;
+
+                                                colonIndex = name.IndexOf(':');
+                                                bracketIndex = name.IndexOf('(');
 
                                                 if (colonIndex != -1 && (bracketIndex == -1 || colonIndex < bracketIndex))
                                                 {
@@ -511,19 +541,74 @@ else if (character != null)
 
                                                 if (splitIndex > 0 && splitIndex < name.Length)
                                                 {
-                                                    // Part 1: Trait Name
-                                                    <span>@name.Substring(0, splitIndex)</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandlePowerClick(power.Power))"
+                                                          style="cursor: pointer;">
 
-                                                    // Part 2: Description (Distinguished by color/size)
-                                                    <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                        <span class="text-secondary">&diams;</span> @name.Substring(0, splitIndex)
+                                                        <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                    </span>
                                                 }
                                                 else
                                                 {
                                                     // No valid separator found: Display the entire item.
-                                                    <span>@name</span>
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandlePowerClick(power.Power))"
+                                                          style="cursor: pointer;">
+
+                                                        <span class="text-secondary">&diams;</span> @power.Power.Name
+                                                    </span>
+                                                }
+                                            }
+
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                        <div class="mb-1">
+                                            @{
+                                                name = power.Name;
+                                                splitIndex = -1;
+
+                                                colonIndex = name.IndexOf(':');
+                                                bracketIndex = name.IndexOf('(');
+
+                                                if (colonIndex != -1 && (bracketIndex == -1 || colonIndex < bracketIndex))
+                                                {
+                                                    splitIndex = colonIndex + 1;
+                                                }
+                                                else if (bracketIndex != -1)
+                                                {
+                                                    splitIndex = bracketIndex;
+                                                }
+
+                                                if (splitIndex > 0 && splitIndex < name.Length)
+                                                {
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandleIconicItemPowerClick(power))"
+                                                          style="cursor: pointer;">
+
+                                                        <span class="text-secondary">&diams;</span> @name.Substring(0, splitIndex)
+                                                        <span class="text-secondary" style="font-size: 0.75rem;">@name.Substring(splitIndex)</span>
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    // No valid separator found: Display the entire item.
+                                                    <span class="tag-link"
+                                                          title="@TooltipContent"
+                                                          @onclick="@(() => HandleIconicItemPowerClick(power))"
+                                                          style="cursor: pointer;">
+
+                                                        <span class="text-secondary">&diams;</span> @power.Name
+                                                    </span>
                                                 }
                                             }
                                         </div>
+                                        }
                                     }
                                 </ul>
                             }
@@ -678,6 +763,139 @@ else if (character != null)
         </div>
 
     </div>
+    @* --- UNIVERSAL DETAIL SIDE PANEL (TAG, TRAIT, or POWER) --- *@
+    @if (SelectedDetail != null)
+    {
+        <div class="tag-details-panel border border-dark p-3 shadow" style="width: 300px; position: fixed; right: 20px; top: 100px; background-color: white; z-index: 1000;">
+
+            <button class="close-btn btn btn-sm btn-outline-danger float-end" @onclick="CloseDetailPanel">X</button>
+
+            @switch (SelectedDetail)
+            {
+                case Tag tag:
+                    <h5 class="text-uppercase text-danger">Tag: @tag.Name</h5>
+                    <hr />
+                    @* --- TAG CONTENT --- *@
+                    @if (tag.Effect?.Any() == true)
+                    {
+                        <p class="fw-bold mb-1">Effect:</p>
+                        @foreach (var line in tag.Effect)
+                        {
+                            <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">@line</p>
+                        }
+                    }
+                    @if (tag.Restrictions?.Any() == true)
+                    {
+                        <p class="fw-bold mb-1 mt-2">Restrictions:</p>
+                        @foreach (var line in tag.Restrictions)
+                        {
+                            <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">@line</p>
+                        }
+                    }
+                    @if (!string.IsNullOrEmpty(tag.Specialization)) { /* Specialization */ }
+                    <p style="font-size: 0.8rem; margin-top: 1rem;">**Source:** @tag.Source</p>
+                    break;
+
+                case Trait trait:
+                    <h5 class="text-uppercase text-danger">Trait: @trait.Name</h5>
+                    <hr />
+                    @* --- TRAIT CONTENT --- *@
+                    @if (trait.Effect?.Any() == true)
+                    {
+                        <p class="fw-bold mb-1">Effect:</p>
+                        @foreach (var line in trait.Effect)
+                        {
+                            <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">@line</p>
+                        }
+                    }
+                    @if (trait.Restrictions?.Any() == true)
+                    {
+                        <p class="fw-bold mb-1 mt-2">Restrictions:</p>
+                        @foreach (var line in trait.Restrictions)
+                        {
+                            <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">@line</p>
+                        }
+                    }
+                    <p style="font-size: 0.8rem; margin-top: 1rem;">**Source:** @trait.Source</p>
+                    break;
+
+                case Power power:
+                    <h5 class="text-uppercase text-danger">Power: @power.Name</h5>
+                    <hr />
+                    @* --- POWER DETAILS (Action, Duration, Range, Cost) --- *@
+                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">
+                    @if (power.PowerSets?.Any() == true)
+                    {
+                        <span class="fw-bold">Power Sets: </span> @string.Join(", ", power.PowerSets) <br />
+                    }
+                    else
+                    {
+                        <span class="fw-bold">Power Sets: </span> <span>None</span> <br />
+                    }
+                    @if (!string.IsNullOrEmpty(power.Prerequsites))
+                    {
+                        <span class="fw-bold">Prerequsites: </span> @power.Prerequsites <br />
+                    }
+                    @if (!string.IsNullOrEmpty(power.Action))
+                    {
+                        <span class="fw-bold">Action: </span> @power.Action <br />
+                    }
+                    @if (!string.IsNullOrEmpty(power.Trigger))
+                    {
+                        <span class="fw-bold">Trigger: </span> @power.Trigger <br />
+                    }
+                    @if (!string.IsNullOrEmpty(power.Duration))
+                    {
+                        <span class="fw-bold">Duration: </span> @power.Duration <br />
+                    }
+                    @if (!string.IsNullOrEmpty(power.Range))
+                    {
+                        <span class="fw-bold">Range: </span> @power.Range <br />
+                    }
+                    @if (!string.IsNullOrEmpty(power.Cost))
+                    {
+                        <span class="fw-bold">Cost: </span> @power.Cost <br />
+                    }
+                </p>
+                    <hr class="my-2" />
+
+                    @* --- POWER DESCRIPTION/EFFECT --- *@
+                    @if (!string.IsNullOrEmpty(power.Description))
+                    {
+                        <p class="fw-bold mb-1">Description:</p>
+                        <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">@power.Description</p>
+                    }
+                    @if (power.Effect?.Any() == true)
+                    {
+                        <p class="fw-bold mb-1 mt-2">Effect:</p>
+                        @foreach (var line in power.Effect)
+                        {
+                            <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">@line</p>
+                        }
+                    }
+                    <p style="font-size: 0.8rem; margin-top: 1rem;">**Source:** @power.Source</p>
+                    break;
+
+                case IconicItemPower iconicItemPower:
+                    <h5 class="text-uppercase text-danger">Power: @iconicItemPower.Name</h5>
+
+                    @if (iconicItemPower.Effect?.Any() == true)
+                    {
+                        <p class="fw-bold mb-1 mt-2">Effect:</p>
+                        @foreach (var line in iconicItemPower.Effect)
+                        {
+                            <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">@line</p>
+                        }
+                    }
+                    <p style="font-size: 0.8rem; margin-top: 1rem;">**Source:** @iconicItemPower.Source</p>
+                    break;
+
+                default:
+                    <p class="text-muted">No detail selected.</p>
+                    break;
+            }
+        </div>
+    }
 }
 
 @code {
@@ -691,14 +909,16 @@ else if (character != null)
     private List<string> SuggestedNames = new();
     private string SearchTerm { get; set; } = string.Empty;
 
+    private object SelectedDetail = null;
+
+    private string TooltipContent = string.Empty;
+
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            // Make the API call to get all names when the form loads
             AllCharacterNames = await MarvelApiClient.GetCharacterNamesAsync();
-            // Initialize suggestions with no results
-            SuggestedNames = new List<string>();
+            var allTags = await MarvelApiClient.GetAllTagsAsync();
         }
         catch (Exception ex)
         {
@@ -743,6 +963,7 @@ else if (character != null)
             if (character == null)
             {
                 errorMessage = "Character not found or error calling API.";
+                return;
             }
         }
         finally
@@ -756,4 +977,60 @@ else if (character != null)
     {
         await SelectSuggestion(SearchTerm);
     }  
+
+    private void ShowTagTooltip(Tag tag)
+    {
+        if (tag?.Effect != null)
+        {
+            // Join the list of strings in the Effect property for the tooltip
+            TooltipContent = string.Join(" | ", tag.Effect);
+        }
+        else
+        {
+            TooltipContent = "Effect details not available.";
+        }
+    }
+
+    private void HandleTagClick(Tag tag)
+    {
+        SelectedDetail = tag;
+    }
+
+    private void ShowTraitTooltip(Trait trait)
+    {
+        if (trait?.Effect != null)
+        {
+            // Join the list of strings in the Effect property for the tooltip
+            TooltipContent = string.Join(" | ", trait.Effect);
+        }
+        else
+        {
+            TooltipContent = "Effect details not available.";
+        }
+    }
+
+    private void HandleTraitClick(Trait trait)
+    {
+        SelectedDetail = trait;
+    }
+
+    private void HandlePowerClick(Power power)
+    {
+        SelectedDetail = power;
+    }
+
+    private void HandleIconicItemPowerClick(IconicItemPower power)
+    {
+        SelectedDetail = power;
+    }
+
+    private void HideTooltip()
+    {
+        TooltipContent = string.Empty;
+    }
+
+    private void CloseDetailPanel()
+    {
+        SelectedDetail = null;
+    }
 }

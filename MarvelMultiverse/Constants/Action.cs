@@ -2,7 +2,7 @@
 
 public static class ActionType
 {
-    public const string Movement = "movement";
-    public const string Reaction = "reaction";
-    public const string Standard = "standard";
+    public const string Movement = "Movement";
+    public const string Reaction = "Reaction";
+    public const string Standard = "Standard";
 }

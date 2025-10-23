@@ -79,24 +79,24 @@ public class Character
 
         if (IconicItems != null)
         {
-            agilityDefence += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.AgiltyDefenceModifier));
+            agilityDefence += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.AgiltyDefenceModifier));
 
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.AgilityInsteadOfMeleeForDefence)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.AgilityInsteadOfMeleeForDefence)))
                 Abilities.Melee.Defence = agilityDefence;
             else
                 Abilities.Melee.Defence = meleeDefence;
 
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.MeleeInsteadOfAgilityForDefence)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.MeleeInsteadOfAgilityForDefence)))
                 Abilities.Agility.Defence = meleeDefence;
             else
                 Abilities.Agility.Defence = agilityDefence;
 
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.LogicInsteadOfEgoForDefence)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.LogicInsteadOfEgoForDefence)))
                 Abilities.Ego.Defence = logicDefence;
             else
                 Abilities.Ego.Defence = egoDefence;
 
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.EgoInsteadOfLogicForDefence)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.EgoInsteadOfLogicForDefence)))
                 Abilities.Logic.Defence = egoDefence;
             else
                 Abilities.Logic.Defence = logicDefence;
@@ -133,7 +133,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            Health.DamageReduction += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.HealthDamageReductionModifier));
+            Health.DamageReduction += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.HealthDamageReductionModifier));
         }
     }
 
@@ -153,7 +153,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            Health.DamageReduction += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.FocusDamageReductionModifier));
+            Focus.DamageReduction += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.FocusDamageReductionModifier));
         }
     }
 
@@ -179,7 +179,10 @@ public class Character
 
         if (IconicItems != null)
         {
-            Initiative.HasEdge = Traits.Any(x => x.InitiativeEdge) || Powers.Any(x => x.Powers.Any(p => p.InitiativeEdge)) || IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.InitiativeEdge));
+            Initiative.HasEdge = 
+                Traits.Any(x => x.InitiativeEdge) || 
+                Powers.Any(x => x.Powers.Any(p => p.InitiativeEdge)) || 
+                IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.InitiativeEdge));
         }
     }
 
@@ -208,7 +211,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.RunSpeedMultipliedByRank)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.RunSpeedMultipliedByRank)))
                 Speed.Run = baseSpeed * Rank;
         }
 
@@ -221,7 +224,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.ClimbSpeedEqualToBaseSpeed)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.ClimbSpeedEqualToBaseSpeed)))
                 Speed.Climb = baseSpeed;
         }
 
@@ -230,7 +233,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.FlySpeed)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.FlySpeed)))
                 Speed.Flight = flightBaseSpeed * Rank;
         }
 
@@ -239,7 +242,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.GlideSpeed)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.GlideSpeed)))
                 Speed.Glide = baseSpeed * 2;
         }
 
@@ -253,10 +256,10 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.JumpSpeed)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.JumpSpeed)))
                 Speed.Jump = baseSpeed;
 
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.JumpSpeedMultipliedByRank)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.JumpSpeedMultipliedByRank)))
                 Speed.Jump = baseSpeed * Rank;
         }
 
@@ -265,7 +268,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.LevitationSpeed)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.LevitationSpeed)))
                 Speed.Levitation = baseSpeed;
         }
 
@@ -274,7 +277,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.SwimSpeedMultipliedByRank)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.SwimSpeedMultipliedByRank)))
                 Speed.Swim = Speed.Swim * Rank;
         }
 
@@ -283,7 +286,7 @@ public class Character
 
         if (IconicItems != null)
         {
-            if (IconicItems.Any(x => x.GrantedPowerReminders.Any(p => p.SwinglineSpeed)))
+            if (IconicItems.Any(x => x.Powers.Where(x => x.Power != null).Any(p => p.Power.SwinglineSpeed)))
                 Speed.Swingline = baseSpeed * 3;
         }
     }
@@ -299,10 +302,10 @@ public class Character
 
         if (IconicItems != null)
         {
-            Abilities.Melee.NonCombatCheck += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.MeleeNonCombatCheckModifier));
-            Abilities.Agility.NonCombatCheck += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.AgilityNonCombatCheckModifier));
-            Abilities.Ego.NonCombatCheck += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.EgoNonCombatCheckModifier));
-            Abilities.Logic.NonCombatCheck += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.LogicNonCombatCheckModifier));
+            Abilities.Melee.NonCombatCheck += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.MeleeNonCombatCheckModifier));
+            Abilities.Agility.NonCombatCheck += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.AgilityNonCombatCheckModifier));
+            Abilities.Ego.NonCombatCheck += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.EgoNonCombatCheckModifier));
+            Abilities.Logic.NonCombatCheck += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.LogicNonCombatCheckModifier));
         }
     }
 
@@ -318,10 +321,10 @@ public class Character
             Abilities.Melee.DamageModifier += IconicItems.Sum(i => i.MeleeDamageModifier);
             Abilities.Agility.DamageModifier += IconicItems.Sum(i => i.AgilityDamageModifier);
 
-            Abilities.Melee.DamageModifier += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.MeleeDamageModifier));
-            Abilities.Agility.DamageModifier += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.AgilityDamageModifier));
-            Abilities.Ego.DamageModifier += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.EgoDamageModifier));
-            Abilities.Logic.DamageModifier += IconicItems.Sum(x => x.GrantedPowerReminders.Sum(p => p.LogicDamageModifier));
+            Abilities.Melee.DamageModifier += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.MeleeDamageModifier));
+            Abilities.Agility.DamageModifier += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.AgilityDamageModifier));
+            Abilities.Ego.DamageModifier += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.EgoDamageModifier));
+            Abilities.Logic.DamageModifier += IconicItems.Sum(x => x.Powers.Where(x => x.Power != null).Sum(p => p.Power.LogicDamageModifier));
         }
 
         if (Biography.Size == Size.Little)
