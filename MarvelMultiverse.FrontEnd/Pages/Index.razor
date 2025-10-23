@@ -643,20 +643,22 @@ else if (character != null)
                     <ul class="list-unstyled" style="font-size: 0.75rem;">
                         @if (character.Biography.Heights != null && character.Biography.Heights.Any())
                         {
-                            // C# block to format and join the list of Height objects
                             {
-                                // 1. Call GetString() on each Height object to get its formatted string
                                 var heightStrings = character.Biography.Heights.Select(h => h.GetString());
 
-                                // 2. Join the formatted strings back together with a comma and space
                                 string heightString = string.Join("/ ", heightStrings);
+
+                                if (!string.IsNullOrEmpty(character.Biography.HeightReminder))
+                                {
+                                    heightString += ", ";
+                                    heightString += character.Biography.HeightReminder;
+                                }
 
                                 <li><span class="fw-bold">Height:</span> <span class="text-secondary">@heightString</span></li>
                             }
                         }
                         @if (character.Biography.Weights is IEnumerable<int> weightList && weightList.Any())
                         {
-                            // C# block to format and join the list of integers
                             {
                                 var formattedWeights = weightList.Select(w => w.ToString() + " lbs.");
                                 string weightString = string.Join("/ ", formattedWeights);
@@ -664,9 +666,35 @@ else if (character != null)
                                 <li><span class="fw-bold">Weight:</span> <span class="text-secondary">@weightString</span></li>
                             }
                         } 
+                        else
+                        {
+                            string weightString = "";
+                            if (character.Biography.UnknownWieght)
+                            {
+                                weightString = "Unknown";   
+                            }
+                            if (character.Biography.VariableWieght)
+                            {
+                                weightString = "Varies";   
+                            }
+                            if (!string.IsNullOrEmpty(character.Biography.WeightReminder))
+                            {
+                                weightString += ", ";
+                                weightString += character.Biography.WeightReminder;
+                            }
+
+                            <li><span class="fw-bold">Weight:</span> <span class="text-secondary">@weightString</span></li>
+                        }
                         @if (!string.IsNullOrEmpty(character.Biography.Gender))
                         {
-                            <li><span class="fw-bold">Gender:</span> <span class="text-secondary">@character.Biography.Gender</span></li>
+                            string genderString = character.Biography.Gender;
+
+                            if (!string.IsNullOrEmpty(character.Biography.GenderReminder))
+                            {
+                                genderString += ", ";
+                                genderString += character.Biography.GenderReminder;
+                            }
+                            <li><span class="fw-bold">Gender:</span> <span class="text-secondary">@genderString</span></li>
                         }
                         @if (!string.IsNullOrEmpty(character.Biography.Eyes))
                         {
