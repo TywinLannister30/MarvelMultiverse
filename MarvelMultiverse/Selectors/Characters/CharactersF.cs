@@ -207,7 +207,7 @@ public class CharactersF
         },
         new()
         {
-            Name = "Fang",
+            Name = "Fang (Akihiro)",
             Rank = 4,
             Abilities = new Abilities
             (
