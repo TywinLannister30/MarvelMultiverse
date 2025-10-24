@@ -1291,6 +1291,61 @@ public class CharactersP
         },
         new()
         {
+            Name = "Public Eye Agent",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 2, vigilance: 2, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Interrogation),
+                traitSelector.GetTrait(TraitNames.TechReliance),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Authority),
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.PublicIdentity),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1, isTech: true),
+                        powerSelector.GetPower(PowerNames.IconicItem, specialization: "Energy Pistol", isTech: true),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                    ],
+                },
+            ],
+            IconicItems =
+            [
+                new IconicItem
+                {
+                    Name = "Energy Pistol",
+                    Powers =
+                    [
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.EffectOptions, reminder: "Stuns target on a Fantastic success"),
+                        iconicItemPowerSelector.GetIconicItemPower(IconicItemPowerNames.Weapon, reminder: "Range: 10, Agility Damage Multiplier bonus: +1."),
+                    ],
+                    Restrictions =
+                    [
+                        "Carried",
+                        "Small",
+                    ],
+                    PowerValue = 1,
+                    AgilityDamageModifier = 1,
+                    IsTech = true
+                }
+            ],
+            IsHenchman = true,
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Puck",
             Rank = 3,
             Abilities = new Abilities

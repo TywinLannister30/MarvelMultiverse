@@ -4355,6 +4355,36 @@ public class CharactersS
         },
         new()
         {
+            Name = "Spiderling",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 1, resilience: 1, vigilance: 1, ego: 0, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Spider-Man (Earth-1610)",
             Rank = 3,
             Abilities = new Abilities
@@ -7073,6 +7103,37 @@ public class CharactersS
                 ]
             },
             Source = BookSource.XMen97Characters
+        },
+        new()
+        {
+            Name = "Street Punk",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 1, vigilance: 1, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Connections, specialization: "Criminal"),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.DoubleTap),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.SpiderverseExpansion
         },
         new()
         {

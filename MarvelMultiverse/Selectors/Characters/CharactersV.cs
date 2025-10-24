@@ -485,6 +485,39 @@ public class CharactersV
         },
         new()
         {
+            Name = "Veteran Mercenary",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 2, vigilance: 2, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.BattleReady),
+                traitSelector.GetTrait(TraitNames.SituationalAwareness),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Accuracy1),
+                        powerSelector.GetPower(PowerNames.SnapShooting),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Viper",
             Rank = 2,
             Abilities = new Abilities
@@ -953,6 +986,37 @@ public class CharactersV
                     "Toomes is an old man who’s bitter about how his life turned out, and he uses that as an excuse for his criminal behavior. His one soft spot is his granddaughter Tiana Toomes, who uses his technology as the costumed adventurer Starling.",
                 ]
             },
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
+            Name = "Vulture's Henchmen",
+            Rank = 1,
+            Abilities = new Abilities
+            (
+                melee: 1, agility: 1, resilience: 1, vigilance: 1, ego: 1, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.SurprisingPower, reminder: PowerNames.Flight1),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.Streetwise),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.Flight1),
+                    ],
+                },
+            ],
+            IsHenchman = true,
             Source = BookSource.SpiderverseExpansion
         },
     ];

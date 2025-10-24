@@ -379,6 +379,39 @@ public class CharactersI
         },
         new()
         {
+            Name = "Inner Demon",
+            Rank = 2,
+            Abilities = new Abilities
+            (
+                melee: 2, agility: 2, resilience: 2, vigilance: 2, ego: 2, logic: 0
+            ),
+            Traits =
+            [
+                traitSelector.GetTrait(TraitNames.Fearless),
+            ],
+            Tags =
+            [
+                tagSelector.GetTag(TagNames.Backup),
+                tagSelector.GetTag(TagNames.BlackMarketAccess),
+                tagSelector.GetTag(TagNames.SignatureWeapon, specialization: "Katana"),
+            ],
+            Powers =
+            [
+                new CharacterPowerSet
+                {
+                    Name = PowerSetNames.Basic,
+                    Powers =
+                    [
+                        powerSelector.GetPower(PowerNames.FastAttacks),
+                        powerSelector.GetPower(PowerNames.HealingFactor),
+                    ],
+                },
+            ],
+            IsHenchman = true,
+            Source = BookSource.SpiderverseExpansion
+        },
+        new()
+        {
             Name = "Invisible Woman",
             Rank = 4,
             Abilities = new Abilities
