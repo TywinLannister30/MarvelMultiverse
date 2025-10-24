@@ -341,9 +341,10 @@ public class Character
     {
         ImageUrl = $"/images/characters/{Name}.jpg";
 
+        if (Name == "Black Knights / Fenris Twins")
+            ImageUrl = "/images/characters/Black Knights Fenris Twins.jpg";
+
         if (Name == "SP//dr")
-        {
             ImageUrl = "/images/characters/Spdr.jpg";
-        }
     }
 }

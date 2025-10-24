@@ -130,7 +130,7 @@ public class CharactersM
         },
         new()
         {
-            Name = "Madame Mask",
+            Name = "Madame Masque",
             Rank = 2,
             Abilities = new Abilities
             (
@@ -1644,7 +1644,7 @@ public class CharactersM
         },
         new()
         {
-            Name = "Mariah Hill",
+            Name = "Maria Hill",
             Rank = 2,
             Abilities = new Abilities
             (
@@ -3108,7 +3108,7 @@ public class CharactersM
         },
         new()
         {
-            Name = "Mocking Bird (Bobbi Morse)",
+            Name = "Mockingbird (Bobbi Morse)",
             Rank = 2,
             Abilities = new Abilities
             (
