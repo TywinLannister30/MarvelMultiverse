@@ -23,7 +23,7 @@ public class CharacterController(ICharacterManager characterManager) : Controlle
     [HttpGet("{name}")]
     public ActionResult<Character> GetSingle(string name)
     {
-        var character = characterManager.Get(name);
+        var character = characterManager.Get(Uri.UnescapeDataString(name));
 
         if (character == null) return NotFound("No character found.");
 

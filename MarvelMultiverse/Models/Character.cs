@@ -340,5 +340,10 @@ public class Character
     public void SetImageUrl()
     {
         ImageUrl = $"/images/characters/{Name}.jpg";
+
+        if (Name == "SP//dr")
+        {
+            ImageUrl = "/images/characters/Spdr.jpg";
+        }
     }
 }
