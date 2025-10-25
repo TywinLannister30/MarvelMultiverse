@@ -44,7 +44,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlForce,
+                    Name = PowerSetNames.ElementalControlForce,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBurst),
@@ -118,7 +118,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlSound,
+                    Name = PowerSetNames.ElementalControlSound,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -931,7 +931,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -1030,7 +1030,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -1117,7 +1117,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -1220,7 +1220,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlSound,
+                    Name = PowerSetNames.ElementalControlSound,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -1633,7 +1633,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast, reminder: "adjacent"),
@@ -2108,7 +2108,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -2205,7 +2205,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEarth,
+                    Name = PowerSetNames.ElementalControlEarth,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -3051,7 +3051,7 @@ public class CharactersB
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),

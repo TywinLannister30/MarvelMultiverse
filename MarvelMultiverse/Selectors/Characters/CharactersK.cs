@@ -53,7 +53,7 @@ public class CharactersK
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -1117,7 +1117,7 @@ public class CharactersK
                 },
                 new CharacterPowerSet
                 {
-                    Name = $"{PowerSetNames.ElementControl} Fire / Force",
+                    Name = $"{PowerSetNames.ElementalControl} Fire / Force",
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -1227,7 +1227,7 @@ public class CharactersK
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlSound,
+                    Name = PowerSetNames.ElementalControlSound,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),

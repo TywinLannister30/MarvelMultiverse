@@ -270,7 +270,7 @@ public class CharactersW
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -457,7 +457,7 @@ public class CharactersW
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlElectricity,
+                    Name = PowerSetNames.ElementalControlElectricity,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -560,7 +560,7 @@ public class CharactersW
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlElectricity,
+                    Name = PowerSetNames.ElementalControlElectricity,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -784,7 +784,7 @@ public class CharactersW
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlAir,
+                    Name = PowerSetNames.ElementalControlAir,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -1854,7 +1854,7 @@ public class CharactersW
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),

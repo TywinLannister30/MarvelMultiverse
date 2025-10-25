@@ -267,7 +267,7 @@ public class CharactersL
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -676,7 +676,7 @@ public class CharactersL
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlFire,
+                    Name = PowerSetNames.ElementalControlFire,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),

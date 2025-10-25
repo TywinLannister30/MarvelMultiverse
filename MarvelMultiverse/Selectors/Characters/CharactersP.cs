@@ -363,7 +363,7 @@ public class CharactersP
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlFire,
+                    Name = PowerSetNames.ElementalControlFire,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -470,7 +470,7 @@ public class CharactersP
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -641,7 +641,7 @@ public class CharactersP
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlIron,
+                    Name = PowerSetNames.ElementalControlIron,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -733,7 +733,7 @@ public class CharactersP
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -1465,7 +1465,7 @@ public class CharactersP
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlFire,
+                    Name = PowerSetNames.ElementalControlFire,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBurst),
@@ -1552,7 +1552,7 @@ public class CharactersP
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlFire,
+                    Name = PowerSetNames.ElementalControlFire,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),

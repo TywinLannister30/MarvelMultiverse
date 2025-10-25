@@ -54,7 +54,7 @@ public class CharactersQ
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEarth,
+                    Name = PowerSetNames.ElementalControlEarth,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -66,7 +66,7 @@ public class CharactersQ
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlSound,
+                    Name = PowerSetNames.ElementalControlSound,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -162,7 +162,7 @@ public class CharactersQ
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -260,7 +260,7 @@ public class CharactersQ
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlHellfire,
+                    Name = PowerSetNames.ElementalControlHellfire,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),

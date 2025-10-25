@@ -19,7 +19,7 @@ public class PowerSetSelector : IPowerSetSelector
     [
         new()
         {
-            Name = PowerSetNames.ElementControl,
+            Name = PowerSetNames.ElementalControl,
             Description =
             [
                 "When a character selects an Elemental Control power, they must select the type of element their power uses, as shown in the list below. Most characters stick to a single type of element, but this is not required.",

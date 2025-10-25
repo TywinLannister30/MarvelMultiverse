@@ -47,7 +47,7 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBurst),
@@ -714,7 +714,7 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlElectricity,
+                    Name = PowerSetNames.ElementalControlElectricity,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -1344,7 +1344,7 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -1436,7 +1436,7 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlIce,
+                    Name = PowerSetNames.ElementalControlIce,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrier),
@@ -1527,7 +1527,7 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -2039,7 +2039,7 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlElectricity,
+                    Name = PowerSetNames.ElementalControlElectricity,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBurst),
@@ -2372,7 +2372,7 @@ public class CharactersA
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),

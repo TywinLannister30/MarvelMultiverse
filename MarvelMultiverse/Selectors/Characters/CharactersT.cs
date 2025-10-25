@@ -645,7 +645,7 @@ public class CharactersT
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),
@@ -1337,7 +1337,7 @@ public class CharactersT
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlElectricity,
+                    Name = PowerSetNames.ElementalControlElectricity,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -1519,7 +1519,7 @@ public class CharactersT
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlEnergy,
+                    Name = PowerSetNames.ElementalControlEnergy,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBlast),
@@ -1675,7 +1675,7 @@ public class CharactersT
                 },
                 new CharacterPowerSet
                 {
-                    Name = $"{PowerSetNames.ElementControl} Air/Chemical",
+                    Name = $"{PowerSetNames.ElementalControl} Air/Chemical",
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBurst),
@@ -2033,7 +2033,7 @@ public class CharactersT
                 },
                 new CharacterPowerSet
                 {
-                    Name = PowerSetNames.ElementControlFire,
+                    Name = PowerSetNames.ElementalControlFire,
                     Powers =
                     [
                         powerSelector.GetPower(PowerNames.ElementalBarrage),

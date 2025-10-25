@@ -4,21 +4,21 @@ public class PowerSetNames
 {
     public const string Basic = "Basic";
 
-    public const string ElementControl = "Element Control";
-    public const string ElementControlAir = "Element Control (Air)";
-    public const string ElementControlChemical = "Element Control (Chemical)";
-    public const string ElementControlEarth = "Element Control (Earth)";
-    public const string ElementControlElectricity = "Element Control (Electricity)";
-    public const string ElementControlEnergy = "Element Control (Energy)";
-    public const string ElementControlFire = "Element Control (Fire)";
-    public const string ElementControlForce = "Element Control (Force)";
-    public const string ElementControlHellfire = "Element Control (Hellfire)";
-    public const string ElementControlIce = "Element Control (Ice)";
-    public const string ElementControlIron = "Element Control (Iron)";
-    public const string ElementControlSound = "Element Control (Sound)";
-    public const string ElementControlSwarm = "Element Control (Swarm)";
-    public const string ElementControlToxin = "Element Control (Toxin)";
-    public const string ElementControlWater = "Element Control (Water)";
+    public const string ElementalControl = "Elemental Control";
+    public const string ElementalControlAir = "Elemental Control (Air)";
+    public const string ElementalControlChemical = "Elemental Control (Chemical)";
+    public const string ElementalControlEarth = "Elemental Control (Earth)";
+    public const string ElementalControlElectricity = "Elemental Control (Electricity)";
+    public const string ElementalControlEnergy = "Elemental Control (Energy)";
+    public const string ElementalControlFire = "Elemental Control (Fire)";
+    public const string ElementalControlForce = "Elemental Control (Force)";
+    public const string ElementalControlHellfire = "Elemental Control (Hellfire)";
+    public const string ElementalControlIce = "Elemental Control (Ice)";
+    public const string ElementalControlIron = "Elemental Control (Iron)";
+    public const string ElementalControlSound = "Elemental Control (Sound)";
+    public const string ElementalControlSwarm = "Elemental Control (Swarm)";
+    public const string ElementalControlToxin = "Elemental Control (Toxin)";
+    public const string ElementalControlWater = "Elemental Control (Water)";
     public const string Healing = "Healing";
     public const string Illusion = "Illusion";
     public const string Luck = "Luck";

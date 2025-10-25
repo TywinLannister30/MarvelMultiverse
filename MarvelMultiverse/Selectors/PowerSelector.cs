@@ -96,12 +96,27 @@ public class PowerSelector : IPowerSelector
             Name = PowerNames.AdditionalLimbs,
             Description = "The character has extra limbs that can grab objects and attack foes.",
             PowerSets = [],
-            Prerequsites = $"None",
+            Prerequsites = "None",
             Duration = Duration.Permanent,
             Effect =
             [
                 "The character has an additional prehensile appendage (like a tail) or a symmetrical pair of them (like arms) that can be used to lift objects, use tools or otherwise take actions that normally require the use of a hand. This grants them an edge in Melee and Agility checks.",
                 "A character can have as many additional limbs as they like—within reason—but they get no additional advantages for them."
+            ]
+        },
+        new()
+        {
+            Name = PowerNames.Advance,
+            Description = "The character can advance their allies on the battlefield.",
+            PowerSets = [PowerSetNames.Tactics],
+            Prerequsites = $"{PowerNames.RallyOnMe}, {PowerNames.Scatter}, Rank 4",
+            Action = ActionType.Reaction,
+            Trigger = "The character (or an ally in line of sight) stuns or defeats an enemy.",
+            Duration = Duration.OneRound,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "Any allies in earshot can be a­ ected, up to a number equal to the character’s Ego defense. Each a­ffected ally can immediately use a free movement action to move toward the enemy that triggered the reaction.",
             ]
         },
         new()
@@ -1247,7 +1262,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalBarrage,
             Description = "The character hurls a barrage of their element at their foes.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBlast}, Rank 4",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
@@ -1261,7 +1276,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalBarrier,
             Description = "The character forms a wall of their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBlast}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
@@ -1276,7 +1291,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalBlast,
             Description = "The character blasts a foe with their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBurst}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
@@ -1291,7 +1306,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalBurst,
             Description = "The character fires a burst of their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = "None",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
@@ -1305,7 +1320,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalForm,
             Description = "The character’s body is made of their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalReinforcement}, Rank 3",
             Duration = Duration.Permanent,
             Effect =
@@ -1318,7 +1333,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalGrab,
             Description = "The character uses their element to snare a target.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBurst}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
@@ -1332,7 +1347,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalInfusion,
             Description = "The character infuses a weapon with their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBurst}, Rank 2",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
@@ -1346,7 +1361,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalPrison,
             Description = "The character can create a cage of their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalProtection1}",
             Action = ActionType.Standard,
             Duration = Duration.Concentration,
@@ -1361,7 +1376,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalProtection1,
             Description = "The character protects themselves with their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBarrier}, Rank 2",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
             Trigger = "The character is attacked or otherwise in danger.",
@@ -1376,7 +1391,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalProtection2,
             Description = "The character’s elemental protection is like armor.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalProtection1}, Rank 3",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
             Trigger = "The character is attacked or otherwise in danger.",
@@ -1391,7 +1406,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalProtection3,
             Description = "The character’s elemental protection is like a tank.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalProtection2}, Rank 4",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
             Trigger = "The character is attacked or otherwise in danger.",
@@ -1406,7 +1421,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalProtection4,
             Description = "The character’s elemental protection is like a fortress.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalProtection3}, Rank 5",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
             Trigger = "The character is attacked or otherwise in danger.",
@@ -1421,7 +1436,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalPush,
             Description = "The character can move a target with their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBurst}, Rank 3",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
@@ -1435,7 +1450,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalReinforcement,
             Description = "The character reinforces their powers with their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalProtection1}",
             Action = ActionType.Reaction,
             Trigger = "Damage gets through an elemental power",
@@ -1450,7 +1465,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalRicochet,
             Description = "The character bounces the burst off one foe and into another.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalBurst}, Rank 3",
             Action = ActionType.Standard,
             Duration = Duration.Instant,
@@ -1465,7 +1480,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalSphere,
             Description = "The character can create a protective sphere of their element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalProtection1}",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
             Duration = Duration.Concentration,
@@ -1481,7 +1496,7 @@ public class PowerSelector : IPowerSelector
         {
             Name = PowerNames.ElementalSuffocation,
             Description = "The character envelops a target’s head in an element.",
-            PowerSets = [PowerSetNames.ElementControl],
+            PowerSets = [PowerSetNames.ElementalControl],
             Prerequsites = $"{PowerNames.ElementalGrab}, Rank 4",
             Action = $"{ActionType.Standard} or {ActionType.Reaction}",
             Trigger = "The target is grabbed with Elemental Grab.",
@@ -1566,6 +1581,20 @@ public class PowerSelector : IPowerSelector
                 "The character must pay the Focus cost at the start of each of their subsequent turns of concentration to keep the power working."
             ],
             Source = BookSource.XMenExpansion
+        },
+        new()
+        {
+            Name = PowerNames.Exorcism,
+            Description = "The character removes an intruder from someone’s body.",
+            PowerSets = [PowerSetNames.Magic],
+            Prerequsites = "Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character attempts to remove the possessor from a possessed target. The character makes an Ego check against the possessor’s Ego defense. On a success, the possessor’s concentration is broken, ending the possession. On a Fantastic success, all of the possessor’s concentrations are broken, and the possessor is stunned for one round too.",
+            ],
         },
         new()
         {
@@ -2956,6 +2985,20 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.OrchestraOfOverkill,
+            Description = "The character conducts a symphony of shooting.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = $"{PowerNames.DanceOfDeath}, {PowerNames.FastHands}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 Focus",
+            Effect =
+            [
+                "The character makes an Agility check and compares that against the Agility defense of every enemy within 10 spaces and in their line of sight. Each success does half regular damage. On a Fantastic success, each enemy takes full damage instead and is bleeding."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.Orders,
             Description = "The character forces someone to follow a complex set of orders.",
             PowerSets = [PowerSetNames.Telepathy],
@@ -3798,7 +3841,35 @@ public class PowerSelector : IPowerSelector
                 "The attacker has trouble on the attack."
             ],
         },
-         new()
+        new()
+        {
+            Name = PowerNames.SilenceArea,
+            Description = "An unnatural silence falls over the area.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.Illumination}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "An area up to 5 spaces wide per the character’s rank—centered on anything the character wishes, within 50 spaces—is filled with silence. Those inside the area cannot hear anything, and no one outside of it can hear any noises made inside it. The character must remain within 50 spaces of the area to avoid breaking concentration."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.SilenceSelf,
+            Description = "Silence falls on the character.",
+            PowerSets = [PowerSetNames.Illusion],
+            Prerequsites = $"{PowerNames.Illumination}, Rank 2",
+            Action = ActionType.Standard,
+            Duration = Duration.Concentration,
+            Cost = "5 Focus",
+            Effect =
+            [
+                "The character makes no noise at all—unless they wish to. They have an edge on Agility checks to sneak past people, and enemies have trouble on Vigilance checks to perceive them."
+            ],
+        },
+        new()
         {
             Name = PowerNames.ShutDownPowers,
             Description = "The character removes all of a target’s powers!",
@@ -4167,6 +4238,33 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
+            Name = PowerNames.Supernova,
+            Description = "The character blasts out a massive burst of their element.",
+            PowerSets = [PowerSetNames.ElementalControl],
+            Prerequsites = $"{PowerNames.ElementalBlast}, Rank 4",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Cost = "15 or more Focus",
+            Effect =
+            [
+                "The character makes an Ego check and compares that against the Resilience defense of every enemy within 10 spaces. For these attacks, add +1 to the character’s Ego damage bonus for every 2 points of Focus they spend. On a success, an a­ffected target takes half that total damage. On a Fantastic success, an a­ffected target takes full damage and su­ffers the elemental type’s special e­ffect.",
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.SuppressiveFire,
+            Description = "The character forces their foes to keep their heads down.",
+            PowerSets = [PowerSetNames.RangedWeapons],
+            Prerequsites = "None",
+            Action = ActionType.Standard,
+            Duration = Duration.Instant,
+            Effect =
+            [
+                "The character makes an Agility attack against a target’s Vigilance defense. If the attack is a success, apply Health Damage Reduction normally. Any damage taken is then applied to the target’s Focus instead. If it’s a Fantastic success, the damage is doubled, and if the target takes any Focus damage, they are stunned for one round."
+            ],
+        },
+        new()
+        {
             Name = PowerNames.SwapItems,
             Description = "The character swaps objects with someone else.",
             PowerSets = [PowerSetNames.Teleportation],
@@ -4241,29 +4339,18 @@ public class PowerSelector : IPowerSelector
         },
         new()
         {
-            Name = PowerNames.Supernova,
-            Description = "The character blasts out a massive burst of their element.",
-            PowerSets = [PowerSetNames.ElementControl],
-            Prerequsites = $"{PowerNames.ElementalBlast}, Rank 4",
-            Action = ActionType.Standard,
-            Duration = Duration.Instant,
-            Cost = "15 or more Focus",
+            Name = PowerNames.SwipePower,
+            Description = "The character removes a target’s power and takes it for their own!",
+            PowerSets = [PowerSetNames.PowerControl],
+            Prerequsites = $"{PowerNames.CopyPower}, {PowerNames.DampenPower}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The character is grabbed.",
+            Duration = Duration.Concentration,
+            Cost = "10 or more Focus",
             Effect =
             [
-                "The character makes an Ego check and compares that against the Resilience defense of every enemy within 10 spaces. For these attacks, add +1 to the character’s Ego damage bonus for every 2 points of Focus they spend. On a success, an a­ffected target takes half that total damage. On a Fantastic success, an a­ffected target takes full damage and su­ffers the elemental type’s special e­ffect.",
-            ],
-        },
-        new()
-        {
-            Name = PowerNames.SuppressiveFire,
-            Description = "The character forces their foes to keep their heads down.",
-            PowerSets = [PowerSetNames.RangedWeapons],
-            Prerequsites = "None",
-            Action = ActionType.Standard,
-            Duration = Duration.Instant,
-            Effect =
-            [
-                "The character makes an Agility attack against a target’s Vigilance defense. If the attack is a success, apply Health Damage Reduction normally. Any damage taken is then applied to the target’s Focus instead. If it’s a Fantastic success, the damage is doubled, and if the target takes any Focus damage, they are stunned for one round."
+                "The character makes an Ego attack against the grabbed target. On a success, they remove one of the target’s powers and take it for their own. They can now use that power as if it was always theirs. If the power has a cost, the character must pay it or a minimum of 10 Focus.",
+                "When the character uses the power, they must pay any cost normally as well.",
             ],
         },
         new()
@@ -4293,6 +4380,21 @@ public class PowerSelector : IPowerSelector
             [
                 "The character forms an invisible barrier in their line of sight and up to 2 spaces away per rank. This covers up to 2 spaces across (vertically/horizontally) per their rank. The character makes a Logic check and compares the results against the Agility defense of any target in the a­ ected spaces. On a success, the character chooses which side of the barrier the target winds up on. On a failure, the target chooses. On a Fantastic success, the target is paralyzed for one round too.",
                 "Attacks on the barrier are against the character’s Logic defense. Any attacks on it that do 10 points of damage or less are instantly absorbed, and the barrier continues. If an attack does more than 10 points of damage, it destroys the barrier. Either way, the attack leaves those behind the barrier unharmed."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticCrush,
+            Description = "The character mentally squeezes a foe.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticGrab}, Rank 3",
+            Action = ActionType.Reaction,
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Range = "10 Focus",
+            Effect =
+            [
+                "The character makes a Logic attack against the grabbed target’s Resilience defense. If it’s a success, the target takes regular damage. On a Fantastic success, the target takes double damage and is pinned.",
             ],
         },
         new()
@@ -4413,6 +4515,23 @@ public class PowerSelector : IPowerSelector
                 "The character envelops themselves—and any chosen people within up to 5 spaces times their rank—in a protective telekinetic sphere.",
                 "When the sphere is formed, the character makes a Logic check and compares the results against the Agility defense of unwanted characters in the enclosed spaces. On a success, the character can move any unwanted people within the sphere’s perimeter to spaces outside of the sphere. On a Fantastic success, such moved people su­ er full damage.",
                 "Attacks on the sphere are against the character’s Logic defense. Any attacks on the sphere are absorbed as if made against the character’s Telekinetic Protection power, and the sphere continues. If an attack does more damage than the character’s Telekinetic Protection power can sustain, it destroys the sphere, but no one inside is harmed."
+            ],
+        },
+        new()
+        {
+            Name = PowerNames.TelekineticToss,
+            Description = "The character can throw a foe around with their mind.",
+            PowerSets = [PowerSetNames.Telekinesis],
+            Prerequsites = $"{PowerNames.TelekineticGrab}, Rank 3",
+            Action = $"{ActionType.Standard} or {ActionType.Reaction}",
+            Trigger = "The target is grabbed.",
+            Duration = Duration.Instant,
+            Range = "Varies",
+            Cost = "10 Focus",
+            Effect =
+            [
+                "The character can telekinetically throw a person that they’ve telekinetically grabbed at another target. The range for the throw is 5 spaces times the character’s rank.",
+                "The character makes a Logic check against the target’s Agility defense. A failure inflicts regular damage on the thrown person, who falls prone within 1 space of the target. If the attack is a success, the target takes regular damage too. On a Fantastic success, the target is knocked prone as well.",
             ],
         },
         new()

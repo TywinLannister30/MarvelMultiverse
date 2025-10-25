@@ -7,6 +7,7 @@ public static class PowerNames
     public const string Accuracy3 = "Accuracy 3";
     public const string Accuracy4 = "Accuracy 4";
     public const string AdditionalLimbs = "Additional Limbs";
+    public const string Advance = "Advance";
     public const string AlwaysReady = "Always Ready";
     public const string Anger = "Anger";
     public const string AnimalBond = "Animal Bond";
@@ -108,6 +109,7 @@ public static class PowerNames
     public const string ESP = "ESP";
     public const string Evasion = "Evasion";
     public const string EvilEye = "Evil Eye";
+    public const string Exorcism = "Exorcism";
     public const string Exploit = "Exploit";
     public const string ExtendInvisibility = "Extend Invisibility";
     public const string ExtendedReach1 = "Extended Reach 1";
@@ -157,6 +159,8 @@ public static class PowerNames
     public const string IconicWeapon = "Iconic Weapon";
     public const string IcyTendrilsOfIkthalon = "Icy Tendrils of Ikthalon";
     public const string Illumination = "Illumination";
+    public const string ImagesOfIkonn = "Images of Ikonn";
+    public const string Immovable = "Immovable";
     public const string Indecipherable = "Indecipherable";
     public const string InformationUpload = "Information Upload";
     public const string Inspiration = "Inspiration";
@@ -164,8 +168,6 @@ public static class PowerNames
     public const string Integrity = "Integrity";
     public const string Intuition = "Intuition";
     public const string Invisibility = "Invisibility";
-    public const string ImagesOfIkonn = "Images of Ikonn";
-    public const string Immovable = "Immovable";
     public const string Jinx = "Jinx";
     public const string JinxYou = "Jinx You";
     public const string JinxYouAll = "Jinx You All";
@@ -206,6 +208,7 @@ public static class PowerNames
     public const string NeverSurrender = "Never Surrender";
     public const string OnYourFeet = "On Your Feet";
     public const string OperationsCenter = "Operations Center";
+    public const string OrchestraOfOverkill = "Orchestra of Overkill";
     public const string Orders = "Orders";
     public const string PartialPhase = "Partial Phase";
     public const string PenanceStare = "Penance Stare";
@@ -262,6 +265,8 @@ public static class PowerNames
     public const string Shrink3 = "Shrink 3";
     public const string Shrink4 = "Shrink 4";
     public const string ShrinkingDodge = "Shrinking Dodge";
+    public const string SilenceArea = "Silence Area";
+    public const string SilenceSelf = "Silence Self";
     public const string ShutDownPowers = "Shut Down Powers";
     public const string SlipFree = "Slip Free";
     public const string SlowMotionDodge = "Slow-Motion Dodge";
@@ -287,15 +292,17 @@ public static class PowerNames
     public const string Sturdy2 = "Sturdy 2";
     public const string Sturdy3 = "Sturdy 3";
     public const string Sturdy4 = "Sturdy 4";
+    public const string SummonPortal = "Summon Portal";
     public const string Supernova = "Supernova";
     public const string SuppressiveFire = "Suppressive Fire";
-    public const string SummonPortal = "Summon Portal";
     public const string SwapItems = "Swap Items";
     public const string SwapPlaces = "Swap Places";
     public const string SwapPowers = "Swap Powers";
     public const string SwapStatus = "Swap Status";
+    public const string SwipePower = "Swipe Power";
     public const string TelekineticAttack = "Telekinetic Attack";
     public const string TelekineticBarrier = "Telekinetic Barrier";
+    public const string TelekineticCrush = "Telekinetic Crush";
     public const string TelekineticGrab = "Telekinetic Grab";
     public const string TelekineticManipulation = "Telekinetic Manipulation";
     public const string TelekineticProtection1 = "Telekinetic Protection 1";
@@ -304,6 +311,7 @@ public static class PowerNames
     public const string TelekineticProtection4 = "Telekinetic Protection 4";
     public const string TelekineticReinforcement = "Telekinetic Reinforcement";
     public const string TelekineticSphere = "Telekinetic Sphere";
+    public const string TelekineticToss = "Telekinetic Toss";
     public const string TelepathicBlast = "Telepathic Blast";
     public const string TelepathicLink = "Telepathic Link";
     public const string TelepathicNetwork = "Telepathic Network";
